@@ -1,66 +1,66 @@
 jenkins-b-1  | Running from: /war-override/jenkins.war
 jenkins-b-1  | webroot: /var/jenkins_home/war
-jenkins-b-1  | 2026-10-10 19:57:30.580+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-b-1  | 2026-10-10 19:57:31.044+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-b-1  | 2026-10-10 19:57:31.075+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-b-1  | 2026-10-10 19:57:31.296+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-b-1  | 2026-10-10 19:57:31.318+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-b-1  | 2026-10-10 19:57:31.574+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-b-1  | 2026-10-10 19:57:31.651+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-b-1  | 2026-10-10 19:57:31.657+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-b-1  | 2026-10-10 19:57:31.658+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @584ms
-jenkins-b-1  | 2026-10-10 19:57:31.660+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-b-1  | 2026-10-10 19:57:31.707+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-b-1  | 2026-10-10 19:57:31.776+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-b-1  | 2026-10-10 19:57:33.295+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-b-1  | 2026-10-10 19:57:35.329+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-b-1  | 2026-10-10 19:57:35.343+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-b-1  | 2026-10-10 19:57:35.348+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-b-1  | 2026-10-10 19:57:35.723+0000 [id=56]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-b-1  | 2026-10-10 19:57:35.937+0000 [id=56]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-b-1  | 2026-10-10 19:57:36.467+0000 [id=56]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-b-1  | 2026-10-10 19:57:36.603+0000 [id=56]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
-jenkins-b-1  | 2026-10-10 19:57:36.825+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-b-1  | 2026-10-10 19:57:37.441+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-b-1  | 2026-10-10 19:57:37.443+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-b-1  | 2026-10-10 19:57:37.446+0000 [id=59]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-b-1  | 2026-10-10 19:57:37.451+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-b-1  | 2026-10-10 19:57:37.456+0000 [id=45]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-b-1  | 2026-10-10 19:57:37.473+0000 [id=54]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_98e2036b34aedf81a6715447eb4477f55691016692ac1b7839851877dd014885 duplicates one seen earlier for admin
-jenkins-b-1  | 2026-10-10 19:57:37.635+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-b-1  | 2026-10-10 19:57:37.652+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-b-1  | 2026-10-10 19:57:38.782+0000 [id=95]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
-jenkins-b-1  | 2026-10-10 19:58:13.493+0000 [id=80]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #4
-jenkins-b-1  | 2026-10-10 19:58:13.497+0000 [id=84]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #3
-jenkins-b-1  | 2026-10-10 19:58:13.499+0000 [id=85]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #8
-jenkins-b-1  | 2026-10-10 19:58:13.500+0000 [id=81]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #7
-jenkins-b-1  | 2026-10-10 19:58:15.659+0000 [id=174]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #12
-jenkins-b-1  | 2026-10-10 19:58:15.673+0000 [id=176]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #14
-jenkins-b-1  | 2026-10-10 19:58:15.673+0000 [id=178]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #13
-jenkins-b-1  | 2026-10-10 19:58:17.770+0000 [id=177]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #15
-jenkins-b-1  | 2026-10-10 19:58:17.780+0000 [id=185]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #19
-jenkins-b-1  | 2026-10-10 19:58:17.782+0000 [id=187]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #17
-jenkins-b-1  | 2026-10-10 19:58:18.892+0000 [id=190]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #20
-jenkins-b-1  | 2026-10-10 19:58:19.936+0000 [id=199]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #23
-jenkins-b-1  | 2026-10-10 19:58:19.937+0000 [id=201]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #25
-jenkins-b-1  | 2026-10-10 19:58:19.940+0000 [id=203]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #26
-jenkins-b-1  | 2026-10-10 19:58:20.968+0000 [id=211]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #27
-jenkins-b-1  | 2026-10-10 19:58:22.021+0000 [id=219]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #32
-jenkins-b-1  | 2026-10-10 19:58:22.021+0000 [id=215]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #31
-jenkins-b-1  | 2026-10-10 19:58:23.061+0000 [id=224]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #33
-jenkins-b-1  | 2026-10-10 19:58:23.928+0000 [id=217]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #35
-jenkins-b-1  | 2026-10-10 19:58:24.121+0000 [id=230]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #39
-jenkins-b-1  | 2026-10-10 19:58:24.122+0000 [id=232]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #40
-jenkins-b-1  | 2026-10-10 19:59:36.969+0000 [id=238]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: surv #1
-jenkins-b-1  | 2026-10-10 19:59:37.024+0000 [id=281]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: surv #2
-jenkins-b-1  | 2026-10-10 19:59:37.048+0000 [id=285]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: surv #3
-jenkins-b-1  | 2026-10-10 19:59:47.396+0000 [id=138]	INFO	j.s.DefaultJnlpSlaveReceiver#channelClosed: Jetty (winstone)-138 for agent1 terminated: java.nio.channels.ClosedChannelException
-jenkins-b-1  | 2026-10-10 19:59:47.399+0000 [id=138]	INFO	j.s.DefaultJnlpSlaveReceiver#channelClosed: Jetty (winstone)-138 for agent1 terminated: java.nio.channels.ClosedChannelException
-jenkins-b-1  | 2026-10-10 20:00:11.136+0000 [id=301]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: ms #2
-jenkins-b-1  | 2026-10-10 20:00:23.143+0000 [id=302]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: lk2 #1
-jenkins-b-1  | 2026-10-10 20:00:40.829+0000 [id=289]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: up #1
-jenkins-b-1  | 2026-10-10 20:00:47.055+0000 [id=321]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: down #1
-jenkins-b-1  | 2026-10-10 20:01:11.923+0000 [id=92]	WARNING	o.j.p.w.cps.CpsStepContext#scheduleNextRun: Unable to load FlowNode or CpsFlowExecution when completing CpsStepContext[3:null]:caller#1, which is likely to cause its execution to hang indefinitely
+jenkins-b-1  | 2026-10-10 21:53:03.917+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-10 21:53:04.465+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-10 21:53:04.523+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-10 21:53:04.927+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-10 21:53:04.958+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-10 21:53:05.258+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-10 21:53:05.346+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-b-1  | 2026-10-10 21:53:05.353+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@2a095f33{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-10 21:53:05.354+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @836ms
+jenkins-b-1  | 2026-10-10 21:53:05.355+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-10 21:53:05.447+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-10 21:53:05.521+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-10 21:53:10.062+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-10 21:53:16.489+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-10 21:53:16.528+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-10 21:53:16.533+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-10 21:53:17.497+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-10 21:53:18.286+0000 [id=58]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-10 21:53:19.641+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-10 21:53:19.884+0000 [id=59]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-b-1  | 2026-10-10 21:53:20.300+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-10 21:53:20.848+0000 [id=50]	WARNING	j.p.PersistenceStores$Route#write: Conflicting modification of users/admin_ce6a35372f2ce7d4a19fb0a4c6bd6d24135237270cd64ef86becd6df28d6a6ea/config.xml: expected version 9 but found 11; overwriting (last writer wins)
+jenkins-b-1  | 2026-10-10 21:53:20.960+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-10 21:53:20.961+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-10 21:53:20.962+0000 [id=59]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-10 21:53:20.971+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-10 21:53:20.985+0000 [id=47]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-10 21:53:20.995+0000 [id=45]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_ce6a35372f2ce7d4a19fb0a4c6bd6d24135237270cd64ef86becd6df28d6a6ea duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-10 21:53:21.161+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-10 21:53:21.173+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-10 21:53:22.079+0000 [id=97]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-b-1  | 2026-10-10 21:53:57.163+0000 [id=89]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #8
+jenkins-b-1  | 2026-10-10 21:53:57.164+0000 [id=81]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #2
+jenkins-b-1  | 2026-10-10 21:53:57.164+0000 [id=82]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #4
+jenkins-b-1  | 2026-10-10 21:53:57.165+0000 [id=88]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #6
+jenkins-b-1  | 2026-10-10 21:53:59.287+0000 [id=177]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #12
+jenkins-b-1  | 2026-10-10 21:53:59.295+0000 [id=181]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #14
+jenkins-b-1  | 2026-10-10 21:53:59.296+0000 [id=183]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #13
+jenkins-b-1  | 2026-10-10 21:54:01.620+0000 [id=190]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #15
+jenkins-b-1  | 2026-10-10 21:54:01.621+0000 [id=180]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #16
+jenkins-b-1  | 2026-10-10 21:54:02.640+0000 [id=192]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #20
+jenkins-b-1  | 2026-10-10 21:54:03.757+0000 [id=201]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #21
+jenkins-b-1  | 2026-10-10 21:54:03.771+0000 [id=203]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #23
+jenkins-b-1  | 2026-10-10 21:54:04.710+0000 [id=209]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #26
+jenkins-b-1  | 2026-10-10 21:54:05.845+0000 [id=214]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #27
+jenkins-b-1  | 2026-10-10 21:54:05.851+0000 [id=194]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #28
+jenkins-b-1  | 2026-10-10 21:54:06.807+0000 [id=222]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #32
+jenkins-b-1  | 2026-10-10 21:54:07.616+0000 [id=216]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #34
+jenkins-b-1  | 2026-10-10 21:54:07.949+0000 [id=228]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #35
+jenkins-b-1  | 2026-10-10 21:54:07.950+0000 [id=230]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #36
+jenkins-b-1  | 2026-10-10 21:54:08.873+0000 [id=236]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: many #40
+jenkins-b-1  | 2026-10-10 21:55:25.733+0000 [id=246]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: surv #1
+jenkins-b-1  | 2026-10-10 21:55:25.803+0000 [id=283]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: surv #2
+jenkins-b-1  | 2026-10-10 21:55:25.829+0000 [id=287]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: surv #3
+jenkins-b-1  | 2026-10-10 21:55:40.342+0000 [id=28]	INFO	j.s.DefaultJnlpSlaveReceiver#channelClosed: Jetty (winstone)-28 for agent1 terminated: java.nio.channels.ClosedChannelException
+jenkins-b-1  | 2026-10-10 21:55:40.347+0000 [id=28]	INFO	j.s.DefaultJnlpSlaveReceiver#channelClosed: Jetty (winstone)-28 for agent1 terminated: java.nio.channels.ClosedChannelException
+jenkins-b-1  | 2026-10-10 21:56:07.015+0000 [id=305]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: ms #2
+jenkins-b-1  | 2026-10-10 21:56:34.275+0000 [id=306]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: lk2 #1
+jenkins-b-1  | 2026-10-10 21:56:37.065+0000 [id=291]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: up #1
+jenkins-b-1  | 2026-10-10 21:56:45.811+0000 [id=240]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: down #1
+jenkins-b-1  | 2026-10-10 21:57:07.153+0000 [id=95]	WARNING	o.j.p.w.cps.CpsStepContext#scheduleNextRun: Unable to load FlowNode or CpsFlowExecution when completing CpsStepContext[3:null]:caller#1, which is likely to cause its execution to hang indefinitely
 jenkins-b-1  | java.io.IOException: no such build 1 in caller
 jenkins-b-1  | 	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun$Owner.run(WorkflowRun.java:1105)
 jenkins-b-1  | 	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun$Owner.get(WorkflowRun.java:1116)
