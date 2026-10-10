@@ -1,0 +1,240 @@
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins15494175614659935124.sh
+id=a4 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@3
+[many@3] $ /bin/sh -xe /tmp/jenkins4766165018400693978.sh
+id=a1 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins1451432028675893180.sh
+id=b2 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins194254259571922403.sh
+id=b1 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@4
+[many@4] $ /bin/sh -xe /tmp/jenkins1239656284602953514.sh
+id=a19 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins18176309767375439326.sh
+id=a2 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@3
+[many@3] $ /bin/sh -xe /tmp/jenkins777668002775730233.sh
+id=b9 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@4
+[many@4] $ /bin/sh -xe /tmp/jenkins16873701273294596975.sh
+id=b7 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins14509351336256393496.sh
+id=a3 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins16255056650142598830.sh
+id=a6 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@3
+[many@3] $ /bin/sh -xe /tmp/jenkins16242142216526386963.sh
+id=a5 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins1229220461839855317.sh
+id=b5 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins13854087417509958682.sh
+id=b10 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@3
+[many@3] $ /bin/sh -xe /tmp/jenkins8416889110364626544.sh
+id=b3 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins6952885212288516012.sh
+id=b6 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins12682302753596140683.sh
+id=a8 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins11435729100037395191.sh
+id=b4 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins5181387932791416232.sh
+id=a7 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@3
+[many@3] $ /bin/sh -xe /tmp/jenkins9430977509029963216.sh
+id=b8 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@4
+[many@4] $ /bin/sh -xe /tmp/jenkins17064591224752003104.sh
+id=b17 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@3
+[many@3] $ /bin/sh -xe /tmp/jenkins5941987079212969222.sh
+id=a9 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins12469594999304722848.sh
+id=a10 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins8484661126989439430.sh
+id=b12 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins8200069734877663644.sh
+id=a13 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins1801190852377709691.sh
+id=b19 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@3
+[many@3] $ /bin/sh -xe /tmp/jenkins12277027040387157674.sh
+id=b11 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@4
+[many@4] $ /bin/sh -xe /tmp/jenkins17745258260923549850.sh
+id=b15 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@3
+[many@3] $ /bin/sh -xe /tmp/jenkins17747574012320219363.sh
+id=a16 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins4688692683584437910.sh
+id=a18 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins11071541314958321323.sh
+id=a12 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins9962321075832959134.sh
+id=b16 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins7456029812045764872.sh
+id=b13 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@3
+[many@3] $ /bin/sh -xe /tmp/jenkins6699060366996230274.sh
+id=b14 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@3
+[many@3] $ /bin/sh -xe /tmp/jenkins10323720003297997352.sh
+id=a11 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@4
+[many@4] $ /bin/sh -xe /tmp/jenkins4486959080572699494.sh
+id=b18 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@4
+[many@4] $ /bin/sh -xe /tmp/jenkins1491107416366027256.sh
+id=a15 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins17846430973732979284.sh
+id=a17 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins12941195483592006849.sh
+id=a20 host=jenkins-a
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many
+[many] $ /bin/sh -xe /tmp/jenkins10542968156523048484.sh
+id=b20 host=jenkins-b
+Finished: SUCCESS
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/many@2
+[many@2] $ /bin/sh -xe /tmp/jenkins12012607340181635203.sh
+id=a14 host=jenkins-b
+Finished: SUCCESS

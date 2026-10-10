@@ -1,47 +1,212 @@
 jenkins-b-1  | Running from: /war-override/jenkins.war
 jenkins-b-1  | webroot: /var/jenkins_home/war
-jenkins-b-1  | 2026-10-10 16:47:28.819+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-b-1  | 2026-10-10 16:47:29.276+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-b-1  | 2026-10-10 16:47:29.387+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-b-1  | 2026-10-10 16:47:29.683+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-b-1  | 2026-10-10 16:47:29.709+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-b-1  | 2026-10-10 16:47:29.969+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-b-1  | 2026-10-10 16:47:30.055+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-b-1  | 2026-10-10 16:47:30.063+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1160998f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-b-1  | 2026-10-10 16:47:30.063+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @679ms
-jenkins-b-1  | 2026-10-10 16:47:30.064+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-b-1  | 2026-10-10 16:47:30.115+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-b-1  | 2026-10-10 16:47:30.172+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-b-1  | 2026-10-10 16:47:31.822+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-b-1  | 2026-10-10 16:47:34.096+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-b-1  | 2026-10-10 16:47:34.142+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-b-1  | 2026-10-10 16:47:34.145+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-b-1  | 2026-10-10 16:47:34.520+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-b-1  | 2026-10-10 16:47:34.851+0000 [id=58]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-b-1  | 2026-10-10 16:47:35.787+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-b-1  | 2026-10-10 16:47:35.945+0000 [id=58]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
-jenkins-b-1  | 2026-10-10 16:47:36.203+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-b-1  | 2026-10-10 16:47:36.898+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-b-1  | 2026-10-10 16:47:36.914+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-b-1  | 2026-10-10 16:47:36.922+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-b-1  | 2026-10-10 16:47:36.935+0000 [id=55]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-b-1  | 2026-10-10 16:47:36.979+0000 [id=56]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_002301780bde079f3e17c9bd2b10c7c5d0bb9ae1cf20043bd30054ccf699023c duplicates one seen earlier for admin
-jenkins-b-1  | 2026-10-10 16:47:37.199+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-b-1  | 2026-10-10 16:47:37.221+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-b-1  | 2026-10-10 16:47:38.487+0000 [id=95]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
-jenkins-b-1  | 2026-10-10 16:47:47.514+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:47:50.542+0000 [id=121]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:47:57.584+0000 [id=121]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:48:07.622+0000 [id=117]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:48:17.668+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:48:27.719+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:48:37.744+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:48:47.798+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:48:57.814+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:49:07.869+0000 [id=121]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:49:17.899+0000 [id=117]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:49:27.921+0000 [id=121]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:49:37.959+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:49:43.395+0000 [id=197]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of long #2 left by jenkins-a (d01a0aee-f158-436d-9b00-65c3dc393a13), which is gone
-jenkins-b-1  | 2026-10-10 16:49:47.989+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-10 16:49:58.020+0000 [id=117]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:24:01.447+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-10 18:24:01.876+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-10 18:24:01.910+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-10 18:24:02.160+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-10 18:24:02.211+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-10 18:24:02.442+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-10 18:24:02.527+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-b-1  | 2026-10-10 18:24:02.532+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-10 18:24:02.533+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @624ms
+jenkins-b-1  | 2026-10-10 18:24:02.535+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-10 18:24:02.605+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-10 18:24:02.658+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-10 18:24:04.489+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-10 18:24:06.569+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-10 18:24:06.584+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-10 18:24:06.596+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-10 18:24:06.927+0000 [id=57]	SEVERE	i.j.p.c.s.PostgresPersistenceStoreProvider#create: Cannot connect to persistence store jdbc:postgresql://postgres:5432/jenkins
+jenkins-b-1  | org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+jenkins-b-1  | [LF]>   Detail: Key (relname, relnamespace)=(jenkins_store_version, 2200) already exists.
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2421)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:357)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:342)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:318)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:313)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.lambda$new$0(PostgresPersistenceStore.java:66)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:908)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.<init>(PostgresPersistenceStore.java:64)
+jenkins-b-1  | Caused: java.io.IOException: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.<init>(PostgresPersistenceStore.java:93)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:43)
+jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:115)
+jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:192)
+jenkins-b-1  | 	at hudson.XmlFile.route(XmlFile.java:473)
+jenkins-b-1  | 	at hudson.XmlFile.exists(XmlFile.java:327)
+jenkins-b-1  | 	at hudson.model.Descriptor.load(Descriptor.java:984)
+jenkins-b-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+jenkins-b-1  | 	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+jenkins-b-1  | 	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+jenkins-b-1  | 	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+jenkins-b-1  | 	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+jenkins-b-1  | 	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+jenkins-b-1  | 	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+jenkins-b-1  | 	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+jenkins-b-1  | 	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+jenkins-b-1  | 	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+jenkins-b-1  | 	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+jenkins-b-1  | 	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+jenkins-b-1  | 	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+jenkins-b-1  | 	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+jenkins-b-1  | 	at hudson.ExtensionList.load(ExtensionList.java:389)
+jenkins-b-1  | 	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+jenkins-b-1  | 	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+jenkins-b-1  | 	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1582)
+jenkins-b-1  | 	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+jenkins-b-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+jenkins-b-1  | 	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+jenkins-b-1  | 	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+jenkins-b-1  | 	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+jenkins-b-1  | 	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+jenkins-b-1  | 	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+jenkins-b-1  | 	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-10 18:24:06.930+0000 [id=57]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=hudson.model.UsageStatistics, annotation=[none]]; skipping this component
+jenkins-b-1  | org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "pg_class_relname_nsp_index"
+jenkins-b-1  | [LF]>   Detail: Key (relname, relnamespace)=(jenkins_store_version, 2200) already exists.
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2421)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:357)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:342)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:318)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:313)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.lambda$new$0(PostgresPersistenceStore.java:66)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:908)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.<init>(PostgresPersistenceStore.java:64)
+jenkins-b-1  | Caused: java.io.IOException: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.<init>(PostgresPersistenceStore.java:93)
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:43)
+jenkins-b-1  | Caused: java.lang.IllegalStateException
+jenkins-b-1  | 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:50)
+jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:115)
+jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:192)
+jenkins-b-1  | 	at hudson.XmlFile.route(XmlFile.java:473)
+jenkins-b-1  | 	at hudson.XmlFile.exists(XmlFile.java:327)
+jenkins-b-1  | 	at hudson.model.Descriptor.load(Descriptor.java:984)
+jenkins-b-1  | Caused: java.lang.reflect.InvocationTargetException
+jenkins-b-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+jenkins-b-1  | 	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+jenkins-b-1  | Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+jenkins-b-1  | 	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+jenkins-b-1  | 	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+jenkins-b-1  | 	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+jenkins-b-1  | 	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+jenkins-b-1  | 	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+jenkins-b-1  | 	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+jenkins-b-1  | Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+jenkins-b-1  | [LF]> 
+jenkins-b-1  | [LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of UsageStatistics.
+jenkins-b-1  | [LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+jenkins-b-1  | [LF]> 
+jenkins-b-1  | [LF]> 1 error
+jenkins-b-1  | [LF]> 
+jenkins-b-1  | [LF]> ======================
+jenkins-b-1  | [LF]> Full classname legend:
+jenkins-b-1  | [LF]> ======================
+jenkins-b-1  | [LF]> PersistentDescriptor: "hudson.model.PersistentDescriptor"
+jenkins-b-1  | [LF]> UsageStatistics:      "hudson.model.UsageStatistics"
+jenkins-b-1  | [LF]> ========================
+jenkins-b-1  | [LF]> End of classname legend:
+jenkins-b-1  | [LF]> ========================
+jenkins-b-1  | 
+jenkins-b-1  | 	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+jenkins-b-1  | 	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+jenkins-b-1  | 	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+jenkins-b-1  | 	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+jenkins-b-1  | 	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+jenkins-b-1  | 	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+jenkins-b-1  | 	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+jenkins-b-1  | 	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+jenkins-b-1  | 	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+jenkins-b-1  | 	at hudson.ExtensionList.load(ExtensionList.java:389)
+jenkins-b-1  | 	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+jenkins-b-1  | 	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+jenkins-b-1  | 	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1582)
+jenkins-b-1  | 	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+jenkins-b-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+jenkins-b-1  | 	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+jenkins-b-1  | 	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+jenkins-b-1  | 	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+jenkins-b-1  | 	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+jenkins-b-1  | 	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+jenkins-b-1  | 	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-10 18:24:07.039+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-10 18:24:07.264+0000 [id=57]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-10 18:24:08.109+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-10 18:24:08.174+0000 [id=57]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-b-1  | 2026-10-10 18:24:08.534+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-10 18:24:09.191+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-10 18:24:09.193+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-10 18:24:09.194+0000 [id=46]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-10 18:24:09.200+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-10 18:24:09.213+0000 [id=51]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-10 18:24:09.231+0000 [id=59]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_f0116a96afc0b23c1f194103db588305ecc84c7bf46bdb8da0a2e249ab83863a duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-10 18:24:09.351+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-10 18:24:09.361+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-10 18:24:10.413+0000 [id=96]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-b-1  | 2026-10-10 18:24:17.719+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:24:18.750+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:24:20.365+0000 [id=166]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il #12
+jenkins-b-1  | 2026-10-10 18:24:20.366+0000 [id=165]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il #4
+jenkins-b-1  | 2026-10-10 18:24:20.367+0000 [id=164]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il #19
+jenkins-b-1  | 2026-10-10 18:24:20.368+0000 [id=150]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il #11
+jenkins-b-1  | 2026-10-10 18:24:20.368+0000 [id=160]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il #17
+jenkins-b-1  | 2026-10-10 18:24:20.368+0000 [id=161]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il #5
+jenkins-b-1  | 2026-10-10 18:24:20.368+0000 [id=159]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il #18
+jenkins-b-1  | 2026-10-10 18:24:20.369+0000 [id=163]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il #20
+jenkins-b-1  | 2026-10-10 18:24:20.369+0000 [id=152]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il #3
+jenkins-b-1  | 2026-10-10 18:24:20.370+0000 [id=151]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il #6
+jenkins-b-1  | 2026-10-10 18:24:21.764+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:24:28.824+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:24:38.855+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:24:48.915+0000 [id=124]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:24:58.960+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:25:08.993+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:25:19.025+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:25:29.065+0000 [id=126]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:25:39.104+0000 [id=119]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:25:49.124+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:25:59.169+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:26:09.200+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:26:19.235+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:26:24.201+0000 [id=218]	INFO	j.persistence.RunningBuilds#adopt: Adopting long #2 from jenkins-a (1adcd9a0-2663-4a1b-83a1-55b4095cd614), which is gone
+jenkins-b-1  | 2026-10-10 18:26:24.477+0000 [id=218]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming long#2, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-10 18:26:24.480+0000 [id=218]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: long#2 was already in the list: [long#2]
+jenkins-b-1  | 2026-10-10 18:26:24.480+0000 [id=222]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=5, exec=CpsFlowExecution[long#2]] sleep in CpsFlowExecution[long#2]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-10 18:26:24.482+0000 [id=218]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long #2 from save point 274.1 as owner with epoch 279
+jenkins-b-1  | 2026-10-10 18:26:29.259+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-10 18:26:36.111+0000 [id=80]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: fs #2
+jenkins-b-1  | 2026-10-10 18:26:39.288+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1

@@ -1,4 +1,4 @@
-## ET3 results (2026-10-10T16:47Z)
+## ET3 results (2026-10-10T18:24Z)
 
 | | Check |
 |---|---|
@@ -42,7 +42,7 @@
 | ✅ | 6 no placeholder left on B |
 | ✅ | 6 completed console identical on B |
 | ✅ | 6 B removes the stale placeholder within 90 s |
-| ℹ️ | 6 stale placeholder removed 27 s after the kill |
+| ℹ️ | 6 stale placeholder removed 33 s after the kill |
 | ✅ | 7 A sees the rename |
 | ✅ | 7 history intact on A under the new name |
 | ✅ | 7 history intact on B under the new name |
@@ -54,7 +54,7 @@
 | ✅ | 8 first build of the recreated job is numbered after the old ones (#2) |
 | ✅ | 8 no old build in its history on A |
 | ✅ | 9 no snapshots or logs in jenkins_store |
-| ✅ | 9 largest jenkins_store value is under 1 MB (2766 bytes) |
-| ✅ | 9 snapshots and logs are in the blob container (75 blobs) |
+| ✅ | 9 largest jenkins_store value is under 1 MB (3007 bytes) |
+| ✅ | 9 snapshots and logs are in the blob container (92 blobs) |
 
 Failures: 0
