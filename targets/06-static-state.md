@@ -16,11 +16,10 @@ State an administrator or user changes at runtime is stored once and seen by eve
 - permanent agents (`nodes/`)
 - confidential keys created at runtime
 
-Controllers still start with empty homes. Browser users and API clients work through a load balancer, and a browser session survives losing its controller.
+Controllers still start with empty homes. **Browser users and API clients work through a non-sticky load balancer**: consecutive requests from one browser may reach different controllers (decision 2026-10-10: fully stateless, not affinity), and a session survives losing its controller.
 
 **Out of scope:**
 - Pre-plugin key material stays seeded (S0): `secret.key`, `secrets/master.key`, `identity.key.enc` and the keys used during plugin start. The Jenkins constructor fixes these before any plugin, and so before the store, exists (research below and E6). On Kubernetes they come from a Secret, which is the normal practice.
-- Fully stateless browser sessions. Configure pages, build history and trend tables keep live Java objects in the HTTP session (Stapler bound objects, `renderOnDemand`, progressive rendering). A shared session store could not serialize them, so browsers use session affinity (see Sessions).
 - Per-controller state stays local: `queue.xml`, install/upgrade wizard state, `updates/`, `logs/`, node monitor results, and `apiTokenStats.xml` (see API tokens).
 
 ## What research found
@@ -77,12 +76,17 @@ A `StaticStateApplier` extends the T1 change applier with handlers keyed by path
 - Token creation, revocation, passwords and seeds live in the user's `config.xml`, so they are shared by (1) and applied by (2). A token created on A works on B within the applier latency, and through a non-sticky load balancer.
 - `apiTokenStats.xml` (usage counters) **stays local**. It is written on every authenticated request, and sharing it would turn each request into a store write with lost-update races. Each controller shows the usage it saw. A follow-up could aggregate counters.
 
-### 5. Browser sessions
-- **Affinity, with remember-me for failover.** The harness load balancer pins browsers to a controller (cookie affinity) and fails over when that controller dies.
-- On the new controller, the remember-me cookie validates against the shared user, seed and keys, and a fresh session is created there. No login prompt.
-- **Remember-me by default in HA.** A Beta option ticks "Keep me signed in" by default, because core has no switch to force it.
-- `DefaultCrumbIssuer.EXCLUDE_SESSION_ID` is not needed with affinity. ET6 checks that a crumb issued before failover is simply re-fetched.
-- API clients (tokens) need no affinity at all.
+### 5. Stateless browser sessions (decision: fully stateless)
+**Constraint.** Configure pages ("Add" buttons, dropdown sections via `renderOnDemand`), build history, trend tables and the People page use **Stapler bound objects**: live Java objects held in the HTTP session and called back at `/$stapler/bound/<uuid>/…`. They cannot be serialized into a shared session store. Instead, a callback is **forwarded to the controller that created the object**.
+
+| Piece | Change |
+|---|---|
+| Authentication on every request | An always-on signed login cookie: remember-me (`username:expiry:HMAC(seed, keys)`), issued at every login and valid for the session lifetime. Its validation needs only the shared user, seed and keys, so any controller authenticates the request and creates a local session if needed. Core gets a Beta option to always issue it, `TokenBasedRememberMeServices2.alwaysRemember`, because no switch exists today |
+| CSRF crumbs | `ClusterCrumbIssuer` (store plugin, a `CrumbIssuer` extension selected by JCasC). The crumb is a hash of the user, a binding token and the shared `crumbSalt`. The token is the login cookie when signed in; before login it is a signed nonce cookie set when the crumb is issued. Crumbs, including the login form's, validate on any controller |
+| Bound objects | **Stapler:** bound ids carry a controller prefix (`BoundObjectTable` id generation, configurable). **Store plugin:** a servlet filter forwards `/$stapler/bound/<prefix>-…` requests for another controller's objects to that controller's internal URL, published in the membership table. Method, headers, body and the browser's cookies are forwarded, so the owner finds its own session (each controller's session cookie name is distinct: `JSESSIONID.<random>`) |
+| Password field | `HudsonPrivateSecurityRealm` round-trips the password as `sessionId:hash` (`:748`, `:887`). Saved on another controller, that is read as a literal new password. Core change: protect it with a shared confidential key and the user name instead of the session id |
+| Cosmetic session state | The "Saved" notification after Apply (`FormApply`) and pane collapse state for anonymous users may be lost when the next request lands elsewhere; documented |
+| Out of scope | Live interaction with builds *running* on another controller (console follow over WebSocket, `input` and abort of running builds): R3 routing. The same forwarding filter is the building block. Stop already works through T5 stop requests |
 
 ### 6. JCasC on N controllers
 - JCasC stays authoritative for what it declares, re-applied on every boot. Thanks to no-op identical writes, an unchanged YAML causes no store churn.
@@ -94,12 +98,14 @@ A `StaticStateApplier` extends the T1 change applier with handlers keyed by path
 |---|---|---|---|---|
 | M1 | core | `cnj/t6-m1-static-routing` | `cnj/t5-m3-cluster-periodic-work` | `AllUsers` and `Nodes` include store children; node deletes routed; early-loaded descriptors re-loaded from the store; tests |
 | M2 | core | `cnj/t6-m2-static-applier` | M1 | `Jenkins.reloadGlobalConfig()`; handlers for root config, descriptors, users, nodes; `RemoteChangeHandler` SPI; tests |
-| M3 | core | `cnj/t6-m3-shared-keys` | M2 | second-tier `DefaultConfidentialStore` (create-only, first use wins); remember-me default option; tests |
+| M3 | core | `cnj/t6-m3-shared-keys` | M2 | second-tier `DefaultConfidentialStore` (create-only, first use wins); tests |
 | M4 | credentials | `cnj/t6-m4-credentials-reload` | `origin/master` (+ local-core pom bump) | `reload()` plus a `RemoteChangeHandler` |
-| M5 | cloud-native-jenkins | `cnj/t6-m5-static-state` | `cnj/t5-m5-shared-queue` | owned-key pattern for static state; harness (sticky browser LB with failover, the credentials branch); `ET6-static-state.sh` |
+| M5 | stapler | `cnj/t6-m5-bound-id-prefix` | the release core uses (`2123.v539a_775c45c3`) | controller prefix for bound object ids |
+| M6 | core | `cnj/t6-m6-stateless-sessions` | M3 | `alwaysRemember`; password field protected without the session id; core built against the M5 Stapler; tests |
+| M7 | cloud-native-jenkins | `cnj/t6-m7-static-state` | `cnj/t5-m5-shared-queue` | owned-key pattern for static state; `ClusterCrumbIssuer`; bound-request forwarding with internal URLs in membership; harness (non-sticky browser LB, credentials and Stapler branches); `ET6-static-state.sh` |
 
 ## E-T6 acceptance experiment (definition of done)
-ET setup: two tmpfs controllers, S0 seed (pre-plugin keys only), Postgres, Azurite. Plus a browser load balancer with cookie affinity and failover, and the token-auth non-sticky load balancer.
+ET setup: two tmpfs controllers, S0 seed (pre-plugin keys only), Postgres, Azurite, and a **non-sticky round-robin load balancer** used for every browser and API scenario.
 1. **API token:** a token created for user `u1` on A (REST) authenticates on B, and through the non-sticky LB (10/10 `200`). Revoked on A, it gets `401` on B.
 2. **Users and passwords:** a user created on A logs in on B. After a password change on A, the old password fails on B and the new one works.
 3. **Global config:** a system message and the number of executors set on A appear on B within 5 s, without a restart. B's next save of something else does not revert them.
@@ -107,7 +113,14 @@ ET setup: two tmpfs controllers, S0 seed (pre-plugin keys only), Postgres, Azuri
 5. **Node:** a permanent agent added on A appears on B and connects through B. Deleted on A, it is gone on B.
 6. **Runtime key:** a confidential key first used at runtime on A has the same value on B. A `Secret` encrypted with it on A decrypts on B.
 7. **Disposable cluster:** destroy both controllers and start fresh ones. All of the above survive.
-8. **Browser failover:** log in through the browser LB with remember-me, kill the controller serving the session, and the next page load is authenticated on the other controller.
+8. **Stateless browser journey through the round-robin LB** (a scripted browser with a cookie jar, so consecutive requests alternate controllers):
+   - log in: the form is fetched from one controller and posted to the other;
+   - open a job's configure page and use an "Add" (`renderOnDemand`) section;
+   - save the form;
+   - load the build history (progressive rendering);
+   - change the user's own password and log in with the new one.
+
+   All succeed, and the forwarded bound-object requests are counted. Then kill one controller and continue the journey without logging in again.
 9. **JCasC coexistence:** restarting B (JCasC re-applies) bumps no store versions for unchanged config, and does not remove the UI-added node.
 10. **Concurrent edits:** A and B save different global settings at nearly the same time. Both survive, and the conflict counter shows any overwrite.
 
