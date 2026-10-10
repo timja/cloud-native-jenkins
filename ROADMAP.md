@@ -30,17 +30,17 @@ Why the split: E8 showed identical JCasC plus a synced key set gives two control
 | User state: API tokens, user properties, UI-created views | ❌ | E5/E8: a token made on A gives `401` on B. Mitigation: SSO, plus tokens from an external IdP or a token plugin backed by the store (Track S) |
 | HTTP sessions and crumbs | 🟡 | E5: fail across nodes. **Sticky sessions** at the LB are the short-term answer (the crumb salt is already synced by S0). Stateless sessions come later (X) |
 
-## R1: Item configuration created and changed at runtime ← **Target 1**
+## R1: Item configuration created and changed at runtime ← **Target 1: done (ET1 passes)**
 Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 
 | Item | Status | Gap / evidence |
 |---|---|---|
-| Persistence SPI (key → bytes, CAS, listing, change events, hybrid routing) | ❌ | `XmlFile` is `final` and file-bound (`hudson/XmlFile.java:122`). The foundation for R1 and every later tier |
-| Item config in the store (`jobs/**/config.xml` at any depth, multibranch `branches/*`) | ❌ | E9: indexing creates, rewrites and deletes branch jobs; `properties()` rewrites job config on every build. E3: jobs created on A are invisible on B |
-| Item enumeration from the store, not a directory scan | ❌ | `Jenkins.loadTasks` lists `jobs/` (`Jenkins.java:3432-3439`). `AbstractFolder.loadChildren` lists subdirectories (`cloudbees-folder AbstractFolder.java:338-347`). Multibranch uses `branches/` (`branch-api MultiBranchProject.java:869`) |
-| Cross-controller item events (create, update, rename/move, delete) → in-memory update | ❌ | Listeners are in-JVM only. Reuse `AbstractItem.updateByXml` (`AbstractItem.java:917-929`) for updates |
-| No-op writes when content is unchanged | ❌ | E9: every index rewrites every branch's config, and every `properties()` build rewrites its own |
-| Concurrent writers to one job (indexing on A while a build on B runs `properties()`) | ❌ | Needs CAS plus conflict policy |
+| Persistence SPI (key → bytes, CAS, listing, change events, hybrid routing) | ✅ branch | `XmlFile` is `final` and file-bound (`hudson/XmlFile.java:122`). The foundation for R1 and every later tier |
+| Item config in the store (`jobs/**/config.xml` at any depth, multibranch `branches/*`) | ✅ branch | E9: indexing creates, rewrites and deletes branch jobs; `properties()` rewrites job config on every build. E3: jobs created on A are invisible on B |
+| Item enumeration from the store, not a directory scan | ✅ branch | `Jenkins.loadTasks` lists `jobs/` (`Jenkins.java:3432-3439`). `AbstractFolder.loadChildren` lists subdirectories (`cloudbees-folder AbstractFolder.java:338-347`). Multibranch uses `branches/` (`branch-api MultiBranchProject.java:869`) |
+| Cross-controller item events (create, update, rename/move, delete) → in-memory update | ✅ branch | Listeners are in-JVM only. Reuse `AbstractItem.updateByXml` (`AbstractItem.java:917-929`) for updates |
+| No-op writes when content is unchanged | ✅ branch | E9: every index rewrites every branch's config, and every `properties()` build rewrites its own |
+| Concurrent writers to one job (indexing on A while a build on B runs `properties()`) | 🟡 branch | CAS + warn policy; ET1 4/4b converge with 0 conflicts. Strict/writer-aware retries deferred (M5) |
 | Plugin code reading item files directly | 🟡 | E7: 88 plugins use item-dir `File` APIs; 42 call `XmlFile#getFile` |
 
 ## R2: Build scheduling

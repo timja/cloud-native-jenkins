@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | R1 |
-| **Status** | Planned |
+| **Status** | **Done.** ET1 passes (2026-10-10); see [01-progress.md](01-progress.md) |
 | **Depends on** | S0 workaround (identical JCasC + seeded key set, [E8](../findings/E8-casc-secret-sync.md)) |
 | **Unblocks** | R2 (a single scheduler needs one view of jobs and their triggers), R5 (build records hang off items), Track S (reuses the SPI) |
 | **Evidence** | [E3](../findings/E3-shared-home.md), [E6](../findings/E6-bootstrap-seam.md), [E7](../findings/E7-ecosystem-scan.md), [E9](../findings/E9-runtime-job-state.md) |
