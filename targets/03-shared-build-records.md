@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | R5 (core of it) |
-| **Status** | Planned |
+| **Status** | **Done** (2026-10-10): ET3 passes 48/48, see [03-progress](03-progress.md) |
 | **Depends on** | Target 1 (item store, change events), Target 2 (cluster-wide build numbers, item ownership) |
 | **Evidence** | [E2](../findings/E2-disposable-controller.md) (history lost with a controller; identity collisions), [E3](../findings/E3-shared-home.md) (each controller lists only its own builds), [E7](../findings/E7-ecosystem-scan.md) (212 plugins use build-dir `File` APIs), [E9](../findings/E9-runtime-job-state.md) (branch pruning deletes history), ET1/ET2 observations |
 
