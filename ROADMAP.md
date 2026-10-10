@@ -43,7 +43,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Concurrent writers to one job (indexing on A while a build on B runs `properties()`) | 🟡 branch | CAS + warn policy; ET1 4/4b converge with 0 conflicts. Strict/writer-aware retries deferred (M5) |
 | Plugin code reading item files directly | 🟡 | E7: 88 plugins use item-dir `File` APIs; 42 call `XmlFile#getFile` |
 
-## R2: Build scheduling
+## R2: Build scheduling ← **Target 2 (in progress): build numbers + exactly-once triggers**, [targets/02](targets/02-cluster-scheduling.md)
 | Item | Status | Gap / evidence |
 |---|---|---|
 | Triggers fire once per cluster (cron, SCM polling, `upstream`) | ❌ | **E3: cron fired 8 times in 3 minutes on 2 controllers.** E9: triggers are *defined by builds* via `properties()`, so the scheduler must follow R1 events |
