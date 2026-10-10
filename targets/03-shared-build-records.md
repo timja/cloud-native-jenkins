@@ -52,7 +52,7 @@ So: **when a build completes, its owner publishes a snapshot of the build direct
 | Data | Store | Key |
 |---|---|---|
 | build record (small) | `PersistenceStore` (Postgres) | `jobs/<item path>/builds/<N>/build.xml`. Written **last**, as the commit marker; later edits (description, keep-forever) republish only this |
-| running placeholder (small) | `PersistenceStore` | `jobs/<item path>/builds/<N>/running.xml`: origin, controller name, start time, display name. Written on start, deleted on publish |
+| running placeholder (small) | `PersistenceStore` | `jobs/<item path>/running/<N>.xml` (not under `builds/`, whose children are committed builds): origin, controller name, start time, display name. Written on start, deleted on publish |
 | build directory snapshot (large) | **new `BlobStore` SPI** (object storage; Azurite in the harness) | `jobs/<item path>/builds/<N>/files.tgz` |
 | Pipeline log + index (large, streamed) | **`LogStorageFactory`** (workflow-api's pluggable log storage) | backend-specific; the harness implementation uses one append blob for `log` and one for `log-index` per build |
 
@@ -108,7 +108,7 @@ Cluster-wide numbering (T2) already makes `(job full name, number)` unique while
 |---|---|---|---|---|
 | M1 | core | `cnj/t3-m1-build-snapshots` | `cnj/t2-m2-trigger-coordination` | `BlobStore` SPI + in-memory implementation; `BuildRecords` publish / republish / delete; index merge; lazy materialise in `RunMap.retrieve`; JENKINS-27530 relaxation; tests (fresh home lists and opens builds made "elsewhere") |
 | M2 | core | `cnj/t3-m2-remote-build-events` | M1 | `ItemChangeApplier` handles build records (materialise + recognize / reload / silent removal); permalink refresh; tests |
-| M3 | core | `cnj/t3-m3-running-placeholders` | M2 | `running.xml` records, `RunningElsewhereAction`, `liveOrigins()` stale cleanup; tests |
+| M3 | core | `cnj/t3-m3-running-placeholders` | M2 | `running/<N>.xml` records, `RunningElsewhereAction`, `liveOrigins()` stale cleanup; tests |
 | M4 | core | `cnj/t3-m4-explicit-numbering` | M3 | Keep `nextBuildNumber` on item delete (explicit + tested); `move` ignores a leftover `nextBuildNumber` at the destination |
 | M5 | junit-sql-storage | `cnj/t3-m5-remote-delete` | `origin/master` | Skip cleanup listeners while applying a remote change |
 | M6 | cloud-native-jenkins | `cnj/t3-m6-blob-and-log-storage` | `cnj/t2-m3-postgres-coordination` | Store plugin: Azure Blob `BlobStore` (Azurite in the harness); append-blob `LogStorageFactory` (tee while running, download-to-cache for reads); `liveOrigins()` from T2 membership; Azurite added to `compose.et1.yaml`; `ET3-build-records.sh` |
