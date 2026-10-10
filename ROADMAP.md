@@ -96,7 +96,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Ecosystem migration (E7 hit lists) | 🟡 measured | 513 / 2,117 plugins (99 of 358 BOM) |
 | Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | ❌ | |
 
-## Track S: Static state in the store (later)
+## Track S: Static state in the store ← **Target 6 (planned)**, [targets/06](targets/06-static-state.md)
 Replaces S0 once the R1 SPI exists: global config, descriptors, key material, users/tokens, credentials and nodes, plus cross-controller reload. Plan kept at [targets/90-static-state-store.md](targets/90-static-state-store.md). Findings E1, E3 and E6 still apply.
 
 ---
