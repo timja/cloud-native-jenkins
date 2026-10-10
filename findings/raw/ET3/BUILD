@@ -1,3 +1,0 @@
-core cnj/t3-m4-explicit-numbering 65d22559adafcb1b29bfe5fc27d870298b46d82b
-cloudbees-folder cnj/t1-m2-folder-children 7699d449522210839dab087cffc0253f53107356
-cloud-native-jenkins b709d2c81215395b736e7e4eb8e9f4c6eacb67b9

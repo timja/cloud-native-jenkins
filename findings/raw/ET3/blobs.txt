@@ -5,6 +5,8 @@ jobs/fs/builds/2/files.tgz
 jobs/il2/builds/1/files.tgz
 jobs/il2/builds/1/log
 jobs/il2/builds/1/log-index
+jobs/il2/builds/1/running/build.xml.17.1
+jobs/il2/builds/1/running/program.dat.17.1
 jobs/il2/builds/10/files.tgz
 jobs/il2/builds/10/log
 jobs/il2/builds/10/log-index

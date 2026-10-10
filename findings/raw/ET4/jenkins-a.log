@@ -1,0 +1,388 @@
+jenkins-a-1  | Running from: /war-override/jenkins.war
+jenkins-a-1  | webroot: /var/jenkins_home/war
+jenkins-a-1  | 2026-10-10 16:37:09.726+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-10 16:37:10.168+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-10 16:37:10.222+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-10 16:37:10.573+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-10 16:37:10.610+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-10 16:37:10.927+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-10 16:37:10.991+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-10 16:37:10.997+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-10 16:37:10.997+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @778ms
+jenkins-a-1  | 2026-10-10 16:37:10.999+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-10 16:37:11.078+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-10 16:37:11.151+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-10 16:37:14.163+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-10 16:37:16.181+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-10 16:37:16.192+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-10 16:37:16.194+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-10 16:37:16.675+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-10 16:37:17.113+0000 [id=58]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-a-1  | 2026-10-10 16:37:17.893+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-a-1  | 2026-10-10 16:37:17.953+0000 [id=58]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-a-1  | 2026-10-10 16:37:18.209+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-10 16:37:18.896+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-10 16:37:18.900+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-10 16:37:18.902+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-10 16:37:18.908+0000 [id=45]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-10 16:37:18.942+0000 [id=53]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_1a18c084e6d5656908e9f832ad63f6e78644807e0dc03fe2b60382c621c53ab7 duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-10 16:37:19.094+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-10 16:37:19.103+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-10 16:37:20.261+0000 [id=95]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-a-1  | Running from: /war-override/jenkins.war
+jenkins-a-1  | webroot: /var/jenkins_home/war
+jenkins-a-1  | 2026-10-10 16:38:56.262+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-10 16:38:56.629+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-10 16:38:56.655+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-10 16:38:56.865+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-10 16:38:56.885+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-10 16:38:57.058+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-10 16:38:57.162+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-10 16:38:57.166+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@2a095f33{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-10 16:38:57.166+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @512ms
+jenkins-a-1  | 2026-10-10 16:38:57.167+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-10 16:38:57.221+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-10 16:38:57.285+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-10 16:38:58.801+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-10 16:39:00.067+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-10 16:39:00.080+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-10 16:39:00.086+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-10 16:39:00.272+0000 [id=59]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-10 16:39:00.483+0000 [id=59]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-a-1  | 2026-10-10 16:39:01.017+0000 [id=59]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-a-1  | 2026-10-10 16:39:01.065+0000 [id=59]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-a-1  | 2026-10-10 16:39:01.306+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-10 16:39:02.257+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-10 16:39:02.287+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-10 16:39:02.293+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-10 16:39:02.298+0000 [id=57]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-10 16:39:02.303+0000 [id=45]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_1a18c084e6d5656908e9f832ad63f6e78644807e0dc03fe2b60382c621c53ab7 duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-10 16:39:02.472+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-10 16:39:02.484+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-10 16:39:03.636+0000 [id=94]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-a-1  | 2026-10-10 16:41:09.140+0000 [id=28]	WARNING	o.e.j.e.n.ContextHandler$APIContext#log: Error while serving http://localhost:8081/job/ag/1/consoleText
+jenkins-a-1  | java.io.FileNotFoundException: /var/jenkins_home/jobs/ag/builds/1/log (No such file or directory)
+jenkins-a-1  | 	at java.base/java.io.RandomAccessFile.open0(Native Method)
+jenkins-a-1  | 	at java.base/java.io.RandomAccessFile.open(Unknown Source)
+jenkins-a-1  | 	at java.base/java.io.RandomAccessFile.<init>(Unknown Source)
+jenkins-a-1  | 	at java.base/java.io.RandomAccessFile.<init>(Unknown Source)
+jenkins-a-1  | 	at org.kohsuke.stapler.framework.io.LargeText$FileSession.<init>(LargeText.java:691)
+jenkins-a-1  | 	at org.kohsuke.stapler.framework.io.LargeText$2.open(LargeText.java:154)
+jenkins-a-1  | 	at org.kohsuke.stapler.framework.io.LargeText.writeLogUncounted(LargeText.java:270)
+jenkins-a-1  | 	at org.kohsuke.stapler.framework.io.LargeText.writeLogTo(LargeText.java:264)
+jenkins-a-1  | 	at hudson.console.AnnotatedLargeText.writeLogTo(AnnotatedLargeText.java:231)
+jenkins-a-1  | 	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun.writeLogTo(WorkflowRun.java:1331)
+jenkins-a-1  | 	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun.doConsoleText(WorkflowRun.java:1303)
+jenkins-a-1  | 	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(Unknown Source)
+jenkins-a-1  | 	at org.kohsuke.stapler.Function$MethodFunction.invoke(Function.java:469)
+jenkins-a-1  | Caused: java.lang.reflect.InvocationTargetException
+jenkins-a-1  | 	at org.kohsuke.stapler.Function$MethodFunction.invoke(Function.java:473)
+jenkins-a-1  | 	at org.kohsuke.stapler.Function$InstanceFunction.invoke(Function.java:482)
+jenkins-a-1  | 	at org.kohsuke.stapler.Function.bindAndInvoke(Function.java:218)
+jenkins-a-1  | 	at org.kohsuke.stapler.Function.bindAndInvokeAndServeResponse(Function.java:140)
+jenkins-a-1  | 	at org.kohsuke.stapler.MetaClass$12.doDispatch(MetaClass.java:686)
+jenkins-a-1  | 	at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:61)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:800)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:938)
+jenkins-a-1  | 	at org.kohsuke.stapler.MetaClass$10.dispatch(MetaClass.java:590)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:800)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:938)
+jenkins-a-1  | 	at org.kohsuke.stapler.MetaClass$5.doDispatch(MetaClass.java:369)
+jenkins-a-1  | 	at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:61)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:800)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:938)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:721)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.service(Stapler.java:253)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHolder.handle(ServletHolder.java:783)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1670)
+jenkins-a-1  | 	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:200)
+jenkins-a-1  | 	at hudson.security.HudsonPrivateSecurityRealm$2.doFilter(HudsonPrivateSecurityRealm.java:1262)
+jenkins-a-1  | 	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:197)
+jenkins-a-1  | 	at jenkins.util.HttpServletFilter$1.doFilter(HttpServletFilter.java:77)
+jenkins-a-1  | 	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:197)
+jenkins-a-1  | 	at hudson.util.PluginServletFilter.doFilter(PluginServletFilter.java:203)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at jenkins.ErrorAttributeFilter.doFilter(ErrorAttributeFilter.java:29)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at hudson.security.csrf.CrumbFilter.doFilter(CrumbFilter.java:155)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at jenkins.security.csp.impl.CspFilter.doFilter(CspFilter.java:83)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:94)
+jenkins-a-1  | 	at jenkins.security.AcegiSecurityExceptionFilter.doFilter(AcegiSecurityExceptionFilter.java:52)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at hudson.security.UnwrapSecurityExceptionFilter.doFilter(UnwrapSecurityExceptionFilter.java:54)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+jenkins-a-1  | 	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:115)
+jenkins-a-1  | 	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:106)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:245)
+jenkins-a-1  | 	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at jenkins.security.BasicHeaderProcessor.success(BasicHeaderProcessor.java:148)
+jenkins-a-1  | 	at jenkins.security.BasicHeaderProcessor.doFilter(BasicHeaderProcessor.java:95)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:117)
+jenkins-a-1  | 	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+jenkins-a-1  | 	at hudson.security.HttpSessionContextIntegrationFilter2.doFilter(HttpSessionContextIntegrationFilter2.java:63)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2.doFilter(ChainedServletFilter2.java:111)
+jenkins-a-1  | 	at hudson.security.HudsonFilter.doFilter(HudsonFilter.java:173)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at org.kohsuke.stapler.UncaughtExceptionFilter.doFilter(UncaughtExceptionFilter.java:26)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at hudson.util.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:85)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at org.kohsuke.stapler.DiagnosticThreadNameFilter.doFilter(DiagnosticThreadNameFilter.java:31)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at jenkins.security.SuspiciousRequestFilter.doFilter(SuspiciousRequestFilter.java:38)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler.doHandle(ServletHandler.java:526)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.handle(ScopedHandler.java:125)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.security.SecurityHandler.handle(SecurityHandler.java:588)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HandlerWrapper.handle(HandlerWrapper.java:124)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextHandle(ScopedHandler.java:195)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.SessionHandler.doHandle(SessionHandler.java:612)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextHandle(ScopedHandler.java:193)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.doHandle(ContextHandler.java:1047)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:162)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler.doScope(ServletHandler.java:483)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:160)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.SessionHandler.doScope(SessionHandler.java:589)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:160)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.doScope(ContextHandler.java:962)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.handle(ScopedHandler.java:123)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.handle(ContextHandler.java:1738)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1586)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel.dispatch(HttpChannel.java:737)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel.handle(HttpChannel.java:520)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextHandler$CoreToNestedHandler.handle(ContextHandler.java:3098)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1253)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:621)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.Server.handle(Server.java:197)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:804)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:420)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1789)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:204)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:317)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
+jenkins-a-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-a-1  | 2026-10-10 16:41:09.142+0000 [id=28]	WARNING	h.i.i.InstallUncaughtExceptionHandler#handleException
+jenkins-a-1  | java.io.FileNotFoundException: /var/jenkins_home/jobs/ag/builds/1/log (No such file or directory)
+jenkins-a-1  | 	at java.base/java.io.RandomAccessFile.open0(Native Method)
+jenkins-a-1  | 	at java.base/java.io.RandomAccessFile.open(Unknown Source)
+jenkins-a-1  | 	at java.base/java.io.RandomAccessFile.<init>(Unknown Source)
+jenkins-a-1  | 	at java.base/java.io.RandomAccessFile.<init>(Unknown Source)
+jenkins-a-1  | 	at org.kohsuke.stapler.framework.io.LargeText$FileSession.<init>(LargeText.java:691)
+jenkins-a-1  | 	at org.kohsuke.stapler.framework.io.LargeText$2.open(LargeText.java:154)
+jenkins-a-1  | 	at org.kohsuke.stapler.framework.io.LargeText.writeLogUncounted(LargeText.java:270)
+jenkins-a-1  | 	at org.kohsuke.stapler.framework.io.LargeText.writeLogTo(LargeText.java:264)
+jenkins-a-1  | 	at hudson.console.AnnotatedLargeText.writeLogTo(AnnotatedLargeText.java:231)
+jenkins-a-1  | 	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun.writeLogTo(WorkflowRun.java:1331)
+jenkins-a-1  | 	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun.doConsoleText(WorkflowRun.java:1303)
+jenkins-a-1  | 	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(Unknown Source)
+jenkins-a-1  | 	at org.kohsuke.stapler.Function$MethodFunction.invoke(Function.java:469)
+jenkins-a-1  | 	at org.kohsuke.stapler.Function$InstanceFunction.invoke(Function.java:482)
+jenkins-a-1  | 	at org.kohsuke.stapler.Function.bindAndInvoke(Function.java:218)
+jenkins-a-1  | 	at org.kohsuke.stapler.Function.bindAndInvokeAndServeResponse(Function.java:140)
+jenkins-a-1  | 	at org.kohsuke.stapler.MetaClass$12.doDispatch(MetaClass.java:686)
+jenkins-a-1  | 	at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:61)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:800)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:938)
+jenkins-a-1  | 	at org.kohsuke.stapler.MetaClass$10.dispatch(MetaClass.java:590)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:800)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:938)
+jenkins-a-1  | 	at org.kohsuke.stapler.MetaClass$5.doDispatch(MetaClass.java:369)
+jenkins-a-1  | 	at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:61)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:800)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:938)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:721)
+jenkins-a-1  | 	at org.kohsuke.stapler.Stapler.service(Stapler.java:253)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHolder.handle(ServletHolder.java:783)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1670)
+jenkins-a-1  | 	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:200)
+jenkins-a-1  | 	at hudson.security.HudsonPrivateSecurityRealm$2.doFilter(HudsonPrivateSecurityRealm.java:1262)
+jenkins-a-1  | 	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:197)
+jenkins-a-1  | 	at jenkins.util.HttpServletFilter$1.doFilter(HttpServletFilter.java:77)
+jenkins-a-1  | 	at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:197)
+jenkins-a-1  | 	at hudson.util.PluginServletFilter.doFilter(PluginServletFilter.java:203)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at jenkins.ErrorAttributeFilter.doFilter(ErrorAttributeFilter.java:29)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at hudson.security.csrf.CrumbFilter.doFilter(CrumbFilter.java:155)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at jenkins.security.csp.impl.CspFilter.doFilter(CspFilter.java:83)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:94)
+jenkins-a-1  | 	at jenkins.security.AcegiSecurityExceptionFilter.doFilter(AcegiSecurityExceptionFilter.java:52)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at hudson.security.UnwrapSecurityExceptionFilter.doFilter(UnwrapSecurityExceptionFilter.java:54)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+jenkins-a-1  | 	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:115)
+jenkins-a-1  | 	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:106)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:245)
+jenkins-a-1  | 	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at jenkins.security.BasicHeaderProcessor.success(BasicHeaderProcessor.java:148)
+jenkins-a-1  | 	at jenkins.security.BasicHeaderProcessor.doFilter(BasicHeaderProcessor.java:95)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:117)
+jenkins-a-1  | 	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+jenkins-a-1  | 	at hudson.security.HttpSessionContextIntegrationFilter2.doFilter(HttpSessionContextIntegrationFilter2.java:63)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2$1.doFilter(ChainedServletFilter2.java:99)
+jenkins-a-1  | 	at hudson.security.ChainedServletFilter2.doFilter(ChainedServletFilter2.java:111)
+jenkins-a-1  | 	at hudson.security.HudsonFilter.doFilter(HudsonFilter.java:173)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at org.kohsuke.stapler.UncaughtExceptionFilter.doFilter(UncaughtExceptionFilter.java:26)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at hudson.util.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:85)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at org.kohsuke.stapler.DiagnosticThreadNameFilter.doFilter(DiagnosticThreadNameFilter.java:31)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at jenkins.security.SuspiciousRequestFilter.doFilter(SuspiciousRequestFilter.java:38)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler.doHandle(ServletHandler.java:526)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.handle(ScopedHandler.java:125)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.security.SecurityHandler.handle(SecurityHandler.java:588)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HandlerWrapper.handle(HandlerWrapper.java:124)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextHandle(ScopedHandler.java:195)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.SessionHandler.doHandle(SessionHandler.java:612)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextHandle(ScopedHandler.java:193)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.doHandle(ContextHandler.java:1047)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:162)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler.doScope(ServletHandler.java:483)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:160)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.SessionHandler.doScope(SessionHandler.java:589)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:160)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.doScope(ContextHandler.java:962)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.handle(ScopedHandler.java:123)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.handle(ContextHandler.java:1738)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1586)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel.dispatch(HttpChannel.java:737)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel.handle(HttpChannel.java:520)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextHandler$CoreToNestedHandler.handle(ContextHandler.java:3098)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1253)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:621)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.Server.handle(Server.java:197)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:804)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:420)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1789)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:204)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:317)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
+jenkins-a-1  | 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
+jenkins-a-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-a-1  | Running from: /war-override/jenkins.war
+jenkins-a-1  | webroot: /var/jenkins_home/war
+jenkins-a-1  | 2026-10-10 16:42:16.287+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-10 16:42:16.686+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-10 16:42:16.711+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-10 16:42:16.884+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-10 16:42:16.904+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-10 16:42:17.083+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-10 16:42:17.153+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-10 16:42:17.157+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@2a095f33{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-10 16:42:17.157+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @447ms
+jenkins-a-1  | 2026-10-10 16:42:17.158+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-10 16:42:17.215+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-10 16:42:17.262+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-10 16:42:18.823+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-10 16:42:20.150+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-10 16:42:20.165+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-10 16:42:20.167+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-10 16:42:20.337+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-10 16:42:20.510+0000 [id=52]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-a-1  | 2026-10-10 16:42:20.955+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-a-1  | 2026-10-10 16:42:21.037+0000 [id=56]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-a-1  | 2026-10-10 16:42:21.223+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-10 16:42:21.717+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-10 16:42:21.739+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-10 16:42:21.740+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-10 16:42:21.746+0000 [id=51]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-10 16:42:21.747+0000 [id=59]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_1a18c084e6d5656908e9f832ad63f6e78644807e0dc03fe2b60382c621c53ab7 duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-10 16:42:21.869+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-10 16:42:21.877+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-10 16:42:23.038+0000 [id=95]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-a-1  | 2026-10-10 16:43:15.305+0000 [id=129]	INFO	j.persistence.RunningBuilds#adopt: Adopting inp #1 from jenkins-b (e1dcc66d-0bdd-46e2-b681-49f64e9f0229), which is gone
+jenkins-a-1  | 2026-10-10 16:43:15.701+0000 [id=129]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming inp#1, which is missing from FlowExecutionList, so registering it now
+jenkins-a-1  | 2026-10-10 16:43:15.705+0000 [id=129]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: inp#1 was already in the list: [inp#1]
+jenkins-a-1  | 2026-10-10 16:43:15.706+0000 [id=129]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed inp #1 from save point 77.1 as owner with epoch 80
+jenkins-a-1  | 2026-10-10 16:44:08.027+0000 [id=151]	WARNING	j.persistence.RunningBuilds#lost: Ownership of pt #1 was lost to another controller; stopping it here
+jenkins-a-1  | 2026-10-10 16:44:08.080+0000 [id=132]	WARNING	j.p.BuildRecords$Publisher#onFinalized: Not publishing pt #1: it is owned by another controller
+jenkins-a-1  | Running from: /war-override/jenkins.war
+jenkins-a-1  | webroot: /var/jenkins_home/war
+jenkins-a-1  | 2026-10-10 16:46:38.897+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-10 16:46:39.304+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-10 16:46:39.328+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-10 16:46:39.502+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-10 16:46:39.521+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-10 16:46:39.689+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-10 16:46:39.756+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-10 16:46:39.760+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-10 16:46:39.761+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @433ms
+jenkins-a-1  | 2026-10-10 16:46:39.761+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-10 16:46:39.810+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-10 16:46:39.862+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-10 16:46:41.169+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-10 16:46:42.381+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-10 16:46:42.394+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-10 16:46:42.396+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-10 16:46:42.546+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-10 16:46:42.734+0000 [id=57]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-a-1  | 2026-10-10 16:46:43.196+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-a-1  | 2026-10-10 16:46:43.251+0000 [id=57]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-a-1  | 2026-10-10 16:46:43.480+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-10 16:46:43.972+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-10 16:46:44.000+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-10 16:46:44.004+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-10 16:46:44.007+0000 [id=52]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-10 16:46:44.009+0000 [id=57]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_1a18c084e6d5656908e9f832ad63f6e78644807e0dc03fe2b60382c621c53ab7 duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-10 16:46:44.113+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-10 16:46:44.120+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-10 16:46:45.211+0000 [id=95]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
