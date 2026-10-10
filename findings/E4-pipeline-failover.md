@@ -27,7 +27,7 @@ The first attempt failed with `missing workspace`, but that was the harness's fa
   - `FlowExecutionList.xml`
   - `secrets/` (`SecretPickle`, the agent HMAC)
 
-  All of it comes from the shared disk, so T4 has to provide every one of these from the store.
+  All of it comes from the shared disk, so R4 has to provide every one of these from the store.
 - Cold failover needs no code changes **when the filesystem is shared**. Without one, nothing in this list exists on B.
 - What is still missing for *safe* failover:
   - An ownership lease. Nothing stopped A and B from both running these builds had A only been partitioned rather than killed.

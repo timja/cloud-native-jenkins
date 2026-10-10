@@ -27,6 +27,6 @@ After recreating `freestyle` and `pipeline` and building `#1` again:
 
 **Implication:** any externalised store needs a build identity that is unique across controller lifetimes and deployments. Possible keys:
 - a per-build UUID, or
-- `(controller-cluster id, job id, build number)` with build numbers that never reset, i.e. external sequences (T3).
+- `(controller-cluster id, job id, build number)` with build numbers that never reset, i.e. external sequences (R2 numbering, R5 identity).
 
 Job names are not stable either: a rename, or a delete-and-recreate, reuses them.

@@ -14,9 +14,9 @@
 | POST with API token via LB | `200 401 200 401`. Token auth needs no crumb, but hits the same stale-user problem |
 | Inbound WebSocket agent through the LB | Connected to exactly **one** controller: `agent1` online on B, offline on A. Both have `agent1` defined, and builds on A wait forever for it |
 
-## Implications (T5)
+## Implications (S0 short-term, then R3 and X)
 - **Sessions and crumbs need shared or stateless handling:** shared session storage, or a signed session or JWT cookie, plus crumbs bound to the user rather than the session. Sticky sessions are a stopgap that breaks on failover.
-- **User and API-token changes need cross-controller invalidation.** This is the same SPI change-event mechanism as T1/T2.
+- **User and API-token changes need cross-controller invalidation.** This is the same SPI change-event mechanism as R1, applied to users in Track S.
 - **Agents connect to one controller.** Two models are possible:
   - Build ownership follows agent ownership, and requests are routed to the owner.
   - Channels are brokered so any controller can use any agent.

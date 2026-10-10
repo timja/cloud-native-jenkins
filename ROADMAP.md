@@ -1,107 +1,109 @@
 # Roadmap: multi-controller, cloud-native Jenkins
 
-**Goal.** N Jenkins controllers run active/active with **ephemeral `JENKINS_HOME`s**, and all durable state lives in external services (a database plus object storage). Any controller can be killed or added without losing data, double-running work, or users noticing.
+**Goal.** N Jenkins controllers run active/active with **ephemeral `JENKINS_HOME`s**. Durable state lives in external services (a database plus object storage). Any controller can be killed or added without losing data, double-running work, or users noticing.
 
-**Decision.** Fully externalised storage. No shared filesystem. See [README](README.md#decision-record).
+**Evidence.** Every gap below is backed by an experiment run against real Jenkins 2.580.1 instances (`validation/`, findings E1–E9). Status values: ✅ exists and works · 🟡 partial / Beta / workaround · ❌ missing.
 
-**Evidence.** Every gap below is backed by an experiment run against real Jenkins 2.580.1 instances (`validation/`). Status values: ✅ exists and works · 🟡 partial / Beta / unmaintained · ❌ missing.
+## How state is split (decided 2026-10-10)
+Jenkins state falls into two kinds, and they need different treatment:
 
-**North-star metric.** The number of durable state categories written to `JENKINS_HOME` during the E1 scenario, measured by `analyze_inventory.py`. Today: 18 durable state categories (E1, `findings/raw/E1/analysis.md`). Target: 0, with only `war/`, `plugins/` and caches left.
+| | **Static state**: changed by admins | **Runtime state**: changed by builds and events |
+|---|---|---|
+| Examples | global config, system credentials, security realm, static nodes, plugin set, key material | jobs created by indexing, job config rewritten by `properties()`, the queue, triggers, build numbers, running builds, Pipeline program state, build history |
+| Rate of change | rare, reviewed | continuous, on whichever controller is doing the work |
+| Now | **S0 workaround:** identical JCasC on every controller plus a seeded key set ([E8](findings/E8-casc-secret-sync.md)) | **Focus of this roadmap: R1–R5** |
+| Later | Track S: move into the store using the R1 SPI ([targets/90](targets/90-static-state-store.md)) | |
+
+Why the split: E8 showed identical JCasC plus a synced key set gives two controllers with separate homes the same config, secrets, agent secrets and instance identity. E9 showed job definitions are *runtime* state: indexing creates, deletes and rewrites them, and a plain build rewrote its own `config.xml`, including a cron trigger. No amount of config syncing covers that.
+
+**North-star metric:** the number of **runtime** state categories still written to a controller's local `JENKINS_HOME` during the E1 + E9 scenarios. Static state may stay local under S0.
 
 ---
 
-## T0: Measure (done)
-| Item | Status | Notes |
+## S0: Static state workaround (now)
+| Item | Status | Notes / evidence |
 |---|---|---|
-| Docker Compose harness: 2 controllers, Postgres, Azurite, non-sticky nginx, inbound agent | ✅ | `validation/compose.yaml`. `JENKINS_WAR_DIR` swaps in a locally built core war |
-| `JENKINS_HOME` inventory (inotify + init-milestone correlation) | ✅ | [E1](findings/E1-home-inventory.md) |
-| Experiments E1–E7 | ✅ | `validation/experiments/` |
-| Inventory regression check in CI (fail if a category comes back) | ❌ | wire `analyze_inventory.py` into a GitHub Action once T1 lands |
+| Global config, system credentials, security realm, tool installers, clouds | 🟡 | Identical JCasC on every controller. E2: survives a fresh controller. **Config must be byte-identical** (no per-controller values), and the UI must be treated as read-only (E3: UI saves land on one controller) |
+| Key material | 🟡 | E8: sharing `master.key` alone is **not enough**. Seed the full set (`secret.key*`, all of `secrets/*`, `identity.key.enc`) into each home before first boot, from a k8s Secret via an init container. Re-seed after plugin changes; alert when `secrets/` drifts from the seed |
+| Static agent definitions | 🟡 | JCasC. Connection state is runtime, see R3 |
+| Plugin set | 🟡 | Baked into the image; `UpdateCenter.never` (harness). No runtime installs |
+| User state: API tokens, user properties, UI-created views | ❌ | E5/E8: a token made on A gives `401` on B. Mitigation: SSO, plus tokens from an external IdP or a token plugin backed by the store (Track S) |
+| HTTP sessions and crumbs | 🟡 | E5: fail across nodes. **Sticky sessions** at the LB are the short-term answer (the crumb salt is already synced by S0). Stateless sessions come later (X) |
 
-## T1: Foundation: persistence SPI, secrets, global config ← **first target**
-Plan: [targets/01-persistence-spi-global-config.md](targets/01-persistence-spi-global-config.md)
+## R1: Item configuration created and changed at runtime ← **Target 1**
+Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 
 | Item | Status | Gap / evidence |
 |---|---|---|
-| Storage SPI: key → bytes, versions/CAS, listing, change events, hybrid routing | ❌ | `XmlFile` is `final` and wraps `java.io.File` (`hudson/XmlFile.java:122`); there is no persistence extension point. JEP-213 stalled here |
-| Boot-time selection of the store | ❌ | E6: `--commonLibFolder` → `NoClassDefFoundError`; only `WEB-INF/lib` works. E1: `master.key`/`secret.key` are read before plugins are listed |
-| Shared secrets (`secrets/*`, `secret.key`, instance identity) | 🟡 | `ConfidentialStore` is `ServiceLoader`-pluggable, but `secureRandom()` is package-private (E6). `secret.key` bypasses it. E2: UI-entered secrets and API tokens are lost on a new controller |
-| Global config (`config.xml`, descriptor XML) in the store | ❌ | E3: lost update between controllers |
-| Cross-controller change propagation and targeted reload | ❌ | E3: only a full stop-the-world `/reload` makes B see changes |
-| Idempotent writes (CasC re-apply on every boot) | ❌ | E1 finding 2: a plain restart rewrites 9+ durable files |
-| `DoubleLaunchChecker` replaced | ❌ | E3: never fires inside 60–90 min |
+| Persistence SPI (key → bytes, CAS, listing, change events, hybrid routing) | ❌ | `XmlFile` is `final` and file-bound (`hudson/XmlFile.java:122`). The foundation for R1 and every later tier |
+| Item config in the store (`jobs/**/config.xml` at any depth, multibranch `branches/*`) | ❌ | E9: indexing creates, rewrites and deletes branch jobs; `properties()` rewrites job config on every build. E3: jobs created on A are invisible on B |
+| Item enumeration from the store, not a directory scan | ❌ | `Jenkins.loadTasks` lists `jobs/` (`Jenkins.java:3432-3439`). `AbstractFolder.loadChildren` lists subdirectories (`cloudbees-folder AbstractFolder.java:338-347`). Multibranch uses `branches/` (`branch-api MultiBranchProject.java:869`) |
+| Cross-controller item events (create, update, rename/move, delete) → in-memory update | ❌ | Listeners are in-JVM only. Reuse `AbstractItem.updateByXml` (`AbstractItem.java:917-929`) for updates |
+| No-op writes when content is unchanged | ❌ | E9: every index rewrites every branch's config, and every `properties()` build rewrites its own |
+| Concurrent writers to one job (indexing on A while a build on B runs `properties()`) | ❌ | Needs CAS plus conflict policy |
+| Plugin code reading item files directly | 🟡 | E7: 88 plugins use item-dir `File` APIs; 42 call `XmlFile#getFile` |
 
-## T2: Configuration entities
+## R2: Build scheduling
 | Item | Status | Gap / evidence |
 |---|---|---|
-| Items (jobs, folders, multibranch children) | ❌ | `jobs/*/config.xml`; loaded by **directory scan** of `jobs/` (`Jenkins.loadTasks`). Needs `list(prefix)` plus rename/move as a store transaction. E3: new jobs invisible on other controllers |
-| Nodes | ❌ | `nodes/*/config.xml` (E1). Separate *definition* (shared) from *connection* (per controller), see T5 |
-| Users, `UserIdMapper`, API tokens, `apiTokenStats.xml` | ❌ | E5: a token created on A gets `401` on B. `User.AllUsers` is an in-memory map (`hudson/model/User.java:1103`) |
-| System credentials (`credentials.xml`), folder credentials | ❌ | Read while plugins load (E1). External providers (Vault, Key Vault, AWS SM) cache per controller with 10 min TTLs |
-| Views | ❌ | Inside `config.xml` (moves with T1) and folder `config.xml` (T2) |
-| Plugin-owned `XmlFile`s and `getFile()` users | 🟡 | [E7](findings/E7-ecosystem-scan.md): 171 plugins use `XmlFile` directly (covered by path-based routing); **42 call `XmlFile#getFile`** (10 in BOM, e.g. github, job-dsl, junit, jobConfigHistory, saml), which bypasses the store |
-| JCasC as a store writer (apply once per cluster, not per boot) | ❌ | `ConfigurationAsCode` applies in an `@Initializer` on every controller; reload is per controller |
+| Triggers fire once per cluster (cron, SCM polling, `upstream`) | ❌ | **E3: cron fired 8 times in 3 minutes on 2 controllers.** E9: triggers are *defined by builds* via `properties()`, so the scheduler must follow R1 events |
+| Branch indexing and org scanning run once, with indexing state shared | ❌ | E9: `state.xml`, `indexing/indexing.xml`, `scm-*-revision-hash.xml` are written by whoever indexes |
+| Webhook fan-in (an event delivered to any controller is handled once) | ❌ | GitHub/GitLab/Bitbucket hooks arrive at one controller through the LB |
+| Atomic, cluster-wide build numbers | 🟡 | `Job.BuildNumberAssigner` (Beta) exists; the default is `synchronized(job)` + file (`Job.java:378`). E3: only the JENKINS-23152 directory check avoided a collision |
+| Queue: shared or partitioned, cluster-unique ids | 🟡 | In-memory under one lock (`Queue.java:352`); `queue.xml` is written only at shutdown (E1). `QueueIdStrategy` (Beta) exists |
+| Placing builds on a controller (load balancing, affinity to connected agents) | ❌ | E5: an agent connects to one controller only |
+| Quiet period, `build` step, upstream/downstream, `lock` (lockable-resources) | ❌ | Cross-build coordination happens in one JVM |
+| Cluster-singleton `PeriodicWork` (declared, not blanket leader election) | ❌ | E7: 131 plugins (37 BOM) define periodic work, and much of it is legitimately per-JVM |
 
-## T3: Build records and outputs
+## R3: Running builds
 | Item | Status | Gap / evidence |
 |---|---|---|
-| Stable, globally unique build identity | ❌ | **E2: junit-sql shows stale results** (4 tests instead of 2), and Azure artifact blob keys (`<job>/<#>/…`) collide when a recreated job reuses `(name, #)`. Needs a UUID or never-resetting numbers |
-| Build numbering from one atomic source | 🟡 | `Job.BuildNumberAssigner` (Beta) exists; the default is `synchronized(job)` + file (`Job.java:378`). E3: only the JENKINS-23152 directory check avoided a collision |
-| Build records (`build.xml`) and the `RunMap` index | ❌ | Lazy-load index is `dir.list()` of `builds/` (`AbstractLazyLoadRunMap.java:175`). Beta hooks `recognizeNumber`/`allowLoad` exist |
-| Permalinks | ❌ | `builds/permalinks` (E1) |
-| Build logs: core SPI for Freestyle and all `Run`s | ❌ | `Run.getLogFile` hard-codes files (`Run.java:1409`). JEP-207 deferred |
-| Build logs: Pipeline | 🟡 | `LogStorageFactory` (Beta, workflow-api). Only reader/writer is pipeline-cloudwatch-logs (last commit 2020). The Azure one is write-only. E1: with nothing installed, `log` + `log-index` stay local |
-| Artifacts and stashes | ✅ | azure-artifact-manager works end to end against Azurite (E1, E2); artifact-manager-s3 exists. Gap: identity collision (above) |
-| Test results | 🟡 | junit-sql-storage works (E1). Gaps: identity collision (E2); per-controller Caffeine cache, 10 min, no cross-controller invalidation |
-| Fingerprints | 🟡 | `FingerprintStorage` (Beta) in core; no maintained external implementation. E1: `fingerprints/**` written even with external artifacts |
-| Task logs (agent logs, polling logs) | ❌ | `logs/slaves/*` (E1); category "not started" on jenkins.io |
-| Per-build plugin data written into the build dir | ❌ | [E7](findings/E7-ecosystem-scan.md): **212 plugins** (32 in BOM, incl. workflow-api, workflow-job, junit, warnings-ng, coverage) use build-dir `File` APIs. Needs a per-build attachment/blob API and a hybrid migration |
+| Build ownership lease plus fencing | ❌ | E4: B adopted A's builds after a SIGKILL, but nothing stops a *partitioned* A from carrying on |
+| Adoption of a dead controller's builds | 🟡 | E4: works today **only** via a shared disk (`program.dat`, flow nodes, `build.xml`). Must keep working via R4 |
+| Agent connections: which controller holds the channel, reconnecting after failover | ❌ | E5: one controller only. E4: needed a stable DNS alias moved by hand |
+| Cloud provisioning across controllers (k8s, EC2, Docker) | ❌ | `NodeProvisioner` per JVM over-provisions. Orphan cleanup kills other controllers' agents |
+| Routing requests to the owner (live console, `input`, abort, replay) | ❌ | |
+| Executors and built-in node | 🟡 | Set built-in executors to 0; agents only (E1: built-in workspaces are local) |
 
-## T4: Pipeline runtime state
+## R4: Pipeline data
 | Item | Status | Gap / evidence |
 |---|---|---|
-| `program.dat` (CPS continuation) in the store | ❌ | `CpsFlowExecution.java:1038`. E4: resume works **only** because the new controller can read it from disk |
-| Flow nodes (`workflow/*.xml` → `workflow-completed/flowNodeStore.xml`) | ❌ | `FlowNodeStorage` is abstract, but `createStorage()` hard-codes the file implementations |
+| `program.dat` (CPS continuation) in the store | ❌ | `CpsFlowExecution.java:1038`. E4: the resume source |
+| Flow nodes (`workflow/*.xml` → `workflow-completed/flowNodeStore.xml`) | ❌ | `FlowNodeStorage` is abstract, but `createStorage()` hard-codes the file implementations. E9: written continuously during each build |
 | Running-build index (`FlowExecutionList.xml`) | ❌ | E1, E4 |
-| Build ownership lease, fencing, adoption on controller death | ❌ | E4: B adopted A's builds, but nothing would stop a *partitioned* A carrying on in parallel |
-| Durability hints | 🟡 | `PERFORMANCE_OPTIMIZED` skips `program.dat` saves, so failover loses the build. Document or force `MAX_SURVIVABILITY` in HA |
+| Pipeline logs | 🟡 | `LogStorageFactory` (Beta). The only reader/writer, pipeline-cloudwatch-logs, has had no commits since 2020. E1: falls back to local `log` + `log-index` |
+| Artifacts and stashes | ✅ | azure-artifact-manager against Azurite (E1, E2); artifact-manager-s3. Gap: identity collision (R5) |
+| Durability hints | 🟡 | `PERFORMANCE_OPTIMIZED` skips `program.dat` saves, so failover loses the build. Force `MAX_SURVIVABILITY` in HA |
+| `milestone`, `lock`, `input` approvals, `build` step state | ❌ | Held in memory or XML on the owning controller |
 
-## T5: Multi-controller coordination
+## R5: Build records and history
 | Item | Status | Gap / evidence |
 |---|---|---|
-| Leader election or sharding for `PeriodicWork`/`AperiodicWork`, `Trigger.Cron`, SCM polling | ❌ | **E3: cron fired 8 times in 3 minutes on 2 controllers.** Every periodic task runs per JVM. E7: 131 plugins (37 BOM) define periodic work, much of it legitimately per-JVM. Needs a way to *declare* cluster-singleton work |
-| `NodeProvisioner` / cloud provisioning across controllers | ❌ | Would over-provision. CloudBees HA notes that k8s concurrency limits and orphan cleanup break |
-| Queue: shared or partitioned, `QueueIdStrategy` | 🟡 | Queue is in memory under one lock (`Queue.java:352`); `queue.xml` is written on shutdown (E1). `QueueIdStrategy` (Beta) exists |
-| Agent channel ownership and routing (console follow, `input`, `FilePath`) | ❌ | E5: an agent through the LB attaches to one controller; the other waits forever. E4: reconnects need a stable endpoint |
-| Stateless sessions and crumbs | ❌ | E5: login and crumb POST fail whenever requests cross nodes; sessions are in-memory Jetty |
-| HTTP routing to a build's owner | ❌ | Needed for live console, `input`, stop/abort |
-| Cross-controller events (`ItemListener`, `RunListener`, `SaveableListener`) | ❌ | Listeners are in-JVM only. Generalise the T1 change dispatcher |
-| Webhook fan-in (deliver once) | ❌ | GitHub/GitLab webhooks via the LB hit one controller, which must own or forward |
-| Immutable plugin set (no UC installs or dynamic loading at runtime) | 🟡 | Harness already uses `UpdateCenter.never`. Make it a supported mode |
+| Globally unique build identity | ❌ | **E2: junit-sql showed 4 tests instead of 2** after a recreated job reused `(name, #1)`. The Azure artifact key `<job>/<#>/…` collides too |
+| `build.xml`, `RunMap` index, permalinks, `nextBuildNumber` | ❌ | `AbstractLazyLoadRunMap` lists `builds/` (`:175`). Beta hooks `recognizeNumber`/`allowLoad` exist. E3: each controller lists only its own builds |
+| Freestyle and other non-Pipeline logs | ❌ | `Run.getLogFile` hard-codes files (`Run.java:1409`); JEP-207 deferred |
+| Test results | 🟡 | junit-sql-storage works (E1). Per-controller cache, 10 min, no invalidation; identity collision |
+| Per-build plugin data in the build dir | ❌ | E7: 212 plugins (32 BOM) use build-dir `File` APIs. Needs a per-build attachment API plus a hybrid migration |
+| Fingerprints | 🟡 | `FingerprintStorage` (Beta), with no maintained external implementation |
+| Item deletion vs history (branch pruning) | ❌ | E9: pruning a branch deletes its history with the job directory |
+| Build discarders, cluster-wide history views and REST | ❌ | |
 
-## T6: Ecosystem
-| Item | Status | Gap / evidence |
-|---|---|---|
-| Plugins using file-storage or single-JVM APIs | 🟡 measured | [E7](findings/E7-ecosystem-scan.md): **513 / 2,117 plugins (99 of 358 BOM)**. `Jenkins#getRootDir` 166, build dirs 212, item dirs 88, `getLogFile` 24, periodic work 131 (37 BOM) |
-| Aggregated UI and REST (build history, queue, executors across controllers) | ❌ | E3: each controller lists only its own builds |
-| `build` step, `lock` step (lockable-resources state), `copyArtifact` | ❌ | Cross-build, in-JVM coordination |
-| Built-in node workspaces | 🟡 | E1: built-in node writes `workspace/`. Set built-in executors to 0 in HA |
-| Metrics per controller vs cluster | ❌ | |
-
-## T7: Operations
+## X: Cross-cutting
 | Item | Status | Notes |
 |---|---|---|
-| Helm chart / operator for N controllers + store | ❌ | `helm-charts` checkout available to extend |
-| Rolling upgrades (core and plugins) with mixed versions on one store | ❌ | Needs schema/format versioning per key |
-| Migration of an existing file-based `JENKINS_HOME` into the store | ❌ | `FilesystemPersistenceStore` → external copy tool |
-| Backup/restore and point-in-time recovery | ❌ | Store-native (Postgres PITR + blob versioning) |
-| Store schema migrations | ❌ | |
+| Stateless sessions and crumbs | ❌ | E5. Sticky sessions are fine short-term (S0) |
+| Inventory regression check in CI | ❌ | `analyze_inventory.py` over E1 + E9 |
+| Ecosystem migration (E7 hit lists) | 🟡 measured | 513 / 2,117 plugins (99 of 358 BOM) |
+| Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | ❌ | |
+
+## Track S: Static state in the store (later)
+Replaces S0 once the R1 SPI exists: global config, descriptors, key material, users/tokens, credentials and nodes, plus cross-controller reload. Plan kept at [targets/90-static-state-store.md](targets/90-static-state-store.md). Findings E1, E3 and E6 still apply.
 
 ---
 
 ## Order of work
-1. **T1** builds the primitive every later tier needs and fixes secrets.
-2. **T2** items/nodes/users and **T3** build identity + numbering + records can then proceed in parallel. Both widen T1's set of owned keys.
-3. **T3 logs** and **T4** follow. Together with T3 they make cold failover work with no shared disk, preserving the E4 behaviour.
-4. **T5** coordination comes next: leader election first, because cron double-firing (E3) is the most visible failure, then sessions, then agent routing.
-5. **T6** ecosystem work is continuous, driven by E7, and **T7** comes once T1–T4 are stable.
+1. **R1** (Target 1): the persistence SPI plus shared item config. Every runtime tier keys off "which jobs exist and what they say".
+2. **R2 build numbers + single scheduler.** This removes E3's duplicate cron builds and gives atomic numbering. It needs R1 because triggers come from job config (E9).
+3. **R5 identity + build records.** This removes the E2 collisions and gives every controller the full history.
+4. **R4 + R3:** Pipeline state in the store, ownership leases and adoption. This preserves E4's failover without a shared disk.
+5. **X and Track S**, in parallel as capacity allows.

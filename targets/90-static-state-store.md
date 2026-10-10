@@ -1,11 +1,13 @@
-# Target 1: Persistence SPI + externalised secrets and global configuration
+# Track S: Persistence SPI for static state (secrets and global configuration)
+
+> **Deferred (2026-10-10).** Static state is handled for now by the S0 workaround: identical JCasC on every controller plus a seeded key set, validated in [E8](../findings/E8-casc-secret-sync.md). The persistence SPI described below is now introduced by [Target 1](01-shared-item-config.md) for item configuration. This document keeps what is specific to static state: early bootstrap (E6), `ConfidentialStore`, global config reload, and the set of owned keys for root-level XML and secrets. Its M1/M2 (SPI, routing, versions) are delivered by Target 1.
 
 | | |
 |---|---|
-| **Roadmap tier** | T1 (foundation) |
-| **Status** | Planned |
-| **Depends on** | T0 harness (done) |
-| **Unblocks** | T2 (items, nodes, users, credentials), T3 fingerprints and build records, T5 change events |
+| **Roadmap tier** | Track S (was T1) |
+| **Status** | Deferred; S0 workaround in place |
+| **Depends on** | Target 1 (SPI) |
+| **Unblocks** | removing the S0 workaround: UI-editable global config, users and API tokens, credentials and nodes in the store |
 | **Evidence** | [E1](../findings/E1-home-inventory.md), [E2](../findings/E2-disposable-controller.md), [E3](../findings/E3-shared-home.md), [E5](../findings/E5-stateless-http.md), [E6](../findings/E6-bootstrap-seam.md) |
 
 ## Goal

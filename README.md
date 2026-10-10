@@ -3,8 +3,9 @@
 This repo revives the [pluggable storage](https://www.jenkins.io/doc/book/using/pluggable-storage/) effort, with a concrete goal: **several Jenkins controllers running active/active with ephemeral `JENKINS_HOME`s, sharing state through external services.**
 
 - [ROADMAP.md](ROADMAP.md): everything that has to change, in tiers, each item tied to evidence
-- [targets/01-persistence-spi-global-config.md](targets/01-persistence-spi-global-config.md): the first target, planned in detail
-- [findings/](findings/): what running real Jenkins instances showed (E1–E7); raw evidence in `findings/raw/`
+- [targets/01-shared-item-config.md](targets/01-shared-item-config.md): the first target (item config created and changed at runtime), planned in detail
+- [targets/90-static-state-store.md](targets/90-static-state-store.md): deferred, static state in the store; the S0 workaround covers it for now
+- [findings/](findings/): what running real Jenkins instances showed (E1–E9); raw evidence in `findings/raw/`
 - [validation/](validation/): the harness and experiment scripts that produce the findings
 
 ## Decision record
@@ -14,6 +15,13 @@ This repo revives the [pluggable storage](https://www.jenkins.io/doc/book/using/
 |---|---|
 | Shared `JENKINS_HOME` (RWX volume) + coordination layer, like CloudBees CI HA | Smallest code change, and core already has Beta hooks for it. But E3 shows every in-memory model goes stale with no invalidation, and it ties HA to a shared POSIX filesystem. We may still reuse those hooks (`BuildNumberAssigner`, `QueueIdStrategy`, `RunListener.allowLoad`, `recognizeNumber`, `ComputerSource`) |
 | Active/passive only | No horizontal scaling. E4 shows cold failover already works on a shared disk today |
+
+**Refocus on runtime state.** Decided 2026-10-10. Static, admin-changed state (global config, credentials, key material) is handled short-term by identical JCasC plus a seeded key set (S0, validated in E8). The roadmap focuses on state that builds and events change, and that can't be synced that way (E9):
+- job config, including multibranch-generated jobs
+- build scheduling
+- running builds
+- Pipeline data
+- build history
 
 Lessons from the first attempt (Cloud Native SIG, 2018–2020; JEP-202/207/210/212/213/226):
 - Narrow seams shipped: artifacts, Pipeline logs, fingerprints, test results.
@@ -35,7 +43,11 @@ bash experiments/E3-shared-home.sh             # ~5 min
 bash experiments/E4-pipeline-failover.sh       # ~4 min
 bash experiments/E5-stateless-http.sh
 bash experiments/E6-bootstrap-seam.sh
+bash experiments/E8-casc-secret-sync.sh        # S0 workaround: master.key-only vs full key seed
+bash experiments/E9-runtime-job-state.sh       # job state written by indexing and properties()
 ```
+
+E7 (ecosystem scan) runs the [usage-in-plugins](https://github.com/jenkins-infra/usage-in-plugins) jar with `findings/raw/E7/{classes,methods}.txt` and `-i`.
 
 Endpoints:
 - `http://localhost:8081` (jenkins-a), `:8082` (jenkins-b), `:8080` (non-sticky LB)
@@ -45,5 +57,6 @@ Knobs (see `compose.yaml`):
 - `HOME_A` / `HOME_B`: which volume is `JENKINS_HOME`; set both to `home-shared` for shared-home experiments
 - `JENKINS_WAR_DIR`: run a locally built `jenkins.war`
 - `CNJ_INOTIFY=1`: record filesystem events
+- `CNJ_JAVA_OPTS`: extra JVM options; `validation/out/sync` is mounted at `/sync`
 
 The Azure artifact manager runs against Azurite, using the well-known development key; JUnit results go to Postgres via junit-sql-storage. MinIO was the original plan but its images are no longer pullable.

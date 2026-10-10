@@ -15,6 +15,6 @@ This is the naive "HA" setup: two JVMs mount the same volume. It is the baseline
 | Collision detection | `DoubleLaunchChecker` reported nothing. It runs every 60–90 minutes (`hudson/util/DoubleLaunchChecker.java:146`), so no warning appears within a test window |
 
 ## Implications
-- With a shared filesystem, every in-memory model (job list, `RunMap`, `Jenkins` config, triggers) is a per-JVM cache with **no invalidation**. Fully externalised storage needs change notifications that map to targeted reloads (T1 for global config, T2 for items, T3 for runs).
-- **Cron, SCM polling and every `PeriodicWork` run once per controller.** They need leader election or sharding (T5).
-- **Build numbers must come from one atomic source** (T3, via `Job.BuildNumberAssigner`, which is already a Beta extension point). The JENKINS-23152 guard is no substitute: it depends on a shared filesystem and has a race window.
+- With a shared filesystem, every in-memory model (job list, `RunMap`, `Jenkins` config, triggers) is a per-JVM cache with **no invalidation**. Fully externalised storage needs change notifications that map to targeted reloads (Track S for global config, R1 for items, R5 for runs).
+- **Cron, SCM polling and every `PeriodicWork` run once per controller.** They need leader election or sharding (R2).
+- **Build numbers must come from one atomic source** (R2, via `Job.BuildNumberAssigner`, which is already a Beta extension point). The JENKINS-23152 guard is no substitute: it depends on a shared filesystem and has a race window.

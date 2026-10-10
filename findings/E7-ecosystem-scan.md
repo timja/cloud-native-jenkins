@@ -8,14 +8,14 @@
 
 | Roadmap tier | API family | Plugins | In BOM | Examples (BOM) |
 |---|---|---|---|---|
-| T1 | `Jenkins#getRootDir` / `Hudson#getRootDir` (files directly under `JENKINS_HOME`) | 166 | | |
-| T1 risk | `XmlFile#getFile` (bypasses any store) | 42 | 10 | cloud-stats, config-file-provider, extra-columns, github, job-dsl, jobConfigHistory, junit, promoted-builds, saml, thinBackup |
-| T1/T2 | constructs or uses `hudson.XmlFile` directly | 171 | | |
-| T1/T2 | `TextFile` / `AtomicFileWriter` | 15 | | branch-api, junit |
-| T2 | item dirs: `Job`/`AbstractItem`/`AbstractProject#getRootDir`, `getConfigFile`, `Items.getConfigFile` | 88 | | |
-| T3 | build dirs: `Run`/`AbstractBuild`/`WorkflowRun#getRootDir`, `getArtifactsDir`, `getBuildDir` | 212 | 32 | junit, workflow-api, workflow-job, warnings-ng, coverage, copyartifact, timestamper, pipeline-graph-view, htmlpublisher, … |
-| T3 | `Run`/`AbstractBuild#getLogFile` | 24 | 3 | google-storage-plugin, maven-plugin, naginator |
-| T5 | `PeriodicWork`, `AsyncPeriodicWork`, `AperiodicWork`, `AsyncAperiodicWork`, `jenkins.util.Timer` | 131 | 37 | kubernetes, ec2, docker-plugin, branch-api, github, credentials, lockable-resources, workflow-cps, durable-task, metrics, prometheus, … |
+| S / R1 | `Jenkins#getRootDir` / `Hudson#getRootDir` (files directly under `JENKINS_HOME`) | 166 | | |
+| R1 risk | `XmlFile#getFile` (bypasses any store) | 42 | 10 | cloud-stats, config-file-provider, extra-columns, github, job-dsl, jobConfigHistory, junit, promoted-builds, saml, thinBackup |
+| R1 | constructs or uses `hudson.XmlFile` directly | 171 | | |
+| R1 | `TextFile` / `AtomicFileWriter` | 15 | | branch-api, junit |
+| R1 | item dirs: `Job`/`AbstractItem`/`AbstractProject#getRootDir`, `getConfigFile`, `Items.getConfigFile` | 88 | | |
+| R5 | build dirs: `Run`/`AbstractBuild`/`WorkflowRun#getRootDir`, `getArtifactsDir`, `getBuildDir` | 212 | 32 | junit, workflow-api, workflow-job, warnings-ng, coverage, copyartifact, timestamper, pipeline-graph-view, htmlpublisher, … |
+| R5 | `Run`/`AbstractBuild#getLogFile` | 24 | 3 | google-storage-plugin, maven-plugin, naginator |
+| R2 | `PeriodicWork`, `AsyncPeriodicWork`, `AperiodicWork`, `AsyncAperiodicWork`, `jenkins.util.Timer` | 131 | 37 | kubernetes, ec2, docker-plugin, branch-api, github, credentials, lockable-resources, workflow-cps, durable-task, metrics, prometheus, … |
 
 Most-used single APIs:
 - `hudson.XmlFile`: 171
@@ -32,8 +32,8 @@ The plugins using the widest range of these APIs are disk-usage (11 distinct), p
 ## Interpretation
 - **The persistence SPI has to be transparent to `XmlFile` users.** 171 plugins build their own `XmlFile`, usually `new XmlFile(new File(Jenkins.get().getRootDir(), …))`. Routing inside `XmlFile` (Target 1 §3) covers them without plugin changes, **as long as** routing is path-based on the root dir rather than opt-in.
 - **`getFile()` is the main leak.** 42 plugins (10 in BOM) reach the raw file. Target 1's read-only materialised cache keeps reads working; writes through it are lost, so these 10 BOM plugins are the first PR targets once the store owns their keys.
-- **Build directories are the biggest ecosystem dependency.** 212 plugins write or read files in the build dir, including the core Pipeline plugins. T3 needs an attachment/blob API for "per-build plugin data" (think `VirtualFile` for writes) before build records can leave disk. A full SPI cutover is not realistic; the plan has to be **hybrid with migration**.
-- **Periodic work is everywhere, and much of it is correctly per-JVM.** Examples are durable-task's channel watchdogs and per-agent monitors. T5 needs a way to *declare* cluster-singleton work (an annotation or `ExtensionFilter`) rather than electing a leader for everything. Each of the 37 BOM plugins needs classifying.
+- **Build directories are the biggest ecosystem dependency.** 212 plugins write or read files in the build dir, including the core Pipeline plugins. R5 needs an attachment/blob API for "per-build plugin data" (think `VirtualFile` for writes) before build records can leave disk. A full SPI cutover is not realistic; the plan has to be **hybrid with migration**.
+- **Periodic work is everywhere, and much of it is correctly per-JVM.** Examples are durable-task's channel watchdogs and per-agent monitors. R2 needs a way to *declare* cluster-singleton work (an annotation or `ExtensionFilter`) rather than electing a leader for everything. Each of the 37 BOM plugins needs classifying.
 
 ## Blind spots
 - Bytecode only. Jelly, Groovy, reflection and string class names are not seen, so zero hits means "no bytecode reference", not "no usage".

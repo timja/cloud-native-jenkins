@@ -1,0 +1,46 @@
+jenkins-b-1  | Running from: /usr/share/jenkins/jenkins.war
+jenkins-b-1  | webroot: /var/jenkins_home/war
+jenkins-b-1  | 2026-10-10 09:47:57.417+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-10 09:47:57.909+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-10 09:47:57.941+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.13; built: 2026-09-04T06:53:08.311Z; git: e99386749a0a4888cd9b555ffc96a476fd48d94e; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-10 09:47:58.164+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-10 09:47:58.185+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-10 09:47:58.426+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-10 09:47:58.481+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@1b9776f5{Jenkins v2.580.1,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@5e048149{STARTED}}
+jenkins-b-1  | 2026-10-10 09:47:58.486+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1cdc62e9{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-10 09:47:58.487+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@3a543f31{STARTING}[12.1.13,sto=0] @547ms
+jenkins-b-1  | 2026-10-10 09:47:58.488+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-10 09:47:58.551+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.580.1
+jenkins-b-1  | 2026-10-10 09:47:58.618+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-10 09:48:00.346+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-10 09:48:02.225+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-10 09:48:02.241+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-10 09:48:02.242+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-10 09:48:02.379+0000 [id=45]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-b-1  | 2026-10-10 09:48:02.763+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-10 09:48:03.317+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-10 09:48:03.317+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-10 09:48:03.318+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-10 09:48:03.345+0000 [id=58]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_41014b6279e3f1577bcb63e3107316a3f53655447afa4346c78e076b83f5bcc0 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-10 09:48:03.753+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Database: jdbc:postgresql:******** (PostgreSQL 16.15)
+jenkins-b-1  | 2026-10-10 09:48:03.865+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Schema history table "public"."junit_flyway_schema_history" does not exist yet
+jenkins-b-1  | 2026-10-10 09:48:03.868+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Successfully validated 10 migrations (execution time 00:00.051s)
+jenkins-b-1  | 2026-10-10 09:48:03.876+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: All configured schemas are empty; a baseline marker will not be added to Flyway's schema history table. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended. See https://help.red-gate.com/help/flyway-cli13/help_9.aspx?topic=baseline-on-migrate for more info
+jenkins-b-1  | 2026-10-10 09:48:03.879+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Creating Schema History table "public"."junit_flyway_schema_history" ...
+jenkins-b-1  | 2026-10-10 09:48:03.954+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Current version of schema "public": << Empty Schema >>
+jenkins-b-1  | 2026-10-10 09:48:03.962+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Migrating schema "public" to version "2020.09.21.2052 - initial-schema"
+jenkins-b-1  | 2026-10-10 09:48:03.980+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Migrating schema "public" to version "2020.09.22.0802 - indexes"
+jenkins-b-1  | 2026-10-10 09:48:03.995+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Migrating schema "public" to version "2020.09.24.0900 - initial-schema"
+jenkins-b-1  | 2026-10-10 09:48:04.001+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Migrating schema "public" to version "2020.12.12.2000 - longer-columns"
+jenkins-b-1  | 2026-10-10 09:48:04.009+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Migrating schema "public" to version "2020.12.15.1153 - timestamp-inclusion"
+jenkins-b-1  | 2026-10-10 09:48:04.021+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Migrating schema "public" to version "2026.10.05.2006 - job-build-suite-index"
+jenkins-b-1  | 2026-10-10 09:48:04.031+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Migrating schema "public" to version "2026.10.05.2240 - case-results-summary"
+jenkins-b-1  | 2026-10-10 09:48:04.043+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Migrating schema "public" to version "2026.10.07.0733 - failed-since-index"
+jenkins-b-1  | 2026-10-10 09:48:04.068+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Migrating schema "public" to version "2026.10.09.1200 - case-results-primary-key"
+jenkins-b-1  | 2026-10-10 09:48:04.099+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Migrating schema "public" to version "2026.10.09.1300 - case-results-properties"
+jenkins-b-1  | 2026-10-10 09:48:04.104+0000 [id=50]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Successfully applied 10 migrations to schema "public", now at version v2026.10.09.1300 (execution time 00:00.082s)
+jenkins-b-1  | 2026-10-10 09:48:04.107+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-10 09:48:04.118+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-10 09:48:04.634+0000 [id=83]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-b-1  | 2026-10-10 09:48:18.703+0000 [id=68]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-10 09:48:19.324+0000 [id=68]	INFO	i.j.p.j.s.d.DatabaseTestResultStorage$RemotePublisherImpl#doPublishWithinTransaction: Saved 2 test cases into database for 'freestyle #1'.

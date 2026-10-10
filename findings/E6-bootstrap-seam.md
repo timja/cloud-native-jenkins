@@ -16,7 +16,9 @@
 - `ConfidentialStore` declares `abstract SecureRandom secureRandom()` as **package-private** (`ConfidentialStore.java:61`). An implementation must therefore sit in package `jenkins.security` *and* be loaded by the same class loader as core. The spike only works because of both.
 - `secret.key` (`Jenkins.java:931`) was still written in variant (b). It doesn't go through `ConfidentialStore`.
 
-## Implications for Target 1
+## Implications
+These matter for **Track S** ([targets/90](../targets/90-static-state-store.md)), which needs keys read before plugins load. R1 (item config, [Target 1](../targets/01-shared-item-config.md)) is loaded after plugins start (E1), so its store can ship as a plugin.
+
 - Implementations of a pre-plugin storage SPI must be on the **webapp class path**. Two ways to get there:
   - Build a custom war: add a jar to `WEB-INF/lib`, as the Custom WAR Packager / a Dockerfile layer would.
   - Add a supported "early classpath" option to core or Winstone.
