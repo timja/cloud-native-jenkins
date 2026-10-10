@@ -1,0 +1,28 @@
+jenkins-b-1  | 2026-10-10T11:11:55.416659422Z Running from: /war-override/jenkins.war
+jenkins-b-1  | 2026-10-10T11:11:55.417143505Z webroot: /var/jenkins_home/war
+jenkins-b-1  | 2026-10-10T11:11:55.752996464Z 2026-10-10 11:11:55.738+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-10T11:11:56.155305214Z 2026-10-10 11:11:56.154+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-10T11:11:56.181109506Z 2026-10-10 11:11:56.180+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-10T11:11:56.377750172Z 2026-10-10 11:11:56.377+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-10T11:11:56.404442381Z 2026-10-10 11:11:56.404+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-10T11:11:56.589811714Z 2026-10-10 11:11:56.589+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-10T11:11:56.650133506Z 2026-10-10 11:11:56.649+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-b-1  | 2026-10-10T11:11:56.654192506Z 2026-10-10 11:11:56.653+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@3e2ea622{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-10T11:11:56.654454797Z 2026-10-10 11:11:56.654+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @474ms
+jenkins-b-1  | 2026-10-10T11:11:56.655510006Z 2026-10-10 11:11:56.655+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-10T11:11:56.700903672Z 2026-10-10 11:11:56.700+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-10T11:11:56.729812922Z 2026-10-10 11:11:56.729+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-10T11:11:58.372598548Z 2026-10-10 11:11:58.371+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-10T11:11:59.612926174Z 2026-10-10 11:11:59.609+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-10T11:11:59.690670632Z 2026-10-10 11:11:59.690+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-10T11:11:59.691369049Z 2026-10-10 11:11:59.691+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-10T11:11:59.842743091Z 2026-10-10 11:11:59.842+0000 [id=54]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-10T11:11:59.892354882Z 2026-10-10 11:11:59.891+0000 [id=55]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-b-1  | 2026-10-10T11:12:00.087012007Z 2026-10-10 11:12:00.086+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-10T11:12:00.446816799Z 2026-10-10 11:12:00.446+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-10T11:12:00.552769549Z 2026-10-10 11:12:00.552+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-10T11:12:00.556163841Z 2026-10-10 11:12:00.555+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-10T11:12:00.565985008Z 2026-10-10 11:12:00.564+0000 [id=49]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_28e4ba18ec6ebc2d778f981113cc8ce875c4bbe796c1e8e0916e151b7bac7f9c duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-10T11:12:00.585370299Z 2026-10-10 11:12:00.584+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-10T11:12:00.592187216Z 2026-10-10 11:12:00.591+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-10T11:12:01.884807633Z 2026-10-10 11:12:01.883+0000 [id=83]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
