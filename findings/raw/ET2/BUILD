@@ -1,0 +1,3 @@
+core cnj/t2-m2-trigger-coordination 67e8a4acce32b392f9456214c61c8bdc20cf6929
+cloudbees-folder cnj/t1-m2-folder-children 7699d449522210839dab087cffc0253f53107356
+cloud-native-jenkins dc7a48d04e9f4bf6139f507d72c2a083d6aa48fb
