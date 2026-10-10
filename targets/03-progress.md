@@ -48,5 +48,5 @@ See `findings/ET3-build-records.md`:
 - server-side blob copy on rename
 - append-blob rollover
 - rewrite placeholders when a Pipeline build resumes
-- a freestyle live console (needs a core log SPI)
 - republishing for plugins that write files without saving `build.xml`
+- 2026-10-10: Decided not to pursue a live freestyle console across controllers.
