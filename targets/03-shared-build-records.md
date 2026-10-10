@@ -16,11 +16,18 @@ Every controller lists, and can fully open, **every completed build** of every j
 
 History survives the controller that ran the build being destroyed. Deleting, renaming and editing builds (e.g. the description) on any controller is reflected everywhere.
 
+**Running builds** appear on other controllers as a **placeholder** ("#N running on controller A"), replaced by the full record when they complete.
+
+**Large data stays out of Postgres** (decision 2026-10-10):
+- Pipeline logs go through **pluggable log storage** (`LogStorageFactory`): CloudWatch, Log Analytics, Elasticsearch or object storage.
+- Build snapshots go to **object storage**.
+- Postgres holds only small records (`build.xml`, placeholders).
+
 **Out of scope:**
-- **Running builds** stay visible only on the controller running them, and appear elsewhere once they complete. Live cross-controller view and adoption are R3/R4.
+- Live cross-controller interaction with running builds (console follow, stop, input) and adoption: R3/R4.
 - **Per-item UUID identity** (see "Identity" below).
 - **Moving artifacts** off `archive/`; use an external `ArtifactManager`.
-- **Freestyle live log streaming** to the store.
+- **Freestyle live logs.** Core has no log storage SPI; freestyle logs travel in the completed-build snapshot.
 
 ## Why a snapshot, not routing
 Targets 1 and 2 worked by routing `XmlFile`/`TextFile` keys transparently. That does not work for builds. The research (code refs in the appendix) found that most of a completed build is read and written through raw `File` APIs:
@@ -41,16 +48,35 @@ So: **when a build completes, its owner publishes a snapshot of the build direct
 
 ## Design (core, on top of the T2 stack, `@Restricted(Beta)` where public)
 
-### Store layout
-These are not "owned" keys: `XmlFile` does not route them. Core writes them explicitly through the SPI.
-- `jobs/<item path>/builds/<N>/files.tgz` holds the build directory, excluding:
-  - `archive/` (use an external `ArtifactManager`)
-  - running-only state: `program.dat`, `workflow/`, `stashes/`
-  - caches such as `pipeline-graph-view-*.json`
-  - files over a size cap (default 64 MB, configurable; skipped files are listed in the record)
-- `jobs/<item path>/builds/<N>/build.xml` is the record. It is written **after** `files.tgz`, so its existence is the commit marker, and it is small, so later edits (description, keep-forever) republish only this.
+### Where things live
+| Data | Store | Key |
+|---|---|---|
+| build record (small) | `PersistenceStore` (Postgres) | `jobs/<item path>/builds/<N>/build.xml`. Written **last**, as the commit marker; later edits (description, keep-forever) republish only this |
+| running placeholder (small) | `PersistenceStore` | `jobs/<item path>/builds/<N>/running.xml`: origin, controller name, start time, display name. Written on start, deleted on publish |
+| build directory snapshot (large) | **new `BlobStore` SPI** (object storage; Azurite in the harness) | `jobs/<item path>/builds/<N>/files.tgz` |
+| Pipeline log + index (large, streamed) | **`LogStorageFactory`** (workflow-api's pluggable log storage) | backend-specific; the harness implementation uses one append blob for `log` and one for `log-index` per build |
 
-Both live under the item prefix, so T1's `PersistenceStore.move` carries history along on rename and move.
+The snapshot excludes:
+- `archive/` (use an external `ArtifactManager`)
+- running-only state: `program.dat`, `workflow/`, `stashes/`
+- caches such as `pipeline-graph-view-*.json`
+- for Pipeline builds, `log` and `log-index` (they are in log storage)
+
+All keys live under the item prefix. T1's `PersistenceStore.move` therefore carries records along on rename and move; `BlobStore` gets the same `move(prefix)` contract.
+
+### New SPI: `jenkins.persistence.BlobStore` (Beta)
+- `put(key, InputStream, length)`, `get(key)` returning an `InputStream` (or null), `delete(prefix)`, `move(fromPrefix, toPrefix)`
+- resolved through `BlobStoreProvider`, the same way as `PersistenceStoreProvider`
+
+`files.tgz` goes here. With no `BlobStore`, build snapshots are not shared: records are, but materialisation has no files and history shows build metadata only.
+
+### Pipeline logs: a `LogStorageFactory`
+The research found `FileLogStorage` is `final` and does raw file I/O, but `LogStorage.of` lets any `LogStorageFactory` take over every build.
+- **Harness implementation** (in the store plugin): a factory whose storage **delegates to `FileLogStorage` locally while running, and tees each flushed chunk of `log` and `log-index` to append blobs**.
+- **Reads:** a controller without the local files downloads both blobs into a local cache file and serves them through `FileLogStorage.forFile(cache)`. This reuses its parsing of step spans and `log-index` unchanged.
+- **Running builds elsewhere:** the same download gives a read-only console for a running placeholder, refreshed on each poll by range-reading from the last offset.
+
+CloudWatch, Log Analytics or Elasticsearch plug in as alternative `LogStorageFactory` implementations: anything keyed by (job, build) that every controller can read.
 
 ### Core pieces
 | Piece | Where | What |
@@ -63,6 +89,9 @@ Both live under the item prefix, so T1's `PersistenceStore.move` carries history
 | remote events | `ItemChangeApplier` | `builds/N/build.xml` WRITTEN → materialise, then `recognizeNumber(N)` (new build) or `Run.reload()` (edited record); refresh peephole permalinks. DELETED → remove from the index (`LazyBuildMixIn.removeRun`) and delete the local dir **without** firing `RunListener.onDeleted`, so external cleanup runs once, on the origin |
 | numbering guard | `AbstractLazyLoadRunMap.proposeNewNumber` (JENKINS-27530) | Relax when numbers come from `StoredBuildNumberAssigner`: a later remote build may already be indexed when a locally assigned earlier number is put |
 | permalinks | `PeepholePermalink` | Recompute for the job when a remote record arrives or is deleted (the default cache is per controller, and its listeners fire only on the owner) |
+| running placeholders | `RunListener.onStarted` / publish | Write and delete `running.xml`. `ItemChangeApplier` keeps a per-job map of placeholders from events, loaded from the store at startup |
+| placeholder display | `RunningElsewhereAction` (job-level `TransientActionFactory`, `@Exported`) | Lists "#N running on controller A since …" on the job page and in the REST API; links to the read-only console (Pipeline, via log storage) |
+| stale placeholders | SPI: optional `PersistenceStore.liveOrigins()` | If an origin is no longer live (T2 membership), its placeholders are removed by whichever controller notices (claimed like a trigger tick), so a crashed owner does not leave "running forever" builds |
 
 ### Identity (the subset in this target)
 Cluster-wide numbering (T2) already makes `(job full name, number)` unique while the job exists. Two holes:
@@ -77,11 +106,12 @@ Cluster-wide numbering (T2) already makes `(job full name, number)` unique while
 ## Milestones
 | # | Repo | Branch | Based on | Scope |
 |---|---|---|---|---|
-| M1 | core | `cnj/t3-m1-build-snapshots` | `cnj/t2-m2-trigger-coordination` | `BuildRecords` publish / republish / delete; index merge; lazy materialise in `RunMap.retrieve`; JENKINS-27530 relaxation; tests on `InMemoryPersistenceStore` (fresh home lists and opens builds made "elsewhere") |
+| M1 | core | `cnj/t3-m1-build-snapshots` | `cnj/t2-m2-trigger-coordination` | `BlobStore` SPI + in-memory implementation; `BuildRecords` publish / republish / delete; index merge; lazy materialise in `RunMap.retrieve`; JENKINS-27530 relaxation; tests (fresh home lists and opens builds made "elsewhere") |
 | M2 | core | `cnj/t3-m2-remote-build-events` | M1 | `ItemChangeApplier` handles build records (materialise + recognize / reload / silent removal); permalink refresh; tests |
-| M3 | core | `cnj/t3-m3-explicit-numbering` | M2 | Keep `nextBuildNumber` on item delete (explicit + tested); `move` ignores a leftover `nextBuildNumber` at the destination |
-| M4 | junit-sql-storage | `cnj/t3-m4-remote-delete` | `origin/master` | Skip cleanup listeners while applying a remote change |
-| M5 | cloud-native-jenkins | `cnj/t3-m5-et3` | `cnj/t2-m3-postgres-coordination` | Store plugin: nothing expected beyond large `bytea` values; `ET3-build-records.sh` |
+| M3 | core | `cnj/t3-m3-running-placeholders` | M2 | `running.xml` records, `RunningElsewhereAction`, `liveOrigins()` stale cleanup; tests |
+| M4 | core | `cnj/t3-m4-explicit-numbering` | M3 | Keep `nextBuildNumber` on item delete (explicit + tested); `move` ignores a leftover `nextBuildNumber` at the destination |
+| M5 | junit-sql-storage | `cnj/t3-m5-remote-delete` | `origin/master` | Skip cleanup listeners while applying a remote change |
+| M6 | cloud-native-jenkins | `cnj/t3-m6-blob-and-log-storage` | `cnj/t2-m3-postgres-coordination` | Store plugin: Azure Blob `BlobStore` (Azurite in the harness); append-blob `LogStorageFactory` (tee while running, download-to-cache for reads); `liveOrigins()` from T2 membership; Azurite added to `compose.et1.yaml`; `ET3-build-records.sh` |
 
 ## E-T3 acceptance experiment (definition of done)
 ET setup (two tmpfs controllers, S0, Postgres, token auth). Pass criteria:
@@ -90,12 +120,17 @@ ET setup (two tmpfs controllers, S0, Postgres, token auth). Pass criteria:
 3. **Interleaved history:** 10 builds on A and 10 on B of one job. Both list builds 1..20. `lastBuild`, `lastSuccessfulBuild` and `lastFailedBuild` agree on both.
 4. **Edit and delete:** set a description on B for a build that ran on A → visible on A. Delete a build on A → gone on B, including its local dir.
 5. **Disposable controller:** destroy A, which ran half the builds, and start a fresh A. Fresh A and B both list all builds and can open their console and test results.
-6. **Running builds:** a 60 s build on A is not listed on B while running, and appears on B within seconds of completing.
+6. **Running builds:**
+   - A 60 s Pipeline build on A appears on B as a placeholder ("running on A") within seconds of starting, and B's read-only console shows its output so far.
+   - On completion, the placeholder is replaced by the full build on B.
+   - SIGKILL A during a second running build: B removes the stale placeholder within about a minute.
 7. **Rename:** rename the job on B. History (and console of old builds) is intact on both under the new name, and numbering continues.
 8. **Delete + recreate:** delete the job and recreate it with the same name. Its first build is numbered after the old ones, and no old build appears in its history.
+9. **Large data is not in Postgres:** no `files.tgz` and no log content in `jenkins_store`, and the largest `jenkins_store` value is under 1 MB. Snapshots and logs are in the blob container.
 
 ## Risks
-- **Snapshot size.** Logs of very large builds go into Postgres `bytea` (max 1 GB per value). There is a size cap with a listed-but-skipped marker. An object-store backend for `files.tgz` (S3/Azure blob via the same SPI) is the follow-up.
+- **Log storage semantics.** A `LogStorage` must preserve the `log-index` step spans that the Pipeline UI depends on. Delegating to `FileLogStorage` and shipping both files keeps that exact. A native CloudWatch or Elasticsearch backend has to reproduce it, which is what pipeline-cloudwatch-logs does.
+- **Append-blob limits.** Azure caps an append blob at 50 000 blocks. The tee batches flushes (e.g. every 1 s or 1 MB), and very long-running builds may need rollover to a second blob.
 - **Non-owner edits to a completed build** race with the owner's republish. Both write `build.xml` with last-writer-wins on rare manual edits; CAS conflicts are counted.
 - **Plugins that rewrite build-dir files after `onFinalized`.** Those files are captured only if the plugin also triggers a `build.xml` save. A full republish trigger can be added if E-T3 finds such a plugin.
 - **Absolute `changelogFile` paths in Pipeline build.xml (JENKINS-27704).** These resolve only if `JENKINS_HOME` is the same path on every controller, which is true in the harness. Upstream fix: relativise.
