@@ -16,9 +16,9 @@ Design: [06-static-state.md](06-static-state.md).
 ## Branch stack
 | # | Repo | Branch | Based on | Scope | Status |
 |---|---|---|---|---|---|
-| M1 | core | `cnj/t6-m1-static-routing` | `cnj/t5-m3-cluster-periodic-work` | users and nodes from the store; routed node deletes; early descriptors re-loaded | 🚧 in progress |
-| M2 | core | `cnj/t6-m2-static-applier` | T6 M1 | `reloadGlobalConfig`, handlers, `RemoteChangeHandler` | ⏳ |
-| M3 | core | `cnj/t6-m3-shared-keys` | T6 M2 | runtime keys in the store, first use wins | ⏳ |
+| M1 | core | `cnj/t6-m1-static-routing` | `cnj/t5-m3-cluster-periodic-work` | users and nodes from the store; routed node deletes; early descriptors re-loaded | ✅ 08c8deb691; `StaticStateRoutingTest` 3/3 + User, Nodes, Descriptor, HudsonPrivateSecurityRealm green |
+| M2 | core | `cnj/t6-m2-static-applier` | T6 M1 | `reloadGlobalConfig`, handlers, `RemoteChangeHandler` | ✅ c497194cb5; `StaticStateApplierTest` 5/5 + Jenkins, ComputerSet, NodeListener green |
+| M3 | core | `cnj/t6-m3-shared-keys` | T6 M2 | runtime keys in the store, first use wins (`loadOrCreate`) | ✅ 6d896cae85; `SharedConfidentialKeysTest` 4/4 + key, Secret, ApiTokenProperty suites green |
 | M4 | credentials | `cnj/t6-m4-credentials-reload` | `origin/master` | reload and a handler | ⏳ |
 | M5 | stapler | `cnj/t6-m5-bound-id-prefix` | release `2123.v539a_775c45c3` | controller prefix for bound ids | ⏳ |
 | M6 | core | `cnj/t6-m6-stateless-sessions` | T6 M3 | `alwaysRemember`, password field, built on the M5 Stapler | ⏳ |
@@ -26,3 +26,4 @@ Design: [06-static-state.md](06-static-state.md).
 
 ## Log
 - 2026-10-10: Target 6 planned and started.
+- 2026-10-10: T6 M1-M3 (core) committed. M3 needed a `loadOrCreate` step in `ConfidentialStore`: key classes generated, then stored and used their own value, so the loser of a create-only race would have kept a different key.
