@@ -12,7 +12,7 @@ Jenkins state falls into two kinds, and they need different treatment:
 | Examples | global config, system credentials, security realm, static nodes, plugin set, key material | jobs created by indexing, job config rewritten by `properties()`, the queue, triggers, build numbers, running builds, Pipeline program state, build history |
 | Rate of change | rare, reviewed | continuous, on whichever controller is doing the work |
 | Now | **S0 workaround:** identical JCasC on every controller plus a seeded key set ([E8](findings/E8-casc-secret-sync.md)) | **Focus of this roadmap: R1–R5** |
-| Later | Track S: move into the store using the R1 SPI ([targets/90](targets/90-static-state-store.md)) | |
+| Next | **Track S (Target 6, done on branches):** in the store via the R1 SPI ([targets/06](targets/06-static-state.md)). Pre-plugin keys stay seeded (S0) | |
 
 Why the split: E8 showed identical JCasC plus a synced key set gives two controllers with separate homes the same config, secrets, agent secrets and instance identity. E9 showed job definitions are *runtime* state: indexing creates, deletes and rewrites them, and a plain build rewrote its own `config.xml`, including a cron trigger. No amount of config syncing covers that.
 
@@ -27,8 +27,8 @@ Why the split: E8 showed identical JCasC plus a synced key set gives two control
 | Key material | 🟡 | E8: sharing `master.key` alone is **not enough**. Seed the full set (`secret.key*`, all of `secrets/*`, `identity.key.enc`) into each home before first boot, from a k8s Secret via an init container. Re-seed after plugin changes; alert when `secrets/` drifts from the seed |
 | Static agent definitions | 🟡 | JCasC. Connection state is runtime, see R3 |
 | Plugin set | 🟡 | Baked into the image; `UpdateCenter.never` (harness). No runtime installs |
-| User state: API tokens, user properties, UI-created views | ❌ | E5/E8: a token made on A gives `401` on B. Mitigation: SSO, plus tokens from an external IdP or a token plugin backed by the store (Track S) |
-| HTTP sessions and crumbs | 🟡 | E5: fail across nodes. **Sticky sessions** at the LB are the short-term answer (the crumb salt is already synced by S0). Stateless sessions come later (X) |
+| User state: API tokens, user properties, UI-created views | ✅ branch | E5/E8: a token made on A gave `401` on B. Track S: users are in the store; ET6 1-2 |
+| HTTP sessions and crumbs | ✅ branch | E5: failed across nodes. Target 6: a signed login cookie, cluster crumbs and bound-object forwarding; ET6 8 passes through a round-robin LB with no stickiness, including losing a controller |
 
 ## R1: Item configuration created and changed at runtime ← **Target 1: done (ET1 passes)**
 Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
@@ -96,8 +96,8 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Ecosystem migration (E7 hit lists) | 🟡 measured | 513 / 2,117 plugins (99 of 358 BOM) |
 | Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | ❌ | |
 
-## Track S: Static state in the store ← **Target 6 (planned)**, [targets/06](targets/06-static-state.md)
-Replaces S0 once the R1 SPI exists: global config, descriptors, key material, users/tokens, credentials and nodes, plus cross-controller reload. Plan kept at [targets/90-static-state-store.md](targets/90-static-state-store.md). Findings E1, E3 and E6 still apply.
+## Track S: Static state in the store ← **Target 6: done (ET6 passes)**, [targets/06](targets/06-static-state.md), findings `findings/ET6-static-state.md` on `cnj/t6-m7-static-state`
+Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key material, users/tokens, credentials and nodes, plus cross-controller reload. Open: concurrent edits of one file are detected, but one of them can be lost (ET6 10).
 
 ---
 
