@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | R2: queue, placement, quiet period, cross-build coordination, cluster-singleton periodic work |
-| **Status** | Planned |
+| **Status** | **Done** (2026-10-10): ET5 passes 35/35, see [05-progress](05-progress.md) |
 | **Depends on** | T1 (store, events), T2 (membership, claims, cluster build numbers), T3 (build records, running placeholders), T4 (leases, adoption) |
 | **Evidence** | [E3](../findings/E3-shared-home.md) (each controller has its own queue), [E5](../findings/E5-stateless-http.md) (agents connect to one controller), [E7](../findings/E7-ecosystem-scan.md) (131 plugins define periodic work), ET2 (manual builds run where they are requested) |
 

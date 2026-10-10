@@ -43,17 +43,17 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Concurrent writers to one job (indexing on A while a build on B runs `properties()`) | 🟡 branch | CAS + warn policy; ET1 4/4b converge with 0 conflicts. Strict/writer-aware retries deferred (M5) |
 | Plugin code reading item files directly | 🟡 | E7: 88 plugins use item-dir `File` APIs; 42 call `XmlFile#getFile` |
 
-## R2: Build scheduling ← **Target 2 done (ET2 passes): build numbers + exactly-once triggers**, [targets/02](targets/02-cluster-scheduling.md)
+## R2: Build scheduling ← **Targets 2 and 5 done (ET2, ET5 pass): build numbers, exactly-once triggers, a shared queue**, [targets/02](targets/02-cluster-scheduling.md)
 | Item | Status | Gap / evidence |
 |---|---|---|
 | Triggers fire once per cluster (cron, SCM polling, `upstream`) | ✅ branch (cron-style; `upstream` not covered) | **E3: cron fired 8 times in 3 minutes on 2 controllers.** E9: triggers are *defined by builds* via `properties()`, so the scheduler must follow R1 events |
 | Branch indexing and org scanning run once, with indexing state shared | ✅ branch (periodic; manual scan runs where requested) | E9: `state.xml`, `indexing/indexing.xml`, `scm-*-revision-hash.xml` are written by whoever indexes |
 | Webhook fan-in (an event delivered to any controller is handled once) | ❌ | GitHub/GitLab/Bitbucket hooks arrive at one controller through the LB |
 | Atomic, cluster-wide build numbers | ✅ branch | `Job.BuildNumberAssigner` (Beta) exists; the default is `synchronized(job)` + file (`Job.java:378`). E3: only the JENKINS-23152 directory check avoided a collision |
-| Queue: shared or partitioned, cluster-unique ids (**Target 5, planned**: [targets/05](targets/05-shared-queue.md)) | 🟡 | In-memory under one lock (`Queue.java:352`); `queue.xml` is written only at shutdown (E1). `QueueIdStrategy` (Beta) exists |
-| Placing builds on a controller (load balancing, affinity to connected agents) | ❌ | E5: an agent connects to one controller only |
-| Quiet period, `build` step, upstream/downstream, `lock` (lockable-resources) | ❌ | Cross-build coordination happens in one JVM |
-| Cluster-singleton `PeriodicWork` (declared, not blanket leader election) | ❌ | E7: 131 plugins (37 BOM) define periodic work, and much of it is legitimately per-JVM |
+| Queue: shared or partitioned, cluster-unique ids | ✅ branch (T5: mirrored shared queue with claims, folding, cancel and `queue/item` anywhere; [targets/05](targets/05-shared-queue.md)) | In-memory under one lock (`Queue.java:352`); `queue.xml` is written only at shutdown (E1). `QueueIdStrategy` (Beta) exists |
+| Placing builds on a controller (load balancing, affinity to connected agents) | 🟡 branch (T5: the requesting controller goes first, then whoever can run it; label-bound jobs go where the agent is. Open: Pipeline `node` labels) | E5: an agent connects to one controller only |
+| Quiet period, `build` step, upstream/downstream, `lock` (lockable-resources) | ✅ branch (T5: cluster-wide quiet period and folding, blocking, `milestone`, `lock`; `build(wait)` pinned to its caller) | Cross-build coordination happens in one JVM |
+| Cluster-singleton `PeriodicWork` (declared, not blanket leader election) | ✅ branch (T5: `@ClusterSingleton` + `PeriodicWorkCoordinator`) | E7: 131 plugins (37 BOM) define periodic work, and much of it is legitimately per-JVM |
 
 ## R3: Running builds ← **Target 4 done (ET4 passes): leases, fencing, adoption**, [targets/04](targets/04-running-build-failover.md)
 | Item | Status | Gap / evidence |
