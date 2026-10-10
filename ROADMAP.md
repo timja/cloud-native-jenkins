@@ -55,7 +55,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Quiet period, `build` step, upstream/downstream, `lock` (lockable-resources) | ❌ | Cross-build coordination happens in one JVM |
 | Cluster-singleton `PeriodicWork` (declared, not blanket leader election) | ❌ | E7: 131 plugins (37 BOM) define periodic work, and much of it is legitimately per-JVM |
 
-## R3: Running builds
+## R3: Running builds ← **Target 4 (planned, with R4)**, [targets/04](targets/04-running-build-failover.md)
 | Item | Status | Gap / evidence |
 |---|---|---|
 | Build ownership lease plus fencing | ❌ | E4: B adopted A's builds after a SIGKILL, but nothing stops a *partitioned* A from carrying on |
@@ -65,7 +65,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Routing requests to the owner (live console, `input`, abort, replay) | ❌ | |
 | Executors and built-in node | 🟡 | Set built-in executors to 0; agents only (E1: built-in workspaces are local) |
 
-## R4: Pipeline data
+## R4: Pipeline data ← **Target 4 (planned, with R3)**, [targets/04](targets/04-running-build-failover.md)
 | Item | Status | Gap / evidence |
 |---|---|---|
 | `program.dat` (CPS continuation) in the store | ❌ | `CpsFlowExecution.java:1038`. E4: the resume source |
