@@ -1,7 +1,0 @@
-jobs/f2/config.xml|5|a6d01be1-4c43-4f16-a936-5edb50213e2e
-jobs/f2/jobs/inner/config.xml|6|a6d01be1-4c43-4f16-a936-5edb50213e2e
-jobs/mb/branches/feature2/config.xml|26|40c028aa-f33b-4345-aa41-ac260b5bff59
-jobs/mb/branches/main/config.xml|19|a6d01be1-4c43-4f16-a936-5edb50213e2e
-jobs/mb/config.xml|10|a6d01be1-4c43-4f16-a936-5edb50213e2e
-jobs/props/config.xml|9|a6d01be1-4c43-4f16-a936-5edb50213e2e
-jobs/race/config.xml|107|40c028aa-f33b-4345-aa41-ac260b5bff59

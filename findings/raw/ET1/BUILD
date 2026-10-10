@@ -1,3 +1,0 @@
-core cnj/t1-m4-item-change-applier 9caafa1e30440048ec5ef77803ae9a13c155b77b
-cloudbees-folder cnj/t1-m2-folder-children 7699d449522210839dab087cffc0253f53107356
-cloud-native-jenkins f15f74e22df4dfa14a267378dc0ccaec2645bebd
