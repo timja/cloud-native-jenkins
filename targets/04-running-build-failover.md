@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | R4 (Pipeline data) + R3 (running builds: leases, fencing, adoption) |
-| **Status** | Planned |
+| **Status** | **Done** (2026-10-10): ET4 passes 39/39, see [04-progress](04-progress.md) |
 | **Depends on** | Target 1 (store, events), Target 2 (membership heartbeat), Target 3 (running placeholders, log shipping, build records) |
 | **Evidence** | [E4](../findings/E4-pipeline-failover.md) (cold failover works, but only on a shared disk, and nothing fences a partitioned owner), [E1](../findings/E1-home-inventory.md), [E9](../findings/E9-runtime-job-state.md), [ET3](../findings/ET3-build-records.md) |
 

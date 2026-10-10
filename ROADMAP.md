@@ -55,22 +55,22 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Quiet period, `build` step, upstream/downstream, `lock` (lockable-resources) | ❌ | Cross-build coordination happens in one JVM |
 | Cluster-singleton `PeriodicWork` (declared, not blanket leader election) | ❌ | E7: 131 plugins (37 BOM) define periodic work, and much of it is legitimately per-JVM |
 
-## R3: Running builds ← **Target 4 (planned, with R4)**, [targets/04](targets/04-running-build-failover.md)
+## R3: Running builds ← **Target 4 done (ET4 passes): leases, fencing, adoption**, [targets/04](targets/04-running-build-failover.md)
 | Item | Status | Gap / evidence |
 |---|---|---|
-| Build ownership lease plus fencing | ❌ | E4: B adopted A's builds after a SIGKILL, but nothing stops a *partitioned* A from carrying on |
-| Adoption of a dead controller's builds | 🟡 | E4: works today **only** via a shared disk (`program.dat`, flow nodes, `build.xml`). Must keep working via R4 |
+| Build ownership lease plus fencing | ✅ branch (T4: epoch-fenced leases; a partitioned owner stops itself, ET4 scenario 4) | E4: B adopted A's builds after a SIGKILL, but nothing stops a *partitioned* A from carrying on |
+| Adoption of a dead controller's builds | ✅ branch (T4: from store save points, no shared disk; ET4 scenarios 1-3) | E4: works today **only** via a shared disk (`program.dat`, flow nodes, `build.xml`). Must keep working via R4 |
 | Agent connections: which controller holds the channel, reconnecting after failover | ❌ | E5: one controller only. E4: needed a stable DNS alias moved by hand |
 | Cloud provisioning across controllers (k8s, EC2, Docker) | ❌ | `NodeProvisioner` per JVM over-provisions. Orphan cleanup kills other controllers' agents |
 | Routing requests to the owner (live console, `input`, abort, replay) | ❌ | |
 | Executors and built-in node | 🟡 | Set built-in executors to 0; agents only (E1: built-in workspaces are local) |
 
-## R4: Pipeline data ← **Target 4 (planned, with R3)**, [targets/04](targets/04-running-build-failover.md)
+## R4: Pipeline data ← **Target 4 done (ET4 passes): save points in the store, resume elsewhere**, [targets/04](targets/04-running-build-failover.md)
 | Item | Status | Gap / evidence |
 |---|---|---|
-| `program.dat` (CPS continuation) in the store | ❌ | `CpsFlowExecution.java:1038`. E4: the resume source |
-| Flow nodes (`workflow/*.xml` → `workflow-completed/flowNodeStore.xml`) | ❌ | `FlowNodeStorage` is abstract, but `createStorage()` hard-codes the file implementations. E9: written continuously during each build |
-| Running-build index (`FlowExecutionList.xml`) | ❌ | E1, E4 |
+| `program.dat` (CPS continuation) in the store | ✅ branch (T4: save points via `ProgramSavedListener`, blob storage) | `CpsFlowExecution.java:1038`. E4: the resume source |
+| Flow nodes (`workflow/*.xml` → `workflow-completed/flowNodeStore.xml`) | ✅ branch (T4: shipped with save points; completed nodes in the T3 snapshot) | `FlowNodeStorage` is abstract, but `createStorage()` hard-codes the file implementations. E9: written continuously during each build |
+| Running-build index (`FlowExecutionList.xml`) | ✅ branch (T4: not needed; running placeholders and leases replace it, and the adopter registers the build) | E1, E4 |
 | Pipeline logs | 🟡 | `LogStorageFactory` (Beta). The only reader/writer, pipeline-cloudwatch-logs, has had no commits since 2020. E1: falls back to local `log` + `log-index` |
 | Artifacts and stashes | ✅ | azure-artifact-manager against Azurite (E1, E2); artifact-manager-s3. Gap: identity collision (R5) |
 | Durability hints | 🟡 | `PERFORMANCE_OPTIMIZED` skips `program.dat` saves, so failover loses the build. Force `MAX_SURVIVABILITY` in HA |
