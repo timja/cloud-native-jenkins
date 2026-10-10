@@ -43,13 +43,13 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Concurrent writers to one job (indexing on A while a build on B runs `properties()`) | 🟡 branch | CAS + warn policy; ET1 4/4b converge with 0 conflicts. Strict/writer-aware retries deferred (M5) |
 | Plugin code reading item files directly | 🟡 | E7: 88 plugins use item-dir `File` APIs; 42 call `XmlFile#getFile` |
 
-## R2: Build scheduling ← **Target 2 (in progress): build numbers + exactly-once triggers**, [targets/02](targets/02-cluster-scheduling.md)
+## R2: Build scheduling ← **Target 2 done (ET2 passes): build numbers + exactly-once triggers**, [targets/02](targets/02-cluster-scheduling.md)
 | Item | Status | Gap / evidence |
 |---|---|---|
-| Triggers fire once per cluster (cron, SCM polling, `upstream`) | ❌ | **E3: cron fired 8 times in 3 minutes on 2 controllers.** E9: triggers are *defined by builds* via `properties()`, so the scheduler must follow R1 events |
-| Branch indexing and org scanning run once, with indexing state shared | ❌ | E9: `state.xml`, `indexing/indexing.xml`, `scm-*-revision-hash.xml` are written by whoever indexes |
+| Triggers fire once per cluster (cron, SCM polling, `upstream`) | ✅ branch (cron-style; `upstream` not covered) | **E3: cron fired 8 times in 3 minutes on 2 controllers.** E9: triggers are *defined by builds* via `properties()`, so the scheduler must follow R1 events |
+| Branch indexing and org scanning run once, with indexing state shared | ✅ branch (periodic; manual scan runs where requested) | E9: `state.xml`, `indexing/indexing.xml`, `scm-*-revision-hash.xml` are written by whoever indexes |
 | Webhook fan-in (an event delivered to any controller is handled once) | ❌ | GitHub/GitLab/Bitbucket hooks arrive at one controller through the LB |
-| Atomic, cluster-wide build numbers | 🟡 | `Job.BuildNumberAssigner` (Beta) exists; the default is `synchronized(job)` + file (`Job.java:378`). E3: only the JENKINS-23152 directory check avoided a collision |
+| Atomic, cluster-wide build numbers | ✅ branch | `Job.BuildNumberAssigner` (Beta) exists; the default is `synchronized(job)` + file (`Job.java:378`). E3: only the JENKINS-23152 directory check avoided a collision |
 | Queue: shared or partitioned, cluster-unique ids | 🟡 | In-memory under one lock (`Queue.java:352`); `queue.xml` is written only at shutdown (E1). `QueueIdStrategy` (Beta) exists |
 | Placing builds on a controller (load balancing, affinity to connected agents) | ❌ | E5: an agent connects to one controller only |
 | Quiet period, `build` step, upstream/downstream, `lock` (lockable-resources) | ❌ | Cross-build coordination happens in one JVM |
@@ -76,7 +76,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Durability hints | 🟡 | `PERFORMANCE_OPTIMIZED` skips `program.dat` saves, so failover loses the build. Force `MAX_SURVIVABILITY` in HA |
 | `milestone`, `lock`, `input` approvals, `build` step state | ❌ | Held in memory or XML on the owning controller |
 
-## R5: Build records and history
+## R5: Build records and history ← **Target 3 (planned)**, [targets/03](targets/03-shared-build-records.md)
 | Item | Status | Gap / evidence |
 |---|---|---|
 | Globally unique build identity | ❌ | **E2: junit-sql showed 4 tests instead of 2** after a recreated job reused `(name, #1)`. The Azure artifact key `<job>/<#>/…` collides too |

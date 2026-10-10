@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | R2 (subset) |
-| **Status** | In progress; see [02-progress.md](02-progress.md) |
+| **Status** | **Done.** ET2 passes (2026-10-10); see [02-progress.md](02-progress.md) |
 | **Depends on** | Target 1 (shared item config, persistence SPI) |
 | **Evidence** | [E3](../findings/E3-shared-home.md) (cron fired 8× in 3 min on 2 controllers; `nextBuildNumber` collision), [E9](../findings/E9-runtime-job-state.md) (triggers defined by builds), ET1 observations (`findings/ET1-shared-items.md` on `cnj/t1-m6-postgres-store`) (build numbers diverged; indexing on B rebuilt branches) |
 
