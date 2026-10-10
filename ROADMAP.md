@@ -50,7 +50,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Branch indexing and org scanning run once, with indexing state shared | ✅ branch (periodic; manual scan runs where requested) | E9: `state.xml`, `indexing/indexing.xml`, `scm-*-revision-hash.xml` are written by whoever indexes |
 | Webhook fan-in (an event delivered to any controller is handled once) | ❌ | GitHub/GitLab/Bitbucket hooks arrive at one controller through the LB |
 | Atomic, cluster-wide build numbers | ✅ branch | `Job.BuildNumberAssigner` (Beta) exists; the default is `synchronized(job)` + file (`Job.java:378`). E3: only the JENKINS-23152 directory check avoided a collision |
-| Queue: shared or partitioned, cluster-unique ids | 🟡 | In-memory under one lock (`Queue.java:352`); `queue.xml` is written only at shutdown (E1). `QueueIdStrategy` (Beta) exists |
+| Queue: shared or partitioned, cluster-unique ids (**Target 5, planned**: [targets/05](targets/05-shared-queue.md)) | 🟡 | In-memory under one lock (`Queue.java:352`); `queue.xml` is written only at shutdown (E1). `QueueIdStrategy` (Beta) exists |
 | Placing builds on a controller (load balancing, affinity to connected agents) | ❌ | E5: an agent connects to one controller only |
 | Quiet period, `build` step, upstream/downstream, `lock` (lockable-resources) | ❌ | Cross-build coordination happens in one JVM |
 | Cluster-singleton `PeriodicWork` (declared, not blanket leader election) | ❌ | E7: 131 plugins (37 BOM) define periodic work, and much of it is legitimately per-JVM |
