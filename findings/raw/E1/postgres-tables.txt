@@ -1,0 +1,14 @@
+                   List of relations
+ Schema |            Name             | Type  |  Owner  
+--------+-----------------------------+-------+---------
+ public | caseresults                 | table | jenkins
+ public | caseresultssummary          | table | jenkins
+ public | junit_flyway_schema_history | table | jenkins
+(3 rows)
+
+    job    | build | count 
+-----------+-------+-------
+ pipeline  |     1 |     1
+ freestyle |     1 |     2
+(2 rows)
+

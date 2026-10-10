@@ -1,0 +1,9 @@
+# E7: in-JVM periodic work that would run once per controller, plus direct XmlFile users
+hudson.model.PeriodicWork
+hudson.model.AsyncPeriodicWork
+hudson.model.AperiodicWork
+hudson.model.AsyncAperiodicWork
+jenkins.util.Timer
+hudson.XmlFile
+hudson.util.AtomicFileWriter
+hudson.util.TextFile

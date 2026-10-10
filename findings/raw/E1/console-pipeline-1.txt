@@ -1,0 +1,52 @@
+Started by user admin
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on agent1 in /home/jenkins/agent/workspace/pipeline
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] sh
++ echo pipeline 1
+pipeline 1
++ mkdir -p out reports
++ echo pipe-1
+[Pipeline] writeFile
+[Pipeline] archiveArtifacts
+Archiving artifacts
+Recording fingerprints
+[Pipeline] stash
+Stashed 1 file(s) to jenkins
+AzureStorage - Uploaded/archived file count = 1
+Deleting stash file stuff.tgz
+[Pipeline] junit
+[Checks API] No suitable checks publisher found.
+[Pipeline] withCredentials
+Masking supported pattern matches of $S
+[Pipeline] {
+[Pipeline] sh
++ test -n ****
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (unstash)
+[Pipeline] dir
+Running in /home/jenkins/agent/workspace/pipeline/again
+[Pipeline] {
+[Pipeline] unstash
+AzureStorage - Need to be downloaded file count =  1
+blob artifacts/pipeline/1/stashes/stuff.tgz is downloaded to /home/jenkins/agent/workspace/pipeline/again in 00:00:00.017 (HH:mm:ss.S)
+Unstash file(s) from stuff.tgz
+[Pipeline] sh
++ cat out/lib.txt
+pipe-1
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+Delete 0 stashes from jenkins

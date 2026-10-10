@@ -1,0 +1,25 @@
+total plugins matching any pattern: 513 (of 2117 scanned)
+
+ 166  T1 global config/secrets: Jenkins#getRootDir / Hudson#getRootDir
+      e.g. BlameSubversion, active-git-branches, adoptopenjdk, agent-maintenance, alauda-kubernetes-support, allure-jenkins-plugin, ansible-tower, atlassian-bitbucket-server-integration, audit-log, audit-trail, auditflow, authorize-project
+
+  42  T1 risk: XmlFile#getFile (bypasses store)
+      e.g. atlassian-bitbucket-server-integration, azure-ad, buildcontext-capture, cloud-stats, cluster-stats, config-file-provider, convert-to-pipeline, dependency-check-jenkins-plugin, disk-usage, extra-columns, gerrit-trigger, github
+
+ 171  T1/T2: constructs or uses hudson.XmlFile directly
+      e.g. BlameSubversion, adobe-cloud-manager, agent-maintenance, alibabacloud-ecs, ansible-tower, aqua-security-scanner, armorcode-release-gate, atlassian-bitbucket-server-integration, atlassian-jira-software-cloud, audit-log, audit-trail, auditflow
+
+  15  T1/T2: TextFile / AtomicFileWriter
+      e.g. branch-api, buckminster, build-change-investigator, cobertura, code-coverage-api, flaky-test-handler, gradle-repo, junit, mentor-questa-vrm, multi-branch-project-plugin, parasoft-findings, pipeline-dora-metrics
+
+  88  T2 items: Job/AbstractItem/AbstractProject getRootDir, getConfigFile, Items.getConfigFile
+      e.g. BlameSubversion, JiraTestResultReporter, accurev, android-apk-size-watcher, artifactory, atlassian-bitbucket-server-integration, aws-codecommit-trigger, batch-control, behave-testresults-publisher, benchmark, benchmark-evaluator, bitbucket
+
+ 212  T3 builds: Run/AbstractBuild/WorkflowRun getRootDir, getArtifactsDir, Job/AbstractProject getBuildDir
+      e.g. BlameSubversion, Office-365-Connector, TestComplete, add-changes-to-build-changelog, agent-loadbalance, ai-agent, aio-tests, allure-jenkins-plugin, ansicolor, appscan, aqua-microscanner, aqua-security-scanner
+
+  24  T3 logs: Run/AbstractBuild getLogFile
+      e.g. GatekeeperPlugin, async-job, build-history-manager, buildcontext-capture, compress-buildlog, delete-log-plugin, discard-old-build, fogbugz, google-storage-plugin, itest, ivy, jenkins-multijob-plugin
+
+ 131  T5 periodic work: PeriodicWork/AsyncPeriodicWork/AperiodicWork/AsyncAperiodicWork/Timer
+      e.g. Parameterized-Remote-Trigger, adobe-cloud-manager, alauda-devops-credentials-provider, alauda-devops-sync, alibabacloud-ecs, amqp-build-trigger, anka-build, argus-notifier, armorcode-release-gate, auditflow, aws-sqs-trigger, azure-container-agents

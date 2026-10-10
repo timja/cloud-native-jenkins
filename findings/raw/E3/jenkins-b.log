@@ -1,0 +1,46 @@
+jenkins-b-1  | 2026-10-10T08:50:05.048669291Z Running from: /usr/share/jenkins/jenkins.war
+jenkins-b-1  | 2026-10-10T08:50:05.048945708Z webroot: /var/jenkins_home/war
+jenkins-b-1  | 2026-10-10T08:50:05.309530000Z 2026-10-10 08:50:05.295+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-10T08:50:05.342891541Z 2026-10-10 08:50:05.342+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-10T08:50:05.379380708Z 2026-10-10 08:50:05.379+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.13; built: 2026-09-04T06:53:08.311Z; git: e99386749a0a4888cd9b555ffc96a476fd48d94e; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-10T08:50:05.594768625Z 2026-10-10 08:50:05.594+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-10T08:50:05.616885625Z 2026-10-10 08:50:05.616+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-10T08:50:05.807173042Z 2026-10-10 08:50:05.806+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-10T08:50:05.864672875Z 2026-10-10 08:50:05.864+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@748fe51d{Jenkins v2.580.1,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@415156bf{STARTED}}
+jenkins-b-1  | 2026-10-10T08:50:05.868807333Z 2026-10-10 08:50:05.868+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@43effd89{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-10T08:50:05.869151125Z 2026-10-10 08:50:05.868+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@248deced{STARTING}[12.1.13,sto=0] @490ms
+jenkins-b-1  | 2026-10-10T08:50:05.869735375Z 2026-10-10 08:50:05.869+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-10T08:50:05.918936708Z 2026-10-10 08:50:05.918+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.580.1
+jenkins-b-1  | 2026-10-10T08:50:05.947072875Z 2026-10-10 08:50:05.946+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-10T08:50:06.027179375Z 2026-10-10 08:50:06.026+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-10T08:50:07.346467542Z 2026-10-10 08:50:07.345+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-10T08:50:07.358118876Z 2026-10-10 08:50:07.357+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-10T08:50:07.359585167Z 2026-10-10 08:50:07.359+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-10T08:50:07.727617959Z 2026-10-10 08:50:07.727+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-10T08:50:08.199848251Z 2026-10-10 08:50:08.199+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-10T08:50:08.200388293Z 2026-10-10 08:50:08.199+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-10T08:50:08.202216168Z 2026-10-10 08:50:08.201+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-10T08:50:08.207320168Z 2026-10-10 08:50:08.207+0000 [id=49]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_1eafb1ff349a187fb43968325b1a9c0077c94f417c946fe7f0eae4fea2cd4b5a duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-10T08:50:08.627528960Z 2026-10-10 08:50:08.626+0000 [id=57]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Database: jdbc:postgresql:******** (PostgreSQL 16.15)
+jenkins-b-1  | 2026-10-10T08:50:08.672534876Z 2026-10-10 08:50:08.672+0000 [id=57]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Successfully validated 10 migrations (execution time 00:00.017s)
+jenkins-b-1  | 2026-10-10T08:50:08.687104168Z 2026-10-10 08:50:08.686+0000 [id=57]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Current version of schema "public": 2026.10.09.1300
+jenkins-b-1  | 2026-10-10T08:50:08.689462960Z 2026-10-10 08:50:08.689+0000 [id=57]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Schema "public" is up to date. No migration necessary.
+jenkins-b-1  | 2026-10-10T08:50:08.692846918Z 2026-10-10 08:50:08.692+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-10T08:50:08.703056210Z 2026-10-10 08:50:08.702+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-10T08:50:11.078629211Z 2026-10-10 08:50:11.078+0000 [id=35]	INFO	hudson.lifecycle.Lifecycle#onReload: Reloading Jenkins as requested by admin
+jenkins-b-1  | 2026-10-10T08:50:11.084640919Z 2026-10-10 08:50:11.084+0000 [id=87]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-10T08:50:11.085247503Z 2026-10-10 08:50:11.084+0000 [id=90]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-10T08:50:11.085704128Z 2026-10-10 08:50:11.085+0000 [id=93]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-10T08:50:11.086241628Z 2026-10-10 08:50:11.086+0000 [id=96]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-10T08:50:11.086691003Z 2026-10-10 08:50:11.086+0000 [id=99]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-10T08:50:11.090157003Z 2026-10-10 08:50:11.089+0000 [id=87]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-10T08:50:11.090267419Z 2026-10-10 08:50:11.090+0000 [id=87]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-10T08:50:11.116528003Z 2026-10-10 08:50:11.116+0000 [id=98]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-10T08:50:11.116599628Z 2026-10-10 08:50:11.116+0000 [id=102]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-10T08:50:11.117464253Z 2026-10-10 08:50:11.117+0000 [id=102]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-10T08:50:11.119739669Z 2026-10-10 08:50:11.119+0000 [id=86]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-10T08:50:21.069236091Z 2026-10-10 08:50:21.068+0000 [id=69]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-10T08:50:21.658223716Z 2026-10-10 08:50:21.657+0000 [id=69]	INFO	i.j.p.j.s.d.DatabaseTestResultStorage$RemotePublisherImpl#doPublishWithinTransaction: Saved 2 test cases into database for 'freestyle #1'.
+jenkins-b-1  | 2026-10-10T08:52:00.305375637Z 2026-10-10 08:52:00.302+0000 [id=151]	WARNING	j.model.lazy.LazyBuildMixIn#newBuild: JENKINS-23152: /var/jenkins_home/jobs/cron/builds/3 already existed; will not overwrite with cron #3 but will create a fresh build #4
+jenkins-b-1  | 2026-10-10T08:52:00.308995595Z 2026-10-10 08:52:00.308+0000 [id=151]	WARNING	j.model.lazy.LazyBuildMixIn#newBuild: JENKINS-23152: /var/jenkins_home/jobs/cron/builds/4 already existed; will not overwrite with cron #4 but will create a fresh build #5
+jenkins-b-1  | 2026-10-10T08:53:00.297965720Z 2026-10-10 08:53:00.296+0000 [id=154]	WARNING	j.model.lazy.LazyBuildMixIn#newBuild: JENKINS-23152: /var/jenkins_home/jobs/cron/builds/6 already existed; will not overwrite with cron #6 but will create a fresh build #7

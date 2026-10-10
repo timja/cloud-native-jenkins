@@ -1,0 +1,6 @@
+## Before: external state left by E1
+### junit-sql rows (job|build|count)
+freestyle|1|2
+pipeline|1|1
+### Azurite blobs
+(container listing needs auth; see below)

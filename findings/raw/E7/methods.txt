@@ -1,0 +1,27 @@
+# E7: plugin code that assumes file-based storage under JENKINS_HOME
+hudson.XmlFile#getFile
+hudson.model.Descriptor#getConfigFile
+jenkins.model.Jenkins#getRootDir
+hudson.model.Hudson#getRootDir
+hudson.model.Run#getRootDir
+hudson.model.AbstractBuild#getRootDir
+hudson.model.Run#getLogFile
+hudson.model.Run#getArtifactsDir
+hudson.model.Job#getBuildDir
+hudson.model.Job#getRootDir
+hudson.model.AbstractItem#getRootDir
+hudson.model.AbstractItem#getConfigFile
+hudson.model.Items#getConfigFile
+hudson.model.User#getRootDir
+# same methods invoked through common subclasses (bytecode records the static receiver type)
+hudson.model.AbstractBuild#getLogFile
+hudson.model.FreeStyleBuild#getRootDir
+hudson.model.FreeStyleBuild#getLogFile
+org.jenkinsci.plugins.workflow.job.WorkflowRun#getRootDir
+org.jenkinsci.plugins.workflow.job.WorkflowRun#getLogFile
+org.jenkinsci.plugins.workflow.job.WorkflowRun#getArtifactsDir
+hudson.model.AbstractProject#getBuildDir
+hudson.model.AbstractProject#getRootDir
+hudson.model.FreeStyleProject#getRootDir
+org.jenkinsci.plugins.workflow.job.WorkflowJob#getRootDir
+org.jenkinsci.plugins.workflow.job.WorkflowJob#getBuildDir

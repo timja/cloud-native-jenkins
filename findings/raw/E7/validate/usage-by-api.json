@@ -1,0 +1,23 @@
+{
+  "methods": {
+    "jenkins/model/Jenkins#getRootDir()Ljava/io/File;": [
+      "credentials",
+      "git"
+    ],
+    "hudson/XmlFile#getFile()Ljava/io/File;": ["junit"],
+    "hudson/model/Run#getRootDir()Ljava/io/File;": ["junit"]
+  },
+  "classes": {
+    "hudson/XmlFile": [
+      "credentials",
+      "junit",
+      "workflow-cps"
+    ],
+    "jenkins/util/Timer": [
+      "credentials",
+      "workflow-cps"
+    ],
+    "hudson/util/TextFile": ["junit"]
+  },
+  "fields": {}
+}

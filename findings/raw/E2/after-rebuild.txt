@@ -1,0 +1,39 @@
+## After rebuilding #1 of the same jobs
+### junit-sql rows (job|build|count)
+freestyle|1|4
+pipeline|1|2
+### test result as shown by Jenkins for freestyle #1
+{"_class":"hudson.tasks.junit.TestResult","failCount":0,"skipCount":0}
+{"_class":"hudson.tasks.junit.TestResult","failCount":0,"skipCount":0}
+### artifacts as shown by Jenkins for pipeline #1
+{"_class":"org.jenkinsci.plugins.workflow.job.WorkflowRun","artifacts":[{"relativePath":"out/lib.txt"}]}
+### artifact content
+pipe-1
+
+### console of pipeline #1 (artifact lines)
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] stash
+Stashed 1 file(s) to jenkins
+AzureStorage - Uploaded/archived file count = 1
+Deleting stash file stuff.tgz
+[Pipeline] { (unstash)
+[Pipeline] unstash
+AzureStorage - Need to be downloaded file count =  1
+blob artifacts/pipeline/1/stashes/stuff.tgz is downloaded to /home/jenkins/agent/workspace/pipeline/again in 00:00:00.014 (HH:mm:ss.S)
+Unstash file(s) from stuff.tgz
+Delete 0 stashes from jenkins
+### testReport after rebuild (passCount should be 2 / 1)
+{"_class":"hudson.tasks.junit.TestResult","failCount":0,"passCount":4,"skipCount":0,"suites":[{"cases":[{"name":"one"},{"name":"two"},{"name":"one"},{"name":"two"}],"name":"fs"}]}
+{"_class":"hudson.tasks.junit.TestResult","failCount":0,"passCount":2,"skipCount":0,"suites":[{"cases":[{"name":"ok"},{"name":"ok"}],"name":"p"}]}
+### caseresults rows
+    job    | build | suite | testname |         timestamp          
+-----------+-------+-------+----------+----------------------------
+ freestyle |     1 | fs    | one      | 2026-10-10 08:33:32.908118
+ freestyle |     1 | fs    | two      | 2026-10-10 08:33:32.908118
+ freestyle |     1 | fs    | one      | 2026-10-10 08:34:44.638795
+ freestyle |     1 | fs    | two      | 2026-10-10 08:34:44.638795
+ pipeline  |     1 | p     | ok       | 2026-10-10 08:33:38.007986
+ pipeline  |     1 | p     | ok       | 2026-10-10 08:35:00.022938
+(6 rows)
+

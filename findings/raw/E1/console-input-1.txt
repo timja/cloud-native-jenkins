@@ -1,0 +1,30 @@
+Started by user admin
+[Pipeline] Start of Pipeline
+[Pipeline] echo
+before input
+[Pipeline] node
+Running on agent1 in /home/jenkins/agent/workspace/input
+[Pipeline] {
+[Pipeline] sh
++ echo on agent before input
+on agent before input
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] input
+Proceed?
+Proceed or Abort
+Pausing (shutting down)
+Resuming build at Sat Oct 10 08:34:09 UTC 2026 after Jenkins restart
+Ready to run at Sat Oct 10 08:34:10 UTC 2026
+Approved by admin
+[Pipeline] node
+Running on agent1 in /home/jenkins/agent/workspace/input
+[Pipeline] {
+[Pipeline] sh
++ echo on agent after input
+on agent after input
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+Delete 0 stashes from jenkins

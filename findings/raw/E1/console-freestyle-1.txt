@@ -1,0 +1,13 @@
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/freestyle
+[freestyle] $ /bin/sh -xe /tmp/jenkins1554105418723298704.sh
++ echo hello from freestyle 1
+hello from freestyle 1
++ mkdir -p out reports
++ echo artifact 1
++ cat
+Archiving artifacts
+Recording fingerprints
+[Checks API] No suitable checks publisher found.
+Finished: SUCCESS

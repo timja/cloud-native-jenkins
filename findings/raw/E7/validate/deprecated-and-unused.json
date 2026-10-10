@@ -1,0 +1,11 @@
+{
+  "methods": [],
+  "classes": [
+    "hudson/model/AperiodicWork",
+    "hudson/model/AsyncAperiodicWork",
+    "hudson/model/AsyncPeriodicWork",
+    "hudson/model/PeriodicWork",
+    "hudson/util/AtomicFileWriter"
+  ],
+  "fields": []
+}

@@ -1,0 +1,46 @@
+513 of 2117 scanned plugins match, across 27 distinct APIs
+
+Most-used APIs
+    171  hudson/XmlFile
+    150  jenkins/model/Jenkins#getRootDir()Ljava/io/File;
+    132  hudson/model/Run#getRootDir()Ljava/io/File;
+     68  hudson/model/AbstractBuild#getRootDir()Ljava/io/File;
+     59  jenkins/util/Timer
+     58  hudson/model/AsyncPeriodicWork
+     49  hudson/model/PeriodicWork
+     42  hudson/XmlFile#getFile()Ljava/io/File;
+     41  hudson/model/Job#getRootDir()Ljava/io/File;
+     28  hudson/model/AbstractProject#getRootDir()Ljava/io/File;
+     17  hudson/model/Run#getArtifactsDir()Ljava/io/File;
+     16  hudson/model/AbstractItem#getRootDir()Ljava/io/File;
+     16  hudson/model/Hudson#getRootDir()Ljava/io/File;
+     14  hudson/model/Run#getLogFile()Ljava/io/File;
+     10  hudson/model/AbstractBuild#getLogFile()Ljava/io/File;
+     10  hudson/util/TextFile
+      9  hudson/model/AbstractItem#getConfigFile()Lhudson/XmlFile;
+      8  hudson/model/Job#getBuildDir()Ljava/io/File;
+      6  hudson/model/AperiodicWork
+      5  hudson/model/Items#getConfigFile(Ljava/io/File;)Lhudson/XmlFile;
+      5  hudson/util/AtomicFileWriter
+      5  org/jenkinsci/plugins/workflow/job/WorkflowRun#getRootDir()Ljava/io/File;
+      4  hudson/model/AbstractProject#getBuildDir()Ljava/io/File;
+      3  hudson/model/AsyncAperiodicWork
+      3  hudson/model/Items#getConfigFile(Lhudson/model/Item;)Lhudson/XmlFile;
+  ... 2 more (--top 0 for all)
+
+Plugins with the most distinct APIs
+     11  disk-usage:573.v5269a_8d16a_db_
+      8  propelo-job-reporter:1.0.47
+      7  support-core:1865.v45d40b_778b_cb_
+      7  thinBackup:2.1.5
+      6  batch-control:1124.vfe83a_6d946c3
+      6  ecutest:2.46
+      6  hp-application-automation-tools-plugin:26.3
+      5  branch-api:2.1303.v9f3b_95dc329d
+      5  cloudbees-folder:6.1106.v3a_d9a_6d2465e
+      5  compuware-ispw-operations:2.4.1
+      5  datadog:9.2.1
+      5  ec2:2064.v79de4fd2d03b_
+      5  gerrit-trigger:3.1998.v9487a_a_89a_eb_1
+      5  github:1.47.0
+      5  jira-integration:5.9.0-91.v212c8303c8b_6

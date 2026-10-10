@@ -1,0 +1,116 @@
+jenkins-b-1  | 2026-10-10T09:06:14.757719962Z Running from: /usr/share/jenkins/jenkins.war
+jenkins-b-1  | 2026-10-10T09:06:14.758016212Z webroot: /var/jenkins_home/war
+jenkins-b-1  | 2026-10-10T09:06:15.022404921Z 2026-10-10 09:06:15.003+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-10T09:06:15.088092963Z 2026-10-10 09:06:15.086+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-10T09:06:15.199511921Z 2026-10-10 09:06:15.195+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.13; built: 2026-09-04T06:53:08.311Z; git: e99386749a0a4888cd9b555ffc96a476fd48d94e; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-10T09:06:15.529791380Z 2026-10-10 09:06:15.529+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-10T09:06:15.553279255Z 2026-10-10 09:06:15.552+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-10T09:06:15.988657963Z 2026-10-10 09:06:15.988+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-10T09:06:16.064574671Z 2026-10-10 09:06:16.064+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@748fe51d{Jenkins v2.580.1,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@415156bf{STARTED}}
+jenkins-b-1  | 2026-10-10T09:06:16.069104463Z 2026-10-10 09:06:16.068+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@43effd89{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-10T09:06:16.069360921Z 2026-10-10 09:06:16.069+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@248deced{STARTING}[12.1.13,sto=0] @892ms
+jenkins-b-1  | 2026-10-10T09:06:16.070598088Z 2026-10-10 09:06:16.070+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-10T09:06:16.142689796Z 2026-10-10 09:06:16.142+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.580.1
+jenkins-b-1  | 2026-10-10T09:06:16.194086338Z 2026-10-10 09:06:16.192+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-10T09:06:16.292164047Z 2026-10-10 09:06:16.287+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-10T09:06:18.742845714Z 2026-10-10 09:06:18.739+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-10T09:06:18.774820589Z 2026-10-10 09:06:18.774+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-10T09:06:18.776253131Z 2026-10-10 09:06:18.776+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-10T09:06:19.535351715Z 2026-10-10 09:06:19.531+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-10T09:06:20.273325215Z 2026-10-10 09:06:20.272+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-10T09:06:20.291527090Z 2026-10-10 09:06:20.287+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-10T09:06:20.291609757Z 2026-10-10 09:06:20.288+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-10T09:06:20.293910507Z 2026-10-10 09:06:20.291+0000 [id=51]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_4c629472613706c4e0a3a8c6f21164beaeb16276ad114f12382d180199839644 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-10T09:06:20.758044799Z 2026-10-10 09:06:20.757+0000 [id=58]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Database: jdbc:postgresql:******** (PostgreSQL 16.15)
+jenkins-b-1  | 2026-10-10T09:06:20.820813757Z 2026-10-10 09:06:20.820+0000 [id=58]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Successfully validated 10 migrations (execution time 00:00.027s)
+jenkins-b-1  | 2026-10-10T09:06:20.841429132Z 2026-10-10 09:06:20.841+0000 [id=58]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Current version of schema "public": 2026.10.09.1300
+jenkins-b-1  | 2026-10-10T09:06:20.843611215Z 2026-10-10 09:06:20.843+0000 [id=58]	INFO	o.f.c.i.logging.slf4j.Slf4jLog#info: Schema "public" is up to date. No migration necessary.
+jenkins-b-1  | 2026-10-10T09:06:20.846901215Z 2026-10-10 09:06:20.846+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-10T09:06:20.862438882Z 2026-10-10 09:06:20.862+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-10T09:06:28.840102386Z 2026-10-10 09:06:28.838+0000 [id=88]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-10T09:06:29.720299970Z 2026-10-10 09:06:29.718+0000 [id=88]	WARNING	o.j.p.w.cps.CpsFlowExecution#notifyListeners
+jenkins-b-1  | 2026-10-10T09:06:29.720329095Z com.azure.storage.blob.models.BlobStorageException: Status code 404, "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+jenkins-b-1  | 2026-10-10T09:06:29.720332428Z [LF]> <Error>
+jenkins-b-1  | 2026-10-10T09:06:29.720333970Z [LF]>   <Code>ContainerNotFound</Code>
+jenkins-b-1  | 2026-10-10T09:06:29.720335553Z [LF]>   <Message>The specified container does not exist.
+jenkins-b-1  | 2026-10-10T09:06:29.720336928Z [LF]> RequestId:3ec144b2-0f93-48d6-a374-d03a25c764f2
+jenkins-b-1  | 2026-10-10T09:06:29.720380803Z [LF]> Time:2026-10-10T09:06:29.657Z</Message>
+jenkins-b-1  | 2026-10-10T09:06:29.720383345Z [LF]> </Error>"
+jenkins-b-1  | 2026-10-10T09:06:29.720388095Z 	at PluginClassLoader for azure-sdk//com.azure.storage.blob.implementation.util.ModelHelper.mapToBlobStorageException(ModelHelper.java:663)
+jenkins-b-1  | 2026-10-10T09:06:29.720389720Z 	at PluginClassLoader for azure-sdk//com.azure.storage.blob.implementation.ContainersImpl.listBlobFlatSegmentWithResponse(ContainersImpl.java:5982)
+jenkins-b-1  | 2026-10-10T09:06:29.720391303Z 	at PluginClassLoader for azure-sdk//com.azure.storage.blob.BlobContainerClient.lambda$listBlobs$1(BlobContainerClient.java:1045)
+jenkins-b-1  | 2026-10-10T09:06:29.720392678Z 	at PluginClassLoader for azure-sdk//com.azure.storage.common.implementation.StorageImplUtils.sendRequest(StorageImplUtils.java:574)
+jenkins-b-1  | 2026-10-10T09:06:29.720394136Z 	at PluginClassLoader for azure-sdk//com.azure.storage.blob.BlobContainerClient.lambda$listBlobs$0(BlobContainerClient.java:1050)
+jenkins-b-1  | 2026-10-10T09:06:29.720395511Z 	at PluginClassLoader for azure-sdk//com.azure.storage.blob.BlobContainerClient.lambda$listBlobs$2(BlobContainerClient.java:1065)
+jenkins-b-1  | 2026-10-10T09:06:29.720396928Z 	at PluginClassLoader for azure-sdk//com.azure.core.http.rest.PagedIterable.lambda$new$6(PagedIterable.java:193)
+jenkins-b-1  | 2026-10-10T09:06:29.720398303Z 	at PluginClassLoader for azure-sdk//com.azure.core.util.paging.ContinuablePagedByIteratorBase.requestPage(ContinuablePagedByIteratorBase.java:104)
+jenkins-b-1  | 2026-10-10T09:06:29.720399720Z 	at PluginClassLoader for azure-sdk//com.azure.core.util.paging.ContinuablePagedByItemIterable$ContinuablePagedByItemIterator.<init>(ContinuablePagedByItemIterable.java:83)
+jenkins-b-1  | 2026-10-10T09:06:29.720409261Z 	at PluginClassLoader for azure-sdk//com.azure.core.util.paging.ContinuablePagedByItemIterable.iterator(ContinuablePagedByItemIterable.java:58)
+jenkins-b-1  | 2026-10-10T09:06:29.720411761Z 	at PluginClassLoader for azure-sdk//com.azure.core.util.paging.ContinuablePagedIterable.iterator(ContinuablePagedIterable.java:141)
+jenkins-b-1  | 2026-10-10T09:06:29.720414386Z 	at PluginClassLoader for azure-artifact-manager//com.microsoft.jenkins.artifactmanager.AzureArtifactManager.deleteBlobs(AzureArtifactManager.java:397)
+jenkins-b-1  | 2026-10-10T09:06:29.720415845Z 	at PluginClassLoader for azure-artifact-manager//com.microsoft.jenkins.artifactmanager.AzureArtifactManager.deleteWithPrefix(AzureArtifactManager.java:392)
+jenkins-b-1  | 2026-10-10T09:06:29.720417303Z 	at PluginClassLoader for azure-artifact-manager//com.microsoft.jenkins.artifactmanager.AzureArtifactManager.clearAllStashes(AzureArtifactManager.java:503)
+jenkins-b-1  | 2026-10-10T09:06:29.720418761Z 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.StashManager.clearAll(StashManager.java:183)
+jenkins-b-1  | 2026-10-10T09:06:29.720420136Z 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.StashManager.maybeClearAll(StashManager.java:210)
+jenkins-b-1  | 2026-10-10T09:06:29.720421511Z 	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun.finish(WorkflowRun.java:748)
+jenkins-b-1  | 2026-10-10T09:06:29.720422886Z 	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun$GraphL.onNewHead(WorkflowRun.java:1231)
+jenkins-b-1  | 2026-10-10T09:06:29.720426553Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.notifyListeners(CpsFlowExecution.java:1686)
+jenkins-b-1  | 2026-10-10T09:06:29.720427970Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$3.run(CpsThreadGroup.java:568)
+jenkins-b-1  | 2026-10-10T09:06:29.720429345Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$wrap$2(CpsVmExecutorService.java:81)
+jenkins-b-1  | 2026-10-10T09:06:29.720430845Z 	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:139)
+jenkins-b-1  | 2026-10-10T09:06:29.720432220Z 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 2026-10-10T09:06:29.720433636Z 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 2026-10-10T09:06:29.720434970Z 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 2026-10-10T09:06:29.720436303Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 2026-10-10T09:06:29.720437678Z 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 2026-10-10T09:06:29.720439136Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 2026-10-10T09:06:29.720440428Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 2026-10-10T09:06:29.720442470Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:53)
+jenkins-b-1  | 2026-10-10T09:06:29.720443970Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:50)
+jenkins-b-1  | 2026-10-10T09:06:29.720445386Z 	at org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:136)
+jenkins-b-1  | 2026-10-10T09:06:29.720446720Z 	at org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:275)
+jenkins-b-1  | 2026-10-10T09:06:29.720448095Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$categoryThreadFactory$0(CpsVmExecutorService.java:50)
+jenkins-b-1  | 2026-10-10T09:06:29.720450720Z 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-10T09:07:54.719306467Z 2026-10-10 09:07:54.715+0000 [id=178]	WARNING	o.j.p.w.cps.CpsFlowExecution#notifyListeners
+jenkins-b-1  | 2026-10-10T09:07:54.719426384Z com.azure.storage.blob.models.BlobStorageException: Status code 404, "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+jenkins-b-1  | 2026-10-10T09:07:54.719429676Z [LF]> <Error>
+jenkins-b-1  | 2026-10-10T09:07:54.719431134Z [LF]>   <Code>ContainerNotFound</Code>
+jenkins-b-1  | 2026-10-10T09:07:54.719432592Z [LF]>   <Message>The specified container does not exist.
+jenkins-b-1  | 2026-10-10T09:07:54.719433967Z [LF]> RequestId:f0cd0f89-a8c5-4123-84fa-67df5fe3f58f
+jenkins-b-1  | 2026-10-10T09:07:54.719435301Z [LF]> Time:2026-10-10T09:07:54.696Z</Message>
+jenkins-b-1  | 2026-10-10T09:07:54.719436676Z [LF]> </Error>"
+jenkins-b-1  | 2026-10-10T09:07:54.719471426Z 	at PluginClassLoader for azure-sdk//com.azure.storage.blob.implementation.util.ModelHelper.mapToBlobStorageException(ModelHelper.java:663)
+jenkins-b-1  | 2026-10-10T09:07:54.719475592Z 	at PluginClassLoader for azure-sdk//com.azure.storage.blob.implementation.ContainersImpl.listBlobFlatSegmentWithResponse(ContainersImpl.java:5982)
+jenkins-b-1  | 2026-10-10T09:07:54.719477509Z 	at PluginClassLoader for azure-sdk//com.azure.storage.blob.BlobContainerClient.lambda$listBlobs$1(BlobContainerClient.java:1045)
+jenkins-b-1  | 2026-10-10T09:07:54.719479092Z 	at PluginClassLoader for azure-sdk//com.azure.storage.common.implementation.StorageImplUtils.sendRequest(StorageImplUtils.java:574)
+jenkins-b-1  | 2026-10-10T09:07:54.719511717Z 	at PluginClassLoader for azure-sdk//com.azure.storage.blob.BlobContainerClient.lambda$listBlobs$0(BlobContainerClient.java:1050)
+jenkins-b-1  | 2026-10-10T09:07:54.719534926Z 	at PluginClassLoader for azure-sdk//com.azure.storage.blob.BlobContainerClient.lambda$listBlobs$2(BlobContainerClient.java:1065)
+jenkins-b-1  | 2026-10-10T09:07:54.719536842Z 	at PluginClassLoader for azure-sdk//com.azure.core.http.rest.PagedIterable.lambda$new$6(PagedIterable.java:193)
+jenkins-b-1  | 2026-10-10T09:07:54.719538426Z 	at PluginClassLoader for azure-sdk//com.azure.core.util.paging.ContinuablePagedByIteratorBase.requestPage(ContinuablePagedByIteratorBase.java:104)
+jenkins-b-1  | 2026-10-10T09:07:54.719540009Z 	at PluginClassLoader for azure-sdk//com.azure.core.util.paging.ContinuablePagedByItemIterable$ContinuablePagedByItemIterator.<init>(ContinuablePagedByItemIterable.java:83)
+jenkins-b-1  | 2026-10-10T09:07:54.719541634Z 	at PluginClassLoader for azure-sdk//com.azure.core.util.paging.ContinuablePagedByItemIterable.iterator(ContinuablePagedByItemIterable.java:58)
+jenkins-b-1  | 2026-10-10T09:07:54.719543176Z 	at PluginClassLoader for azure-sdk//com.azure.core.util.paging.ContinuablePagedIterable.iterator(ContinuablePagedIterable.java:141)
+jenkins-b-1  | 2026-10-10T09:07:54.719545467Z 	at PluginClassLoader for azure-artifact-manager//com.microsoft.jenkins.artifactmanager.AzureArtifactManager.deleteBlobs(AzureArtifactManager.java:397)
+jenkins-b-1  | 2026-10-10T09:07:54.719546926Z 	at PluginClassLoader for azure-artifact-manager//com.microsoft.jenkins.artifactmanager.AzureArtifactManager.deleteWithPrefix(AzureArtifactManager.java:392)
+jenkins-b-1  | 2026-10-10T09:07:54.719548426Z 	at PluginClassLoader for azure-artifact-manager//com.microsoft.jenkins.artifactmanager.AzureArtifactManager.clearAllStashes(AzureArtifactManager.java:503)
+jenkins-b-1  | 2026-10-10T09:07:54.719549842Z 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.StashManager.clearAll(StashManager.java:183)
+jenkins-b-1  | 2026-10-10T09:07:54.719551217Z 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.StashManager.maybeClearAll(StashManager.java:210)
+jenkins-b-1  | 2026-10-10T09:07:54.719552592Z 	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun.finish(WorkflowRun.java:748)
+jenkins-b-1  | 2026-10-10T09:07:54.719553926Z 	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun$GraphL.onNewHead(WorkflowRun.java:1231)
+jenkins-b-1  | 2026-10-10T09:07:54.719555342Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.notifyListeners(CpsFlowExecution.java:1686)
+jenkins-b-1  | 2026-10-10T09:07:54.719559967Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$3.run(CpsThreadGroup.java:568)
+jenkins-b-1  | 2026-10-10T09:07:54.719561426Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$wrap$2(CpsVmExecutorService.java:81)
+jenkins-b-1  | 2026-10-10T09:07:54.719562884Z 	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:139)
+jenkins-b-1  | 2026-10-10T09:07:54.719564717Z 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 2026-10-10T09:07:54.719566134Z 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 2026-10-10T09:07:54.719567467Z 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 2026-10-10T09:07:54.719568842Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 2026-10-10T09:07:54.719570176Z 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 2026-10-10T09:07:54.719571426Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 2026-10-10T09:07:54.719572759Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 2026-10-10T09:07:54.719574301Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:53)
+jenkins-b-1  | 2026-10-10T09:07:54.719575801Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:50)
+jenkins-b-1  | 2026-10-10T09:07:54.719577176Z 	at org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:136)
+jenkins-b-1  | 2026-10-10T09:07:54.719578551Z 	at org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:275)
+jenkins-b-1  | 2026-10-10T09:07:54.719579842Z 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$categoryThreadFactory$0(CpsVmExecutorService.java:50)
+jenkins-b-1  | 2026-10-10T09:07:54.719581301Z 	at java.base/java.lang.Thread.run(Unknown Source)

@@ -1,0 +1,32 @@
+Running from: /e6/jenkins-e6.war
+webroot: /var/jenkins_home/war
+2026-10-10 09:15:32.088+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-10-10 09:15:32.596+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-10-10 09:15:32.632+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.13; built: 2026-09-04T06:53:08.311Z; git: e99386749a0a4888cd9b555ffc96a476fd48d94e; jvm 21.0.12.1+1-LTS
+2026-10-10 09:15:32.851+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+2026-10-10 09:15:32.870+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-10-10 09:15:33.088+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2026-10-10 09:15:33.148+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@67a3bd51{Jenkins v2.580.1,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@57402ba1{STARTED}}
+2026-10-10 09:15:33.154+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@7efe7b87{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-10-10 09:15:33.155+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@5a2bd7c8{STARTING}[12.1.13,sto=0] @523ms
+2026-10-10 09:15:33.158+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-10-10 09:15:33.420+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.580.1
+2026-10-10 09:15:33.422+0000 [id=39]	WARNING	j.s.E6LoggingConfidentialStore#<init>: E6: external ConfidentialStore instantiated by oejew.WebAppClassLoader{Jenkins v2.580.1}@24fb6a80
+2026-10-10 09:15:33.452+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-10-10 09:15:33.457+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-10-10 09:15:33.819+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-10-10 09:15:33.821+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-10-10 09:15:33.822+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-10-10 09:15:33.842+0000 [id=61]	WARNING	j.s.E6LoggingConfidentialStore#load: E6: load jenkins.model.Jenkins.crumbSalt
+2026-10-10 09:15:33.842+0000 [id=61]	WARNING	j.s.E6LoggingConfidentialStore#store: E6: store jenkins.model.Jenkins.crumbSalt
+2026-10-10 09:15:33.874+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-10-10 09:15:33.874+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-10-10 09:15:33.874+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-10-10 09:15:33.874+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-10-10 09:15:33.883+0000 [id=75]	INFO	hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2026-10-10 09:15:33.886+0000 [id=46]	WARNING	j.s.E6LoggingConfidentialStore#load: E6: load hudson.model.User.DIRNAMES
+2026-10-10 09:15:33.886+0000 [id=46]	WARNING	j.s.E6LoggingConfidentialStore#store: E6: store hudson.model.User.DIRNAMES
+2026-10-10 09:15:33.959+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-10-10 09:15:33.991+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2026-10-10 09:15:37.247+0000 [id=75]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+2026-10-10 09:15:37.248+0000 [id=75]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1

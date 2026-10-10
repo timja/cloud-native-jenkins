@@ -1,0 +1,38 @@
+{
+  "junit": {
+    "plugin": "junit:1436.v04461a_d56ca_f",
+    "methods": [
+      "hudson/XmlFile#getFile()Ljava/io/File;",
+      "hudson/model/Run#getRootDir()Ljava/io/File;"
+    ],
+    "classes": [
+      "hudson/XmlFile",
+      "hudson/util/TextFile"
+    ],
+    "fields": []
+  },
+  "git": {
+    "plugin": "git:5.10.1",
+    "methods": ["jenkins/model/Jenkins#getRootDir()Ljava/io/File;"],
+    "classes": [],
+    "fields": []
+  },
+  "credentials": {
+    "plugin": "credentials:1511.v2e3cb_0008ef0",
+    "methods": ["jenkins/model/Jenkins#getRootDir()Ljava/io/File;"],
+    "classes": [
+      "hudson/XmlFile",
+      "jenkins/util/Timer"
+    ],
+    "fields": []
+  },
+  "workflow-cps": {
+    "plugin": "workflow-cps:4391.v652b_b_b_1b_7c00",
+    "methods": [],
+    "classes": [
+      "hudson/XmlFile",
+      "jenkins/util/Timer"
+    ],
+    "fields": []
+  }
+}

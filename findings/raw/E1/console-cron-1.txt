@@ -1,0 +1,8 @@
+Started by timer
+Started by timer
+[Pipeline] Start of Pipeline
+[Pipeline] echo
+cron run 1 on http://localhost:8081/
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+Delete 0 stashes from jenkins

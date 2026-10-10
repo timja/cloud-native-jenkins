@@ -1,0 +1,6 @@
+## After fresh start (empty JENKINS_HOME, same external services)
+jobs: {"_class":"hudson.model.Hudson","jobs":[]}
+system message: cloud-native-jenkins harness (jenkins-a)
+credential harness-secret decrypts: s3cr3t-value
+admin API token from E1 still valid: 401
+nodes: [agent1]
