@@ -1,5 +1,3 @@
-cron1|hudson.triggers.TimerTrigger|24|3
-mbp|com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger|15|3
-_periodic|hudson.model.FingerprintCleanupThread|1|1
-_periodic|jenkins.model.BackgroundGlobalBuildDiscarder|1|1
-poll|hudson.triggers.SCMTrigger|20|1
+cron1|hudson.triggers.TimerTrigger|20|2
+mbp|com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger|11|2
+poll|hudson.triggers.SCMTrigger|16|3

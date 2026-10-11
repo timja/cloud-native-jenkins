@@ -45,6 +45,18 @@
   - ET4 scenario 6 now expects the `PERFORMANCE_OPTIMIZED` build to be closed as aborted rather than vanish.
   - `wait_up` writes container logs and a thread dump on a boot timeout.
 
+## Regression sweep on the final build
+ET1-ET12 all pass on this build (core `cnj/t12-m1-remainder` 1f5de855f3, plugin `cnj/t12-m2-remainder`):
+
+| Experiment | Result | Note |
+|---|---|---|
+| ET1 | ✅ | 2c failed twice before the snapshot listener fix |
+| ET2 | ✅ (rerun) | harness: shared builds attributed to their writer; multibranch records are under `branches/` |
+| ET3, ET5-ET8, ET11 | ✅ | |
+| ET4 | ✅ | after the forwarding timeout and the two save point fixes; scenario 6 now expects the closed build |
+| ET9 | ✅ | |
+| ET10 | ✅ (rerun) | the old plain controller's built-in node went offline for low disk on the kind node (96% used), so its second freestyle build never ran. The harness now sets low disk thresholds on it; the disk was also freed |
+
 ## Run history
 | Run | Result | What it found |
 |---|---|---|

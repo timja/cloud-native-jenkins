@@ -1,210 +1,68 @@
-jenkins-b-1  | 2026-10-11T07:33:52.558145133Z Running from: /war-override/jenkins.war
-jenkins-b-1  | 2026-10-11T07:33:52.558627883Z webroot: /var/jenkins_home/war
-jenkins-b-1  | 2026-10-11T07:33:52.887558508Z 2026-10-11 07:33:52.866+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-b-1  | 2026-10-11T07:33:53.270019217Z 2026-10-11 07:33:53.269+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-b-1  | 2026-10-11T07:33:53.317381050Z 2026-10-11 07:33:53.317+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-b-1  | 2026-10-11T07:33:53.552568258Z 2026-10-11 07:33:53.552+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-b-1  | 2026-10-11T07:33:53.573639508Z 2026-10-11 07:33:53.573+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-b-1  | 2026-10-11T07:33:53.801947384Z 2026-10-11 07:33:53.801+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-b-1  | 2026-10-11T07:33:53.868663425Z 2026-10-11 07:33:53.868+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-b-1  | 2026-10-11T07:33:53.873410467Z 2026-10-11 07:33:53.873+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1160998f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-b-1  | 2026-10-11T07:33:53.873662009Z 2026-10-11 07:33:53.873+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @557ms
-jenkins-b-1  | 2026-10-11T07:33:53.874477009Z 2026-10-11 07:33:53.874+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-b-1  | 2026-10-11T07:33:53.980389759Z 2026-10-11 07:33:53.972+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-b-1  | 2026-10-11T07:33:54.107405425Z 2026-10-11 07:33:54.106+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-b-1  | 2026-10-11T07:33:55.492880759Z 2026-10-11 07:33:55.492+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-b-1  | 2026-10-11T07:33:57.228027927Z 2026-10-11 07:33:57.227+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-b-1  | 2026-10-11T07:33:57.244161427Z 2026-10-11 07:33:57.243+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-b-1  | 2026-10-11T07:33:57.249223219Z 2026-10-11 07:33:57.247+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-b-1  | 2026-10-11T07:33:57.649775052Z 2026-10-11 07:33:57.648+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-b-1  | 2026-10-11T07:33:57.906725552Z 2026-10-11 07:33:57.906+0000 [id=58]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-b-1  | 2026-10-11T07:33:58.554723552Z 2026-10-11 07:33:58.554+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-b-1  | 2026-10-11T07:33:58.626164719Z 2026-10-11 07:33:58.625+0000 [id=58]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
-jenkins-b-1  | 2026-10-11T07:33:59.154637094Z 2026-10-11 07:33:59.154+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-b-1  | 2026-10-11T07:33:59.672088553Z 2026-10-11 07:33:59.671+0000 [id=54]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_d3d5b71d04d97dcc8acc07b52cf924c7a3fb17b7a9e34fe0b70bc17164081900/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-b-1  | 2026-10-11T07:33:59.766946136Z 2026-10-11 07:33:59.766+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-b-1  | 2026-10-11T07:33:59.768493595Z 2026-10-11 07:33:59.768+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-b-1  | 2026-10-11T07:33:59.769511136Z 2026-10-11 07:33:59.769+0000 [id=48]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-b-1  | 2026-10-11T07:33:59.772315678Z 2026-10-11 07:33:59.771+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-b-1  | 2026-10-11T07:33:59.782791136Z 2026-10-11 07:33:59.782+0000 [id=58]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-b-1  | 2026-10-11T07:33:59.792506386Z 2026-10-11 07:33:59.792+0000 [id=56]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_d3d5b71d04d97dcc8acc07b52cf924c7a3fb17b7a9e34fe0b70bc17164081900 duplicates one seen earlier for admin
-jenkins-b-1  | 2026-10-11T07:34:00.081938387Z 2026-10-11 07:34:00.081+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-b-1  | 2026-10-11T07:34:00.096631345Z 2026-10-11 07:34:00.096+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-b-1  | 2026-10-11T07:34:01.100932762Z 2026-10-11 07:34:01.100+0000 [id=97]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
-jenkins-b-1  | 2026-10-11T07:34:03.868911763Z 2026-10-11 07:34:03.868+0000 [id=184]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #12
-jenkins-b-1  | 2026-10-11T07:34:03.872304097Z 2026-10-11 07:34:03.871+0000 [id=181]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #5
-jenkins-b-1  | 2026-10-11T07:34:03.874367930Z 2026-10-11 07:34:03.874+0000 [id=179]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #11
-jenkins-b-1  | 2026-10-11T07:34:03.876181888Z 2026-10-11 07:34:03.875+0000 [id=189]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #19
-jenkins-b-1  | 2026-10-11T07:34:03.880642888Z 2026-10-11 07:34:03.879+0000 [id=182]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #1
-jenkins-b-1  | 2026-10-11T07:34:03.880813472Z 2026-10-11 07:34:03.880+0000 [id=165]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #13
-jenkins-b-1  | 2026-10-11T07:34:03.886287013Z 2026-10-11 07:34:03.883+0000 [id=174]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #7
-jenkins-b-1  | 2026-10-11T07:34:03.886332263Z 2026-10-11 07:34:03.884+0000 [id=161]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #18
-jenkins-b-1  | 2026-10-11T07:34:03.891686388Z 2026-10-11 07:34:03.891+0000 [id=178]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #16
-jenkins-b-1  | 2026-10-11T07:34:03.893690888Z 2026-10-11 07:34:03.893+0000 [id=173]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #8
-jenkins-b-1  | 2026-10-11T07:34:03.894374430Z 2026-10-11 07:34:03.894+0000 [id=191]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #9
-jenkins-b-1  | 2026-10-11T07:34:03.901733513Z 2026-10-11 07:34:03.895+0000 [id=172]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #14
-jenkins-b-1  | 2026-10-11T07:34:03.901752138Z 2026-10-11 07:34:03.895+0000 [id=187]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #2
-jenkins-b-1  | 2026-10-11T07:34:03.901755763Z 2026-10-11 07:34:03.897+0000 [id=185]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #20
-jenkins-b-1  | 2026-10-11T07:34:03.901757347Z 2026-10-11 07:34:03.898+0000 [id=171]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #3
-jenkins-b-1  | 2026-10-11T07:34:03.901758680Z 2026-10-11 07:34:03.898+0000 [id=190]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #4
-jenkins-b-1  | 2026-10-11T07:34:03.901760055Z 2026-10-11 07:34:03.898+0000 [id=177]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #6
-jenkins-b-1  | 2026-10-11T07:34:03.901761388Z 2026-10-11 07:34:03.898+0000 [id=175]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #15
-jenkins-b-1  | 2026-10-11T07:34:03.902750180Z 2026-10-11 07:34:03.899+0000 [id=183]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #17
-jenkins-b-1  | 2026-10-11T07:34:03.907736013Z 2026-10-11 07:34:03.907+0000 [id=180]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #10
-jenkins-b-1  | 2026-10-11T07:34:11.856368253Z 2026-10-11 07:34:11.855+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:34:21.902722049Z 2026-10-11 07:34:21.900+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:34:31.941525471Z 2026-10-11 07:34:31.939+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:34:41.961665878Z 2026-10-11 07:34:41.960+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:34:52.017829799Z 2026-10-11 07:34:52.015+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:35:02.063706679Z 2026-10-11 07:35:02.062+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:35:12.077848795Z 2026-10-11 07:35:12.075+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:35:22.132542466Z 2026-10-11 07:35:22.130+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:35:32.222467179Z 2026-10-11 07:35:32.210+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:35:42.291045086Z 2026-10-11 07:35:42.288+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:35:52.343303258Z 2026-10-11 07:35:52.341+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:36:02.387484471Z 2026-10-11 07:36:02.386+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:36:12.408186003Z 2026-10-11 07:36:12.404+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:36:22.479664258Z 2026-10-11 07:36:22.477+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:36:32.531941263Z 2026-10-11 07:36:32.529+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:36:42.548151045Z 2026-10-11 07:36:42.547+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:36:52.620507591Z 2026-10-11 07:36:52.618+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:37:02.673122971Z 2026-10-11 07:37:02.670+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:37:12.728896003Z 2026-10-11 07:37:12.725+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:37:22.768179841Z 2026-10-11 07:37:22.765+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:37:32.790256721Z 2026-10-11 07:37:32.788+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:37:42.844528753Z 2026-10-11 07:37:42.841+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:37:52.909803091Z 2026-10-11 07:37:52.906+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:38:02.944455638Z 2026-10-11 07:38:02.942+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:38:12.970147878Z 2026-10-11 07:38:12.968+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:38:23.037311425Z 2026-10-11 07:38:23.034+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:38:33.077986388Z 2026-10-11 07:38:33.075+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:38:43.120370962Z 2026-10-11 07:38:43.117+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:38:53.156300633Z 2026-10-11 07:38:53.154+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:39:00.865045845Z 2026-10-11 07:39:00.863+0000 [id=283]	INFO	h.triggers.SCMTrigger$Runner#run: SCM changes detected in poll. Triggering  #1
-jenkins-b-1  | 2026-10-11T07:39:03.175941680Z 2026-10-11 07:39:03.175+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:39:12.550682670Z 2026-10-11 07:39:12.549+0000 [id=86]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: poll #1
-jenkins-b-1  | 2026-10-11T07:39:13.211275587Z 2026-10-11 07:39:13.210+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:39:23.251849008Z 2026-10-11 07:39:23.249+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:39:33.281706305Z 2026-10-11 07:39:33.279+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:39:43.307669837Z 2026-10-11 07:39:43.304+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:39:53.338893550Z 2026-10-11 07:39:53.336+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:40:00.900003429Z 2026-10-11 07:40:00.898+0000 [id=331]	INFO	h.triggers.SCMTrigger$Runner#run: SCM changes detected in poll. Triggering  #2
-jenkins-b-1  | 2026-10-11T07:40:03.361452596Z 2026-10-11 07:40:03.360+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:40:09.282380418Z 2026-10-11 07:40:09.281+0000 [id=79]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: poll #2
-jenkins-b-1  | 2026-10-11T07:40:13.392106629Z 2026-10-11 07:40:13.390+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:40:23.476436467Z 2026-10-11 07:40:23.474+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:40:33.533790263Z 2026-10-11 07:40:33.530+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:40:43.598473004Z 2026-10-11 07:40:43.595+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:40:53.628469633Z 2026-10-11 07:40:53.627+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:41:03.676087972Z 2026-10-11 07:41:03.674+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:41:13.738897879Z 2026-10-11 07:41:13.729+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:41:23.812091175Z 2026-10-11 07:41:23.809+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:41:33.859160222Z 2026-10-11 07:41:33.856+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:41:43.885226754Z 2026-10-11 07:41:43.881+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:41:53.947369300Z 2026-10-11 07:41:53.944+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:42:00.849928970Z 2026-10-11 07:42:00.848+0000 [id=395]	INFO	h.triggers.SCMTrigger$Runner#run: SCM changes detected in poll. Triggering  #3
-jenkins-b-1  | 2026-10-11T07:42:04.007481722Z 2026-10-11 07:42:04.007+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:42:09.298875377Z 2026-10-11 07:42:09.298+0000 [id=371]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: poll #3
-jenkins-b-1  | 2026-10-11T07:42:14.040666837Z 2026-10-11 07:42:14.038+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:42:24.072247759Z 2026-10-11 07:42:24.070+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:42:34.105370847Z 2026-10-11 07:42:34.102+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:42:44.184289671Z 2026-10-11 07:42:44.180+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:42:54.214205092Z 2026-10-11 07:42:54.213+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:43:04.251188805Z 2026-10-11 07:43:04.249+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:43:14.303638046Z 2026-10-11 07:43:14.300+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:43:24.367214342Z 2026-10-11 07:43:24.365+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:43:34.398499055Z 2026-10-11 07:43:34.397+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:43:44.419521087Z 2026-10-11 07:43:44.418+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:43:54.465536550Z 2026-10-11 07:43:54.462+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:44:04.518988930Z 2026-10-11 07:44:04.516+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:44:14.556376171Z 2026-10-11 07:44:14.553+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:44:24.616400051Z 2026-10-11 07:44:24.613+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:44:34.679745597Z 2026-10-11 07:44:34.676+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:44:44.724879171Z 2026-10-11 07:44:44.722+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:44:54.793295384Z 2026-10-11 07:44:54.790+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:45:04.849259680Z 2026-10-11 07:45:04.846+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:45:14.904994254Z 2026-10-11 07:45:14.901+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:45:24.930868467Z 2026-10-11 07:45:24.929+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:45:34.985727722Z 2026-10-11 07:45:34.982+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:45:44.997117254Z 2026-10-11 07:45:44.996+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:45:55.034206176Z 2026-10-11 07:45:55.031+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:46:05.074676708Z 2026-10-11 07:46:05.070+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:46:15.099603463Z 2026-10-11 07:46:15.098+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:46:25.124662259Z 2026-10-11 07:46:25.123+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:46:35.163424541Z 2026-10-11 07:46:35.161+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:46:45.186795254Z 2026-10-11 07:46:45.185+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:46:55.199606051Z 2026-10-11 07:46:55.198+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:47:05.237737458Z 2026-10-11 07:47:05.235+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:47:09.687757752Z 2026-10-11 07:47:09.685+0000 [id=94]	INFO	c.c.h.p.folder.AbstractFolder#lambda$onLoad$3: Loading job mbp/feature2 (400.0%)
-jenkins-b-1  | 2026-10-11T07:47:15.282068004Z 2026-10-11 07:47:15.280+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:47:25.325724676Z 2026-10-11 07:47:25.322+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:47:35.347668416Z 2026-10-11 07:47:35.344+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:47:45.368583546Z 2026-10-11 07:47:45.367+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:47:55.378709468Z 2026-10-11 07:47:55.378+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:48:05.395150791Z 2026-10-11 07:48:05.393+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:48:15.416499588Z 2026-10-11 07:48:15.415+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:48:25.460855218Z 2026-10-11 07:48:25.458+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:48:35.501895916Z 2026-10-11 07:48:35.499+0000 [id=108]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:48:45.559602796Z 2026-10-11 07:48:45.556+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:48:55.595197134Z 2026-10-11 07:48:55.593+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:49:05.626804458Z 2026-10-11 07:49:05.624+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:49:15.659151213Z 2026-10-11 07:49:15.657+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:49:25.687794968Z 2026-10-11 07:49:25.686+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:49:35.752430083Z 2026-10-11 07:49:35.750+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:49:45.768951588Z 2026-10-11 07:49:45.767+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:49:55.790346384Z 2026-10-11 07:49:55.789+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:50:05.823612500Z 2026-10-11 07:50:05.821+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:50:15.852873255Z 2026-10-11 07:50:15.851+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:50:25.879340468Z 2026-10-11 07:50:25.877+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:50:35.896625792Z 2026-10-11 07:50:35.895+0000 [id=113]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:50:45.955076255Z 2026-10-11 07:50:45.952+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:50:56.010111009Z 2026-10-11 07:50:56.007+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:51:06.040843750Z 2026-10-11 07:51:06.039+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:51:16.096049838Z 2026-10-11 07:51:16.092+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:51:26.145314010Z 2026-10-11 07:51:26.143+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:51:36.160219375Z 2026-10-11 07:51:36.159+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:51:46.214971755Z 2026-10-11 07:51:46.211+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:51:56.254273385Z 2026-10-11 07:51:56.252+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:52:06.292771000Z 2026-10-11 07:52:06.290+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:52:16.328961588Z 2026-10-11 07:52:16.326+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:52:26.376162760Z 2026-10-11 07:52:26.373+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:52:36.415336542Z 2026-10-11 07:52:36.411+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:52:46.437374297Z 2026-10-11 07:52:46.436+0000 [id=123]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:52:56.511914801Z 2026-10-11 07:52:56.509+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:53:06.584809209Z 2026-10-11 07:53:06.571+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:53:16.682207463Z 2026-10-11 07:53:16.673+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:53:26.744847676Z 2026-10-11 07:53:26.740+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:53:36.798650584Z 2026-10-11 07:53:36.796+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:53:46.903028172Z 2026-10-11 07:53:46.901+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:53:56.964863843Z 2026-10-11 07:53:56.962+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:54:01.169714720Z 2026-10-11 07:54:01.169+0000 [id=728]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: cron1 #20
-jenkins-b-1  | 2026-10-11T07:54:07.004004209Z 2026-10-11 07:54:07.001+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:54:17.021239672Z 2026-10-11 07:54:17.019+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:54:27.054610343Z 2026-10-11 07:54:27.053+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:54:37.114440875Z 2026-10-11 07:54:37.112+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:54:47.148477172Z 2026-10-11 07:54:47.146+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:54:57.183980385Z 2026-10-11 07:54:57.181+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:55:01.095127762Z 2026-10-11 07:55:01.094+0000 [id=727]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: cron1 #21
-jenkins-b-1  | 2026-10-11T07:55:07.292502959Z 2026-10-11 07:55:07.285+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:55:17.340356172Z 2026-10-11 07:55:17.337+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:55:27.378768593Z 2026-10-11 07:55:27.376+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:55:37.404804584Z 2026-10-11 07:55:37.402+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:55:47.473283755Z 2026-10-11 07:55:47.468+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:55:57.566737260Z 2026-10-11 07:55:57.560+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:56:07.616877292Z 2026-10-11 07:56:07.613+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:56:17.760031964Z 2026-10-11 07:56:17.754+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:56:27.857549885Z 2026-10-11 07:56:27.851+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:56:38.020241418Z 2026-10-11 07:56:38.010+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:56:48.061888964Z 2026-10-11 07:56:48.056+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:56:58.137668094Z 2026-10-11 07:56:58.135+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:57:08.216447418Z 2026-10-11 07:57:08.212+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:57:18.272787922Z 2026-10-11 07:57:18.269+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:57:28.335561427Z 2026-10-11 07:57:28.331+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:57:38.417422334Z 2026-10-11 07:57:38.413+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:57:48.483845214Z 2026-10-11 07:57:48.480+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:57:58.713932052Z 2026-10-11 07:57:58.711+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:58:08.776353960Z 2026-10-11 07:58:08.773+0000 [id=116]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:58:18.849744673Z 2026-10-11 07:58:18.829+0000 [id=115]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:58:28.895501011Z 2026-10-11 07:58:28.892+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:58:38.952183501Z 2026-10-11 07:58:38.942+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-11T07:58:48.986652839Z 2026-10-11 07:58:48.984+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:13:30.376664261Z Running from: /war-override/jenkins.war
+jenkins-b-1  | 2026-10-11T09:13:30.377061219Z webroot: /var/jenkins_home/war
+jenkins-b-1  | 2026-10-11T09:13:30.913206761Z 2026-10-11 09:13:30.867+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-11T09:13:32.121759928Z 2026-10-11 09:13:32.120+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-11T09:13:32.195225178Z 2026-10-11 09:13:32.194+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-11T09:13:32.578233095Z 2026-10-11 09:13:32.577+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-11T09:13:32.619100304Z 2026-10-11 09:13:32.617+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-11T09:13:32.993592720Z 2026-10-11 09:13:32.993+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-11T09:13:33.111998970Z 2026-10-11 09:13:33.111+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-b-1  | 2026-10-11T09:13:33.116643845Z 2026-10-11 09:13:33.116+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1160998f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-11T09:13:33.117185095Z 2026-10-11 09:13:33.116+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @923ms
+jenkins-b-1  | 2026-10-11T09:13:33.118808262Z 2026-10-11 09:13:33.118+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-11T09:13:33.204359179Z 2026-10-11 09:13:33.203+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-11T09:13:33.276659221Z 2026-10-11 09:13:33.276+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-11T09:13:35.764047513Z 2026-10-11 09:13:35.760+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-11T09:13:36.194806347Z 2026-10-11 09:13:36.193+0000 [id=45]	SEVERE	jenkins.InitReactorRunner$1#onTaskFailed: Failed Loading plugin Kubernetes plugin v999999-SNAPSHOT (private-600159e5-timja) (kubernetes)
+jenkins-b-1  | 2026-10-11T09:13:36.194835305Z java.io.IOException: Failed to load: Kubernetes plugin (kubernetes 999999-SNAPSHOT (private-600159e5-timja))
+jenkins-b-1  | 2026-10-11T09:13:36.194838055Z [LF]>  - Plugin is missing: authentication-tokens (1.144.v5ff4a_5ec5c33)
+jenkins-b-1  | 2026-10-11T09:13:36.194839597Z [LF]>  - Plugin is missing: metrics (4.2.37-494.v06f9a_939d33a_)
+jenkins-b-1  | 2026-10-11T09:13:36.194841014Z [LF]>  - Plugin is missing: kubernetes-credentials (207.v492f58828b_ed)
+jenkins-b-1  | 2026-10-11T09:13:36.194842972Z [LF]>  - Plugin is missing: kubernetes-client-api (7.3.1-256.v788a_0b_787114)
+jenkins-b-1  | 2026-10-11T09:13:36.194878514Z 	at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:1018)
+jenkins-b-1  | 2026-10-11T09:13:36.194881389Z 	at hudson.PluginManager$2$1.lambda$run$0(PluginManager.java:588)
+jenkins-b-1  | 2026-10-11T09:13:36.194882805Z 	at org.jvnet.hudson.reactor.TaskGraphBuilder$TaskImpl.run(TaskGraphBuilder.java:175)
+jenkins-b-1  | 2026-10-11T09:13:36.194884180Z 	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+jenkins-b-1  | 2026-10-11T09:13:36.194885514Z 	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+jenkins-b-1  | 2026-10-11T09:13:36.194886847Z 	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+jenkins-b-1  | 2026-10-11T09:13:36.194891180Z 	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+jenkins-b-1  | 2026-10-11T09:13:36.194892680Z 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 2026-10-11T09:13:36.194894097Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 2026-10-11T09:13:36.194895555Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 2026-10-11T09:13:36.194896889Z 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-11T09:13:38.185471167Z 2026-10-11 09:13:38.183+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-11T09:13:38.204135084Z 2026-10-11 09:13:38.203+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-11T09:13:38.205480750Z 2026-10-11 09:13:38.205+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-11T09:13:38.886602751Z 2026-10-11 09:13:38.884+0000 [id=47]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-11T09:13:39.678774418Z 2026-10-11 09:13:39.676+0000 [id=47]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-11T09:13:42.190191669Z 2026-10-11 09:13:42.174+0000 [id=47]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-11T09:13:43.459674336Z 2026-10-11 09:13:43.458+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-11T09:13:44.062778753Z 2026-10-11 09:13:44.062+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-11T09:13:44.193653378Z 2026-10-11 09:13:44.193+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-11T09:13:44.194052045Z 2026-10-11 09:13:44.193+0000 [id=57]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-11T09:13:44.200646045Z 2026-10-11 09:13:44.200+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-11T09:13:44.204224545Z 2026-10-11 09:13:44.203+0000 [id=57]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-11T09:13:44.210411378Z 2026-10-11 09:13:44.210+0000 [id=50]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_69297c85565e76c2f96b6428c5c068f7d6770769e74caa926124073c17258700 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-11T09:13:44.441078670Z 2026-10-11 09:13:44.440+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-11T09:13:44.457710587Z 2026-10-11 09:13:44.457+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-11T09:13:45.693028379Z 2026-10-11 09:13:45.691+0000 [id=97]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-b-1  | 2026-10-11T09:14:03.595401221Z 2026-10-11 09:14:03.593+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:14:13.725933670Z 2026-10-11 09:14:13.717+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:14:23.840503591Z 2026-10-11 09:14:23.834+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:14:33.903791388Z 2026-10-11 09:14:33.899+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:14:43.949731586Z 2026-10-11 09:14:43.947+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:14:54.130074800Z 2026-10-11 09:14:54.077+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:15:04.201656721Z 2026-10-11 09:15:04.198+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:15:14.279672586Z 2026-10-11 09:15:14.277+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:15:24.316624883Z 2026-10-11 09:15:24.315+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:15:34.392151888Z 2026-10-11 09:15:34.384+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:15:44.444081628Z 2026-10-11 09:15:44.442+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:15:54.481991841Z 2026-10-11 09:15:54.480+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:16:04.554549554Z 2026-10-11 09:16:04.551+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:16:14.653528128Z 2026-10-11 09:16:14.646+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:16:24.743869966Z 2026-10-11 09:16:24.736+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:16:34.796011305Z 2026-10-11 09:16:34.790+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:16:44.859568337Z 2026-10-11 09:16:44.856+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-11T09:16:49.902626214Z 2026-10-11 09:16:49.901+0000 [id=178]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #41
+jenkins-b-1  | 2026-10-11T09:16:54.071116091Z 2026-10-11 09:16:54.070+0000 [id=177]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual2 #42
+jenkins-b-1  | 2026-10-11T09:16:54.898877883Z 2026-10-11 09:16:54.897+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1

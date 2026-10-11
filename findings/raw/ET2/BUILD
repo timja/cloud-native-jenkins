@@ -5,3 +5,4 @@ lockable-resources cnj/t5-m4-cluster-locks c7c8d9b1a1694c43330d296e724637acf598e
 stapler cnj/t6-m5-bound-id-prefix 1a98d6c079bd247ce0820ce1a814e76ba1652884
 credentials cnj/t6-m4-credentials-reload 9f8514aa10e61e1f0c17f0be1d8f2e6548a29c5d
 cloud-native-jenkins b9d71c4b40cb9a1d0ca03f1e453b7d063838afac
+kubernetes cnj/t9-m2-cluster-cap 600159e52f91138a4b2142026e5f06d798a61e14
