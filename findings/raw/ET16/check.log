@@ -1,1 +1,2 @@
-[18:50:09] Jenkins on 8082 is up (19s)
+[22:46:51] Jenkins on 8082 is up (19s)
+| ℹ️ | 4 fresh-1: serving the API 20.4 s after the container started (container and JVM start to initialization 4.9 s, initialization 9.7 s); first / then 19.003424 s |
