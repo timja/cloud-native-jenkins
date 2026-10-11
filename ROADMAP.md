@@ -23,10 +23,10 @@ Why the split: E8 showed identical JCasC plus a synced key set gives two control
 ## S0: Static state workaround (now)
 | Item | Status | Notes / evidence |
 |---|---|---|
-| Global config, system credentials, security realm, tool installers, clouds | 🟡 | Identical JCasC on every controller. E2: survives a fresh controller. **Config must be byte-identical** (no per-controller values), and the UI must be treated as read-only (E3: UI saves land on one controller) |
-| Key material | 🟡 | E8: sharing `master.key` alone is **not enough**. Seed the full set (`secret.key*`, all of `secrets/*`, `identity.key.enc`) into each home before first boot, from a k8s Secret via an init container. Re-seed after plugin changes; alert when `secrets/` drifts from the seed |
-| Static agent definitions | 🟡 | JCasC. Connection state is runtime, see R3 |
-| Plugin set | 🟡 | Baked into the image; `UpdateCenter.never` (harness). No runtime installs |
+| Global config, system credentials, security realm, tool installers, clouds | ✅ superseded (Track S, Target 6: in the store, edited in the UI or JCasC, seen everywhere without a restart; ET6) | Before: identical JCasC on every controller, the UI read-only (E2, E3) |
+| Key material | ✅ (pre-plugin keys seeded once, as a Kubernetes Secret in the chart; keys created at runtime in the store, Target 6) | E8: sharing `master.key` alone is **not enough**; the full set is seeded |
+| Static agent definitions | ✅ superseded (Target 6: nodes in the store; Target 9: cloud agents stay with their controller) | Connection state is runtime, see R3 |
+| Plugin set | ✅ by design (baked into the image, `UpdateCenter.never`; a new set is a rolling upgrade, Target 10) | No runtime installs |
 | User state: API tokens, user properties, UI-created views | ✅ branch | E5/E8: a token made on A gave `401` on B. Track S: users are in the store; ET6 1-2 |
 | HTTP sessions and crumbs | ✅ branch | E5: failed across nodes. Target 6: a signed login cookie, cluster crumbs and bound-object forwarding; ET6 8 passes through a round-robin LB with no stickiness, including losing a controller |
 
@@ -41,7 +41,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Cross-controller item events (create, update, rename/move, delete) → in-memory update | ✅ branch | Listeners are in-JVM only. Reuse `AbstractItem.updateByXml` (`AbstractItem.java:917-929`) for updates |
 | No-op writes when content is unchanged | ✅ branch | E9: every index rewrites every branch's config, and every `properties()` build rewrites its own |
 | Concurrent writers to one job (indexing on A while a build on B runs `properties()`) | ✅ branch (T11: concurrent saves are merged part by part, and objects with a save pending are not reloaded; ET11 1-3) | CAS + warn policy before T11; ET1 4/4b converged with 0 conflicts |
-| Plugin code reading item files directly | 🟡 | E7: 88 plugins use item-dir `File` APIs; 42 call `XmlFile#getFile` |
+| Plugin code reading item files directly | 🟡 ecosystem (reads work through T1 snapshots; writes outside the store are listed by the T11 compatibility report) | E7: 88 plugins use item-dir `File` APIs; 42 call `XmlFile#getFile` |
 
 ## R2: Build scheduling ← **Targets 2 and 5 done (ET2, ET5 pass): build numbers, exactly-once triggers, a shared queue**, [targets/02](targets/02-cluster-scheduling.md)
 | Item | Status | Gap / evidence |
@@ -63,7 +63,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Agent connections: which controller holds the channel, reconnecting after failover | ✅ branch (T7: the channel table names the holder; requests for the agent are forwarded there; reconnect through the failover URL in ~40 s, ET7 7) | E5: one controller only. E4: needed a stable DNS alias moved by hand |
 | Cloud provisioning across controllers (k8s, EC2, Docker) | ✅ branch (T9, kubernetes: demand counted once, reservations, cluster-wide caps, cloud agents per controller, ET9 3-5) | `NodeProvisioner` per JVM over-provisions. Orphan cleanup kills other controllers' agents |
 | Routing requests to the owner (live console, `input`, abort, replay) | ✅ branch (T7: `OwnerRoutingFilter`, ET7 1-6) | |
-| Executors and built-in node | 🟡 | Set built-in executors to 0; agents only (E1: built-in workspaces are local) |
+| Executors and built-in node | ✅ by configuration (the chart sets built-in executors to 0; agents only) | E1: built-in workspaces are local |
 
 ## R4: Pipeline data ← **Target 4 done (ET4 passes): save points in the store, resume elsewhere**, [targets/04](targets/04-running-build-failover.md)
 | Item | Status | Gap / evidence |
@@ -71,9 +71,9 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | `program.dat` (CPS continuation) in the store | ✅ branch (T4: save points via `ProgramSavedListener`, blob storage) | `CpsFlowExecution.java:1038`. E4: the resume source |
 | Flow nodes (`workflow/*.xml` → `workflow-completed/flowNodeStore.xml`) | ✅ branch (T4: shipped with save points; completed nodes in the T3 snapshot) | `FlowNodeStorage` is abstract, but `createStorage()` hard-codes the file implementations. E9: written continuously during each build |
 | Running-build index (`FlowExecutionList.xml`) | ✅ branch (T4: not needed; running placeholders and leases replace it, and the adopter registers the build) | E1, E4 |
-| Pipeline logs | 🟡 | `LogStorageFactory` (Beta). The only reader/writer, pipeline-cloudwatch-logs, has had no commits since 2020. E1: falls back to local `log` + `log-index` |
+| Pipeline logs | ✅ branch (T3: `BlobLogStorage`, append blobs, shipped before each save point commits) | `LogStorageFactory` (Beta). E1: falls back to local `log` + `log-index` |
 | Artifacts and stashes | ✅ | azure-artifact-manager against Azurite (E1, E2); artifact-manager-s3. Gap: identity collision (R5) |
-| Durability hints | 🟡 | `PERFORMANCE_OPTIMIZED` skips `program.dat` saves, so failover loses the build. Force `MAX_SURVIVABILITY` in HA |
+| Durability hints | ✅ by configuration (the chart and harness set `MAX_SURVIVABILITY`; `PERFORMANCE_OPTIMIZED` builds are not adopted) | `PERFORMANCE_OPTIMIZED` skips `program.dat` saves, so failover loses the build |
 | `milestone`, `lock`, `input` approvals, `build` step state | ✅ branch (T5: `milestone`, `lock`; T7: `input` from any controller, and after adoption, ET7 3 and 8; `build(wait)` pinned to its caller) | Held in memory or XML on the owning controller |
 
 ## R5: Build records and history ← **Target 3 done (ET3 passes): shared completed builds, logs, running placeholders**, [targets/03](targets/03-shared-build-records.md)
@@ -81,11 +81,11 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 |---|---|---|
 | Globally unique build identity | 🟡 | T3: cluster-wide numbering plus `nextBuildNumber` kept on delete, so `(name, #)` is never reused (ET3 scenario 8). Originally found in **E2: junit-sql showed 4 tests instead of 2** after a recreated job reused `(name, #1)`. Open: a per-item UUID for data keyed by name across renames |
 | `build.xml`, `RunMap` index, permalinks, `nextBuildNumber` | ✅ | T3: records in Postgres and snapshots in blob storage. Index merge, lazy materialisation, remote events and permalink hints ([ET3](findings/ET3-build-records.md) on `cnj/t3-m6-blob-and-log-storage`) |
-| Freestyle and other non-Pipeline logs | 🟡 | Completed freestyle logs travel in the snapshot (ET3 scenario 1). Pipeline logs go through `LogStorageFactory` into append blobs. Open: a live freestyle console needs a core log SPI (`Run.getLogFile` hard-codes files, `Run.java:1409`; JEP-207 deferred) |
+| Freestyle and other non-Pipeline logs | ✅ branch (T3: completed logs in the snapshot; T7: the live console is forwarded to the owner, ET7 6) | Completed freestyle logs travel in the snapshot (ET3 scenario 1). Pipeline logs go through `LogStorageFactory` into append blobs. Open: a live freestyle console needs a core log SPI (`Run.getLogFile` hard-codes files, `Run.java:1409`; JEP-207 deferred) |
 | Test results | ✅ branch (T8: the report is right on the other controller 0.1-0.2 s after completion; deleted results gone everywhere, ET8 3) | junit-sql-storage works (E1). Per-controller cache, 10 min, no invalidation; identity collision |
 | Per-build plugin data in the build dir | 🟡 | T3: the snapshot carries the build dir unchanged, so plugins keep working (junit file storage, ET3). Open: files rewritten after completion without a `build.xml` save. E7: 212 plugins (32 BOM) use build-dir `File` APIs |
 | Fingerprints | ✅ branch (T8: `StoreFingerprintStorage`, merged concurrent updates, ET8 1-2) | `FingerprintStorage` (Beta), with no maintained external implementation |
-| Item deletion vs history (branch pruning) | 🟡 | T3: deleting a job deletes its stored history but keeps its numbers. E9: pruning a branch still deletes its history (by design, as on one controller) |
+| Item deletion vs history (branch pruning) | ✅ by design (as on one controller) | T3: deleting a job deletes its stored history but keeps its numbers. E9: pruning a branch still deletes its history (by design, as on one controller) |
 | Build discarders, cluster-wide history views and REST | ✅ branch (T3 history and REST; T8: discarders with builds on both controllers, a cluster view, ET8 4-5) | |
 
 ## X: Cross-cutting
@@ -109,6 +109,7 @@ Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key 
 | 9 | X Ops (helm chart on kind), R3 cloud provisioning across controllers | [targets/09](targets/09-kubernetes.md) |
 | 10 | X Ops: rolling upgrades with mixed versions, importing a file-based home, backup and restore | [targets/10](targets/10-operations.md) |
 | 11 | R1/Track S concurrent edits (merge), X inventory check and ecosystem report | [targets/11](targets/11-cross-cutting.md) |
+| 12 | Remainder: Pipeline placement by `node` label, per-build files rewritten after completion, restoring builds running at backup time | [targets/12](targets/12-remainder.md) |
 
 ## Order of work
 1. **R1** (Target 1): the persistence SPI plus shared item config. Every runtime tier keys off "which jobs exist and what they say".
