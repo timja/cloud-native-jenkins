@@ -16,6 +16,7 @@ Design: [12-remainder.md](12-remainder.md). **Done means:** `validation/experime
   - two harnesses (ET2, ET4) that predated shared builds and the restore sweep
 
   All are fixed.
+- 2026-10-11 (after manual testing on kind): a build running on another controller was missing from the Builds card ("No builds") and the job's icon was not animated; both now show it (core 64036f3468, `RunningBuildsTest`).
 
 ## Follow-ups
 - Placement by label moves the whole build. Running only a `node` body on another controller's agent would need remote executors.
