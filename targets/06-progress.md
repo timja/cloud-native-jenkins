@@ -22,15 +22,16 @@ Design: [06-static-state.md](06-static-state.md).
 | M4 | credentials | `cnj/t6-m4-credentials-reload` | `origin/master` | reload and a handler (worktree `../credentials-plugin-cnj`) | ✅ 9245ca7 (local-core pom bump, revert before upstreaming) + 9f8514a; new test + SystemCredentialsProviderTest green |
 | M5 | stapler | `cnj/t6-m5-bound-id-prefix` | release `2123.v539a_775c45c3` | controller prefix for bound ids (worktree `../stapler-cnj`) | ✅ 1a98d6c07; BoundObjectTableTest green; installed as 999999-SNAPSHOT |
 | M6 | core | `cnj/t6-m6-stateless-sessions` | T6 M3 | `alwaysRemember`, password field, built on the M5 Stapler | ✅ dd304d1e54 (Stapler bom bump, revert before upstreaming) + ff03a152bb; `StatelessSessionsTest` 2/2 + HudsonPrivateSecurityRealm, remember-me, user seed, RenderOnDemand green |
-| M7 | cloud-native-jenkins | `cnj/t6-m7-static-state` | `cnj/t5-m5-shared-queue` | owned keys, `ClusterCrumbIssuer`, bound forwarding, harness, ET6 | ✅ 15b5b8b; plugin tests green; **ET6 45/45 ×2** on the final build; ET3 48/48, ET4 39/39, ET5 35/35 on the same build |
+| M7 | cloud-native-jenkins | `cnj/t6-m7-static-state` | `cnj/t5-m5-shared-queue` | owned keys, `ClusterCrumbIssuer`, bound forwarding, harness, ET6 | ✅ 58641d9 + 43b48ff, f171eab (Target 4 races found by the regressions) + 10e79bc (evidence); plugin tests green; **ET6 44/44 ×2** on the final build; ET3 48/48, ET4 39/39 ×3, ET5 35/35 on the same build |
 
 ## Log
 - 2026-10-10: Target 6 planned and started.
 - 2026-10-10: T6 M1-M3 (core) committed. M3 needed a `loadOrCreate` step in `ConfidentialStore`: key classes generated, then stored and used their own value, so the loser of a create-only race would have kept a different key.
 - 2026-10-10: T6 M4-M6 committed. The password field on a user's security page was bound to the session id, so a form rendered by one controller and saved on another replaced the password with its protected text. With a store, it is now bound to the user and their seed.
-- 2026-10-10: **T6 done: ET6 passes 45/45** in two consecutive runs on the final build ([findings](../findings/ET6-static-state.md) on `cnj/t6-m7-static-state`). Criterion 10 is only partly met (below). Bugs found:
+- 2026-10-11: **T6 done: ET6 passes 44/44** in two consecutive runs on the final build ([findings](../findings/ET6-static-state.md) on `cnj/t6-m7-static-state`). Criterion 10 is only partly met (below). Bugs found:
   - the bound-object script endpoint was not forwarded (fixed in M7)
   - lockable-resources' root XML file, which holds each controller's waiting builds, was shared as configuration (an ET5 regression; fixed in M7)
+  - two Target 4 races in the regression runs: a resumed Pipeline could skip log lines its old owner had read but not shipped (the log is now shipped before each save point commits), and a fenced owner could still upload a save point (now refused, and removed on a conflicting commit)
 
 ## Review and merge order
 1. stapler `cnj/t6-m5-bound-id-prefix` (needs a release before core can use it).

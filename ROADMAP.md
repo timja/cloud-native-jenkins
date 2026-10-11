@@ -97,9 +97,18 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | ❌ | |
 
 ## Track S: Static state in the store ← **Target 6: done (ET6 passes)**, [targets/06](targets/06-static-state.md), findings `findings/ET6-static-state.md` on `cnj/t6-m7-static-state`
-Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key material, users/tokens, credentials and nodes, plus cross-controller reload. Open: concurrent edits of one file are detected, but one of them can be lost (ET6 10).
+Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key material, users/tokens, credentials and nodes, plus cross-controller reload. Open: concurrent edits of one file are detected, but one of them can be lost (ET6 10); Target 11 merges them.
 
 ---
+
+## Remaining targets (planned 2026-10-11)
+| Target | Covers | Plan |
+|---|---|---|
+| 7 | R3 routing to the owner (console, `input`, stop, replay), agent channels, `input` after failover, R2 webhook fan-in | [targets/07](targets/07-owner-routing.md) |
+| 8 | R5 remainder: fingerprints in the store, test results, discarders, a cluster view | [targets/08](targets/08-history-at-scale.md) |
+| 9 | X Ops (helm chart on kind), R3 cloud provisioning across controllers | [targets/09](targets/09-kubernetes.md) |
+| 10 | X Ops: rolling upgrades with mixed versions, importing a file-based home, backup and restore | [targets/10](targets/10-operations.md) |
+| 11 | R1/Track S concurrent edits (merge), X inventory check and ecosystem report | [targets/11](targets/11-cross-cutting.md) |
 
 ## Order of work
 1. **R1** (Target 1): the persistence SPI plus shared item config. Every runtime tier keys off "which jobs exist and what they say".

@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | Track S plus X (sessions) |
-| **Status** | **Done** (2026-10-10): ET6 passes 45/45, with criterion 10 only partly met; see [06-progress](06-progress.md) |
+| **Status** | **Done** (2026-10-11): ET6 passes 44/44, with criterion 10 only partly met (completed by Target 11); see [06-progress](06-progress.md) |
 | **Depends on** | T1 (store, `XmlFile` routing, change applier), T2 (membership) |
 | **Supersedes** | [targets/90](90-static-state-store.md). Its SPI and routing landed in T1; its bootstrap findings (E6) still hold |
 | **Evidence** | [E2](../findings/E2-disposable-controller.md) (UI-entered secrets lost), [E3](../findings/E3-shared-home.md) (lost update on `config.xml`), [E5](../findings/E5-stateless-http.md) (a token created on A gets `401` on B; sessions and crumbs per controller), [E6](../findings/E6-bootstrap-seam.md), [E8](../findings/E8-casc-secret-sync.md) (S0: seeded keys) |
