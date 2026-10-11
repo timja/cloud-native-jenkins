@@ -42,6 +42,11 @@ The controller image defines the base plugin set. Runtime changes are an overlay
   - The lock is broken only if its holder has not come back within 10 minutes.
   - A controller never restarts twice for the same generation. It shows an administrative monitor instead.
 - **Status.** The cluster view shows each controller's state ("Up to date", "Applying 2 changes", "Restart pending", "Needs attention") and the list of changes: plugin, version, controller and time.
+- **Update-site metadata is shared.**
+  - Each controller downloads update-site and tool-installer metadata into `updates/` at startup and then daily, as on one controller.
+  - A controller whose copy is newer than the cluster's publishes it: `cluster/updates.json` holds each file's time and checksum, and blob storage holds the file.
+  - The others take it with the same modification time and reload it. So "Check now" on one controller is what every controller shows: plugin manager requests take newer data first, and a check shares its result before it responds.
+  - A fresh home takes the cluster's copy before periodic work starts, so the cluster fetches about once a day rather than once per controller.
 - **Modes.** `-Dio.jenkins.plugins.cnj.store.ClusterPluginSet.mode`:
   - `cluster`: the default
   - `fixed`: all changes refused; plugins only through the image
@@ -64,7 +69,7 @@ Found by hand on a cluster: a plugin installed from the Plugins page went to one
 Plugin changes still need `Overall/Administer`. Archives are verified by checksum before being installed elsewhere.
 
 ## Testing
-- **Store plugin:** `ClusterPluginsTest` (version rule, actions, restart decisions, status wording), `ClusterPluginSetTest`.
+- **Store plugin:** `ClusterPluginsTest` (version rule, actions, restart decisions, status wording), `ClusterPluginSetTest`, `ClusterUpdateSitesTest`.
 - **Acceptance:** ET13, on kind:
   1. a live install with a dependency
   2. an upgrade by rolling restart, with a controller answering throughout and a Pipeline paused and resumed with its whole console
@@ -73,6 +78,6 @@ Plugin changes still need `Overall/Administer`. Archives are verified by checksu
   5. the guards: downgrade, store plugin, corrupt archive
 
 ## Prototype implementation
-- **Store plugin** on `cnj/t13-m1-cluster-plugins`: `ClusterPlugins`, `ClusterUpdateCenterConfiguration`, `ClusterPluginSet`.
+- **Store plugin** on `cnj/t13-m1-cluster-plugins`: `ClusterPlugins`, `ClusterUpdateCenterConfiguration`, `ClusterPluginSet`; `ClusterUpdateSites` on `cnj/t14-m1-resilience`.
 - **Core:** the restart reclaim on `cnj/t12-m1-remainder`.
 - **Findings:** `findings/ET13-cluster-plugins.md`.

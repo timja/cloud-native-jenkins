@@ -30,9 +30,11 @@ Design: [14-resilience.md](14-resilience.md). **Done means:** `ET14-store-outage
   - ET14 found pages hanging during an outage (fixed by failing fast) and 500s from reading a key from the store (fixed by local copies and a temporary key).
   - ET15 found that a rename from the controller not running the build was accepted (fixed in core).
 - 2026-10-11 (kind): the hand-testing release was reinstalled and reseeded after the sweep. On fresh pods, `installPlugins` answered 200 and did nothing: the chart had copied `UpdateCenter.never` and `DownloadService.never` from the offline harness, from before runtime installs existed, so no controller ever fetched the update site. Fixed in the chart (`updateSites.fetch`, default true): each controller fetches at startup and daily, as on one controller (`DailyCheck` is per controller, not a cluster singleton). Verified by a rolling upgrade of the release.
+  - That left each controller with its own copy, so "Check now" on one did not reach the others (confirmed: after a check on cnj-0, cnj-1 still had its older data). The update-site and tool-installer metadata is now shared through the store (`ClusterUpdateSites`, plugin 0741d9e). A newer copy is published, and the others take it.
+  - Verified on kind through the load balancer, for three checks landing on either controller: the ten reads right after each check all showed the new data, and the files' checksums matched on both controllers. Fresh pods took the cluster's copy at boot instead of fetching it.
 
 ## Follow-ups
 - Failover is 16–23 s, against the target of about 15 s. The floor is the member timeout (20 s); lowering it trades false deaths (GC pauses, slow disks) for speed.
 - Scale beyond two controllers and 20k+ builds; storms of branch indexing.
-- Update-site metadata could be shared through the store (one fetch per cluster), which matters only for rate-limited or proxied sites.
+- The install progress page (`pluginManager/updates/`) lists the update center's jobs of the controller serving it. Behind a non-sticky load balancer, its refreshes alternate with a controller not running the install.
 - CLI `install-plugin` from a file stays local (from Target 13).
