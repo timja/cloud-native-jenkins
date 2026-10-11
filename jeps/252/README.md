@@ -29,7 +29,7 @@ Every running build has exactly one owner: the controller holding its lease. A P
 ### Save points (Pipelines)
 - workflow-cps calls a `ProgramSavedListener` whenever it saves `program.dat` (a durability-hint hook).
 - The store plugin then copies `program.dat`, the changed flow nodes and `build.xml` to blob storage under `…/builds/<N>/running/`.
-- It ships the log up to that point, and commits the save point by recording its id in the placeholder.
+- It makes the log durable up to that point, then commits the save point by recording its id in the placeholder. The reference log storage (JEP-251) ships its pending output. Another log storage needs to be told too: **proposed**, an optional flush on JEP-210's `LogStorage` (workflow-api), called before a save point commits. A synchronous implementation does nothing; a buffering one (CloudWatch batches its events) sends its buffer. Without it, an adopted build's log can miss the lines written just before the save point.
 - Commits are coalesced: about two placeholder writes per build in ET4's 200-step Pipeline.
 - `PERFORMANCE_OPTIMIZED` Pipelines have no save points and are not adopted.
 

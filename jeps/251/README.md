@@ -12,7 +12,7 @@
 Completed builds are published to the shared store, so every controller shows the full history of every job, whichever controller ran each build:
 - the build's record (`build.xml`) goes to the persistence store
 - a snapshot of its directory goes to blob storage
-- a Pipeline's log goes to append blobs, shipped while the build runs
+- a Pipeline's log goes to external log storage (JEP-210), written while the build runs
 
 Builds are materialised locally only when something reads them. Builds still running elsewhere are shown in the UI and the REST API as such. Fingerprints, test results and build discarders work across controllers.
 
@@ -36,12 +36,19 @@ Builds are materialised locally only when something reads them. Builds still run
 - **Failed publication.** A build whose publication fails (the store was unreachable) stays "running" for the cluster, and publication is retried until it succeeds.
 
 ### Logs
-- **Pipeline logs** go through a `LogStorageFactory`. The build writes its local `log` and `log-index`, and a shipper appends what is new to append blobs:
-  - when 32 KiB is pending, or 3 s after the last shipment
-  - at once before each save point and at the end of the build
-- **Segments.** An append blob takes at most 50,000 blocks, so a log is stored in segments `log`, `log.1`, …. A new segment starts before the limit, and readers concatenate them.
-- **Ownership checks.** The shipper checks ownership and pauses while this controller's membership may have lapsed, so a fenced owner never appends (JEP-252). A new owner continues where the blob ends.
-- **Freestyle and other build logs** travel in the snapshot. While such a build runs, its console is served by the controller running it (JEP-254).
+Pipeline logs use the existing external log storage API (JEP-210, `LogStorageFactory`), so any implementation can serve a cluster, for example append blobs (the reference implementation below) or CloudWatch Logs (pipeline-cloudwatch-logs). This JEP adds no log API. It states what an implementation must do for a cluster:
+- **Readable from every controller**, while the build runs and after, through `LogStorageFactory.forBuild` on any controller. The console of a running build is also forwarded to its owner (JEP-254).
+- **Keyed by the build, not by the controller** (for example job full name and build number), so a controller adopting a build continues the same log.
+- **Durable at save points.** Everything written before a Pipeline save point is stored before the save point is (JEP-252). A controller resuming from it then continues the log where the save point left off, with no lines missing or repeated. The prototype makes the save point wait through workflow-cps' `ProgramSavedListener`. An implementation that buffers asynchronously (CloudWatch batches) must flush there. That hook is the one API addition logs need, and it belongs to JEP-252.
+- **Fenced.** A controller that may have lost the build's lease stops writing (JEP-252). A store accepting writes from two controllers (CloudWatch does) relies on this.
+- **Moved with the job** on a rename, or keyed so it need not move (as on a single controller).
+
+**Reference implementation** (store plugin, `BlobLogStorage`, Azure Blob Storage):
+- The build writes its local `log` and `log-index`. A shipper appends what is new to append blobs: when 32 KiB is pending, 3 s after the last shipment, before each save point and at the end of the build.
+- **Segments:** an append blob takes at most 50,000 blocks, so a log is stored as `log`, `log.1`, …. A new segment starts before the limit, and readers concatenate them. This is specific to Azure append blobs; another backend has its own limits.
+- The shipper checks ownership and pauses while this controller's membership may have lapsed. A new owner continues where the blobs end.
+
+**Freestyle and other build logs** travel in the snapshot. While such a build runs, its console is served by the controller running it (JEP-254).
 
 ### Builds running on another controller
 - Each running build has a placeholder `jobs/<job>/running/<N>.xml`, holding its owner, start time and save point (JEP-252).
