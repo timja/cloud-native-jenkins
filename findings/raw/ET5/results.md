@@ -1,4 +1,4 @@
-## ET5 results (2026-10-11T00:38Z)
+## ET5 results (2026-10-11T08:13Z)
 
 | | Check |
 |---|---|
@@ -17,7 +17,7 @@
 | ✅ | 2 queue ids are unique cluster-wide |
 | ✅ | 2 queue/item/<id> resolves to the build on both controllers |
 | ✅ | 3 B's request waits while #1 builds on A |
-| ✅ | 3 the two builds did not overlap (#1 ended 1791679166, #2 started 1791679166) |
+| ✅ | 3 the two builds did not overlap (#1 ended 1791706466, #2 started 1791706466) |
 | ✅ | 4 cancelled on B |
 | ✅ | 4 gone from A's queue |
 | ✅ | 4 reported cancelled on A |
@@ -31,7 +31,7 @@
 | ✅ | 8 #1 on A is cancelled |
 | ✅ | 8 #1 never passed the milestone |
 | ✅ | 9 both complete |
-| ℹ️ | 9 res holds: WRITTEN@1791679245.9 DELETED@1791679261.0 WRITTEN@1791679261.0 DELETED@1791679276.0  |
+| ℹ️ | 9 res holds: WRITTEN@1791706552.9 DELETED@1791706567.9 WRITTEN@1791706567.9 DELETED@1791706583.1  |
 | ✅ | 9 res was held by one build at a time (store events alternate, two holds) |
 | ℹ️ | 9 the waiter got res 0.0 s after its release |
 | ✅ | 10 one upstream build on B triggered exactly one downstream build |

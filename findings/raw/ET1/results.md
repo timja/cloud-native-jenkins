@@ -1,4 +1,4 @@
-## ET1 results (2026-10-11T06:43Z)
+## ET1 results (2026-10-11T07:29Z)
 
 | | Check |
 |---|---|
@@ -12,7 +12,7 @@
 | ✅ | 1e job deleted on B is gone on A |
 | ✅ | 2a parameter defined by a build on A is seen on B |
 | ✅ | 2b cron trigger defined by a build on A is in B's config |
-| ❌ | 2c no item config.xml written to A's local JENKINS_HOME (found: 1) |
+| ✅ | 2c no item config.xml written to A's local JENKINS_HOME (found: 0) |
 | ✅ | 3a branches indexed on A appear on B |
 | ✅ | 3b branch added and indexed on A appears on B |
 | ✅ | 3c branch deleted and pruned on A is pruned on B |
@@ -23,10 +23,10 @@
 | ✅ | 4 mb/main shows the parameter on A and B |
 | ✅ | 4 mb/feature2 keeps its properties() parameter in the store |
 | ✅ | 4 mb/feature2 shows the parameter on A and B |
-| ℹ️ | scenario 4b: 80 builds rewrote jobs/race/config.xml; store version 391 → 1255; conflicts detected A=14 B=15 |
-| ℹ️ | scenario 4b: final default parameter value: store=a39a37 A=a39a37 B=a39a37 |
+| ℹ️ | scenario 4b: 80 builds rewrote jobs/race/config.xml; store version 416 → 1274; conflicts detected A=7 B=13 |
+| ℹ️ | scenario 4b: final default parameter value: store=b35b37 A=b35b37 B=b35b37 |
 | ✅ | 4b A, B and the store converge on the same job config |
-| ℹ️ | scenario 4b: 77 writes in the event log; the store holds the last one. Builds reach properties() out of trigger order, so it need not be a40/b40; a stale overwrite would have shown as a conflict |
+| ℹ️ | scenario 4b: 75 writes in the event log; the store holds the last one. Builds reach properties() out of trigger order, so it need not be a40/b40; a stale overwrite would have shown as a conflict |
 | ✅ | 6 re-index with no SCM changes bumps no stored versions (0 changed) |
 | ✅ | 5 fresh B loads /job/f2/job/inner from the store |
 | ✅ | 5 fresh B loads /job/props from the store |
@@ -34,4 +34,4 @@
 | ✅ | 5 fresh B loads /job/mb/job/feature2 from the store |
 | ✅ | 5 fresh B does not resurrect deleted items |
 
-Failures: 1
+Failures: 0

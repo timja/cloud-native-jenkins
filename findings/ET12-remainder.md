@@ -36,7 +36,10 @@
 - **A forwarded request to a paused owner hung for 5 minutes** (a Target 7 bug, found by ET4 scenario 4).
   - **Cause:** a paused JVM accepts the TCP connection but never answers.
   - **Fix:** forwarded requests now wait at most 20 s for the owner's response headers (`io.jenkins.plugins.cnj.store.Forwarding.timeoutSeconds`), then are served locally, where the build has usually been adopted by then. Streamed bodies (live consoles) are not limited.
-- **Save points left in blob storage** (a Target 4 bug, ET4 scenario 7). A fenced owner woken from a pause could upload flow nodes after the new owner had completed the build and deleted its save points. It now deletes them itself once the build has no running placeholder.
+- **Save points left in blob storage** (Target 4 bugs, ET4 scenario 7):
+  - a fenced owner woken from a pause could upload flow nodes after the new owner had completed the build and deleted its save points; it now deletes them itself once the build has no running placeholder
+  - a save point shipping while the build completed (an adopted build approved a second after adoption) was uploaded after the cleanup; shipping and the cleanup now exclude each other
+- **Every save of a job left its `config.xml` in the home** (a Target 11 bug, ET1 2c). The listener recording what an object was saved as asked `XmlFile.getFile()` for the store key, which materialises the stored content to the local file. It now uses `XmlFile.getPath()`, which does not copy. ET11's inventory check did not see it because materialised snapshots are local by design.
 - **Harness:**
   - ET2 predated Target 3: with shared build records every controller lists every build, so ET2 counted each build twice. Builds are now attributed to the controller that wrote their record.
   - ET4 scenario 6 now expects the `PERFORMANCE_OPTIMIZED` build to be closed as aborted rather than vanish.

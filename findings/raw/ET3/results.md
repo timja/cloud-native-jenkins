@@ -1,4 +1,4 @@
-## ET3 results (2026-10-11T01:26Z)
+## ET3 results (2026-10-11T07:59Z)
 
 | | Check |
 |---|---|
@@ -18,7 +18,7 @@
 | ✅ | 3 A lists builds 1..20 |
 | ✅ | 3 B lists builds 1..20 |
 | ✅ | 3 permalinks agree |
-| ℹ️ | 3 permalinks on A: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=12; on B: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=12 |
+| ℹ️ | 3 permalinks on A: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=10; on B: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=10 |
 | ✅ | 3 lastFailedBuild is the failed build, on A |
 | ✅ | 3 lastFailedBuild is the failed build, on B |
 | ✅ | 4 a description set on B for a build that ran on A is visible on A |
@@ -35,14 +35,14 @@
 | ✅ | 5 fresh A shows the test results |
 | ✅ | 5 fresh A shows the flow graph and step logs |
 | ✅ | 6 B shows a placeholder for #1 running on jenkins-a |
-| ℹ️ | 6 placeholder visible on B after 2 s |
+| ℹ️ | 6 placeholder visible on B after 3 s |
 | ✅ | 6 A shows no placeholder for its own build |
 | ✅ | 6 B's read-only console shows the output so far |
 | ✅ | 6 placeholder replaced by the full build on B when it completes |
 | ✅ | 6 no placeholder left on B |
 | ✅ | 6 completed console identical on B |
 | ✅ | 6 B removes the stale placeholder within 90 s |
-| ℹ️ | 6 stale placeholder removed 39 s after the kill |
+| ℹ️ | 6 stale placeholder removed 33 s after the kill |
 | ✅ | 7 A sees the rename |
 | ✅ | 7 history intact on A under the new name |
 | ✅ | 7 history intact on B under the new name |
@@ -55,6 +55,6 @@
 | ✅ | 8 no old build in its history on A |
 | ✅ | 9 no snapshots or logs in jenkins_store |
 | ✅ | 9 largest jenkins_store value is under 1 MB (3007 bytes) |
-| ✅ | 9 snapshots and logs are in the blob container (89 blobs) |
+| ✅ | 9 snapshots and logs are in the blob container (74 blobs) |
 
 Failures: 0

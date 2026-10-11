@@ -1,1 +1,0 @@
--rw-r--r-- 1 jenkins jenkins 1707 2026-10-11 06:43:34.839114000 +0000 /var/jenkins_home/jobs/props/config.xml

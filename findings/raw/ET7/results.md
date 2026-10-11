@@ -1,4 +1,4 @@
-## ET7 results (2026-10-11T00:50Z)
+## ET7 results (2026-10-11T08:19Z)
 
 | | Check |
 |---|---|
@@ -31,7 +31,7 @@
 | ✅ | 8 approved on B after adoption, the build completes |
 | ✅ | 8 with the line after the input |
 | ✅ | 7 agent1 reconnected to B |
-| ℹ️ | 7 agent1 online on B 38 s after A was killed |
+| ℹ️ | 7 agent1 online on B 34 s after A was killed |
 | ✅ | 7 the channel table names B |
 | ✅ | 10 no 502 for a dead owner's build (answered locally) |
 | ✅ | 9 notifyCommit to A: exactly one build for the commit (1 -> 2) |

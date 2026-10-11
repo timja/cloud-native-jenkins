@@ -5,13 +5,10 @@ import jobs/oldp/config.xml
 import jobs/oldp/nextBuildNumber
 import jobs/team/config.xml
 import jobs/team/jobs/fs/config.xml
-import jobs/team/jobs/fs/nextBuildNumber
-import users/olduser_e33a4b4cafbe74ec6ed7b196770cab6fcd3f924210d2e10fe6fa1da31fcbe3db/config.xml
-import users/admin_f603db323e1ed5417905e8340d0c3893c412dcd390651d1c65c96fa8ad5b1a68/config.xml
+import users/admin_b0a13f0ff85bf3c4349b252362f22ee36212e753a78a9cb8c2cb09744560efca/config.xml
+import users/olduser_3564e20f98e1a0bf821da89187ec7f191e4de93c4504a3a83f83ed887dbc73e6/config.xml
 import hudson.plugins.copyartifact.CopyArtifactConfiguration.xml
 import nodes/oldnode/config.xml
 import hudson.plugins.git.GitTool.xml
 build  oldp #1
-build  team/fs #2
-build  team/fs #1
-files imported 13, kept 0; builds imported 3, kept 0
+files imported 12, kept 0; builds imported 1, kept 0
