@@ -1,4 +1,4 @@
-## ET14 results (2026-10-11T15:25Z)
+## ET14 results (2026-10-11T15:52Z)
 
 | | Check |
 |---|---|
@@ -7,7 +7,7 @@
 | ✅ | 1: both consoles are whole (every tick once, and the end) |
 | ✅ | 1: each build was published, by one controller only |
 | ✅ | 1: and there is no second build |
-| ℹ️ | 2 pages during the outage (port, page, status, seconds): 8081 / 200 0.774438;8082 / 200 5.506941;8081 /api/json 200 5.038055;8082 /api/json 200 0.038361;8081 /job/p2/ 200 0.215718;8082 /job/p2/ 200 0.145677;8081 /login 200 0.022945;8082 /login 200 0.023531; |
+| ℹ️ | 2 pages during the outage (port, page, status, seconds): 8081 / 200 5.783038;8082 / 200 0.460157;8081 /api/json 200 0.008296;8082 /api/json 200 0.007589;8081 /job/p2/ 200 0.062780;8082 /job/p2/ 200 0.075111;8081 /login 200 0.036969;8082 /login 200 0.013103; |
 | ✅ | 2 every page answered within 10 s during the outage (degraded, not hung) |
 | ✅ | 2: the Pipeline completed SUCCESS |
 | ✅ | 2: the freestyle build completed SUCCESS |
@@ -34,7 +34,7 @@
 | ✅ | 6 A is not serving while it waits for the store |
 | ✅ | 6 A logs that it waits |
 | ✅ | 6 A comes up once the store is back |
-| ℹ️ | 6 A was up 20 s after the store came back |
+| ℹ️ | 6 A was up 19 s after the store came back |
 | ✅ | 6 exactly two live members (no ghost from the attempts) |
 | ✅ | 6 the history is all there on the restarted A |
 

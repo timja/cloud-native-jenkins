@@ -1,0 +1,7 @@
+core cnj/t14-m1-resilience 8ca603a0418102c8fbc1b55b6e7e2b04c0a7f042
+cloudbees-folder cnj/t1-m2-folder-children 7699d449522210839dab087cffc0253f53107356
+workflow-cps cnj/t4-m1-program-saved-listener ebbf16c894195b7ab4edc85342624f8f4784de02
+lockable-resources cnj/t5-m4-cluster-locks c7c8d9b1a1694c43330d296e724637acf598e6eb
+stapler cnj/t6-m5-bound-id-prefix 1a98d6c079bd247ce0820ce1a814e76ba1652884
+credentials cnj/t6-m4-credentials-reload 9f8514aa10e61e1f0c17f0be1d8f2e6548a29c5d
+cloud-native-jenkins 79d2748ec7a4b6552f8dda7766e42c1f5649755d
