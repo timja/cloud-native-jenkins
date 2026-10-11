@@ -1,0 +1,17 @@
+import credentials.xml
+import config.xml
+kept   jenkins.telemetry.Correlator.xml
+import jobs/oldp/config.xml
+import jobs/oldp/nextBuildNumber
+import jobs/team/config.xml
+import jobs/team/jobs/fs/config.xml
+import jobs/team/jobs/fs/nextBuildNumber
+import users/admin_47dfeaf809df46354651c24bf1caca83e9dfa9367536ceb228c108c3fe6214fc/config.xml
+import users/olduser_e2dc406726aed776db3f274811c0d6749750f20e04533f0b313306810297fc62/config.xml
+kept   hudson.plugins.copyartifact.CopyArtifactConfiguration.xml
+import nodes/oldnode/config.xml
+kept   hudson.plugins.git.GitTool.xml
+build  oldp #1
+build  team/fs #2
+build  team/fs #1
+files imported 10, kept 3; builds imported 3, kept 0
