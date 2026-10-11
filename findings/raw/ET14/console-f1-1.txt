@@ -1,7 +1,7 @@
 Started by user admin
 Running as SYSTEM
 Building on the built-in node in workspace /var/jenkins_home/workspace/f1
-[f1] $ /bin/sh -xe /tmp/jenkins17159461801218127241.sh
+[f1] $ /bin/sh -xe /tmp/jenkins1205048149695102637.sh
 + seq 1 60
 + echo tick 1
 tick 1
