@@ -40,7 +40,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Item enumeration from the store, not a directory scan | ✅ branch | `Jenkins.loadTasks` lists `jobs/` (`Jenkins.java:3432-3439`). `AbstractFolder.loadChildren` lists subdirectories (`cloudbees-folder AbstractFolder.java:338-347`). Multibranch uses `branches/` (`branch-api MultiBranchProject.java:869`) |
 | Cross-controller item events (create, update, rename/move, delete) → in-memory update | ✅ branch | Listeners are in-JVM only. Reuse `AbstractItem.updateByXml` (`AbstractItem.java:917-929`) for updates |
 | No-op writes when content is unchanged | ✅ branch | E9: every index rewrites every branch's config, and every `properties()` build rewrites its own |
-| Concurrent writers to one job (indexing on A while a build on B runs `properties()`) | 🟡 branch | CAS + warn policy; ET1 4/4b converge with 0 conflicts. Strict/writer-aware retries deferred (M5) |
+| Concurrent writers to one job (indexing on A while a build on B runs `properties()`) | ✅ branch (T11: concurrent saves are merged part by part, and objects with a save pending are not reloaded; ET11 1-3) | CAS + warn policy before T11; ET1 4/4b converged with 0 conflicts |
 | Plugin code reading item files directly | 🟡 | E7: 88 plugins use item-dir `File` APIs; 42 call `XmlFile#getFile` |
 
 ## R2: Build scheduling ← **Targets 2 and 5 done (ET2, ET5 pass): build numbers, exactly-once triggers, a shared queue**, [targets/02](targets/02-cluster-scheduling.md)
@@ -91,13 +91,13 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 ## X: Cross-cutting
 | Item | Status | Notes |
 |---|---|---|
-| Stateless sessions and crumbs | ❌ | E5. Sticky sessions are fine short-term (S0) |
-| Inventory regression check in CI | ❌ | `analyze_inventory.py` over E1 + E9 |
-| Ecosystem migration (E7 hit lists) | 🟡 measured | 513 / 2,117 plugins (99 of 358 BOM) |
+| Stateless sessions and crumbs | ✅ branch (T6: ET6 8; T7: requests reach the owner) | E5. Sticky sessions were the short-term answer (S0) |
+| Inventory regression check in CI | ✅ branch (T11: `/manage/cluster/compatibility` lists unshared writes; ET11 4-5 is the check; a CI workflow is to be added when pushed) | `analyze_inventory.py` over E1 + E9 |
+| Ecosystem migration (E7 hit lists) | 🟡 measured, reported (T11: the compatibility report names what each controller keeps unshared; the plugins themselves are not migrated) | 513 / 2,117 plugins (99 of 358 BOM) |
 | Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | ✅ branch (T9: helm chart, ET9; T10: rolling upgrade, refused older peer, import, backup and restore, ET10). Open: builds running at backup time are not restored | |
 
 ## Track S: Static state in the store ← **Target 6: done (ET6 passes)**, [targets/06](targets/06-static-state.md), findings `findings/ET6-static-state.md` on `cnj/t6-m7-static-state`
-Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key material, users/tokens, credentials and nodes, plus cross-controller reload. Open: concurrent edits of one file are detected, but one of them can be lost (ET6 10); Target 11 merges them.
+Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key material, users/tokens, credentials and nodes, plus cross-controller reload. Concurrent edits of one file are merged (Target 11, ET11).
 
 ---
 
