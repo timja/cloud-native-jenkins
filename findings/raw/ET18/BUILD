@@ -1,0 +1,10 @@
+core cnj/t15-remaining 0b9f093f98382ac71fb8e534fd669c532f2666a2
+cloudbees-folder cnj/t15-remote-child e9b95387c2da12da14d2bfeb5512c6f604caeed5
+workflow-cps cnj/t4-m1-program-saved-listener ebbf16c894195b7ab4edc85342624f8f4784de02
+lockable-resources cnj/t15-cluster-ui 70225b63a9dac71a63cbae6bd44ad40f987a651b
+stapler cnj/t6-m5-bound-id-prefix 1a98d6c079bd247ce0820ce1a814e76ba1652884
+credentials cnj/t6-m4-credentials-reload 9f8514aa10e61e1f0c17f0be1d8f2e6548a29c5d
+pipeline-build-step cnj/t15-remote-completion bf032c4afd9ea8536e63e282d8becd4b758bfa75
+junit-sql-storage cnj/t15-follow-renames 48a02f39080bee5072e6f2fb95f76a94bcfe6d25
+configuration-as-code cnj/t15-keep-undeclared-nodes b7e3a7abcbb3f3863516c239621bca798d08d0d5
+cloud-native-jenkins 08d7052ffe26873854be35359d1bf78b1422f419

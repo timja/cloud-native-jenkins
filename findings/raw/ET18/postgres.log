@@ -1,0 +1,34 @@
+postgres-1  | 
+postgres-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+postgres-1  | 
+postgres-1  | 2026-10-11 23:43:46.312 UTC [1] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+postgres-1  | 2026-10-11 23:43:46.313 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1  | 2026-10-11 23:43:46.313 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1  | 2026-10-11 23:43:46.314 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2026-10-11 23:43:46.316 UTC [29] LOG:  database system was interrupted; last known up at 2026-10-11 23:43:20 UTC
+postgres-1  | cp: cannot stat '/archive/00000002.history': No such file or directory
+postgres-1  | 2026-10-11 23:43:46.374 UTC [29] LOG:  starting point-in-time recovery to "T"
+postgres-1  | 2026-10-11 23:43:46.374 UTC [29] LOG:  starting backup recovery with redo LSN 0/3000028, checkpoint LSN 0/4011270, on timeline ID 1
+postgres-1  | 2026-10-11 23:43:46.410 UTC [29] LOG:  restored log file "000000010000000000000004" from archive
+postgres-1  | 2026-10-11 23:43:46.443 UTC [42] FATAL:  the database system is starting up
+postgres-1  | 2026-10-11 23:43:46.447 UTC [29] LOG:  restored log file "000000010000000000000003" from archive
+postgres-1  | 2026-10-11 23:43:46.464 UTC [29] LOG:  redo starts at 0/3000028
+postgres-1  | 2026-10-11 23:43:46.476 UTC [29] LOG:  restored log file "000000010000000000000004" from archive
+postgres-1  | 2026-10-11 23:43:46.506 UTC [29] LOG:  restored log file "000000010000000000000005" from archive
+postgres-1  | 2026-10-11 23:43:46.519 UTC [29] LOG:  completed backup recovery with redo LSN 0/3000028 and end LSN 0/4011470
+postgres-1  | 2026-10-11 23:43:46.519 UTC [29] LOG:  consistent recovery state reached at 0/4011470
+postgres-1  | 2026-10-11 23:43:46.519 UTC [1] LOG:  database system is ready to accept read-only connections
+postgres-1  | 2026-10-11 23:43:46.547 UTC [29] LOG:  restored log file "000000010000000000000006" from archive
+postgres-1  | 2026-10-11 23:43:46.581 UTC [29] LOG:  restored log file "000000010000000000000007" from archive
+postgres-1  | 2026-10-11 23:43:46.630 UTC [29] LOG:  restored log file "000000010000000000000008" from archive
+postgres-1  | 2026-10-11 23:43:46.644 UTC [29] LOG:  recovery stopping at restore point "T", time 2026-10-11 23:43:31.533142+00
+postgres-1  | 2026-10-11 23:43:46.644 UTC [29] LOG:  redo done at 0/6004638 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.17 s
+postgres-1  | 2026-10-11 23:43:46.644 UTC [29] LOG:  last completed transaction was at log time 2026-10-11 23:43:30.983316+00
+postgres-1  | 2026-10-11 23:43:46.666 UTC [29] LOG:  restored log file "000000010000000000000006" from archive
+postgres-1  | cp: cannot stat '/archive/00000002.history': No such file or directory
+postgres-1  | 2026-10-11 23:43:46.685 UTC [29] LOG:  selected new timeline ID: 2
+postgres-1  | cp: cannot stat '/archive/00000001.history': No such file or directory
+postgres-1  | 2026-10-11 23:43:46.711 UTC [29] LOG:  archive recovery complete
+postgres-1  | 2026-10-11 23:43:46.712 UTC [27] LOG:  checkpoint starting: end-of-recovery immediate wait
+postgres-1  | 2026-10-11 23:43:46.721 UTC [27] LOG:  checkpoint complete: wrote 50 buffers (0.3%); 0 WAL file(s) added, 0 removed, 3 recycled; write=0.002 s, sync=0.005 s, total=0.010 s; sync files=39, longest=0.002 s, average=0.001 s; distance=49169 kB, estimate=49169 kB; lsn=0/60046A0, redo lsn=0/60046A0
+postgres-1  | 2026-10-11 23:43:46.725 UTC [1] LOG:  database system is ready to accept connections
