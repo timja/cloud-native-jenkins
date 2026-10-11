@@ -1,4 +1,4 @@
-jobs/cron1/nextBuildNumber|22
+jobs/cron1/nextBuildNumber|21
 
 jobs/manual2/nextBuildNumber|43
 
