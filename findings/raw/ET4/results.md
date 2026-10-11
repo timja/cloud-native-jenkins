@@ -16,3 +16,20 @@
 | ✅ | 3 fresh A shows the same console |
 | ℹ️ | 1 agent1 connected to: B |
 | ✅ | 1 agent sh is running on A |
+| ✅ | 1 B adopts the build |
+| ℹ️ | 1 adopted 49 s after the kill |
+| ✅ | 1 agent1 reconnects to B |
+| ✅ | 1 the sh step continues to tick 60 |
+| ✅ | 1 every tick is in the log (1..60) |
+| ✅ | 1 the sh step was not restarted (tick 1 once) |
+| ✅ | 1 the build waits at input on B |
+| ✅ | 1 approved on B: the build completes with SUCCESS |
+| ✅ | 1 post-input agent step ran |
+| ✅ | 1 the log has the pre-kill output, the resumption, and the rest |
+| ✅ | 1 fresh A lists it with the same number and result |
+| ✅ | 1 fresh A shows the same console |
+| ✅ | 2 A adopts the build waiting at input |
+| ℹ️ | 2 adopted 24 s after the kill |
+| ✅ | 2 A has the pending input |
+| ✅ | 2 approved on A: the build completes with SUCCESS |
+| ✅ | 2 the agent step after input ran |
