@@ -41,4 +41,9 @@
 | 19 | Background schema migrations | `jenkins_schema_migrations`: expand at startup, backfill in batches with a cursor (leased, resumable), contract once no older peer remains. Indexes built concurrently |
 | 20 | Untested paths | Pipelines declaring `podTemplate` under cluster caps and failover (and pruning `jenkins_counters`). A conflict-count admin monitor and a strict policy for UI saves. Playwright tests: console across the load balancer, save conflict, cluster view, the plugins banner |
 | 21 | Creating a child in a folder reloads the whole folder | A core hook adds just the remotely created child. cloudbees-folder implements it (fixing `addLoadedChild`'s naming) |
+| 22 | Task logs: the SCM polling log is on whichever controller polled | Requests for a job's polling log go to the controller that last polled it (from the trigger claims) |
+| 23 | Workspaces across an adoption (static and inbound agents) | ET4: a later stage reads what an earlier stage left in the workspace, with the controller killed between them |
+| 24 | Workspaces on Kubernetes pods | ET9: `stash`/`unstash` carry files across the pod replaced after an adoption; documented that pod workspaces are otherwise lost |
+| 25 | Code coverage (coverage plugin) | ET8: a coverage report published on one controller, shown in full (summary, tree, source) on another |
+| 26 | A controller started without the cluster's seeded keys | Detect it: a check value encrypted with the cluster's key, refusing to start (or a monitor) when it cannot be decrypted |
 | — | Housekeeping | `compose.yaml` pins azurite 3.34.0; the plugin tests run with Testcontainers' ryuk container disabled (it is not an approved image) |
