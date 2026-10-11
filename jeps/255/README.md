@@ -1,11 +1,12 @@
-# JEP-CNJ-6: Cluster membership, store resilience and operations
+# JEP-255: Cluster membership, store resilience and operations
 
 | | |
 |---|---|
+| **JEP** | 255 |
 | **Status** | Draft |
 | **Type** | Process / Standards |
 | **Created** | 2026-10-11 |
-| **Requires** | JEP-CNJ-1, JEP-CNJ-3 |
+| **Requires** | JEP-250, JEP-252 |
 
 ## Abstract
 How controllers know about each other, and how the cluster behaves when its shared services fail. Also how a cluster is installed, upgraded, migrated to, backed up and restored:
@@ -16,11 +17,11 @@ How controllers know about each other, and how the cluster behaves when its shar
 ## Specification
 
 ### Membership
-- **Heartbeats.** Each controller heartbeats every 5 s into a members table. A row holds its origin (a new one per start), name, internal URL, core and plugin version, cluster protocol number, and applied plugin-set generation (JEP-CNJ-7).
+- **Heartbeats.** Each controller heartbeats every 5 s into a members table. A row holds its origin (a new one per start), name, internal URL, core and plugin version, cluster protocol number, and applied plugin-set generation (JEP-256).
 - **Liveness.** A member is alive while its last heartbeat is younger than the member timeout (20 s).
   - A cleanly stopped controller deletes its row, so others react at once.
   - Rows dead for a day are pruned.
-- **Leaving.** A controller compares the live members at every heartbeat. When one leaves, it sweeps that controller's builds and queue items right away (JEP-CNJ-3, JEP-CNJ-4).
+- **Leaving.** A controller compares the live members at every heartbeat. When one leaves, it sweeps that controller's builds and queue items right away (JEP-252, JEP-253).
 - **Protocol versions.** `minimumPeerProtocol` makes a new version refuse to start while older peers are alive, for changes that cannot coexist.
 
 ### Resilience to store outages
@@ -41,7 +42,7 @@ How controllers know about each other, and how the cluster behaves when its shar
   - Completed builds whose publication failed are published.
   - Builds whose start could not be recorded are registered.
   - Failed applies are retried.
-- **No takeovers after an outage.** Nobody takes another controller for gone until its own heartbeats have been steady for longer than the timeout (JEP-CNJ-3).
+- **No takeovers after an outage.** Nobody takes another controller for gone until its own heartbeats have been steady for longer than the timeout (JEP-252).
 - **Blob storage** calls have bounded per-try and response timeouts. Logs and save points are shipped later, and a log's tail shipped after its record is republished.
 - **Boot.** A controller starting while the database or blob storage is unreachable waits, with backoff, for up to 10 minutes (configurable). Meanwhile it is not ready. It never runs half-connected, and leaves no "ghost" member behind.
 
@@ -57,7 +58,7 @@ How controllers know about each other, and how the cluster behaves when its shar
 - **Import.** A file-based home is imported by starting one controller on it with `importHome=true`. Configuration, users, credentials, nodes, builds, logs and fingerprints are uploaded, keys already present are kept, and a report is written. Importing again imports nothing.
 - **Backup and restore.**
   - `scripts/backup.sh` does a `pg_dump` and then copies the blob container; `scripts/restore.sh` restores into a new namespace.
-  - After a restore, builds that were running at backup time are adopted from their save points, or closed as aborted (JEP-CNJ-3).
+  - After a restore, builds that were running at backup time are adopted from their save points, or closed as aborted (JEP-252).
   - Point-in-time recovery uses the managed services' own features (documented, not exercised).
 
 ## Motivation
@@ -78,7 +79,7 @@ How controllers know about each other, and how the cluster behaves when its shar
 
 ## Security
 - The store and blob credentials come from Secrets, and connections can use TLS through the JDBC URL and connection string.
-- The internal URLs used between controllers must stay inside the cluster network (JEP-CNJ-5).
+- The internal URLs used between controllers must stay inside the cluster network (JEP-254).
 
 ## Testing
 - **Store plugin:** `PostgresPersistenceStoreTest`: reconnects; no takeovers before the controller is steady; late-committed events; prefix listings with wildcards.

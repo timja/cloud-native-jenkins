@@ -1,11 +1,12 @@
-# JEP-CNJ-3: Ownership of running builds: leases, fencing, adoption
+# JEP-252: Ownership of running builds: leases, fencing, adoption
 
 | | |
 |---|---|
+| **JEP** | 252 |
 | **Status** | Draft |
 | **Type** | Standards |
 | **Created** | 2026-10-11 |
-| **Requires** | JEP-CNJ-1, JEP-CNJ-2 |
+| **Requires** | JEP-250, JEP-251 |
 
 ## Abstract
 Every running build has exactly one owner: the controller holding its lease. A Pipeline ships save points (its program state and flow nodes) to blob storage as it runs. When its owner dies, another controller takes the lease, with a higher epoch, and resumes the Pipeline from the latest save point, with no shared disk. An owner that lost its lease (for example after a pause or a partition) is fenced: it stops the build and never publishes it. Builds nothing can resume are closed as aborted rather than vanishing.
@@ -13,7 +14,7 @@ Every running build has exactly one owner: the controller holding its lease. A P
 ## Specification
 
 ### Placeholders and leases
-- **Placeholders.** `RunningBuilds` writes a placeholder `jobs/<job>/running/<N>.xml` when a build starts. It records the owner's origin and name, the start time, the lease epoch, and properties such as the latest save point. It is removed after the build's record is published (JEP-CNJ-2).
+- **Placeholders.** `RunningBuilds` writes a placeholder `jobs/<job>/running/<N>.xml` when a build starts. It records the owner's origin and name, the start time, the lease epoch, and properties such as the latest save point. It is removed after the build's record is published (JEP-251).
 - **`BuildLeases`** (a store facet):
   - `acquire(key)` returns an epoch, and succeeds only if the lease is free or its holder is no longer a live member
   - `holds(key, epoch)`
@@ -39,7 +40,7 @@ Every running build has exactly one owner: the controller holding its lease. A P
   - The Pipeline adopter stages the save point and the log into the home, and resumes the build as owner with the new epoch.
 - **What else happens on adoption:**
   - A stop request made while the owner was gone is honoured.
-  - `input` steps, `lock`, `milestone` and the build's place in the shared queue carry over (JEP-CNJ-4).
+  - `input` steps, `lock`, `milestone` and the build's place in the shared queue carry over (JEP-253).
 - **Builds nothing can resume** (freestyle, `PERFORMANCE_OPTIMIZED`, or a save point that cannot be found) are closed as ABORTED: a minimal record, with a console saying why. This also covers builds that were running when a backup was taken, after a restore.
 - **No takeovers right after an outage.** A controller only takes others for gone after its own heartbeats have reached the database without a gap for longer than the member timeout. Right after a database outage, every heartbeat is stale, the live controllers' included.
 

@@ -1,7 +1,8 @@
-# JEP-CNJ-1: Pluggable persistence store for `JENKINS_HOME` state
+# JEP-250: Pluggable persistence store for `JENKINS_HOME` state
 
 | | |
 |---|---|
+| **JEP** | 250 |
 | **Status** | Draft |
 | **Type** | Standards |
 | **Created** | 2026-10-11 |
@@ -25,7 +26,7 @@ An SPI for storing what Jenkins writes to `JENKINS_HOME` (item, global, descript
     - `subscribe(Consumer<ChangeEvent>)`, where `ChangeEvent` is `(kind, key, oldKey, version, origin)`
     - `getOrigin()`, which identifies this controller's instance
   - `owns(key)` tells which keys the store holds; the others stay local.
-  - Optional facets: `liveOrigins()`, `leases()` (JEP-CNJ-3), `queue()` (JEP-CNJ-4) and `storesBuildRecords()` (JEP-CNJ-2).
+  - Optional facets: `liveOrigins()`, `leases()` (JEP-252), `queue()` (JEP-253) and `storesBuildRecords()` (JEP-251).
 - **`BlobStore`** holds large, immutable or append-only data: `put`, `get`, `delete(prefix)` and `move(prefix)`.
 - **`PersistenceStoreProvider` / `BlobStoreProvider`** are extension points. `PersistenceStores.get()` resolves the first provider that returns a store, once extensions are augmented. Files read before that come from the local disk, as do the pre-plugin key material and plugin set; see *Reasoning*.
 - **`RemoteChangeHandler`** is an extension point through which plugins apply changes to their own keys.
@@ -62,7 +63,7 @@ Workspaces, caches, `plugins/`, `war/`, logs of Jenkins itself, per-controller f
 - **Routing at `XmlFile`** gives the widest coverage for the least change. E7 counted 42 plugins that call `XmlFile#getFile`; they get read-only snapshots, and their direct writes are reported by the compatibility page.
 - **A plugin, not a jar on the Winstone class path.** This was the original plan (E6 validated the class-loader seam). It was dropped because nothing needs the store before plugins load except the pre-plugin keys and the plugin set, and those are seeded or baked into the image.
 - **Versions plus merge, not locks.** Writers on different controllers rarely touch the same part of the same file. Merging keeps both changes in the common case. ET11 ran 30 rounds of deliberately simultaneous edits and lost none.
-- **The reference backend is Postgres**: a single table with CAS through `UPDATE … WHERE version = ?`, and an event log table plus `LISTEN/NOTIFY`. Its operational behaviour is covered in JEP-CNJ-6.
+- **The reference backend is Postgres**: a single table with CAS through `UPDATE … WHERE version = ?`, and an event log table plus `LISTEN/NOTIFY`. Its operational behaviour is covered in JEP-255.
 
 ## Backwards compatibility
 - Without a provider, nothing changes: `XmlFile` writes files as before. Every new API is `@Restricted(Beta.class)` or `NoExternalUse`.

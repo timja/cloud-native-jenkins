@@ -1,11 +1,12 @@
-# JEP-CNJ-4: Cluster scheduling: build numbers, triggers, a shared queue
+# JEP-253: Cluster scheduling: build numbers, triggers, a shared queue
 
 | | |
 |---|---|
+| **JEP** | 253 |
 | **Status** | Draft |
 | **Type** | Standards |
 | **Created** | 2026-10-11 |
-| **Requires** | JEP-CNJ-1 |
+| **Requires** | JEP-250 |
 
 ## Abstract
 Several controllers schedule the same jobs. Five pieces make that work:
@@ -18,7 +19,7 @@ Several controllers schedule the same jobs. Five pieces make that work:
 ## Specification
 
 ### Build numbers
-`Job.BuildNumberAssigner` (an existing Beta hook) is implemented by `StoredBuildNumberAssigner`, a compare-and-set increment of the job's stored `nextBuildNumber`. Numbers continue across controllers, fresh controllers, renames and deletions (JEP-CNJ-2).
+`Job.BuildNumberAssigner` (an existing Beta hook) is implemented by `StoredBuildNumberAssigner`, a compare-and-set increment of the job's stored `nextBuildNumber`. Numbers continue across controllers, fresh controllers, renames and deletions (JEP-251).
 
 ### Triggers
 - **`TriggerCoordinator`.** A controller claims `(item, trigger, tick)` in the store before running a trigger, and only the first claim runs. Cron triggers, SCM polling and periodic folder indexing all go through it. A tick missed while the store is unreachable is skipped, never run twice.
@@ -38,7 +39,7 @@ Several controllers schedule the same jobs. Five pieces make that work:
 - **Reclaim.** Items claimed by a controller that is gone go back to WAITING:
   - on the next maintenance pass (every 15 s)
   - at once when a controller is seen leaving
-  - never right after a database outage (JEP-CNJ-3's stability rule)
+  - never right after a database outage (JEP-252's stability rule)
 - **Recording starts.** An item's start is recorded with retries, since an item left claimed would run again if its controller later went away.
 
 ### Cross-build coordination

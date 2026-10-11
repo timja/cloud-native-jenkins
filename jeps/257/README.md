@@ -1,11 +1,12 @@
-# JEP-CNJ-8: Cloud provisioning across controllers
+# JEP-257: Cloud provisioning across controllers
 
 | | |
 |---|---|
+| **JEP** | 257 |
 | **Status** | Draft |
 | **Type** | Standards |
 | **Created** | 2026-10-11 |
-| **Requires** | JEP-CNJ-4, JEP-CNJ-6 |
+| **Requires** | JEP-253, JEP-255 |
 
 ## Abstract
 Several controllers provision agents from the same clouds (Kubernetes, and by extension EC2, Docker and others) without over-provisioning, exceeding cluster-wide caps, or killing each other's agents.
@@ -18,8 +19,8 @@ Several controllers provision agents from the same clouds (Kubernetes, and by ex
 - **Demand counted once.** `NodeProvisioner` counts a queue item's demand only on the controller that will start it: the one that requested it, or that claimed it in the shared queue (`QueueStartGate.countsForProvisioning`). Mirrored items elsewhere do not provision.
 - **Reservations.** An agent provisioned for a queue item reserves the item (`queue/reserved/<id>`). Other controllers wait for it instead of starting the item on an agent they would provision too.
 - **Caps** across the cluster, through counters in the store (`ClusterAgentLimits`, `jenkins_counters`): each controller's share of a cloud's and template's cap. The kubernetes plugin consults them (`ClusterProvisioningLimits`). A dead controller's share lapses with its membership.
-- **Cloud agents are local.** Nodes created by a cloud are not shared through the store (`PersistenceStores.keepLocal`). Each controller manages and cleans up only its own. Static nodes are shared (JEP-CNJ-1).
-- **Placement.** A Pipeline whose `node` label only another controller can serve is handed over to it (JEP-CNJ-3).
+- **Cloud agents are local.** Nodes created by a cloud are not shared through the store (`PersistenceStores.keepLocal`). Each controller manages and cleans up only its own. Static nodes are shared (JEP-250).
+- **Placement.** A Pipeline whose `node` label only another controller can serve is handed over to it (JEP-252).
 
 ## Motivation
 - `NodeProvisioner` runs per JVM: with a mirrored queue, every controller would provision for the same item.

@@ -1,11 +1,12 @@
-# JEP-CNJ-2: Shared build records, logs and history
+# JEP-251: Shared build records, logs and history
 
 | | |
 |---|---|
+| **JEP** | 251 |
 | **Status** | Draft |
 | **Type** | Standards |
 | **Created** | 2026-10-11 |
-| **Requires** | JEP-CNJ-1 |
+| **Requires** | JEP-250 |
 
 ## Abstract
 Completed builds are published to the shared store, so every controller shows the full history of every job, whichever controller ran each build:
@@ -21,7 +22,7 @@ Builds are materialised locally only when something reads them. Builds still run
 - **Publishing.** When a build is finalized, its controller publishes:
   - `jobs/<job>/builds/<N>/build.xml` to the persistence store
   - `jobs/<job>/builds/<N>/files.tgz` to blob storage: the build directory without the Pipeline log, written first, so a record never refers to a missing snapshot
-- **Numbering.** `nextBuildNumber` is shared (JEP-CNJ-4) and kept when builds or jobs are deleted. A `(job, number)` pair is never reused, so data keyed by it (for example junit-sql) never collides.
+- **Numbering.** `nextBuildNumber` is shared (JEP-253) and kept when builds or jobs are deleted. A `(job, number)` pair is never reused, so data keyed by it (for example junit-sql) never collides.
 - **The index.** `RunMap` is the union of local build directories and the store's records (`BuildRecords.storedNumbers` → `AbstractLazyLoadRunMap.recognizeNumber`). A build only in the store is materialised into the home (record plus snapshot) when first loaded.
 - **Changes from elsewhere.**
   - A new record becomes a recognised number.
@@ -31,7 +32,7 @@ Builds are materialised locally only when something reads them. Builds still run
 - **Republishing.**
   - A build is republished when its `build.xml` is saved again (a description, keep-forever).
   - It is also republished when files are added to its directory later without such a save; the sweep runs every minute for an hour after completion.
-- **Builds nothing can resume** (their controller died, and they are not resumable Pipelines) are closed with an ABORTED record whose console says why (JEP-CNJ-3).
+- **Builds nothing can resume** (their controller died, and they are not resumable Pipelines) are closed with an ABORTED record whose console says why (JEP-252).
 - **Failed publication.** A build whose publication fails (the store was unreachable) stays "running" for the cluster, and publication is retried until it succeeds.
 
 ### Logs
@@ -39,11 +40,11 @@ Builds are materialised locally only when something reads them. Builds still run
   - when 32 KiB is pending, or 3 s after the last shipment
   - at once before each save point and at the end of the build
 - **Segments.** An append blob takes at most 50,000 blocks, so a log is stored in segments `log`, `log.1`, …. A new segment starts before the limit, and readers concatenate them.
-- **Ownership checks.** The shipper checks ownership and pauses while this controller's membership may have lapsed, so a fenced owner never appends (JEP-CNJ-3). A new owner continues where the blob ends.
-- **Freestyle and other build logs** travel in the snapshot. While such a build runs, its console is served by the controller running it (JEP-CNJ-5).
+- **Ownership checks.** The shipper checks ownership and pauses while this controller's membership may have lapsed, so a fenced owner never appends (JEP-252). A new owner continues where the blob ends.
+- **Freestyle and other build logs** travel in the snapshot. While such a build runs, its console is served by the controller running it (JEP-254).
 
 ### Builds running on another controller
-- Each running build has a placeholder `jobs/<job>/running/<N>.xml`, holding its owner, start time and save point (JEP-CNJ-3).
+- Each running build has a placeholder `jobs/<job>/running/<N>.xml`, holding its owner, start time and save point (JEP-252).
 - On other controllers, the job page lists placeholders under "Running on other controllers".
 - The Builds card shows them above local builds, with a stop button, and the job's icon animates.
 - In the REST API, `builds`, `allBuilds` and `lastBuild` include them as a stand-in with a `Run`'s properties (`number`, `url`, `building`, `timestamp`, `result`, …). Their own URLs are answered by their owner.

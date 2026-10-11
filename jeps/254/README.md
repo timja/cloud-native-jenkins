@@ -1,11 +1,12 @@
-# JEP-CNJ-5: Request routing and stateless sessions
+# JEP-254: Request routing and stateless sessions
 
 | | |
 |---|---|
+| **JEP** | 254 |
 | **Status** | Draft |
 | **Type** | Standards |
 | **Created** | 2026-10-11 |
-| **Requires** | JEP-CNJ-1, JEP-CNJ-3 |
+| **Requires** | JEP-250, JEP-252 |
 
 ## Abstract
 Users and tools reach any controller through a load balancer with no stickiness. For that to work:
@@ -18,7 +19,7 @@ Users and tools reach any controller through a load balancer with no stickiness.
 ### Sessions and crumbs
 - **Sign-in.** A browser's sign-in is a signed cookie (Jenkins' remember-me token, with the user's seed), valid on every controller, instead of a server-side HTTP session. Signing out, or changing the password, invalidates it everywhere.
 - **Crumbs.** A cluster crumb issuer (`crumbIssuer: cluster`) binds crumbs to the sign-in cookie, or, before sign-in, to a nonce cookie. Every controller validates them with the same salt.
-- **API tokens** are stored with the user (JEP-CNJ-1), so they work everywhere.
+- **API tokens** are stored with the user (JEP-250), so they work everywhere.
 
 ### Bound objects
 - Stapler bound objects (`renderOnDemand`, progressive rendering, JavaScript proxies) live in one controller's memory. Their ids are prefixed with that controller's name; this is a Stapler change.
@@ -29,7 +30,7 @@ Users and tools reach any controller through a load balancer with no stickiness.
   - **build URLs** (`/job/…/<N>/…`) for a build running on another controller, located by its placeholder's origin (not its name, which a replacement controller may share)
   - **agent URLs** (`/computer/<name>/…`) for an agent connected to another controller, located through the channel table
 - **How forwarding works.** It uses the target's internal URL from the membership table, waits at most 20 s for the response headers, and streams the body (live consoles). If the owner cannot be reached, the request is served locally.
-- **`input`, stop and replay** of a running build therefore work from any controller. After an adoption (JEP-CNJ-3), they reach the new owner.
+- **`input`, stop and replay** of a running build therefore work from any controller. After an adoption (JEP-252), they reach the new owner.
 - **Permalinks.** `/job/x/lastBuild/…` redirects to the newest build when that build runs elsewhere, and the build URL is then forwarded.
 
 ### Agent channels
@@ -37,7 +38,7 @@ Users and tools reach any controller through a load balancer with no stickiness.
 - Inbound agents reconnect to a failover URL (the load balancer) when their controller dies, and resume within about 40 s (ET7).
 
 ### Builds running elsewhere in the UI and REST
-See JEP-CNJ-2: the job page, the Builds card, the job's icon, and REST `builds`, `allBuilds` and `lastBuild` all include them.
+See JEP-251: the job page, the Builds card, the job's icon, and REST `builds`, `allBuilds` and `lastBuild` all include them.
 
 ## Motivation
 - **E5:** without stickiness, sessions were lost and crumbs failed across controllers, and an API token made on one controller gave `401` on another.

@@ -1,11 +1,12 @@
-# JEP-CNJ-7: Cluster-wide plugin management
+# JEP-256: Cluster-wide plugin management
 
 | | |
 |---|---|
+| **JEP** | 256 |
 | **Status** | Draft |
 | **Type** | Standards |
 | **Created** | 2026-10-11 |
-| **Requires** | JEP-CNJ-1, JEP-CNJ-6 |
+| **Requires** | JEP-250, JEP-255 |
 
 ## Abstract
 A plugin installed, upgraded, uninstalled, disabled or enabled on one controller is applied to every controller of the cluster, and to any controller that later starts with an empty home.
@@ -59,7 +60,7 @@ Found by hand on a cluster: a plugin installed from the Plugins page went to one
 - **The update center's `install()` hook** sees every install, with the verified archive, without changing the update center.
 - **An overlay with "newer wins"** lets image updates and runtime changes coexist.
 - **Safe restarts**, which pause Pipelines, rather than waiting until idle. Busy controllers are never idle, and Pipelines are made to checkpoint and resume.
-  - This needed a fix in JEP-CNJ-3: a controller restarted with its home reclaims its builds' leases before resuming them. Otherwise another controller adopted them too.
+  - This needed a fix in JEP-252: a controller restarted with its home reclaims its builds' leases before resuming them. Otherwise another controller adopted them too.
 
 ## Backwards compatibility
 - Without a store, nothing changes.
