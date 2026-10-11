@@ -71,7 +71,7 @@ It leaves by stopping, cleanly (its row is deleted, and the others react at once
   - JCasC, with an option for in-chart Postgres and Azurite (the Azure Storage emulator) for development; managed services in production
   - a Kubernetes cloud
   - probes: readiness reflects whether Jenkins is up and serving
-- **StatefulSet or Deployment.** Either works: nothing depends on a controller keeping its name. Membership, leases and adoption go by origin, a new one per start (JEP-252). The internal URL can be a pod IP (`CNJ_INTERNAL_URL=http://$(POD_IP):8080/`). The chart uses a StatefulSet, for what it adds:
+- **StatefulSet or Deployment.** Either works: nothing depends on a controller keeping its name. Membership, leases and adoption go by origin, a new one per start (JEP-252). The internal URL can be a pod IP (`CNJ_INTERNAL_URL=http://$(POD_IP):8080/`). The acceptance tests exercise only the chart's StatefulSet; a Deployment has not been run. The chart uses a StatefulSet, for what it adds:
   - stable, readable names (`cnj-0`, `cnj-1`) in the cluster view, the `X-CNJ-Controller` header and logs, and per-pod DNS through a headless Service for the internal URL
   - one-at-a-time rolling updates, which keep the number of controllers adopting builds predictable (a Deployment's surge works too)
   - pod management `Parallel`, so a scale-up or a restart of all pods does not wait for each pod to be ready in turn
