@@ -68,12 +68,12 @@ tick 18
 + echo tick 19
 tick 19
 + sleep 1
+Resuming build at Sun Oct 11 21:54:39 UTC 2026 after Jenkins restart
+Waiting for reconnection of agent1 before proceeding with build
+Ready to run at Sun Oct 11 21:54:39 UTC 2026
 + echo tick 20
 tick 20
 + sleep 1
-Resuming build at Sun Oct 11 17:14:26 UTC 2026 after Jenkins restart
-Waiting for reconnection of agent1 before proceeding with build
-Ready to run at Sun Oct 11 17:14:26 UTC 2026
 + echo tick 21
 tick 21
 + sleep 1
@@ -158,8 +158,6 @@ tick 47
 + echo tick 48
 tick 48
 + sleep 1
-agent1 seems to be removed or offline (java.lang.InterruptedException); will wait for 5 min 0 sec for it to come back online
-agent1 is back online
 + echo tick 49
 tick 49
 + sleep 1

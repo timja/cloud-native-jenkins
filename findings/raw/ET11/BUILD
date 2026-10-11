@@ -1,7 +1,0 @@
-core cnj/t15-remaining 01d8bd9be9346bcba9cc459410323304af4e6865
-cloudbees-folder cnj/t15-remote-child e9b95387c2da12da14d2bfeb5512c6f604caeed5
-workflow-cps cnj/t4-m1-program-saved-listener ebbf16c894195b7ab4edc85342624f8f4784de02
-lockable-resources cnj/t5-m4-cluster-locks c7c8d9b1a1694c43330d296e724637acf598e6eb
-stapler cnj/t6-m5-bound-id-prefix 1a98d6c079bd247ce0820ce1a814e76ba1652884
-credentials cnj/t6-m4-credentials-reload 9f8514aa10e61e1f0c17f0be1d8f2e6548a29c5d
-cloud-native-jenkins d807e0d940b6b5188320b454edc356e3ff970164

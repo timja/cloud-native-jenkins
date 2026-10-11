@@ -14,3 +14,18 @@
 | ℹ️ | 3 a job's builds listed in Execution Time: 0.101 ms |
 | ℹ️ | 4 fresh-1: serving the API 20.4 s after the container started (container and JVM start to initialization 4.9 s, initialization 9.7 s); first / then 19.003424 s |
 | ✅ | 4 fresh B #1 is up within 180 s |
+| ℹ️ | 4 fresh-2: serving the API 16.3 s after the container started (container and JVM start to initialization 3.9 s, initialization 10.8 s); first / then 5.352857 s |
+| ✅ | 4 fresh B #2 is up within 180 s |
+| ℹ️ | 4 fresh-3: serving the API 12.7 s after the container started (container and JVM start to initialization 2.6 s, initialization 7.0 s); first / then 6.756909 s |
+| ✅ | 4 fresh B #3 is up within 180 s |
+| ✅ | 4 and lists every job |
+| ℹ️ | 4 median time to serving: 16.4 s; warm / afterwards 0.606916 s |
+| ℹ️ | 4 runtime-plugin: serving the API 12.8 s after the container started (container and JVM start to initialization 3.0 s, initialization 7.1 s); first / then 6.851768 s |
+| ✅ | 4 fresh B with next-build-number installed at runtime is up within 180 s |
+| ✅ | 4 ... and has next-build-number |
+| ℹ️ | 5 B's / with 50 builds running on A: 0.788712 s |
+| ✅ | 5 B adopts all 50 within 90 s |
+| ℹ️ | 5 adopted 50 builds, the last 11 s after the kill |
+| ✅ | 5 all of them complete |
+
+Failures: 0
