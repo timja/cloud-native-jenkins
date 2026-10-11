@@ -1,36 +1,36 @@
 Running from: /war-override/jenkins.war
 webroot: /var/jenkins_home/war
-2026-10-11 12:05:31.859+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-2026-10-11 12:05:31.901+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-2026-10-11 12:05:31.940+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-2026-10-11 12:05:32.171+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-2026-10-11 12:05:32.200+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-2026-10-11 12:05:32.484+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-2026-10-11 12:05:32.563+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@30331109{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@2571066a{STARTED}}
-2026-10-11 12:05:32.567+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@393881f0{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-2026-10-11 12:05:32.568+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@4158debd{STARTING}[12.1.14,sto=0] @629ms
-2026-10-11 12:05:32.568+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-2026-10-11 12:05:32.640+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-2026-10-11 12:05:32.715+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-2026-10-11 12:05:32.900+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-2026-10-11 12:05:34.931+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-2026-10-11 12:05:34.942+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-2026-10-11 12:05:34.944+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-2026-10-11 12:05:35.154+0000 [id=56]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-2026-10-11 12:05:35.373+0000 [id=56]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-2026-10-11 12:05:36.141+0000 [id=56]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-2026-10-11 12:05:36.661+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-2026-10-11 12:05:37.119+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-2026-10-11 12:05:37.132+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-2026-10-11 12:05:37.132+0000 [id=60]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-2026-10-11 12:05:37.137+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-2026-10-11 12:05:37.145+0000 [id=47]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-2026-10-11 12:05:37.149+0000 [id=59]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_058d6f715229554e2e24a22f5675a294e52e151679e27df917173463aa6f6289 duplicates one seen earlier for admin
-2026-10-11 12:05:37.274+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-2026-10-11 12:05:37.282+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-2026-10-11 12:05:47.160+0000 [id=85]	INFO	i.j.p.cnj.store.ClusterPlugins#releaseLock: Released the plugin restart lock: this controller is up to date with the cluster's plugin set
-2026-10-11 12:06:39.731+0000 [id=77]	INFO	i.j.p.cnj.store.ClusterPlugins#apply: Applying the cluster's plugin set: cnj-broken LOAD 1.0
-2026-10-11 12:06:39.943+0000 [id=77]	WARNING	i.j.p.cnj.store.ClusterPlugins#reconcile: Could not apply the cluster's plugin set for cnj-broken
+2026-10-11 12:43:45.109+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-10-11 12:43:45.161+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-10-11 12:43:45.290+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+2026-10-11 12:43:45.521+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+2026-10-11 12:43:45.543+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-10-11 12:43:45.728+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2026-10-11 12:43:45.795+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@30331109{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@2571066a{STARTED}}
+2026-10-11 12:43:45.803+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@393881f0{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-10-11 12:43:45.803+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@4158debd{STARTING}[12.1.14,sto=0] @514ms
+2026-10-11 12:43:45.804+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-10-11 12:43:45.883+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+2026-10-11 12:43:45.957+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-10-11 12:43:46.428+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-10-11 12:43:48.051+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-10-11 12:43:48.061+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-10-11 12:43:48.062+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-10-11 12:43:48.339+0000 [id=46]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+2026-10-11 12:43:48.534+0000 [id=46]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+2026-10-11 12:43:49.100+0000 [id=46]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+2026-10-11 12:43:49.643+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-10-11 12:43:50.069+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-10-11 12:43:50.087+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-10-11 12:43:50.088+0000 [id=49]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+2026-10-11 12:43:50.103+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-10-11 12:43:50.117+0000 [id=60]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+2026-10-11 12:43:50.127+0000 [id=48]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_67ec6d98f08a5ffa4101fad79857599f5556963a22e2c21c454916d13509eddd duplicates one seen earlier for admin
+2026-10-11 12:43:50.329+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-10-11 12:43:50.351+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2026-10-11 12:44:00.119+0000 [id=72]	INFO	i.j.p.cnj.store.ClusterPlugins#releaseLock: Released the plugin restart lock: this controller is up to date with the cluster's plugin set
+2026-10-11 12:44:54.908+0000 [id=44]	INFO	i.j.p.cnj.store.ClusterPlugins#apply: Applying the cluster's plugin set: cnj-broken LOAD 1.0
+2026-10-11 12:44:55.050+0000 [id=44]	WARNING	i.j.p.cnj.store.ClusterPlugins#reconcile: Could not apply the cluster's plugin set for cnj-broken
 java.io.IOException: The cluster's archive cluster-plugins/token-macro/ef98e47b467571e7968925ace1c40d1103baefe230f5d4cf44250769b7b6b42b.jpi has checksum ef98e47b467571e7968925ace1c40d1103baefe230f5d4cf44250769b7b6b42b, expected 00
 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.fetch(ClusterPlugins.java:441)
 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.apply(ClusterPlugins.java:367)
@@ -42,8 +42,8 @@ java.io.IOException: The cluster's archive cluster-plugins/token-macro/ef98e47b4
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.base/java.lang.Thread.run(Unknown Source)
-2026-10-11 12:06:47.170+0000 [id=78]	INFO	i.j.p.cnj.store.ClusterPlugins#apply: Applying the cluster's plugin set: cnj-broken LOAD 1.0
-2026-10-11 12:06:47.217+0000 [id=78]	WARNING	i.j.p.cnj.store.ClusterPlugins#reconcile: Could not apply the cluster's plugin set for cnj-broken
+2026-10-11 12:45:00.138+0000 [id=74]	INFO	i.j.p.cnj.store.ClusterPlugins#apply: Applying the cluster's plugin set: cnj-broken LOAD 1.0
+2026-10-11 12:45:00.165+0000 [id=74]	WARNING	i.j.p.cnj.store.ClusterPlugins#reconcile: Could not apply the cluster's plugin set for cnj-broken
 java.io.IOException: The cluster's archive cluster-plugins/token-macro/ef98e47b467571e7968925ace1c40d1103baefe230f5d4cf44250769b7b6b42b.jpi has checksum ef98e47b467571e7968925ace1c40d1103baefe230f5d4cf44250769b7b6b42b, expected 00
 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.fetch(ClusterPlugins.java:441)
 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.apply(ClusterPlugins.java:367)
@@ -55,8 +55,8 @@ java.io.IOException: The cluster's archive cluster-plugins/token-macro/ef98e47b4
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.base/java.lang.Thread.run(Unknown Source)
-2026-10-11 12:07:47.225+0000 [id=76]	INFO	i.j.p.cnj.store.ClusterPlugins#apply: Applying the cluster's plugin set: cnj-broken LOAD 1.0
-2026-10-11 12:07:47.283+0000 [id=76]	WARNING	i.j.p.cnj.store.ClusterPlugins#reconcile: Could not apply the cluster's plugin set for cnj-broken
+2026-10-11 12:46:00.170+0000 [id=44]	INFO	i.j.p.cnj.store.ClusterPlugins#apply: Applying the cluster's plugin set: cnj-broken LOAD 1.0
+2026-10-11 12:46:00.199+0000 [id=44]	WARNING	i.j.p.cnj.store.ClusterPlugins#reconcile: Could not apply the cluster's plugin set for cnj-broken
 java.io.IOException: The cluster's archive cluster-plugins/token-macro/ef98e47b467571e7968925ace1c40d1103baefe230f5d4cf44250769b7b6b42b.jpi has checksum ef98e47b467571e7968925ace1c40d1103baefe230f5d4cf44250769b7b6b42b, expected 00
 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.fetch(ClusterPlugins.java:441)
 	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.apply(ClusterPlugins.java:367)

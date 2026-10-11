@@ -1,0 +1,39 @@
+Running from: /war-override/jenkins.war
+webroot: /var/jenkins_home/war
+2026-10-11 12:40:55.301+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-10-11 12:40:55.342+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-10-11 12:40:55.377+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+2026-10-11 12:40:55.665+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+2026-10-11 12:40:55.688+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-10-11 12:40:55.901+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2026-10-11 12:40:55.980+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@30331109{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@2571066a{STARTED}}
+2026-10-11 12:40:55.985+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@5295381a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-10-11 12:40:55.985+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@4af46df3{STARTING}[12.1.14,sto=0] @609ms
+2026-10-11 12:40:55.985+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-10-11 12:40:56.051+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+2026-10-11 12:40:56.098+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-10-11 12:40:56.314+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-10-11 12:40:58.037+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-10-11 12:40:58.205+0000 [id=30]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+2026-10-11 12:40:58.248+0000 [id=30]	INFO	h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set
+2026-10-11 12:40:58.461+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-10-11 12:40:58.462+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-10-11 12:40:58.644+0000 [id=54]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+2026-10-11 12:40:58.719+0000 [id=54]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+2026-10-11 12:40:59.175+0000 [id=54]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+2026-10-11 12:40:59.417+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-10-11 12:40:59.895+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-10-11 12:40:59.922+0000 [id=52]	INFO	j.persistence.RunningBuilds#reclaim: Another controller holds the lease on during #1; not resuming it here
+2026-10-11 12:40:59.926+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-10-11 12:40:59.927+0000 [id=45]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+2026-10-11 12:40:59.933+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-10-11 12:40:59.938+0000 [id=60]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+2026-10-11 12:40:59.942+0000 [id=54]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_67ec6d98f08a5ffa4101fad79857599f5556963a22e2c21c454916d13509eddd duplicates one seen earlier for admin
+2026-10-11 12:41:00.071+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-10-11 12:41:00.083+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2026-10-11 12:41:09.948+0000 [id=62]	INFO	i.j.p.cnj.store.ClusterPlugins#releaseLock: Released the plugin restart lock: this controller is up to date with the cluster's plugin set
+2026-10-11 12:41:15.147+0000 [id=109]	INFO	j.persistence.RunningBuilds#adopt: Adopting during #1 from plug-0 (95e562c3-3cb6-4e5e-9cd2-008ca2977c79)
+2026-10-11 12:41:15.613+0000 [id=109]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming during#1, which is missing from FlowExecutionList, so registering it now
+2026-10-11 12:41:15.616+0000 [id=109]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: during#1 was already in the list: [during#1]
+2026-10-11 12:41:15.618+0000 [id=109]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed during #1 from save point 27.5 as owner with epoch 44
+2026-10-11 12:43:05.538+0000 [id=112]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: during #1
