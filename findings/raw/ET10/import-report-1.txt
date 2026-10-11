@@ -6,8 +6,8 @@ import jobs/oldp/nextBuildNumber
 import jobs/team/config.xml
 import jobs/team/jobs/fs/config.xml
 import jobs/team/jobs/fs/nextBuildNumber
-import users/admin_8f8dba9cf1391a752259a9cbd81cbe0ad84682c1d307452b91c9c3a643253351/config.xml
-import users/olduser_051dcc7b3521f647dbe77be7d751ed9416c61bfa3d832cb4c301f634cc1a36b9/config.xml
+import users/admin_52d3959c47172977fc013008898ae8ab09545dc75b1008c8f9dbf09398fa541a/config.xml
+import users/olduser_fdd64cf311b52eee820dcd384b030f9f7f697377966eb0efd1a6b6d76ec0a536/config.xml
 import hudson.plugins.copyartifact.CopyArtifactConfiguration.xml
 import nodes/oldnode/config.xml
 import hudson.plugins.git.GitTool.xml

@@ -1,5 +1,5 @@
 | ℹ️ | seeded keys: hudson.model.User.DIRNAMES hudson.util.Secret jenkins.model.Jenkins.crumbSalt master.key org.jenkinsci.main.modules.instance_identity.InstanceIdentity.KEY  |
-## ET6 results (2026-10-11T08:17Z)
+## ET6 results (2026-10-11T17:23Z)
 
 | | Check |
 |---|---|
@@ -22,7 +22,7 @@
 | ✅ | 5 and B dropped its connection |
 | ✅ | 6 the key has the same value on B |
 | ✅ | 6 data encrypted with a runtime key on A decrypts on B |
-| ℹ️ | 9 versions before: config.xml@23 jenkins.model.JenkinsLocationConfiguration.xml@22 nodes/n7/config.xml@47 users/u9_99cd2ad1d57ef248f4069bf0d056a9ef8472b3134a8ce694c2e1c14f73ce6a53/config.xml@46 ; after: config.xml@23 jenkins.model.JenkinsLocationConfiguration.xml@22 nodes/n7/config.xml@47 users/u9_99cd2ad1d57ef248f4069bf0d056a9ef8472b3134a8ce694c2e1c14f73ce6a53/config.xml@46  |
+| ℹ️ | 9 versions before: config.xml@23 jenkins.model.JenkinsLocationConfiguration.xml@22 nodes/n7/config.xml@47 users/u9_e893ff3f5db2e413cdb9c07ddc6e5717c5f7b4ccd7e898d4e02fba863905f5c3/config.xml@46 ; after: config.xml@23 jenkins.model.JenkinsLocationConfiguration.xml@22 nodes/n7/config.xml@47 users/u9_e893ff3f5db2e413cdb9c07ddc6e5717c5f7b4ccd7e898d4e02fba863905f5c3/config.xml@46  |
 | ✅ | 9 B's boot (JCasC) bumped no versions of unchanged config |
 | ✅ | 9 a setting JCasC does not declare keeps its runtime value |
 | ✅ | 9 a user created at runtime survives B's boot |
@@ -34,7 +34,7 @@
 | ✅ | 8 logged in through the load balancer |
 | ✅ | 8 signed in on every request (10/10) |
 | ✅ | 8 requests reached both controllers [jenkins-b, jenkins-a] |
-| ℹ️ | 8 bound objects on the configure page: 79 e.g. jenkins-b-134b5693-fa73-49fc-aa2e-75f9176da221 |
+| ℹ️ | 8 bound objects on the configure page: 79 e.g. jenkins-b-cbebecf0-cbff-4897-9abd-eb232ea8a35b |
 | ✅ | 8 bound objects answer through either controller (12/12 [200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200]) |
 | ✅ | 8 configure form saved (200) |
 | ✅ | 8 the saved description is there |

@@ -1,4 +1,4 @@
-## ET4 results (2026-10-11T12:47Z)
+## ET4 results (2026-10-11T17:10Z)
 
 | | Check |
 |---|---|
@@ -6,7 +6,7 @@
 | ✅ | agent1 is not connected to B |
 | ✅ | 3 B shows ctl #1 running on jenkins-a |
 | ✅ | 3 B adopts and resumes it |
-| ℹ️ | 3 adopted 27 s after the kill |
+| ℹ️ | 3 adopted 18 s after the kill |
 | ✅ | 3 B logs the resumption |
 | ✅ | 3 the build completes on B with SUCCESS |
 | ✅ | 3 every step ran (step 1..30) |
@@ -17,7 +17,7 @@
 | ℹ️ | 1 agent1 connected to: B |
 | ✅ | 1 agent sh is running on A |
 | ✅ | 1 B adopts the build |
-| ℹ️ | 1 adopted 49 s after the kill |
+| ℹ️ | 1 adopted 17 s after the kill |
 | ✅ | 1 agent1 reconnects to B |
 | ✅ | 1 the sh step continues to tick 60 |
 | ✅ | 1 every tick is in the log (1..60) |
@@ -29,12 +29,12 @@
 | ✅ | 1 fresh A lists it with the same number and result |
 | ✅ | 1 fresh A shows the same console |
 | ✅ | 2 A adopts the build waiting at input |
-| ℹ️ | 2 adopted 24 s after the kill |
+| ℹ️ | 2 adopted 22 s after the kill |
 | ✅ | 2 A has the pending input |
 | ✅ | 2 approved on A: the build completes with SUCCESS |
 | ✅ | 2 the agent step after input ran |
 | ✅ | 4 B adopts while A is paused |
-| ℹ️ | 4 adopted 25 s after the pause |
+| ℹ️ | 4 adopted 20 s after the pause |
 | ✅ | 4 A notices it lost the build |
 | ✅ | 4 the build completes on B with SUCCESS |
 | ✅ | 4 only B published the record |
@@ -46,8 +46,8 @@
 | ✅ | 5 B never adopted it |
 | ✅ | 6 B removes its placeholder |
 | ✅ | 6 B does not run it: it is closed as aborted (Target 12) |
-| ℹ️ | 7 200 echo steps: 947 ms; placeholder writes (save point commits + start/end): 2 |
-| ℹ️ | 7 the same with PERFORMANCE_OPTIMIZED (no save points): 214 ms |
+| ℹ️ | 7 200 echo steps: 983 ms; placeholder writes (save point commits + start/end): 2 |
+| ℹ️ | 7 the same with PERFORMANCE_OPTIMIZED (no save points): 321 ms |
 | ℹ️ | 7 builds with save points left in blob storage: none |
 | ✅ | 7 no save points left in blob storage after completion |
 

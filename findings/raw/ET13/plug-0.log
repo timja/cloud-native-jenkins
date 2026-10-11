@@ -1,18 +1,19 @@
 Running from: /war-override/jenkins.war
 webroot: /var/jenkins_home/war
-2026-10-11 12:44:24.961+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-2026-10-11 12:44:25.011+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-2026-10-11 12:44:25.141+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-2026-10-11 12:44:25.467+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-2026-10-11 12:44:25.498+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-2026-10-11 12:44:25.782+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-2026-10-11 12:44:25.904+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@30331109{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@2571066a{STARTED}}
-2026-10-11 12:44:25.909+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@393881f0{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-2026-10-11 12:44:25.910+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@4158debd{STARTING}[12.1.14,sto=0] @771ms
-2026-10-11 12:44:25.911+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-2026-10-11 12:44:25.989+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-2026-10-11 12:44:26.099+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-2026-10-11 12:44:26.432+0000 [id=30]	WARNING	h.i.i.InstallUncaughtExceptionHandler#handleException: Caught unhandled exception with ID 48a83947-e22f-4e4f-af20-dd117c21d262
+2026-10-11 18:17:34.053+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-10-11 18:17:34.104+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-10-11 18:17:34.146+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+2026-10-11 18:17:34.439+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+2026-10-11 18:17:34.473+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-10-11 18:17:34.732+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2026-10-11 18:17:34.856+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@30331109{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@2571066a{STARTED}}
+2026-10-11 18:17:34.875+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@393881f0{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-10-11 18:17:34.876+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@4158debd{STARTING}[12.1.14,sto=0] @731ms
+2026-10-11 18:17:34.877+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-10-11 18:17:35.067+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+2026-10-11 18:17:35.215+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-10-11 18:17:35.903+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-10-11 18:17:36.204+0000 [id=29]	WARNING	h.i.i.InstallUncaughtExceptionHandler#handleException: Caught unhandled exception with ID 5bd982cf-3caf-49bd-9547-2dd54910f770
 java.lang.AssertionError: class hudson.security.csrf.DefaultCrumbIssuer is missing its descriptor
 	at jenkins.model.Jenkins.getDescriptorOrDie(Jenkins.java:1574)
 	at hudson.security.csrf.CrumbIssuer.getDescriptor(CrumbIssuer.java:228)
@@ -65,138 +66,38 @@ java.lang.AssertionError: class hudson.security.csrf.DefaultCrumbIssuer is missi
 	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1789)
 	at Jenkins Main ClassLoader//org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
 	at Jenkins Main ClassLoader//org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:196)
 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
 	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
 	at java.base/java.lang.Thread.run(Unknown Source)
-2026-10-11 12:44:26.572+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-2026-10-11 12:44:26.801+0000 [id=30]	WARNING	o.e.jetty.ee9.nested.HttpChannel#handleException: /scriptText
-java.lang.AssertionError: class hudson.security.csrf.DefaultCrumbIssuer is missing its descriptor
-	at jenkins.model.Jenkins.getDescriptorOrDie(Jenkins.java:1574)
-	at hudson.security.csrf.CrumbIssuer.getDescriptor(CrumbIssuer.java:228)
-	at hudson.Functions.getCrumbRequestField(Functions.java:2199)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.apache.commons.jexl.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:258)
-	at org.apache.commons.jexl.parser.ASTMethod.execute(ASTMethod.java:104)
-	at org.apache.commons.jexl.parser.ASTReference.execute(ASTReference.java:83)
-	at org.apache.commons.jexl.parser.ASTReference.value(ASTReference.java:57)
-	at org.apache.commons.jexl.parser.ASTReferenceExpression.value(ASTReferenceExpression.java:51)
-	at org.apache.commons.jexl.ExpressionImpl.evaluate(ExpressionImpl.java:80)
-	at hudson.ExpressionFactory2$JexlExpression.evaluate(ExpressionFactory2.java:76)
-	at org.apache.commons.jelly.expression.ExpressionSupport.evaluateRecurse(ExpressionSupport.java:61)
-	at org.apache.commons.jelly.expression.ExpressionSupport.evaluateAsString(ExpressionSupport.java:46)
-	at org.kohsuke.stapler.jelly.ReallyStaticTagLibrary$1.buildAttributes(ReallyStaticTagLibrary.java:114)
-	at org.kohsuke.stapler.jelly.ReallyStaticTagLibrary$1.run(ReallyStaticTagLibrary.java:98)
-	at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)
-	at org.kohsuke.stapler.jelly.ReallyStaticTagLibrary$1.run(ReallyStaticTagLibrary.java:102)
-	at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)
-	at org.kohsuke.stapler.jelly.CallTagLibScript$1.run(CallTagLibScript.java:100)
-	at org.apache.commons.jelly.tags.define.InvokeBodyTag.doTag(InvokeBodyTag.java:91)
-	at org.apache.commons.jelly.impl.TagScript.run(TagScript.java:271)
-Caused: org.apache.commons.jelly.JellyTagException: jar:file:/var/jenkins_home/war/WEB-INF/lib/jenkins-core-2.586-SNAPSHOT.jar!/lib/layout/view.jelly:20:20: <d:invokeBody> class hudson.security.csrf.DefaultCrumbIssuer is missing its descriptor
-	at org.apache.commons.jelly.impl.TagScript.handleException(TagScript.java:744)
-	at org.apache.commons.jelly.impl.TagScript.run(TagScript.java:291)
-	at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)
-	at org.apache.commons.jelly.tags.core.CoreTagLibrary$2.run(CoreTagLibrary.java:105)
-	at org.kohsuke.stapler.jelly.CallTagLibScript.run(CallTagLibScript.java:121)
-	at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)
-	at org.apache.commons.jelly.tags.core.CoreTagLibrary$2.run(CoreTagLibrary.java:105)
-	at org.kohsuke.stapler.jelly.CallTagLibScript.run(CallTagLibScript.java:121)
-	at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)
-	at org.apache.commons.jelly.tags.core.CoreTagLibrary$2.run(CoreTagLibrary.java:105)
-	at org.kohsuke.stapler.jelly.JellyViewScript.run(JellyViewScript.java:98)
-	at org.kohsuke.stapler.jelly.DefaultScriptInvoker.invokeScript(DefaultScriptInvoker.java:67)
-	at org.kohsuke.stapler.jelly.DefaultScriptInvoker.invokeScript(DefaultScriptInvoker.java:55)
-	at org.kohsuke.stapler.jelly.ScriptInvoker.execute(ScriptInvoker.java:62)
-	at org.kohsuke.stapler.jelly.ScriptInvoker.execute(ScriptInvoker.java:42)
-	at org.kohsuke.stapler.Facet$1.dispatch(Facet.java:230)
-Caused: jakarta.servlet.ServletException
-	at org.kohsuke.stapler.Facet$1.dispatch(Facet.java:239)
-	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:800)
-	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:938)
-	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:721)
-	at hudson.init.impl.InstallUncaughtExceptionHandler.handleException(InstallUncaughtExceptionHandler.java:59)
-	at hudson.init.impl.InstallUncaughtExceptionHandler.lambda$init$0(InstallUncaughtExceptionHandler.java:33)
-	at org.kohsuke.stapler.UncaughtExceptionFilter.reportException(UncaughtExceptionFilter.java:37)
-	at org.kohsuke.stapler.UncaughtExceptionFilter.doFilter(UncaughtExceptionFilter.java:31)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
-	at hudson.util.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:85)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
-	at org.kohsuke.stapler.DiagnosticThreadNameFilter.doFilter(DiagnosticThreadNameFilter.java:31)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
-	at jenkins.security.SuspiciousRequestFilter.doFilter(SuspiciousRequestFilter.java:38)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.FilterHolder.doFilter(FilterHolder.java:202)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1640)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler.doHandle(ServletHandler.java:526)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.handle(ScopedHandler.java:125)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.security.SecurityHandler.handle(SecurityHandler.java:588)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HandlerWrapper.handle(HandlerWrapper.java:124)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextHandle(ScopedHandler.java:195)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.SessionHandler.doHandle(SessionHandler.java:612)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextHandle(ScopedHandler.java:193)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.doHandle(ContextHandler.java:1047)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:162)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.servlet.ServletHandler.doScope(ServletHandler.java:483)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:160)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.SessionHandler.doScope(SessionHandler.java:589)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.nextScope(ScopedHandler.java:160)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.doScope(ContextHandler.java:962)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ScopedHandler.handle(ScopedHandler.java:123)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler.handle(ContextHandler.java:1738)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1586)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel.dispatch(HttpChannel.java:737)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.HttpChannel.handle(HttpChannel.java:520)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextHandler$CoreToNestedHandler.handle(ContextHandler.java:3098)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1253)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:621)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.server.Server.handle(Server.java:197)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:804)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:420)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1789)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:492)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.epcRunTask(AdaptiveExecutionStrategy.java:428)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:401)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:255)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:196)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1240)
-	at Jenkins Main ClassLoader//org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
-	at java.base/java.lang.Thread.run(Unknown Source)
-2026-10-11 12:44:28.787+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-2026-10-11 12:44:28.802+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-2026-10-11 12:44:28.806+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-2026-10-11 12:44:29.117+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-2026-10-11 12:44:29.411+0000 [id=52]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-2026-10-11 12:44:29.972+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-2026-10-11 12:44:30.553+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-2026-10-11 12:44:31.032+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-2026-10-11 12:44:31.054+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-2026-10-11 12:44:31.057+0000 [id=51]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-2026-10-11 12:44:31.062+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-2026-10-11 12:44:31.067+0000 [id=47]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-2026-10-11 12:44:31.069+0000 [id=59]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_67ec6d98f08a5ffa4101fad79857599f5556963a22e2c21c454916d13509eddd duplicates one seen earlier for admin
-2026-10-11 12:44:31.210+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-2026-10-11 12:44:31.232+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-2026-10-11 12:44:41.080+0000 [id=89]	INFO	i.j.p.cnj.store.ClusterPlugins#releaseLock: Released the plugin restart lock: this controller is up to date with the cluster's plugin set
-2026-10-11 12:44:54.067+0000 [id=62]	INFO	i.j.p.cnj.store.ClusterPluginSet#doFilter: Refused /updateCenter/downgrade: Downgrades are not applied across a cloud-native Jenkins cluster (they restore a backup only this controller has). Install the older version instead.
-2026-10-11 12:44:54.273+0000 [id=30]	INFO	i.j.p.cnj.store.ClusterPluginSet#doFilter: Refused /manage/pluginManager/plugin/persistence-store-postgresql/makeDisabled: The store plugin (persistence-store-postgresql) is part of the controller image and cannot be changed at runtime.
-2026-10-11 12:45:41.097+0000 [id=76]	INFO	i.j.p.cnj.store.ClusterPlugins#apply: Applying the cluster's plugin set: cnj-broken LOAD 1.0
-2026-10-11 12:45:41.247+0000 [id=76]	WARNING	i.j.p.cnj.store.ClusterPlugins#reconcile: Could not apply the cluster's plugin set for cnj-broken
+2026-10-11 18:17:38.572+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-10-11 18:17:38.605+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-10-11 18:17:38.613+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-10-11 18:17:38.781+0000 [id=29]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-11 18:17:38.820+0000 [id=29]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-11 18:17:38.822+0000 [id=29]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-11 18:17:38.822+0000 [id=29]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-11 18:17:39.222+0000 [id=29]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+2026-10-11 18:17:39.466+0000 [id=29]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+2026-10-11 18:17:40.318+0000 [id=29]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+2026-10-11 18:17:40.962+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-10-11 18:17:41.578+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-10-11 18:17:41.596+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-10-11 18:17:41.596+0000 [id=50]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+2026-10-11 18:17:41.604+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-10-11 18:17:41.607+0000 [id=47]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+2026-10-11 18:17:41.614+0000 [id=57]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_ef0c67e365e8751baac8e259c509c48d724f8b98619e6fd2e8214425c016b981 duplicates one seen earlier for admin
+2026-10-11 18:17:41.899+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-10-11 18:17:41.912+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2026-10-11 18:17:51.626+0000 [id=70]	INFO	i.j.p.cnj.store.ClusterPlugins#releaseLock: Released the plugin restart lock: this controller is up to date with the cluster's plugin set
+2026-10-11 18:18:04.463+0000 [id=33]	INFO	i.j.p.cnj.store.ClusterPluginSet#doFilter: Refused /updateCenter/downgrade: Downgrades are not applied across a cloud-native Jenkins cluster (they restore a backup only this controller has). Install the older version instead.
+2026-10-11 18:18:04.577+0000 [id=27]	INFO	i.j.p.cnj.store.ClusterPluginSet#doFilter: Refused /manage/pluginManager/plugin/persistence-store-postgresql/makeDisabled: The store plugin (persistence-store-postgresql) is part of the controller image and cannot be changed at runtime.
+2026-10-11 18:18:51.652+0000 [id=86]	INFO	i.j.p.cnj.store.ClusterPlugins#apply: Applying the cluster's plugin set: cnj-broken LOAD 1.0
+2026-10-11 18:18:51.970+0000 [id=86]	WARNING	i.j.p.cnj.store.ClusterPlugins#reconcile: Could not apply the cluster's plugin set for cnj-broken
 java.io.IOException: The cluster's archive cluster-plugins/token-macro/ef98e47b467571e7968925ace1c40d1103baefe230f5d4cf44250769b7b6b42b.jpi has checksum ef98e47b467571e7968925ace1c40d1103baefe230f5d4cf44250769b7b6b42b, expected 00
-	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.fetch(ClusterPlugins.java:441)
-	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.apply(ClusterPlugins.java:367)
-	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.reconcile(ClusterPlugins.java:322)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.fetch(ClusterPlugins.java:471)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.apply(ClusterPlugins.java:397)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.ClusterPlugins.reconcile(ClusterPlugins.java:353)
 	at jenkins.security.ImpersonatingScheduledExecutorService.lambda$wrap$0(ImpersonatingScheduledExecutorService.java:65)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
 	at java.base/java.util.concurrent.FutureTask.runAndReset(Unknown Source)

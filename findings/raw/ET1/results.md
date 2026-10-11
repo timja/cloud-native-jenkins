@@ -1,4 +1,4 @@
-## ET1 results (2026-10-11T07:29Z)
+## ET1 results (2026-10-11T16:40Z)
 
 | | Check |
 |---|---|
@@ -23,10 +23,10 @@
 | ✅ | 4 mb/main shows the parameter on A and B |
 | ✅ | 4 mb/feature2 keeps its properties() parameter in the store |
 | ✅ | 4 mb/feature2 shows the parameter on A and B |
-| ℹ️ | scenario 4b: 80 builds rewrote jobs/race/config.xml; store version 416 → 1274; conflicts detected A=7 B=13 |
-| ℹ️ | scenario 4b: final default parameter value: store=b35b37 A=b35b37 B=b35b37 |
+| ℹ️ | scenario 4b: 80 builds rewrote jobs/race/config.xml; store version 392 → 1254; conflicts detected A=7 B=11 |
+| ℹ️ | scenario 4b: final default parameter value: store=b33b34b36b37b35 A=b33b34b36b37b35 B=b33b34b36b37b35 |
 | ✅ | 4b A, B and the store converge on the same job config |
-| ℹ️ | scenario 4b: 75 writes in the event log; the store holds the last one. Builds reach properties() out of trigger order, so it need not be a40/b40; a stale overwrite would have shown as a conflict |
+| ℹ️ | scenario 4b: 76 writes in the event log; the store holds the last one. Builds reach properties() out of trigger order, so it need not be a40/b40; a stale overwrite would have shown as a conflict |
 | ✅ | 6 re-index with no SCM changes bumps no stored versions (0 changed) |
 | ✅ | 5 fresh B loads /job/f2/job/inner from the store |
 | ✅ | 5 fresh B loads /job/props from the store |
