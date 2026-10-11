@@ -64,7 +64,7 @@ Pipeline logs use the existing external log storage API (JEP-210, `LogStorageFac
 - **A cluster view** (`/manage/cluster`) lists the controllers, running builds with their owners, agent channels with their holders, and plugin changes.
 
 ## Motivation
-- E2 showed that a disposable controller loses all build history, and that recreating a job reused `(name, #1)`. junit-sql then showed 4 tests instead of 2.
+- An experiment replaced a controller and its home with a fresh one against the same external stores. All build history was lost, and recreating a job reused `(name, #1)`, so junit-sql-storage showed the old build's tests with the new one's: 4 instead of 2.
 - In a cluster, each controller would otherwise show only the builds it ran.
 
 ## Reasoning
@@ -85,17 +85,17 @@ Pipeline logs use the existing external log storage API (JEP-210, `LogStorageFac
 
 ## Testing
 - **Core:** `BuildRecordsTest`, `RunningBuildsTest`, `RemoteBuildEventsTest`, `DeletedJobNumberingTest`.
-- **Store plugin:** `AzureBlobStoreTest` (Azurite: segments, moves keep append blobs appendable), `StoreFingerprintStorageTest`.
-- **Acceptance:**
-  - ET3: records, logs, placeholders, permalinks, deletion and numbering
-  - ET8: fingerprints, test results, discarders and the cluster view
-  - ET12: late files
-  - ET15: log rollover, also across a failover and a rename, and the REST API
+- **Store plugin:** `AzureBlobStoreTest` (against Azurite, the Azure Storage emulator: segments, moves keep append blobs appendable), `StoreFingerprintStorageTest`.
+- **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers against one store):
+  - `ET3-build-records.sh`: builds that ran on either controller are listed on both, with the same records, consoles, permalinks and placeholders for running builds; deletion and renames carry over, a fresh controller sees the whole history, and a recreated job never reuses a number
+  - `ET8-history.sh`: fingerprints, test results and build discarders work across controllers, and the cluster view lists both
+  - `ET12-remainder.sh`: a file added to a completed build's directory later is republished
+  - `ET15-logs-api-failover.sh`: a Pipeline log rolls over segments and stays whole across a failover and a rename, and the REST API lists builds running elsewhere
 
 ## Prototype implementation
-- **Core:** `cnj/t3-*`, `cnj/t8-*`, `cnj/t12-m1-remainder` and `cnj/t14-m1-resilience`.
-- **Store plugin:** `BuildRecords` publication hooks, `BlobLogStorage`, `StoreFingerprintStorage`, `ClusterView`.
-- **Findings:** `findings/ET3-build-records.md`, `ET8-history.md`, `ET12-remainder.md` and `ET15-logs-api-failover.md`.
+- **Core:** prototype branches of Jenkins core, `cnj/t3-*`, `cnj/t8-*`, `cnj/t12-m1-remainder` and `cnj/t14-m1-resilience`.
+- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `BuildRecords` publication hooks, `BlobLogStorage`, `StoreFingerprintStorage`, `ClusterView`.
+- **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET3-build-records.md`, `ET8-history.md`, `ET12-remainder.md` and `ET15-logs-api-failover.md`.
 
 ## References
 - JEP-207 (external build logging), JEP-210 (external log storage for Pipeline), JEP-226 (external fingerprint storage)

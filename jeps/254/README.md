@@ -35,14 +35,14 @@ Users and tools reach any controller through a load balancer with no stickiness.
 
 ### Agent channels
 - Each controller publishes which agents it holds a channel to.
-- Inbound agents reconnect to a failover URL (the load balancer) when their controller dies, and resume within about 40 s (ET7).
+- Inbound agents reconnect to a failover URL (the load balancer) when their controller dies, and resume within about 40 s, as measured in the acceptance tests.
 
 ### Builds running elsewhere in the UI and REST
 See JEP-251: the job page, the Builds card, the job's icon, and REST `builds`, `allBuilds` and `lastBuild` all include them.
 
 ## Motivation
-- **E5:** without stickiness, sessions were lost and crumbs failed across controllers, and an API token made on one controller gave `401` on another.
-- **E4, E5:** a running build and an agent belong to one JVM. Their pages must be answered by that JVM.
+- **Sessions.** In an experiment with two controllers behind a load balancer without stickiness, sessions were lost and crumbs failed across controllers, and an API token made on one controller gave `401` on another.
+- **Ownership.** The same experiment, and one that failed a controller over to another, showed that a running build and an agent belong to one JVM. Their pages must be answered by that JVM.
 
 ## Reasoning
 - **Stateless sign-in** reuses Jenkins' own remember-me mechanism, so the session model needs no new security primitive.
@@ -65,16 +65,16 @@ See JEP-251: the job page, the Builds card, the job's icon, and REST `builds`, `
 ## Testing
 - **Core:** `StatelessSessionsTest`, `RunningBuildsTest` (UI and REST).
 - **Store plugin:** `OwnerRoutingTest`, `ForwardingTest`, `ClusterViewTest`.
-- **Acceptance:**
-  - ET6: a browser journey through a round-robin load balancer, including losing a controller
-  - ET7: console follow, `input`, stop, replay, agent pages, reconnect, webhooks, `input` after failover
-  - ET15: REST and `lastBuild` for builds running elsewhere
+- **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers against one store):
+  - `ET6-static-state.sh`: a scripted browser signs in and works through a round-robin load balancer, including when a controller is lost
+  - `ET7-owner-routing.sh`: from the controller that does not run a build, its console can be followed, and `input`, stop and replay work; agent pages answer; an agent reconnects after its controller dies; webhooks; `input` after a failover
+  - `ET15-logs-api-failover.sh`: REST and `lastBuild` for builds running elsewhere
 
 ## Prototype implementation
-- **Core:** `cnj/t6-m6-stateless-sessions`, `cnj/t14-m1-resilience` (REST stand-in).
-- **Stapler:** `cnj/t6-m5-bound-id-prefix`.
-- **Store plugin:** `OwnerRoutingFilter`, `Forwarding`, `BoundRequestForwarder`, `ClusterCrumbIssuer`, `ChannelPublisher`.
-- **Findings:** `findings/ET6-static-state.md`, `ET7-owner-routing.md`.
+- **Core:** prototype branches of Jenkins core, `cnj/t6-m6-stateless-sessions`, `cnj/t14-m1-resilience` (REST stand-in).
+- **Stapler:** prototype branch `cnj/t6-m5-bound-id-prefix`.
+- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `OwnerRoutingFilter`, `Forwarding`, `BoundRequestForwarder`, `ClusterCrumbIssuer`, `ChannelPublisher`.
+- **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET6-static-state.md`, `ET7-owner-routing.md`.
 
 ## References
-- E5 (stateless HTTP) in this repository
+- `findings/E5-stateless-http.md` in the cloud-native-jenkins repository: two controllers behind a load balancer without stickiness

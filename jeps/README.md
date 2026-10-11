@@ -2,9 +2,9 @@
 
 Drafts of Jenkins Enhancement Proposals for the work in this repository. There is one per challenge in running N controllers active/active with ephemeral homes and all state in external services. They follow the [JEP template](https://github.com/jenkinsci/jep/blob/master/jep/0000/README.adoc) loosely, in Markdown.
 
-Nothing here has been submitted. They are numbered from 250, leaving a gap after the JEPs in [jenkinsci/jep](https://github.com/jenkinsci/jep/tree/master/jep), and laid out as there (`<number>/README`); the numbers are placeholders until submitted. Every claim about behaviour is backed by an acceptance experiment in `validation/experiments/ET*.sh`; its findings are on the branch named in each JEP's *Prototype* section.
+Nothing here has been submitted. They are numbered from 250, leaving a gap after the JEPs in [jenkinsci/jep](https://github.com/jenkinsci/jep/tree/master/jep), and laid out as there (`<number>/README`); the numbers are placeholders until submitted. Every claim about behaviour is backed by an acceptance experiment, a script in `validation/experiments/ET*.sh` that runs real controllers and checks the behaviour. Each JEP's *Testing* section says what its experiments check. Their findings documents, `findings/ET*.md`, are on the branches named in each JEP's *Prototype* section. The earlier experiments `findings/E1-*.md` to `E9-*.md`, which measured stock Jenkins, are on `main`.
 
-| Draft | Title | Covers (targets) |
+| Draft | Title | Covers (prototype targets) |
 |---|---|---|
 | [JEP-250](250/README.md) | Pluggable persistence store for `JENKINS_HOME` state | T1, T6, T11 |
 | [JEP-251](251/README.md) | Shared build records, logs and history | T3, T8, T12, T14 (logs) |
@@ -15,6 +15,8 @@ Nothing here has been submitted. They are numbered from 250, leaving a gap after
 | [JEP-256](256/README.md) | Cluster-wide plugin management | T13 |
 | [JEP-257](257/README.md) | Cloud provisioning across controllers | T9 |
 
+The prototype was built as numbered targets, T1 to T14, each planned in `targets/NN-*.md` (for example T3 is `targets/03-shared-build-records.md`). T14, resilience, is split across several JEPs.
+
 Dependencies: JEP-250 is the foundation of all the others. JEP-251 and JEP-253 need JEP-250. JEP-252 needs JEP-250 and JEP-251. JEP-254 needs JEP-250 and JEP-252. JEP-255 needs JEP-250 and JEP-252. JEP-256 and JEP-257 need JEP-255.
 
-**Upstreaming** is out of scope for now. The core changes are `@Restricted(Beta.class)` or `NoExternalUse` hooks on a local stack of branches, `cnj/t1-*` to `cnj/t14-*` in the core worktree. There are small hooks in workflow-cps, cloudbees-folder, lockable-resources, credentials, stapler and kubernetes. The store, routing and clustering live in one plugin, `impl/persistence-store-postgresql`.
+**Upstreaming** is out of scope for now. The core changes are `@Restricted(Beta.class)` or `NoExternalUse` hooks on a local stack of Jenkins core branches, `cnj/t1-*` to `cnj/t14-*`. Prototype branches are named `cnj/t<target>-m<milestone>-<topic>`, in core, in the plugins below and in this repository. There are small hooks in workflow-cps, cloudbees-folder, lockable-resources, credentials, stapler and kubernetes. The store, routing and clustering live in one plugin, `impl/persistence-store-postgresql`.

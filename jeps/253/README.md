@@ -48,9 +48,9 @@ Several controllers schedule the same jobs. Five pieces make that work:
 - **`@ClusterSingleton` periodic work.** A `PeriodicWorkCoordinator` runs work marked `@ClusterSingleton` on one controller only. In core these are the global build discarder, fingerprint cleanup and telemetry. Unmarked periodic work keeps running on every controller, since much of it is legitimately per JVM.
 
 ## Motivation
-- **E3:** on two controllers, a cron trigger fired 8 times in 3 minutes, and only the JENKINS-23152 directory check avoided a build number collision.
-- **E5:** an agent connects to one controller only, so where a build may start matters.
-- **E7:** 131 plugins (37 in the BOM) define periodic work, so blanket leader election would be wrong.
+- **Duplicate triggers.** In an experiment with two controllers sharing one home, a cron trigger fired 8 times in 3 minutes, and only the JENKINS-23152 directory check avoided a build number collision.
+- **Agents.** In an experiment with two controllers behind a load balancer, an inbound agent connected to one controller only, so where a build may start matters.
+- **Periodic work.** A bytecode scan of every plugin in the update center found 131 plugins (37 in the plugin BOM) that define periodic work, so blanket leader election would be wrong.
 
 ## Reasoning
 - **Claims instead of leader election** for triggers. There is no failover gap when a controller dies, since the next tick's claim simply goes to another controller.
@@ -60,7 +60,7 @@ Several controllers schedule the same jobs. Five pieces make that work:
 ## Backwards compatibility
 - Without a store, nothing changes.
 - `@ClusterSingleton` is opt-in, and plugins with periodic work that must run once need to adopt it.
-- **Known limitation:** an `upstream` trigger that fires from a build completing on another controller is not covered (ET2 did not test it).
+- **Known limitation:** an `upstream` trigger that fires from a build completing on another controller is not covered (the acceptance tests do not exercise it).
 
 ## Security
 Queue items keep their authentication (`QueueItemAuthenticator`), which is serialised with their actions and checked by the controller that starts them.
@@ -68,17 +68,17 @@ Queue items keep their authentication (`QueueItemAuthenticator`), which is seria
 ## Testing
 - **Core:** `StoredBuildNumberAssignerTest`, `ClusterCoordinationTest`, `SharedQueueTest`.
 - **Store plugin:** `PostgresPersistenceStoreTest` (claims, queue, counters).
-- **Acceptance:**
-  - ET2: unique numbers for 40 concurrent builds; cron, polling and indexing exactly once, also across failover and rejoin
-  - ET5: shared queue, folding, cancel, blocking, `lock`, `milestone`
-  - ET7: webhook fan-in
+- **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers against one store):
+  - `ET2-scheduling.sh`: unique numbers for 40 concurrent builds; cron, polling and indexing fire exactly once, also across failover and rejoin
+  - `ET5-shared-queue.sh`: one queue item for requests on both controllers, folding, cancel from either controller, blocking, `lock` and `milestone`
+  - `ET7-owner-routing.sh`: a webhook sent to one or both controllers starts exactly one build
 
 ## Prototype implementation
-- **Core:** `cnj/t2-*`, `cnj/t5-*`.
-- **lockable-resources:** `cnj/t5-m4-cluster-locks`.
-- **Store plugin:** `PostgresTriggerCoordinator`, `SharedQueueMaintenance`, `ClusterMilestoneStorage`.
-- **Findings:** `findings/ET2-scheduling.md`, `ET5-shared-queue.md`.
+- **Core:** prototype branches of Jenkins core, `cnj/t2-*`, `cnj/t5-*`.
+- **lockable-resources:** prototype branch `cnj/t5-m4-cluster-locks`.
+- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `PostgresTriggerCoordinator`, `SharedQueueMaintenance`, `ClusterMilestoneStorage`.
+- **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET2-scheduling.md`, `ET5-shared-queue.md`.
 
 ## References
-- E3 (shared home) in this repository
+- `findings/E3-shared-home.md` in the cloud-native-jenkins repository: two controllers on one shared home
 - `Job.BuildNumberAssigner` and `QueueIdStrategy` (existing Beta hooks)

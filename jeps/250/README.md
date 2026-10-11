@@ -56,20 +56,20 @@ Workspaces, caches, `plugins/`, `war/`, logs of Jenkins itself, per-controller f
 
 ## Motivation
 - The pluggable-storage effort (JEP-202, 207, 210, 212, 213, 226) externalised artifacts, Pipeline logs, fingerprints, test results and credential values. Configuration was never externalised, because `File` and `XmlFile` use runs right through core.
-- Without shared configuration there can be no second controller. Experiment E3 showed what a shared home does today: duplicate cron builds, colliding build numbers, lost configuration updates, and new jobs invisible to the other controller.
-- E9 showed that job configuration is runtime state: branch indexing creates and rewrites jobs, and `properties()` rewrites a job's own `config.xml`. So configuration-as-code alone cannot keep controllers consistent.
+- Without shared configuration there can be no second controller. An experiment ran two controllers on one shared home, as Jenkins is today. It gave duplicate cron builds, colliding build numbers (avoided only by a racy directory check), lost configuration updates, and new jobs invisible to the other controller.
+- A second experiment, with a multibranch Pipeline, showed that job configuration is runtime state: branch indexing creates and rewrites jobs, and `properties()` rewrites a job's own `config.xml`. So configuration-as-code alone cannot keep controllers consistent.
 
 ## Reasoning
-- **Routing at `XmlFile`** gives the widest coverage for the least change. E7 counted 42 plugins that call `XmlFile#getFile`; they get read-only snapshots, and their direct writes are reported by the compatibility page.
-- **A plugin, not a jar on the Winstone class path.** This was the original plan (E6 validated the class-loader seam). It was dropped because nothing needs the store before plugins load except the pre-plugin keys and the plugin set, and those are seeded or baked into the image.
-- **Versions plus merge, not locks.** Writers on different controllers rarely touch the same part of the same file. Merging keeps both changes in the common case. ET11 ran 30 rounds of deliberately simultaneous edits and lost none.
+- **Routing at `XmlFile`** gives the widest coverage for the least change. A bytecode scan of every plugin in the update center found 42 that call `XmlFile#getFile`; they get read-only snapshots, and their direct writes are reported by the compatibility page.
+- **A plugin, not a jar on the Winstone class path.** This was the original plan. An experiment found that such a jar has to go into the war's `WEB-INF/lib`, because Winstone's common library folder cannot see core's classes. The plan was dropped because nothing needs the store before plugins load except the pre-plugin keys and the plugin set, and those are seeded or baked into the image.
+- **Versions plus merge, not locks.** Writers on different controllers rarely touch the same part of the same file. Merging keeps both changes in the common case. In an acceptance test, two controllers saved different global settings at the same moment, 30 times, and no change was lost.
 - **The reference backend is Postgres**: a single table with CAS through `UPDATE … WHERE version = ?`, and an event log table plus `LISTEN/NOTIFY`. Its operational behaviour is covered in JEP-255.
 
 ## Backwards compatibility
 - Without a provider, nothing changes: `XmlFile` writes files as before. Every new API is `@Restricted(Beta.class)` or `NoExternalUse`.
 - With a store, plugins that persist through `XmlFile` (descriptors, `Saveable`s) are shared without changes.
 - Plugins that write files directly under the home keep that state per controller. The compatibility report lists them.
-- **Residual risk:** core setters assign fields without a lock and then save. A field assigned during a reload (milliseconds) can still be lost. This was not observed in 30 rounds; closing it fully needs setters that save under the object's lock.
+- **Residual risk:** core setters assign fields without a lock and then save. A field assigned during a reload (milliseconds) can still be lost. This was not observed in those 30 rounds; closing it fully needs setters that save under the object's lock.
 
 ## Security
 - Encryption at rest is the backend's job; envelope or KMS encryption is a follow-up. The store holds the same data as the home, so access to the store is equivalent to access to `JENKINS_HOME`.
@@ -79,13 +79,16 @@ Workspaces, caches, `plugins/`, `war/`, logs of Jenkins itself, per-controller f
 ## Testing
 - **Core:** `XmlFileTest`, `XmlMergeTest`, `ItemChangeApplierTest`, `StaticStateApplierTest`, `PersistenceStoreItem*Test` and `StaticStateRoutingTest`, using the in-memory store.
 - **Store plugin:** `PostgresPersistenceStoreTest` runs against Postgres in Testcontainers.
-- **Acceptance:** ET1 (shared item configuration, 2026-10-10), ET6 (static state: global configuration, credentials, users, nodes, keys) and ET11 (concurrent edits merged, inventory check).
+- **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers with empty homes against one store):
+  - `ET1-shared-items.sh`: jobs and folders created, edited, renamed and deleted on either controller, including multibranch jobs and `properties()`, are the same on both, and a fresh controller loads them all
+  - `ET6-static-state.sh`: global configuration, credentials, users, nodes and keys changed on one controller apply on the other without a restart
+  - `ET11-cross-cutting.sh`: simultaneous edits on two controllers are merged, and nothing a controller writes under its home is left unshared
 
 ## Prototype implementation
-- **Core:** `cnj/t1-*`, `cnj/t6-*` and `cnj/t11-m1-xml-merge`.
-- **Store plugin:** `cnj/t1-*` to `cnj/t11-m2-cross-cutting` in this repository.
-- **Findings:** `findings/ET1-shared-items.md`, `ET6-static-state.md` and `ET11-cross-cutting.md` on those branches.
+- **Core:** prototype branches of Jenkins core, `cnj/t1-*`, `cnj/t6-*` and `cnj/t11-m1-xml-merge`.
+- **Store plugin:** `impl/persistence-store-postgresql` in the cloud-native-jenkins repository, on its branches `cnj/t1-*` to `cnj/t11-m2-cross-cutting`.
+- **Findings:** documents in the cloud-native-jenkins repository, on those branches: `findings/ET1-shared-items.md`, `ET6-static-state.md` and `ET11-cross-cutting.md`.
 
 ## References
 - [Pluggable storage](https://www.jenkins.io/doc/book/using/pluggable-storage/), and JEP-202, 207, 210, 212, 213, 226
-- This repository's `ROADMAP.md`, R1 and Track S
+- `ROADMAP.md` in the cloud-native-jenkins repository: the sections on item configuration changed at runtime and on static state in the store

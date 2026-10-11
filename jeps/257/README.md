@@ -39,13 +39,13 @@ Unchanged: clouds use their configured credentials on each controller.
 
 ## Testing
 - **Store plugin:** `PostgresPersistenceStoreTest` (caps across controllers).
-- **Acceptance:** ET9, on kind:
+- **Acceptance:** `validation/experiments/ET9-kubernetes.sh` in the cloud-native-jenkins repository runs the Helm chart with two controllers on a local kind cluster and checks:
   - 6 Pipelines started at once through the Service with a cap of 4: at most 4 agent pods at once, one pod per build, each owned by the controller that ran the build
   - the controller running a build on a Kubernetes agent deleted: the build is adopted and retried on a new pod, and the old pod garbage-collected
   - no controller deleted another's pods
 
 ## Prototype implementation
-- **Core:** `cnj/t9-m1-provisioning-demand`.
-- **kubernetes plugin:** `cnj/t9-m2-cluster-cap`.
-- **Store plugin:** `ClusterAgentLimits`.
-- **Findings:** `findings/ET9-kubernetes.md`.
+- **Core:** prototype branch of Jenkins core `cnj/t9-m1-provisioning-demand`.
+- **kubernetes plugin:** prototype branch `cnj/t9-m2-cluster-cap`.
+- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `ClusterAgentLimits`.
+- **Findings:** `findings/ET9-kubernetes.md`, a document in the cloud-native-jenkins repository on its prototype branches.

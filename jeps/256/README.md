@@ -71,7 +71,7 @@ Plugin changes still need `Overall/Administer`. Archives are verified by checksu
 
 ## Testing
 - **Store plugin:** `ClusterPluginsTest` (version rule, actions, restart decisions, status wording), `ClusterPluginSetTest`, `ClusterUpdateSitesTest`.
-- **Acceptance:** ET13, on kind:
+- **Acceptance:** `validation/experiments/ET13-cluster-plugins.sh` in the cloud-native-jenkins repository runs the Helm chart with two controllers on a local kind cluster and checks:
   1. a live install with a dependency
   2. an upgrade by rolling restart, with a controller answering throughout and a Pipeline paused and resumed with its whole console
   3. a fresh pod catching up
@@ -79,6 +79,6 @@ Plugin changes still need `Overall/Administer`. Archives are verified by checksu
   5. the guards: downgrade, store plugin, corrupt archive
 
 ## Prototype implementation
-- **Store plugin** on `cnj/t13-m1-cluster-plugins`: `ClusterPlugins`, `ClusterUpdateCenterConfiguration`, `ClusterPluginSet`; `ClusterUpdateSites` on `cnj/t14-m1-resilience`.
-- **Core:** the restart reclaim on `cnj/t12-m1-remainder`.
-- **Findings:** `findings/ET13-cluster-plugins.md`.
+- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository) on prototype branch `cnj/t13-m1-cluster-plugins`: `ClusterPlugins`, `ClusterUpdateCenterConfiguration`, `ClusterPluginSet`; `ClusterUpdateSites` on `cnj/t14-m1-resilience`.
+- **Core:** the restart reclaim on prototype branch `cnj/t12-m1-remainder` of Jenkins core.
+- **Findings:** `findings/ET13-cluster-plugins.md`, a document in the cloud-native-jenkins repository on its prototype branches.
