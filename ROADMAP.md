@@ -94,7 +94,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Stateless sessions and crumbs | ❌ | E5. Sticky sessions are fine short-term (S0) |
 | Inventory regression check in CI | ❌ | `analyze_inventory.py` over E1 + E9 |
 | Ecosystem migration (E7 hit lists) | 🟡 measured | 513 / 2,117 plugins (99 of 358 BOM) |
-| Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | 🟡 branch (T9: helm chart, ET9; T10: upgrades, migration, backup) | |
+| Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | ✅ branch (T9: helm chart, ET9; T10: rolling upgrade, refused older peer, import, backup and restore, ET10). Open: builds running at backup time are not restored | |
 
 ## Track S: Static state in the store ← **Target 6: done (ET6 passes)**, [targets/06](targets/06-static-state.md), findings `findings/ET6-static-state.md` on `cnj/t6-m7-static-state`
 Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key material, users/tokens, credentials and nodes, plus cross-controller reload. Open: concurrent edits of one file are detected, but one of them can be lost (ET6 10); Target 11 merges them.
