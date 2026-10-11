@@ -1,0 +1,50 @@
+# JEP-CNJ-8: Cloud provisioning across controllers
+
+| | |
+|---|---|
+| **Status** | Draft |
+| **Type** | Standards |
+| **Created** | 2026-10-11 |
+| **Requires** | JEP-CNJ-4, JEP-CNJ-6 |
+
+## Abstract
+Several controllers provision agents from the same clouds (Kubernetes, and by extension EC2, Docker and others) without over-provisioning, exceeding cluster-wide caps, or killing each other's agents.
+- Demand is counted once, by the controller that will run the build.
+- Agents being provisioned are reserved for the item they are for.
+- Caps are enforced through counters in the store.
+- Cloud agents stay with the controller that provisioned them.
+
+## Specification
+- **Demand counted once.** `NodeProvisioner` counts a queue item's demand only on the controller that will start it: the one that requested it, or that claimed it in the shared queue (`QueueStartGate.countsForProvisioning`). Mirrored items elsewhere do not provision.
+- **Reservations.** An agent provisioned for a queue item reserves the item (`queue/reserved/<id>`). Other controllers wait for it instead of starting the item on an agent they would provision too.
+- **Caps** across the cluster, through counters in the store (`ClusterAgentLimits`, `jenkins_counters`): each controller's share of a cloud's and template's cap. The kubernetes plugin consults them (`ClusterProvisioningLimits`). A dead controller's share lapses with its membership.
+- **Cloud agents are local.** Nodes created by a cloud are not shared through the store (`PersistenceStores.keepLocal`). Each controller manages and cleans up only its own. Static nodes are shared (JEP-CNJ-1).
+- **Placement.** A Pipeline whose `node` label only another controller can serve is handed over to it (JEP-CNJ-3).
+
+## Motivation
+- `NodeProvisioner` runs per JVM: with a mirrored queue, every controller would provision for the same item.
+- Orphan cleanup in cloud plugins deletes agents it does not know, so one controller kills another's.
+
+## Reasoning
+- **Counting demand where the build will start** keeps each controller's `NodeProvisioner` unchanged in spirit, with no global planner.
+- **Keeping cloud agents local** matches how they are connected (one JVM holds the channel) and avoids shared mutable node state for short-lived agents.
+
+## Backwards compatibility
+- Without a store, nothing changes.
+- Clouds other than kubernetes need to consult the cluster caps to respect them, and their orphan cleanup must skip other controllers' agents.
+
+## Security
+Unchanged: clouds use their configured credentials on each controller.
+
+## Testing
+- **Store plugin:** `PostgresPersistenceStoreTest` (caps across controllers).
+- **Acceptance:** ET9, on kind:
+  - 6 Pipelines started at once through the Service with a cap of 4: at most 4 agent pods at once, one pod per build, each owned by the controller that ran the build
+  - the controller running a build on a Kubernetes agent deleted: the build is adopted and retried on a new pod, and the old pod garbage-collected
+  - no controller deleted another's pods
+
+## Prototype implementation
+- **Core:** `cnj/t9-m1-provisioning-demand`.
+- **kubernetes plugin:** `cnj/t9-m2-cluster-cap`.
+- **Store plugin:** `ClusterAgentLimits`.
+- **Findings:** `findings/ET9-kubernetes.md`.

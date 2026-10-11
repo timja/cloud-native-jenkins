@@ -58,8 +58,8 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 ## R3: Running builds ← **Target 4 done (ET4 passes): leases, fencing, adoption**, [targets/04](targets/04-running-build-failover.md)
 | Item | Status | Gap / evidence |
 |---|---|---|
-| Build ownership lease plus fencing | ✅ branch (T4: epoch-fenced leases; a partitioned owner stops itself, ET4 scenario 4) | E4: B adopted A's builds after a SIGKILL, but nothing stops a *partitioned* A from carrying on |
-| Adoption of a dead controller's builds | ✅ branch (T4: from store save points, no shared disk; ET4 scenarios 1-3) | E4: works today **only** via a shared disk (`program.dat`, flow nodes, `build.xml`). Must keep working via R4 |
+| Build ownership lease plus fencing | ✅ branch (T4: epoch-fenced leases; a partitioned owner stops itself, ET4 scenario 4; T14: fenced only on evidence from the database, so a store outage aborts nothing, ET14) | E4: B adopted A's builds after a SIGKILL, but nothing stops a *partitioned* A from carrying on |
+| Adoption of a dead controller's builds | ✅ branch (T4: from store save points, no shared disk; ET4 scenarios 1-3; T14: within 16-23 s of a kill, ET15 4) | E4: works today **only** via a shared disk (`program.dat`, flow nodes, `build.xml`). Must keep working via R4 |
 | Agent connections: which controller holds the channel, reconnecting after failover | ✅ branch (T7: the channel table names the holder; requests for the agent are forwarded there; reconnect through the failover URL in ~40 s, ET7 7) | E5: one controller only. E4: needed a stable DNS alias moved by hand |
 | Cloud provisioning across controllers (k8s, EC2, Docker) | ✅ branch (T9, kubernetes: demand counted once, reservations, cluster-wide caps, cloud agents per controller, ET9 3-5) | `NodeProvisioner` per JVM over-provisions. Orphan cleanup kills other controllers' agents |
 | Routing requests to the owner (live console, `input`, abort, replay) | ✅ branch (T7: `OwnerRoutingFilter`, ET7 1-6) | |
@@ -71,7 +71,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | `program.dat` (CPS continuation) in the store | ✅ branch (T4: save points via `ProgramSavedListener`, blob storage) | `CpsFlowExecution.java:1038`. E4: the resume source |
 | Flow nodes (`workflow/*.xml` → `workflow-completed/flowNodeStore.xml`) | ✅ branch (T4: shipped with save points; completed nodes in the T3 snapshot) | `FlowNodeStorage` is abstract, but `createStorage()` hard-codes the file implementations. E9: written continuously during each build |
 | Running-build index (`FlowExecutionList.xml`) | ✅ branch (T4: not needed; running placeholders and leases replace it, and the adopter registers the build) | E1, E4 |
-| Pipeline logs | ✅ branch (T3: `BlobLogStorage`, append blobs, shipped before each save point commits) | `LogStorageFactory` (Beta). E1: falls back to local `log` + `log-index` |
+| Pipeline logs | ✅ branch (T3: `BlobLogStorage`, append blobs, shipped before each save point commits; T14: segments past the 50,000-block limit, coalesced shipping, ET15 1-2) | `LogStorageFactory` (Beta). E1: falls back to local `log` + `log-index` |
 | Artifacts and stashes | ✅ | azure-artifact-manager against Azurite (E1, E2); artifact-manager-s3. Gap: identity collision (R5) |
 | Durability hints | ✅ by configuration (the chart and harness set `MAX_SURVIVABILITY`; `PERFORMANCE_OPTIMIZED` builds are not adopted) | `PERFORMANCE_OPTIMIZED` skips `program.dat` saves, so failover loses the build |
 | `milestone`, `lock`, `input` approvals, `build` step state | ✅ branch (T5: `milestone`, `lock`; T7: `input` from any controller, and after adoption, ET7 3 and 8; `build(wait)` pinned to its caller) | Held in memory or XML on the owning controller |
@@ -86,7 +86,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Per-build plugin data in the build dir | ✅ branch (T12: files added to a completed build are republished, ET12 2) | T3: the snapshot carries the build dir unchanged, so plugins keep working (junit file storage, ET3). E7: 212 plugins (32 BOM) use build-dir `File` APIs |
 | Fingerprints | ✅ branch (T8: `StoreFingerprintStorage`, merged concurrent updates, ET8 1-2) | `FingerprintStorage` (Beta), with no maintained external implementation |
 | Item deletion vs history (branch pruning) | ✅ by design (as on one controller) | T3: deleting a job deletes its stored history but keeps its numbers. E9: pruning a branch still deletes its history (by design, as on one controller) |
-| Build discarders, cluster-wide history views and REST | ✅ branch (T3 history and REST; T8: discarders with builds on both controllers, a cluster view, ET8 4-5) | |
+| Build discarders, cluster-wide history views and REST | ✅ branch (T3 history and REST; T8: discarders with builds on both controllers, a cluster view, ET8 4-5; T14: builds running elsewhere in `builds`, `allBuilds` and `lastBuild`, ET15 1) | |
 
 ## X: Cross-cutting
 | Item | Status | Notes |
@@ -94,6 +94,8 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Stateless sessions and crumbs | ✅ branch (T6: ET6 8; T7: requests reach the owner) | E5. Sticky sessions were the short-term answer (S0) |
 | Inventory regression check in CI | ✅ branch (T11: `/manage/cluster/compatibility` lists unshared writes; ET11 4-5 is the check; a CI workflow is to be added when pushed) | `analyze_inventory.py` over E1 + E9 |
 | Ecosystem migration (E7 hit lists) | 🟡 measured, reported (T11: the compatibility report names what each controller keeps unshared; the plugins themselves are not migrated) | 513 / 2,117 plugins (99 of 358 BOM) |
+| Store outages (Postgres or blob storage down, paused, restarted) | ✅ branch (T14: pooled connections with timeouts, fail fast, no takeovers after an outage, retried publication; builds complete once, pages answer, ET14) | Before: an outage longer than 20 s aborted every running build |
+| Scale (2,000 jobs, 2,000 builds, 50 running Pipelines, two controllers) | ✅ measured (T14: indexed prefix listings; warm pages under 1 s, ET16) | Beyond two controllers and 20k+ builds not measured |
 | Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | ✅ branch (T9: helm chart, ET9; T10: rolling upgrade, refused older peer, import, backup and restore, ET10; T12: builds running at backup time are resumed from their save points or closed as aborted, ET12 3) | |
 
 ## Track S: Static state in the store ← **Target 6: done (ET6 passes)**, [targets/06](targets/06-static-state.md), findings `findings/ET6-static-state.md` on `cnj/t6-m7-static-state`
@@ -101,7 +103,7 @@ Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key 
 
 ---
 
-## Targets 7-13 (planned and done 2026-10-11)
+## Targets 7-14 (planned and done 2026-10-11)
 | Target | Covers | Plan |
 |---|---|---|
 | 7 | R3 routing to the owner (console, `input`, stop, replay), agent channels, `input` after failover, R2 webhook fan-in | [targets/07](targets/07-owner-routing.md), ✅ done (ET7 passes) |
@@ -111,13 +113,15 @@ Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key 
 | 11 | R1/Track S concurrent edits (merge), X inventory check and ecosystem report | [targets/11](targets/11-cross-cutting.md), ✅ done (ET11 passes) |
 | 12 | Remainder: Pipeline placement by `node` label, per-build files rewritten after completion, restoring builds running at backup time | [targets/12](targets/12-remainder.md), ✅ done (ET12 passes) |
 | 13 | S0/Ops: cluster-wide plugin installs, upgrades and uninstalls (requested after manual testing) | [targets/13](targets/13-cluster-plugins.md), ✅ done (ET13 passes) |
+| 14 | Known edge cases: store outages, long logs, boot diagnostics, REST for builds elsewhere, faster failover, scale | [targets/14](targets/14-resilience.md), ✅ done (ET14-ET16 pass) |
 
 ## Where this leaves the roadmap (2026-10-11)
-Every planned target (1-13) is done, each with its acceptance experiment passing. ET1-ET12 pass on the Target 12 build (core `cnj/t12-m1-remainder`, plugin `cnj/t12-m2-remainder`); on the Target 13 build (the same core plus the restart reclaim fix, plugin `cnj/t13-m1-cluster-plugins`) ET13 passes twice and ET4, ET9, ET10 and ET12 were rerun and pass. Nothing is pushed; the branches are local stacks.
+Every planned target (1-14) is done, each with its acceptance experiment passing. On the Target 14 build (core `cnj/t14-m1-resilience` 82d1bbce2b, plugin `cnj/t14-m1-resilience`) the whole suite, ET1-ET16, passes in one sweep (ET9, ET10 and ET13 on kind). Nothing is pushed; the branches are local stacks. Draft JEPs for each part are in [jeps/](jeps/README.md).
 
 What remains is outside the cluster's own code:
 - **Ecosystem** (R1 plugin file access, X ecosystem migration): plugins that write state with `File` APIs instead of `XmlFile`/the store. The T11 compatibility report lists them per controller; migrating them is work in each plugin.
 - **Data keyed by job name** (R5 identity): an upstream plugin limitation, unchanged from a single controller.
+- **Known limits:** failover is bounded below by the member timeout (16-23 s measured); scale beyond two controllers is not measured.
 - **Upstreaming:** the core changes are `@Restricted(Beta)`/`NoExternalUse` hooks on a stack of branches, still to be proposed to jenkinsci/jenkins (and to workflow-cps, cloudbees-folder, lockable-resources, credentials, stapler and kubernetes for their small hooks).
 
 ## Order of work
