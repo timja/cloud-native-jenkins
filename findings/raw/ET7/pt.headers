@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Server: Jetty(12.1.14)
+Date: Sun, 11 Oct 2026 00:51:04 GMT
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+Set-Cookie: remember-me=YWRtaW46MTc5Mjg4OTQ2NDc0MzpkNTk4YzY5MzE0NGVmMTE0MmM5NTc4ODA5NzZmZTZhNzQ3MDEzODJlZDU0MmRlMjAzODU5MDU3N2U5OGVlMmJi; Path=/; Expires=Sun, 25 Oct 2026 00:51:04 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Security-Policy-Report-Only: base-uri 'none'; default-src 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; script-src 'report-sample' 'self' usage.jenkins.io; style-src 'report-sample' 'self' 'unsafe-inline';
+content-security-policy-report-only: base-uri 'none'; default-src 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; script-src 'report-sample' 'self' usage.jenkins.io; style-src 'report-sample' 'self' 'unsafe-inline';
+Content-Type: text/plain;charset=utf-8
+Date: Sun, 11 Oct 2026 00:51:04 GMT
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Server: Jetty(12.1.14)
+Set-Cookie: remember-me=YWRtaW46MTc5Mjg4OTQ2NDc2NTowOWU5NDNkZDM1Zjg0YzdkNzliNzc5NjIyMzhiNmY4NGU3NDBkYTZiZDc2MjBmZjU2M2YyMjAxZDMxZDdkMWZk; Path=/; Expires=Sun, 25 Oct 2026 00:51:04 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
+Vary: Accept-Encoding
+x-content-type-options: nosniff
+x-more-data: true
+x-text-size: 8104
+X-CNJ-Forwarded-From: jenkins-a
+Transfer-Encoding: chunked
+
