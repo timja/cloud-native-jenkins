@@ -4,5 +4,5 @@ workflow-cps cnj/t4-m1-program-saved-listener ebbf16c894195b7ab4edc85342624f8f47
 lockable-resources cnj/t5-m4-cluster-locks c7c8d9b1a1694c43330d296e724637acf598e6eb
 stapler cnj/t6-m5-bound-id-prefix 1a98d6c079bd247ce0820ce1a814e76ba1652884
 credentials cnj/t6-m4-credentials-reload 9f8514aa10e61e1f0c17f0be1d8f2e6548a29c5d
-cloud-native-jenkins b4c5c531880a516642f0b2dfaae8fd55a6e78aeb
+cloud-native-jenkins 32c3389d232e3dcecffdc92ac04e367cac8af16e
 kubernetes cnj/t9-m2-cluster-cap 600159e52f91138a4b2142026e5f06d798a61e14

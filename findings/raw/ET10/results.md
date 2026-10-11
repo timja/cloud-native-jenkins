@@ -1,4 +1,4 @@
-## ET10 results (2026-10-11T03:32Z)
+## ET10 results (2026-10-11T03:47Z)
 
 | | Check |
 |---|---|
@@ -10,16 +10,16 @@
 | ✅ | 2 a controller requiring protocol 99 refuses to start, saying why |
 | ℹ️ | 3 the old controller's quiet period: 3 |
 | ℹ️ | 3 the old home: oldp#1 team/fs#2 |
-| ℹ️ | 3 the importer's quiet period: 5; stored:  |
-| ℹ️ | 3 import: files imported 10, kept 3; builds imported 3, kept 0 |
+| ℹ️ | 3 the importer's quiet period: 3; stored: <quietPeriod>3</quietPeriod> |
+| ℹ️ | 3 import: files imported 13, kept 0; builds imported 3, kept 0 |
 | ✅ | 3 the folder's job and its builds are there (team/fs: 2) |
 | ✅ | 3 an old console |
 | ✅ | 3 an old Pipeline console |
 | ✅ | 3 old test results |
 | ✅ | 3 the old user's API token works |
 | ✅ | 3 the old credential decrypts in a build |
-| ℹ️ | 3 node and quiet period on ops-1: true/5 |
-| ❌ | 3 the old node and setting |
+| ℹ️ | 3 node and quiet period on ops-1: true/3 |
+| ✅ | 3 the old node and setting |
 | ℹ️ | 3 import again: files imported 0, kept 13; builds imported 0, kept 4 |
 | ✅ | 3 importing again changes nothing |
 | ℹ️ | 4 backed up cnj-ops/ops to /Users/timja/code/jenkins/cloud-native-jenkins-t10/validation/out/backup:  24K database, 128K blobs |
@@ -28,6 +28,6 @@
 | ✅ | 4 history and consoles (team/fs #1) |
 | ✅ | 4 users (the old token) |
 | ✅ | 4 credentials and nodes |
-| ℹ️ | 4 the build running at backup time, after restore: {"_class":"org.jenkinsci.plugins.workflow.job.WorkflowRun","building":false,"result":"SUCCESS"} |
+| ℹ️ | 4 the build running at backup time, after restore: {} |
 
-Failures: 1
+Failures: 0
