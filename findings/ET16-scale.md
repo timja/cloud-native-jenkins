@@ -29,7 +29,7 @@ B is replaced by a fresh container with an empty home, three times, with every p
 | with a runtime plugin | 12.9 s | 3.0 s | 7.2 s | 6.9 s |
 
 - **Median 16.4 s** to serving the API, and every fresh controller listed all 2,000 jobs. A warm `/` afterwards took 0.6 s.
-- **Builds are not fetched at start,** only when first looked at, so the history's size barely matters. The rest of the time to serving is the HTTP listener and loading items from the store.
+- **Builds are not fetched at start,** only when first looked at. Container and JVM start plus initialization account for 10–15 s of the total; the rest is the time from initialization ending to the first API answer, as polled by the script.
 - **A plugin installed at runtime adds nothing measurable.** The image is still the faster place for plugins: it avoids a restart when a plugin cannot load live.
 - **Persistent volumes would not help:** a fresh home costs these seconds, while a volume attached to a dead node can keep a replacement pod waiting for minutes (JEP-255).
 
