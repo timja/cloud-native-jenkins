@@ -82,11 +82,11 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Globally unique build identity | 🟡 | T3: cluster-wide numbering plus `nextBuildNumber` kept on delete, so `(name, #)` is never reused (ET3 scenario 8). Originally found in **E2: junit-sql showed 4 tests instead of 2** after a recreated job reused `(name, #1)`. Open: a per-item UUID for data keyed by name across renames |
 | `build.xml`, `RunMap` index, permalinks, `nextBuildNumber` | ✅ | T3: records in Postgres and snapshots in blob storage. Index merge, lazy materialisation, remote events and permalink hints ([ET3](findings/ET3-build-records.md) on `cnj/t3-m6-blob-and-log-storage`) |
 | Freestyle and other non-Pipeline logs | 🟡 | Completed freestyle logs travel in the snapshot (ET3 scenario 1). Pipeline logs go through `LogStorageFactory` into append blobs. Open: a live freestyle console needs a core log SPI (`Run.getLogFile` hard-codes files, `Run.java:1409`; JEP-207 deferred) |
-| Test results | 🟡 | junit-sql-storage works (E1). Per-controller cache, 10 min, no invalidation; identity collision |
+| Test results | ✅ branch (T8: the report is right on the other controller 0.1-0.2 s after completion; deleted results gone everywhere, ET8 3) | junit-sql-storage works (E1). Per-controller cache, 10 min, no invalidation; identity collision |
 | Per-build plugin data in the build dir | 🟡 | T3: the snapshot carries the build dir unchanged, so plugins keep working (junit file storage, ET3). Open: files rewritten after completion without a `build.xml` save. E7: 212 plugins (32 BOM) use build-dir `File` APIs |
-| Fingerprints | 🟡 | `FingerprintStorage` (Beta), with no maintained external implementation |
+| Fingerprints | ✅ branch (T8: `StoreFingerprintStorage`, merged concurrent updates, ET8 1-2) | `FingerprintStorage` (Beta), with no maintained external implementation |
 | Item deletion vs history (branch pruning) | 🟡 | T3: deleting a job deletes its stored history but keeps its numbers. E9: pruning a branch still deletes its history (by design, as on one controller) |
-| Build discarders, cluster-wide history views and REST | ❌ | |
+| Build discarders, cluster-wide history views and REST | ✅ branch (T3 history and REST; T8: discarders with builds on both controllers, a cluster view, ET8 4-5) | |
 
 ## X: Cross-cutting
 | Item | Status | Notes |
