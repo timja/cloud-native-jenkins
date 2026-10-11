@@ -6,8 +6,8 @@ kept   jobs/oldp/nextBuildNumber
 kept   jobs/team/config.xml
 kept   jobs/team/jobs/fs/config.xml
 kept   jobs/team/jobs/fs/nextBuildNumber
-kept   users/olduser_0cc20cf8d8ecfc0b5b797eb23c0f92871fb5841f2479eda2ca6958342378e65d/config.xml
-kept   users/admin_84ec110cfd62f7c76ba790f627a85a918bec16992e5c2a9c5605720c8d92bb78/config.xml
+kept   users/admin_8f8dba9cf1391a752259a9cbd81cbe0ad84682c1d307452b91c9c3a643253351/config.xml
+kept   users/olduser_051dcc7b3521f647dbe77be7d751ed9416c61bfa3d832cb4c301f634cc1a36b9/config.xml
 kept   hudson.plugins.copyartifact.CopyArtifactConfiguration.xml
 kept   nodes/oldnode/config.xml
 kept   hudson.plugins.git.GitTool.xml

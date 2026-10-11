@@ -1,4 +1,4 @@
-## ET10 results (2026-10-11T09:32Z)
+## ET10 results (2026-10-11T13:10Z)
 
 | | Check |
 |---|---|
@@ -22,12 +22,12 @@
 | ✅ | 3 the old node and setting |
 | ℹ️ | 3 import again: files imported 0, kept 13; builds imported 0, kept 4 |
 | ✅ | 3 importing again changes nothing |
-| ℹ️ | 4 backed up cnj-ops/ops to /Users/timja/code/jenkins/cloud-native-jenkins-t12/validation/out/backup:  24K database, 128K blobs |
+| ℹ️ | 4 backed up cnj-ops/ops to /Users/timja/code/jenkins/cloud-native-jenkins-t13/validation/out/backup:  24K database,  96K blobs |
 | ✅ | 4 the restored cluster comes up |
 | ✅ | 4 every job is there (during-backup,oldp,team,usecred) |
 | ✅ | 4 history and consoles (team/fs #1) |
 | ✅ | 4 users (the old token) |
 | ✅ | 4 credentials and nodes |
-| ℹ️ | 4 the build running at backup time, after restore: {"_class":"org.jenkinsci.plugins.workflow.job.WorkflowRun","building":false,"result":"SUCCESS"} |
+| ℹ️ | 4 the build running at backup time, after restore: {} |
 
 Failures: 0

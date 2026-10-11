@@ -33,3 +33,22 @@
 | ✅ | 2 A has the pending input |
 | ✅ | 2 approved on A: the build completes with SUCCESS |
 | ✅ | 2 the agent step after input ran |
+| ✅ | 4 B adopts while A is paused |
+| ℹ️ | 4 adopted 25 s after the pause |
+| ✅ | 4 A notices it lost the build |
+| ✅ | 4 the build completes on B with SUCCESS |
+| ✅ | 4 only B published the record |
+| ✅ | 4 A lists B's build (its own copy discarded) |
+| ✅ | 4 A's console is B's (no appends from A after the fence) |
+| ✅ | 4 every beat is in the log |
+| ✅ | 5 completes on A with SUCCESS |
+| ✅ | 5 B never showed it as anything but running on A |
+| ✅ | 5 B never adopted it |
+| ✅ | 6 B removes its placeholder |
+| ✅ | 6 B does not run it: it is closed as aborted (Target 12) |
+| ℹ️ | 7 200 echo steps: 947 ms; placeholder writes (save point commits + start/end): 2 |
+| ℹ️ | 7 the same with PERFORMANCE_OPTIMIZED (no save points): 214 ms |
+| ℹ️ | 7 builds with save points left in blob storage: none |
+| ✅ | 7 no save points left in blob storage after completion |
+
+Failures: 0

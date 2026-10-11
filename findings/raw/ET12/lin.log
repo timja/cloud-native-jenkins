@@ -1,26 +1,26 @@
-Oct 11, 2026 8:27:24 AM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+Oct 11, 2026 12:57:32 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
 INFO: Using /home/jenkins/agent/remoting as a remoting work directory
-Oct 11, 2026 8:27:24 AM org.jenkinsci.remoting.engine.WorkDirManager setupLogging
+Oct 11, 2026 12:57:32 PM org.jenkinsci.remoting.engine.WorkDirManager setupLogging
 INFO: Both error and output logs will be printed to /home/jenkins/agent/remoting
-Oct 11, 2026 8:27:24 AM hudson.remoting.Launcher createEngine
+Oct 11, 2026 12:57:32 PM hudson.remoting.Launcher createEngine
 INFO: Setting up agent: lin
-Oct 11, 2026 8:27:24 AM hudson.remoting.Engine startEngine
+Oct 11, 2026 12:57:32 PM hudson.remoting.Engine startEngine
 INFO: Using Remoting version: 3391.va_37fa_a_305d6d
-Oct 11, 2026 8:27:24 AM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+Oct 11, 2026 12:57:32 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
 INFO: Using /home/jenkins/agent/remoting as a remoting work directory
-Oct 11, 2026 8:27:25 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:57:32 PM hudson.remoting.Launcher$CuiListener status
 INFO: WebSocket connection open
-Oct 11, 2026 8:27:25 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:57:32 PM hudson.remoting.Launcher$CuiListener status
 INFO: Connected
-Oct 11, 2026 8:28:03 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:13 PM hudson.remoting.Launcher$CuiListener status
 INFO: Read side closed
-Oct 11, 2026 8:28:03 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:13 PM hudson.remoting.Launcher$CuiListener status
 INFO: Terminated
-Oct 11, 2026 8:28:03 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:13 PM hudson.remoting.Launcher$CuiListener status
 INFO: Performing onReconnect operation.
-Oct 11, 2026 8:28:03 AM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
-INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@3e6baa5b
-Oct 11, 2026 8:28:03 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+Oct 11, 2026 12:58:13 PM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
+INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@1f85baea
+Oct 11, 2026 12:58:14 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 WARNING: Failed to unexport ProxyOutputStream
 hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@6882c199:lin": channel is already closed
 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -40,7 +40,7 @@ Caused by: hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Chan
 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 	at java.base/java.lang.Thread.run(Unknown Source)
 
-Oct 11, 2026 8:28:03 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+Oct 11, 2026 12:58:14 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 WARNING: Failed to unexport ProxyOutputStream
 hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@6882c199:lin": channel is already closed
 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -60,7 +60,7 @@ Caused by: hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Chan
 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 	at java.base/java.lang.Thread.run(Unknown Source)
 
-Oct 11, 2026 8:28:03 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+Oct 11, 2026 12:58:14 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 WARNING: Failed to unexport ProxyOutputStream
 hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@6882c199:lin": channel is already closed
 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -80,7 +80,7 @@ Caused by: hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Chan
 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 	at java.base/java.lang.Thread.run(Unknown Source)
 
-Oct 11, 2026 8:28:03 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+Oct 11, 2026 12:58:14 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 WARNING: Failed to unexport ProxyOutputStream
 hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@6882c199:lin": channel is already closed
 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -100,17 +100,17 @@ Caused by: hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Chan
 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 	at java.base/java.lang.Thread.run(Unknown Source)
 
-Oct 11, 2026 8:28:03 AM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+Oct 11, 2026 12:58:14 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
 INFO: Using /home/jenkins/agent/remoting as a remoting work directory
-Oct 11, 2026 8:28:03 AM org.jenkinsci.remoting.engine.WorkDirManager setupLogging
+Oct 11, 2026 12:58:14 PM org.jenkinsci.remoting.engine.WorkDirManager setupLogging
 INFO: Both error and output logs will be printed to /home/jenkins/agent/remoting
-Oct 11, 2026 8:28:03 AM hudson.remoting.Launcher createEngine
+Oct 11, 2026 12:58:14 PM hudson.remoting.Launcher createEngine
 INFO: Setting up agent: lin
-Oct 11, 2026 8:28:03 AM hudson.remoting.Engine startEngine
+Oct 11, 2026 12:58:14 PM hudson.remoting.Engine startEngine
 INFO: Using Remoting version: 3391.va_37fa_a_305d6d
-Oct 11, 2026 8:28:03 AM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+Oct 11, 2026 12:58:14 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
 INFO: Using /home/jenkins/agent/remoting as a remoting work directory
-Oct 11, 2026 8:28:03 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:14 PM hudson.remoting.Launcher$CuiListener status
 INFO: http://jenkins-b:8080/login is not ready
 java.net.UnknownHostException: jenkins-b
 	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
@@ -135,9 +135,9 @@ java.net.UnknownHostException: jenkins-b
 	at hudson.remoting.Engine.runWebSocket(Engine.java:821)
 	at hudson.remoting.Engine.run(Engine.java:560)
 
-Oct 11, 2026 8:28:03 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:14 PM hudson.remoting.Launcher$CuiListener status
 INFO: Waiting 1 second before retry
-Oct 11, 2026 8:28:04 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:15 PM hudson.remoting.Launcher$CuiListener status
 INFO: http://jenkins-b:8080/login is not ready
 java.net.UnknownHostException: jenkins-b
 	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
@@ -162,9 +162,9 @@ java.net.UnknownHostException: jenkins-b
 	at hudson.remoting.Engine.runWebSocket(Engine.java:821)
 	at hudson.remoting.Engine.run(Engine.java:560)
 
-Oct 11, 2026 8:28:04 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:15 PM hudson.remoting.Launcher$CuiListener status
 INFO: Waiting 3 seconds before retry
-Oct 11, 2026 8:28:07 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:18 PM hudson.remoting.Launcher$CuiListener status
 INFO: http://jenkins-b:8080/login is not ready
 java.net.UnknownHostException: jenkins-b
 	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
@@ -189,9 +189,9 @@ java.net.UnknownHostException: jenkins-b
 	at hudson.remoting.Engine.runWebSocket(Engine.java:821)
 	at hudson.remoting.Engine.run(Engine.java:560)
 
-Oct 11, 2026 8:28:07 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:18 PM hudson.remoting.Launcher$CuiListener status
 INFO: Waiting 7 seconds before retry
-Oct 11, 2026 8:28:14 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:25 PM hudson.remoting.Launcher$CuiListener status
 INFO: http://jenkins-b:8080/login is not ready
 java.net.UnknownHostException: jenkins-b
 	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
@@ -216,9 +216,9 @@ java.net.UnknownHostException: jenkins-b
 	at hudson.remoting.Engine.runWebSocket(Engine.java:821)
 	at hudson.remoting.Engine.run(Engine.java:560)
 
-Oct 11, 2026 8:28:14 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:25 PM hudson.remoting.Launcher$CuiListener status
 INFO: Waiting 10 seconds before retry
-Oct 11, 2026 8:28:25 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:35 PM hudson.remoting.Launcher$CuiListener status
 INFO: http://jenkins-b:8080/login is not ready
 java.net.UnknownHostException: jenkins-b
 	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
@@ -243,9 +243,21 @@ java.net.UnknownHostException: jenkins-b
 	at hudson.remoting.Engine.runWebSocket(Engine.java:821)
 	at hudson.remoting.Engine.run(Engine.java:560)
 
-Oct 11, 2026 8:28:25 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:35 PM hudson.remoting.Launcher$CuiListener status
 INFO: Waiting 10 seconds before retry
-Oct 11, 2026 8:28:37 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:48 PM hudson.remoting.Launcher$CuiListener status
 INFO: http://jenkins-b:8080/login is not ready: 503
-Oct 11, 2026 8:28:37 AM hudson.remoting.Launcher$CuiListener status
+Oct 11, 2026 12:58:48 PM hudson.remoting.Launcher$CuiListener status
 INFO: Waiting 10 seconds before retry
+Oct 11, 2026 12:58:59 PM hudson.remoting.Engine$1HeaderHandler afterResponse
+WARNING: Did not receive X-Remoting-Capability header
+Oct 11, 2026 12:58:59 PM hudson.remoting.Launcher$CuiListener status
+INFO: Failed to connect: Handshake error.
+Oct 11, 2026 12:58:59 PM hudson.remoting.Launcher$CuiListener status
+INFO: Waiting 1 second before retry
+Oct 11, 2026 12:59:00 PM hudson.remoting.Engine$1HeaderHandler afterResponse
+WARNING: Did not receive X-Remoting-Capability header
+Oct 11, 2026 12:59:00 PM hudson.remoting.Launcher$CuiListener status
+INFO: Failed to connect: Handshake error.
+Oct 11, 2026 12:59:00 PM hudson.remoting.Launcher$CuiListener status
+INFO: Waiting 3 seconds before retry
