@@ -51,7 +51,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Webhook fan-in (an event delivered to any controller is handled once) | ✅ branch (T7: `notifyCommit` to A, B or both, and a multibranch event: one build, ET7 9) | GitHub/GitLab/Bitbucket hooks arrive at one controller through the LB |
 | Atomic, cluster-wide build numbers | ✅ branch | `Job.BuildNumberAssigner` (Beta) exists; the default is `synchronized(job)` + file (`Job.java:378`). E3: only the JENKINS-23152 directory check avoided a collision |
 | Queue: shared or partitioned, cluster-unique ids | ✅ branch (T5: mirrored shared queue with claims, folding, cancel and `queue/item` anywhere; [targets/05](targets/05-shared-queue.md)) | In-memory under one lock (`Queue.java:352`); `queue.xml` is written only at shutdown (E1). `QueueIdStrategy` (Beta) exists |
-| Placing builds on a controller (load balancing, affinity to connected agents) | 🟡 branch (T5: the requesting controller goes first, then whoever can run it; label-bound jobs go where the agent is. Open: Pipeline `node` labels) | E5: an agent connects to one controller only |
+| Placing builds on a controller (load balancing, affinity to connected agents) | ✅ branch (T5: the requesting controller goes first, then whoever can run it; label-bound jobs go where the agent is. T12: a Pipeline whose `node` label only another controller has is handed over to it and resumes there, ET12 1) | E5: an agent connects to one controller only |
 | Quiet period, `build` step, upstream/downstream, `lock` (lockable-resources) | ✅ branch (T5: cluster-wide quiet period and folding, blocking, `milestone`, `lock`; `build(wait)` pinned to its caller) | Cross-build coordination happens in one JVM |
 | Cluster-singleton `PeriodicWork` (declared, not blanket leader election) | ✅ branch (T5: `@ClusterSingleton` + `PeriodicWorkCoordinator`) | E7: 131 plugins (37 BOM) define periodic work, and much of it is legitimately per-JVM |
 
@@ -79,11 +79,11 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 ## R5: Build records and history ← **Target 3 done (ET3 passes): shared completed builds, logs, running placeholders**, [targets/03](targets/03-shared-build-records.md)
 | Item | Status | Gap / evidence |
 |---|---|---|
-| Globally unique build identity | 🟡 | T3: cluster-wide numbering plus `nextBuildNumber` kept on delete, so `(name, #)` is never reused (ET3 scenario 8). Originally found in **E2: junit-sql showed 4 tests instead of 2** after a recreated job reused `(name, #1)`. Open: a per-item UUID for data keyed by name across renames |
+| Globally unique build identity | ✅ branch for the cluster; 🟡 upstream for data keyed by job name | T3: cluster-wide numbering plus `nextBuildNumber` kept on delete, so `(name, #)` is never reused (ET3 scenario 8). Originally found in **E2: junit-sql showed 4 tests instead of 2** after a recreated job reused `(name, #1)`. Open, upstream: plugins that key their own data by job name (junit-sql-storage) lose it on a rename, as on one controller; a per-item UUID in core would let them key by identity instead |
 | `build.xml`, `RunMap` index, permalinks, `nextBuildNumber` | ✅ | T3: records in Postgres and snapshots in blob storage. Index merge, lazy materialisation, remote events and permalink hints ([ET3](findings/ET3-build-records.md) on `cnj/t3-m6-blob-and-log-storage`) |
 | Freestyle and other non-Pipeline logs | ✅ branch (T3: completed logs in the snapshot; T7: the live console is forwarded to the owner, ET7 6) | Completed freestyle logs travel in the snapshot (ET3 scenario 1). Pipeline logs go through `LogStorageFactory` into append blobs. Open: a live freestyle console needs a core log SPI (`Run.getLogFile` hard-codes files, `Run.java:1409`; JEP-207 deferred) |
 | Test results | ✅ branch (T8: the report is right on the other controller 0.1-0.2 s after completion; deleted results gone everywhere, ET8 3) | junit-sql-storage works (E1). Per-controller cache, 10 min, no invalidation; identity collision |
-| Per-build plugin data in the build dir | 🟡 | T3: the snapshot carries the build dir unchanged, so plugins keep working (junit file storage, ET3). Open: files rewritten after completion without a `build.xml` save. E7: 212 plugins (32 BOM) use build-dir `File` APIs |
+| Per-build plugin data in the build dir | ✅ branch (T12: files added to a completed build are republished, ET12 2) | T3: the snapshot carries the build dir unchanged, so plugins keep working (junit file storage, ET3). E7: 212 plugins (32 BOM) use build-dir `File` APIs |
 | Fingerprints | ✅ branch (T8: `StoreFingerprintStorage`, merged concurrent updates, ET8 1-2) | `FingerprintStorage` (Beta), with no maintained external implementation |
 | Item deletion vs history (branch pruning) | ✅ by design (as on one controller) | T3: deleting a job deletes its stored history but keeps its numbers. E9: pruning a branch still deletes its history (by design, as on one controller) |
 | Build discarders, cluster-wide history views and REST | ✅ branch (T3 history and REST; T8: discarders with builds on both controllers, a cluster view, ET8 4-5) | |
@@ -94,22 +94,30 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Stateless sessions and crumbs | ✅ branch (T6: ET6 8; T7: requests reach the owner) | E5. Sticky sessions were the short-term answer (S0) |
 | Inventory regression check in CI | ✅ branch (T11: `/manage/cluster/compatibility` lists unshared writes; ET11 4-5 is the check; a CI workflow is to be added when pushed) | `analyze_inventory.py` over E1 + E9 |
 | Ecosystem migration (E7 hit lists) | 🟡 measured, reported (T11: the compatibility report names what each controller keeps unshared; the plugins themselves are not migrated) | 513 / 2,117 plugins (99 of 358 BOM) |
-| Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | ✅ branch (T9: helm chart, ET9; T10: rolling upgrade, refused older peer, import, backup and restore, ET10). Open: builds running at backup time are not restored | |
+| Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | ✅ branch (T9: helm chart, ET9; T10: rolling upgrade, refused older peer, import, backup and restore, ET10; T12: builds running at backup time are resumed from their save points or closed as aborted, ET12 3) | |
 
 ## Track S: Static state in the store ← **Target 6: done (ET6 passes)**, [targets/06](targets/06-static-state.md), findings `findings/ET6-static-state.md` on `cnj/t6-m7-static-state`
 Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key material, users/tokens, credentials and nodes, plus cross-controller reload. Concurrent edits of one file are merged (Target 11, ET11).
 
 ---
 
-## Remaining targets (planned 2026-10-11)
+## Targets 7-12 (planned and done 2026-10-11)
 | Target | Covers | Plan |
 |---|---|---|
-| 7 | R3 routing to the owner (console, `input`, stop, replay), agent channels, `input` after failover, R2 webhook fan-in | [targets/07](targets/07-owner-routing.md) |
-| 8 | R5 remainder: fingerprints in the store, test results, discarders, a cluster view | [targets/08](targets/08-history-at-scale.md) |
-| 9 | X Ops (helm chart on kind), R3 cloud provisioning across controllers | [targets/09](targets/09-kubernetes.md) |
-| 10 | X Ops: rolling upgrades with mixed versions, importing a file-based home, backup and restore | [targets/10](targets/10-operations.md) |
-| 11 | R1/Track S concurrent edits (merge), X inventory check and ecosystem report | [targets/11](targets/11-cross-cutting.md) |
-| 12 | Remainder: Pipeline placement by `node` label, per-build files rewritten after completion, restoring builds running at backup time | [targets/12](targets/12-remainder.md) |
+| 7 | R3 routing to the owner (console, `input`, stop, replay), agent channels, `input` after failover, R2 webhook fan-in | [targets/07](targets/07-owner-routing.md), ✅ done (ET7 passes) |
+| 8 | R5 remainder: fingerprints in the store, test results, discarders, a cluster view | [targets/08](targets/08-history-at-scale.md), ✅ done (ET8 passes) |
+| 9 | X Ops (helm chart on kind), R3 cloud provisioning across controllers | [targets/09](targets/09-kubernetes.md), ✅ done (ET9 passes) |
+| 10 | X Ops: rolling upgrades with mixed versions, importing a file-based home, backup and restore | [targets/10](targets/10-operations.md), ✅ done (ET10 passes) |
+| 11 | R1/Track S concurrent edits (merge), X inventory check and ecosystem report | [targets/11](targets/11-cross-cutting.md), ✅ done (ET11 passes) |
+| 12 | Remainder: Pipeline placement by `node` label, per-build files rewritten after completion, restoring builds running at backup time | [targets/12](targets/12-remainder.md), ✅ done (ET12 passes) |
+
+## Where this leaves the roadmap (2026-10-11)
+Every planned target (1-12) is done, each with its acceptance experiment passing, and ET1-ET12 all pass on the final build (core `cnj/t12-m1-remainder`, plugin `cnj/t12-m2-remainder`). Nothing is pushed; the branches are local stacks.
+
+What remains is outside the cluster's own code:
+- **Ecosystem** (R1 plugin file access, X ecosystem migration): plugins that write state with `File` APIs instead of `XmlFile`/the store. The T11 compatibility report lists them per controller; migrating them is work in each plugin.
+- **Data keyed by job name** (R5 identity): an upstream plugin limitation, unchanged from a single controller.
+- **Upstreaming:** the core changes are `@Restricted(Beta)`/`NoExternalUse` hooks on a stack of branches, still to be proposed to jenkinsci/jenkins (and to workflow-cps, cloudbees-folder, lockable-resources, credentials, stapler and kubernetes for their small hooks).
 
 ## Order of work
 1. **R1** (Target 1): the persistence SPI plus shared item config. Every runtime tier keys off "which jobs exist and what they say".

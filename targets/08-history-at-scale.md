@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | R5 (fingerprints, test results, build discarders, cluster-wide views and REST) |
-| **Status** | Planned |
+| **Status** | **Done** (2026-10-11): ET8 passes 22/22, see [08-progress](08-progress.md) |
 | **Depends on** | T3 (build records), T5 (cluster singletons), T7 (owner routing) |
 | **Evidence** | [E2](../findings/E2-disposable-controller.md) (junit-sql identity collision), [E7](../findings/E7-ecosystem-scan.md), ET3 |
 

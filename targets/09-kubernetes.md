@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | X Ops (helm), R3 (cloud provisioning across controllers) |
-| **Status** | Planned |
+| **Status** | **Done** (2026-10-11): ET9 passes 30/30, see [09-progress](09-progress.md) |
 | **Depends on** | T1–T8 (everything a controller needs is in Postgres and blob storage) |
 | **Environment** | `kind` (v0.23.0 CLI) with the local `kindest/node:v1.37.0` image. Images are loaded with `kind load docker-image`, never pulled: `cnj/jenkins:*`, `postgres:16`, `azurite:3.34.0`, `jenkins/inbound-agent:latest-jdk21` |
 

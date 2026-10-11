@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | R3 (routing to the owner, agent connections), R4 (`input` approvals), R2 (webhook fan-in) |
-| **Status** | Planned |
+| **Status** | **Done** (2026-10-11): ET7 passes 35/35, see [07-progress](07-progress.md) |
 | **Depends on** | T3 (running placeholders), T4 (leases, adoption), T5 (shared queue, stop requests), T6 (membership with internal URLs, request forwarding, stateless sessions) |
 | **Evidence** | [E4](../findings/E4-pipeline-failover.md) (agents need a moved DNS alias), [E5](../findings/E5-stateless-http.md) (an agent connects to one controller), ET3–ET6 |
 

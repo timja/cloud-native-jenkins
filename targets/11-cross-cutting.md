@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | R1 (concurrent writers), Track S (concurrent edits, ET6 10), X (inventory regression check, ecosystem migration) |
-| **Status** | Planned |
+| **Status** | **Done** (2026-10-11): ET11 passes 8/8, see [11-progress](11-progress.md) |
 | **Depends on** | T1, T6 |
 
 ## Goal

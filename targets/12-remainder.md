@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | R2 (placement), R5 (per-build data), X Ops (restore) |
-| **Status** | Planned |
+| **Status** | **Done** (2026-10-11): ET12 passes 10/10, see [12-progress](12-progress.md) |
 | **Depends on** | T3, T4, T5, T10 |
 
 ## Goal

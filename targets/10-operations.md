@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | X Ops |
-| **Status** | Planned |
+| **Status** | **Done** (2026-10-11): ET10 passes 18/18, with builds running at backup time completed by Target 12; see [10-progress](10-progress.md) |
 | **Depends on** | T1–T9 (the chart, all state in Postgres and blob storage) |
 
 ## Goal

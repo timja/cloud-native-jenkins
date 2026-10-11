@@ -12,6 +12,6 @@ Design: [10-operations.md](10-operations.md). **Done means:** `validation/experi
 - 2026-10-11: Target 10 planned and implemented. ET10 found the import losing settings: an initialiser racing with core's configuration loading (fixed: the import runs as the store is created). **ET10 passes 18/18** in two consecutive runs ([findings](../findings/ET10-operations.md) on `cnj/t10-m1-operations`).
 
 ## Follow-ups
-- **Restore sweep:** builds running at backup time are absent after a restore; their placeholders should be adopted or closed.
+- ~~**Restore sweep:** builds running at backup time are absent after a restore~~: done in Target 12 (Pipelines resumed from their save points, other builds closed as aborted; ET12 3).
 - Point-in-time recovery with managed Postgres and blob versioning is documented in the plan, not exercised.
 - Schema changes that need a rewrite (none so far) would need the background migration described in the plan.
