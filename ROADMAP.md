@@ -48,7 +48,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 |---|---|---|
 | Triggers fire once per cluster (cron, SCM polling, `upstream`) | ✅ branch (cron-style; `upstream` not covered) | **E3: cron fired 8 times in 3 minutes on 2 controllers.** E9: triggers are *defined by builds* via `properties()`, so the scheduler must follow R1 events |
 | Branch indexing and org scanning run once, with indexing state shared | ✅ branch (periodic; manual scan runs where requested) | E9: `state.xml`, `indexing/indexing.xml`, `scm-*-revision-hash.xml` are written by whoever indexes |
-| Webhook fan-in (an event delivered to any controller is handled once) | ❌ | GitHub/GitLab/Bitbucket hooks arrive at one controller through the LB |
+| Webhook fan-in (an event delivered to any controller is handled once) | ✅ branch (T7: `notifyCommit` to A, B or both, and a multibranch event: one build, ET7 9) | GitHub/GitLab/Bitbucket hooks arrive at one controller through the LB |
 | Atomic, cluster-wide build numbers | ✅ branch | `Job.BuildNumberAssigner` (Beta) exists; the default is `synchronized(job)` + file (`Job.java:378`). E3: only the JENKINS-23152 directory check avoided a collision |
 | Queue: shared or partitioned, cluster-unique ids | ✅ branch (T5: mirrored shared queue with claims, folding, cancel and `queue/item` anywhere; [targets/05](targets/05-shared-queue.md)) | In-memory under one lock (`Queue.java:352`); `queue.xml` is written only at shutdown (E1). `QueueIdStrategy` (Beta) exists |
 | Placing builds on a controller (load balancing, affinity to connected agents) | 🟡 branch (T5: the requesting controller goes first, then whoever can run it; label-bound jobs go where the agent is. Open: Pipeline `node` labels) | E5: an agent connects to one controller only |
@@ -60,9 +60,9 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 |---|---|---|
 | Build ownership lease plus fencing | ✅ branch (T4: epoch-fenced leases; a partitioned owner stops itself, ET4 scenario 4) | E4: B adopted A's builds after a SIGKILL, but nothing stops a *partitioned* A from carrying on |
 | Adoption of a dead controller's builds | ✅ branch (T4: from store save points, no shared disk; ET4 scenarios 1-3) | E4: works today **only** via a shared disk (`program.dat`, flow nodes, `build.xml`). Must keep working via R4 |
-| Agent connections: which controller holds the channel, reconnecting after failover | ❌ | E5: one controller only. E4: needed a stable DNS alias moved by hand |
+| Agent connections: which controller holds the channel, reconnecting after failover | ✅ branch (T7: the channel table names the holder; requests for the agent are forwarded there; reconnect through the failover URL in ~40 s, ET7 7) | E5: one controller only. E4: needed a stable DNS alias moved by hand |
 | Cloud provisioning across controllers (k8s, EC2, Docker) | ❌ | `NodeProvisioner` per JVM over-provisions. Orphan cleanup kills other controllers' agents |
-| Routing requests to the owner (live console, `input`, abort, replay) | ❌ | |
+| Routing requests to the owner (live console, `input`, abort, replay) | ✅ branch (T7: `OwnerRoutingFilter`, ET7 1-6) | |
 | Executors and built-in node | 🟡 | Set built-in executors to 0; agents only (E1: built-in workspaces are local) |
 
 ## R4: Pipeline data ← **Target 4 done (ET4 passes): save points in the store, resume elsewhere**, [targets/04](targets/04-running-build-failover.md)
@@ -74,7 +74,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Pipeline logs | 🟡 | `LogStorageFactory` (Beta). The only reader/writer, pipeline-cloudwatch-logs, has had no commits since 2020. E1: falls back to local `log` + `log-index` |
 | Artifacts and stashes | ✅ | azure-artifact-manager against Azurite (E1, E2); artifact-manager-s3. Gap: identity collision (R5) |
 | Durability hints | 🟡 | `PERFORMANCE_OPTIMIZED` skips `program.dat` saves, so failover loses the build. Force `MAX_SURVIVABILITY` in HA |
-| `milestone`, `lock`, `input` approvals, `build` step state | ❌ | Held in memory or XML on the owning controller |
+| `milestone`, `lock`, `input` approvals, `build` step state | ✅ branch (T5: `milestone`, `lock`; T7: `input` from any controller, and after adoption, ET7 3 and 8; `build(wait)` pinned to its caller) | Held in memory or XML on the owning controller |
 
 ## R5: Build records and history ← **Target 3 done (ET3 passes): shared completed builds, logs, running placeholders**, [targets/03](targets/03-shared-build-records.md)
 | Item | Status | Gap / evidence |
