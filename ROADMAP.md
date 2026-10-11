@@ -61,7 +61,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Build ownership lease plus fencing | ✅ branch (T4: epoch-fenced leases; a partitioned owner stops itself, ET4 scenario 4) | E4: B adopted A's builds after a SIGKILL, but nothing stops a *partitioned* A from carrying on |
 | Adoption of a dead controller's builds | ✅ branch (T4: from store save points, no shared disk; ET4 scenarios 1-3) | E4: works today **only** via a shared disk (`program.dat`, flow nodes, `build.xml`). Must keep working via R4 |
 | Agent connections: which controller holds the channel, reconnecting after failover | ✅ branch (T7: the channel table names the holder; requests for the agent are forwarded there; reconnect through the failover URL in ~40 s, ET7 7) | E5: one controller only. E4: needed a stable DNS alias moved by hand |
-| Cloud provisioning across controllers (k8s, EC2, Docker) | ❌ | `NodeProvisioner` per JVM over-provisions. Orphan cleanup kills other controllers' agents |
+| Cloud provisioning across controllers (k8s, EC2, Docker) | ✅ branch (T9, kubernetes: demand counted once, reservations, cluster-wide caps, cloud agents per controller, ET9 3-5) | `NodeProvisioner` per JVM over-provisions. Orphan cleanup kills other controllers' agents |
 | Routing requests to the owner (live console, `input`, abort, replay) | ✅ branch (T7: `OwnerRoutingFilter`, ET7 1-6) | |
 | Executors and built-in node | 🟡 | Set built-in executors to 0; agents only (E1: built-in workspaces are local) |
 
@@ -94,7 +94,7 @@ Plan: [targets/01-shared-item-config.md](targets/01-shared-item-config.md)
 | Stateless sessions and crumbs | ❌ | E5. Sticky sessions are fine short-term (S0) |
 | Inventory regression check in CI | ❌ | `analyze_inventory.py` over E1 + E9 |
 | Ecosystem migration (E7 hit lists) | 🟡 measured | 513 / 2,117 plugins (99 of 358 BOM) |
-| Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | ❌ | |
+| Ops: helm/operator, rolling upgrades with mixed versions on one store, home → store migration, backup/PITR | 🟡 branch (T9: helm chart, ET9; T10: upgrades, migration, backup) | |
 
 ## Track S: Static state in the store ← **Target 6: done (ET6 passes)**, [targets/06](targets/06-static-state.md), findings `findings/ET6-static-state.md` on `cnj/t6-m7-static-state`
 Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key material, users/tokens, credentials and nodes, plus cross-controller reload. Open: concurrent edits of one file are detected, but one of them can be lost (ET6 10); Target 11 merges them.
