@@ -29,8 +29,12 @@ Users and tools reach any controller through a load balancer with no stickiness.
 - **`OwnerRoutingFilter`** handles requests addressed to things another controller holds:
   - **build URLs** (`/job/…/<N>/…`) for a build running on another controller, located by its placeholder's origin (not its name, which a replacement controller may share)
   - **agent URLs** (`/computer/<name>/…`) for an agent connected to another controller, located through the channel table
-- **How forwarding works.** It uses the target's internal URL from the membership table, waits at most 20 s for the response headers, and streams the body (live consoles). If the owner cannot be reached, the request is served locally.
+  - **a job's SCM polling log** (`/job/…/scmPollLog/…`), to the controller that last polled it (from the trigger claims, JEP-253)
+  - **plugin install progress** (`pluginManager/updates/…`, `updateCenter/{body,installStatus,…}`), to the controller running the install (JEP-256)
+- **How forwarding works.** It uses the target's internal URL from the membership table, waits at most 20 s for the response headers, and streams the body (live consoles). The owner's response headers replace any the forwarding controller had set. If the owner cannot be reached, the request is served locally.
+- **WebSockets.** A WebSocket upgrade addressed to another controller's object is relayed: the forwarding controller accepts it, opens a WebSocket to the owner (with the client's credentials), and copies frames both ways until either side closes. Agents' WebSocket connections are not relayed; an agent connects to whichever controller answers it.
 - **`input`, stop and replay** of a running build therefore work from any controller. After an adoption (JEP-252), they reach the new owner.
+- **The CLI.** `console -f` and `build -s`/`-f`/`-v` follow a build running on, or started by, another controller: they stream its log from the store (JEP-251) until its record is published, then report its result.
 - **Permalinks.** `/job/x/lastBuild/…` redirects to the newest build when that build runs elsewhere, and the build URL is then forwarded.
 
 ### Agent channels
@@ -52,8 +56,6 @@ See JEP-251: the job page, the Builds card, the job's icon, and REST `builds`, `
 ## Backwards compatibility
 - Without a store, nothing changes.
 - **Known limitations:**
-  - WebSocket requests that reach a non-owner are not forwarded; the HTTP fallbacks are.
-  - CLI commands addressing a build running on another controller (`console`, `get-build`) do not see it.
   - The REST stand-in for a build running elsewhere carries a `Run`'s properties, but its `_class` is the stand-in's. Deeper detail is at its own URL, which the owner answers.
 - **Password changes** sign out every browser of that user, including the one that made the change, as on one controller.
 
@@ -69,12 +71,15 @@ See JEP-251: the job page, the Builds card, the job's icon, and REST `builds`, `
   - `ET6-static-state.sh`: a scripted browser signs in and works through a round-robin load balancer, including when a controller is lost
   - `ET7-owner-routing.sh`: from the controller that does not run a build, its console can be followed, and `input`, stop and replay work; agent pages answer; an agent reconnects after its controller dies; webhooks; `input` after a failover
   - `ET15-logs-api-failover.sh`: REST and `lastBuild` for builds running elsewhere
+  - `ET20-websocket-cli.sh`: a WebSocket to the other controller's object is relayed; the WebSocket CLI's `console -f` and `build -s -f` follow builds running on the other controller
+  - `ET21-browser.sh`: Playwright tests in a real browser through the round-robin load balancer: a live console, a job configured in the browser, the cluster view with executors, the plugin manager's notice
+  - `ET2-scheduling.sh`: the polling log is answered by the controller that polled
 
 ## Prototype implementation
-- **Core:** prototype branches of Jenkins core, `cnj/t6-m6-stateless-sessions`, `cnj/t14-m1-resilience` (REST stand-in).
+- **Core:** prototype branches of Jenkins core, `cnj/t6-m6-stateless-sessions`, `cnj/t14-m1-resilience` (REST stand-in), `cnj/t15-remaining` (CLI).
 - **Stapler:** prototype branch `cnj/t6-m5-bound-id-prefix`.
-- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `OwnerRoutingFilter`, `Forwarding`, `BoundRequestForwarder`, `ClusterCrumbIssuer`, `ChannelPublisher`.
-- **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET6-static-state.md`, `ET7-owner-routing.md`.
+- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `OwnerRoutingFilter`, `Forwarding`, `WebSocketProxy`, `BoundRequestForwarder`, `ClusterCrumbIssuer`, `ChannelPublisher`.
+- **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET6-static-state.md`, `ET7-owner-routing.md`, `ET20-websocket-cli.md`, `ET21-browser.md`.
 
 ## References
 - `findings/E5-stateless-http.md` in the cloud-native-jenkins repository: two controllers behind a load balancer without stickiness

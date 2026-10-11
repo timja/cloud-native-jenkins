@@ -30,7 +30,11 @@ The controller image defines the base plugin set. Runtime changes are an overlay
 - **Installs and upgrades.** Every install and upgrade through the update center (from an update site or an upload, dependencies included) passes through `UpdateCenter.UpdateCenterConfiguration.install()`. A wrapper records the archive in the overlay.
 - **Uninstall, disable and enable** are recorded by a filter once the plugin manager has made the change.
 - **Refused:** downgrades (they restore a backup only one controller has) and upgrades of Jenkins itself (it comes with the image).
-- **Not covered:** CLI `install-plugin` from a file or URL bypasses the update center and stays local.
+- **The CLI.** `install-plugin` from a file or URL bypasses the update center. A core extension point, `PluginArchiveListener`, is told before and after the CLI puts an archive in place: the store plugin refuses what the plugin manager would refuse (changes to the store plugin itself, any change in `fixed` mode), and records the others in the overlay.
+
+### Through a load balancer
+- **The progress page.** Update-center jobs are in the memory of the controller running them, so requests for the install progress (`pluginManager/updates/…`, `updateCenter/{body,installStatus,incompleteInstallStatus,api}`) are forwarded to that controller (JEP-254): the one named by a cookie set when the install was requested, otherwise the member reporting installs in progress with its heartbeat (JEP-255).
+- **A notice on the plugin manager's pages.** A core hook, `PluginManager/notices.jelly`, includes each `PageDecorator`'s `pluginManager.jelly` on the plugin manager's pages (installed, available, updates, advanced, download progress). The store plugin's says that changes apply to every controller, with each controller's status, refreshed every 5 s.
 
 ### Apply
 - **When.** Every controller reconciles with the overlay when it changes, every minute, and once it is up.
@@ -42,6 +46,7 @@ The controller image defines the base plugin set. Runtime changes are an overlay
   - One controller at a time holds the restart lock in the store, safe-restarts, and releases the lock once it is back and up to date.
   - The lock is broken only if its holder has not come back within 10 minutes.
   - A controller never restarts twice for the same generation. It shows an administrative monitor instead.
+- **Restarts are the cluster's.** The single-controller restart (the progress page's "restart when done", `safeRestart` from the plugin manager) is refused and hidden in `cluster` mode, since it would restart one controller outside the one-at-a-time order.
 - **Status.** The cluster view shows each controller's state ("Up to date", "Applying 2 changes", "Restart pending", "Needs attention") and the list of changes: plugin, version, controller and time.
 - **Update-site metadata is shared.**
   - Each controller downloads update-site and tool-installer metadata into `updates/` at startup and then daily, as on one controller.
@@ -70,7 +75,7 @@ Found by hand on a cluster: a plugin installed from the Plugins page went to one
 Plugin changes still need `Overall/Administer`. Archives are verified by checksum before being installed elsewhere.
 
 ## Testing
-- **Store plugin:** `ClusterPluginsTest` (version rule, actions, restart decisions, status wording), `ClusterPluginSetTest`, `ClusterUpdateSitesTest`.
+- **Store plugin:** `ClusterPluginsTest` (version rule, actions, restart decisions, status wording), `ClusterPluginSetTest`, `ClusterUpdateSitesTest`, `UpdateCenterRoutingTest`.
 - **Acceptance:** `validation/experiments/ET13-cluster-plugins.sh` in the cloud-native-jenkins repository runs the Helm chart with two controllers on a local kind cluster and checks:
   1. a live install with a dependency
   2. an upgrade by rolling restart, with a controller answering throughout and a Pipeline paused and resumed with its whole console
@@ -78,7 +83,10 @@ Plugin changes still need `Overall/Administer`. Archives are verified by checksu
   4. an uninstall
   5. the guards: downgrade, store plugin, corrupt archive
 
+  `validation/experiments/ET19-plugin-manager.sh` checks the notice on every plugin manager page, an install's progress page through a load balancer without stickiness, a CLI install from a file, and the refused single-controller restart. `ET21-browser.sh` checks the notice in a real browser.
+
 ## Prototype implementation
 - **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository) on prototype branch `cnj/t13-m1-cluster-plugins`: `ClusterPlugins`, `ClusterUpdateCenterConfiguration`, `ClusterPluginSet`; `ClusterUpdateSites` on `cnj/t14-m1-resilience`.
-- **Core:** the restart reclaim on prototype branch `cnj/t12-m1-remainder` of Jenkins core.
-- **Findings:** `findings/ET13-cluster-plugins.md`, a document in the cloud-native-jenkins repository on its prototype branches.
+- **Store plugin**, later: `UpdateCenterRouting`, `ClusterPluginManagerNotice`, `ClusterCliPlugins`, `MemberStatus` on `cnj/t15-remaining`.
+- **Core:** the restart reclaim on prototype branch `cnj/t12-m1-remainder` of Jenkins core; the notices hook and `PluginArchiveListener` on `cnj/t15-remaining`.
+- **Findings:** `findings/ET13-cluster-plugins.md` and `ET19-plugin-manager.md`, a document in the cloud-native-jenkins repository on its prototype branches.

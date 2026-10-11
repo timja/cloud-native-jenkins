@@ -34,14 +34,15 @@ Every running build has exactly one owner: the controller holding its lease. A P
 - `PERFORMANCE_OPTIMIZED` Pipelines have no save points and are not adopted.
 
 ### Adoption
-- **A sweep looks for placeholders whose owner is not a live member.** It runs every 30 s, and at once when a controller is seen leaving the cluster: on each heartbeat, or when a cleanly stopped controller's row disappears.
+- **A sweep looks for placeholders whose owner is not a live member.** It runs every 30 s, and at once when a controller is seen leaving the cluster (JEP-255): when its database session lock is freed (its process died), when its heartbeat deadline passes, or when a cleanly stopped controller announces it is leaving.
   - It acquires the lease (only one controller wins).
   - It asks the `BuildAdopter` extensions to prepare an adoption.
   - The Pipeline adopter stages the save point and the log into the home, and resumes the build as owner with the new epoch.
 - **What else happens on adoption:**
   - A stop request made while the owner was gone is honoured.
   - `input` steps, `lock`, `milestone` and the build's place in the shared queue carry over (JEP-253).
-- **Builds nothing can resume** (freestyle, `PERFORMANCE_OPTIMIZED`, or a save point that cannot be found) are closed as ABORTED: a minimal record, with a console saying why. This also covers builds that were running when a backup was taken, after a restore.
+- **Workspaces.** A workspace is on the agent, not the controller, so an adopted build finds what its earlier stages left there as long as the agent survives: a static or inbound agent reconnects to the adopting controller (agents follow the build's lease), and a later stage reads the files an earlier stage wrote. A Kubernetes pod agent belongs to the controller that started it and goes with it; the adopted build's `node` block is retried on a new pod with an empty workspace. Files a later stage needs from such a pod must be carried with `stash`/`unstash` (kept in the blob store, JEP-251) or an artifact.
+- **Builds nothing can resume** (freestyle, `PERFORMANCE_OPTIMIZED`, or a save point that cannot be found) are closed as ABORTED: a minimal record, with a console saying why, after what the build had printed (shipped while it ran, JEP-251). This also covers builds that were running when a backup was taken, after a restore.
 - **No takeovers right after an outage.** A controller only takes others for gone after its own heartbeats have reached the database without a gap for longer than the member timeout. Right after a database outage, every heartbeat is stale, the live controllers' included.
 
 ### Restarts and handover
@@ -51,6 +52,8 @@ Every running build has exactly one owner: the controller holding its lease. A P
   2. a handover request names the target
   3. the lease is released
   4. the target takes the build over and resumes it, where the `node` step gets an executor
+
+  A build is handed over only while it holds no other executor, so nested or parallel `node` blocks for labels on different controllers wait instead of moving back and forth; a build is handed over at most four times. Running a `node` block on another controller's agent without moving the build would mean relaying Remoting between JVMs, which this JEP does not attempt.
 - **Safe restarts** pause Pipelines at a save point (they resume afterwards, here or elsewhere) and wait for builds that cannot survive a restart, as on one controller.
 
 ## Motivation
@@ -60,9 +63,9 @@ Every running build has exactly one owner: the controller holding its lease. A P
 ## Reasoning
 - **Epoch-fenced leases** make the store the arbiter, so no consensus protocol is needed between controllers.
 - **Save points in blob storage at the moments Pipelines already persist** cost little: 849 ms against 253 ms with `PERFORMANCE_OPTIMIZED` for 200 `echo` steps, and most of that is `MAX_SURVIVABILITY`'s own local writes.
-- **Failover time** is the liveness timeout (20 s) plus up to one heartbeat (5 s) plus the time to stage the save point: 16–23 s, measured over five kills of a controller running builds.
-  - Before the event-driven sweep, the 30 s sweep made it up to about 50 s.
-  - A lower timeout would be faster, but then a GC pause or a slow store makes others take over a healthy controller's builds (fenced safely, but the work restarts from its last save point).
+- **Failover time** is the time to notice a dead owner plus the time to stage the save point. A dead process frees its database session lock at once, so its builds were adopted 5.0–6.3 s after a `SIGKILL` and 6.5 s after a clean stop.
+  - Before session locks, liveness was the heartbeat timeout alone (20 s, heartbeats every 5 s), and failover took 16–23 s; before the event-driven sweep, the 30 s sweep made it up to about 50 s.
+  - A paused or partitioned owner keeps its lock, so it is still waited for until the heartbeat timeout (15 s): a controller paused for 12 s lost nothing. A lower timeout would be faster, but then a GC pause or a slow store makes others take over a healthy controller's builds (fenced safely, but the work restarts from its last save point).
 - **"Unknown is not lost"** keeps a database outage from aborting every running build in the cluster. Before this rule, an outage of more than 20 s did exactly that.
 
 ## Backwards compatibility
@@ -78,14 +81,15 @@ Every running build has exactly one owner: the controller holding its lease. A P
 - **Core:** `RunningBuildsTest`, `BuildLeasesTest`.
 - **Store plugin:** `PostgresPersistenceStoreTest` (leases, no takeover before the controller has been steady).
 - **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers against one store):
-  - `ET4-pipeline-failover.sh`: a Pipeline survives its controller being killed during an agent `sh` step and at `input`; a paused controller is fenced; a healthy controller's build is never adopted; a `PERFORMANCE_OPTIMIZED` build is closed; the cost of save points
-  - `ET12-remainder.sh`: a Pipeline waiting for a label only another controller has is handed over; after every controller is killed, fresh controllers adopt or close the builds that were running
+  - `ET4-pipeline-failover.sh`: a Pipeline survives its controller being killed during an agent `sh` step and at `input`; a later stage reads what an earlier stage left in the workspace, with the controller killed between them; a paused controller is fenced; a healthy controller's build is never adopted; a `PERFORMANCE_OPTIMIZED` build is closed; the cost of save points
+  - `ET12-remainder.sh`: a Pipeline waiting for a label only another controller has is handed over, once, with parallel `node` blocks on different controllers; after every controller is killed, fresh controllers adopt or close the builds that were running
   - `ET13-cluster-plugins.sh`: a Pipeline survives rolling restarts of every controller
   - `ET14-store-outage.sh`: database and blob-store outages cause no aborts or takeovers
-  - `ET15-logs-api-failover.sh`: the time from a controller being killed to its builds being adopted
+  - `ET15-logs-api-failover.sh`: the time from a controller being killed, stopped or paused to its builds being adopted; a freestyle build closed as aborted keeps what it printed
+  - `ET9-kubernetes.sh`: a build whose controller's pod was deleted is retried on a new agent pod and gets an earlier stage's files from its stash
 
 ## Prototype implementation
-- **Core:** prototype branches of Jenkins core, `cnj/t4-*`, `cnj/t12-m1-remainder`, `cnj/t14-m1-resilience`.
+- **Core:** prototype branches of Jenkins core, `cnj/t4-*`, `cnj/t12-m1-remainder`, `cnj/t14-m1-resilience`, `cnj/t15-remaining`.
 - **workflow-cps:** prototype branch `cnj/t4-m1-program-saved-listener`.
 - **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `SavePoints`, `PipelineAdopter`, `Handover`.
 - **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET4-pipeline-failover.md`, `ET12-remainder.md`, `ET13-cluster-plugins.md`, `ET14-store-outage.md` and `ET15-logs-api-failover.md`.

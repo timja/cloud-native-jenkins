@@ -34,7 +34,7 @@ Several controllers schedule the same jobs. Five pieces make that work:
   - The requesting controller goes first, for a grace period, since it may hold the agents the build needs.
   - A label-bound item goes where an agent with the label is; an agent being provisioned is reserved for its item.
   - After that, any controller that can run it may claim it.
-  - `build(wait: true)` items are pinned to their caller.
+  - A downstream build any controller may start: `build(wait: true)` items are not pinned to their caller (see Deliveries below). They are pinned only where the caller must watch them start (`waitForStart`), or when the build step's plugin does not support deliveries; a pin to a controller that is gone lapses.
 - **Blocking.** `SharedBlocking` blocks a non-concurrent job while it builds anywhere in the cluster.
 - **Reclaim.** Items claimed by a controller that is gone go back to WAITING:
   - on the next maintenance pass (every 15 s)
@@ -42,8 +42,13 @@ Several controllers schedule the same jobs. Five pieces make that work:
   - never right after a database outage (JEP-252's stability rule)
 - **Recording starts.** An item's start is recorded with retries, since an item left claimed would run again if its controller later went away.
 
+### Deliveries to running builds
+A build often waits for something that happens elsewhere: a Pipeline's `build` step waits for its downstream build, which may start on, or be adopted by, another controller; and the caller itself may be adopted while it waits. `RunningBuilds.deliver(build, delivery)` puts a `Delivery` (a serializable message) in the target build's mailbox in the store. The controller owning the build when it arrives consumes it, and an adopting controller consumes those that arrived while the build had no owner. Delivery is retried while the build is starting and is idempotent on the receiving side.
+- **pipeline-build-step** delivers the downstream build's result (or its start, for `waitForStart`) to the upstream build that waits for it (`BuildTriggerDelivery`), from whichever controller completes the downstream build. `waitForBuild` works the same way.
+- **Stop** reaches builds and queue items wherever they are: the stop of an upstream build stops the downstream build it waits for, on any controller.
+
 ### Cross-build coordination
-- **`lock`** (lockable-resources) keeps its resources and queue in the store; one controller grants each resource at a time.
+- **`lock`** (lockable-resources) keeps its resources and queue in the store; one controller grants each resource at a time. Each resource's holder (a build, or a user's reservation) is a record in the store, so reserving, unreserving, stealing, reassigning, resetting and unlocking from the resources page apply to the whole cluster, as do resources and notes made there.
 - **`milestone`** ordering is kept in the store (`ClusterMilestoneStorage`).
 - **`@ClusterSingleton` periodic work.** A `PeriodicWorkCoordinator` runs work marked `@ClusterSingleton` on one controller only. In core these are the global build discarder, fingerprint cleanup and telemetry. Unmarked periodic work keeps running on every controller, since much of it is legitimately per JVM.
 
@@ -68,14 +73,17 @@ Queue items keep their authentication (`QueueItemAuthenticator`), which is seria
 ## Testing
 - **Core:** `StoredBuildNumberAssignerTest`, `ClusterCoordinationTest`, `SharedQueueTest`.
 - **Store plugin:** `PostgresPersistenceStoreTest` (claims, queue, counters).
+- **lockable-resources:** `ClusterLocksTest` (reservations and their holders across two controllers).
 - **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers against one store):
   - `ET2-scheduling.sh`: unique numbers for 40 concurrent builds; cron, polling and indexing fire exactly once, also across failover and rejoin
   - `ET5-shared-queue.sh`: one queue item for requests on both controllers, folding, cancel from either controller, blocking, `lock` and `milestone`
+  - `ET12-remainder.sh`: `build(wait: true)` gets the result of a downstream build that ran on the other controller, also when the waiting build was adopted meanwhile
   - `ET7-owner-routing.sh`: a webhook sent to one or both controllers starts exactly one build
 
 ## Prototype implementation
-- **Core:** prototype branches of Jenkins core, `cnj/t2-*`, `cnj/t5-*`.
-- **lockable-resources:** prototype branch `cnj/t5-m4-cluster-locks`.
+- **Core:** prototype branches of Jenkins core, `cnj/t2-*`, `cnj/t5-*`, `cnj/t15-remaining` (deliveries).
+- **lockable-resources:** prototype branches `cnj/t5-m4-cluster-locks`, `cnj/t15-cluster-ui`.
+- **pipeline-build-step:** prototype branch `cnj/t15-remote-completion`.
 - **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `PostgresTriggerCoordinator`, `SharedQueueMaintenance`, `ClusterMilestoneStorage`.
 - **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET2-scheduling.md`, `ET5-shared-queue.md`.
 

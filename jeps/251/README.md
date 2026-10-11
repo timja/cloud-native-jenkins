@@ -31,8 +31,10 @@ Builds are materialised locally only when something reads them. Builds still run
   - Permalinks are updated incrementally (`PeepholePermalink.changedElsewhere`).
 - **Republishing.**
   - A build is republished when its `build.xml` is saved again (a description, keep-forever).
-  - It is also republished when files are added to its directory later without such a save; the sweep runs every minute for an hour after completion.
-- **Builds nothing can resume** (their controller died, and they are not resumable Pipelines) are closed with an ABORTED record whose console says why (JEP-252).
+  - It is also republished when files are added to, or changed in, its directory later without such a save (a plugin writing a report afterwards). Each published snapshot carries a manifest of the files it holds (`.cnj-published`, their names, sizes and times). A sweep compares builds against it every minute for an hour after completion, and every 10 minutes over every build loaded on the controller (at most 1,000 per run, carrying on in the next).
+  - A local copy with files newer than the published snapshot is published, not replaced by it, when the record changes elsewhere.
+- **Builds nothing can resume** (their controller died, and they are not resumable Pipelines) are closed with an ABORTED record whose console has what the build had printed, then why it ended (JEP-252). A `BuildRecords.LostLog` extension supplies what was printed, from wherever the log storage shipped it.
+- **Deleting a job's history** deletes every record below the job's key at once (`PersistenceStore.deleteAll`), with one change event each.
 - **Failed publication.** A build whose publication fails (the store was unreachable) stays "running" for the cluster, and publication is retried until it succeeds.
 
 ### Logs
@@ -48,7 +50,7 @@ Pipeline logs use the existing external log storage API (JEP-210, `LogStorageFac
 - **Segments:** an append blob takes at most 50,000 blocks, so a log is stored as `log`, `log.1`, …. A new segment starts before the limit, and readers concatenate them. This is specific to Azure append blobs; another backend has its own limits.
 - The shipper checks ownership and pauses while this controller's membership may have lapsed. A new owner continues where the blobs end.
 
-**Freestyle and other build logs** travel in the snapshot. While such a build runs, its console is served by the controller running it (JEP-254).
+**Freestyle and other build logs** are written to the build's `log` file, as on one controller; core has no log SPI for them (`Run.getLogFile`). The reference implementation ships them to the same append-blob segments while the build runs, so that a build whose controller dies keeps what it printed (closed as aborted, above), and the CLI can follow it from another controller (JEP-254). Once the build is published, its log travels in the snapshot and the shipped copy is deleted. While such a build runs, its console page is served by the controller running it (JEP-254).
 
 ### Builds running on another controller
 - Each running build has a placeholder `jobs/<job>/running/<N>.xml`, holding its owner, start time and save point (JEP-252).
@@ -59,7 +61,8 @@ Pipeline logs use the existing external log storage API (JEP-210, `LogStorageFac
 
 ### History at scale
 - **Fingerprints.** A `FingerprintStorage` in the store, keyed by MD5. Concurrent updates of usages are merged three-way against the version each controller last read.
-- **Test results.** junit-sql-storage, with its cache invalidated when a build's record changes elsewhere, so a report is right on another controller within about 0.2 s of completion.
+- **Test results.** junit-sql-storage, with its cache invalidated when a build's record changes elsewhere, so a report is right on another controller within about 0.2 s of completion. Its rows follow their job when it is renamed or moved.
+- **Other per-build reports** (coverage, static analysis and so on) are files in the build directory and travel in the snapshot, unchanged: the coverage plugin's summary, tree and source views are the same on every controller.
 - **Build discarders** apply to the whole history, whichever controller ran each build. A build still running elsewhere is never discarded.
 - **A cluster view** (`/manage/cluster`) lists the controllers, running builds with their owners, agent channels with their holders, and plugin changes.
 
@@ -76,24 +79,25 @@ Pipeline logs use the existing external log storage API (JEP-210, `LogStorageFac
 ## Backwards compatibility
 - Without a store, nothing changes.
 - With one, plugins reading the build directory see a complete directory once the build is loaded.
-- Plugins writing to a completed build's directory have their files republished, but only within an hour. Later writes are republished only when the record is saved again.
-- **Known limitation:** data keyed by job *name* across renames (for example junit-sql history) is unchanged from a single controller; it needs a per-item UUID in core.
+- Plugins writing to a completed build's directory have their files republished, within a minute during the first hour after completion, and within 10 minutes later.
+- Plugins keeping data keyed by job *name* outside `JENKINS_HOME` can key it by `Item.getItemUuid()` instead (JEP-250), which a rename does not change.
 
 ## Security
 - Snapshots and logs have the same content as the build directory. Blob storage access is equivalent to access to `JENKINS_HOME/jobs`.
 - Read permission is checked by the controller serving the build, as before.
 
 ## Testing
-- **Core:** `BuildRecordsTest`, `RunningBuildsTest`, `RemoteBuildEventsTest`, `DeletedJobNumberingTest`.
+- **Core:** `BuildRecordsTest` (late files, a closed build keeping what it printed), `RunningBuildsTest`, `RemoteBuildEventsTest`, `DeletedJobNumberingTest`.
 - **Store plugin:** `AzureBlobStoreTest` (against Azurite, the Azure Storage emulator: segments, moves keep append blobs appendable), `StoreFingerprintStorageTest`.
 - **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers against one store):
   - `ET3-build-records.sh`: builds that ran on either controller are listed on both, with the same records, consoles, permalinks and placeholders for running builds; deletion and renames carry over, a fresh controller sees the whole history, and a recreated job never reuses a number
-  - `ET8-history.sh`: fingerprints, test results and build discarders work across controllers, and the cluster view lists both
+  - `ET8-history.sh`: fingerprints, test results, coverage reports and build discarders work across controllers, and the cluster view lists both
   - `ET12-remainder.sh`: a file added to a completed build's directory later is republished
-  - `ET15-logs-api-failover.sh`: a Pipeline log rolls over segments and stays whole across a failover and a rename, and the REST API lists builds running elsewhere
+  - `ET15-logs-api-failover.sh`: a Pipeline log rolls over segments and stays whole across a failover and a rename; a freestyle build whose controller is killed keeps its output; the REST API lists builds running elsewhere
 
 ## Prototype implementation
-- **Core:** prototype branches of Jenkins core, `cnj/t3-*`, `cnj/t8-*`, `cnj/t12-m1-remainder` and `cnj/t14-m1-resilience`.
+- **Core:** prototype branches of Jenkins core, `cnj/t3-*`, `cnj/t8-*`, `cnj/t12-m1-remainder`, `cnj/t14-m1-resilience` and `cnj/t15-remaining`.
+- **junit-sql-storage:** prototype branches `cnj/t3-m5-remote-delete`, `cnj/t15-follow-renames`.
 - **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `BuildRecords` publication hooks, `BlobLogStorage`, `StoreFingerprintStorage`, `ClusterView`.
 - **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET3-build-records.md`, `ET8-history.md`, `ET12-remainder.md` and `ET15-logs-api-failover.md`.
 
