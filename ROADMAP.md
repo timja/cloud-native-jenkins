@@ -26,7 +26,7 @@ Why the split: E8 showed identical JCasC plus a synced key set gives two control
 | Global config, system credentials, security realm, tool installers, clouds | ✅ superseded (Track S, Target 6: in the store, edited in the UI or JCasC, seen everywhere without a restart; ET6) | Before: identical JCasC on every controller, the UI read-only (E2, E3) |
 | Key material | ✅ (pre-plugin keys seeded once, as a Kubernetes Secret in the chart; keys created at runtime in the store, Target 6) | E8: sharing `master.key` alone is **not enough**; the full set is seeded |
 | Static agent definitions | ✅ superseded (Target 6: nodes in the store; Target 9: cloud agents stay with their controller) | Connection state is runtime, see R3 |
-| Plugin set | ✅ by design (baked into the image; a new set is a rolling upgrade, Target 10. Enforced: plugin installs, uploads, uninstalls and enable/disable are refused while the cluster store is in use, `FixedPluginSet`) | No runtime installs. Found by hand: `UpdateCenter.never` alone still let the Plugins page install a plugin on one controller only, whose forms then broke on the other |
+| Plugin set | ✅ branch (Target 13: installs, upgrades and uninstalls on any controller apply to every controller, live or by rolling safe restarts; fresh controllers catch up; ET13) | The image is the base set. Found by hand: a plugin installed from the Plugins page went to one controller only, whose forms then broke on the other (stopgap in T12, replaced by T13) |
 | User state: API tokens, user properties, UI-created views | ✅ branch | E5/E8: a token made on A gave `401` on B. Track S: users are in the store; ET6 1-2 |
 | HTTP sessions and crumbs | ✅ branch | E5: failed across nodes. Target 6: a signed login cookie, cluster crumbs and bound-object forwarding; ET6 8 passes through a round-robin LB with no stickiness, including losing a controller |
 
@@ -101,7 +101,7 @@ Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key 
 
 ---
 
-## Targets 7-12 (planned and done 2026-10-11)
+## Targets 7-13 (planned and done 2026-10-11)
 | Target | Covers | Plan |
 |---|---|---|
 | 7 | R3 routing to the owner (console, `input`, stop, replay), agent channels, `input` after failover, R2 webhook fan-in | [targets/07](targets/07-owner-routing.md), ✅ done (ET7 passes) |
@@ -110,9 +110,10 @@ Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key 
 | 10 | X Ops: rolling upgrades with mixed versions, importing a file-based home, backup and restore | [targets/10](targets/10-operations.md), ✅ done (ET10 passes) |
 | 11 | R1/Track S concurrent edits (merge), X inventory check and ecosystem report | [targets/11](targets/11-cross-cutting.md), ✅ done (ET11 passes) |
 | 12 | Remainder: Pipeline placement by `node` label, per-build files rewritten after completion, restoring builds running at backup time | [targets/12](targets/12-remainder.md), ✅ done (ET12 passes) |
+| 13 | S0/Ops: cluster-wide plugin installs, upgrades and uninstalls (requested after manual testing) | [targets/13](targets/13-cluster-plugins.md), ✅ done (ET13 passes) |
 
 ## Where this leaves the roadmap (2026-10-11)
-Every planned target (1-12) is done, each with its acceptance experiment passing, and ET1-ET12 all pass on the final build (core `cnj/t12-m1-remainder`, plugin `cnj/t12-m2-remainder`). Nothing is pushed; the branches are local stacks.
+Every planned target (1-13) is done, each with its acceptance experiment passing. ET1-ET12 pass on the Target 12 build (core `cnj/t12-m1-remainder`, plugin `cnj/t12-m2-remainder`); on the Target 13 build (the same core plus the restart reclaim fix, plugin `cnj/t13-m1-cluster-plugins`) ET13 passes twice and ET4, ET9, ET10 and ET12 were rerun and pass. Nothing is pushed; the branches are local stacks.
 
 What remains is outside the cluster's own code:
 - **Ecosystem** (R1 plugin file access, X ecosystem migration): plugins that write state with `File` APIs instead of `XmlFile`/the store. The T11 compatibility report lists them per controller; migrating them is work in each plugin.
