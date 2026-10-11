@@ -26,7 +26,7 @@ Why the split: E8 showed identical JCasC plus a synced key set gives two control
 | Global config, system credentials, security realm, tool installers, clouds | ✅ superseded (Track S, Target 6: in the store, edited in the UI or JCasC, seen everywhere without a restart; ET6) | Before: identical JCasC on every controller, the UI read-only (E2, E3) |
 | Key material | ✅ (pre-plugin keys seeded once, as a Kubernetes Secret in the chart; keys created at runtime in the store, Target 6) | E8: sharing `master.key` alone is **not enough**; the full set is seeded |
 | Static agent definitions | ✅ superseded (Target 6: nodes in the store; Target 9: cloud agents stay with their controller) | Connection state is runtime, see R3 |
-| Plugin set | ✅ by design (baked into the image, `UpdateCenter.never`; a new set is a rolling upgrade, Target 10) | No runtime installs |
+| Plugin set | ✅ by design (baked into the image; a new set is a rolling upgrade, Target 10. Enforced: plugin installs, uploads, uninstalls and enable/disable are refused while the cluster store is in use, `FixedPluginSet`) | No runtime installs. Found by hand: `UpdateCenter.never` alone still let the Plugins page install a plugin on one controller only, whose forms then broke on the other |
 | User state: API tokens, user properties, UI-created views | ✅ branch | E5/E8: a token made on A gave `401` on B. Track S: users are in the store; ET6 1-2 |
 | HTTP sessions and crumbs | ✅ branch | E5: failed across nodes. Target 6: a signed login cookie, cluster crumbs and bound-object forwarding; ET6 8 passes through a round-robin LB with no stickiness, including losing a controller |
 

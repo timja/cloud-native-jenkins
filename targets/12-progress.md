@@ -17,6 +17,7 @@ Design: [12-remainder.md](12-remainder.md). **Done means:** `validation/experime
 
   All are fixed.
 - 2026-10-11 (after manual testing on kind): a build running on another controller was missing from the Builds card ("No builds") and the job's icon was not animated; both now show it (core 64036f3468, `RunningBuildsTest`).
+- 2026-10-11 (manual testing on kind): a plugin installed from the Plugins page went to one controller only, so a Mock Agent form broke when its requests reached the other. The plugin set is now enforced (`FixedPluginSet`, 409 with a message pointing to the image), and mock-slave is in the kind image.
 
 ## Follow-ups
 - Placement by label moves the whole build. Running only a `node` body on another controller's agent would need remote executors.
