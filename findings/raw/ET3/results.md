@@ -1,4 +1,4 @@
-## ET3 results (2026-10-11T00:08Z)
+## ET3 results (2026-10-11T01:26Z)
 
 | | Check |
 |---|---|
@@ -18,7 +18,7 @@
 | ✅ | 3 A lists builds 1..20 |
 | ✅ | 3 B lists builds 1..20 |
 | ✅ | 3 permalinks agree |
-| ℹ️ | 3 permalinks on A: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=6; on B: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=6 |
+| ℹ️ | 3 permalinks on A: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=12; on B: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=12 |
 | ✅ | 3 lastFailedBuild is the failed build, on A |
 | ✅ | 3 lastFailedBuild is the failed build, on B |
 | ✅ | 4 a description set on B for a build that ran on A is visible on A |
@@ -42,7 +42,7 @@
 | ✅ | 6 no placeholder left on B |
 | ✅ | 6 completed console identical on B |
 | ✅ | 6 B removes the stale placeholder within 90 s |
-| ℹ️ | 6 stale placeholder removed 29 s after the kill |
+| ℹ️ | 6 stale placeholder removed 39 s after the kill |
 | ✅ | 7 A sees the rename |
 | ✅ | 7 history intact on A under the new name |
 | ✅ | 7 history intact on B under the new name |
