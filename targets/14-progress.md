@@ -29,10 +29,10 @@ Design: [14-resilience.md](14-resilience.md). **Done means:** `ET14-store-outage
 - 2026-10-11: Target 14 planned from the known edge cases, in the user's priority order (upstreaming excluded). The decisions were: degrade and keep builds, HikariCP, about 15 s failover, full REST parity.
   - ET14 found pages hanging during an outage (fixed by failing fast) and 500s from reading a key from the store (fixed by local copies and a temporary key).
   - ET15 found that a rename from the controller not running the build was accepted (fixed in core).
-- 2026-10-11 (kind): the hand-testing release was reinstalled and reseeded after the sweep. On fresh pods, `installPlugins` answers 200 and does nothing until the update site has been fetched (`checkUpdatesServer`). That is the same as on one controller, but it is easier to hit with ephemeral homes.
+- 2026-10-11 (kind): the hand-testing release was reinstalled and reseeded after the sweep. On fresh pods, `installPlugins` answered 200 and did nothing: the chart had copied `UpdateCenter.never` and `DownloadService.never` from the offline harness, from before runtime installs existed, so no controller ever fetched the update site. Fixed in the chart (`updateSites.fetch`, default true): each controller fetches at startup and daily, as on one controller (`DailyCheck` is per controller, not a cluster singleton). Verified by a rolling upgrade of the release.
 
 ## Follow-ups
 - Failover is 16–23 s, against the target of about 15 s. The floor is the member timeout (20 s); lowering it trades false deaths (GC pauses, slow disks) for speed.
 - Scale beyond two controllers and 20k+ builds; storms of branch indexing.
-- Fresh controllers could fetch the update site at boot, so that installs right after a scale-up work.
+- Update-site metadata could be shared through the store (one fetch per cluster), which matters only for rate-limited or proxied sites.
 - CLI `install-plugin` from a file stays local (from Target 13).
