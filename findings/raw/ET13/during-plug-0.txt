@@ -1,0 +1,60 @@
+== plug-0 build
+{"_class":"org.jenkinsci.plugins.workflow.job.WorkflowRun","building":false,"result":"SUCCESS"}
+== plug-0 console
+Started by user admin
+[Pipeline] Start of Pipeline
+[Pipeline] echo
+tick 1
+[Pipeline] sleep
+Sleeping for 3 sec
+[Pipeline] echo
+tick 2
+[Pipeline] sleep
+Sleeping for 3 sec
+[Pipeline] echo
+tick 3
+[Pipeline] sleep
+Sleeping for 3 sec
+[Pipeline] echo
+tick 4
+[Pipeline] sleep
+Sleeping for 3 sec
+Pausing (Preparing for shutdown)
+Resuming build at Sun Oct 11 11:59:02 UTC 2026 after Jenkins restart
+Ready to run at Sun Oct 11 11:59:02 UTC 2026
+[Pipeline] echo
+tick 5
+[Pipeline] sleep
+Sleeping for 3 sec
+[Pipeline] echo
+tick 6
+[Pipeline] sleep
+Sleeping for 3 sec
+[Pipeline] echo
+tick 7
+[Pipeline] sleep
+Sleeping for 3 sec
+[Pipeline] echo
+tick 8
+[Pipeline] sleep
+Sleeping for 3 sec
+[Pipeline] echo
+tick 9
+[Pipeline] sleep
+Sleeping for 3 sec
+[Pipeline] echo
+tick 10
+[Pipeline] sleep
+Sleeping for 3 sec
+[Pipeline] echo
+tick 11
+[Pipeline] sleep
+Sleeping for 3 sec
+[Pipeline] echo
+tick 12
+[Pipeline] sleep
+Sleeping for 3 sec
+[Pipeline] echo
+tick 13
+[Pipeline] sleep
+Sleeping for 3 sec
