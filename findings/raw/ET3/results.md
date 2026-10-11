@@ -1,4 +1,4 @@
-## ET3 results (2026-10-10T22:08Z)
+## ET3 results (2026-10-11T00:08Z)
 
 | | Check |
 |---|---|
@@ -18,7 +18,7 @@
 | ✅ | 3 A lists builds 1..20 |
 | ✅ | 3 B lists builds 1..20 |
 | ✅ | 3 permalinks agree |
-| ℹ️ | 3 permalinks on A: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=9; on B: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=9 |
+| ℹ️ | 3 permalinks on A: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=6; on B: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=6 |
 | ✅ | 3 lastFailedBuild is the failed build, on A |
 | ✅ | 3 lastFailedBuild is the failed build, on B |
 | ✅ | 4 a description set on B for a build that ran on A is visible on A |
@@ -55,6 +55,6 @@
 | ✅ | 8 no old build in its history on A |
 | ✅ | 9 no snapshots or logs in jenkins_store |
 | ✅ | 9 largest jenkins_store value is under 1 MB (3007 bytes) |
-| ✅ | 9 snapshots and logs are in the blob container (91 blobs) |
+| ✅ | 9 snapshots and logs are in the blob container (89 blobs) |
 
 Failures: 0

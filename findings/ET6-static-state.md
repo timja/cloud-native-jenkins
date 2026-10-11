@@ -1,12 +1,12 @@
 # ET6: Target 6 acceptance (static state in the store, stateless browser sessions)
 
-**Result: PASS, with one criterion only partly met (10, concurrent edits; see below).** 45/45 checks, in two consecutive runs on the final build. Raw evidence from the last run: `raw/ET6/`
+**Result: PASS, with one criterion only partly met (10, concurrent edits; see below).** 44/44 checks, in two consecutive runs on the final build. Raw evidence from the last run: `raw/ET6/`
 - `results.md`
 - `journey.txt`, `journey-failover.txt`: the scripted browser's output
 - `static-keys.txt`: every non-job key in the store, with its version
 - controller logs, `BUILD`
 
-The ET3 (48/48), ET4 (39/39) and ET5 (35/35) regressions pass on the same build.
+The regressions pass on the same build: ET3 48/48, ET4 39/39 (three runs), ET5 35/35. In a fourth ET4 run, controller B did not finish booting within the setup's 300 s (no logs were kept); it was not reproduced.
 
 - **Script:** `validation/experiments/ET6-static-state.sh`. The browser is `validation/journey` (HtmlUnit, JavaScript on, a cookie jar).
 - **Setup:**
@@ -21,7 +21,7 @@ The ET3 (48/48), ET4 (39/39) and ET5 (35/35) regressions pass on the same build.
   - lockable-resources `cnj/t5-m4-cluster-locks`
   - workflow-cps `cnj/t4-m1-program-saved-listener`
   - cloudbees-folder `cnj/t1-m2-folder-children`
-  - plugin on `cnj/t6-m7-static-state`
+  - plugin on `cnj/t6-m7-static-state` (built from `8cb0859`, the same code as `f171eab`)
 
 | Criterion | Result |
 |---|---|
@@ -34,7 +34,7 @@ The ET3 (48/48), ET4 (39/39) and ET5 (35/35) regressions pass on the same build.
 | 7 Disposable cluster | ✅ both controllers destroyed and recreated. The following all survive: users and passwords, global settings, the descriptor setting, the credential, the UI-added node (with the deleted one still deleted), and the runtime key |
 | 8 Stateless browser journey through `rr` | ✅ every step below, and the requests reached both controllers |
 | 9 JCasC coexistence | ✅ restarting B (JCasC re-applies) bumped no store versions of unchanged config. The undeclared setting, a runtime user and the UI-added node survive B's boot, and the declared system message is still JCasC's |
-| 10 Concurrent edits | ⚠️ partial. A and B saved different fields of `config.xml` at the same moment. Both survived (9/4) in 6 of the 9 runs that reached it, including the last 5. In runs 3-5, A's change was lost (7/4). Every time, the store's version check detected the overwrite (the conflict counter rose) and A and B converged on the same result. See below |
+| 10 Concurrent edits | ⚠️ partial. A and B saved different fields of `config.xml` at the same moment. Both survived (9/4) in 8 of the 13 runs that reached it; in the other 5, A's change was lost (7/4). Every time, the store's version check detected the overwrite (the conflict counter rose) and A and B converged on the same result. See below |
 
 ### Criterion 8: the browser journey
 - **Login:** the form came from one controller and was posted to the other. The browser was then signed in on 10/10 requests, whichever controller answered.
@@ -55,6 +55,12 @@ The ET3 (48/48), ET4 (39/39) and ET5 (35/35) regressions pass on the same build.
 - **lockable-resources state shared as configuration** (ET5 regression, scenario 9: one lock held forever).
   - **Cause:** `LockableResourcesManager.xml` is a root XML file, so the static-state pattern shared it. Besides the declared resources, it holds each controller's waiting builds. B loaded A's waiting `lk1#1`, and the reload overwrote lock state that Target 5 manages through `ClusterLocks`.
   - **Fix (M7):** the file stays per-controller, with a test.
+- **A Pipeline resumed elsewhere could skip log lines** (Target 4 race; ET4 scenarios 1 and 4, found by the regression runs).
+  - **Cause:** a build's log and its save points were shipped independently. A save point could commit a `sh` step's output offset past lines not yet shipped, and they were lost when the owner died.
+  - **Fix:** the log is shipped before each save point is committed; a save point whose log cannot be shipped is retried.
+- **A fenced controller could still upload a save point** (Target 4 race; ET4 scenario 7, made more likely by the fix above).
+  - **Cause:** the save point's blobs were uploaded before the commit that would have told it the build was lost. They stayed after completion, and could overwrite the new owner's flow nodes.
+  - **Fix:** ownership is checked before uploading, and a save point whose commit conflicts is deleted.
 - **Harness:**
   - Admins cannot create another user's token over REST. The token is now created by the user.
   - The journey called bound objects without the content type and crumbs that Stapler's proxy sends (`404`/`403`).
@@ -76,5 +82,7 @@ The ET3 (48/48), ET4 (39/39) and ET5 (35/35) regressions pass on the same build.
 | 3 | 23/23, stopped at 8 | the journey's bound-object calls (harness); the script endpoint not forwarded (fixed) |
 | 4 | 40/41 | the browser that changed its own password was signed out (as on one controller; the journey now continues with the new login). |
 | 5 | 42/42 | clean |
-| 6–8 | 45/45 ×3 | ET6 brought in line with the plan (token over REST by the user, a real agent through B, JCasC without nodes); regressions: ET5 9 failed (lockable-resources, fixed), ET4 and ET3 seeds (harness, fixed) |
-| 9–10 | 45/45 ×2 | final build; ET5 35/35, ET4 39/39, ET3 48/48 |
+| 6–8 | all passed ×3 | ET6 brought in line with the plan (token over REST by the user, a real agent through B, JCasC without nodes); regressions: ET5 9 failed (lockable-resources, fixed), ET4 and ET3 seeds (harness, fixed) |
+| 9–10 | all passed ×2 | ET5 35/35, ET4 39/39, ET3 48/48 |
+| 11–14 | 44/44 ×4 | regressions: ET4 lost log lines after failover in 1 of 3 runs (fixed), then left a save point of a fenced owner (fixed) |
+| 15–16 | 44/44 ×2 | final build; ET4 39/39 ×3, ET5 35/35, ET3 48/48 |
