@@ -28,7 +28,7 @@ Every running build has exactly one owner: the controller holding its lease. A P
 
 ### Save points (Pipelines)
 - workflow-cps calls a `ProgramSavedListener` whenever it saves `program.dat` (a durability-hint hook).
-- The store plugin then copies `program.dat`, the changed flow nodes and `build.xml` to blob storage under `…/builds/<N>/running/`.
+- The store plugin then copies `program.dat`, the changed flow nodes and `build.xml` to blob storage under `…/builds/<N>/running/`, and the build directory's other files changed since the last save point (what steps left there, such as `stash`'s archives or files archived without an artifact manager; up to 64 MiB each).
 - It makes the log durable up to that point, then commits the save point by recording its id in the placeholder. The reference log storage (JEP-251) ships its pending output. Another log storage needs to be told too: **proposed**, an optional flush on JEP-210's `LogStorage` (workflow-api), called before a save point commits. A synchronous implementation does nothing; a buffering one (CloudWatch batches its events) sends its buffer. Without it, an adopted build's log can miss the lines written just before the save point.
 - Commits are coalesced: about two placeholder writes per build for a 200-step test Pipeline.
 - `PERFORMANCE_OPTIMIZED` Pipelines have no save points and are not adopted.
@@ -46,7 +46,7 @@ Every running build has exactly one owner: the controller holding its lease. A P
 - **No takeovers right after an outage.** A controller only takes others for gone after its own heartbeats have reached the database without a gap for longer than the member timeout. Right after a database outage, every heartbeat is stale, the live controllers' included.
 
 ### Restarts and handover
-- **A controller restarted with its home** (for example by a safe restart to apply plugin changes) takes over the leases of the builds it was running *before* they are loaded and resumed. It uses `RunListener.allowLoad`, as an adopter would. If another controller already adopted a build, the local copy is not loaded.
+- **A controller restarted with its home** (for example by a safe restart to apply plugin changes) takes over the leases of the builds it was running *before* they are loaded and resumed. It uses `RunListener.allowLoad`, as an adopter would. If another controller already adopted a build, the local copy is not loaded. That happens often: a dead process is seen gone within seconds, sooner than a restart completes, so a build is checked against the store, not against what this controller had cached.
 - **Handover by label.** A Pipeline waiting at `node('label')` for a label only another live controller has is handed over:
   1. its save point is flushed
   2. a handover request names the target

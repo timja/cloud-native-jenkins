@@ -52,6 +52,8 @@ Design: [15-remaining.md](15-remaining.md). **Done means:** every item is implem
   - A user changed in memory and never saved never got changes made elsewhere again. JCasC re-hashing a declared password on each controller caused it. It is now put off a few times, then applied, as items are (ET17).
   - A merge that wrote nothing new let the next save from the stale object overwrite the other change (ET11 3).
   - The CLI could ask to follow a build another controller had just started before that build's placeholder arrived, and printed no log (ET20 3).
+  - A controller restarted with its home resumed a build another controller had adopted while it restarted, and both ran it. With failover in about 5 s, adoption beats a restart. The reclaim now asks the store, not its cache (ET13 2).
+- **Store plugin:** save points carried only `program.dat`, the record and the flow nodes, so an adopted Pipeline lost its stashes ("No such saved stash"). They now carry the build directory's other files, changed ones only (ET9 4b).
   - Multibranch children were not recognised as items by the applier (ET1).
 - **Store plugin:** concurrent scans of one multibranch project on several controllers built its new branches twice. Folder computations now run on one controller at a time per folder (`ClusterComputations`, ET17).
 - **cloudbees-folder:** the load progress of a fresh home printed percentages like 27,600 %.
