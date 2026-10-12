@@ -1,0 +1,9 @@
+
+Running 4 tests using 1 worker
+
+  ✓  1 cluster.spec.js:4:1 › a live console follows a build running on one controller, whichever controller each request reaches (38.3s)
+  ✓  2 cluster.spec.js:15:1 › a job configured in the browser is saved for every controller (2.0s)
+  ✓  3 cluster.spec.js:26:1 › the cluster page shows both controllers with their executors (257ms)
+  ✓  4 cluster.spec.js:33:1 › the plugin manager says changes apply to every controller, and shows their status (241ms)
+
+  4 passed (41.4s)
