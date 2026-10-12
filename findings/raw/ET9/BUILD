@@ -7,5 +7,5 @@ credentials cnj/t6-m4-credentials-reload 15eb30bacaaf66af690f788858ce901e02d5a89
 pipeline-build-step cnj/t15-remote-completion 0fb9015f9a533934f6ed205af11f4447092be8fb
 junit-sql-storage cnj/t15-follow-renames 65f54ad2cf041217e5f863645c89ecb5e69e3890
 configuration-as-code cnj/t15-keep-undeclared-nodes b7e3a7abcbb3f3863516c239621bca798d08d0d5
-cloud-native-jenkins 2b4e35a418a49ce2fdaac6688c4e39ede3cd72d9
+cloud-native-jenkins b9642fe3baa8c35fcb7b60018574b58748eabb14
 kubernetes cnj/t9-m2-cluster-cap 600159e52f91138a4b2142026e5f06d798a61e14
