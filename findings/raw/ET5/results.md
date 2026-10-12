@@ -1,4 +1,4 @@
-## ET5 results (2026-10-12T09:20Z)
+## ET5 results (2026-10-12T15:18Z)
 
 | | Check |
 |---|---|
@@ -12,12 +12,12 @@
 | ✅ | 1 with both requests as causes (got 2) |
 | ✅ | 2 forty builds, numbered 1..40 |
 | ✅ | 2 every request ran exactly once |
-| ℹ️ | 2 builds per controller:   22 host=jenkins-a   18 host=jenkins-b  |
+| ℹ️ | 2 builds per controller:   20 host=jenkins-a   20 host=jenkins-b  |
 | ✅ | 2 both controllers ran some |
 | ✅ | 2 queue ids are unique cluster-wide |
 | ✅ | 2 queue/item/<id> resolves to the build on both controllers |
 | ✅ | 3 B's request waits while #1 builds on A |
-| ✅ | 3 the two builds did not overlap (#1 ended 1791796924, #2 started 1791796924) |
+| ✅ | 3 the two builds did not overlap (#1 ended 1791818360, #2 started 1791818360) |
 | ✅ | 4 cancelled on B |
 | ✅ | 4 gone from A's queue |
 | ✅ | 4 reported cancelled on A |
@@ -31,7 +31,7 @@
 | ✅ | 8 #1 on A is cancelled |
 | ✅ | 8 #1 never passed the milestone |
 | ✅ | 9 both complete |
-| ℹ️ | 9 res holds: WRITTEN@1791797012.1 DELETED@1791797027.2 WRITTEN@1791797027.2 DELETED@1791797042.3  |
+| ℹ️ | 9 res holds: WRITTEN@1791818445.8 DELETED@1791818461.0 WRITTEN@1791818461.0 DELETED@1791818476.1  |
 | ✅ | 9 res was held by one build at a time (store events alternate, two holds) |
 | ℹ️ | 9 the waiter got res 0.0 s after its release |
 | ✅ | 10 one upstream build on B triggered exactly one downstream build |

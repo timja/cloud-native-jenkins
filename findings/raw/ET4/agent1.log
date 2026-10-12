@@ -1,50 +1,50 @@
-agent1-1  | Oct 12, 2026 9:11:34 AM hudson.remoting.Launcher createEngine
+agent1-1  | Oct 12, 2026 3:08:45 PM hudson.remoting.Launcher createEngine
 agent1-1  | INFO: Setting up agent: agent1
-agent1-1  | Oct 12, 2026 9:11:34 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:08:45 PM hudson.remoting.Engine startEngine
 agent1-1  | INFO: Using Remoting version: 3391.va_37fa_a_305d6d
-agent1-1  | Oct 12, 2026 9:11:34 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:08:45 PM hudson.remoting.Engine startEngine
 agent1-1  | WARNING: No Working Directory. Using the legacy JAR Cache location: /home/jenkins/.jenkins/cache/jars
-agent1-1  | Oct 12, 2026 9:11:34 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:08:45 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: WebSocket connection open
-agent1-1  | Oct 12, 2026 9:11:34 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:08:45 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Connected
-agent1-1  | Oct 12, 2026 9:11:47 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:09:01 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Read side closed
-agent1-1  | Oct 12, 2026 9:11:47 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:09:01 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Terminated
-agent1-1  | Oct 12, 2026 9:11:47 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:09:01 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Performing onReconnect operation.
-agent1-1  | Oct 12, 2026 9:11:47 AM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
-agent1-1  | INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@5db95446
-agent1-1  | Oct 12, 2026 9:11:48 AM hudson.remoting.Launcher createEngine
+agent1-1  | Oct 12, 2026 3:09:01 PM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
+agent1-1  | INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@2f8f1aff
+agent1-1  | Oct 12, 2026 3:09:02 PM hudson.remoting.Launcher createEngine
 agent1-1  | INFO: Setting up agent: agent1
-agent1-1  | Oct 12, 2026 9:11:48 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:09:02 PM hudson.remoting.Engine startEngine
 agent1-1  | INFO: Using Remoting version: 3391.va_37fa_a_305d6d
-agent1-1  | Oct 12, 2026 9:11:48 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:09:02 PM hudson.remoting.Engine startEngine
 agent1-1  | WARNING: No Working Directory. Using the legacy JAR Cache location: /home/jenkins/.jenkins/cache/jars
-agent1-1  | Oct 12, 2026 9:11:52 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:09:06 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: WebSocket connection open
-agent1-1  | Oct 12, 2026 9:11:52 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:09:06 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Connected
-agent1-1  | Oct 12, 2026 9:14:57 AM hudson.remoting.Launcher createEngine
+agent1-1  | Oct 12, 2026 3:12:12 PM hudson.remoting.Launcher createEngine
 agent1-1  | INFO: Setting up agent: agent1
-agent1-1  | Oct 12, 2026 9:14:57 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:12:12 PM hudson.remoting.Engine startEngine
 agent1-1  | INFO: Using Remoting version: 3391.va_37fa_a_305d6d
-agent1-1  | Oct 12, 2026 9:14:57 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:12:12 PM hudson.remoting.Engine startEngine
 agent1-1  | WARNING: No Working Directory. Using the legacy JAR Cache location: /home/jenkins/.jenkins/cache/jars
-agent1-1  | Oct 12, 2026 9:14:58 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:12:12 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: WebSocket connection open
-agent1-1  | Oct 12, 2026 9:14:58 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:12:12 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Connected
-agent1-1  | Oct 12, 2026 9:15:20 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Read side closed
-agent1-1  | Oct 12, 2026 9:15:20 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Terminated
-agent1-1  | Oct 12, 2026 9:15:20 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Performing onReconnect operation.
-agent1-1  | Oct 12, 2026 9:15:20 AM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
-agent1-1  | INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@6036cb3c
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
+agent1-1  | INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@72d3d70d
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -64,7 +64,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -84,7 +84,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -104,7 +104,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -124,7 +124,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -144,7 +144,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -164,7 +164,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -184,7 +184,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -204,7 +204,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -224,7 +224,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -244,7 +244,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -264,7 +264,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -284,7 +284,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -304,7 +304,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -324,7 +324,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -344,7 +344,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -364,7 +364,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -384,7 +384,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -404,7 +404,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -424,7 +424,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -444,7 +444,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -464,7 +464,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -484,7 +484,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -504,7 +504,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -524,7 +524,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -544,7 +544,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -564,7 +564,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -584,7 +584,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -604,7 +604,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -624,7 +624,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -644,7 +644,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -664,7 +664,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -684,7 +684,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -704,7 +704,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -724,7 +724,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -744,7 +744,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -764,7 +764,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -784,7 +784,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -804,7 +804,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -824,7 +824,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -844,7 +844,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -864,7 +864,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -884,7 +884,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -904,7 +904,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -924,7 +924,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -944,7 +944,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -964,7 +964,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -984,7 +984,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1004,7 +1004,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1024,7 +1024,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1044,7 +1044,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1064,7 +1064,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1084,7 +1084,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1104,7 +1104,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1124,7 +1124,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1144,7 +1144,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1164,7 +1164,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1184,7 +1184,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1204,7 +1204,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1224,7 +1224,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1244,7 +1244,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@3c42f1f4:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1264,25 +1264,25 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.Launcher createEngine
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.Launcher createEngine
 agent1-1  | INFO: Setting up agent: agent1
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.Engine startEngine
 agent1-1  | INFO: Using Remoting version: 3391.va_37fa_a_305d6d
-agent1-1  | Oct 12, 2026 9:15:21 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:12:35 PM hudson.remoting.Engine startEngine
 agent1-1  | WARNING: No Working Directory. Using the legacy JAR Cache location: /home/jenkins/.jenkins/cache/jars
-agent1-1  | Oct 12, 2026 9:15:25 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:12:39 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: WebSocket connection open
-agent1-1  | Oct 12, 2026 9:15:25 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:12:39 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Connected
-agent1-1  | Oct 12, 2026 9:16:17 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Read side closed
-agent1-1  | Oct 12, 2026 9:16:17 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Terminated
-agent1-1  | Oct 12, 2026 9:16:17 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Performing onReconnect operation.
-agent1-1  | Oct 12, 2026 9:16:17 AM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
-agent1-1  | INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@ed7e8e2
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
+agent1-1  | INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@69bc06c6
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1302,7 +1302,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1322,7 +1322,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1342,7 +1342,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1362,7 +1362,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1382,7 +1382,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1402,7 +1402,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1422,7 +1422,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1442,7 +1442,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1462,7 +1462,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1482,7 +1482,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1502,7 +1502,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1522,7 +1522,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1542,7 +1542,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1562,7 +1562,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1582,7 +1582,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1602,7 +1602,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1622,7 +1622,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1642,7 +1642,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1662,7 +1662,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1682,7 +1682,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1702,7 +1702,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1722,7 +1722,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1742,7 +1742,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1762,7 +1762,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1782,7 +1782,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1802,7 +1802,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1822,7 +1822,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1842,7 +1842,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1862,7 +1862,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1882,7 +1882,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1902,7 +1902,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1922,7 +1922,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1942,7 +1942,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1962,7 +1962,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -1982,7 +1982,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2002,7 +2002,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2022,7 +2022,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2042,7 +2042,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2062,7 +2062,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2082,7 +2082,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2102,7 +2102,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2122,7 +2122,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2142,7 +2142,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2162,7 +2162,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2182,7 +2182,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2202,7 +2202,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2222,7 +2222,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2242,7 +2242,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2262,7 +2262,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2282,7 +2282,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2302,7 +2302,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2322,7 +2322,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2342,7 +2342,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2362,7 +2362,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2382,7 +2382,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2402,7 +2402,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2422,7 +2422,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2442,7 +2442,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2462,7 +2462,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2482,7 +2482,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2502,7 +2502,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2522,7 +2522,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2542,7 +2542,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2562,7 +2562,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2582,7 +2582,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2602,7 +2602,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2622,7 +2622,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2642,7 +2642,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2662,7 +2662,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2682,7 +2682,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2702,7 +2702,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2722,7 +2722,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2742,7 +2742,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2762,7 +2762,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2782,7 +2782,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:13:32 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2802,65 +2802,25 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
-agent1-1  | WARNING: Failed to unexport ProxyOutputStream
-agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
-agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
-agent1-1  | 	at hudson.remoting.ProxyOutputStream$CleanupState.cleanup(ProxyOutputStream.java:486)
-agent1-1  | 	at hudson.remoting.ProxyOutputStream$CleanupChecker.run(ProxyOutputStream.java:505)
-agent1-1  | 	at java.base/jdk.internal.ref.CleanerImpl$PhantomCleanableRef.performCleanup(Unknown Source)
-agent1-1  | 	at java.base/jdk.internal.ref.PhantomCleanable.clean(Unknown Source)
-agent1-1  | 	at java.base/jdk.internal.ref.CleanerImpl.run(Unknown Source)
-agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-agent1-1  | 	at java.base/jdk.internal.misc.InnocuousThread.run(Unknown Source)
-agent1-1  | Caused by: hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
-agent1-1  | 	at hudson.remoting.Engine$1AgentEndpoint.lambda$onClose$1(Engine.java:727)
-agent1-1  | 	at hudson.remoting.InterceptingExecutorService.lambda$wrap$0(InterceptingExecutorService.java:81)
-agent1-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
-agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
-agent1-1  | WARNING: Failed to unexport ProxyOutputStream
-agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
-agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
-agent1-1  | 	at hudson.remoting.ProxyOutputStream$CleanupState.cleanup(ProxyOutputStream.java:486)
-agent1-1  | 	at hudson.remoting.ProxyOutputStream$CleanupChecker.run(ProxyOutputStream.java:505)
-agent1-1  | 	at java.base/jdk.internal.ref.CleanerImpl$PhantomCleanableRef.performCleanup(Unknown Source)
-agent1-1  | 	at java.base/jdk.internal.ref.PhantomCleanable.clean(Unknown Source)
-agent1-1  | 	at java.base/jdk.internal.ref.CleanerImpl.run(Unknown Source)
-agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-agent1-1  | 	at java.base/jdk.internal.misc.InnocuousThread.run(Unknown Source)
-agent1-1  | Caused by: hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
-agent1-1  | 	at hudson.remoting.Engine$1AgentEndpoint.lambda$onClose$1(Engine.java:727)
-agent1-1  | 	at hudson.remoting.InterceptingExecutorService.lambda$wrap$0(InterceptingExecutorService.java:81)
-agent1-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
-agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-agent1-1  | 
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.Launcher createEngine
+agent1-1  | Oct 12, 2026 3:13:33 PM hudson.remoting.Launcher createEngine
 agent1-1  | INFO: Setting up agent: agent1
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:13:33 PM hudson.remoting.Engine startEngine
 agent1-1  | INFO: Using Remoting version: 3391.va_37fa_a_305d6d
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:13:33 PM hudson.remoting.Engine startEngine
 agent1-1  | WARNING: No Working Directory. Using the legacy JAR Cache location: /home/jenkins/.jenkins/cache/jars
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:13:33 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: WebSocket connection open
-agent1-1  | Oct 12, 2026 9:16:18 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:13:33 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Connected
-agent1-1  | Oct 12, 2026 9:17:01 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:14:26 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Read side closed
-agent1-1  | Oct 12, 2026 9:17:01 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:14:26 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Terminated
-agent1-1  | Oct 12, 2026 9:17:01 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:14:26 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Performing onReconnect operation.
-agent1-1  | Oct 12, 2026 9:17:01 AM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
-agent1-1  | INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@1a747a5
-agent1-1  | Oct 12, 2026 9:17:02 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:14:26 PM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
+agent1-1  | INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@5ba580d
+agent1-1  | Oct 12, 2026 3:14:26 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2880,7 +2840,7 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:17:02 AM hudson.remoting.ProxyOutputStream$CleanupState cleanup
+agent1-1  | Oct 12, 2026 3:14:26 PM hudson.remoting.ProxyOutputStream$CleanupState cleanup
 agent1-1  | WARNING: Failed to unexport ProxyOutputStream
 agent1-1  | hudson.remoting.ChannelClosedException: Channel "hudson.remoting.Channel@2092aaa1:agent1": channel is already closed
 agent1-1  | 	at hudson.remoting.Channel.send(Channel.java:830)
@@ -2900,13 +2860,13 @@ agent1-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unk
 agent1-1  | 	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:312)
 agent1-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
 agent1-1  | 
-agent1-1  | Oct 12, 2026 9:17:02 AM hudson.remoting.Launcher createEngine
+agent1-1  | Oct 12, 2026 3:14:26 PM hudson.remoting.Launcher createEngine
 agent1-1  | INFO: Setting up agent: agent1
-agent1-1  | Oct 12, 2026 9:17:02 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:14:26 PM hudson.remoting.Engine startEngine
 agent1-1  | INFO: Using Remoting version: 3391.va_37fa_a_305d6d
-agent1-1  | Oct 12, 2026 9:17:02 AM hudson.remoting.Engine startEngine
+agent1-1  | Oct 12, 2026 3:14:26 PM hudson.remoting.Engine startEngine
 agent1-1  | WARNING: No Working Directory. Using the legacy JAR Cache location: /home/jenkins/.jenkins/cache/jars
-agent1-1  | Oct 12, 2026 9:17:04 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:14:29 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: WebSocket connection open
-agent1-1  | Oct 12, 2026 9:17:04 AM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 12, 2026 3:14:29 PM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Connected

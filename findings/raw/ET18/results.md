@@ -1,9 +1,9 @@
-## ET18 results (2026-10-12T10:31Z)
+## ET18 results (2026-10-12T16:25Z)
 
 | | Check |
 |---|---|
 | ✅ | 1 the WAL is archived |
-| ℹ️ | 1 at T: 34 keys; blobs 132K |
+| ℹ️ | 1 at T: 35 keys; blobs 132K |
 | ✅ | 1 after T: doomed is gone, created exists |
 | ✅ | 2 Postgres recovered to T and was promoted |
 | ✅ | 2 doomed is back (its configuration and records, as at T) |

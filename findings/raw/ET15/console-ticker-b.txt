@@ -1,7 +1,7 @@
 Started by user admin
 Running as SYSTEM
 Building on the built-in node in workspace /var/jenkins_home/workspace/ticker
-[ticker] $ /bin/sh -xe /tmp/jenkins4625245963186991161.sh
+[ticker] $ /bin/sh -xe /tmp/jenkins17719354067462548438.sh
 + seq 1 120
 + echo tick 1
 tick 1

@@ -1,4 +1,4 @@
-## ET2 results (2026-10-12T08:46Z)
+## ET2 results (2026-10-12T14:43Z)
 
 | | Check |
 |---|---|
@@ -6,7 +6,7 @@
 | ✅ | 2 forty builds across A and B are numbered exactly 1..40 (got: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 ) |
 | ✅ | 2 no build number was used on both controllers |
 | ℹ️ | 2 builds per controller: A=20 B=20 |
-| ℹ️ | 1 cron1 builds: #1@B #2@B #3@B #4@B #5@B #6@B  |
+| ℹ️ | 1 cron1 builds: #1@A #2@A #3@A #4@A #5@A #6@A  |
 | ✅ | 1 cron fired (≥3 builds in ~4.5 min: 6) |
 | ✅ | 1 exactly one cron build per claimed tick across controllers |
 | ℹ️ | 1: 6 builds, 6 claimed ticks; wall-clock minutes with 2 builds (cron catch-up): 1 |
@@ -24,13 +24,13 @@
 | ✅ | 4 the new branch was built exactly once cluster-wide (1) |
 | ✅ | 4 existing branches still built once |
 | ℹ️ | 4 periodic indexing owner: B |
-| ✅ | 5 survivor took over cron within 2.5 min (3 builds after the kill) |
+| ✅ | 5 survivor took over cron within 2.5 min (2 builds after the kill) |
 | ✅ | 5 still exactly one cron build per claimed tick |
-| ℹ️ | 5: 20 builds, 20 claimed ticks; wall-clock minutes with 2 builds (cron catch-up): 1 |
+| ℹ️ | 5: 19 builds, 19 claimed ticks; wall-clock minutes with 2 builds (cron catch-up): 1 |
 | ✅ | 5 cron build numbers still unique |
 | ✅ | 6 cron kept firing across the rejoin (3 builds in 3 min) |
 | ✅ | 6 exactly one cron build per claimed tick across failover and rejoin |
-| ℹ️ | 6: 23 builds, 23 claimed ticks; wall-clock minutes with 2 builds (cron catch-up): 1 |
+| ℹ️ | 6: 22 builds, 22 claimed ticks; wall-clock minutes with 2 builds (cron catch-up): 1 |
 | ✅ | 6 cron build numbers unique across all incarnations |
 | ✅ | 7 fresh controller continues the sequence (#41, expected 41) |
 | ✅ | 7 renamed job continues the sequence (#42, expected 42) |
