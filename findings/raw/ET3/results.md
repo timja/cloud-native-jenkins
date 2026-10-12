@@ -1,4 +1,4 @@
-## ET3 results (2026-10-11T20:58Z)
+## ET3 results (2026-10-12T09:09Z)
 
 | | Check |
 |---|---|
@@ -18,7 +18,7 @@
 | ✅ | 3 A lists builds 1..20 |
 | ✅ | 3 B lists builds 1..20 |
 | ✅ | 3 permalinks agree |
-| ℹ️ | 3 permalinks on A: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=5; on B: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=5 |
+| ℹ️ | 3 permalinks on A: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=8; on B: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=8 |
 | ✅ | 3 lastFailedBuild is the failed build, on A |
 | ✅ | 3 lastFailedBuild is the failed build, on B |
 | ✅ | 4 a description set on B for a build that ran on A is visible on A |
@@ -42,7 +42,7 @@
 | ✅ | 6 no placeholder left on B |
 | ✅ | 6 completed console identical on B |
 | ✅ | 6 B removes the stale placeholder within 90 s |
-| ℹ️ | 6 stale placeholder removed 18 s after the kill |
+| ℹ️ | 6 stale placeholder removed 6 s after the kill |
 | ✅ | 7 A sees the rename |
 | ✅ | 7 history intact on A under the new name |
 | ✅ | 7 history intact on B under the new name |
@@ -55,6 +55,6 @@
 | ✅ | 8 no old build in its history on A |
 | ✅ | 9 no snapshots or logs in jenkins_store |
 | ✅ | 9 largest jenkins_store value is under 1 MB (3081 bytes) |
-| ✅ | 9 snapshots and logs are in the blob container (74 blobs) |
+| ✅ | 9 snapshots and logs are in the blob container (89 blobs) |
 
 Failures: 0

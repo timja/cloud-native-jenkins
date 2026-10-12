@@ -1,21 +1,13 @@
 HTTP/1.1 200 OK
 Server: Jetty(12.1.14)
-Date: Sun, 11 Oct 2026 17:25:45 GMT
+Date: Mon, 12 Oct 2026 09:27:13 GMT
 Vary: Accept-Encoding
-X-Content-Type-Options: nosniff
-Set-Cookie: remember-me=YWRtaW46MTc5Mjk0OTE0NTQ0ODphM2NkZDgwOTJhOTEzYTA0ZDEzMGNhMTIyOTQyMGU5OTUyMmMwZjJmMjUxODgwYWE4MDI5NGNmMTQwZWY4YTZm; Path=/; Expires=Sun, 25 Oct 2026 17:25:45 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
-Expires: Thu, 01 Jan 1970 00:00:00 GMT
-Content-Security-Policy-Report-Only: base-uri 'none'; default-src 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; script-src 'report-sample' 'self' usage.jenkins.io; style-src 'report-sample' 'self' 'unsafe-inline';
-X-CNJ-Controller: jenkins-b
-content-security-policy-report-only: base-uri 'none'; default-src 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; script-src 'report-sample' 'self' usage.jenkins.io; style-src 'report-sample' 'self' 'unsafe-inline';
-Content-Type: text/plain;charset=utf-8
-Date: Sun, 11 Oct 2026 17:25:45 GMT
-Expires: Thu, 01 Jan 1970 00:00:00 GMT
-Server: Jetty(12.1.14)
-Set-Cookie: remember-me=YWRtaW46MTc5Mjk0OTE0NTQ1ODphYjJkMWE2Yjg3NmM0MWVhOGViMGI2ZDlkODA0OWQzNWE1MmE0MWM0MGExM2I3MGRlZWJhYTA1OWVkNzE1MGEy; Path=/; Expires=Sun, 25 Oct 2026 17:25:45 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
-Vary: Accept-Encoding
-x-cnj-controller: jenkins-a
 x-content-type-options: nosniff
+Set-Cookie: remember-me=YWRtaW46MTc5MzAwNjgzMzQyMTowOGU4NzA4OWNiNzYyMDJiMGM4NzJmYTUwMTkwNjFhYjE1NWZlOTRmMTVlZjY2NmRmOWM5N2FiYWFmNjIzZDVh; Path=/; Expires=Mon, 26 Oct 2026 09:27:13 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+content-security-policy-report-only: base-uri 'none'; default-src 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; script-src 'report-sample' 'self' usage.jenkins.io; style-src 'report-sample' 'self' 'unsafe-inline';
+x-cnj-controller: jenkins-a
+Content-Type: text/plain;charset=utf-8
 x-more-data: true
 x-text-size: 8104
 X-CNJ-Forwarded-From: jenkins-a

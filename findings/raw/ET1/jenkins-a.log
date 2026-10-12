@@ -1,142 +1,97 @@
-jenkins-a-1  | 2026-10-11T21:08:34.289664213Z Running from: /war-override/jenkins.war
-jenkins-a-1  | 2026-10-11T21:08:34.290576755Z webroot: /var/jenkins_home/war
-jenkins-a-1  | 2026-10-11T21:08:34.990101713Z 2026-10-11 21:08:34.960+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-a-1  | 2026-10-11T21:08:35.605846547Z 2026-10-11 21:08:35.605+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-a-1  | 2026-10-11T21:08:35.665453672Z 2026-10-11 21:08:35.660+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-a-1  | 2026-10-11T21:08:36.032360339Z 2026-10-11 21:08:36.031+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-a-1  | 2026-10-11T21:08:36.103790881Z 2026-10-11 21:08:36.103+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-a-1  | 2026-10-11T21:08:36.423431922Z 2026-10-11 21:08:36.423+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-a-1  | 2026-10-11T21:08:36.508090089Z 2026-10-11 21:08:36.507+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-a-1  | 2026-10-11T21:08:36.516211173Z 2026-10-11 21:08:36.515+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-a-1  | 2026-10-11T21:08:36.516713048Z 2026-10-11 21:08:36.516+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @858ms
-jenkins-a-1  | 2026-10-11T21:08:36.520120881Z 2026-10-11 21:08:36.519+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-a-1  | 2026-10-11T21:08:36.584754589Z 2026-10-11 21:08:36.584+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-a-1  | 2026-10-11T21:08:36.646600256Z 2026-10-11 21:08:36.645+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-11T21:08:40.675303091Z 2026-10-11 21:08:40.671+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-11T21:08:41.317364591Z 2026-10-11 21:08:41.314+0000 [id=52]	SEVERE	jenkins.InitReactorRunner$1#onTaskFailed: Failed Loading plugin Kubernetes plugin v999999-SNAPSHOT (private-600159e5-timja) (kubernetes)
-jenkins-a-1  | 2026-10-11T21:08:41.317467716Z java.io.IOException: Failed to load: Kubernetes plugin (kubernetes 999999-SNAPSHOT (private-600159e5-timja))
-jenkins-a-1  | 2026-10-11T21:08:41.317473133Z [LF]>  - Plugin is missing: authentication-tokens (1.144.v5ff4a_5ec5c33)
-jenkins-a-1  | 2026-10-11T21:08:41.317476800Z [LF]>  - Plugin is missing: metrics (4.2.37-494.v06f9a_939d33a_)
-jenkins-a-1  | 2026-10-11T21:08:41.317479216Z [LF]>  - Plugin is missing: kubernetes-credentials (207.v492f58828b_ed)
-jenkins-a-1  | 2026-10-11T21:08:41.317480591Z [LF]>  - Plugin is missing: kubernetes-client-api (7.3.1-256.v788a_0b_787114)
-jenkins-a-1  | 2026-10-11T21:08:41.317539258Z 	at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:1018)
-jenkins-a-1  | 2026-10-11T21:08:41.317669966Z 	at hudson.PluginManager$2$1.lambda$run$0(PluginManager.java:588)
-jenkins-a-1  | 2026-10-11T21:08:41.317678133Z 	at org.jvnet.hudson.reactor.TaskGraphBuilder$TaskImpl.run(TaskGraphBuilder.java:175)
-jenkins-a-1  | 2026-10-11T21:08:41.317680091Z 	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
-jenkins-a-1  | 2026-10-11T21:08:41.317681550Z 	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
-jenkins-a-1  | 2026-10-11T21:08:41.317683216Z 	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
-jenkins-a-1  | 2026-10-11T21:08:41.317684550Z 	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
-jenkins-a-1  | 2026-10-11T21:08:41.317685966Z 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
-jenkins-a-1  | 2026-10-11T21:08:41.317687550Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-jenkins-a-1  | 2026-10-11T21:08:41.317688966Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-jenkins-a-1  | 2026-10-11T21:08:41.317690341Z 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-a-1  | 2026-10-11T21:08:44.033786593Z 2026-10-11 21:08:44.032+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-11T21:08:44.084853509Z 2026-10-11 21:08:44.073+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-11T21:08:44.124684051Z 2026-10-11 21:08:44.124+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-11T21:08:44.227657510Z 2026-10-11 21:08:44.226+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-11T21:08:44.244973468Z 2026-10-11 21:08:44.244+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-11T21:08:44.246955135Z 2026-10-11 21:08:44.246+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-11T21:08:44.250588051Z 2026-10-11 21:08:44.250+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-11T21:08:45.188051093Z 2026-10-11 21:08:45.184+0000 [id=49]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-a-1  | 2026-10-11T21:08:45.864226052Z 2026-10-11 21:08:45.862+0000 [id=49]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-a-1  | 2026-10-11T21:08:46.911252844Z 2026-10-11 21:08:46.909+0000 [id=49]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-a-1  | 2026-10-11T21:08:47.138371011Z 2026-10-11 21:08:47.137+0000 [id=49]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
-jenkins-a-1  | 2026-10-11T21:08:47.763741053Z 2026-10-11 21:08:47.760+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-11T21:08:48.989246095Z 2026-10-11 21:08:48.987+0000 [id=56]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_d49f44e372c1ee72ce62aec768f8dcce1dd682cedc3f211eb42ec0db81f91ad5/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:08:49.136312345Z 2026-10-11 21:08:49.135+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-11T21:08:49.139696762Z 2026-10-11 21:08:49.139+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-11T21:08:49.141268179Z 2026-10-11 21:08:49.140+0000 [id=53]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-a-1  | 2026-10-11T21:08:49.154969054Z 2026-10-11 21:08:49.154+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-11T21:08:49.171455762Z 2026-10-11 21:08:49.170+0000 [id=47]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-a-1  | 2026-10-11T21:08:49.202482012Z 2026-10-11 21:08:49.200+0000 [id=52]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_d49f44e372c1ee72ce62aec768f8dcce1dd682cedc3f211eb42ec0db81f91ad5 duplicates one seen earlier for admin
-jenkins-a-1  | 2026-10-11T21:08:49.443839595Z 2026-10-11 21:08:49.443+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-a-1  | 2026-10-11T21:08:49.465269762Z 2026-10-11 21:08:49.464+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-a-1  | 2026-10-11T21:08:50.528596971Z 2026-10-11 21:08:50.526+0000 [id=109]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
-jenkins-a-1  | 2026-10-11T21:08:54.644473459Z 2026-10-11 21:08:54.641+0000 [id=106]	INFO	i.j.p.c.store.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster
-jenkins-a-1  | 2026-10-11T21:08:58.126176960Z 2026-10-11 21:08:58.124+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:09:02.215248379Z 2026-10-11 21:09:02.214+0000 [id=149]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: props #1
-jenkins-a-1  | 2026-10-11T21:09:08.152544340Z 2026-10-11 21:09:08.151+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:09:17.190944136Z 2026-10-11 21:09:17.188+0000 [id=294]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb » main #1
-jenkins-a-1  | 2026-10-11T21:09:17.195419969Z 2026-10-11 21:09:17.189+0000 [id=295]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb » feature #1
-jenkins-a-1  | 2026-10-11T21:09:18.224896636Z 2026-10-11 21:09:18.224+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:09:27.228069126Z 2026-10-11 21:09:27.226+0000 [id=295]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb » feature2 #1
-jenkins-a-1  | 2026-10-11T21:09:28.254047794Z 2026-10-11 21:09:28.252+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:09:38.296804423Z 2026-10-11 21:09:38.294+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:09:48.326951928Z 2026-10-11 21:09:48.324+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:09:58.308852169Z 2026-10-11 21:09:58.305+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:10:08.353411548Z 2026-10-11 21:10:08.352+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:10:18.373586220Z 2026-10-11 21:10:18.372+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:10:28.407241585Z 2026-10-11 21:10:28.405+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:10:38.436749298Z 2026-10-11 21:10:38.435+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:10:48.469238512Z 2026-10-11 21:10:48.468+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:10:58.551158585Z 2026-10-11 21:10:58.546+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:11:08.576463382Z 2026-10-11 21:11:08.574+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:11:18.628978012Z 2026-10-11 21:11:18.623+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:11:28.680914627Z 2026-10-11 21:11:28.679+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:11:38.718193382Z 2026-10-11 21:11:38.711+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:11:48.784818345Z 2026-10-11 21:11:48.782+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:11:58.809443794Z 2026-10-11 21:11:58.807+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:12:02.000391504Z 2026-10-11 21:12:01.999+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #1
-jenkins-a-1  | 2026-10-11T21:12:08.848180382Z 2026-10-11 21:12:08.844+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:12:09.510822882Z 2026-10-11 21:12:09.510+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #2
-jenkins-a-1  | 2026-10-11T21:12:09.970629049Z 2026-10-11 21:12:09.970+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #5
-jenkins-a-1  | 2026-10-11T21:12:10.593522841Z 2026-10-11 21:12:10.592+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:10.618537216Z 2026-10-11 21:12:10.618+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #6
-jenkins-a-1  | 2026-10-11T21:12:11.150788383Z 2026-10-11 21:12:11.150+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:11.161846341Z 2026-10-11 21:12:11.161+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #8
-jenkins-a-1  | 2026-10-11T21:12:11.744076050Z 2026-10-11 21:12:11.742+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:11.759835258Z 2026-10-11 21:12:11.759+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #10
-jenkins-a-1  | 2026-10-11T21:12:12.273923217Z 2026-10-11 21:12:12.273+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #13
-jenkins-a-1  | 2026-10-11T21:12:12.919943801Z 2026-10-11 21:12:12.919+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #14
-jenkins-a-1  | 2026-10-11T21:12:13.471019801Z 2026-10-11 21:12:13.470+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:13.480761384Z 2026-10-11 21:12:13.480+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #16
-jenkins-a-1  | 2026-10-11T21:12:13.664541009Z 2026-10-11 21:12:13.664+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #18
-jenkins-a-1  | 2026-10-11T21:12:14.609296510Z 2026-10-11 21:12:14.608+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #20
-jenkins-a-1  | 2026-10-11T21:12:15.171800177Z 2026-10-11 21:12:15.171+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:15.179562843Z 2026-10-11 21:12:15.179+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #22
-jenkins-a-1  | 2026-10-11T21:12:15.742076760Z 2026-10-11 21:12:15.741+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:15.750939344Z 2026-10-11 21:12:15.750+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #24
-jenkins-a-1  | 2026-10-11T21:12:16.296827927Z 2026-10-11 21:12:16.296+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:16.308254261Z 2026-10-11 21:12:16.307+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #26
-jenkins-a-1  | 2026-10-11T21:12:16.854849677Z 2026-10-11 21:12:16.854+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #28
-jenkins-a-1  | 2026-10-11T21:12:17.418103594Z 2026-10-11 21:12:17.417+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:17.426559803Z 2026-10-11 21:12:17.426+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #30
-jenkins-a-1  | 2026-10-11T21:12:18.214964678Z 2026-10-11 21:12:18.209+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #32
-jenkins-a-1  | 2026-10-11T21:12:18.481399303Z 2026-10-11 21:12:18.480+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #34
-jenkins-a-1  | 2026-10-11T21:12:18.879192470Z 2026-10-11 21:12:18.878+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:12:19.235403679Z 2026-10-11 21:12:19.235+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #36
-jenkins-a-1  | 2026-10-11T21:12:19.974440221Z 2026-10-11 21:12:19.973+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #38
-jenkins-a-1  | 2026-10-11T21:12:20.363137304Z 2026-10-11 21:12:20.362+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #40
-jenkins-a-1  | 2026-10-11T21:12:20.911464263Z 2026-10-11 21:12:20.909+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:20.935062554Z 2026-10-11 21:12:20.933+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #42
-jenkins-a-1  | 2026-10-11T21:12:21.503089930Z 2026-10-11 21:12:21.502+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #44
-jenkins-a-1  | 2026-10-11T21:12:22.079178555Z 2026-10-11 21:12:22.078+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #47
-jenkins-a-1  | 2026-10-11T21:12:22.645521972Z 2026-10-11 21:12:22.645+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:22.663606930Z 2026-10-11 21:12:22.663+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #48
-jenkins-a-1  | 2026-10-11T21:12:23.215535625Z 2026-10-11 21:12:23.214+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:23.225475708Z 2026-10-11 21:12:23.225+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #50
-jenkins-a-1  | 2026-10-11T21:12:23.795548666Z 2026-10-11 21:12:23.795+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:23.807798208Z 2026-10-11 21:12:23.807+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #52
-jenkins-a-1  | 2026-10-11T21:12:24.389874292Z 2026-10-11 21:12:24.388+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #54
-jenkins-a-1  | 2026-10-11T21:12:24.945236417Z 2026-10-11 21:12:24.944+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:24.956572500Z 2026-10-11 21:12:24.956+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #56
-jenkins-a-1  | 2026-10-11T21:12:25.485817084Z 2026-10-11 21:12:25.485+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:25.502696292Z 2026-10-11 21:12:25.502+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #58
-jenkins-a-1  | 2026-10-11T21:12:26.065550126Z 2026-10-11 21:12:26.065+0000 [id=1347]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-11T21:12:26.081100418Z 2026-10-11 21:12:26.080+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #60
-jenkins-a-1  | 2026-10-11T21:12:26.655406293Z 2026-10-11 21:12:26.654+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #62
-jenkins-a-1  | 2026-10-11T21:12:28.941536877Z 2026-10-11 21:12:28.939+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:12:32.733798671Z 2026-10-11 21:12:32.721+0000 [id=1518]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #64
-jenkins-a-1  | 2026-10-11T21:12:32.808216046Z 2026-10-11 21:12:32.807+0000 [id=1522]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #65
-jenkins-a-1  | 2026-10-11T21:12:32.921924879Z 2026-10-11 21:12:32.921+0000 [id=1512]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #68
-jenkins-a-1  | 2026-10-11T21:12:32.922813129Z 2026-10-11 21:12:32.922+0000 [id=1516]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #66
-jenkins-a-1  | 2026-10-11T21:12:32.937057546Z 2026-10-11 21:12:32.936+0000 [id=1348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #72
-jenkins-a-1  | 2026-10-11T21:12:32.939004087Z 2026-10-11 21:12:32.938+0000 [id=1517]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #67
-jenkins-a-1  | 2026-10-11T21:12:33.261645004Z 2026-10-11 21:12:33.261+0000 [id=1347]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #70
-jenkins-a-1  | 2026-10-11T21:12:33.299175504Z 2026-10-11 21:12:33.298+0000 [id=1515]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #71
-jenkins-a-1  | 2026-10-11T21:12:33.343367838Z 2026-10-11 21:12:33.342+0000 [id=1514]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #69
-jenkins-a-1  | 2026-10-11T21:12:38.985116299Z 2026-10-11 21:12:38.982+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:12:49.062121262Z 2026-10-11 21:12:49.059+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:12:53.813402208Z 2026-10-11 21:12:53.796+0000 [id=73]	INFO	i.j.p.c.s.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [d87b6b14-f746-43f5-b210-46c3b6961717]
-jenkins-a-1  | 2026-10-11T21:12:59.214819252Z 2026-10-11 21:12:59.205+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-11T21:13:09.272535382Z 2026-10-11 21:13:09.265+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-a-1  | 2026-10-12T08:41:53.032093417Z Running from: /war-override/jenkins.war
+jenkins-a-1  | 2026-10-12T08:41:53.032394667Z webroot: /var/jenkins_home/war
+jenkins-a-1  | 2026-10-12T08:41:53.581576958Z 2026-10-12 08:41:53.547+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-12T08:41:54.011661792Z 2026-10-12 08:41:54.011+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-12T08:41:54.042141875Z 2026-10-12 08:41:54.041+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-12T08:41:54.294805542Z 2026-10-12 08:41:54.294+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-12T08:41:54.316552000Z 2026-10-12 08:41:54.316+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-12T08:41:54.558530292Z 2026-10-12 08:41:54.558+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-12T08:41:54.624940792Z 2026-10-12 08:41:54.624+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-12T08:41:54.633540376Z 2026-10-12 08:41:54.633+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1160998f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-12T08:41:54.636514209Z 2026-10-12 08:41:54.636+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @594ms
+jenkins-a-1  | 2026-10-12T08:41:54.637538917Z 2026-10-12 08:41:54.637+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-12T08:41:54.700925667Z 2026-10-12 08:41:54.700+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-12T08:41:54.758201917Z 2026-10-12 08:41:54.757+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-12T08:41:57.050744210Z 2026-10-12 08:41:57.047+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-12T08:41:59.936303711Z 2026-10-12 08:41:59.935+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-12T08:41:59.986608003Z 2026-10-12 08:41:59.986+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-12T08:41:59.993542670Z 2026-10-12 08:41:59.990+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-12T08:42:00.241044378Z 2026-10-12 08:42:00.238+0000 [id=54]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+jenkins-a-1  | 2026-10-12T08:42:00.320835837Z 2026-10-12 08:42:00.320+0000 [id=54]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+jenkins-a-1  | 2026-10-12T08:42:00.322936753Z 2026-10-12 08:42:00.321+0000 [id=54]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+jenkins-a-1  | 2026-10-12T08:42:00.326962128Z 2026-10-12 08:42:00.326+0000 [id=54]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+jenkins-a-1  | 2026-10-12T08:42:01.010565962Z 2026-10-12 08:42:01.010+0000 [id=54]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-12T08:42:01.356702129Z 2026-10-12 08:42:01.356+0000 [id=54]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-a-1  | 2026-10-12T08:42:02.143551213Z 2026-10-12 08:42:02.142+0000 [id=54]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-a-1  | 2026-10-12T08:42:02.301839379Z 2026-10-12 08:42:02.300+0000 [id=54]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-a-1  | 2026-10-12T08:42:02.790344255Z 2026-10-12 08:42:02.789+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-12T08:42:03.628957172Z 2026-10-12 08:42:03.628+0000 [id=56]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_515a73c278375a07aef01c46f067539ad2caf75f7693f2d1ab78209cfd0d5bfa/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:42:03.769553838Z 2026-10-12 08:42:03.769+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-12T08:42:03.771438213Z 2026-10-12 08:42:03.771+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-12T08:42:03.773322922Z 2026-10-12 08:42:03.773+0000 [id=48]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-12T08:42:03.780897922Z 2026-10-12 08:42:03.780+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-12T08:42:03.797819547Z 2026-10-12 08:42:03.797+0000 [id=55]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-12T08:42:03.802962630Z 2026-10-12 08:42:03.802+0000 [id=56]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_515a73c278375a07aef01c46f067539ad2caf75f7693f2d1ab78209cfd0d5bfa duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-12T08:42:03.989943838Z 2026-10-12 08:42:03.989+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-12T08:42:04.021145588Z 2026-10-12 08:42:04.020+0000 [id=39]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-a-1  | 2026-10-12T08:42:04.032848047Z 2026-10-12 08:42:04.031+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-12T08:42:05.005313464Z 2026-10-12 08:42:05.004+0000 [id=110]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-a-1  | 2026-10-12T08:42:15.130778635Z 2026-10-12 08:42:15.130+0000 [id=150]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: props #1
+jenkins-a-1  | 2026-10-12T08:42:29.937590128Z 2026-10-12 08:42:29.937+0000 [id=296]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb » feature #1
+jenkins-a-1  | 2026-10-12T08:42:29.938205295Z 2026-10-12 08:42:29.937+0000 [id=149]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb » main #1
+jenkins-a-1  | 2026-10-12T08:42:39.851066966Z 2026-10-12 08:42:39.850+0000 [id=149]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb » feature2 #1
+jenkins-a-1  | 2026-10-12T08:45:20.053994554Z 2026-10-12 08:45:20.053+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #1
+jenkins-a-1  | 2026-10-12T08:45:26.253434751Z 2026-10-12 08:45:26.253+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #2
+jenkins-a-1  | 2026-10-12T08:45:26.824147085Z 2026-10-12 08:45:26.823+0000 [id=1387]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:26.833680002Z 2026-10-12 08:45:26.833+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #4
+jenkins-a-1  | 2026-10-12T08:45:27.524887544Z 2026-10-12 08:45:27.523+0000 [id=1387]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:27.547026127Z 2026-10-12 08:45:27.546+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #6
+jenkins-a-1  | 2026-10-12T08:45:27.742951294Z 2026-10-12 08:45:27.742+0000 [id=1387]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:27.755346127Z 2026-10-12 08:45:27.754+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #9
+jenkins-a-1  | 2026-10-12T08:45:28.590930252Z 2026-10-12 08:45:28.590+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #10
+jenkins-a-1  | 2026-10-12T08:45:29.179734753Z 2026-10-12 08:45:29.179+0000 [id=1387]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:29.191967378Z 2026-10-12 08:45:29.191+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #12
+jenkins-a-1  | 2026-10-12T08:45:29.778971586Z 2026-10-12 08:45:29.778+0000 [id=1387]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:29.786299878Z 2026-10-12 08:45:29.786+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #14
+jenkins-a-1  | 2026-10-12T08:45:30.383295128Z 2026-10-12 08:45:30.382+0000 [id=1387]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:30.395301795Z 2026-10-12 08:45:30.394+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #16
+jenkins-a-1  | 2026-10-12T08:45:30.964405920Z 2026-10-12 08:45:30.964+0000 [id=1387]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:30.983003087Z 2026-10-12 08:45:30.982+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #18
+jenkins-a-1  | 2026-10-12T08:45:31.565149921Z 2026-10-12 08:45:31.564+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #20
+jenkins-a-1  | 2026-10-12T08:45:32.156242379Z 2026-10-12 08:45:32.155+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #22
+jenkins-a-1  | 2026-10-12T08:45:32.910023130Z 2026-10-12 08:45:32.909+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #24
+jenkins-a-1  | 2026-10-12T08:45:33.014431213Z 2026-10-12 08:45:33.013+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #27
+jenkins-a-1  | 2026-10-12T08:45:33.976788047Z 2026-10-12 08:45:33.976+0000 [id=1387]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:33.983283213Z 2026-10-12 08:45:33.982+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #28
+jenkins-a-1  | 2026-10-12T08:45:34.543678797Z 2026-10-12 08:45:34.543+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #30
+jenkins-a-1  | 2026-10-12T08:45:34.919020672Z 2026-10-12 08:45:34.918+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #32
+jenkins-a-1  | 2026-10-12T08:45:35.700630714Z 2026-10-12 08:45:35.700+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #34
+jenkins-a-1  | 2026-10-12T08:45:36.270313339Z 2026-10-12 08:45:36.269+0000 [id=1387]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:36.299355423Z 2026-10-12 08:45:36.298+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #36
+jenkins-a-1  | 2026-10-12T08:45:36.865434756Z 2026-10-12 08:45:36.865+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #38
+jenkins-a-1  | 2026-10-12T08:45:37.454126590Z 2026-10-12 08:45:37.453+0000 [id=1387]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:37.462561048Z 2026-10-12 08:45:37.462+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #40
+jenkins-a-1  | 2026-10-12T08:45:38.082356257Z 2026-10-12 08:45:38.081+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #42
+jenkins-a-1  | 2026-10-12T08:45:38.651216216Z 2026-10-12 08:45:38.650+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #44
+jenkins-a-1  | 2026-10-12T08:45:39.254154174Z 2026-10-12 08:45:39.253+0000 [id=1387]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #46
+jenkins-a-1  | 2026-10-12T08:45:39.850878675Z 2026-10-12 08:45:39.850+0000 [id=1504]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:39.858603841Z 2026-10-12 08:45:39.858+0000 [id=1387]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #48
+jenkins-a-1  | 2026-10-12T08:45:40.433932175Z 2026-10-12 08:45:40.433+0000 [id=1387]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #50
+jenkins-a-1  | 2026-10-12T08:45:41.024223758Z 2026-10-12 08:45:41.023+0000 [id=1387]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #52
+jenkins-a-1  | 2026-10-12T08:45:41.615013675Z 2026-10-12 08:45:41.614+0000 [id=1504]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:41.621127884Z 2026-10-12 08:45:41.620+0000 [id=1387]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #54
+jenkins-a-1  | 2026-10-12T08:45:42.263113134Z 2026-10-12 08:45:42.262+0000 [id=1387]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #56
+jenkins-a-1  | 2026-10-12T08:45:42.853353551Z 2026-10-12 08:45:42.853+0000 [id=1387]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #58
+jenkins-a-1  | 2026-10-12T08:45:43.444883301Z 2026-10-12 08:45:43.444+0000 [id=1504]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: jobs/race/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-12T08:45:43.451233260Z 2026-10-12 08:45:43.451+0000 [id=1387]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #60
+jenkins-a-1  | 2026-10-12T08:45:44.018716510Z 2026-10-12 08:45:44.018+0000 [id=1387]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #62
+jenkins-a-1  | 2026-10-12T08:45:44.945227260Z 2026-10-12 08:45:44.944+0000 [id=1387]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #64
+jenkins-a-1  | 2026-10-12T08:45:44.945591552Z 2026-10-12 08:45:44.945+0000 [id=1504]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #65
+jenkins-a-1  | 2026-10-12T08:45:49.991531263Z 2026-10-12 08:45:49.991+0000 [id=1388]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #74
+jenkins-a-1  | 2026-10-12T08:45:49.993444263Z 2026-10-12 08:45:49.993+0000 [id=1558]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #69
+jenkins-a-1  | 2026-10-12T08:45:49.994484971Z 2026-10-12 08:45:49.994+0000 [id=1557]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #70
+jenkins-a-1  | 2026-10-12T08:45:50.008244388Z 2026-10-12 08:45:50.007+0000 [id=1556]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #71
+jenkins-a-1  | 2026-10-12T08:45:50.023406346Z 2026-10-12 08:45:50.022+0000 [id=1560]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #68
+jenkins-a-1  | 2026-10-12T08:45:50.025880638Z 2026-10-12 08:45:50.025+0000 [id=1561]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #73
+jenkins-a-1  | 2026-10-12T08:45:50.039538554Z 2026-10-12 08:45:50.039+0000 [id=1504]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: race #72
+jenkins-a-1  | 2026-10-12T08:46:11.225792884Z 2026-10-12 08:46:11.224+0000 [id=74]	INFO	i.j.p.c.s.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [933d71fe-5296-47a7-ac32-6d42374e045f]

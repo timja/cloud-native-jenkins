@@ -1,4 +1,4 @@
-## ET7 results (2026-10-11T17:25Z)
+## ET7 results (2026-10-12T09:26Z)
 
 | | Check |
 |---|---|
@@ -31,16 +31,16 @@
 | ✅ | 8 approved on B after adoption, the build completes |
 | ✅ | 8 with the line after the input |
 | ✅ | 7 agent1 reconnected to B |
-| ℹ️ | 7 agent1 online on B 21 s after A was killed |
+| ℹ️ | 7 agent1 online on B 7 s after A was killed |
 | ✅ | 7 the channel table names B |
 | ✅ | 10 no 502 for a dead owner's build (answered locally) |
 | ✅ | 9 notifyCommit to A: exactly one build for the commit (1 -> 2) |
 | ✅ | 9 notifyCommit to B: exactly one build for the commit (2 -> 3) |
 | ✅ | 9 notifyCommit to both: exactly one build for the commit (3 -> 4) |
 | ✅ | 9 a multibranch push event to B: exactly one branch build (1 -> 2) |
-| ✅ | 10 requests for a completed build are not forwarded (22 -> 22) |
+| ✅ | 10 requests for a completed build are not forwarded (21 -> 21) |
 | ✅ | 10 an already forwarded request is not forwarded again (answered by B itself: 404) |
-| ℹ️ | forwarded build requests: A=0 B=23; computer requests: A=0 B=4 |
+| ℹ️ | forwarded build requests: A=0 B=22; computer requests: A=0 B=4 |
 | ✅ | 10 no routing warnings in the logs |
 
 Failures: 0

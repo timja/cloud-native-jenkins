@@ -1,4 +1,4 @@
-## ET8 results (2026-10-12T06:43Z)
+## ET8 results (2026-10-12T09:30Z)
 
 | | Check |
 |---|---|
@@ -18,7 +18,7 @@
 | ✅ | 3 and on B |
 | ✅ | 3b the coverage build completes on A |
 | ✅ | 3b B shows the same coverage (line coverage 50%) |
-| ❌ | 3b ... and its coverage page, with the class tree |
+| ❌ | 3b ... and its coverage page's class tree (fetched as the page's script does) |
 | ℹ️ | 4 keep builds: A [6 7 8] B [6 7 8] |
 | ✅ | 4 A keeps exactly the last 3 (6 7 8) |
 | ✅ | 4 B keeps exactly the last 3 (6 7 8) |
