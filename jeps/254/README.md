@@ -71,7 +71,7 @@ See JEP-251: the job page, the Builds card, the job's icon, and REST `builds`, `
   - `ET6-static-state.sh`: a scripted browser signs in and works through a round-robin load balancer, including when a controller is lost
   - `ET7-owner-routing.sh`: from the controller that does not run a build, its console can be followed, and `input`, stop and replay work; agent pages answer; an agent reconnects after its controller dies; webhooks; `input` after a failover
   - `ET15-logs-api-failover.sh`: REST and `lastBuild` for builds running elsewhere
-  - `ET20-websocket-cli.sh`: a WebSocket to the other controller's object is relayed; the WebSocket CLI's `console -f` and `build -s -f` follow builds running on the other controller
+  - `ET20-websocket-cli.sh`: a WebSocket to the other controller's object is relayed; the CLI's `console -f` (over HTTP and over WebSocket) and `build -s -v` follow builds running on the other controller
   - `ET21-browser.sh`: Playwright tests in a real browser through the round-robin load balancer: a live console, a job configured in the browser, the cluster view with executors, the plugin manager's notice
   - `ET2-scheduling.sh`: the polling log is answered by the controller that polled
 

@@ -110,6 +110,7 @@ Schema changes must not stop a running cluster, and old and new controllers run 
 - **Known limitations:**
   - Point-in-time recovery needs blob versioning, which the Azure Storage emulator lacks; it is exercised for Postgres only.
   - Liveness through session locks needs a direct database connection.
+  - **Future work:** a fresh controller's first full page of 2,000 jobs takes 5–19 s while it loads them from the store. Job loading can be made much faster (bulk reads, lazy loading); this is noted for later, not part of this JEP's first version.
 
 ## Security
 - The store and blob credentials come from Secrets, and connections can use TLS through the JDBC URL and connection string.
