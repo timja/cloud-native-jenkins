@@ -1,0 +1,968 @@
+jenkins-b-1  | Running from: /war-override/jenkins.war
+jenkins-b-1  | webroot: /var/jenkins_home/war
+jenkins-b-1  | 2026-10-12 10:01:13.963+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-12 10:01:14.433+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-12 10:01:14.462+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-12 10:01:14.692+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-12 10:01:14.713+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-12 10:01:14.950+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-12 10:01:15.016+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-b-1  | 2026-10-12 10:01:15.021+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@2a095f33{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-12 10:01:15.022+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @560ms
+jenkins-b-1  | 2026-10-12 10:01:15.022+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-12 10:01:15.111+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-12 10:01:15.154+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-12 10:01:16.597+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-12 10:01:17.836+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-12 10:01:17.852+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-12 10:01:17.854+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-12 10:01:17.915+0000 [id=47]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+jenkins-b-1  | 2026-10-12 10:01:17.924+0000 [id=47]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+jenkins-b-1  | 2026-10-12 10:01:17.925+0000 [id=47]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+jenkins-b-1  | 2026-10-12 10:01:17.926+0000 [id=47]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+jenkins-b-1  | 2026-10-12 10:01:18.130+0000 [id=47]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-12 10:01:18.381+0000 [id=47]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-12 10:01:18.829+0000 [id=47]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-12 10:01:19.194+0000 [id=46]	INFO	i.j.p.c.store.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-a)
+jenkins-b-1  | 2026-10-12 10:01:19.292+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-12 10:01:19.676+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-12 10:01:21.709+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-12 10:01:21.718+0000 [id=59]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-12 10:01:21.722+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-12 10:01:21.729+0000 [id=49]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-12 10:01:21.731+0000 [id=46]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_ec59cecc2acdbd55a7eb55940e0dcf870eaebfb34a2c311b9f0679107e3d3d09 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-12 10:01:21.846+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-12 10:01:21.861+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-12 10:01:31.728+0000 [id=83]	INFO	i.j.p.cnj.store.ClusterPlugins#apply: Applying the cluster's plugin set: next-build-number LOAD 66.v4b_4762172d53
+jenkins-b-1  | 2026-10-12 10:01:32.121+0000 [id=132]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-12 10:01:32.122+0000 [id=136]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-12 10:01:32.123+0000 [id=141]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-12 10:01:32.124+0000 [id=144]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-12 10:01:32.124+0000 [id=147]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-12 10:01:32.124+0000 [id=147]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-12 10:01:32.124+0000 [id=147]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-12 10:01:32.124+0000 [id=147]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-12 10:01:32.124+0000 [id=147]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-12 10:01:32.124+0000 [id=147]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-12 10:01:32.126+0000 [id=83]	INFO	i.j.p.cnj.store.ClusterPlugins#apply: Loaded next-build-number 66.v4b_4762172d53 live
+jenkins-b-1  | 2026-10-12 10:01:51.838+0000 [id=71]	INFO	i.j.p.c.s.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [ba97e635-a1f3-4474-b5af-82f262711834]
+jenkins-b-1  | 2026-10-12 10:01:52.048+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-1 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:52.517+0000 [id=106]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming long-1#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-12 10:01:52.524+0000 [id=106]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: long-1#1 was already in the list: [long-1#1]
+jenkins-b-1  | 2026-10-12 10:01:52.526+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-1 #1 from save point 35956.1 as owner with epoch 36535
+jenkins-b-1  | 2026-10-12 10:01:52.526+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-1#1]] sleep in CpsFlowExecution[long-1#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:52.576+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-10 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:52.602+0000 [id=106]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming long-10#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-12 10:01:52.603+0000 [id=106]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: long-10#1 was already in the list: [long-1#1, long-10#1]
+jenkins-b-1  | 2026-10-12 10:01:52.603+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-10#1]] sleep in CpsFlowExecution[long-10#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:52.603+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-10 #1 from save point 35964.1 as owner with epoch 36537
+jenkins-b-1  | 2026-10-12 10:01:52.651+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-11 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:52.686+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-11 #1 from save point 35991.1 as owner with epoch 36539
+jenkins-b-1  | 2026-10-12 10:01:52.688+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-11#1]] sleep in CpsFlowExecution[long-11#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:52.730+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-12 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:52.748+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-12 #1 from save point 35989.1 as owner with epoch 36541
+jenkins-b-1  | 2026-10-12 10:01:52.748+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-12#1]] sleep in CpsFlowExecution[long-12#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:52.770+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-13 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:52.789+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-13 #1 from save point 36012.1 as owner with epoch 36543
+jenkins-b-1  | 2026-10-12 10:01:52.790+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-13#1]] sleep in CpsFlowExecution[long-13#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:52.813+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-14 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:52.832+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-14 #1 from save point 36011.1 as owner with epoch 36545
+jenkins-b-1  | 2026-10-12 10:01:52.833+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-14#1]] sleep in CpsFlowExecution[long-14#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:52.857+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-15 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:52.877+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-15 #1 from save point 36019.1 as owner with epoch 36547
+jenkins-b-1  | 2026-10-12 10:01:52.879+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-15#1]] sleep in CpsFlowExecution[long-15#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:52.906+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-16 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:52.926+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-16 #1 from save point 36046.1 as owner with epoch 36549
+jenkins-b-1  | 2026-10-12 10:01:52.926+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-16#1]] sleep in CpsFlowExecution[long-16#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:52.946+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-17 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:52.962+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-17 #1 from save point 36053.1 as owner with epoch 36551
+jenkins-b-1  | 2026-10-12 10:01:52.963+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-17#1]] sleep in CpsFlowExecution[long-17#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:52.983+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-18 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.000+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-18 #1 from save point 36058.1 as owner with epoch 36553
+jenkins-b-1  | 2026-10-12 10:01:53.000+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-18#1]] sleep in CpsFlowExecution[long-18#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.034+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-19 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.052+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-19 #1 from save point 36055.1 as owner with epoch 36555
+jenkins-b-1  | 2026-10-12 10:01:53.053+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-19#1]] sleep in CpsFlowExecution[long-19#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.075+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-2 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.091+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-2 #1 from save point 35939.1 as owner with epoch 36557
+jenkins-b-1  | 2026-10-12 10:01:53.092+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-2#1]] sleep in CpsFlowExecution[long-2#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.111+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-20 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.128+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-20 #1 from save point 36067.1 as owner with epoch 36559
+jenkins-b-1  | 2026-10-12 10:01:53.129+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-20#1]] sleep in CpsFlowExecution[long-20#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.154+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-21 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.174+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-21 #1 from save point 36080.1 as owner with epoch 36561
+jenkins-b-1  | 2026-10-12 10:01:53.175+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-21#1]] sleep in CpsFlowExecution[long-21#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.205+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-22 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.227+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-22 #1 from save point 36091.1 as owner with epoch 36563
+jenkins-b-1  | 2026-10-12 10:01:53.228+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-22#1]] sleep in CpsFlowExecution[long-22#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.253+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-23 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.276+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-23 #1 from save point 36098.1 as owner with epoch 36565
+jenkins-b-1  | 2026-10-12 10:01:53.278+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-23#1]] sleep in CpsFlowExecution[long-23#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.334+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-24 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.353+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-24 #1 from save point 36129.1 as owner with epoch 36567
+jenkins-b-1  | 2026-10-12 10:01:53.354+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-24#1]] sleep in CpsFlowExecution[long-24#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.383+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-25 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.402+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-25 #1 from save point 36120.1 as owner with epoch 36569
+jenkins-b-1  | 2026-10-12 10:01:53.402+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-25#1]] sleep in CpsFlowExecution[long-25#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.432+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-26 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.455+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-26 #1 from save point 36119.1 as owner with epoch 36571
+jenkins-b-1  | 2026-10-12 10:01:53.456+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-26#1]] sleep in CpsFlowExecution[long-26#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.481+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-27 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.503+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-27 #1 from save point 36153.1 as owner with epoch 36573
+jenkins-b-1  | 2026-10-12 10:01:53.503+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-27#1]] sleep in CpsFlowExecution[long-27#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.560+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-28 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.582+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-28 #1 from save point 36127.1 as owner with epoch 36575
+jenkins-b-1  | 2026-10-12 10:01:53.583+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-28#1]] sleep in CpsFlowExecution[long-28#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.630+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-29 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.648+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-29 #1 from save point 36161.1 as owner with epoch 36578
+jenkins-b-1  | 2026-10-12 10:01:53.649+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-29#1]] sleep in CpsFlowExecution[long-29#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.676+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-3 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.693+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-3 #1 from save point 35954.1 as owner with epoch 36581
+jenkins-b-1  | 2026-10-12 10:01:53.694+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-3#1]] sleep in CpsFlowExecution[long-3#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.717+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-30 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.734+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-30 #1 from save point 36148.1 as owner with epoch 36585
+jenkins-b-1  | 2026-10-12 10:01:53.735+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-30#1]] sleep in CpsFlowExecution[long-30#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.766+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-31 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.783+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-31 #1 from save point 36166.1 as owner with epoch 36589
+jenkins-b-1  | 2026-10-12 10:01:53.784+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-31#1]] sleep in CpsFlowExecution[long-31#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.807+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-32 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.845+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-32 #1 from save point 36187.1 as owner with epoch 36593
+jenkins-b-1  | 2026-10-12 10:01:53.846+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-32#1]] sleep in CpsFlowExecution[long-32#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.909+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-33 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.933+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-33 #1 from save point 36184.1 as owner with epoch 36597
+jenkins-b-1  | 2026-10-12 10:01:53.934+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-33#1]] sleep in CpsFlowExecution[long-33#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:53.968+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-34 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:53.994+0000 [id=193]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming long-34#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-12 10:01:53.994+0000 [id=193]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: long-34#1 was already in the list: [long-1#1, long-10#1, long-11#1, long-12#1, long-13#1, long-14#1, long-15#1, long-16#1, long-17#1, long-18#1, long-19#1, long-2#1, long-20#1, long-21#1, long-22#1, long-23#1, long-24#1, long-25#1, long-26#1, long-27#1, long-28#1, long-29#1, long-3#1, long-30#1, long-31#1, long-32#1, long-33#1, long-34#1]
+jenkins-b-1  | 2026-10-12 10:01:53.994+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-34 #1 from save point 36200.1 as owner with epoch 36601
+jenkins-b-1  | 2026-10-12 10:01:53.996+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-34#1]] sleep in CpsFlowExecution[long-34#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.046+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-35 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.089+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-35 #1 from save point 36207.1 as owner with epoch 36605
+jenkins-b-1  | 2026-10-12 10:01:54.091+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-35#1]] sleep in CpsFlowExecution[long-35#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.101+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 10:01:54.140+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-36 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.158+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-36 #1 from save point 36206.1 as owner with epoch 36609
+jenkins-b-1  | 2026-10-12 10:01:54.159+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-36#1]] sleep in CpsFlowExecution[long-36#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.189+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-37 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.204+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-37 #1 from save point 36223.1 as owner with epoch 36613
+jenkins-b-1  | 2026-10-12 10:01:54.205+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-37#1]] sleep in CpsFlowExecution[long-37#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.233+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-38 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.258+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-38 #1 from save point 36243.1 as owner with epoch 36617
+jenkins-b-1  | 2026-10-12 10:01:54.259+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-38#1]] sleep in CpsFlowExecution[long-38#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.296+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-39 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.322+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-39 #1 from save point 36235.1 as owner with epoch 36621
+jenkins-b-1  | 2026-10-12 10:01:54.324+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-39#1]] sleep in CpsFlowExecution[long-39#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.346+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-4 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.361+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-4 #1 from save point 35947.1 as owner with epoch 36625
+jenkins-b-1  | 2026-10-12 10:01:54.363+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-4#1]] sleep in CpsFlowExecution[long-4#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.384+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-40 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.398+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-40 #1 from save point 36260.1 as owner with epoch 36627
+jenkins-b-1  | 2026-10-12 10:01:54.399+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-40#1]] sleep in CpsFlowExecution[long-40#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.415+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-41 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.428+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-41 #1 from save point 36257.1 as owner with epoch 36629
+jenkins-b-1  | 2026-10-12 10:01:54.429+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-41#1]] sleep in CpsFlowExecution[long-41#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.446+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-42 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.461+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-42 #1 from save point 36262.1 as owner with epoch 36631
+jenkins-b-1  | 2026-10-12 10:01:54.462+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-42#1]] sleep in CpsFlowExecution[long-42#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.478+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-43 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.492+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-43 #1 from save point 36279.1 as owner with epoch 36633
+jenkins-b-1  | 2026-10-12 10:01:54.493+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-43#1]] sleep in CpsFlowExecution[long-43#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.510+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-44 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.523+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-44 #1 from save point 36287.1 as owner with epoch 36635
+jenkins-b-1  | 2026-10-12 10:01:54.524+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-44#1]] sleep in CpsFlowExecution[long-44#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.540+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-45 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.552+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-45 #1 from save point 36292.1 as owner with epoch 36637
+jenkins-b-1  | 2026-10-12 10:01:54.553+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-45#1]] sleep in CpsFlowExecution[long-45#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.568+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-46 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.584+0000 [id=193]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming long-46#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-12 10:01:54.584+0000 [id=193]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: long-46#1 was already in the list: [long-1#1, long-10#1, long-11#1, long-12#1, long-13#1, long-14#1, long-15#1, long-16#1, long-17#1, long-18#1, long-19#1, long-2#1, long-20#1, long-21#1, long-22#1, long-23#1, long-24#1, long-25#1, long-26#1, long-27#1, long-28#1, long-29#1, long-3#1, long-30#1, long-31#1, long-32#1, long-33#1, long-34#1, long-35#1, long-36#1, long-37#1, long-38#1, long-39#1, long-4#1, long-40#1, long-41#1, long-42#1, long-43#1, long-44#1, long-45#1, long-46#1]
+jenkins-b-1  | 2026-10-12 10:01:54.584+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-46 #1 from save point 36313.1 as owner with epoch 36639
+jenkins-b-1  | 2026-10-12 10:01:54.585+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-46#1]] sleep in CpsFlowExecution[long-46#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.608+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-47 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.624+0000 [id=193]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming long-47#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-12 10:01:54.625+0000 [id=193]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: long-47#1 was already in the list: [long-1#1, long-10#1, long-11#1, long-12#1, long-13#1, long-14#1, long-15#1, long-16#1, long-17#1, long-18#1, long-19#1, long-2#1, long-20#1, long-21#1, long-22#1, long-23#1, long-24#1, long-25#1, long-26#1, long-27#1, long-28#1, long-29#1, long-3#1, long-30#1, long-31#1, long-32#1, long-33#1, long-34#1, long-35#1, long-36#1, long-37#1, long-38#1, long-39#1, long-4#1, long-40#1, long-41#1, long-42#1, long-43#1, long-44#1, long-45#1, long-46#1, long-47#1]
+jenkins-b-1  | 2026-10-12 10:01:54.625+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-47 #1 from save point 36321.1 as owner with epoch 36641
+jenkins-b-1  | 2026-10-12 10:01:54.625+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-47#1]] sleep in CpsFlowExecution[long-47#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.642+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-48 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.661+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-48 #1 from save point 36317.1 as owner with epoch 36643
+jenkins-b-1  | 2026-10-12 10:01:54.663+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-48#1]] sleep in CpsFlowExecution[long-48#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.692+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-49 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.710+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-49 #1 from save point 36322.1 as owner with epoch 36645
+jenkins-b-1  | 2026-10-12 10:01:54.712+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-49#1]] sleep in CpsFlowExecution[long-49#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.739+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-5 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.761+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-5 #1 from save point 35938.1 as owner with epoch 36647
+jenkins-b-1  | 2026-10-12 10:01:54.762+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-5#1]] sleep in CpsFlowExecution[long-5#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.791+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-50 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.816+0000 [id=193]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming long-50#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-12 10:01:54.816+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-50 #1 from save point 36330.1 as owner with epoch 36649
+jenkins-b-1  | 2026-10-12 10:01:54.816+0000 [id=193]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: long-50#1 was already in the list: [long-1#1, long-10#1, long-11#1, long-12#1, long-13#1, long-14#1, long-15#1, long-16#1, long-17#1, long-18#1, long-19#1, long-2#1, long-20#1, long-21#1, long-22#1, long-23#1, long-24#1, long-25#1, long-26#1, long-27#1, long-28#1, long-29#1, long-3#1, long-30#1, long-31#1, long-32#1, long-33#1, long-34#1, long-35#1, long-36#1, long-37#1, long-38#1, long-39#1, long-4#1, long-40#1, long-41#1, long-42#1, long-43#1, long-44#1, long-45#1, long-46#1, long-47#1, long-48#1, long-49#1, long-5#1, long-50#1]
+jenkins-b-1  | 2026-10-12 10:01:54.817+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-50#1]] sleep in CpsFlowExecution[long-50#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.851+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-6 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.866+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-6 #1 from save point 35950.1 as owner with epoch 36651
+jenkins-b-1  | 2026-10-12 10:01:54.866+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-6#1]] sleep in CpsFlowExecution[long-6#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.890+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-7 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.904+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-7 #1 from save point 35945.1 as owner with epoch 36653
+jenkins-b-1  | 2026-10-12 10:01:54.905+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-7#1]] sleep in CpsFlowExecution[long-7#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.924+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-8 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.939+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-8 #1 from save point 35942.1 as owner with epoch 36655
+jenkins-b-1  | 2026-10-12 10:01:54.940+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-8#1]] sleep in CpsFlowExecution[long-8#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:54.957+0000 [id=106]	INFO	j.persistence.RunningBuilds#adopt: Adopting long-9 #1 from jenkins-a (ba97e635-a1f3-4474-b5af-82f262711834)
+jenkins-b-1  | 2026-10-12 10:01:54.976+0000 [id=106]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed long-9 #1 from save point 35959.1 as owner with epoch 36657
+jenkins-b-1  | 2026-10-12 10:01:54.978+0000 [id=160]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=4, exec=CpsFlowExecution[long-9#1]] sleep in CpsFlowExecution[long-9#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 10:01:55.033+0000 [id=106]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$10: Took care of 50 build(s) of controllers which left the cluster
+jenkins-b-1  | 2026-10-12 10:02:06.138+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 10:02:16.169+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 10:02:28.199+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 10:02:38.241+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 10:02:50.278+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 10:03:00.313+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 10:03:05.153+0000 [id=306]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-16 #1
+jenkins-b-1  | 2026-10-12 10:03:05.154+0000 [id=296]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-6 #1
+jenkins-b-1  | 2026-10-12 10:03:05.155+0000 [id=316]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-8 #1
+jenkins-b-1  | 2026-10-12 10:03:05.153+0000 [id=319]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-3 #1
+jenkins-b-1  | 2026-10-12 10:03:05.158+0000 [id=328]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-49 #1
+jenkins-b-1  | 2026-10-12 10:03:05.160+0000 [id=323]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-4 #1
+jenkins-b-1  | 2026-10-12 10:03:05.164+0000 [id=298]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-37 #1
+jenkins-b-1  | 2026-10-12 10:03:05.164+0000 [id=342]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-17 #1
+jenkins-b-1  | 2026-10-12 10:03:05.166+0000 [id=350]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-30 #1
+jenkins-b-1  | 2026-10-12 10:03:05.168+0000 [id=338]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-1 #1
+jenkins-b-1  | 2026-10-12 10:03:05.176+0000 [id=289]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-5 #1
+jenkins-b-1  | 2026-10-12 10:03:05.177+0000 [id=310]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-14 #1
+jenkins-b-1  | 2026-10-12 10:03:05.179+0000 [id=330]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-42 #1
+jenkins-b-1  | 2026-10-12 10:03:05.181+0000 [id=297]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-10 #1
+jenkins-b-1  | 2026-10-12 10:03:05.193+0000 [id=351]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-36 #1
+jenkins-b-1  | 2026-10-12 10:03:05.198+0000 [id=333]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-29 #1
+jenkins-b-1  | 2026-10-12 10:03:05.201+0000 [id=341]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-24 #1
+jenkins-b-1  | 2026-10-12 10:03:05.202+0000 [id=331]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-9 #1
+jenkins-b-1  | 2026-10-12 10:03:05.204+0000 [id=286]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-13 #1
+jenkins-b-1  | 2026-10-12 10:03:05.212+0000 [id=349]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-48 #1
+jenkins-b-1  | 2026-10-12 10:03:05.213+0000 [id=355]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-2 #1
+jenkins-b-1  | 2026-10-12 10:03:05.214+0000 [id=305]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-23 #1
+jenkins-b-1  | 2026-10-12 10:03:05.216+0000 [id=354]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-43 #1
+jenkins-b-1  | 2026-10-12 10:03:05.218+0000 [id=348]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-38 #1
+jenkins-b-1  | 2026-10-12 10:03:05.226+0000 [id=336]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-7 #1
+jenkins-b-1  | 2026-10-12 10:03:05.228+0000 [id=309]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-26 #1
+jenkins-b-1  | 2026-10-12 10:03:05.233+0000 [id=324]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-32 #1
+jenkins-b-1  | 2026-10-12 10:03:05.239+0000 [id=343]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-40 #1
+jenkins-b-1  | 2026-10-12 10:03:05.240+0000 [id=334]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-33 #1
+jenkins-b-1  | 2026-10-12 10:03:05.243+0000 [id=288]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-45 #1
+jenkins-b-1  | 2026-10-12 10:03:05.243+0000 [id=320]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-41 #1
+jenkins-b-1  | 2026-10-12 10:03:05.244+0000 [id=308]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-18 #1
+jenkins-b-1  | 2026-10-12 10:03:05.251+0000 [id=293]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-20 #1
+jenkins-b-1  | 2026-10-12 10:03:05.253+0000 [id=317]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-44 #1
+jenkins-b-1  | 2026-10-12 10:03:05.253+0000 [id=345]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-34 #1
+jenkins-b-1  | 2026-10-12 10:03:05.282+0000 [id=307]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-21 #1
+jenkins-b-1  | 2026-10-12 10:03:05.289+0000 [id=340]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-31 #1
+jenkins-b-1  | 2026-10-12 10:03:05.289+0000 [id=302]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-28 #1
+jenkins-b-1  | 2026-10-12 10:03:05.291+0000 [id=327]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-22 #1
+jenkins-b-1  | 2026-10-12 10:03:05.295+0000 [id=314]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-12 #1
+jenkins-b-1  | 2026-10-12 10:03:05.295+0000 [id=352]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-27 #1
+jenkins-b-1  | 2026-10-12 10:03:05.299+0000 [id=301]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-35 #1
+jenkins-b-1  | 2026-10-12 10:03:05.300+0000 [id=294]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-15 #1
+jenkins-b-1  | 2026-10-12 10:03:05.300+0000 [id=353]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-39 #1
+jenkins-b-1  | 2026-10-12 10:03:05.309+0000 [id=326]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-11 #1
+jenkins-b-1  | 2026-10-12 10:03:05.313+0000 [id=335]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-46 #1
+jenkins-b-1  | 2026-10-12 10:03:05.314+0000 [id=303]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-25 #1
+jenkins-b-1  | 2026-10-12 10:03:05.317+0000 [id=313]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-19 #1
+jenkins-b-1  | 2026-10-12 10:03:05.322+0000 [id=312]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-50 #1
+jenkins-b-1  | 2026-10-12 10:03:05.351+0000 [id=344]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long-47 #1

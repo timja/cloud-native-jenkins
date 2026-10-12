@@ -1,0 +1,50 @@
+jenkins-b-1  | Running from: /war-override/jenkins.war
+jenkins-b-1  | webroot: /var/jenkins_home/war
+jenkins-b-1  | 2026-10-12 09:32:16.322+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-12 09:32:16.703+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-12 09:32:16.736+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-12 09:32:16.985+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-12 09:32:17.036+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-12 09:32:17.363+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-12 09:32:17.415+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-b-1  | 2026-10-12 09:32:17.421+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1160998f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-12 09:32:17.422+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @686ms
+jenkins-b-1  | 2026-10-12 09:32:17.423+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-12 09:32:17.504+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-12 09:32:17.572+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-12 09:32:19.056+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-12 09:32:20.776+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-12 09:32:20.807+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-12 09:32:20.809+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-12 09:32:20.921+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+jenkins-b-1  | 2026-10-12 09:32:20.974+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+jenkins-b-1  | 2026-10-12 09:32:20.975+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+jenkins-b-1  | 2026-10-12 09:32:21.004+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+jenkins-b-1  | 2026-10-12 09:32:21.488+0000 [id=49]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-12 09:32:21.703+0000 [id=49]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-12 09:32:22.214+0000 [id=49]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-12 09:32:22.312+0000 [id=49]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-b-1  | 2026-10-12 09:32:22.736+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-12 09:32:23.276+0000 [id=55]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_c27e3f37b5ee5b42cf3b501a92d5f01b6a89e43ad24c0baa1ca2d52e2597303c/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-b-1  | 2026-10-12 09:32:23.423+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-12 09:32:23.444+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-12 09:32:23.446+0000 [id=55]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-12 09:32:23.460+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-12 09:32:23.470+0000 [id=47]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-12 09:32:23.487+0000 [id=51]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_c27e3f37b5ee5b42cf3b501a92d5f01b6a89e43ad24c0baa1ca2d52e2597303c duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-12 09:32:23.653+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-12 09:32:23.662+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-12 09:32:24.658+0000 [id=109]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-b-1  | 2026-10-12 09:32:28.246+0000 [id=31]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-b-1  | 2026-10-12 09:32:28.325+0000 [id=33]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-b-1  | 2026-10-12 09:32:28.405+0000 [id=31]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-b-1  | 2026-10-12 09:32:28.567+0000 [id=31]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-b-1  | 2026-10-12 09:32:31.528+0000 [id=69]	INFO	i.j.p.cnj.store.SchemaMigrations#run: Schema migration store-size done
+jenkins-b-1  | 2026-10-12 09:32:32.967+0000 [id=33]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: jobs/j11/config.xml was changed meanwhile; merged both changes
+jenkins-b-1  | 2026-10-12 09:32:32.973+0000 [id=33]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: jobs/j11/config.xml was changed meanwhile; merged both changes
+jenkins-b-1  | 2026-10-12 09:32:32.979+0000 [id=33]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: jobs/j11/config.xml was changed meanwhile; merged both changes
+jenkins-b-1  | 2026-10-12 09:32:34.159+0000 [id=30]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: jobs/j11/config.xml was changed meanwhile; merged both changes
+jenkins-b-1  | 2026-10-12 09:32:34.166+0000 [id=30]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: jobs/j11/config.xml was changed meanwhile; merged both changes
+jenkins-b-1  | 2026-10-12 09:32:34.172+0000 [id=30]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: jobs/j11/config.xml was changed meanwhile; merged both changes
+jenkins-b-1  | 2026-10-12 09:32:36.476+0000 [id=168]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: p11 #2
+jenkins-b-1  | 2026-10-12 09:32:36.688+0000 [id=100]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: fs11 #2

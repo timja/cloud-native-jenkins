@@ -46,3 +46,13 @@ The ET3 regression passes on the same build (48/48).
 | 1 | 15/20 | the stale fingerprint cache and the per-id merge base (fixed); the resurrected build; 2 harness checks |
 | 2-6 | 21-22/22 | the resurrected build in 3 of 5 runs, then caught with logs (fixed in core) |
 | 7-9 | 22/22 ×3 | final build; ET3 48/48 |
+
+## Target 15
+| Scenario | Result |
+|---|---|
+| 2 Concurrent updates of one fingerprint, reworked | ✅ 5 rounds of one build on A and one on B at the same moment; every build is a usage (fpa:1-6 fpb:1-6), on both controllers |
+| 3b (item 25) A coverage report (coverage plugin) published on A | ✅ B shows the same coverage (line coverage 50 %), and its class tree (`demo.Calc.java`, 50 %), fetched as the page's script does through its bound proxy |
+
+**Harness fixes:**
+- Scenario 2 sent 10 requests per job at once, which fold in the queue (as on one controller) into a number of builds that depends on timing. It now runs rounds of one request per controller.
+- 3b looked for the class names in the page's HTML, but the page's script fetches the tree through a bound proxy. The check now makes that call as a browser does: one signed-in cookie for the page and the call, and the crumb in both headers. With the harness's token re-issuing the sign-in cookie on every request, the crumb, which is bound to that cookie, never matched.

@@ -1,0 +1,404 @@
+== docker logs et1-jenkins-c-1
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.heartbeat(PostgresPersistenceStore.java:1052)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.lambda$startHeartbeat$9(PostgresPersistenceStore.java:916)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 08:16:32.336+0000 [id=1490]	WARNING	j.persistence.RunningBuilds#owns: Cannot check the lease on jobs/mb1/branches/b3/running/1.xml; assuming it is still held
+org.postgresql.util.PSQLException: Connection attempt timed out.
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.Driver$ConnectThread.getResult(Driver.java:412)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.Driver.connect(Driver.java:305)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore$DirectDataSource.getConnection(PostgresPersistenceStore.java:1764)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.ds.common.BaseDataSource.getConnection(BaseDataSource.java:88)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:483)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:747)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+Caused: java.sql.SQLTransientConnectionException: cnj-store-control - Connection is not available, request timed out after 5438ms (total=1, active=1, idle=0, waiting=0)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:709)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:188)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:146)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:99)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1704)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withControl(PostgresPersistenceStore.java:1693)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore$1.holds(PostgresPersistenceStore.java:593)
+Caused: java.io.IOException: Failed to check lease on jobs/mb1/branches/b3/running/1.xml
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore$1.holds(PostgresPersistenceStore.java:605)
+	at jenkins.persistence.RunningBuilds.owns(RunningBuilds.java:443)
+	at jenkins.persistence.RunningBuilds.checkOwnership(RunningBuilds.java:594)
+	at jenkins.persistence.RunningBuilds$StaleCleanup.execute(RunningBuilds.java:1127)
+	at hudson.model.AsyncPeriodicWork.lambda$doRun$0(AsyncPeriodicWork.java:110)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 08:16:41.889+0000 [id=69]	WARNING	i.j.p.c.s.PostgresPersistenceStore#holdLock: Lost the liveness lock; taking it again
+java.sql.SQLException: liveness lock connection lost
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.holdLock(PostgresPersistenceStore.java:458)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 08:16:48.531+0000 [id=1490]	WARNING	j.persistence.RunningBuilds#owns: Cannot check the lease on jobs/mb1/branches/b2/running/1.xml; assuming it is still held
+org.postgresql.util.PSQLException: Connection attempt timed out.
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.Driver$ConnectThread.getResult(Driver.java:412)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.Driver.connect(Driver.java:305)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore$DirectDataSource.getConnection(PostgresPersistenceStore.java:1764)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.ds.common.BaseDataSource.getConnection(BaseDataSource.java:88)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:483)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:747)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+Caused: java.sql.SQLTransientConnectionException: cnj-store-control - Connection is not available, request timed out after 5219ms (total=1, active=1, idle=0, waiting=0)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:709)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:188)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:146)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:99)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1704)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withControl(PostgresPersistenceStore.java:1693)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore$1.holds(PostgresPersistenceStore.java:593)
+Caused: java.io.IOException: Failed to check lease on jobs/mb1/branches/b2/running/1.xml
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore$1.holds(PostgresPersistenceStore.java:605)
+	at jenkins.persistence.RunningBuilds.owns(RunningBuilds.java:443)
+	at jenkins.persistence.RunningBuilds.checkOwnership(RunningBuilds.java:594)
+	at jenkins.persistence.RunningBuilds$StaleCleanup.execute(RunningBuilds.java:1127)
+	at hudson.model.AsyncPeriodicWork.lambda$doRun$0(AsyncPeriodicWork.java:110)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 08:16:58.594+0000 [id=1436]	INFO	o.j.p.s.s.g.SandboxResolvingClassLoader#lambda$load$2: took 47,074ms to load/not load org.jenkinsci.plugins.pipeline.modeldefinition.model.StageBeanInfo from classLoader hudson.PluginManager$UberClassLoader
+2026-10-12 08:16:52.082+0000 [id=68]	WARNING	c.z.hikari.pool.ProxyConnection#checkException: cnj-store-control - Connection org.postgresql.jdbc.PgConnection@7bd31404 marked as broken because of SQLSTATE(08006), ErrorCode(0)
+java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.read(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(Unknown Source)
+	at java.base/java.net.Socket$SocketInputStream.read(Unknown Source)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:192)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:159)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:144)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:76)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.PGStream.receiveChar(PGStream.java:477)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2175)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+Caused: org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:399)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:139)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.lambda$aliveMembers$26(PostgresPersistenceStore.java:1389)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1706)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withControl(PostgresPersistenceStore.java:1693)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.aliveMembers(PostgresPersistenceStore.java:1383)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.SchemaMigrations.claim(SchemaMigrations.java:222)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.SchemaMigrations.run(SchemaMigrations.java:153)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.SchemaMigrations.runPending(SchemaMigrations.java:145)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.lambda$startHeartbeat$8(PostgresPersistenceStore.java:883)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 08:17:10.876+0000 [id=1682]	WARNING	o.j.p.w.cps.CpsThreadGroup#saveProgramIfPossible: program state save failed
+java.nio.file.NoSuchFileException: /var/jenkins_home/jobs/mb1/branches/b10/builds/1/atomic528425801908052147.tmp -> /var/jenkins_home/jobs/mb1/branches/b10/builds/1/program.dat
+	at java.base/sun.nio.fs.UnixException.translateToIOException(Unknown Source)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.UnixFileSystem.move(Unknown Source)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(Unknown Source)
+	at java.base/java.nio.file.Files.move(Unknown Source)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.saveProgramTo(CpsThreadGroup.java:652)
+Caused: java.io.IOException: Failed to persist /var/jenkins_home/jobs/mb1/branches/b10/builds/1/program.dat
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.saveProgramTo(CpsThreadGroup.java:663)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.saveProgram(CpsThreadGroup.java:613)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.saveProgramIfPossible(CpsThreadGroup.java:596)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.run(CpsThreadGroup.java:520)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:372)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:302)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$wrap$4(CpsVmExecutorService.java:143)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:139)
+	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:53)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:50)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:136)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:275)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$categoryThreadFactory$0(CpsVmExecutorService.java:50)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 08:17:12.886+0000 [id=1869]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b10 #1
+2026-10-12 08:17:13.294+0000 [id=1869]	WARNING	j.p.BuildRecords$Publisher#onFinalized: Not publishing mb1/b10 #1: it is owned by another controller
+2026-10-12 08:17:25.225+0000 [id=2594]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b2 #1
+2026-10-12 08:17:25.233+0000 [id=2591]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b9 #1
+2026-10-12 08:17:25.247+0000 [id=2453]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b8 #1
+2026-10-12 08:17:25.249+0000 [id=1840]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b3 #1
+2026-10-12 08:17:25.327+0000 [id=1682]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb8 » b9 #1
+2026-10-12 08:17:25.372+0000 [id=2589]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb8 » b3 #1
+2026-10-12 08:17:25.500+0000 [id=2593]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b8 #1
+2026-10-12 08:17:25.522+0000 [id=2437]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb9 » b4 #1
+2026-10-12 08:17:25.633+0000 [id=2592]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb9 » b10 #1
+2026-10-12 08:17:26.052+0000 [id=1997]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb26 » b10 #1
+2026-10-12 08:17:26.094+0000 [id=2562]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b10 #1
+2026-10-12 08:17:26.283+0000 [id=2587]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb4 » b2 #1
+2026-10-12 08:17:26.776+0000 [id=2599]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » main #1
+2026-10-12 08:17:27.147+0000 [id=2590]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb28 » main #1
+2026-10-12 08:17:27.186+0000 [id=2562]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb23 » b3 #1
+2026-10-12 08:17:27.559+0000 [id=2595]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb3 » b3 #1
+2026-10-12 08:17:28.771+0000 [id=2437]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b6 #1
+2026-10-12 08:17:32.330+0000 [id=1682]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » main #1
+2026-10-12 08:17:32.331+0000 [id=1284]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb9 » b2 #1
+2026-10-12 08:17:32.819+0000 [id=1788]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b7 #1
+2026-10-12 08:17:32.888+0000 [id=2453]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb14 » b10 #1
+2026-10-12 08:17:33.221+0000 [id=2589]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb22 » b7 #1
+2026-10-12 08:17:38.939+0000 [id=1997]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b9 #1
+2026-10-12 08:17:39.268+0000 [id=1869]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b7 #1
+2026-10-12 08:17:39.755+0000 [id=2592]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » b2 #1
+2026-10-12 08:18:41.091+0000 [id=87]	WARNING	i.j.p.c.s.PostgresPersistenceStore#listen: Persistence store listener failed; reconnecting
+java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.read(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(Unknown Source)
+	at java.base/java.net.Socket$SocketInputStream.read(Unknown Source)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:192)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:159)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:144)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:76)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.PGStream.receiveChar(PGStream.java:477)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2175)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+Caused: org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:399)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:139)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.drain(PostgresPersistenceStore.java:1534)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.listen(PostgresPersistenceStore.java:1488)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 08:18:41.085+0000 [id=3356]	WARNING	c.z.hikari.pool.ProxyConnection#checkException: cnj-store-work - Connection org.postgresql.jdbc.PgConnection@1dbea2c1 marked as broken because of SQLSTATE(08006), ErrorCode(0)
+java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.read(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(Unknown Source)
+	at java.base/java.net.Socket$SocketInputStream.read(Unknown Source)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:192)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:159)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:144)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:76)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.PGStream.receiveChar(PGStream.java:477)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2175)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+Caused: org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:399)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:139)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.lambda$reclaimAndPrune$7(PostgresPersistenceStore.java:857)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1706)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1670)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.run(PostgresPersistenceStore.java:827)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.reclaimAndPrune(PostgresPersistenceStore.java:850)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.SharedQueueMaintenance$Reclaim.execute(SharedQueueMaintenance.java:40)
+	at hudson.model.AsyncPeriodicWork.lambda$doRun$0(AsyncPeriodicWork.java:110)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 08:18:25.395+0000 [id=2587]	WARNING	c.z.hikari.pool.ProxyConnection#checkException: cnj-store-work - Connection org.postgresql.jdbc.PgConnection@54d25fb2 marked as broken because of SQLSTATE(08006), ErrorCode(0)
+java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.read(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(Unknown Source)
+	at java.base/java.net.Socket$SocketInputStream.read(Unknown Source)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:192)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:159)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:144)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:76)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.PGStream.receiveChar(PGStream.java:477)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2175)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+Caused: org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:399)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:525)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at PluginClassLoader for persistence-store-postgresql//org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:139)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at PluginClassLoader for persistence-store-postgresql//com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.lambda$children$4(PostgresPersistenceStore.java:280)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1706)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1670)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.children(PostgresPersistenceStore.java:262)
+	at jenkins.persistence.RunningBuilds.load(RunningBuilds.java:267)
+	at jenkins.persistence.RunningBuilds.lambda$all$0(RunningBuilds.java:301)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(Unknown Source)
+	at jenkins.persistence.RunningBuilds.all(RunningBuilds.java:301)
+	at jenkins.persistence.RunningBuilds.elsewhere(RunningBuilds.java:316)
+	at jenkins.persistence.RunningBuilds$ActionFactory.createFor(RunningBuilds.java:1343)
+	at jenkins.persistence.RunningBuilds$ActionFactory.createFor(RunningBuilds.java:1331)
+	at hudson.model.Actionable.createFor(Actionable.java:159)
+	at hudson.model.Actionable.getAction(Actionable.java:377)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:98)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1225)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaClassSite.call(PojoMetaClassSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:128)
+	at PluginClassLoader for pipeline-model-definition//org.jenkinsci.plugins.pipeline.modeldefinition.Utils.updateRunAndJobActions(Utils.groovy:305)
+	at org.jenkinsci.plugins.pipeline.modeldefinition.Utils$updateRunAndJobActions$4.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.sandbox.DefaultInvoker.methodCall(DefaultInvoker.java:20)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.LoggingInvoker.methodCall(LoggingInvoker.java:124)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationGroup.methodCall(ContinuationGroup.java:107)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.dispatchOrArg(FunctionCallBlock.java:118)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.fixArg(FunctionCallBlock.java:87)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:71)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.PropertyishBlock$ContinuationImpl.get(PropertyishBlock.java:76)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.LValueBlock$GetAdapter.receive(LValueBlock.java:30)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.PropertyishBlock$ContinuationImpl.fixName(PropertyishBlock.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:71)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ConstantBlock.eval(ConstantBlock.java:21)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.Next.step(Next.java:84)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.Continuable.run0(Continuable.java:142)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.SandboxContinuable.access$001(SandboxContinuable.java:17)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.SandboxContinuable.run0(SandboxContinuable.java:48)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThread.runNextChunk(CpsThread.java:188)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.run(CpsThreadGroup.java:464)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:372)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:302)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$wrap$4(CpsVmExecutorService.java:143)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:139)
+	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:53)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$1.call(CpsVmExecutorService.java:50)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:136)
+	at org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:275)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService.lambda$categoryThreadFactory$0(CpsVmExecutorService.java:50)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 08:18:41.391+0000 [id=1840]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb8 » b7 #1
+2026-10-12 08:18:41.496+0000 [id=69]	WARNING	i.j.p.c.s.PostgresPersistenceStore#holdLock: Lost the liveness lock; taking it again
+java.sql.SQLException: liveness lock connection lost
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStore.holdLock(PostgresPersistenceStore.java:458)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 08:18:42.849+0000 [id=2599]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb28 » b4 #1
+== thread dump of et1-jenkins-c-1
+7:
+2026-10-12 08:35:33
+Full thread dump OpenJDK 64-Bit Server VM (21.0.12.1+1-LTS mixed mode):
+
+Threads class SMR info:
+_java_thread_list=0x0000ffff44002010, length=11, elements={
+0x0000ffff8c02b710, 0x0000ffff8c1efbb0, 0x0000ffff8c1f0a70, 0x0000ffff8c1f2390,
+0x0000ffff8c1f38a0, 0x0000ffff8c205480, 0x0000ffff8c2069a0, 0x0000ffff8c210020,
+0x0000ffff8c28b9a0, 0x0000ffff8c28f1b0, 0x0000ffff44000ed0
+}
+
+"main" #1 [1280] prio=5 os_prio=0 cpu=76858.88ms elapsed=592.93s tid=0x0000ffff8c02b710 nid=1280 runnable  [0x0000ffff930ec000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ClassLoader.findLoadedClass0(java.base@21.0.12.1/Native Method)
+	at java.lang.ClassLoader.findLoadedClass(java.base@21.0.12.1/Unknown Source)
+	at java.lang.ClassLoader.loadClass(java.base@21.0.12.1/Unknown Source)
+	- locked <0x000000008b6ff620> (a java.lang.Object)
+	at java.lang.ClassLoader.loadClass(java.base@21.0.12.1/Unknown Source)
+	at winstone.cmdline.Option.<clinit>(Option.java:91)
+	at winstone.Launcher.getArgsFromCommandLine(Launcher.java:503)
+	at winstone.Launcher.main(Launcher.java:467)
+	at java.lang.invoke.LambdaForm$DMH/0x00000001000c9c00.invokeStatic(java.base@21.0.12.1/LambdaForm$DMH)
+	at java.lang.invoke.LambdaForm$MH/0x00000001000ca800.invoke(java.base@21.0.12.1/LambdaForm$MH)
+	at java.lang.invoke.Invokers$Holder.invokeExact_MT(java.base@21.0.12.1/Unknown Source)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(java.base@21.0.12.1/Unknown Source)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(java.base@21.0.12.1/Unknown Source)
+	at java.lang.reflect.Method.invoke(java.base@21.0.12.1/Unknown Source)
+	at executable.Main.main(Main.java:355)
+
+"Reference Handler" #9 [1305] daemon prio=10 os_prio=0 cpu=355.57ms elapsed=475.29s tid=0x0000ffff8c1efbb0 nid=1305 waiting on condition  [0x0000ffff90456000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.12.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.12.1/Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.12.1/Unknown Source)
+
+"Finalizer" #10 [1306] daemon prio=8 os_prio=0 cpu=165.75ms elapsed=473.95s tid=0x0000ffff8c1f0a70 nid=1306 in Object.wait()  [0x0000ffff90248000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.12.1/Native Method)
+	- waiting on <0x000000008b90a5d0> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.12.1/Unknown Source)
+	at java.lang.Object.wait(java.base@21.0.12.1/Unknown Source)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.12.1/Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/Unknown Source)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.12.1/Unknown Source)
+	- locked <0x000000008b90a5d0> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.12.1/Unknown Source)
+
+"Signal Dispatcher" #11 [1308] daemon prio=9 os_prio=0 cpu=58.12ms elapsed=468.53s tid=0x0000ffff8c1f2390 nid=1308 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #12 [1309] daemon prio=9 os_prio=0 cpu=6.40ms elapsed=468.31s tid=0x0000ffff8c1f38a0 nid=1309 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #13 [1310] daemon prio=9 os_prio=0 cpu=1611.38ms elapsed=467.99s tid=0x0000ffff8c205480 nid=1310 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #14 [1311] daemon prio=9 os_prio=0 cpu=16124.56ms elapsed=467.50s tid=0x0000ffff8c2069a0 nid=1311 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #17 [1312] daemon prio=9 os_prio=0 cpu=6854.72ms elapsed=466.57s tid=0x0000ffff8c210020 nid=1312 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   Compiling:  427       3       java.lang.invoke.LambdaForm::forceInterpretation (14 bytes)
+
+"Notification Thread" #18 [1320] daemon prio=9 os_prio=0 cpu=3.08ms elapsed=311.24s tid=0x0000ffff8c28b9a0 nid=1320 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #19 [1321] daemon prio=8 os_prio=0 cpu=47.21ms elapsed=310.04s tid=0x0000ffff8c28f1b0 nid=1321 waiting on condition  [0x0000ffff75118000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.12.1/Native Method)
+	- parking to wait for  <0x000000008b881e38> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.12.1/Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.12.1/Unknown Source)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.12.1/Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.12.1/Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.12.1/Unknown Source)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.12.1/Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.12.1/Unknown Source)
+	at java.lang.Thread.run(java.base@21.0.12.1/Unknown Source)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.12.1/Unknown Source)
+
+"Attach Listener" #20 [1326] daemon prio=9 os_prio=0 cpu=26.83ms elapsed=1.82s tid=0x0000ffff44000ed0 nid=1326 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"VM Thread" os_prio=0 cpu=1745.04ms elapsed=522.79s tid=0x0000ffff8c1259c0 nid=1287 runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=8125.75ms elapsed=574.95s tid=0x0000ffff8c11a910 nid=1286 waiting on condition  
+
+"G1 Service" os_prio=0 cpu=1008.30ms elapsed=585.26s tid=0x0000ffff8c10ab80 nid=1285 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=18.00ms elapsed=585.38s tid=0x0000ffff8c109bb0 nid=1284 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=1.01ms elapsed=585.43s tid=0x0000ffff8c093db0 nid=1283 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=8.01ms elapsed=585.54s tid=0x0000ffff8c092e00 nid=1282 runnable  
+
+"GC Thread#0" os_prio=0 cpu=16.90ms elapsed=585.75s tid=0x0000ffff8c0820c0 nid=1281 runnable  
+
+JNI global refs: 9, weak refs: 0
+
+== thread dump of et1-jenkins-a-1
+7:

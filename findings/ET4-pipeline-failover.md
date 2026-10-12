@@ -40,3 +40,11 @@ ET3 was re-run on the same build: 48/48 pass (`raw/ET3/`).
 - Moving a running build to the controller holding its agent, which is now possible with the adoption machinery. This is the R3 placement item; Target 5 covers queue-time placement.
 - `lock`, `milestone` and the `build` step across controllers: Target 5.
 - A step that completes inside the ≤1 s shipping window re-runs on adoption. If that matters, add an option to commit synchronously after non-idempotent steps.
+
+## Target 15
+| Scenario | Result |
+|---|---|
+| 2b (item 23) A later stage reads what an earlier stage left in the workspace (inbound agent), the owner killed between them | ✅ the other controller adopts the build and the agent reconnects to it; the read stage finds the file and prints it after the resumption |
+| 6 (item 12) A `PERFORMANCE_OPTIMIZED` build closed as aborted | ✅ B does not run it again, and its console keeps what it printed on A (what A had shipped before it died), then why it ended |
+
+**Harness fixes:** the order check of 2b searched for the file's content from the start of the console, where the write stage's `echo` already printed it; the check of 6 expected a line printed on A just before the kill, which A had not necessarily shipped yet.

@@ -1,0 +1,53 @@
+Started by user admin
+Running as SYSTEM
+Building on the built-in node in workspace /var/jenkins_home/workspace/ticker
+[ticker] $ /bin/sh -xe /tmp/jenkins4625245963186991161.sh
++ seq 1 120
++ echo tick 1
+tick 1
++ sleep 1
++ echo tick 2
+tick 2
++ sleep 1
++ echo tick 3
+tick 3
++ sleep 1
++ echo tick 4
+tick 4
++ sleep 1
++ echo tick 5
+tick 5
++ sleep 1
++ echo tick 6
+tick 6
++ sleep 1
++ echo tick 7
+tick 7
++ sleep 1
++ echo tick 8
+tick 8
++ sleep 1
++ echo tick 9
+tick 9
++ sleep 1
++ echo tick 10
+tick 10
++ sleep 1
++ echo tick 11
+tick 11
++ sleep 1
++ echo tick 12
+tick 12
++ sleep 1
++ echo tick 13
+tick 13
++ sleep 1
++ echo tick 14
+tick 14
++ sleep 1
++ echo tick 15
+tick 15
++ sleep 1
+
+This build was running on jenkins-a, which is gone, and could not be resumed elsewhere; it is closed as aborted.
+Finished: ABORTED

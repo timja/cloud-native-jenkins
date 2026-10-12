@@ -1,0 +1,13 @@
+Started on Oct 12, 2026, 8:55:00 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision f73cd23d819c6bf349fae8ce521daddb81571099 (refs/remotes/origin/main)
+The recommended git tool is: NONE
+No credentials specified
+ &gt; git --version # timeout=10
+ &gt; git --version # 'git version 2.47.3'
+ &gt; git ls-remote -h -- <a href='file:///repo/poll'>file:///repo/poll</a> # timeout=10
+Found 1 remote heads on <a href='file:///repo/poll'>file:///repo/poll</a>
+[poll] Latest remote head revision on refs/heads/main is: 22cf99386bb0023c849c135293ea768f76730d35
+Done. Took 78 ms
+Changes found
+

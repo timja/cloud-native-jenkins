@@ -51,3 +51,8 @@
 | 4-7 | 7/8 | stale descriptions: raw reads moving the seen version (fixed) |
 | 8-9 | 7-8/8 | the second save after a merge (fixed); scenario 1 at 9/10 (check and reload under one lock) |
 | 10-12 | 8/8 ×3 | final build |
+
+## Target 15
+- **Scenario 3 lost a description in one run** (core, fixed). A merge that wrote nothing new kept the version it had read, but the object in memory still had only its own side, so its next save overwrote the other change. A no-op merge now keeps the version and base read before, so the next save merges again. Deterministic test: `ItemReloadTest.twoSavesHereWhileAChangeElsewhereIsNotAppliedYet`.
+- **Field-by-field reloads (item 8)**: an item changed elsewhere is reloaded into a scratch instance, and only the changed fields are copied over, except those changed here since. The core setters on `Jenkins` assign under its lock.
+- Scenario 3 now passes 3/3: the description set on A and the trigger set on B both survive on both controllers.

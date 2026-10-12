@@ -1,0 +1,199 @@
+jenkins-b-1  | Running from: /war-override/jenkins.war
+jenkins-b-1  | webroot: /var/jenkins_home/war
+jenkins-b-1  | 2026-10-12 09:49:53.040+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-12 09:49:53.513+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-12 09:49:53.551+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-12 09:49:53.832+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-12 09:49:53.858+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-12 09:49:54.144+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-12 09:49:54.234+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-b-1  | 2026-10-12 09:49:54.244+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-12 09:49:54.245+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @695ms
+jenkins-b-1  | 2026-10-12 09:49:54.246+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-12 09:49:54.311+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-12 09:49:54.353+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-12 09:49:56.217+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-12 09:49:59.113+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-12 09:49:59.154+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-12 09:49:59.161+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-12 09:49:59.249+0000 [id=56]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+jenkins-b-1  | 2026-10-12 09:49:59.259+0000 [id=56]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+jenkins-b-1  | 2026-10-12 09:49:59.260+0000 [id=56]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+jenkins-b-1  | 2026-10-12 09:49:59.260+0000 [id=56]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+jenkins-b-1  | 2026-10-12 09:50:00.244+0000 [id=56]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-12 09:50:00.576+0000 [id=56]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-12 09:50:01.496+0000 [id=56]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-12 09:50:01.661+0000 [id=56]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-b-1  | 2026-10-12 09:50:02.425+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-12 09:50:03.191+0000 [id=45]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_164507e8b6a920c9b2f470476600b7ab5a1dc334a1dcb4a4ac5aa3df19593574/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-b-1  | 2026-10-12 09:50:03.478+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-12 09:50:03.481+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-12 09:50:03.483+0000 [id=58]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-12 09:50:03.491+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-12 09:50:03.499+0000 [id=59]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-12 09:50:03.509+0000 [id=58]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_164507e8b6a920c9b2f470476600b7ab5a1dc334a1dcb4a4ac5aa3df19593574 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-12 09:50:03.736+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-12 09:50:03.755+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-12 09:50:04.781+0000 [id=109]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-b-1  | 2026-10-12 09:50:22.630+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:50:32.654+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:50:42.678+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:50:52.709+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:51:02.761+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:51:12.796+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:51:22.824+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:51:32.872+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:51:42.909+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:51:50.354+0000 [id=73]	INFO	i.j.p.c.s.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [2ca5c2d6-299d-4c0d-b157-e39aed6ebab5]
+jenkins-b-1  | 2026-10-12 09:51:51.092+0000 [id=88]	INFO	j.persistence.RunningBuilds#adopt: Adopting adopted #1 from jenkins-a (2ca5c2d6-299d-4c0d-b157-e39aed6ebab5)
+jenkins-b-1  | 2026-10-12 09:51:51.652+0000 [id=88]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming adopted#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-12 09:51:51.656+0000 [id=88]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: adopted#1 was already in the list: [adopted#1]
+jenkins-b-1  | 2026-10-12 09:51:51.657+0000 [id=178]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=328, exec=CpsFlowExecution[adopted#1]] sleep in CpsFlowExecution[adopted#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 09:51:51.658+0000 [id=88]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed adopted #1 from save point 115.33 as owner with epoch 152
+jenkins-b-1  | 2026-10-12 09:51:51.659+0000 [id=88]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$10: Took care of 1 build(s) of controllers which left the cluster
+jenkins-b-1  | 2026-10-12 09:51:52.940+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:52:02.956+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:52:12.969+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:52:22.988+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:52:32.999+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:52:42.249+0000 [id=179]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: adopted #1
+jenkins-b-1  | 2026-10-12 09:52:43.011+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:52:53.025+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:53:03.179+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:53:13.243+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:53:23.309+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:53:33.361+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:53:43.405+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:53:46.585+0000 [id=73]	INFO	i.j.p.c.s.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [947b537f-74c6-4ffa-b8f7-412f6a076c93]
+jenkins-b-1  | 2026-10-12 09:53:46.731+0000 [id=44]	INFO	j.persistence.RunningBuilds#adopt: Adopting fo1 #1 from jenkins-a (947b537f-74c6-4ffa-b8f7-412f6a076c93)
+jenkins-b-1  | 2026-10-12 09:53:46.831+0000 [id=44]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming fo1#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-12 09:53:46.833+0000 [id=44]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: fo1#1 was already in the list: [fo1#1]
+jenkins-b-1  | 2026-10-12 09:53:46.833+0000 [id=44]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed fo1 #1 from save point 280.6 as owner with epoch 292
+jenkins-b-1  | 2026-10-12 09:53:46.834+0000 [id=218]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=16, exec=CpsFlowExecution[fo1#1]] sleep in CpsFlowExecution[fo1#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 09:53:46.836+0000 [id=44]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$10: Took care of 1 build(s) of controllers which left the cluster
+jenkins-b-1  | 2026-10-12 09:53:53.444+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:54:03.482+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:54:13.504+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:54:20.690+0000 [id=215]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: fo1 #1
+jenkins-b-1  | 2026-10-12 09:54:23.521+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:54:33.537+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:54:43.585+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:54:43.857+0000 [id=73]	INFO	i.j.p.c.s.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [29731841-9dfc-4b16-9284-0afbbcec56bc]
+jenkins-b-1  | 2026-10-12 09:54:43.952+0000 [id=86]	INFO	j.persistence.RunningBuilds#adopt: Adopting fo2 #1 from jenkins-a (29731841-9dfc-4b16-9284-0afbbcec56bc)
+jenkins-b-1  | 2026-10-12 09:54:44.006+0000 [id=86]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed fo2 #1 from save point 345.7 as owner with epoch 356
+jenkins-b-1  | 2026-10-12 09:54:44.008+0000 [id=218]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=18, exec=CpsFlowExecution[fo2#1]] sleep in CpsFlowExecution[fo2#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 09:54:44.009+0000 [id=86]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$10: Took care of 1 build(s) of controllers which left the cluster
+jenkins-b-1  | 2026-10-12 09:54:53.639+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:55:03.688+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:55:13.719+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:55:16.420+0000 [id=219]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: fo2 #1
+jenkins-b-1  | 2026-10-12 09:55:23.767+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:55:33.808+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:55:38.669+0000 [id=73]	INFO	i.j.p.c.s.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [280db278-2b8b-4bb5-9de4-5bf911aad100]
+jenkins-b-1  | 2026-10-12 09:55:38.775+0000 [id=65]	INFO	j.persistence.RunningBuilds#adopt: Adopting fo3 #1 from jenkins-a (280db278-2b8b-4bb5-9de4-5bf911aad100)
+jenkins-b-1  | 2026-10-12 09:55:38.864+0000 [id=219]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming fo3#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-12 09:55:38.864+0000 [id=65]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed fo3 #1 from save point 408.7 as owner with epoch 419
+jenkins-b-1  | 2026-10-12 09:55:38.865+0000 [id=219]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: fo3#1 was already in the list: [fo3#1]
+jenkins-b-1  | 2026-10-12 09:55:38.868+0000 [id=65]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$10: Took care of 1 build(s) of controllers which left the cluster
+jenkins-b-1  | 2026-10-12 09:55:38.869+0000 [id=218]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=18, exec=CpsFlowExecution[fo3#1]] sleep in CpsFlowExecution[fo3#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 09:55:43.837+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:55:53.919+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:56:03.949+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:56:11.509+0000 [id=215]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: fo3 #1
+jenkins-b-1  | 2026-10-12 09:56:13.964+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:56:23.982+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:56:33.566+0000 [id=73]	INFO	i.j.p.c.s.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [4dedd46f-40c0-4aa3-be5f-464a85f5a2b7]
+jenkins-b-1  | 2026-10-12 09:56:33.664+0000 [id=65]	INFO	j.persistence.RunningBuilds#adopt: Adopting fs #1 from jenkins-a (4dedd46f-40c0-4aa3-be5f-464a85f5a2b7)
+jenkins-b-1  | 2026-10-12 09:56:33.730+0000 [id=215]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming fs#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-12 09:56:33.731+0000 [id=65]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed fs #1 from save point 471.7 as owner with epoch 482
+jenkins-b-1  | 2026-10-12 09:56:33.731+0000 [id=215]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: fs#1 was already in the list: [fs#1]
+jenkins-b-1  | 2026-10-12 09:56:33.733+0000 [id=65]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$10: Took care of 1 build(s) of controllers which left the cluster
+jenkins-b-1  | 2026-10-12 09:56:33.735+0000 [id=218]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=18, exec=CpsFlowExecution[fs#1]] sleep in CpsFlowExecution[fs#1]
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
+jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.setupTimer(SleepStep.java:93)
+jenkins-b-1  | 	at PluginClassLoader for workflow-basic-steps//org.jenkinsci.plugins.workflow.steps.SleepStep$Execution.onResume(SleepStep.java:115)
+jenkins-b-1  | 	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.FlowExecutionList$ParallelResumer.lambda$run$6(FlowExecutionList.java:478)
+jenkins-b-1  | 	at jenkins.util.ContextResettingExecutorService.lambda$wrap$0(ContextResettingExecutorService.java:26)
+jenkins-b-1  | 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+jenkins-b-1  | 	at jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)
+jenkins-b-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-b-1  | 2026-10-12 09:56:34.011+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:56:44.030+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:56:54.050+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:57:04.087+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:57:06.146+0000 [id=219]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: fs #1
+jenkins-b-1  | 2026-10-12 09:57:14.117+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:57:24.145+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:57:34.212+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:57:44.251+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:57:54.286+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:58:04.331+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:58:14.371+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:58:24.405+0000 [id=31]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-b-1  | 2026-10-12 09:58:28.950+0000 [id=73]	INFO	i.j.p.c.s.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [804c0784-0d6b-4ea7-9490-cb1faf34f1a2]
+jenkins-b-1  | 2026-10-12 09:58:28.957+0000 [id=44]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of ticker #1 left by jenkins-a (804c0784-0d6b-4ea7-9490-cb1faf34f1a2), which is gone
+jenkins-b-1  | 2026-10-12 09:58:29.100+0000 [id=44]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed ticker #1 as aborted: This build was running on jenkins-a, which is gone, and could not be resumed elsewhere; it is closed as aborted.
+jenkins-b-1  | 2026-10-12 09:58:29.102+0000 [id=44]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$10: Took care of 1 build(s) of controllers which left the cluster
+jenkins-b-1  | 2026-10-12 09:58:34.428+0000 [id=28]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1

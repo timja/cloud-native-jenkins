@@ -86,3 +86,7 @@ The regressions pass on the same build: ET3 48/48, ET4 39/39 (three runs), ET5 3
 | 9–10 | all passed ×2 | ET5 35/35, ET4 39/39, ET3 48/48 |
 | 11–14 | 44/44 ×4 | regressions: ET4 lost log lines after failover in 1 of 3 runs (fixed), then left a save point of a fenced owner (fixed) |
 | 15–16 | 44/44 ×2 | final build; ET4 39/39 ×3, ET5 35/35, ET3 48/48 |
+
+## Target 15
+- **Scenario 8 (a browser through the round-robin load balancer)** still passes. It reads the saved description back for up to 10 s, naming the controller that answered: the other controller has the change once it has applied it.
+- **JCasC `keepUndeclaredNodes` (item 10)** is on in the harness, so one controller applying the YAML no longer deletes the nodes it does not declare. The checks of nodes made at runtime pass with it.

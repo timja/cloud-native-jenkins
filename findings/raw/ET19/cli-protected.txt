@@ -1,0 +1,4 @@
+Installing a plugin from standard input
+
+ERROR: The store plugin (persistence-store-postgresql) is part of the controller image and cannot be changed at runtime.
+exit 5

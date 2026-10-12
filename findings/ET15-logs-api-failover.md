@@ -41,3 +41,18 @@
 |---|---|---|
 | earlier | rename scenario failed | renaming a job while it builds is refused by core even on the owner, so the scenario became a folder rename. A folder rename from B was then accepted, which is the bug fixed above (`isBuilding` counts builds elsewhere). The harness also did not wait for B to see the completed build |
 | sweep ×2 | all ✅ | final build |
+
+## Target 15
+| Scenario | Result |
+|---|---|
+| 4 (item 5) Failover time | ✅ builds adopted 5.2, 5.5 and 5.6 s after three `SIGKILL`s (the session lock is freed with the process), 5.4 s after a clean stop began; a 12 s pause is not taken for a death, and its build completes on A |
+| 5 (item 12) A freestyle build whose controller is killed | ✅ closed as aborted on B, keeping what it printed (ticks 1 to 15, in order), then why it ended |
+
+Failover was 16–23 s before session locks (Target 14).
+
+**Harness fixes:**
+- `docker logs | grep -m1` under `pipefail` ended the script with code 255 once the log grew past the pipe buffer.
+- The order check of 5 also counted the shell's trace of each `echo`.
+- The controller logs are now kept however the script ends.
+
+**Not reproduced:** in one run, scenario 2 found the adopting controller's part of the log missing (lines 169 on). It passed in every run since. The logs of that run were not kept; they now are.

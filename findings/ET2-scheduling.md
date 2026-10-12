@@ -29,3 +29,11 @@ The ET1 setup was re-run on the same build: 27/27 pass (`raw/ET1/`).
 - **Harness bugs found while running ET2:**
   - Concurrent POSTs sharing one cookie jar broke crumbs. Fixed by switching to API-token auth.
   - A global `core.fsmonitor` setting hung `git` in non-interactive runs. Disabled in the scripts.
+
+## Target 15 (item 22): the SCM polling log
+| Check | Result |
+|---|---|
+| The polling log reads the same on both controllers | ✅ requests for a job's polling log go to the controller that last polled it (from the trigger claims), which has the log |
+| Polling never built the same change twice, and stayed on one controller | ✅ |
+
+**Fixed:** the polling log was on whichever controller polled, so the other showed none.

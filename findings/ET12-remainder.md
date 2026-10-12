@@ -62,3 +62,12 @@ ET1-ET12 all pass on this build (core `cnj/t12-m1-remainder` 1f5de855f3, plugin 
 |---|---|---|
 | 1 | 7/10 | a Groovy quoting error in the harness's `lab1` script; the closing controller not listing its aborted build (fixed) |
 | 2-3 | 10/10 ×2 | final build |
+
+## Target 15
+| Scenario | Result |
+|---|---|
+| 1b (item 13) Parallel branches, one on A's built-in node and one on an agent only B has | ✅ completes with both branches; handed over once, after the branch on A finished, not back and forth |
+| 1c (item 14) `build(wait: true)` on A for a downstream build that runs on B | ✅ the downstream build ran on B (not pinned to A), and A's build got its result |
+| 1d ... and A killed while it waits | ✅ B adopts the waiting build, which completes with the downstream result |
+
+**Fixed:** in 1c, the waiting build failed with "Build of down was cancelled". Its local queue item left as cancelled when B took the downstream build. `SharedQueue.takenElsewhere` (core) lets pipeline-build-step tell "taken by another controller" from "cancelled", and the result comes through the delivery.
