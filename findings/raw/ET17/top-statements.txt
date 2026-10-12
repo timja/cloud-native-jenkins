@@ -1,0 +1,8 @@
+3452 ms, 5345 calls: with recursive s(seg) as ((select split_part(substr(key, $1), $7, $8) from jenkins_store where key ~>=~ $2 and key ~<~ $
+2572 ms, 1 calls: insert into jenkins_store (key, content, sha256, version, updated_by, size) select replace(s.key, $1, $2 || n || $3), s.
+2010 ms, 1840 calls: select seq, kind, key, old_key, version, origin from jenkins_store_events where seq > $1 order by seq
+1017 ms, 7 calls: alter table jenkins_store add column if not exists size int
+356 ms, 2504 calls: insert into jenkins_store (key, content, sha256, version, updated_by, size) values ($1, $2, $3, $4, $5, $6) on conflict 
+341 ms, 1 calls: insert into jenkins_store (key, content, sha256, version, updated_by, size) select k, c, sha256(c), nextval($1), $2, len
+321 ms, 1 calls: update jenkins_store set content = convert_to($1, $2), size = length($3), version = nextval($4) where key ~ $5
+282 ms, 12112 calls: select content, version from jenkins_store where key = $1

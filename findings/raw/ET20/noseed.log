@@ -1,0 +1,1623 @@
+Running from: /war-override/jenkins.war
+webroot: /var/jenkins_home/war
+2026-10-12 10:41:13.245+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-10-12 10:41:13.615+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-10-12 10:41:13.705+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+2026-10-12 10:41:13.906+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+2026-10-12 10:41:13.926+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-10-12 10:41:14.096+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2026-10-12 10:41:14.144+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+2026-10-12 10:41:14.148+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-10-12 10:41:14.148+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @445ms
+2026-10-12 10:41:14.149+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-10-12 10:41:14.201+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+2026-10-12 10:41:14.236+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-10-12 10:41:15.833+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-10-12 10:41:17.165+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-10-12 10:41:17.177+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-10-12 10:41:17.180+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-10-12 10:41:17.209+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:17.217+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:17.218+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:17.218+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:17.435+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:17.438+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:17.438+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:17.439+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:17.443+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=hudson.model.UsageStatistics, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of UsageStatistics.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> PersistentDescriptor: "hudson.model.PersistentDescriptor"
+[LF]> UsageStatistics:      "hudson.model.UsageStatistics"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:17.457+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:17.458+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:17.460+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:17.460+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:17.489+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:17.505+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:17.506+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:17.518+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:17.518+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=hudson.security.csrf.DefaultCrumbIssuer$DescriptorImpl, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.security.DefaultConfidentialStore.loadOrCreate(DefaultConfidentialStore.java:170)
+	at jenkins.security.ConfidentialKey.loadOrCreate(ConfidentialKey.java:53)
+	at jenkins.security.HexStringConfidentialKey.get(HexStringConfidentialKey.java:51)
+	at hudson.security.csrf.DefaultCrumbIssuer$DescriptorImpl.<init>(DefaultCrumbIssuer.java:146)
+	at hudson.security.csrf.DefaultCrumbIssuer$DescriptorImpl$$FastClassByGuice$$998f01e.GUICE$TRAMPOLINE(<generated>)
+	at hudson.security.csrf.DefaultCrumbIssuer$DescriptorImpl$$FastClassByGuice$$998f01e.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:33)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:614)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) [Guice/ErrorInjectingConstructor]: IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.KeyCheck.skip=true to start anyway.
+[LF]>   at DefaultCrumbIssuer$DescriptorImpl.<init>(DefaultCrumbIssuer.java:146)
+[LF]> 
+[LF]> Learn more:
+[LF]>   https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> DefaultCrumbIssuer$DescriptorImpl: "hudson.security.csrf.DefaultCrumbIssuer$DescriptorImpl"
+[LF]> KeyCheck:                          "jenkins.plugins.cnj.store.KeyCheck"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:17.540+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:17.541+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:17.541+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:17.542+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:17.563+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:17.581+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:17.581+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:17.592+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:17.593+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=hudson.tasks.Maven$DescriptorImpl, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of Maven$DescriptorImpl.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> Maven$DescriptorImpl: "hudson.tasks.Maven$DescriptorImpl"
+[LF]> PersistentDescriptor: "hudson.model.PersistentDescriptor"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:17.595+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:17.595+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:17.601+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:17.602+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:17.638+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:17.649+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:17.649+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:17.667+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:17.668+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=hudson.tasks.Shell$DescriptorImpl, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of Shell$DescriptorImpl.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> PersistentDescriptor: "hudson.model.PersistentDescriptor"
+[LF]> Shell$DescriptorImpl: "hudson.tasks.Shell$DescriptorImpl"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:17.670+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:17.671+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:17.671+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:17.671+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:17.684+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:17.706+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:17.706+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:17.714+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:17.714+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=hudson.triggers.SCMTrigger$DescriptorImpl, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of SCMTrigger$DescriptorImpl.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> PersistentDescriptor:      "hudson.model.PersistentDescriptor"
+[LF]> SCMTrigger$DescriptorImpl: "hudson.triggers.SCMTrigger$DescriptorImpl"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:17.717+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:17.717+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:17.717+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:17.717+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:17.731+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:17.754+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:17.754+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:17.761+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:17.761+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.console.ConsoleUrlProviderGlobalConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+	at jenkins.console.ConsoleUrlProviderGlobalConfiguration.<init>(ConsoleUrlProviderGlobalConfiguration.java:62)
+	at jenkins.console.ConsoleUrlProviderGlobalConfiguration$$FastClassByGuice$$de9eccd.GUICE$TRAMPOLINE(<generated>)
+	at jenkins.console.ConsoleUrlProviderGlobalConfiguration$$FastClassByGuice$$de9eccd.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:33)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:614)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) [Guice/ErrorInjectingConstructor]: IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.KeyCheck.skip=true to start anyway.
+[LF]>   at ConsoleUrlProviderGlobalConfiguration.<init>(ConsoleUrlProviderGlobalConfiguration.java:61)
+[LF]> 
+[LF]> Learn more:
+[LF]>   https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> ConsoleUrlProviderGlobalConfiguration: "jenkins.console.ConsoleUrlProviderGlobalConfiguration"
+[LF]> KeyCheck:                              "jenkins.plugins.cnj.store.KeyCheck"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:17.764+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:17.764+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:17.764+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:17.764+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:17.778+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:17.812+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:17.812+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:17.815+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:17.816+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.fingerprints.GlobalFingerprintConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+	at jenkins.fingerprints.GlobalFingerprintConfiguration.<init>(GlobalFingerprintConfiguration.java:49)
+	at jenkins.fingerprints.GlobalFingerprintConfiguration$$FastClassByGuice$$ec7032b.GUICE$TRAMPOLINE(<generated>)
+	at jenkins.fingerprints.GlobalFingerprintConfiguration$$FastClassByGuice$$ec7032b.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:33)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:614)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) [Guice/ErrorInjectingConstructor]: IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.KeyCheck.skip=true to start anyway.
+[LF]>   at GlobalFingerprintConfiguration.<init>(GlobalFingerprintConfiguration.java:48)
+[LF]> 
+[LF]> Learn more:
+[LF]>   https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> GlobalFingerprintConfiguration: "jenkins.fingerprints.GlobalFingerprintConfiguration"
+[LF]> KeyCheck:                       "jenkins.plugins.cnj.store.KeyCheck"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:17.821+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:17.821+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:17.822+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:17.822+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:17.873+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:17.875+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:17.875+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:17.902+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:17.902+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.model.ArtifactManagerConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of ArtifactManagerConfiguration.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> ArtifactManagerConfiguration: "jenkins.model.ArtifactManagerConfiguration"
+[LF]> PersistentDescriptor:         "hudson.model.PersistentDescriptor"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:17.904+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:17.904+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:17.905+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:17.905+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:17.921+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:17.940+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:17.940+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:17.950+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:17.950+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.model.GlobalBuildDiscarderConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+	at jenkins.model.GlobalBuildDiscarderConfiguration.<init>(GlobalBuildDiscarderConfiguration.java:53)
+	at jenkins.model.GlobalBuildDiscarderConfiguration$$FastClassByGuice$$109c0567.GUICE$TRAMPOLINE(<generated>)
+	at jenkins.model.GlobalBuildDiscarderConfiguration$$FastClassByGuice$$109c0567.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:33)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:614)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) [Guice/ErrorInjectingConstructor]: IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.KeyCheck.skip=true to start anyway.
+[LF]>   at GlobalBuildDiscarderConfiguration.<init>(GlobalBuildDiscarderConfiguration.java:52)
+[LF]> 
+[LF]> Learn more:
+[LF]>   https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> GlobalBuildDiscarderConfiguration: "jenkins.model.GlobalBuildDiscarderConfiguration"
+[LF]> KeyCheck:                          "jenkins.plugins.cnj.store.KeyCheck"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:17.952+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:17.952+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:17.952+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:17.952+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:17.967+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:17.989+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:17.989+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:17.996+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:17.996+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.model.GlobalComputerRetentionCheckIntervalConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of GlobalComputerRetentionCheckIntervalConfiguration.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> GlobalComputerRetentionCheckIntervalConfiguration: "jenkins.model.GlobalComputerRetentionCheckIntervalConfiguration"
+[LF]> PersistentDescriptor:                              "hudson.model.PersistentDescriptor"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:17.998+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:17.998+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:17.998+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:17.998+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.009+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.032+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.033+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.039+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.039+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.model.JenkinsLocationConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at jenkins.model.JenkinsLocationConfiguration.load(JenkinsLocationConfiguration.java:88)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of JenkinsLocationConfiguration.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> JenkinsLocationConfiguration: "jenkins.model.JenkinsLocationConfiguration"
+[LF]> PersistentDescriptor:         "hudson.model.PersistentDescriptor"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.040+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.041+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.041+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.041+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.053+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.076+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.076+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.082+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.083+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.mvn.GlobalMavenConfig, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of GlobalMavenConfig.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> GlobalMavenConfig:    "jenkins.mvn.GlobalMavenConfig"
+[LF]> PersistentDescriptor: "hudson.model.PersistentDescriptor"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.086+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.086+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.086+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.086+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.099+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.121+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.121+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.130+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.130+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.security.QueueItemAuthenticatorConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of QueueItemAuthenticatorConfiguration.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> PersistentDescriptor:                "hudson.model.PersistentDescriptor"
+[LF]> QueueItemAuthenticatorConfiguration: "jenkins.security.QueueItemAuthenticatorConfiguration"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.131+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.131+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.131+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.132+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.144+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.166+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.166+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.173+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.173+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.security.ResourceDomainConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+	at jenkins.security.ResourceDomainConfiguration.<init>(ResourceDomainConfiguration.java:83)
+	at jenkins.security.ResourceDomainConfiguration$$FastClassByGuice$$17035bbe.GUICE$TRAMPOLINE(<generated>)
+	at jenkins.security.ResourceDomainConfiguration$$FastClassByGuice$$17035bbe.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:33)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:614)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) [Guice/ErrorInjectingConstructor]: IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.KeyCheck.skip=true to start anyway.
+[LF]>   at ResourceDomainConfiguration.<init>(ResourceDomainConfiguration.java:82)
+[LF]> 
+[LF]> Learn more:
+[LF]>   https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> KeyCheck:                    "jenkins.plugins.cnj.store.KeyCheck"
+[LF]> ResourceDomainConfiguration: "jenkins.security.ResourceDomainConfiguration"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.175+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.175+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.175+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.175+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.186+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.209+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.209+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.216+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.216+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.security.UpdateSiteWarningsConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of UpdateSiteWarningsConfiguration.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> PersistentDescriptor:            "hudson.model.PersistentDescriptor"
+[LF]> UpdateSiteWarningsConfiguration: "jenkins.security.UpdateSiteWarningsConfiguration"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.217+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.217+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.218+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.218+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.228+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.252+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.252+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.258+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.258+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.security.apitoken.ApiTokenPropertyConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of ApiTokenPropertyConfiguration.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> ApiTokenPropertyConfiguration: "jenkins.security.apitoken.ApiTokenPropertyConfiguration"
+[LF]> PersistentDescriptor:          "hudson.model.PersistentDescriptor"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.259+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.259+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.259+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.260+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.271+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.294+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.294+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.301+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.301+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.security.csp.impl.CspConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+Caused: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:638)
+Caused: java.lang.RuntimeException: @PostConstruct public abstract void hudson.model.PersistentDescriptor.load()
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:640)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) Error notifying ProvisionListener hudson.ExtensionFinder$GuiceFinder$SezpozModule of CspConfiguration.
+[LF]>  Reason: RuntimeException: @PostConstruct public abstract void PersistentDescriptor.load()
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> CspConfiguration:     "jenkins.security.csp.impl.CspConfiguration"
+[LF]> PersistentDescriptor: "hudson.model.PersistentDescriptor"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.302+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.303+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.303+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.303+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.314+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.337+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.337+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.344+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.344+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.tasks.filters.EnvVarsFilterGlobalConfiguration, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+	at jenkins.tasks.filters.EnvVarsFilterGlobalConfiguration.<init>(EnvVarsFilterGlobalConfiguration.java:56)
+	at jenkins.tasks.filters.EnvVarsFilterGlobalConfiguration$$FastClassByGuice$$19eea721.GUICE$TRAMPOLINE(<generated>)
+	at jenkins.tasks.filters.EnvVarsFilterGlobalConfiguration$$FastClassByGuice$$19eea721.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:33)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:614)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) [Guice/ErrorInjectingConstructor]: IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.KeyCheck.skip=true to start anyway.
+[LF]>   at EnvVarsFilterGlobalConfiguration.<init>(EnvVarsFilterGlobalConfiguration.java:55)
+[LF]> 
+[LF]> Learn more:
+[LF]>   https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> EnvVarsFilterGlobalConfiguration: "jenkins.tasks.filters.EnvVarsFilterGlobalConfiguration"
+[LF]> KeyCheck:                         "jenkins.plugins.cnj.store.KeyCheck"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.346+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.346+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.346+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.346+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.361+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.381+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.381+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.391+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.391+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.tasks.filters.impl.RetainVariablesLocalRule$DescriptorImpl, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+	at jenkins.tasks.filters.impl.RetainVariablesLocalRule$DescriptorImpl.<init>(RetainVariablesLocalRule.java:191)
+	at jenkins.tasks.filters.impl.RetainVariablesLocalRule$DescriptorImpl$$FastClassByGuice$$19ff75fc.GUICE$TRAMPOLINE(<generated>)
+	at jenkins.tasks.filters.impl.RetainVariablesLocalRule$DescriptorImpl$$FastClassByGuice$$19ff75fc.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:33)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:614)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) [Guice/ErrorInjectingConstructor]: IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.KeyCheck.skip=true to start anyway.
+[LF]>   at RetainVariablesLocalRule$DescriptorImpl.<init>(RetainVariablesLocalRule.java:190)
+[LF]> 
+[LF]> Learn more:
+[LF]>   https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> KeyCheck:                                "jenkins.plugins.cnj.store.KeyCheck"
+[LF]> RetainVariablesLocalRule$DescriptorImpl: "jenkins.tasks.filters.impl.RetainVariablesLocalRule$DescriptorImpl"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.392+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.393+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.393+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.393+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.407+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.428+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.428+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.436+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.436+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=jenkins.telemetry.Correlator, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+	at jenkins.telemetry.Correlator.<init>(Correlator.java:49)
+	at jenkins.telemetry.Correlator$$FastClassByGuice$$1a0b1e5c.GUICE$TRAMPOLINE(<generated>)
+	at jenkins.telemetry.Correlator$$FastClassByGuice$$1a0b1e5c.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:33)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:614)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) [Guice/ErrorInjectingConstructor]: IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.KeyCheck.skip=true to start anyway.
+[LF]>   at Correlator.<init>(Correlator.java:48)
+[LF]> 
+[LF]> Learn more:
+[LF]>   https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> Correlator:            "jenkins.telemetry.Correlator"
+[LF]> KeyCheck:              "jenkins.plugins.cnj.store.KeyCheck"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.442+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.442+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.442+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.443+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.457+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.477+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.477+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.486+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.487+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel$DescriptorImpl, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel$DescriptorImpl.<init>(GlobalDefaultFlowDurabilityLevel.java:33)
+	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel$DescriptorImpl$$FastClassByGuice$$1d37e377.GUICE$TRAMPOLINE(<generated>)
+	at PluginClassLoader for workflow-api//org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel$DescriptorImpl$$FastClassByGuice$$1d37e377.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:33)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:614)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) [Guice/ErrorInjectingConstructor]: IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.KeyCheck.skip=true to start anyway.
+[LF]>   at GlobalDefaultFlowDurabilityLevel$DescriptorImpl.<init>(GlobalDefaultFlowDurabilityLevel.java:32)
+[LF]> 
+[LF]> Learn more:
+[LF]>   https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> GlobalDefaultFlowDurabilityLevel$DescriptorImpl: "org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel$DescriptorImpl"
+[LF]> KeyCheck:                                        "jenkins.plugins.cnj.store.KeyCheck"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.489+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.490+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.490+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.490+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.508+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...
+2026-10-12 10:41:18.528+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown completed.
+2026-10-12 10:41:18.529+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown initiated...
+2026-10-12 10:41:18.538+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-control - Shutdown completed.
+2026-10-12 10:41:18.538+0000 [id=55]	WARNING	h.ExtensionFinder$GuiceFinder$FaultTolerantScope$1#error: Failed to instantiate Key[type=org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval, annotation=[none]]; skipping this component
+java.lang.IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.jenkins.plugins.cnj.store.KeyCheck.skip=true to start anyway.
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.KeyCheck.verify(KeyCheck.java:52)
+	at PluginClassLoader for persistence-store-postgresql//io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider.create(PostgresPersistenceStoreProvider.java:86)
+	at jenkins.persistence.PersistenceStores.get(PersistenceStores.java:120)
+	at jenkins.persistence.PersistenceStores.route(PersistenceStores.java:209)
+	at hudson.XmlFile.route(XmlFile.java:488)
+	at hudson.XmlFile.exists(XmlFile.java:342)
+	at hudson.model.Descriptor.load(Descriptor.java:984)
+	at PluginClassLoader for script-security//org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval.load(ScriptApproval.java:532)
+	at PluginClassLoader for script-security//org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval.<init>(ScriptApproval.java:526)
+	at PluginClassLoader for script-security//org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval$$FastClassByGuice$$1d8b0cb5.GUICE$TRAMPOLINE(<generated>)
+	at PluginClassLoader for script-security//org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval$$FastClassByGuice$$1d8b0cb5.apply(<generated>)
+	at com.google.inject.internal.DefaultConstructionProxyFactory$FastClassProxy.newInstance(DefaultConstructionProxyFactory.java:82)
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114)
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:33)
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:109)
+	at hudson.ExtensionFinder$GuiceFinder$SezpozModule.onProvision(ExtensionFinder.java:614)
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:117)
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66)
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93)
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:300)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Caused: com.google.inject.ProvisionException: Unable to provision, see the following errors:
+[LF]> 
+[LF]> 1) [Guice/ErrorInjectingConstructor]: IllegalStateException: This controller does not have the key material of the cluster it shares a store with: it cannot decrypt the cluster's secrets, and would write secrets the others cannot read. Start it with the cluster's seeded keys (secret.key, secrets/; the chart's seed Secret), or set -Dio.KeyCheck.skip=true to start anyway.
+[LF]>   at ScriptApproval.<init>(ScriptApproval.java:525)
+[LF]> 
+[LF]> Learn more:
+[LF]>   https://github.com/google/guice/wiki/ERROR_INJECTING_CONSTRUCTOR
+[LF]> 
+[LF]> 1 error
+[LF]> 
+[LF]> ======================
+[LF]> Full classname legend:
+[LF]> ======================
+[LF]> KeyCheck:              "jenkins.plugins.cnj.store.KeyCheck"
+[LF]> ScriptApproval:        "org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval"
+[LF]> ========================
+[LF]> End of classname legend:
+[LF]> ========================
+
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:251)
+	at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:43)
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:169)
+	at hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope$1.get(ExtensionFinder.java:449)
+	at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:45)
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1148)
+	at hudson.ExtensionFinder$GuiceFinder._find(ExtensionFinder.java:407)
+	at hudson.ExtensionFinder$GuiceFinder.find(ExtensionFinder.java:398)
+	at hudson.ClassicPluginStrategy.findComponents(ClassicPluginStrategy.java:354)
+	at hudson.ExtensionList.load(ExtensionList.java:389)
+	at hudson.ExtensionList.ensureLoaded(ExtensionList.java:308)
+	at hudson.ExtensionList.iterator(ExtensionList.java:160)
+	at jenkins.model.Jenkins.getDescriptorByType(Jenkins.java:1584)
+	at PluginClassLoader for copyartifact//hudson.plugins.copyartifact.BuildSelectorParameter.initAliases(BuildSelectorParameter.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
+	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
+	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
+	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
+	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
+	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
+	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2026-10-12 10:41:18.542+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-12 10:41:18.542+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-12 10:41:18.543+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-12 10:41:18.543+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-12 10:41:18.559+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#close: cnj-store-work - Shutdown initiated...

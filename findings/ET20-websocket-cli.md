@@ -17,7 +17,7 @@
 |---|---|
 | 1 A WebSocket opened on B for an object of A's running build | ✅ relayed to A: B answered "hello from jenkins-a", as A does itself |
 | 2 The CLI's `console -f` on B (`-http`), for a build running on A | ✅ follows it to the end: all 15 ticks, exit 0 |
-| 2b The same over the CLI's WebSocket transport (`-webSocket`) | (pending rerun) |
+| 2b The same over the CLI's WebSocket transport (`-webSocket`) | ✅ all 15 ticks, exit 0 |
 | 3 `build -s -v` on B (`-http`), of a job only A can run (its agent is on A) | ✅ "Started onala #1 (on another controller)", the build's whole log, then "Completed onala #1 : SUCCESS", exit 0 |
 | 4 A controller started against the store without the cluster's seeded keys | ✅ refuses to start, saying why ("does not have the key material of the cluster…", and how to fix it), and never becomes a member |
 
@@ -28,6 +28,8 @@
 
 ## Bugs found while running ET20, now fixed
 - **`build -s -v` lost the end of a freestyle build's log** (core). A freestyle build's shipped log is deleted once its record is published, so the last read of it failed, and the CLI stopped there instead of printing the rest from the record. Now a shipped log that is gone falls through to the record. Test: `RunningBuildsTest.followingABuildElsewhereEndsWithTheRestOfItsRecord`.
+- **`build -s -v` sometimes printed no log at all** (core). The CLI learns from the shared queue that another controller started the build, and could ask to follow it before that controller's placeholder reached this one. When following, it now waits up to 15 s for the placeholder, or for the record if the build completed meanwhile. Test: `RunningBuildsTest.followingABuildStartedElsewhereThatCompletesBeforeItIsSeenHere`.
+- **The WebSocket CLI needs the Jenkins URL**, as on one controller: it checks the request's origin against it. Scenario 2b sets it on A; B has it through the store.
 - **Harness:**
   - macOS has no `timeout`, so the script uses a `run_for` helper.
   - `docker logs … | grep -q` failed under `pipefail` when grep stopped reading early, so the whole log is read first.
