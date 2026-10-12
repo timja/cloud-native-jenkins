@@ -1,8 +1,8 @@
-[16:57:32] Jenkins on 8082 is up (11s)
-| ℹ️ | 4 fresh-1: serving the API 11.6 s after the container started (container and JVM start to initialization 3.1 s, initialization 7.1 s); first / then 1.470066 s |
-[16:57:45] Jenkins on 8082 is up (10s)
-| ℹ️ | 4 fresh-2: serving the API 10.5 s after the container started (container and JVM start to initialization 2.4 s, initialization 6.9 s); first / then 1.606641 s |
-[16:57:59] Jenkins on 8082 is up (11s)
-| ℹ️ | 4 fresh-3: serving the API 10.6 s after the container started (container and JVM start to initialization 2.4 s, initialization 7.0 s); first / then 1.336832 s |
-[16:58:35] Jenkins on 8082 is up (11s)
-| ℹ️ | 4 runtime-plugin: serving the API 10.8 s after the container started (container and JVM start to initialization 2.6 s, initialization 6.9 s); first / then 1.473878 s |
+[19:42:45] Jenkins on 8082 is up (11s)
+| ℹ️ | 4 fresh-1: serving the API 11.3 s after the container started (container and JVM start to initialization 2.9 s, initialization 6.8 s); first / then 1.435921 s |
+[19:43:01] Jenkins on 8082 is up (13s)
+| ℹ️ | 4 fresh-2: serving the API 13.0 s after the container started (container and JVM start to initialization 2.8 s, initialization 7.2 s); first / then 1.532045 s |
+[19:43:14] Jenkins on 8082 is up (10s)
+| ℹ️ | 4 fresh-3: serving the API 10.3 s after the container started (container and JVM start to initialization 2.3 s, initialization 6.2 s); first / then 1.573340 s |
+[19:43:50] Jenkins on 8082 is up (11s)
+| ℹ️ | 4 runtime-plugin: serving the API 10.8 s after the container started (container and JVM start to initialization 2.8 s, initialization 6.5 s); first / then 1.385285 s |

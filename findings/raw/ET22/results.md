@@ -1,4 +1,4 @@
-## ET22 results (2026-10-12T16:34Z)
+## ET22 results (2026-10-12T19:05Z)
 
 | | Check |
 |---|---|
@@ -6,7 +6,3 @@
 | ✅ | 1 A serves it |
 | ✅ | 1 B serves the same image (shared within 60 s) |
 | ✅ | 1 ... and its API names an avatar |
-| ✅ | 2 the fresh B serves it |
-| ✅ | 3 A serves the new image |
-
-Failures: 0

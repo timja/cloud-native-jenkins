@@ -1,15 +1,15 @@
 HTTP/1.1 200 OK
 Server: Jetty(12.1.14)
-Date: Mon, 12 Oct 2026 15:24:35 GMT
+Date: Mon, 12 Oct 2026 18:10:14 GMT
 Vary: Accept-Encoding
 x-content-type-options: nosniff
-Set-Cookie: remember-me=YWRtaW46MTc5MzAyODI3NTE4MjozYmY2MGM4M2M5ODY4MjBhOGRmODY3ODY0ZjBkN2EzMzExZDZmNzVlZTdiNGExNGFiOWYyZTNiMGUyZWNjNTlm; Path=/; Expires=Mon, 26 Oct 2026 15:24:35 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
+Set-Cookie: remember-me=YWRtaW46MTc5MzAzODIxNDI0NTo0MDVkZDIxNGQ3Yzc2OTAwNzYwYTJlZDFmM2NmODhhOTUwZTM1ZjMwNTRkZDRlNmZmMGE3YmQyM2UwZGNjNTlm; Path=/; Expires=Mon, 26 Oct 2026 18:10:14 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
 Expires: Thu, 01 Jan 1970 00:00:00 GMT
 content-security-policy-report-only: base-uri 'none'; default-src 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; script-src 'report-sample' 'self' usage.jenkins.io; style-src 'report-sample' 'self' 'unsafe-inline';
 x-cnj-controller: jenkins-a
 Content-Type: text/plain;charset=utf-8
 x-more-data: true
-x-text-size: 7478
+x-text-size: 8104
 X-CNJ-Forwarded-From: jenkins-a
 Transfer-Encoding: chunked
 

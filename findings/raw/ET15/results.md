@@ -1,4 +1,4 @@
-## ET15 results (2026-10-12T15:47Z)
+## ET15 results (2026-10-12T18:32Z)
 
 | | Check |
 |---|---|
@@ -11,17 +11,17 @@
 | ✅ | 1 B shows the whole log, in order |
 | ✅ | 1 after completion, B's API shows the completed build |
 | ✅ | 2 B adopts within 30 s |
-| ℹ️ | 2 adopted 7 s after the kill |
+| ℹ️ | 2 adopted 6 s after the kill |
 | ✅ | 2 completes on B |
 | ✅ | 2 the whole log, in order, across the segments of both owners |
-| ℹ️ | 2 log segments: 8 |
+| ℹ️ | 2 log segments: 7 |
 | ✅ | 3 renaming the job from B is refused (400) |
 | ✅ | 3 renaming its folder from B is refused (400) |
 | ✅ | 3 the build completes, with its whole log on B |
 | ✅ | 3 ... in order |
-| ℹ️ | 4 SIGKILL run 1: adopted 5.2 s after the kill |
+| ℹ️ | 4 SIGKILL run 1: adopted 5.3 s after the kill |
 | ℹ️ | 4 SIGKILL run 2: adopted 5.4 s after the kill |
-| ℹ️ | 4 SIGKILL run 3: adopted 5.4 s after the kill |
+| ℹ️ | 4 SIGKILL run 3: adopted 5.3 s after the kill |
 | ✅ | 4 every adoption after a SIGKILL within 12 s (the session lock is freed with the process) |
 | ✅ | 4 every adopted build completed |
 | ℹ️ | 4 clean stop: adopted 5.4 s after docker stop began |

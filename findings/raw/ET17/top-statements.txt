@@ -1,8 +1,8 @@
-7031 ms, 5311 calls: with recursive s(seg) as ((select split_part(substr(key, $1), $7, $8) from jenkins_store where key ~>=~ $2 and key ~<~ $
-3776 ms, 1 calls: insert into jenkins_store (key, content, sha256, version, updated_by, size) select replace(s.key, $1, $2 || n || $3), s.
-2403 ms, 3044 calls: select seq, kind, key, old_key, version, origin from jenkins_store_events where seq > $1 order by seq
-2348 ms, 269 calls: select count(*) from (select substring(key from $1) b, count(*) n, count(*) filter (where convert_from(content, $2) like
-505 ms, 1 calls: update jenkins_store set content = convert_to($1, $2), size = length($3), version = nextval($4) where key ~ $5
-388 ms, 2468 calls: insert into jenkins_store (key, content, sha256, version, updated_by, size) values ($1, $2, $3, $4, $5, $6) on conflict 
-356 ms, 5133 calls: insert into jenkins_store_events (kind, key, old_key, version, origin) values ($1, $2, $3, $4, $5)
-336 ms, 1 calls: insert into jenkins_store (key, content, sha256, version, updated_by, size) select k, c, sha256(c), nextval($1), $2, len
+3373 ms, 5539 calls: with recursive s(seg) as ((select split_part(substr(key, $1), $7, $8) from jenkins_store where key ~>=~ $2 and key ~<~ $
+3285 ms, 1 calls: insert into jenkins_store (key, content, sha256, version, updated_by, size) select replace(s.key, $1, $2 || n || $3), s.
+2386 ms, 2270 calls: select seq, kind, key, old_key, version, origin from jenkins_store_events where seq > $1 order by seq
+2139 ms, 270 calls: select count(*) from (select substring(key from $1) b, count(*) n, count(*) filter (where convert_from(content, $2) like
+1006 ms, 7 calls: alter table jenkins_store add column if not exists size int
+814 ms, 1 calls: update jenkins_store set content = convert_to($1, $2), size = length($3), version = nextval($4) where key ~ $5
+515 ms, 32374 calls: select content, version from jenkins_store where key = $1
+405 ms, 2489 calls: insert into jenkins_store (key, content, sha256, version, updated_by, size) values ($1, $2, $3, $4, $5, $6) on conflict 

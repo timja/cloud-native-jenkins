@@ -1,60 +1,37 @@
-jenkins-b-1  | 2026-10-12T16:52:04.558422175Z Running from: /war-override/jenkins.war
-jenkins-b-1  | 2026-10-12T16:52:04.558725259Z webroot: /var/jenkins_home/war
-jenkins-b-1  | 2026-10-12T16:52:04.793806384Z 2026-10-12 16:52:04.777+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-b-1  | 2026-10-12T16:52:05.118960009Z 2026-10-12 16:52:05.118+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-b-1  | 2026-10-12T16:52:05.142552051Z 2026-10-12 16:52:05.142+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-b-1  | 2026-10-12T16:52:05.378258592Z 2026-10-12 16:52:05.377+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-b-1  | 2026-10-12T16:52:05.399171009Z 2026-10-12 16:52:05.398+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-b-1  | 2026-10-12T16:52:05.556487801Z 2026-10-12 16:52:05.556+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-b-1  | 2026-10-12T16:52:05.604005884Z 2026-10-12 16:52:05.603+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-b-1  | 2026-10-12T16:52:05.607536842Z 2026-10-12 16:52:05.607+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-b-1  | 2026-10-12T16:52:05.607806467Z 2026-10-12 16:52:05.607+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @466ms
-jenkins-b-1  | 2026-10-12T16:52:05.608422009Z 2026-10-12 16:52:05.608+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-b-1  | 2026-10-12T16:52:05.651902884Z 2026-10-12 16:52:05.651+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-b-1  | 2026-10-12T16:52:05.690505509Z 2026-10-12 16:52:05.690+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-b-1  | 2026-10-12T16:52:06.927928385Z 2026-10-12 16:52:06.927+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-b-1  | 2026-10-12T16:52:09.054194177Z 2026-10-12 16:52:09.052+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-b-1  | 2026-10-12T16:52:09.075246677Z 2026-10-12 16:52:09.074+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-b-1  | 2026-10-12T16:52:09.076636927Z 2026-10-12 16:52:09.075+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-b-1  | 2026-10-12T16:52:09.101994969Z 2026-10-12 16:52:09.101+0000 [id=48]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-b-1  | 2026-10-12T16:52:09.112743844Z 2026-10-12 16:52:09.112+0000 [id=48]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-b-1  | 2026-10-12T16:52:09.112938719Z 2026-10-12 16:52:09.112+0000 [id=48]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-b-1  | 2026-10-12T16:52:09.115140177Z 2026-10-12 16:52:09.114+0000 [id=48]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-b-1  | 2026-10-12T16:52:09.421827761Z 2026-10-12 16:52:09.420+0000 [id=48]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-b-1  | 2026-10-12T16:52:09.643879761Z 2026-10-12 16:52:09.643+0000 [id=48]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-b-1  | 2026-10-12T16:52:10.271332970Z 2026-10-12 16:52:10.270+0000 [id=48]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-b-1  | 2026-10-12T16:52:10.352788053Z 2026-10-12 16:52:10.352+0000 [id=52]	INFO	i.j.p.c.store.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-a)
-jenkins-b-1  | 2026-10-12T16:52:10.764641220Z 2026-10-12 16:52:10.764+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-b-1  | 2026-10-12T16:52:11.234077970Z 2026-10-12 16:52:11.233+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-b-1  | 2026-10-12T16:52:11.266592512Z 2026-10-12 16:52:11.266+0000 [id=51]	WARNING	c.c.h.plugins.folder.ChildLoader#loadItem: /var/jenkins_home/jobs/mb/branches/feature/config.xml did not exist; 1 day 0 hr after last modification time /var/jenkins_home/jobs/mb/branches/feature will be moved aside
-jenkins-b-1  | 2026-10-12T16:52:11.323338512Z 2026-10-12 16:52:11.323+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-b-1  | 2026-10-12T16:52:11.323925803Z 2026-10-12 16:52:11.323+0000 [id=57]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-b-1  | 2026-10-12T16:52:11.328322303Z 2026-10-12 16:52:11.328+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-b-1  | 2026-10-12T16:52:11.332533470Z 2026-10-12 16:52:11.331+0000 [id=45]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-b-1  | 2026-10-12T16:52:11.335191428Z 2026-10-12 16:52:11.334+0000 [id=57]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_2f61ada93ac92f36f7c7292aab50840353d766dd5bc83a37d5f54dbdf3806099 duplicates one seen earlier for admin
-jenkins-b-1  | 2026-10-12T16:52:11.519271262Z 2026-10-12 16:52:11.518+0000 [id=45]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-b-1  | 2026-10-12T16:52:11.559262095Z 2026-10-12 16:52:11.557+0000 [id=45]	WARNING	j.util.groovy.GroovyHookScript#execute: Failed to run script file:/var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-b-1  | 2026-10-12T16:52:11.559290137Z groovy.lang.MissingPropertyException: No such property: Jenkins for class: cnj-blob-credential
-jenkins-b-1  | 2026-10-12T16:52:11.559292095Z 	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:66)
-jenkins-b-1  | 2026-10-12T16:52:11.559293637Z 	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:51)
-jenkins-b-1  | 2026-10-12T16:52:11.559295054Z 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:310)
-jenkins-b-1  | 2026-10-12T16:52:11.559296470Z 	at cnj-blob-credential.run(cnj-blob-credential.groovy:17)
-jenkins-b-1  | 2026-10-12T16:52:11.559297804Z 	at groovy.lang.GroovyShell.evaluate(GroovyShell.java:574)
-jenkins-b-1  | 2026-10-12T16:52:11.559299095Z 	at jenkins.util.groovy.GroovyHookScript.execute(GroovyHookScript.java:148)
-jenkins-b-1  | 2026-10-12T16:52:11.559300470Z 	at jenkins.util.groovy.GroovyHookScript.execute(GroovyHookScript.java:137)
-jenkins-b-1  | 2026-10-12T16:52:11.559301762Z 	at jenkins.util.groovy.GroovyHookScript.run(GroovyHookScript.java:120)
-jenkins-b-1  | 2026-10-12T16:52:11.559303054Z 	at hudson.init.impl.GroovyInitScript.init(GroovyInitScript.java:42)
-jenkins-b-1  | 2026-10-12T16:52:11.559304429Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-jenkins-b-1  | 2026-10-12T16:52:11.559305720Z 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-jenkins-b-1  | 2026-10-12T16:52:11.559307054Z 	at hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:109)
-jenkins-b-1  | 2026-10-12T16:52:11.559311054Z 	at hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:185)
-jenkins-b-1  | 2026-10-12T16:52:11.559313054Z 	at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:304)
-jenkins-b-1  | 2026-10-12T16:52:11.559314304Z 	at jenkins.model.Jenkins$5.runTask(Jenkins.java:1165)
-jenkins-b-1  | 2026-10-12T16:52:11.559315637Z 	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:221)
-jenkins-b-1  | 2026-10-12T16:52:11.559316929Z 	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:120)
-jenkins-b-1  | 2026-10-12T16:52:11.559318220Z 	at jenkins.security.ImpersonatingExecutorService.lambda$wrap$0(ImpersonatingExecutorService.java:66)
-jenkins-b-1  | 2026-10-12T16:52:11.559319595Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-jenkins-b-1  | 2026-10-12T16:52:11.559320887Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-jenkins-b-1  | 2026-10-12T16:52:11.559322179Z 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-12T16:52:11.559485137Z 2026-10-12 16:52:11.559+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-b-1  | 2026-10-12T16:52:11.567848054Z 2026-10-12 16:52:11.567+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-12T17:28:50.327727960Z Running from: /war-override/jenkins.war
+jenkins-b-1  | 2026-10-12T17:28:50.328026293Z webroot: /var/jenkins_home/war
+jenkins-b-1  | 2026-10-12T17:28:50.643010543Z 2026-10-12 17:28:50.629+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-12T17:28:50.962014460Z 2026-10-12 17:28:50.961+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-12T17:28:50.987016710Z 2026-10-12 17:28:50.986+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-12T17:28:51.173537627Z 2026-10-12 17:28:51.173+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-12T17:28:51.197632960Z 2026-10-12 17:28:51.197+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-12T17:28:51.373831752Z 2026-10-12 17:28:51.373+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-12T17:28:51.419249877Z 2026-10-12 17:28:51.418+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-b-1  | 2026-10-12T17:28:51.423093335Z 2026-10-12 17:28:51.422+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-12T17:28:51.423412835Z 2026-10-12 17:28:51.423+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @437ms
+jenkins-b-1  | 2026-10-12T17:28:51.423926502Z 2026-10-12 17:28:51.423+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-12T17:28:51.470185419Z 2026-10-12 17:28:51.469+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-12T17:28:51.501838544Z 2026-10-12 17:28:51.501+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-12T17:28:52.753735003Z 2026-10-12 17:28:52.753+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-12T17:28:54.175160545Z 2026-10-12 17:28:54.171+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-12T17:28:54.195489087Z 2026-10-12 17:28:54.195+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-12T17:28:54.199117587Z 2026-10-12 17:28:54.198+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-12T17:28:54.242069503Z 2026-10-12 17:28:54.241+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+jenkins-b-1  | 2026-10-12T17:28:54.251682670Z 2026-10-12 17:28:54.251+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+jenkins-b-1  | 2026-10-12T17:28:54.252025670Z 2026-10-12 17:28:54.251+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+jenkins-b-1  | 2026-10-12T17:28:54.252718753Z 2026-10-12 17:28:54.252+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+jenkins-b-1  | 2026-10-12T17:28:54.488208503Z 2026-10-12 17:28:54.487+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-12T17:28:54.762489795Z 2026-10-12 17:28:54.762+0000 [id=52]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-12T17:28:55.233806962Z 2026-10-12 17:28:55.233+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-12T17:28:55.565872171Z 2026-10-12 17:28:55.565+0000 [id=48]	INFO	i.j.p.c.store.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-b-1  | 2026-10-12T17:28:55.645516462Z 2026-10-12 17:28:55.645+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-12T17:28:56.027056838Z 2026-10-12 17:28:56.026+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-12T17:28:56.063770671Z 2026-10-12 17:28:56.063+0000 [id=53]	WARNING	c.c.h.plugins.folder.ChildLoader#loadItem: /var/jenkins_home/jobs/mb/branches/feature/config.xml did not exist; 1 day 0 hr after last modification time /var/jenkins_home/jobs/mb/branches/feature will be moved aside
+jenkins-b-1  | 2026-10-12T17:28:56.125077213Z 2026-10-12 17:28:56.124+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-12T17:28:56.125971046Z 2026-10-12 17:28:56.125+0000 [id=48]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-12T17:28:56.134595921Z 2026-10-12 17:28:56.134+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-12T17:28:56.136659879Z 2026-10-12 17:28:56.136+0000 [id=45]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-12T17:28:56.139883004Z 2026-10-12 17:28:56.139+0000 [id=54]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_d077429006d5bf2d91f43c4233dbc51b55f67864293ac0a8cee0921bd2508598 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-12T17:28:56.269242254Z 2026-10-12 17:28:56.268+0000 [id=45]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-b-1  | 2026-10-12T17:28:56.315681963Z 2026-10-12 17:28:56.315+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-12T17:28:56.326484004Z 2026-10-12 17:28:56.326+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running

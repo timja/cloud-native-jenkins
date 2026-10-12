@@ -659,23 +659,6 @@ Sleeping for 0.2 sec
 [Pipeline] echo
 line 165
 [Pipeline] sleep
-Resuming build at Mon Oct 12 15:49:14 UTC 2026 after Jenkins restart
-Ready to run at Mon Oct 12 15:49:15 UTC 2026
-[Pipeline] echo
-line 162
-[Pipeline] sleep
-Sleeping for 0.2 sec
-[Pipeline] echo
-line 163
-[Pipeline] sleep
-Sleeping for 0.2 sec
-[Pipeline] echo
-line 164
-[Pipeline] sleep
-Sleeping for 0.2 sec
-[Pipeline] echo
-line 165
-[Pipeline] sleep
 Sleeping for 0.2 sec
 [Pipeline] echo
 line 166
@@ -688,7 +671,8 @@ Sleeping for 0.2 sec
 [Pipeline] echo
 line 168
 [Pipeline] sleep
-Sleeping for 0.2 sec
+Resuming build at Mon Oct 12 18:34:26 UTC 2026 after Jenkins restart
+Ready to run at Mon Oct 12 18:34:26 UTC 2026
 [Pipeline] echo
 line 169
 [Pipeline] sleep
@@ -1621,3 +1605,4 @@ Sleeping for 0.2 sec
 done
 [Pipeline] End of Pipeline
 Finished: SUCCESS
+Delete 0 stashes from jenkins

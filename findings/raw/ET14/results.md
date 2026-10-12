@@ -1,4 +1,4 @@
-## ET14 results (2026-10-12T15:36Z)
+## ET14 results (2026-10-12T18:21Z)
 
 | | Check |
 |---|---|
@@ -7,7 +7,7 @@
 | ✅ | 1: both consoles are whole (every tick once, and the end) |
 | ✅ | 1: each build was published, by one controller only |
 | ✅ | 1: and there is no second build |
-| ℹ️ | 2 pages during the outage (port, page, status, seconds): 8081 / 200 0.594723;8082 / 200 5.321082;8081 /api/json 200 5.017015;8082 /api/json 200 0.027260;8081 /job/p2/ 200 0.157677;8082 /job/p2/ 200 0.105830;8081 /login 200 0.017468;8082 /login 200 0.013426; |
+| ℹ️ | 2 pages during the outage (port, page, status, seconds): 8081 / 200 0.536574;8082 / 200 0.262522;8081 /api/json 200 0.006095;8082 /api/json 200 0.005390;8081 /job/p2/ 200 0.065355;8082 /job/p2/ 200 0.138875;8081 /login 200 0.016028;8082 /login 200 0.013627; |
 | ✅ | 2 every page answered within 10 s during the outage (degraded, not hung) |
 | ✅ | 2: the Pipeline completed SUCCESS |
 | ✅ | 2: the freestyle build completed SUCCESS |

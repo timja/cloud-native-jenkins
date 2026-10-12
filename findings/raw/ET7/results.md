@@ -1,4 +1,4 @@
-## ET7 results (2026-10-12T15:24Z)
+## ET7 results (2026-10-12T18:10Z)
 
 | | Check |
 |---|---|
@@ -7,7 +7,7 @@
 | ✅ | 2 its REST API on B says it is building |
 | ✅ | 2 answered by A (forwarded) |
 | ✅ | 2 through rr too |
-| ℹ️ | 1 last tick seen on B 11, on A 11; polls within 2 ticks of A: 10/10 |
+| ℹ️ | 1 last tick seen on B 12, on A 12; polls within 2 ticks of A: 10/10 |
 | ✅ | 1 B's live console keeps up with A (within 2 s on every poll) |
 | ✅ | 1 B's live console has every line so far, in order |
 | ✅ | 3 ask is waiting for input (seen from B) |
@@ -31,7 +31,7 @@
 | ✅ | 8 approved on B after adoption, the build completes |
 | ✅ | 8 with the line after the input |
 | ✅ | 7 agent1 reconnected to B |
-| ℹ️ | 7 agent1 online on B 6 s after A was killed |
+| ℹ️ | 7 agent1 online on B 8 s after A was killed |
 | ✅ | 7 the channel table names B |
 | ✅ | 10 no 502 for a dead owner's build (answered locally) |
 | ✅ | 9 notifyCommit to A: exactly one build for the commit (1 -> 2) |
