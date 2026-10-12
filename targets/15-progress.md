@@ -20,7 +20,7 @@ Design: [15-remaining.md](15-remaining.md). **Done means:** every item is implem
 | 2 | Cluster notice on the plugin manager's pages | ✅ | ET19, ET21 |
 | 3 | CLI `install-plugin` | ✅ | ET19 |
 | 4 | WebSockets; CLI following builds elsewhere | ✅ | ET20 |
-| 5 | Failover time | ✅ 5.0–5.4 s after `SIGKILL`, 5.2 s after a clean stop; a 12 s pause not taken for a death | ET15 4 |
+| 5 | Failover time | ✅ 5.0–5.6 s after `SIGKILL`, 5.2–5.4 s after a clean stop; a 12 s pause not taken for a death | ET15 4 |
 | 6 | Plugin files in item directories (write-back, sub-items, opt-in sync) | ✅ | `LocalStateTest`, `ItemFilesTest` |
 | 7 | `@PerController` / `LocalFiles` | ✅ | `LocalStateTest` |
 | 8 | Field-by-field reloads | ✅ | `ItemReloadTest`, ET11 |
@@ -32,7 +32,7 @@ Design: [15-remaining.md](15-remaining.md). **Done means:** every item is implem
 | 14 | `build(wait: true)` across controllers | ✅ | ET12 1c, 1d |
 | 15 | lockable-resources reservations | ✅ | `ClusterLocksTest` |
 | 16 | Executors and queue on the cluster page | ✅ | ET19 4, ET21 |
-| 17 | Scale: three controllers, 200,000 build records, an indexing storm | (sweep) | ET17 |
+| 17 | Scale: three controllers, 200,000 build records, an indexing storm | ✅ started together in 18 s; a job page with 20,000 builds 0.6–0.8 s cold; an indexing storm with a controller killed: every branch built once | ET17 |
 | 18 | Managed services, point-in-time recovery | ✅ | ET18 |
 | 19 | Background schema migrations | ✅ | `SchemaMigrationsTest` |
 | 20 | `podTemplate` Pipelines under caps; conflict monitor and `strict-ui`; browser tests | ✅ | ET9 4b, `StrictConflictsTest`, ET21 |
@@ -51,7 +51,10 @@ Design: [15-remaining.md](15-remaining.md). **Done means:** every item is implem
   - A fresh controller resolved permalinks by going through every build: 90 s for a job page with 20,000 builds, more than 180 s on a busy controller. Permalinks are now cached in the store (`StoredPermalinks`): 1.2–1.5 s (ET17).
   - A user changed in memory and never saved never got changes made elsewhere again. JCasC re-hashing a declared password on each controller caused it. It is now put off a few times, then applied, as items are (ET17).
   - A merge that wrote nothing new let the next save from the stale object overwrite the other change (ET11 3).
+  - The CLI could ask to follow a build another controller had just started before that build's placeholder arrived, and printed no log (ET20 3).
   - Multibranch children were not recognised as items by the applier (ET1).
+- **Store plugin:** concurrent scans of one multibranch project on several controllers built its new branches twice. Folder computations now run on one controller at a time per folder (`ClusterComputations`, ET17).
+- **cloudbees-folder:** the load progress of a fresh home printed percentages like 27,600 %.
 - **Harness:** many. Most were `docker logs … | grep` failing under `pipefail`, checks that matched the shell's trace of a command as well as its output, compose `extends` bringing a port along, and a script edited while bash was running it.
 
 ## Follow-ups
