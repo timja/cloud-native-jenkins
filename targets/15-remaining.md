@@ -46,4 +46,5 @@
 | 24 | Workspaces on Kubernetes pods | ET9: `stash`/`unstash` carry files across the pod replaced after an adoption; documented that pod workspaces are otherwise lost |
 | 25 | Code coverage (coverage plugin) | ET8: a coverage report published on one controller, shown in full (summary, tree, source) on another |
 | 26 | A controller started without the cluster's seeded keys | Detect it: a check value encrypted with the cluster's key, refusing to start (or a monitor) when it cannot be decrypted |
+| 27 | Plugin files in user directories (avatar plugin: the image is written to `users/<id>/avatar.<ext>` with file APIs, so other controllers and fresh homes have the property but no image) | Extend the opt-in sharing of plugin files (`ItemFiles`) to user directories, so no plugin change is needed. Acceptance: an avatar uploaded on A is served by B and by a fresh controller (added 2026-10-12, at the user's question) |
 | — | Housekeeping | `compose.yaml` pins azurite 3.34.0; the plugin tests run with Testcontainers' ryuk container disabled (it is not an approved image) |
