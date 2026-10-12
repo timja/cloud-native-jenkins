@@ -1,4 +1,4 @@
-## ET8 results (2026-10-11T17:29Z)
+## ET8 results (2026-10-12T00:07Z)
 
 | | Check |
 |---|---|
@@ -8,14 +8,17 @@
 | ✅ | 1 A lists both usages |
 | ✅ | 1 B lists both usages |
 | ✅ | 1 nothing under fingerprints/ in either home |
-| ℹ️ | 2 usages after: fpa:1-4 fpb:1-3; builds (requests without parameters fold in the queue): fpa [1 2 3 4] fpb [1 2 3] |
-| ✅ | 2 every build is a usage (fpa:1-4 fpb:1-3) |
-| ✅ | 2 builds ran on both controllers at once (more than one each) |
+| ℹ️ | 2 usages after: fpa:1-2 fpb:1-3; builds (requests without parameters fold in the queue): fpa [1 2] fpb [1 2 3] |
+| ✅ | 2 every build is a usage (fpa:1-2 fpb:1-3) |
+| ❌ | 2 builds ran on both controllers at once (more than one each) |
 | ✅ | 2 B agrees |
 | ✅ | 3 B shows the report within 2 s of completion (3 tests, 1 failed) |
 | ℹ️ | 3 report on B after 0.1 s |
 | ✅ | 3 deleted on B, its results are gone on A |
 | ✅ | 3 and on B |
+| ✅ | 3b the coverage build completes on A |
+| ✅ | 3b B shows the same coverage (line coverage 50%) |
+| ❌ | 3b ... and its coverage page, with the class tree |
 | ℹ️ | 4 keep builds: A [6 7 8] B [6 7 8] |
 | ✅ | 4 A keeps exactly the last 3 (6 7 8) |
 | ✅ | 4 B keeps exactly the last 3 (6 7 8) |
@@ -30,4 +33,4 @@
 | ✅ | 5 after A dies, B's view shows only B alive (within the membership timeout) |
 | ✅ | 1 the fingerprint and its usages survive (fresh B) |
 
-Failures: 0
+Failures: 2

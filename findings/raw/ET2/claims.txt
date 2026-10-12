@@ -1,3 +1,3 @@
 cron1|hudson.triggers.TimerTrigger|21|2
-mbp|com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger|11|3
-poll|hudson.triggers.SCMTrigger|16|3
+mbp|com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger|12|3
+poll|hudson.triggers.SCMTrigger|17|3

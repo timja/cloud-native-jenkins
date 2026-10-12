@@ -1,4 +1,4 @@
-## ET4 results (2026-10-11T21:50Z)
+## ET4 results (2026-10-12T00:09Z)
 
 | | Check |
 |---|---|
@@ -6,7 +6,7 @@
 | ✅ | agent1 is not connected to B |
 | ✅ | 3 B shows ctl #1 running on jenkins-a |
 | ✅ | 3 B adopts and resumes it |
-| ℹ️ | 3 adopted 7 s after the kill |
+| ℹ️ | 3 adopted 6 s after the kill |
 | ✅ | 3 B logs the resumption |
 | ✅ | 3 the build completes on B with SUCCESS |
 | ✅ | 3 every step ran (step 1..30) |
@@ -29,10 +29,13 @@
 | ✅ | 1 fresh A lists it with the same number and result |
 | ✅ | 1 fresh A shows the same console |
 | ✅ | 2 A adopts the build waiting at input |
-| ℹ️ | 2 adopted 31 s after the kill |
+| ℹ️ | 2 adopted 17 s after the kill |
 | ✅ | 2 A has the pending input |
 | ✅ | 2 approved on A: the build completes with SUCCESS |
 | ✅ | 2 the agent step after input ran |
+| ✅ | 2b the other controller adopts it, and agent1 reconnects there |
+| ✅ | 2b the read stage finds the file the write stage left: the build completes |
+| ❌ | 2b ... printing it after the resumption |
 | ✅ | 4 B adopts while A is paused |
 | ℹ️ | 4 adopted 21 s after the pause |
 | ✅ | 4 A notices it lost the build |
@@ -45,10 +48,10 @@
 | ✅ | 5 B never showed it as anything but running on A |
 | ✅ | 5 B never adopted it |
 | ✅ | 6 B removes its placeholder |
-| ✅ | 6 B does not run it: it is closed as aborted (Target 12) |
-| ℹ️ | 7 200 echo steps: 3351 ms; placeholder writes (save point commits + start/end): 2 |
-| ℹ️ | 7 the same with PERFORMANCE_OPTIMIZED (no save points): 300 ms |
+| ❌ | 6 B does not run it: it is closed as aborted (Target 12) |
+| ℹ️ | 7 200 echo steps: 801 ms; placeholder writes (save point commits + start/end): 2 |
+| ℹ️ | 7 the same with PERFORMANCE_OPTIMIZED (no save points): 176 ms |
 | ℹ️ | 7 builds with save points left in blob storage: none |
 | ✅ | 7 no save points left in blob storage after completion |
 
-Failures: 0
+Failures: 2

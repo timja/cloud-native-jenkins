@@ -1,4 +1,0 @@
-kill 6122
-kill 6348
-kill 5048
-stop 6591
