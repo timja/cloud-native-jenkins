@@ -43,7 +43,7 @@ An SPI for storing what Jenkins writes to `JENKINS_HOME` (item, global, descript
 - **`ItemChangeApplier`** subscribes to the store and applies other controllers' changes in memory:
   - items are created, updated, renamed or deleted (folders included)
   - global configuration, descriptors, users and nodes are reloaded (`StaticStateApplier`)
-  - each object is reloaded under its own lock, and not while a save of it is pending here
+  - each object is reloaded under its own lock, and not while a save of it is pending here; a change is put off a few times at most, then applied, so an object changed in memory and never saved (JCasC re-hashing a declared password on each controller does this to a user) still gets changes made elsewhere
   - an item is reloaded field by field: the stored configuration is read into a scratch instance, and only the fields that changed are copied over, except those changed locally since the item was loaded, so a field set here during a reload is not lost. Core's setters on `Jenkins` and on items assign under the object's lock
   - a change to an item's sub-items (promoted-builds' `promotions/*/config.xml`, matrix-project's `configurations/**/config.xml`) reloads the item; their directories are created when the item loads, since their owners find them by listing
   - a change that fails to apply is retried with backoff

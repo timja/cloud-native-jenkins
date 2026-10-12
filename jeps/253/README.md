@@ -23,6 +23,7 @@ Several controllers schedule the same jobs. Five pieces make that work:
 
 ### Triggers
 - **`TriggerCoordinator`.** A controller claims `(item, trigger, tick)` in the store before running a trigger, and only the first claim runs. Cron triggers, SCM polling and periodic folder indexing all go through it. A tick missed while the store is unreachable is skipped, never run twice.
+- **Folder computations** (a multibranch project's branch indexing, an organization folder's scan) are not jobs, so they do not go through the shared queue, and a scan may be requested of any controller (a webhook, a user). They run on one controller at a time per folder, through a lease in the store: scans running at once on several controllers would each find a new branch before any recorded its revision, and each would schedule its first build. The others wait their turn, then find nothing new; the lease lapses with its holder.
 - **Affinity.** Each item's triggers prefer one live controller, by hash over the live members. A controller leaving moves its items to the others.
 - **Webhooks.** `notifyCommit` and SCM events may reach any controller, or several. They schedule through the shared queue, so they result in one build.
 
@@ -79,12 +80,13 @@ Queue items keep their authentication (`QueueItemAuthenticator`), which is seria
   - `ET5-shared-queue.sh`: one queue item for requests on both controllers, folding, cancel from either controller, blocking, `lock` and `milestone`
   - `ET12-remainder.sh`: `build(wait: true)` gets the result of a downstream build that ran on the other controller, also when the waiting build was adopted meanwhile
   - `ET7-owner-routing.sh`: a webhook sent to one or both controllers starts exactly one build
+  - `ET17-scale-3.sh`: 30 multibranch projects scanned from three controllers at once, one killed meanwhile: every branch built, none twice
 
 ## Prototype implementation
 - **Core:** prototype branches of Jenkins core, `cnj/t2-*`, `cnj/t5-*`, `cnj/t15-remaining` (deliveries).
 - **lockable-resources:** prototype branches `cnj/t5-m4-cluster-locks`, `cnj/t15-cluster-ui`.
 - **pipeline-build-step:** prototype branch `cnj/t15-remote-completion`.
-- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `PostgresTriggerCoordinator`, `SharedQueueMaintenance`, `ClusterMilestoneStorage`.
+- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `PostgresTriggerCoordinator`, `SharedQueueMaintenance`, `ClusterMilestoneStorage`, `ClusterComputations`.
 - **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET2-scheduling.md`, `ET5-shared-queue.md`.
 
 ## References

@@ -123,6 +123,8 @@ Schema changes must not stop a running cluster, and old and new controllers run 
   - `ET10-operations.sh`: rolling upgrade, refused older peer, import, backup and restore
   - `ET14-store-outage.sh`: Postgres paused for 10 s and 60 s and restarted, Azurite stopped, a controller booting while Postgres is down; no aborts, takeovers, duplicates or lost logs, and pages answering
   - `ET15-logs-api-failover.sh`: failover times after `SIGKILL`, a clean stop and a pause
+  - `ET17-scale-3.sh`: three controllers on 200,000 build records: started together in 18 s; a job page with 20,000 builds 0.6–0.8 s cold, 0.02–0.03 s warm, on each; a job with 20,000 builds deleted in 1 s; a branch-indexing storm with one controller killed
+  - `ET18-pitr.sh`: point-in-time recovery of Postgres to a named restore point, with and without blob storage restored to the same point
   - `ET16-scale.sh`: 2,000 jobs and 2,000 builds on two controllers. The second controller lists the jobs 10 s after the first starts creating them, warm pages load in under 1 s, a restart takes 14 s, and 50 running Pipelines are adopted within 24 s. Prefix listings use an index (`text_pattern_ops`)
 
 ## Prototype implementation
