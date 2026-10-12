@@ -1,4 +1,4 @@
-## ET10 results (2026-10-11T18:05Z)
+## ET10 results (2026-10-12T12:37Z)
 
 | | Check |
 |---|---|
@@ -6,7 +6,7 @@
 | ✅ | 1 the rollout completes with both controllers on the new image |
 | ✅ | 1 every running build completed |
 | ✅ | 1 a build started after the rollout ran |
-| ℹ️ | 1 live members after the rollout: ops-0:1 ops-1:1 |
+| ℹ️ | 1 live members after the rollout: ops-0:2 ops-1:2 |
 | ✅ | 2 a controller requiring protocol 99 refuses to start, saying why |
 | ℹ️ | 3 the old controller's quiet period: 3 |
 | ℹ️ | 3 the old home: oldp#1 team/fs#2 |
@@ -22,7 +22,7 @@
 | ✅ | 3 the old node and setting |
 | ℹ️ | 3 import again: files imported 0, kept 13; builds imported 0, kept 4 |
 | ✅ | 3 importing again changes nothing |
-| ℹ️ | 4 backed up cnj-ops/ops to /Users/timja/code/jenkins/cloud-native-jenkins-t14/validation/out/backup:  24K database, 104K blobs |
+| ℹ️ | 4 backed up cnj-ops/ops to /Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/out/backup:  28K database, 2.2M blobs |
 | ✅ | 4 the restored cluster comes up |
 | ✅ | 4 every job is there (during-backup,oldp,team,usecred) |
 | ✅ | 4 history and consoles (team/fs #1) |

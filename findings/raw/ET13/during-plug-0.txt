@@ -20,15 +20,12 @@ tick 4
 [Pipeline] sleep
 Sleeping for 3 sec
 Pausing (Preparing for shutdown)
-Resuming build at Sun Oct 11 18:13:44 UTC 2026 after Jenkins restart
-Ready to run at Sun Oct 11 18:13:44 UTC 2026
+Resuming build at Mon Oct 12 13:21:03 UTC 2026 after Jenkins restart
+Ready to run at Mon Oct 12 13:21:03 UTC 2026
 [Pipeline] echo
 tick 5
 [Pipeline] sleep
 Sleeping for 3 sec
-Pausing (Preparing for shutdown)
-Resuming build at Sun Oct 11 18:14:15 UTC 2026 after Jenkins restart
-Ready to run at Sun Oct 11 18:14:15 UTC 2026
 [Pipeline] echo
 tick 6
 [Pipeline] sleep
@@ -41,6 +38,9 @@ Sleeping for 3 sec
 tick 8
 [Pipeline] sleep
 Sleeping for 3 sec
+Pausing (Preparing for shutdown)
+Resuming build at Mon Oct 12 13:21:29 UTC 2026 after Jenkins restart
+Ready to run at Mon Oct 12 13:21:29 UTC 2026
 [Pipeline] echo
 tick 9
 [Pipeline] sleep
