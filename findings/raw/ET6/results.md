@@ -1,5 +1,5 @@
 | ℹ️ | seeded keys: hudson.model.User.DIRNAMES hudson.util.Secret jenkins.model.Jenkins.crumbSalt master.key org.jenkinsci.main.modules.instance_identity.InstanceIdentity.KEY  |
-## ET6 results (2026-10-12T09:25Z)
+## ET6 results (2026-10-12T10:41Z)
 
 | | Check |
 |---|---|
@@ -22,22 +22,22 @@
 | ✅ | 5 and B dropped its connection |
 | ✅ | 6 the key has the same value on B |
 | ✅ | 6 data encrypted with a runtime key on A decrypts on B |
-| ℹ️ | 9 versions before: config.xml@26 jenkins.model.JenkinsLocationConfiguration.xml@25 nodes/n7/config.xml@56 users/u9_77ec4c9dee2b16d08317cd6362d7b3389286fafe52bc86555d253aab4e27f60d/config.xml@55 ; after: config.xml@26 jenkins.model.JenkinsLocationConfiguration.xml@25 nodes/n7/config.xml@56 users/u9_77ec4c9dee2b16d08317cd6362d7b3389286fafe52bc86555d253aab4e27f60d/config.xml@55  |
+| ℹ️ | 9 versions before: config.xml@25 jenkins.model.JenkinsLocationConfiguration.xml@24 nodes/n7/config.xml@55 users/u9_24c21a615f13bf452074dad4c2126f731a89afda238d48bdbd24eefd09542c00/config.xml@54 ; after: config.xml@25 jenkins.model.JenkinsLocationConfiguration.xml@24 nodes/n7/config.xml@55 users/u9_24c21a615f13bf452074dad4c2126f731a89afda238d48bdbd24eefd09542c00/config.xml@54  |
 | ✅ | 9 B's boot (JCasC) bumped no versions of unchanged config |
 | ✅ | 9 a setting JCasC does not declare keeps its runtime value |
 | ✅ | 9 a user created at runtime survives B's boot |
 | ✅ | 9 JCasC's declared setting is still JCasC's |
 | ✅ | 9 the node added in the UI survives B's boot |
-| ℹ️ | 10 result 9/4, conflicting writes detected: 0 |
+| ℹ️ | 10 result 9/4, conflicting writes detected: 2 |
 | ✅ | 10 both changes survive, or the overwrite was detected |
 | ✅ | 10 A and B agree on the result |
 | ✅ | 8 logged in through the load balancer |
 | ✅ | 8 signed in on every request (10/10) |
 | ✅ | 8 requests reached both controllers [jenkins-b, jenkins-a] |
-| ℹ️ | 8 bound objects on the configure page: 82 e.g. jenkins-b-8d1fd680-ae17-4538-b18c-ed23c3a34cb4 |
+| ℹ️ | 8 bound objects on the configure page: 82 e.g. jenkins-a-f9f2328a-cdca-4494-b278-4d968d32f544 |
 | ✅ | 8 bound objects answer through either controller (12/12 [200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200]) |
 | ✅ | 8 configure form saved (200) |
-| ❌ | 8 the saved description is there |
+| ✅ | 8 the saved description is there (1 read(s), from [jenkins-b]) |
 | ✅ | 8 progressive renderer's proxy script served (200) |
 | ✅ | 8 build time trend rendered progressively (start 200 , news 200 {"data":[{"iconName":"blue","iconColorOrdinal":4,"iconColorDescription":"Success","number":2,"displayName":"#2","dur) |
 | ℹ️ | 8 after changing the password, the browser which changed it is signed in: false |
@@ -55,4 +55,4 @@
 | ✅ | 7 the UI-added node survives, the deleted one stays deleted |
 | ✅ | 7 the runtime key survives |
 
-Failures: 1
+Failures: 0

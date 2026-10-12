@@ -1,10 +1,10 @@
-Unique  (cost=4.32..4.33 rows=1 width=32) (actual time=0.067..0.067 rows=0 loops=1)
-  ->  Sort  (cost=4.32..4.32 rows=1 width=32) (actual time=0.067..0.067 rows=0 loops=1)
+Unique  (cost=8.32..8.33 rows=1 width=32) (actual time=0.064..0.064 rows=1 loops=1)
+  ->  Sort  (cost=8.32..8.33 rows=1 width=32) (actual time=0.063..0.063 rows=1 loops=1)
         Sort Key: (split_part(substr(key, 20), '/'::text, 1))
         Sort Method: quicksort  Memory: 25kB
-        ->  Index Only Scan using jenkins_store_key_prefix on jenkins_store  (cost=0.28..4.31 rows=1 width=32) (actual time=0.034..0.034 rows=0 loops=1)
+        ->  Index Only Scan using jenkins_store_key_prefix on jenkins_store  (cost=0.28..8.31 rows=1 width=32) (actual time=0.042..0.043 rows=1 loops=1)
               Index Cond: ((key ~>=~ 'jobs/job-1999/builds/'::text) AND (key ~<~ 'jobs/job-1999/builds0'::text))
               Filter: (key ~~ 'jobs/job-1999/builds/%'::text)
-              Heap Fetches: 0
-Planning Time: 0.356 ms
-Execution Time: 0.101 ms
+              Heap Fetches: 1
+Planning Time: 0.291 ms
+Execution Time: 0.091 ms
