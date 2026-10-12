@@ -1,9 +1,310 @@
 
 Running 4 tests using 1 worker
 
-  ✓  1 cluster.spec.js:4:1 › a live console follows a build running on one controller, whichever controller each request reaches (38.7s)
-  ✓  2 cluster.spec.js:15:1 › a job configured in the browser is saved for every controller (3.0s)
-  ✓  3 cluster.spec.js:26:1 › the cluster page shows both controllers with their executors (362ms)
-  ✓  4 cluster.spec.js:33:1 › the plugin manager says changes apply to every controller, and shows their status (408ms)
+  ✘  1 cluster.spec.js:4:1 › a live console follows a build running on one controller, whichever controller each request reaches (2.6m)
+  ✓  2 cluster.spec.js:15:1 › a job configured in the browser is saved for every controller (1.7s)
+  ✓  3 cluster.spec.js:26:1 › the cluster page shows both controllers with their executors (297ms)
+  ✓  4 cluster.spec.js:33:1 › the plugin manager says changes apply to every controller, and shows their status (301ms)
 
-  4 passed (43.2s)
+
+  1) cluster.spec.js:4:1 › a live console follows a build running on one controller, whichever controller each request reaches 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('pre.console-output, #out')
+    Timeout: 120000ms
+    - Expected substring  -  1
+    + Received string     + 87
+
+    - Finished: SUCCESS
+    + Started by user admin
+    + [Pipeline] Start of Pipeline (hide)
+    + [Pipeline] stage (hide)
+    + [Pipeline] { (tick) (hide)
+    + [Pipeline] script (hide)
+    + [Pipeline] { (hide)
+    + [Pipeline] echo (hide)
+    + tick 1
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 2
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 3
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 4
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 5
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 6
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 7
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 8
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 9
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 10
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 11
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 12
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 13
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 14
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 15
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 16
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 17
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 18
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 19
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + [Pipeline] echo (hide)
+    + tick 20
+    + [Pipeline] sleep (hide)
+    + Sleeping for 2 sec
+    + Failed to fetch more data. The page might no longer exist or you no longer have permission to see it.
+
+    Call log:
+      - Expect "toContainText" locator('pre.console-output, #out') with timeout 120000ms
+      - waiting for locator('pre.console-output, #out')
+        8 × locator resolved to <pre id="out" class="console-output">…</pre>
+          - unexpected value "Started by user admin
+    [Pipeline] Start of Pipeline (hide)
+    [Pipeline] stage (hide)
+    [Pipeline] { (tick) (hide)
+    [Pipeline] script (hide)
+    [Pipeline] { (hide)
+    [Pipeline] echo (hide)
+    tick 1
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 2
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 3
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 4
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 5
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 6
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 7
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 8
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 9
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 10
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 11
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 12
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 13
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 14
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 15
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 16
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 17
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 18
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 19
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 20
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    "
+        232 × locator resolved to <pre id="out" class="console-output">…</pre>
+            - unexpected value "Started by user admin
+    [Pipeline] Start of Pipeline (hide)
+    [Pipeline] stage (hide)
+    [Pipeline] { (tick) (hide)
+    [Pipeline] script (hide)
+    [Pipeline] { (hide)
+    [Pipeline] echo (hide)
+    tick 1
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 2
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 3
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 4
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 5
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 6
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 7
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 8
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 9
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 10
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 11
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 12
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 13
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 14
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 15
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 16
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 17
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 18
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 19
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    [Pipeline] echo (hide)
+    tick 20
+    [Pipeline] sleep (hide)
+    Sleeping for 2 sec
+    Failed to fetch more data. The page might no longer exist or you no longer have permission to see it."
+
+
+       6 |   // the page's own JavaScript fetches the rest of the log as it grows (progressive text), through the load balancer
+       7 |   await expect(page.locator('pre.console-output, #out')).toContainText('tick 20', { timeout: 120000 });
+    >  8 |   await expect(page.locator('pre.console-output, #out')).toContainText('Finished: SUCCESS', { timeout: 120000 });
+         |                                                          ^
+       9 |   const text = await page.locator('pre.console-output, #out').innerText();
+      10 |   for (let i = 1; i <= 20; i++) {
+      11 |     expect(text.split(`tick ${i}\n`).length - 1, `tick ${i} once`).toBe(1);
+        at /Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/cluster.spec.js:8:58
+
+    Error Context: test-results/cluster-a-live-console-fol-4a33f-roller-each-request-reaches/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/cluster-a-live-console-fol-4a33f-roller-each-request-reaches/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/cluster-a-live-console-fol-4a33f-roller-each-request-reaches/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    cluster.spec.js:4:1 › a live console follows a build running on one controller, whichever controller each request reaches 
+  3 passed (2.7m)

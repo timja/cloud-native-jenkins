@@ -1,4 +1,4 @@
-## ET13 results (2026-10-12T13:20Z)
+## ET13 results (2026-10-12T16:39Z)
 
 | | Check |
 |---|---|
@@ -9,22 +9,3 @@
 | ✅ | 1 neither controller restarted for it |
 | ✅ | 1 its build wrapper's descriptor is there on plug-1 |
 | ℹ️ | 1 cluster plugin set: generation 2 token-macro installed 477.vd4f0dc3cb_cf1, build-timeout installed 1.40 |
-| ✅ | 2 both controllers run the upgraded build-timeout (1.41) |
-| ✅ | 2 both restarted for it |
-| ✅ | 2 one at a time: a controller answered throughout |
-| ✅ | 2 one at a time: the second went down only after the first was back |
-| ✅ | 2 the Pipeline running meanwhile completed, with its whole console |
-| ✅ | 2 it paused for the restart and resumed: every tick once, in order |
-| ✅ | 2 the restart lock was released |
-| ℹ️ | 2 members: plug-0 13:21:01 3;plug-1 13:21:30 3; |
-| ✅ | 3 the fresh plug-1 has build-timeout 1.41 |
-| ✅ | 3 and the same plugins as plug-0 |
-| ✅ | 4 build-timeout is gone from both controllers |
-| ✅ | 4 one at a time again: a controller answered throughout |
-| ✅ | 5 a downgrade is refused |
-| ✅ | 5 changing the store plugin is refused |
-| ✅ | 5 a corrupt archive is not installed |
-| ✅ | 5 and causes no restart |
-| ✅ | 5 and is logged |
-
-Failures: 0
