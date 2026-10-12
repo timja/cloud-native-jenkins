@@ -21,7 +21,7 @@ Several controllers provision agents from the same clouds (Kubernetes, and by ex
 - **Caps** across the cluster, through counters in the store (`ClusterAgentLimits`, `jenkins_counters`): each controller's share of a cloud's and template's cap. The kubernetes plugin consults them (`ClusterProvisioningLimits`). A dead controller's share lapses with its membership, and its counter rows are deleted. A counter back at zero is deleted too, so Pipelines declaring their own `podTemplate` (a template per build) leave no rows behind; an hourly pass prunes any left.
 - **Cloud agents are local.** Nodes created by a cloud are not shared through the store (`PersistenceStores.keepLocal`). Each controller manages and cleans up only its own. Static nodes are shared (JEP-250).
 - **Placement.** A Pipeline whose `node` label only another controller can serve is handed over to it (JEP-252).
-- **Workspaces on pods.** An agent pod belongs to the controller that started it and goes with it. A build adopted after its controller died gets a new pod with an empty workspace, so files a later stage needs are carried with `stash`/`unstash`, which are kept in the blob store (JEP-252).
+- **Workspaces on pods.** An agent pod belongs to the controller that started it and goes with it. A build adopted after its controller died gets a new pod with an empty workspace, so files a later stage needs are carried with `stash`/`unstash` through an artifact manager keeping them in shared storage (JEP-202; the chart configures azure-artifact-manager).
 
 ## Motivation
 - `NodeProvisioner` runs per JVM: with a mirrored queue, every controller would provision for the same item.
