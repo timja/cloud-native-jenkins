@@ -7,7 +7,7 @@
 | **Depends on** | Targets 1–14 |
 | **Out of scope** | Upstreaming (not started, at the user's request). The security review is handled through a separate process |
 
-**Done means:** every item below is implemented, its experiment or tests pass, and ET1–ET18 pass in one sweep.
+**Done means:** every item below is implemented, its experiment or tests pass, and ET1–ET22 pass in one sweep (ET9, ET10 and ET13 on kind).
 
 ## Decisions (user, 2026-10-11)
 - **Failover:** session-lock liveness plus a 2 s heartbeat and a 15 s timeout.
