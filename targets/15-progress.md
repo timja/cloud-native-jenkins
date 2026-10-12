@@ -56,6 +56,9 @@ Design: [15-remaining.md](15-remaining.md). **Done means:** every item is implem
 - **Harness and chart:** no artifact manager was configured, so stashes stayed in the build directory and an adopted Pipeline lost them ("No such saved stash", ET9 4b). The chart and the harness now configure azure-artifact-manager (its credential made once at startup: declaring it in JCasC would replace the cluster's credentials on every start). An artifact manager is required: a controller without one shows an administrative monitor and logs an error at startup (store plugin, `ArtifactManagerRequired`).
   - Multibranch children were not recognised as items by the applier (ET1).
 - **Store plugin:** an owner dying between uploading a save point's flow nodes and committing it left an adopter nodes newer than the program it resumed (a `ClassCastException` on resume, ET9 4b). Nodes are now kept per save point, and an adopter applies only those up to the committed one.
+- **Store plugin, regressions caught by the experiments the same day:**
+  - The first per-save-point nodes change listed `running/workflow`, which returns only `workflow/…`, never `workflow.<epoch>.<seq>/…`. Adopted Pipelines found no nodes and did not resume (ET4 1 and 3, ET12 1 and 3). The adopter now lists `running/`.
+  - The `ArtifactManagerRequired` startup check ran after `COMPLETED`, so the reactor never reached it (JENKINS-37759). It now runs after `JOB_CONFIG_ADAPTED`.
 - **Store plugin:** concurrent scans of one multibranch project on several controllers built its new branches twice. Folder computations now run on one controller at a time per folder (`ClusterComputations`, ET17).
 - **cloudbees-folder:** the load progress of a fresh home printed percentages like 27,600 %.
 - **Harness:** many. Most were `docker logs … | grep` failing under `pipefail`, checks that matched the shell's trace of a command as well as its output, compose `extends` bringing a port along, and a script edited while bash was running it.
@@ -68,3 +71,4 @@ Design: [15-remaining.md](15-remaining.md). **Done means:** every item is implem
 ## Log
 - 2026-10-11: planned with the user (items 1–21); items 22–26 added from the pluggable-storage review.
 - 2026-10-12: item 27 added (the avatar plugin), and the job-loading note, at the user's request.
+- 2026-10-13: every experiment passed on the latest fixes (ET4, ET12, ET17 and the kind runs ET9, ET10, ET13 rerun after the two regressions above); a full sweep on the final build started. ET17 runs while the Docker VM was overloaded by other work (load about 150, swap full) failed to restart C in 600 s; not counted as product failures.
