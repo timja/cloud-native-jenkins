@@ -39,7 +39,7 @@ Design: [15-remaining.md](15-remaining.md). **Done means:** every item is implem
 | 21 | A folder child created elsewhere added without reloading the folder | ✅ | `RemoteChildTest` |
 | 22 | SCM polling log routed to the controller that polled | ✅ | ET2 |
 | 23 | Workspaces across an adoption | ✅ | ET4 2b |
-| 24 | Workspaces on Kubernetes pods (`stash`) | ✅ | ET9 4b |
+| 24 | Workspaces on Kubernetes pods (`stash`) | ✅ stashes through the artifact manager (azure-artifact-manager, configured by the chart and the harness), found by the adopter on a new pod | ET9 4b |
 | 25 | Coverage reports on every controller | ✅ | ET8 3b |
 | 26 | A controller without the cluster's keys refuses to start | ✅ | ET20 4 |
 | 27 | Plugin files in user directories (the avatar plugin) | ✅ | `ItemFilesTest`, ET22 |
@@ -53,7 +53,7 @@ Design: [15-remaining.md](15-remaining.md). **Done means:** every item is implem
   - A merge that wrote nothing new let the next save from the stale object overwrite the other change (ET11 3).
   - The CLI could ask to follow a build another controller had just started before that build's placeholder arrived, and printed no log (ET20 3).
   - A controller restarted with its home resumed a build another controller had adopted while it restarted, and both ran it. With failover in about 5 s, adoption beats a restart. The reclaim now asks the store, not its cache (ET13 2).
-- **Store plugin:** save points carried only `program.dat`, the record and the flow nodes, so an adopted Pipeline lost its stashes ("No such saved stash"). They now carry the build directory's other files, changed ones only (ET9 4b).
+- **Harness and chart:** no artifact manager was configured, so stashes stayed in the build directory and an adopted Pipeline lost them ("No such saved stash", ET9 4b). The chart and the harness now configure azure-artifact-manager (its credential made once at startup: declaring it in JCasC would replace the cluster's credentials on every start). Without an artifact manager, save points now carry the build directory's other files too (store plugin).
   - Multibranch children were not recognised as items by the applier (ET1).
 - **Store plugin:** concurrent scans of one multibranch project on several controllers built its new branches twice. Folder computations now run on one controller at a time per folder (`ClusterComputations`, ET17).
 - **cloudbees-folder:** the load progress of a fresh home printed percentages like 27,600 %.
