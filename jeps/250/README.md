@@ -62,7 +62,7 @@ Workspaces, caches, `plugins/`, `war/`, logs of Jenkins itself, per-controller f
 
 `/manage/cluster/compatibility` lists everything a controller wrote under its home that the store does not hold, so that plugins writing state outside `XmlFile` can be found.
 
-**Plugin files in item directories.** Plugins that keep files next to an item's `config.xml` with their own file APIs can have them shared, opt-in (`-Djenkins.persistence.ItemFiles.enabled=true`): every minute, each item's directory is compared with what was last shared, and changed or removed files (up to 1 MiB each) are shared through a manifest per item and blob storage. The last writer of a file wins, and a plugin caching a file's content sees a change made elsewhere when it next reads the file. It is opt-in because it scans every item directory and the files' semantics are unknown to core.
+**Plugin files in item and user directories.** Plugins that keep files next to an item's or a user's `config.xml` with their own file APIs (the avatar plugin keeps the user's image there) can have them shared, opt-in (`-Djenkins.persistence.ItemFiles.enabled=true`; the chart's `store.sharePluginFiles`): every minute, each item's and user's directory is compared with what was last shared, and changed or removed files (up to 1 MiB each) are shared through a manifest per directory and blob storage. Files core declares per controller (such as each user's `apiTokenStats.xml`) are left out. The last writer of a file wins, and a plugin caching a file's content sees a change made elsewhere when it next reads the file. It is opt-in because it scans every item and user directory and the files' semantics are unknown to core.
 
 ## Motivation
 - The pluggable-storage effort (JEP-202, 207, 210, 212, 213, 226) externalised artifacts, Pipeline logs, fingerprints, test results and credential values. Configuration was never externalised, because `File` and `XmlFile` use runs right through core.
@@ -95,6 +95,7 @@ Workspaces, caches, `plugins/`, `war/`, logs of Jenkins itself, per-controller f
   - `ET1-shared-items.sh`: jobs and folders created, edited, renamed and deleted on either controller, including multibranch jobs and `properties()`, are the same on both, and a fresh controller loads them all
   - `ET6-static-state.sh`: global configuration, credentials, users, nodes and keys changed on one controller apply on the other without a restart
   - `ET11-cross-cutting.sh`: simultaneous edits on two controllers are merged, and nothing a controller writes under its home is left unshared
+  - `ET22-avatar.sh`: an avatar (avatar plugin) set on one controller is served by the other, by a fresh controller, and changes made on either are shared
 
 ## Prototype implementation
 - **Core:** prototype branches of Jenkins core, `cnj/t1-*`, `cnj/t6-*`, `cnj/t11-m1-xml-merge` and `cnj/t15-remaining`.

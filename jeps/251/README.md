@@ -28,7 +28,7 @@ Builds are materialised locally only when something reads them. Builds still run
   - A new record becomes a recognised number.
   - A republished record drops the local copy, which is materialised again.
   - A deletion removes the local copy without firing listeners, because cleanup happened where it was deleted.
-  - Permalinks are updated incrementally (`PeepholePermalink.changedElsewhere`).
+  - **Permalinks** (last successful build, last failed build, …) are cached in the store per job (`<job>/builds/permalinks`), updated by the controller completing or deleting a build, as `PeepholePermalink` does on one controller. A controller with a fresh home then resolves them without going through the job's builds: with 20,000 builds and none failed, a job page took 90 s cold before, 1.5 s now. A controller that has not seen a newer build yet never moves a target back.
 - **Republishing.**
   - A build is republished when its `build.xml` is saved again (a description, keep-forever).
   - It is also republished when files are added to, or changed in, its directory later without such a save (a plugin writing a report afterwards). Each published snapshot carries a manifest of the files it holds (`.cnj-published`, their names, sizes and times). A sweep compares builds against it every minute for an hour after completion, and every 10 minutes over every build loaded on the controller (at most 1,000 per run, carrying on in the next).
