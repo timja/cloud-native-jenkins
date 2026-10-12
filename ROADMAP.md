@@ -125,7 +125,7 @@ What remains is outside the cluster's own code:
 - **Upstreaming:** the core changes are `@Restricted(Beta)`/`NoExternalUse` hooks on a stack of branches, still to be proposed to jenkinsci/jenkins (and to workflow-cps, cloudbees-folder, lockable-resources, credentials, stapler and kubernetes for their small hooks).
 
 ## Future (far down the line)
-- **Faster job loading on a fresh controller.** A fresh controller serves its API 13–20 s after its container starts. Its first full page of 2,000 jobs then takes another 5–19 s (warm: 0.6 s), loading every job from the store as it goes (ET16 scenario 4, JEP-255). This can be made much faster, for example with bulk reads of item configuration, loading items lazily, or a startup snapshot. Noted by the user on 2026-10-12, not scheduled.
+- **Faster job loading on a fresh controller.** A fresh controller serves its API 13–20 s after its container starts. Its first full page of 2,000 jobs then takes another 5–19 s (warm: 0.6 s) (ET16 scenario 4, JEP-255). Where that time goes is not profiled yet; candidates include bulk reads of item configuration, loading items lazily, or a startup snapshot. Noted by the user on 2026-10-12, not scheduled.
 
 ## Order of work
 1. **R1** (Target 1): the persistence SPI plus shared item config. Every runtime tier keys off "which jobs exist and what they say".
