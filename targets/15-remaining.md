@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | All tiers (the follow-ups of Targets 1–14) |
-| **Status** | In progress (planned 2026-10-11), see [15-progress](15-progress.md) |
+| **Status** | Done 2026-10-13 (planned 2026-10-11): every experiment passed in one sweep, see [15-progress](15-progress.md) |
 | **Depends on** | Targets 1–14 |
 | **Out of scope** | Upstreaming (not started, at the user's request). The security review is handled through a separate process |
 
