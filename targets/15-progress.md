@@ -59,11 +59,13 @@ Design: [15-remaining.md](15-remaining.md). **Done means:** every item is implem
 - **Store plugin, regressions caught by the experiments the same day:**
   - The first per-save-point nodes change listed `running/workflow`, which returns only `workflow/…`, never `workflow.<epoch>.<seq>/…`. Adopted Pipelines found no nodes and did not resume (ET4 1 and 3, ET12 1 and 3). The adopter now lists `running/`.
   - The `ArtifactManagerRequired` startup check ran after `COMPLETED`, so the reactor never reached it (JENKINS-37759). It now runs after `JOB_CONFIG_ADAPTED`.
+- **Core:** a build whose controller died after it completed, but before it published its record, was adopted and resumed from an early save point. It never ran on, and its branch had no record (ET17, 1 to 11 of 300 branches when C is killed mid-storm). The owner now records the result in the placeholder on completion, and such a build is closed with its result, updating the shared permalinks as its owner would have.
 - **Store plugin:** concurrent scans of one multibranch project on several controllers built its new branches twice. Folder computations now run on one controller at a time per folder (`ClusterComputations`, ET17).
 - **cloudbees-folder:** the load progress of a fresh home printed percentages like 27,600 %.
 - **Harness:** many. Most were `docker logs … | grep` failing under `pipefail`, checks that matched the shell's trace of a command as well as its output, compose `extends` bringing a port along, and a script edited while bash was running it.
 
 ## Follow-ups
+- A Pipeline save point can capture the program just after a block step's body ended but before the step heard of it (ET17: `stage` waiting, with the body's end node present). A Pipeline resumed from such a save point waits forever. ET17 met it only for builds that had already completed; those are now closed with their result instead of resumed. A running build adopted at such a save point would still hang. Needs a look at when workflow-cps writes `program.dat` relative to body callbacks.
 - Speeding up job loading on a fresh controller (ROADMAP "Future").
 - A `sleep` step resumed after an adoption logs "cannot start writing logs to a finished node" (seen since Target 14; the build carries on).
 - One ET15 scenario 2 run showed the adopting controller's part of a log missing. Not reproduced in four runs since; ET15 now keeps controller logs on every exit to diagnose it if it recurs.
