@@ -28,6 +28,7 @@ All prototype work is pushed as stacked pull requests to **forks** (`timja/*`) f
 | 1.3 | configuration-as-code | `cnj/t15-keep-undeclared-nodes` | ⬜ | P2 | `keepUndeclaredNodes`, also useful with one controller (nodes added by other means) |
 | 1.4 | kubernetes | `cnj/t9-m2-cluster-cap` | ⬜ | P2 | `ClusterProvisioningLimits` (Beta) extension point. No core dependency |
 | 1.5 | core | split out of `cnj/t15-remaining` | ⬜ | P2 | Hooks useful without a store: `PluginManager/notices.jelly`, `PluginArchiveListener`, `Item.getItemUuid`, `Jenkins` setters under the lock. Cherry-pick into standalone PRs |
+| 1.6 | branch-api | `cnj/t15-first-build-revision` | ⬜ | P1 | An indexing that stopped after scheduling a branch's build, before recording its revision, no longer leaves the next one to build the branch again. A plain crash fix too; no core dependency. Fork `timja/branch-api-plugin` exists |
 
 ### Wave 2: core, the persistence stack (`timja/jenkins`, base `cd2a077`, linear)
 | # | Branch | Fork PR | Priority | Size | What |
