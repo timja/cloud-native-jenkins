@@ -15,6 +15,8 @@ Every running build has exactly one owner: the controller holding its lease. A P
 
 ### Placeholders and leases
 - **Placeholders.** `RunningBuilds` writes a placeholder `jobs/<job>/running/<N>.xml` when a build starts. It records the owner's origin and name, the start time, the lease epoch, and properties such as the latest save point. It is removed after the build's record is published (JEP-251).
+- **Updates merge and are serialised per build.** A placeholder update adds its properties to those already recorded (a save point's commit keeps the result, and the other way round), and a controller makes one build's updates one at a time. Concurrent updates from the same owner would otherwise race on the compare-and-set, and the owner would mistake its own write for an adoption and stop the build.
+- **A finished build records its result in the placeholder** before its record is published. If its controller dies in between, the sweep closes the build with that result, not as ABORTED.
 - **`BuildLeases`** (a store facet):
   - `acquire(key)` returns an epoch, and succeeds only if the lease is free or its holder is no longer a live member
   - `holds(key, epoch)`
