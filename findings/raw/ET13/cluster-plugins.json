@@ -1,0 +1,26 @@
+{
+  "generation": 5,
+  "plugins":   {
+    "token-macro":     {
+      "state": "installed",
+      "version": "477.vd4f0dc3cb_cf1",
+      "sha256": "ef98e47b467571e7968925ace1c40d1103baefe230f5d4cf44250769b7b6b42b",
+      "blob": "cluster-plugins/token-macro/ef98e47b467571e7968925ace1c40d1103baefe230f5d4cf44250769b7b6b42b.jpi",
+      "by": "plug-0",
+      "at": 1791919104411
+    },
+    "build-timeout":     {
+      "state": "uninstalled",
+      "by": "plug-0",
+      "at": 1791919292854
+    },
+    "cnj-broken":     {
+      "state": "installed",
+      "version": "1.0",
+      "sha256": "00",
+      "blob": "cluster-plugins/token-macro/ef98e47b467571e7968925ace1c40d1103baefe230f5d4cf44250769b7b6b42b.jpi",
+      "by": "et13",
+      "at": 0
+    }
+  }
+}

@@ -1,0 +1,97 @@
+Running from: /war-override/jenkins.war
+webroot: /var/jenkins_home/war
+2026-10-13 19:17:56.623+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-10-13 19:17:57.406+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-10-13 19:17:57.455+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+2026-10-13 19:17:58.083+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+2026-10-13 19:17:58.147+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-10-13 19:17:58.786+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2026-10-13 19:17:58.894+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@77eb5790{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@68e7c8c3{STARTED}}
+2026-10-13 19:17:58.901+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@57402ba1{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-10-13 19:17:58.902+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @1447ms
+2026-10-13 19:17:58.903+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-10-13 19:17:59.004+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+2026-10-13 19:17:59.109+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-10-13 19:18:02.665+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-10-13 19:18:06.673+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-10-13 19:18:06.716+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-10-13 19:18:06.819+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-10-13 19:18:06.974+0000 [id=58]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-13 19:18:07.035+0000 [id=58]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-13 19:18:07.036+0000 [id=58]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-13 19:18:07.038+0000 [id=58]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-13 19:18:07.948+0000 [id=58]	INFO	i.j.plugins.cnj.store.KeyCheck#verify: Recorded the cluster's key check: controllers started without this controller's keys will refuse to start
+2026-10-13 19:18:07.952+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+2026-10-13 19:18:08.187+0000 [id=58]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+2026-10-13 19:18:09.023+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+2026-10-13 19:18:09.154+0000 [id=58]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+2026-10-13 19:18:09.779+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-10-13 19:18:10.493+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-10-13 19:18:10.496+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-10-13 19:18:10.498+0000 [id=47]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+2026-10-13 19:18:10.505+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-10-13 19:18:10.523+0000 [id=54]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+2026-10-13 19:18:10.527+0000 [id=107]	INFO	hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2026-10-13 19:18:10.533+0000 [id=56]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6987d18d05a57c265385c247b5a4166e8081b7aaa59e4165f1701138a03426fb duplicates one seen earlier for admin
+2026-10-13 19:18:10.730+0000 [id=54]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+cnj: added the blob storage credential cnj-blob for account devstoreaccount1
+2026-10-13 19:18:10.847+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-10-13 19:18:11.112+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2026-10-13 19:18:14.927+0000 [id=30]	INFO	hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2026-10-13 19:18:15.668+0000 [id=61]	INFO	i.j.p.c.store.ClusterUpdateSites#publish: Shared default.json with the cluster
+2026-10-13 19:18:16.272+0000 [id=107]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+2026-10-13 19:18:16.273+0000 [id=107]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+2026-10-13 19:18:17.947+0000 [id=30]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+2026-10-13 19:18:17.948+0000 [id=30]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+2026-10-13 19:18:17.985+0000 [id=30]	INFO	i.j.p.c.store.ClusterUpdateSites#publish: Shared default.json with the cluster (unchanged, newer check)
+2026-10-13 19:18:18.014+0000 [id=71]	INFO	i.j.p.cnj.store.SchemaMigrations#run: Schema migration store-size done
+2026-10-13 19:18:18.023+0000 [id=30]	INFO	i.j.p.c.store.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster
+2026-10-13 19:18:22.938+0000 [id=35]	INFO	hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of token-macro for plugin build-timeout
+2026-10-13 19:18:23.328+0000 [id=148]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of token-macro on behalf of admin
+2026-10-13 19:18:23.329+0000 [id=148]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading token-macro
+2026-10-13 19:18:24.420+0000 [id=148]	INFO	i.j.p.cnj.store.ClusterPlugins#record: Cluster plugin set generation 1: token-macro installed 477.vd4f0dc3cb_cf1
+2026-10-13 19:18:24.432+0000 [id=148]	INFO	hudson.ClassicPluginStrategy#updateDependency: Updated dependency of coverage
+2026-10-13 19:18:24.432+0000 [id=148]	INFO	hudson.ClassicPluginStrategy#updateDependency: Updated dependency of git
+2026-10-13 19:18:24.787+0000 [id=156]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-10-13 19:18:24.789+0000 [id=160]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-10-13 19:18:24.791+0000 [id=165]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-10-13 19:18:24.793+0000 [id=170]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-10-13 19:18:24.793+0000 [id=170]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-10-13 19:18:24.794+0000 [id=159]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-10-13 19:18:24.794+0000 [id=159]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-10-13 19:18:24.794+0000 [id=159]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-10-13 19:18:24.794+0000 [id=159]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-10-13 19:18:24.795+0000 [id=159]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-10-13 19:18:24.796+0000 [id=148]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: token-macro
+2026-10-13 19:18:24.796+0000 [id=148]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of build-timeout on behalf of admin
+2026-10-13 19:18:24.797+0000 [id=148]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading build-timeout
+2026-10-13 19:18:24.818+0000 [id=148]	INFO	i.j.p.cnj.store.ClusterPlugins#record: Cluster plugin set generation 2: build-timeout installed 1.40
+2026-10-13 19:18:25.010+0000 [id=148]	INFO	h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set
+2026-10-13 19:18:25.029+0000 [id=173]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-10-13 19:18:25.032+0000 [id=176]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-10-13 19:18:25.034+0000 [id=181]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-10-13 19:18:25.035+0000 [id=187]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-10-13 19:18:25.036+0000 [id=187]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-10-13 19:18:25.036+0000 [id=177]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-10-13 19:18:25.037+0000 [id=177]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-10-13 19:18:25.037+0000 [id=177]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-10-13 19:18:25.037+0000 [id=184]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-10-13 19:18:25.037+0000 [id=184]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-10-13 19:18:25.038+0000 [id=148]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: build-timeout
+2026-10-13 19:18:40.200+0000 [id=94]	INFO	i.j.p.cnj.store.ClusterPlugins#apply: Applying the cluster's plugin set: build-timeout REPLACE 1.41
+2026-10-13 19:18:40.259+0000 [id=94]	INFO	i.j.p.cnj.store.ClusterPlugins#requestRestart: Restarting to apply the cluster's plugin set (generation 3): Pipelines pause and resume, other builds are waited for
+2026-10-13 19:18:40.264+0000 [id=207]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Restart in 10 seconds
+2026-10-13 19:18:50.267+0000 [id=207]	INFO	hudson.lifecycle.Lifecycle#onStop: Stopping Jenkins as requested by SYSTEM
+2026-10-13 19:18:50.274+0000 [id=207]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Stopping Jenkins
+2026-10-13 19:18:50.299+0000 [id=207]	INFO	jenkins.model.Jenkins$13#onAttained: Started termination
+2026-10-13 19:18:50.325+0000 [id=207]	INFO	h.p.b.global.Lifecycle#shutdown: Shutdown complete - Global TimeOut ScheduledExecutorService had 0 tasks pending
+2026-10-13 19:18:50.326+0000 [id=207]	INFO	jenkins.model.Jenkins$13#onAttained: Completed termination
+2026-10-13 19:18:50.326+0000 [id=207]	INFO	jenkins.model.Jenkins#_cleanUpDisconnectComputers: Starting node disconnection
+2026-10-13 19:18:50.334+0000 [id=207]	INFO	jenkins.model.Jenkins#_cleanUpShutdownPluginManager: Stopping plugin manager
+2026-10-13 19:18:50.349+0000 [id=207]	INFO	jenkins.model.Jenkins#_cleanUpPersistQueue: Persisting build queue
+2026-10-13 19:18:50.353+0000 [id=207]	INFO	jenkins.model.Jenkins#_cleanUpAwaitDisconnects: Waiting for node disconnection completion
+2026-10-13 19:18:50.353+0000 [id=207]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Jenkins stopped
+2026-10-13 19:18:50.353+0000 [id=41]	INFO	winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty
+2026-10-13 19:18:50.354+0000 [id=41]	INFO	org.eclipse.jetty.server.Server#doStop: Stopped oejs.Server@702b06fb{STOPPING}[12.1.14,sto=0]
+2026-10-13 19:18:50.357+0000 [id=41]	INFO	o.e.j.server.AbstractConnector#doStop: Stopped oejs.ServerConnector@57402ba1{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-10-13 19:18:50.363+0000 [id=41]	INFO	winstone.Logger#logInternal: Jetty shutdown successfully

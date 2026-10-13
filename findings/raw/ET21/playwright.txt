@@ -1,38 +1,9 @@
 
 Running 4 tests using 1 worker
 
-  ✓  1 cluster.spec.js:4:1 › a live console follows a build running on one controller, whichever controller each request reaches (38.8s)
-  ✘  2 cluster.spec.js:15:1 › a job configured in the browser is saved for every controller (3.3s)
-  ✓  3 cluster.spec.js:26:1 › the cluster page shows both controllers with their executors (441ms)
-  ✓  4 cluster.spec.js:33:1 › the plugin manager says changes apply to every controller, and shows their status (534ms)
+  ✓  1 cluster.spec.js:4:1 › a live console follows a build running on one controller, whichever controller each request reaches (38.3s)
+  ✓  2 cluster.spec.js:15:1 › a job configured in the browser is saved for every controller (1.7s)
+  ✓  3 cluster.spec.js:29:1 › the cluster page shows both controllers with their executors (490ms)
+  ✓  4 cluster.spec.js:36:1 › the plugin manager says changes apply to every controller, and shows their status (463ms)
 
-
-  1) cluster.spec.js:15:1 › a job configured in the browser is saved for every controller ──────────
-
-    Error: expect(received).toBe(expected) // Object.is equality
-
-    Expected: "described in a browser"
-    Received: null
-
-      20 |   for (const port of [8081, 8082]) {
-      21 |     const r = await request.get(`http://localhost:${port}/job/ui-config/api/json?tree=description`);
-    > 22 |     expect((await r.json()).description).toBe('described in a browser');
-         |                                          ^
-      23 |   }
-      24 | });
-      25 |
-        at /Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/cluster.spec.js:22:42
-
-    Error Context: test-results/cluster-a-job-configured-i-b370f--saved-for-every-controller/error-context.md
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results/cluster-a-job-configured-i-b370f--saved-for-every-controller/trace.zip
-    Usage:
-
-        npx playwright show-trace test-results/cluster-a-job-configured-i-b370f--saved-for-every-controller/trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-  1 failed
-    cluster.spec.js:15:1 › a job configured in the browser is saved for every controller ───────────
-  3 passed (44.1s)
+  4 passed (41.7s)

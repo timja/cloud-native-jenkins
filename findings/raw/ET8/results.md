@@ -1,4 +1,4 @@
-## ET8 results (2026-10-12T18:13Z)
+## ET8 results (2026-10-13T18:04Z)
 
 | | Check |
 |---|---|
@@ -27,7 +27,7 @@
 | ✅ | 5 B's view lists dk #1 running on A |
 | ✅ | 5 B's view says agent1 is connected to A |
 | ✅ | 5 A's view is the same apart from 'self' |
-| ✅ | 4b dk #1, running on A while B discarded, completed: its record was published |
+| ✅ | 4b dk #1, running on A while B discarded, completed on A: its record published, or its placeholder removed by A |
 | ✅ | 4b then, the oldest of three, it was discarded: both keep [2 3] |
 | ℹ️ | 4b dk builds after: A [2 3] B [2 3] |
 | ✅ | 5 after A dies, B's view shows only B alive (within the membership timeout) |

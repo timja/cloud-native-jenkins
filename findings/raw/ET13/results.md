@@ -1,4 +1,4 @@
-## ET13 results (2026-10-12T16:39Z)
+## ET13 results (2026-10-13T19:18Z)
 
 | | Check |
 |---|---|
@@ -16,7 +16,7 @@
 | ✅ | 2 the Pipeline running meanwhile completed, with its whole console |
 | ✅ | 2 it paused for the restart and resumed: every tick once, in order |
 | ✅ | 2 the restart lock was released |
-| ℹ️ | 2 members: plug-0 16:40:19 3;plug-1 16:40:47 3; |
+| ℹ️ | 2 members: plug-0 19:18:55 3;plug-1 19:19:25 3; |
 | ✅ | 3 the fresh plug-1 has build-timeout 1.41 |
 | ✅ | 3 and the same plugins as plug-0 |
 | ✅ | 4 build-timeout is gone from both controllers |

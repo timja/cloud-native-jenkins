@@ -1,0 +1,22 @@
+Started onala #1 (on another controller)
+Started from command line by [8mha:////4ML7HCx585Zd5XnZJHXwbUyHjRZ0DWzLaaJm8GUJZ6EgAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building remotely on [8mha:////4FkI1NWbOmFsqt0EdKhid/6yo+i8I5YpG0woxsp30flPAAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgY+/eT83ILSktQi/cScRH0AUJpKW8MAAAA=[0mala in workspace /home/jenkins/agent/workspace/onala
+[onala] $ /bin/sh -xe /tmp/jenkins10148732525471964027.sh
++ echo ala-line 1
+ala-line 1
++ sleep 1
++ echo ala-line 2
+ala-line 2
++ sleep 1
++ echo ala-line 3
+ala-line 3
++ sleep 1
++ echo ala-line 4
+ala-line 4
++ sleep 1
++ echo ala-line 5
+ala-line 5
++ sleep 1
+Finished: SUCCESS
+Completed onala #1 : SUCCESS

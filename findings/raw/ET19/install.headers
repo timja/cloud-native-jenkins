@@ -1,15 +1,15 @@
 HTTP/1.1 302 Found
 Server: nginx/1.27.5
-Date: Mon, 12 Oct 2026 19:01:33 GMT
+Date: Tue, 13 Oct 2026 18:44:11 GMT
 Content-Length: 0
 Connection: keep-alive
 Vary: Accept-Encoding
 X-Content-Type-Options: nosniff
-Set-Cookie: remember-me=YWRtaW46MTc5MzA0MTI5MzM1MzoyODIyNzYxZTk0MmMzMDExZmYyNWRmODY5OWQzM2FiNTkyMWY0ZDZlNGQyYWY0MGQ4ZTA2MTU5MzZiMmM0ZWJl; Path=/; Expires=Mon, 26 Oct 2026 19:01:33 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
+Set-Cookie: remember-me=YWRtaW46MTc5MzEyNjY1MDg0MjpjMmE5MDY0NDljNDc4Mzk5ODkwZmZjMTM2Mjg3YzJkZTNiYmQyMGI1YzU4YWE5MWFmOWEyZDdhNGMyZWQzYzc3; Path=/; Expires=Tue, 27 Oct 2026 18:44:10 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
 Expires: Thu, 01 Jan 1970 00:00:00 GMT
 Content-Security-Policy-Report-Only: base-uri 'none'; default-src 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; script-src 'report-sample' 'self' usage.jenkins.io; style-src 'report-sample' 'self' 'unsafe-inline';
-Set-Cookie: CNJ-UC=jenkins-a; Path=/; Expires=Mon, 12 Oct 2026 20:01:33 GMT; Max-Age=3600; HttpOnly; SameSite=Lax
+Set-Cookie: CNJ-UC=jenkins-a; Path=/; Expires=Tue, 13 Oct 2026 19:44:10 GMT; Max-Age=3600; HttpOnly; SameSite=Lax
 X-CNJ-Controller: jenkins-a
 Location: /manage/pluginManager/updates/
-X-Upstream: 192.168.0.4:8080
+X-Upstream: 172.31.0.4:8080
 

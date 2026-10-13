@@ -1,0 +1,39 @@
+Running from: /war-override/jenkins.war
+webroot: /var/jenkins_home/war
+2026-10-13 19:19:21.229+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-10-13 19:19:21.285+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-10-13 19:19:21.401+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+2026-10-13 19:19:21.650+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+2026-10-13 19:19:21.671+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-10-13 19:19:21.927+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2026-10-13 19:19:21.990+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@30331109{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@2571066a{STARTED}}
+2026-10-13 19:19:21.995+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@393881f0{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-10-13 19:19:21.996+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@4158debd{STARTING}[12.1.14,sto=0] @596ms
+2026-10-13 19:19:21.998+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-10-13 19:19:22.106+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+2026-10-13 19:19:22.182+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-10-13 19:19:22.426+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2026-10-13 19:19:24.386+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2026-10-13 19:19:24.580+0000 [id=30]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+2026-10-13 19:19:24.635+0000 [id=30]	INFO	h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set
+2026-10-13 19:19:24.934+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2026-10-13 19:19:24.937+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2026-10-13 19:19:24.988+0000 [id=53]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
+2026-10-13 19:19:25.004+0000 [id=53]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
+2026-10-13 19:19:25.005+0000 [id=53]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
+2026-10-13 19:19:25.005+0000 [id=53]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
+2026-10-13 19:19:25.249+0000 [id=53]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
+2026-10-13 19:19:25.364+0000 [id=53]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+2026-10-13 19:19:25.988+0000 [id=53]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
+2026-10-13 19:19:26.191+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+2026-10-13 19:19:26.671+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+2026-10-13 19:19:26.702+0000 [id=50]	INFO	j.persistence.RunningBuilds#reclaim: during #1 was adopted by plug-0 while this controller restarted; not resuming it here
+2026-10-13 19:19:26.706+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2026-10-13 19:19:26.708+0000 [id=59]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+2026-10-13 19:19:26.725+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2026-10-13 19:19:26.740+0000 [id=51]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+2026-10-13 19:19:26.747+0000 [id=53]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6987d18d05a57c265385c247b5a4166e8081b7aaa59e4165f1701138a03426fb duplicates one seen earlier for admin
+2026-10-13 19:19:26.907+0000 [id=51]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+2026-10-13 19:19:26.957+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2026-10-13 19:19:26.973+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2026-10-13 19:19:36.734+0000 [id=65]	INFO	i.j.p.cnj.store.ClusterPlugins#releaseLock: Released the plugin restart lock: this controller is up to date with the cluster's plugin set

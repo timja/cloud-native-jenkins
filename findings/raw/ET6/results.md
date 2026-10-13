@@ -1,5 +1,5 @@
 | ℹ️ | seeded keys: hudson.model.User.DIRNAMES hudson.util.Secret jenkins.model.Jenkins.crumbSalt master.key org.jenkinsci.main.modules.instance_identity.InstanceIdentity.KEY  |
-## ET6 results (2026-10-12T18:08Z)
+## ET6 results (2026-10-13T17:59Z)
 
 | | Check |
 |---|---|
@@ -22,7 +22,7 @@
 | ✅ | 5 and B dropped its connection |
 | ✅ | 6 the key has the same value on B |
 | ✅ | 6 data encrypted with a runtime key on A decrypts on B |
-| ℹ️ | 9 versions before: config.xml@27 jenkins.model.JenkinsLocationConfiguration.xml@26 nodes/n7/config.xml@57 users/u9_59e4d05996cc5849f7654f3e77133efcad3dc9e3a8e1df4d3465f89d7fd8bf8b/config.xml@56 ; after: config.xml@27 jenkins.model.JenkinsLocationConfiguration.xml@26 nodes/n7/config.xml@57 users/u9_59e4d05996cc5849f7654f3e77133efcad3dc9e3a8e1df4d3465f89d7fd8bf8b/config.xml@56  |
+| ℹ️ | 9 versions before: config.xml@29 jenkins.model.JenkinsLocationConfiguration.xml@28 nodes/n7/config.xml@60 users/u9_c62a8e33da0f95dcad4383dcaa4cf123e8728bfb47091246f3cb5b061478c653/config.xml@59 ; after: config.xml@29 jenkins.model.JenkinsLocationConfiguration.xml@28 nodes/n7/config.xml@60 users/u9_c62a8e33da0f95dcad4383dcaa4cf123e8728bfb47091246f3cb5b061478c653/config.xml@59  |
 | ✅ | 9 B's boot (JCasC) bumped no versions of unchanged config |
 | ✅ | 9 a setting JCasC does not declare keeps its runtime value |
 | ✅ | 9 a user created at runtime survives B's boot |
@@ -34,7 +34,7 @@
 | ✅ | 8 logged in through the load balancer |
 | ✅ | 8 signed in on every request (10/10) |
 | ✅ | 8 requests reached both controllers [jenkins-b, jenkins-a] |
-| ℹ️ | 8 bound objects on the configure page: 82 e.g. jenkins-a-ae2a6600-7b57-4b76-9883-37e325ac3f8e |
+| ℹ️ | 8 bound objects on the configure page: 82 e.g. jenkins-a-050d5da0-eada-49dc-ad38-070cd849b913 |
 | ✅ | 8 bound objects answer through either controller (12/12 [200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200]) |
 | ✅ | 8 configure form saved (200) |
 | ✅ | 8 the saved description is there (1 read(s), from [jenkins-b]) |

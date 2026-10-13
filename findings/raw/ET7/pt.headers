@@ -1,9 +1,9 @@
 HTTP/1.1 200 OK
 Server: Jetty(12.1.14)
-Date: Mon, 12 Oct 2026 18:10:14 GMT
+Date: Tue, 13 Oct 2026 18:01:19 GMT
 Vary: Accept-Encoding
 x-content-type-options: nosniff
-Set-Cookie: remember-me=YWRtaW46MTc5MzAzODIxNDI0NTo0MDVkZDIxNGQ3Yzc2OTAwNzYwYTJlZDFmM2NmODhhOTUwZTM1ZjMwNTRkZDRlNmZmMGE3YmQyM2UwZGNjNTlm; Path=/; Expires=Mon, 26 Oct 2026 18:10:14 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
+Set-Cookie: remember-me=YWRtaW46MTc5MzEyNDA3OTc3NTpkMmY2YzI2Nzg3YTZhMWFiMDQwYmU4Y2E0ZDVhODM1NDZkNzc3NDNlYzQyMWVlNmVjNzI3MmRlODAwOThkNmRj; Path=/; Expires=Tue, 27 Oct 2026 18:01:19 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
 Expires: Thu, 01 Jan 1970 00:00:00 GMT
 content-security-policy-report-only: base-uri 'none'; default-src 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; script-src 'report-sample' 'self' usage.jenkins.io; style-src 'report-sample' 'self' 'unsafe-inline';
 x-cnj-controller: jenkins-a

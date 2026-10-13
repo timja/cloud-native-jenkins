@@ -86,12 +86,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 38821,
+                  "duration": 38289,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T19:03:44.054Z",
+                  "startTime": "2026-10-13T18:46:27.453Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -106,7 +106,7 @@
         },
         {
           "title": "a job configured in the browser is saved for every controller",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -119,53 +119,18 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 3260,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"described in a browser\"\u001b[39m\nReceived: \u001b[31mnull\u001b[39m",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"described in a browser\"\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n    at /Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/cluster.spec.js:22:42",
-                    "location": {
-                      "file": "/Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/cluster.spec.js",
-                      "column": 42,
-                      "line": 22
-                    },
-                    "snippet": "  20 |   for (const port of [8081, 8082]) {\n  21 |     const r = await request.get(`http://localhost:${port}/job/ui-config/api/json?tree=description`);\n> 22 |     expect((await r.json()).description).toBe('described in a browser');\n     |                                          ^\n  23 |   }\n  24 | });\n  25 |"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "/Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/cluster.spec.js",
-                        "column": 42,
-                        "line": 22
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"described in a browser\"\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n\n  20 |   for (const port of [8081, 8082]) {\n  21 |     const r = await request.get(`http://localhost:${port}/job/ui-config/api/json?tree=description`);\n> 22 |     expect((await r.json()).description).toBe('described in a browser');\n     |                                          ^\n  23 |   }\n  24 | });\n  25 |\n    at /Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/cluster.spec.js:22:42"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 1710,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T19:04:23.163Z",
+                  "startTime": "2026-10-13T18:47:06.180Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "/Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/test-results/cluster-a-job-configured-i-b370f--saved-for-every-controller/error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/test-results/cluster-a-job-configured-i-b370f--saved-for-every-controller/trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "/Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/cluster.spec.js",
-                    "column": 42,
-                    "line": 22
-                  }
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "06d446a9704974aafb74-7d7df16d85c6b00099be",
@@ -186,15 +151,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 441,
+                  "duration": 490,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T19:04:26.837Z",
+                  "startTime": "2026-10-13T18:47:07.901Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -204,7 +169,7 @@
           ],
           "id": "06d446a9704974aafb74-b0b0dce044e6c2e4822c",
           "file": "cluster.spec.js",
-          "line": 26,
+          "line": 29,
           "column": 1
         },
         {
@@ -220,15 +185,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 534,
+                  "duration": 463,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-12T19:04:27.399Z",
+                  "startTime": "2026-10-13T18:47:08.399Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -238,7 +203,7 @@
           ],
           "id": "06d446a9704974aafb74-7978396082b5ff6d0ec0",
           "file": "cluster.spec.js",
-          "line": 33,
+          "line": 36,
           "column": 1
         }
       ]
@@ -246,11 +211,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-12T19:03:43.823Z",
-    "duration": 44147.544,
-    "expected": 3,
+    "startTime": "2026-10-13T18:46:27.206Z",
+    "duration": 41734.527,
+    "expected": 4,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
