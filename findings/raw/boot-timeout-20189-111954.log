@@ -1,0 +1,15 @@
+Running from: /war-override/jenkins.war
+webroot: /var/jenkins_home/war
+2026-10-14 10:13:15.041+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+2026-10-14 10:13:15.484+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2026-10-14 10:13:15.522+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+2026-10-14 10:13:15.757+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+2026-10-14 10:13:15.786+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2026-10-14 10:13:16.077+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+2026-10-14 10:13:16.175+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+2026-10-14 10:13:16.183+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@47c4bff7{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2026-10-14 10:13:16.183+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @663ms
+2026-10-14 10:13:16.184+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2026-10-14 10:13:16.248+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+2026-10-14 10:13:16.292+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+2026-10-14 10:17:49.173+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins

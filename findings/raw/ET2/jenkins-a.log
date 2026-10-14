@@ -1,0 +1,76 @@
+jenkins-a-1  | 2026-10-14T11:33:47.161832910Z Running from: /war-override/jenkins.war
+jenkins-a-1  | 2026-10-14T11:33:47.162142760Z webroot: /var/jenkins_home/war
+jenkins-a-1  | 2026-10-14T11:33:47.413579426Z 2026-10-14 11:33:47.395+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-14T11:33:47.662543915Z 2026-10-14 11:33:47.661+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-14T11:33:47.690012055Z 2026-10-14 11:33:47.689+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-14T11:33:47.903239059Z 2026-10-14 11:33:47.902+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-14T11:33:47.930020381Z 2026-10-14 11:33:47.929+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-14T11:33:48.109361878Z 2026-10-14 11:33:48.109+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-14T11:33:48.162547864Z 2026-10-14 11:33:48.162+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@77eb5790{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@68e7c8c3{STARTED}}
+jenkins-a-1  | 2026-10-14T11:33:48.168888887Z 2026-10-14 11:33:48.168+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@25f8d10f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-14T11:33:48.169374923Z 2026-10-14 11:33:48.169+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@2b22a1cc{STARTING}[12.1.14,sto=0] @480ms
+jenkins-a-1  | 2026-10-14T11:33:48.170058595Z 2026-10-14 11:33:48.169+0000 [id=66]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-14T11:33:48.228347226Z 2026-10-14 11:33:48.227+0000 [id=60]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-14T11:33:48.273248468Z 2026-10-14 11:33:48.272+0000 [id=72]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14T11:33:49.953541680Z 2026-10-14 11:33:49.953+0000 [id=108]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14T11:33:51.807535336Z 2026-10-14 11:33:51.807+0000 [id=110]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14T11:33:51.814492903Z 2026-10-14 11:33:51.814+0000 [id=109]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14T11:33:51.815607876Z 2026-10-14 11:33:51.815+0000 [id=75]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14T11:33:51.840755367Z 2026-10-14 11:33:51.840+0000 [id=80]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14T11:33:51.848495334Z 2026-10-14 11:33:51.848+0000 [id=80]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14T11:33:51.848944419Z 2026-10-14 11:33:51.848+0000 [id=80]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14T11:33:51.849312951Z 2026-10-14 11:33:51.849+0000 [id=80]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14T11:33:52.260504059Z 2026-10-14 11:33:52.260+0000 [id=80]	INFO	i.j.plugins.cluster.KeyCheck#verify: Recorded the cluster's key check: controllers started without this controller's keys will refuse to start
+jenkins-a-1  | 2026-10-14T11:33:52.280012162Z 2026-10-14 11:33:52.279+0000 [id=80]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-14T11:33:52.494625937Z 2026-10-14 11:33:52.494+0000 [id=80]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-a-1  | 2026-10-14T11:33:52.988560799Z 2026-10-14 11:33:52.988+0000 [id=80]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.azure.AzureBlobStoreProvider
+jenkins-a-1  | 2026-10-14T11:33:53.079734233Z 2026-10-14 11:33:53.079+0000 [id=85]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-a-1  | 2026-10-14T11:33:53.336900397Z 2026-10-14 11:33:53.336+0000 [id=75]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14T11:33:53.793538175Z 2026-10-14 11:33:53.793+0000 [id=108]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_6aeaea3915aaf73b63f088c2aaf1c5e522e00795d3602b5a5f25160e7e147d90/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-14T11:33:53.951883354Z 2026-10-14 11:33:53.950+0000 [id=108]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14T11:33:53.952652108Z 2026-10-14 11:33:53.952+0000 [id=82]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14T11:33:53.954007579Z 2026-10-14 11:33:53.953+0000 [id=101]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-14T11:33:53.964529783Z 2026-10-14 11:33:53.964+0000 [id=99]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14T11:33:53.968196906Z 2026-10-14 11:33:53.967+0000 [id=115]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-14T11:33:53.979314974Z 2026-10-14 11:33:53.978+0000 [id=111]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6aeaea3915aaf73b63f088c2aaf1c5e522e00795d3602b5a5f25160e7e147d90 duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-14T11:33:54.174247846Z 2026-10-14 11:33:54.173+0000 [id=115]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-a-1  | 2026-10-14T11:33:54.289982635Z cnj: added the blob storage credential cnj-blob for account devstoreaccount1
+jenkins-a-1  | 2026-10-14T11:33:54.291376289Z 2026-10-14 11:33:54.290+0000 [id=115]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14T11:33:54.313437714Z 2026-10-14 11:33:54.312+0000 [id=60]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-14T11:33:55.053378450Z 2026-10-14 11:33:55.052+0000 [id=186]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-a-1  | 2026-10-14T11:33:59.287062033Z 2026-10-14 11:33:59.285+0000 [id=165]	INFO	i.j.p.cluster.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster
+jenkins-a-1  | 2026-10-14T11:33:59.842719873Z 2026-10-14 11:33:59.841+0000 [id=299]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #20
+jenkins-a-1  | 2026-10-14T11:33:59.865655553Z 2026-10-14 11:33:59.865+0000 [id=285]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #30
+jenkins-a-1  | 2026-10-14T11:33:59.925171471Z 2026-10-14 11:33:59.924+0000 [id=284]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #33
+jenkins-a-1  | 2026-10-14T11:33:59.926072406Z 2026-10-14 11:33:59.925+0000 [id=286]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #31
+jenkins-a-1  | 2026-10-14T11:33:59.955042075Z 2026-10-14 11:33:59.954+0000 [id=304]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #26
+jenkins-a-1  | 2026-10-14T11:34:00.011005098Z 2026-10-14 11:34:00.010+0000 [id=303]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #29
+jenkins-a-1  | 2026-10-14T11:34:00.056332471Z 2026-10-14 11:34:00.055+0000 [id=300]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #18
+jenkins-a-1  | 2026-10-14T11:34:00.082628408Z 2026-10-14 11:34:00.082+0000 [id=308]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #17
+jenkins-a-1  | 2026-10-14T11:34:00.084560347Z 2026-10-14 11:34:00.082+0000 [id=287]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #14
+jenkins-a-1  | 2026-10-14T11:34:00.108790300Z 2026-10-14 11:34:00.107+0000 [id=301]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #27
+jenkins-a-1  | 2026-10-14T11:34:00.108928493Z 2026-10-14 11:34:00.107+0000 [id=281]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #12
+jenkins-a-1  | 2026-10-14T11:34:00.148435916Z 2026-10-14 11:34:00.147+0000 [id=282]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #38
+jenkins-a-1  | 2026-10-14T11:34:00.161675724Z 2026-10-14 11:34:00.161+0000 [id=288]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #22
+jenkins-a-1  | 2026-10-14T11:34:00.162314981Z 2026-10-14 11:34:00.162+0000 [id=283]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #40
+jenkins-a-1  | 2026-10-14T11:34:00.163903025Z 2026-10-14 11:34:00.162+0000 [id=310]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #34
+jenkins-a-1  | 2026-10-14T11:34:00.183614235Z 2026-10-14 11:34:00.183+0000 [id=302]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #39
+jenkins-a-1  | 2026-10-14T11:34:00.220343447Z 2026-10-14 11:34:00.219+0000 [id=309]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #32
+jenkins-a-1  | 2026-10-14T11:34:00.322238715Z 2026-10-14 11:34:00.321+0000 [id=305]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #36
+jenkins-a-1  | 2026-10-14T11:34:00.348283915Z 2026-10-14 11:34:00.347+0000 [id=289]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #35
+jenkins-a-1  | 2026-10-14T11:34:00.401051695Z 2026-10-14 11:34:00.400+0000 [id=306]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #37
+jenkins-a-1  | 2026-10-14T11:34:02.398018500Z 2026-10-14 11:34:02.397+0000 [id=129]	INFO	i.j.p.c.p.SchemaMigrations#run: Schema migration store-key-prefix-index done
+jenkins-a-1  | 2026-10-14T11:34:02.517128745Z 2026-10-14 11:34:02.516+0000 [id=129]	INFO	i.j.p.c.p.SchemaMigrations#run: Schema migration store-size done
+jenkins-a-1  | 2026-10-14T11:39:00.991826747Z 2026-10-14 11:39:00.991+0000 [id=408]	INFO	h.triggers.SCMTrigger$Runner#run: SCM changes detected in poll. Triggering  #1
+jenkins-a-1  | 2026-10-14T11:39:12.103215276Z 2026-10-14 11:39:12.102+0000 [id=177]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: poll #1
+jenkins-a-1  | 2026-10-14T11:40:01.002203314Z 2026-10-14 11:40:01.002+0000 [id=462]	INFO	h.triggers.SCMTrigger$Runner#run: SCM changes detected in poll. Triggering  #2
+jenkins-a-1  | 2026-10-14T11:40:09.046200493Z 2026-10-14 11:40:09.045+0000 [id=446]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: poll #2
+jenkins-a-1  | 2026-10-14T11:42:00.993720455Z 2026-10-14 11:42:00.993+0000 [id=538]	INFO	h.triggers.SCMTrigger$Runner#run: SCM changes detected in poll. Triggering  #3
+jenkins-a-1  | 2026-10-14T11:42:09.044277877Z 2026-10-14 11:42:09.043+0000 [id=167]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: poll #3
+jenkins-a-1  | 2026-10-14T11:43:49.217147364Z 2026-10-14 11:43:49.216+0000 [id=739]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mbp » feature #1
+jenkins-a-1  | 2026-10-14T11:43:49.223229743Z 2026-10-14 11:43:49.222+0000 [id=742]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mbp » main #1
+jenkins-a-1  | 2026-10-14T11:47:19.110681539Z 2026-10-14 11:47:19.110+0000 [id=955]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mbp » feature2 #1
+jenkins-a-1  | 2026-10-14T11:49:56.636565869Z 2026-10-14 11:49:56.636+0000 [id=132]	INFO	i.j.p.c.p.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [e8672381-e97f-4867-a11c-e9b0b76593cb]
+jenkins-a-1  | 2026-10-14T11:50:01.178584430Z 2026-10-14 11:50:01.178+0000 [id=1084]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: cron1 #16
+jenkins-a-1  | 2026-10-14T11:51:01.130694397Z 2026-10-14 11:51:01.130+0000 [id=1083]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: cron1 #17
+jenkins-a-1  | 2026-10-14T11:52:01.132360568Z 2026-10-14 11:52:01.132+0000 [id=1084]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: cron1 #18

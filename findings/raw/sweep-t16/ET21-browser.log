@@ -1,0 +1,15 @@
+[12:43:18] Jenkins on 20589 is up (7s)
+[12:43:34] Jenkins on 20581 is up (7s)
+[12:43:34] Jenkins on 20582 is up (0s)
+## ET21 results (2026-10-14T11:43Z)
+
+| | Check |
+|---|---|
+[12:43:40] Playwright
+| ✅ | a live console follows a build running on one controller, whichever controller each request reaches |
+| ✅ | a job configured in the browser is saved for every controller |
+| ✅ | the cluster page shows both controllers with their executors |
+| ✅ | the plugin manager says changes apply to every controller, and shows their status |
+| ℹ️ | served by: 8 lines of Playwright output |
+
+Failures: 0

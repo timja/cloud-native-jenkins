@@ -1,0 +1,19 @@
+[12:51:19] Jenkins on 20189 is up (7s)
+[12:51:36] Jenkins on 20181 is up (10s)
+[12:51:36] Jenkins on 20182 is up (0s)
+## ET22 results (2026-10-14T11:51Z)
+
+| | Check |
+|---|---|
+[12:51:36] scenario 1: admin's avatar set on A
+| ℹ️ | 1 set on A: avatar.png |
+| ✅ | 1 A serves it |
+| ✅ | 1 B serves the same image (shared within 60 s) |
+| ✅ | 1 ... and its API names an avatar |
+[12:51:38] scenario 2: B replaced by a fresh controller (empty home)
+[12:51:48] Jenkins on 20182 is up (8s)
+| ✅ | 2 the fresh B serves it |
+[12:51:48] scenario 3: changed on B
+| ✅ | 3 A serves the new image |
+
+Failures: 0

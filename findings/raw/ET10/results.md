@@ -1,4 +1,4 @@
-## ET10 results (2026-10-13T19:10Z)
+## ET10 results (2026-10-14T11:50Z)
 
 | | Check |
 |---|---|
@@ -22,7 +22,7 @@
 | ✅ | 3 the old node and setting |
 | ℹ️ | 3 import again: files imported 0, kept 13; builds imported 0, kept 4 |
 | ✅ | 3 importing again changes nothing |
-| ℹ️ | 4 backed up cnj-ops/ops to /Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/out/backup:  28K database, 3.1M blobs |
+| ℹ️ | 4 backed up cnj-ops/ops to /home/timja/code/cnj-t16/validation/out/kind/backup: 28K database, 2.2M blobs |
 | ✅ | 4 the restored cluster comes up |
 | ✅ | 4 every job is there (during-backup,oldp,team,usecred) |
 | ✅ | 4 history and consoles (team/fs #1) |

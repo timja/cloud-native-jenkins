@@ -1,20 +1,20 @@
-## ET19 results (2026-10-14T08:56Z)
+## ET19 results (2026-10-14T11:52Z)
 
 | | Check |
 |---|---|
-| ✅ | 1 /manage/pluginManager/ on 8081 says changes apply to every controller |
-| ✅ | 1 /manage/pluginManager/available on 8081 says changes apply to every controller |
-| ✅ | 1 /manage/pluginManager/advanced on 8081 says changes apply to every controller |
-| ✅ | 1 /manage/pluginManager/updates/ on 8081 says changes apply to every controller |
-| ✅ | 1 /manage/pluginManager/ on 8082 says changes apply to every controller |
-| ✅ | 1 /manage/pluginManager/available on 8082 says changes apply to every controller |
-| ✅ | 1 /manage/pluginManager/advanced on 8082 says changes apply to every controller |
-| ✅ | 1 /manage/pluginManager/updates/ on 8082 says changes apply to every controller |
+| ✅ | 1 /manage/pluginManager/ on 20181 says changes apply to every controller |
+| ✅ | 1 /manage/pluginManager/available on 20181 says changes apply to every controller |
+| ✅ | 1 /manage/pluginManager/advanced on 20181 says changes apply to every controller |
+| ✅ | 1 /manage/pluginManager/updates/ on 20181 says changes apply to every controller |
+| ✅ | 1 /manage/pluginManager/ on 20182 says changes apply to every controller |
+| ✅ | 1 /manage/pluginManager/available on 20182 says changes apply to every controller |
+| ✅ | 1 /manage/pluginManager/advanced on 20182 says changes apply to every controller |
+| ✅ | 1 /manage/pluginManager/updates/ on 20182 says changes apply to every controller |
 | ✅ | 1 the status fragment lists both controllers |
 | ℹ️ | 2 plugins chosen: next-build-number (update center, through rr), ansicolor (CLI, from a file) |
 | ℹ️ | 2 the install was served by jenkins-a |
 | ✅ | 2 the install set the routing cookie |
-| ℹ️ | 2 progress polls answered by:   12 jenkins-a  |
+| ℹ️ | 2 progress polls answered by:      12 jenkins-a  |
 | ✅ | 2 every progress poll through rr was answered by the installing controller |
 | ✅ | 2 ... and shows the install (Next Build Number) |
 | ✅ | 2 the plugin is active on both controllers |

@@ -1,0 +1,36 @@
+[12:33:56] Jenkins on 20489 is up (8s)
+[12:34:21] Jenkins on 20481 is up (9s)
+[12:34:21] Jenkins on 20482 is up (0s)
+## ET16 results (2026-10-14T11:34Z): 2000 jobs, 2000 builds, 50 running at once
+
+| | Check |
+|---|---|
+[12:34:21] scenario 1: 2000 jobs created on A
+| ℹ️ | 1 creating them took 107 s on A |
+| ✅ | 1 B lists all 2000 jobs within 120 s of their creation |
+| ℹ️ | 1 B had them all 108 s after A started creating |
+[12:36:09] scenario 2: 10 builds of 200 jobs
+| ℹ️ | 2 the builds took 122 s (published: 2000) |
+[12:38:11] scenario 3: page loads
+| ℹ️ | 3 pages (port, page, cold s, warm s): 20481 / 33.535672 0.346617;20482 / 1.210799 0.298823;20481 /api/json?tree=jobs[name,color] 0.022343 0.008724;20482 /api/json?tree=jobs[name,color] 0.024642 0.009948;20481 /job/job-3/ 0.113076 0.009763;20482 /job/job-3/ 0.099278 0.009700;20481 /job/job-3/api/json?depth=1 0.013291 0.004193;20482 /job/job-3/api/json?depth=1 0.013726 0.004449;20481 /manage/cluster/ 0.045562 0.015019;20482 /manage/cluster/ 0.040592 0.016099; |
+| ✅ | 3 every page answers warm within 5 s on both controllers |
+| ℹ️ | 3 heap: A used 118914K, B used 303771K |
+| ℹ️ | 3 store: 5729 keys, 4581 kB, 32638 events |
+| ✅ | 3 listing a job's builds uses the key index |
+| ℹ️ | 3 a job's builds listed in Execution Time: 0.055 ms |
+[12:38:47] scenario 4: B replaced by a fresh controller (empty home), three times
+| ✅ | 4 fresh B #1 is up within 180 s |
+| ✅ | 4 fresh B #2 is up within 180 s |
+| ✅ | 4 fresh B #3 is up within 180 s |
+| ✅ | 4 and lists every job |
+| ℹ️ | 4 median time to serving: 9.7 s; warm / afterwards 0.301269 s |
+| ✅ | 4 fresh B with next-build-number installed at runtime is up within 180 s |
+| ✅ | 4 ... and has next-build-number |
+[12:40:04] scenario 5: 50 Pipelines running on A, then A killed
+| ℹ️ | 5 B's / with 50 builds running on A: 1.539324 s |
+| ✅ | 5 B adopts all 50 within 90 s |
+| ℹ️ | 5 adopted 50 builds, the last 8 s after the kill |
+| ✅ | 5 all of them complete |
+
+Failures: 0
+ET16 exit=0

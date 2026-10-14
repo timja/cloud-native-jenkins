@@ -1,8 +1,8 @@
 Started onala #1 (on another controller)
-Started from command line by [8mha:////4ML7HCx585Zd5XnZJHXwbUyHjRZ0DWzLaaJm8GUJZ6EgAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Started from command line by [8mha:////4FyOwdheJocoxkuD+sHyaIOxmO2xbOvWFRBHGZgN31krAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
 Running as SYSTEM
-Building remotely on [8mha:////4FkI1NWbOmFsqt0EdKhid/6yo+i8I5YpG0woxsp30flPAAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgY+/eT83ILSktQi/cScRH0AUJpKW8MAAAA=[0mala in workspace /home/jenkins/agent/workspace/onala
-[onala] $ /bin/sh -xe /tmp/jenkins10148732525471964027.sh
+Building remotely on [8mha:////4FrqiMiTv/YDv3WAFkaY8nR7kOLrMs23lkyXQl02drirAAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgY+/eT83ILSktQi/cScRH0AUJpKW8MAAAA=[0mala in workspace /home/jenkins/agent/workspace/onala
+[onala] $ /bin/sh -xe /tmp/jenkins1838281695335523794.sh
 + echo ala-line 1
 ala-line 1
 + sleep 1

@@ -1,66 +1,127 @@
 jenkins-a-1  | Running from: /war-override/jenkins.war
 jenkins-a-1  | webroot: /var/jenkins_home/war
-jenkins-a-1  | 2026-10-13 18:22:17.829+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-a-1  | 2026-10-13 18:22:18.887+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-a-1  | 2026-10-13 18:22:18.944+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-a-1  | 2026-10-13 18:22:19.290+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-a-1  | 2026-10-13 18:22:19.323+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-a-1  | 2026-10-13 18:22:19.745+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-a-1  | 2026-10-13 18:22:19.859+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-a-1  | 2026-10-13 18:22:19.869+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-a-1  | 2026-10-13 18:22:19.870+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @928ms
-jenkins-a-1  | 2026-10-13 18:22:19.873+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-a-1  | 2026-10-13 18:22:20.005+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-a-1  | 2026-10-13 18:22:20.094+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-13 18:22:23.383+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-13 18:22:27.429+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-13 18:22:27.460+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-13 18:22:27.463+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-13 18:22:27.540+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 18:22:27.565+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 18:22:27.565+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 18:22:27.566+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 18:22:32.595+0000 [id=52]	WARNING	i.j.p.c.s.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
-jenkins-a-1  | 2026-10-13 18:22:33.603+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 18:22:33.607+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 18:22:33.608+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 18:22:33.608+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 18:22:38.613+0000 [id=52]	WARNING	i.j.p.c.s.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
-jenkins-a-1  | 2026-10-13 18:22:40.620+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 18:22:40.622+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 18:22:40.622+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 18:22:40.623+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 18:22:45.627+0000 [id=52]	WARNING	i.j.p.c.s.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
-jenkins-a-1  | 2026-10-13 18:22:49.641+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 18:22:49.650+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 18:22:49.654+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 18:22:49.656+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 18:22:54.661+0000 [id=52]	WARNING	i.j.p.c.s.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
-jenkins-a-1  | 2026-10-13 18:23:02.687+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 18:23:02.694+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 18:23:02.695+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 18:23:02.698+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 18:23:07.709+0000 [id=52]	WARNING	i.j.p.c.s.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
-jenkins-a-1  | 2026-10-13 18:23:17.732+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 18:23:17.741+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 18:23:17.742+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 18:23:17.742+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 18:23:22.755+0000 [id=52]	WARNING	i.j.p.c.s.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
-jenkins-a-1  | 2026-10-13 18:23:32.774+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 18:23:32.809+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 18:23:32.811+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 18:23:32.816+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 18:23:32.994+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-a-1  | 2026-10-13 18:23:33.317+0000 [id=52]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-a-1  | 2026-10-13 18:23:34.244+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-a-1  | 2026-10-13 18:23:34.425+0000 [id=58]	INFO	i.j.p.c.store.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-a)
-jenkins-a-1  | 2026-10-13 18:23:36.015+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-13 18:23:37.264+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-13 18:23:37.575+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-13 18:23:37.576+0000 [id=50]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-a-1  | 2026-10-13 18:23:37.592+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-13 18:23:37.601+0000 [id=58]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-a-1  | 2026-10-13 18:23:37.610+0000 [id=51]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_9a4ecaa73493184e3203d13b98dd7c778dfa62963e327d7757fba08f9c066f91 duplicates one seen earlier for admin
-jenkins-a-1  | 2026-10-13 18:23:37.890+0000 [id=58]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-a-1  | 2026-10-13 18:23:38.136+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-a-1  | 2026-10-13 18:23:38.241+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-14 11:45:09.018+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-14 11:45:09.251+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-14 11:45:09.280+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-14 11:45:09.469+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-14 11:45:09.489+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-14 11:45:09.664+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-14 11:45:09.712+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@77eb5790{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@68e7c8c3{STARTED}}
+jenkins-a-1  | 2026-10-14 11:45:09.717+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@396639b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-14 11:45:09.718+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@62573c86{STARTING}[12.1.14,sto=0] @439ms
+jenkins-a-1  | 2026-10-14 11:45:09.718+0000 [id=66]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-14 11:45:09.768+0000 [id=60]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-14 11:45:09.804+0000 [id=72]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 11:45:11.300+0000 [id=89]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 11:45:12.568+0000 [id=117]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 11:45:12.575+0000 [id=83]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 11:45:12.577+0000 [id=85]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 11:45:12.606+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 11:45:12.613+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 11:45:12.613+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 11:45:12.613+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 11:45:17.616+0000 [id=102]	WARNING	i.j.p.c.p.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
+jenkins-a-1  | 2026-10-14 11:45:18.617+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 11:45:18.617+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 11:45:18.618+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 11:45:18.618+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 11:45:23.618+0000 [id=102]	WARNING	i.j.p.c.p.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
+jenkins-a-1  | 2026-10-14 11:45:25.619+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 11:45:25.619+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 11:45:25.619+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 11:45:25.620+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 11:45:30.620+0000 [id=102]	WARNING	i.j.p.c.p.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
+jenkins-a-1  | 2026-10-14 11:45:34.621+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 11:45:34.621+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 11:45:34.621+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 11:45:34.622+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 11:45:39.622+0000 [id=102]	WARNING	i.j.p.c.p.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
+jenkins-a-1  | 2026-10-14 11:45:47.623+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 11:45:47.623+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 11:45:47.623+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 11:45:47.624+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 11:45:52.624+0000 [id=102]	WARNING	i.j.p.c.p.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
+jenkins-a-1  | 2026-10-14 11:46:02.625+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 11:46:02.625+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 11:46:02.625+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 11:46:02.625+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 11:46:07.626+0000 [id=102]	WARNING	i.j.p.c.p.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
+jenkins-a-1  | 2026-10-14 11:46:15.731+0000 [id=121]	WARNING	com.zaxxer.hikari.pool.PoolBase#newConnection: cluster-postgres-work - Pool is empty, failed to create/setup connection (2964eae4-6672-485b-a0a9-b32200dcafe9)
+jenkins-a-1  | java.net.UnknownHostException: postgres
+jenkins-a-1  | 	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+jenkins-a-1  | 	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+jenkins-a-1  | 	at java.base/java.net.Socket.connect(Unknown Source)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.PGStream.createSocket(PGStream.java:271)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.PGStream.<init>(PGStream.java:132)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:219)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:365)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:52)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:290)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver.makeConnection(Driver.java:448)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver.access$100(Driver.java:63)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver$ConnectThread.run(Driver.java:356)
+jenkins-a-1  | Caused: org.postgresql.util.PSQLException: The connection attempt failed.
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver$ConnectThread.getResult(Driver.java:399)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver.connect(Driver.java:305)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore$DirectDataSource.getConnection(PostgresPersistenceStore.java:1828)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.ds.common.BaseDataSource.getConnection(BaseDataSource.java:88)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:483)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:747)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+jenkins-a-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-a-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-a-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-a-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-a-1  | 2026-10-14 11:46:16.983+0000 [id=123]	WARNING	com.zaxxer.hikari.pool.PoolBase#newConnection: cluster-postgres-control - Pool is empty, failed to create/setup connection (9ac45f2f-5323-406f-b002-f6b7a2ae8fba)
+jenkins-a-1  | java.net.UnknownHostException: postgres
+jenkins-a-1  | 	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+jenkins-a-1  | 	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+jenkins-a-1  | 	at java.base/java.net.Socket.connect(Unknown Source)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.PGStream.createSocket(PGStream.java:271)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.PGStream.<init>(PGStream.java:132)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:219)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:365)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:52)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:290)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver.makeConnection(Driver.java:448)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver.access$100(Driver.java:63)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver$ConnectThread.run(Driver.java:356)
+jenkins-a-1  | Caused: org.postgresql.util.PSQLException: The connection attempt failed.
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver$ConnectThread.getResult(Driver.java:399)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver.connect(Driver.java:305)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore$DirectDataSource.getConnection(PostgresPersistenceStore.java:1828)
+jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.ds.common.BaseDataSource.getConnection(BaseDataSource.java:88)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:483)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:747)
+jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+jenkins-a-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+jenkins-a-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+jenkins-a-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+jenkins-a-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+jenkins-a-1  | 2026-10-14 11:46:17.626+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 11:46:17.627+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 11:46:17.627+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 11:46:17.627+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 11:46:22.628+0000 [id=102]	WARNING	i.j.p.c.p.PostgresPersistenceStoreProvider#create: Waiting for the persistence store jdbc:postgresql://postgres:5432/jenkins: Failed to initialize persistence store at jdbc:postgresql://postgres:5432/jenkins
+jenkins-a-1  | 2026-10-14 11:46:32.628+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 11:46:32.629+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 11:46:32.629+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 11:46:32.629+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 11:46:32.674+0000 [id=102]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-14 11:46:32.867+0000 [id=102]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-a-1  | 2026-10-14 11:46:33.313+0000 [id=102]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.azure.AzureBlobStoreProvider
+jenkins-a-1  | 2026-10-14 11:46:33.603+0000 [id=108]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-a-1  | 2026-10-14 11:46:33.678+0000 [id=95]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 11:46:34.143+0000 [id=95]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 11:46:34.177+0000 [id=76]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 11:46:34.177+0000 [id=113]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-14 11:46:34.188+0000 [id=88]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 11:46:34.191+0000 [id=88]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-14 11:46:34.193+0000 [id=91]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_4bebbeab11a984b517312b0f781f129a25ec99a751cc8ce1dd1c610bd4f75656 duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-14 11:46:34.320+0000 [id=88]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-a-1  | 2026-10-14 11:46:34.364+0000 [id=88]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 11:46:34.381+0000 [id=60]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running

@@ -1,46 +1,48 @@
 jenkins-b-1  | Running from: /war-override/jenkins.war
 jenkins-b-1  | webroot: /var/jenkins_home/war
-jenkins-b-1  | 2026-10-14 08:34:21.513+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-b-1  | 2026-10-14 08:34:22.102+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-b-1  | 2026-10-14 08:34:22.137+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-b-1  | 2026-10-14 08:34:22.419+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-b-1  | 2026-10-14 08:34:22.454+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-b-1  | 2026-10-14 08:34:22.734+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-b-1  | 2026-10-14 08:34:22.788+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-b-1  | 2026-10-14 08:34:22.793+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1160998f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-b-1  | 2026-10-14 08:34:22.793+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @657ms
-jenkins-b-1  | 2026-10-14 08:34:22.794+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-b-1  | 2026-10-14 08:34:22.850+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-b-1  | 2026-10-14 08:34:22.897+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-b-1  | 2026-10-14 08:34:25.656+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-b-1  | 2026-10-14 08:34:28.543+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-b-1  | 2026-10-14 08:34:28.564+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-b-1  | 2026-10-14 08:34:28.579+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-b-1  | 2026-10-14 08:34:28.665+0000 [id=50]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
-jenkins-b-1  | 2026-10-14 08:34:28.691+0000 [id=50]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
-jenkins-b-1  | 2026-10-14 08:34:28.698+0000 [id=50]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
-jenkins-b-1  | 2026-10-14 08:34:28.700+0000 [id=50]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
-jenkins-b-1  | 2026-10-14 08:34:29.235+0000 [id=50]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
-jenkins-b-1  | 2026-10-14 08:34:29.995+0000 [id=50]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
-jenkins-b-1  | 2026-10-14 08:34:30.119+0000 [id=55]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
-jenkins-b-1  | 2026-10-14 08:34:30.593+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-b-1  | 2026-10-14 08:34:31.255+0000 [id=59]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_6a9bb0f6fedfff5c97130b8727bf5a831632df8a058fc485b01744270856d18a/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-b-1  | 2026-10-14 08:34:31.374+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-b-1  | 2026-10-14 08:34:31.376+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-b-1  | 2026-10-14 08:34:31.379+0000 [id=52]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-b-1  | 2026-10-14 08:34:31.385+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-b-1  | 2026-10-14 08:34:31.391+0000 [id=57]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-b-1  | 2026-10-14 08:34:31.400+0000 [id=47]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6a9bb0f6fedfff5c97130b8727bf5a831632df8a058fc485b01744270856d18a duplicates one seen earlier for admin
-jenkins-b-1  | 2026-10-14 08:34:31.591+0000 [id=57]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-b-1  | 2026-10-14 11:56:29.990+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-14 11:56:30.231+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-14 11:56:30.261+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-14 11:56:30.461+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-14 11:56:30.488+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-14 11:56:30.707+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-14 11:56:30.778+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@77eb5790{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@68e7c8c3{STARTED}}
+jenkins-b-1  | 2026-10-14 11:56:30.785+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@396639b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-14 11:56:30.785+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@62573c86{STARTING}[12.1.14,sto=0] @525ms
+jenkins-b-1  | 2026-10-14 11:56:30.786+0000 [id=66]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-14 11:56:30.835+0000 [id=60]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-14 11:56:30.870+0000 [id=72]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-14 11:56:32.374+0000 [id=102]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-14 11:56:33.736+0000 [id=98]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-14 11:56:33.743+0000 [id=103]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-14 11:56:33.744+0000 [id=103]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-14 11:56:33.773+0000 [id=80]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-b-1  | 2026-10-14 11:56:33.780+0000 [id=80]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-b-1  | 2026-10-14 11:56:33.780+0000 [id=80]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-b-1  | 2026-10-14 11:56:33.781+0000 [id=80]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-b-1  | 2026-10-14 11:56:33.907+0000 [id=80]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-14 11:56:34.077+0000 [id=80]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-14 11:56:34.496+0000 [id=80]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.azure.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-14 11:56:34.576+0000 [id=80]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-b-1  | 2026-10-14 11:56:34.804+0000 [id=84]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-14 11:56:35.180+0000 [id=74]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_196b397b83e3265eefe46ce946e4e8f6342018d5188a99398092ab2ddb835e27/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-b-1  | 2026-10-14 11:56:35.271+0000 [id=74]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-14 11:56:35.272+0000 [id=85]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-14 11:56:35.272+0000 [id=85]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-14 11:56:35.279+0000 [id=106]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-14 11:56:35.281+0000 [id=100]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-14 11:56:35.283+0000 [id=82]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_196b397b83e3265eefe46ce946e4e8f6342018d5188a99398092ab2ddb835e27 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-14 11:56:35.426+0000 [id=100]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
 jenkins-b-1  | cnj: added the blob storage credential cnj-blob for account devstoreaccount1
-jenkins-b-1  | 2026-10-14 08:34:31.680+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-b-1  | 2026-10-14 08:34:31.696+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-b-1  | 2026-10-14 08:34:32.561+0000 [id=102]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
-jenkins-b-1  | 2026-10-14 08:34:36.648+0000 [id=61]	INFO	i.j.p.cluster.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster (unchanged, newer check)
-jenkins-b-1  | 2026-10-14 08:34:53.217+0000 [id=74]	INFO	i.j.p.c.p.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [424c2777-c549-43b9-a7d4-c7f8c991442c]
-jenkins-b-1  | 2026-10-14 08:34:53.528+0000 [id=79]	INFO	j.persistence.RunningBuilds#adopt: Adopting ctl #1 from jenkins-a (424c2777-c549-43b9-a7d4-c7f8c991442c)
-jenkins-b-1  | 2026-10-14 08:34:54.546+0000 [id=79]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming ctl#1, which is missing from FlowExecutionList, so registering it now
-jenkins-b-1  | 2026-10-14 08:34:54.555+0000 [id=137]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | 2026-10-14 11:56:35.494+0000 [id=76]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-14 11:56:35.513+0000 [id=60]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-14 11:56:36.323+0000 [id=183]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-b-1  | 2026-10-14 11:56:40.282+0000 [id=180]	INFO	i.j.p.cluster.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster (unchanged, newer check)
+jenkins-b-1  | 2026-10-14 11:56:53.825+0000 [id=129]	INFO	i.j.p.c.p.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [a5859cb4-5711-47aa-a0f4-24f606b93f9c]
+jenkins-b-1  | 2026-10-14 11:56:53.942+0000 [id=178]	INFO	j.persistence.RunningBuilds#adopt: Adopting ctl #1 from jenkins-a (a5859cb4-5711-47aa-a0f4-24f606b93f9c)
+jenkins-b-1  | 2026-10-14 11:56:54.263+0000 [id=178]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming ctl#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-14 11:56:54.267+0000 [id=178]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: ctl#1 was already in the list: [ctl#1]
+jenkins-b-1  | 2026-10-14 11:56:54.267+0000 [id=245]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
 jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=13, exec=CpsFlowExecution[ctl#1]] sleep in CpsFlowExecution[ctl#1]
 jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
 jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
@@ -55,63 +57,63 @@ jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
 jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-14 08:34:54.559+0000 [id=79]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: ctl#1 was already in the list: [ctl#1]
-jenkins-b-1  | 2026-10-14 08:34:54.563+0000 [id=79]	INFO	i.j.p.cluster.PipelineAdopter$1#resume: Resumed ctl #1 from save point 40.5 as owner with epoch 50
-jenkins-b-1  | 2026-10-14 08:34:54.566+0000 [id=79]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$11: Took care of 1 build(s) of controllers which left the cluster
-jenkins-b-1  | 2026-10-14 08:35:45.985+0000 [id=147]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: ctl #1
-jenkins-b-1  | 2026-10-14 08:38:02.130+0000 [id=33]	INFO	j.s.DefaultJnlpSlaveReceiver#channelClosed: Jetty (winstone)-33 for agent1 terminated: java.nio.channels.ClosedChannelException
-jenkins-b-1  | 2026-10-14 08:38:02.142+0000 [id=33]	INFO	j.s.DefaultJnlpSlaveReceiver#channelClosed: Jetty (winstone)-33 for agent1 terminated: java.nio.channels.ClosedChannelException
-jenkins-b-1  | 2026-10-14 08:38:31.929+0000 [id=74]	INFO	i.j.p.c.p.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [f529bf04-3e76-4377-8051-0320860f7fa8]
-jenkins-b-1  | 2026-10-14 08:38:32.113+0000 [id=76]	INFO	j.persistence.RunningBuilds#adopt: Adopting ag #1 from jenkins-a (f529bf04-3e76-4377-8051-0320860f7fa8)
-jenkins-b-1  | 2026-10-14 08:38:32.307+0000 [id=76]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming ag#1, which is missing from FlowExecutionList, so registering it now
-jenkins-b-1  | 2026-10-14 08:38:32.307+0000 [id=76]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: ag#1 was already in the list: [ag#1]
-jenkins-b-1  | 2026-10-14 08:38:32.308+0000 [id=76]	INFO	i.j.p.cluster.PipelineAdopter$1#resume: Resumed ag #1 from save point 98.19 as owner with epoch 121
-jenkins-b-1  | 2026-10-14 08:38:32.309+0000 [id=76]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$11: Took care of 1 build(s) of controllers which left the cluster
-jenkins-b-1  | 2026-10-14 08:39:07.436+0000 [id=216]	WARNING	o.j.p.w.s.s.i.POSTHyperlinkNote#<init>: You need to define the root URL of Jenkins
-jenkins-b-1  | 2026-10-14 08:39:07.438+0000 [id=216]	WARNING	o.j.p.w.s.s.i.POSTHyperlinkNote#<init>: You need to define the root URL of Jenkins
-jenkins-b-1  | 2026-10-14 08:39:08.611+0000 [id=216]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: ag #1
-jenkins-b-1  | 2026-10-14 08:39:21.751+0000 [id=216]	WARNING	o.j.p.w.s.s.i.POSTHyperlinkNote#<init>: You need to define the root URL of Jenkins
-jenkins-b-1  | 2026-10-14 08:39:21.751+0000 [id=216]	WARNING	o.j.p.w.s.s.i.POSTHyperlinkNote#<init>: You need to define the root URL of Jenkins
+jenkins-b-1  | 2026-10-14 11:56:54.268+0000 [id=178]	INFO	i.j.p.cluster.PipelineAdopter$1#resume: Resumed ctl #1 from save point 36.5 as owner with epoch 48
+jenkins-b-1  | 2026-10-14 11:56:54.269+0000 [id=178]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$11: Took care of 1 build(s) of controllers which left the cluster
+jenkins-b-1  | 2026-10-14 11:57:44.479+0000 [id=246]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: ctl #1
+jenkins-b-1  | 2026-10-14 11:59:56.362+0000 [id=34]	INFO	j.s.DefaultJnlpSlaveReceiver#channelClosed: Jetty (winstone)-34 for agent1 terminated: java.nio.channels.ClosedChannelException
+jenkins-b-1  | 2026-10-14 11:59:56.363+0000 [id=34]	INFO	j.s.DefaultJnlpSlaveReceiver#channelClosed: Jetty (winstone)-34 for agent1 terminated: java.nio.channels.ClosedChannelException
+jenkins-b-1  | 2026-10-14 12:00:24.990+0000 [id=129]	INFO	i.j.p.c.p.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [0de6df1f-376c-4104-9a7b-f744f405a896]
+jenkins-b-1  | 2026-10-14 12:00:25.033+0000 [id=179]	INFO	j.persistence.RunningBuilds#adopt: Adopting ag #1 from jenkins-a (0de6df1f-376c-4104-9a7b-f744f405a896)
+jenkins-b-1  | 2026-10-14 12:00:25.104+0000 [id=179]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming ag#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-14 12:00:25.104+0000 [id=179]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: ag#1 was already in the list: [ag#1]
+jenkins-b-1  | 2026-10-14 12:00:25.104+0000 [id=179]	INFO	i.j.p.cluster.PipelineAdopter$1#resume: Resumed ag #1 from save point 96.18 as owner with epoch 118
+jenkins-b-1  | 2026-10-14 12:00:25.104+0000 [id=179]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$11: Took care of 1 build(s) of controllers which left the cluster
+jenkins-b-1  | 2026-10-14 12:00:59.841+0000 [id=326]	WARNING	o.j.p.w.s.s.i.POSTHyperlinkNote#<init>: You need to define the root URL of Jenkins
+jenkins-b-1  | 2026-10-14 12:00:59.842+0000 [id=326]	WARNING	o.j.p.w.s.s.i.POSTHyperlinkNote#<init>: You need to define the root URL of Jenkins
+jenkins-b-1  | 2026-10-14 12:01:01.841+0000 [id=331]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: ag #1
+jenkins-b-1  | 2026-10-14 12:01:10.540+0000 [id=331]	WARNING	o.j.p.w.s.s.i.POSTHyperlinkNote#<init>: You need to define the root URL of Jenkins
+jenkins-b-1  | 2026-10-14 12:01:10.540+0000 [id=331]	WARNING	o.j.p.w.s.s.i.POSTHyperlinkNote#<init>: You need to define the root URL of Jenkins
 jenkins-b-1  | Running from: /war-override/jenkins.war
 jenkins-b-1  | webroot: /var/jenkins_home/war
-jenkins-b-1  | 2026-10-14 08:39:43.816+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-b-1  | 2026-10-14 08:39:44.807+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-b-1  | 2026-10-14 08:39:44.850+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-b-1  | 2026-10-14 08:39:45.251+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-b-1  | 2026-10-14 08:39:45.273+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-b-1  | 2026-10-14 08:39:45.522+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-b-1  | 2026-10-14 08:39:45.600+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-b-1  | 2026-10-14 08:39:45.604+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-b-1  | 2026-10-14 08:39:45.605+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @756ms
-jenkins-b-1  | 2026-10-14 08:39:45.606+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-b-1  | 2026-10-14 08:39:45.666+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-b-1  | 2026-10-14 08:39:45.701+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-b-1  | 2026-10-14 08:39:48.311+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-b-1  | 2026-10-14 08:39:50.511+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-b-1  | 2026-10-14 08:39:50.522+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-b-1  | 2026-10-14 08:39:50.524+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-b-1  | 2026-10-14 08:39:50.565+0000 [id=59]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
-jenkins-b-1  | 2026-10-14 08:39:50.571+0000 [id=59]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
-jenkins-b-1  | 2026-10-14 08:39:50.572+0000 [id=59]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
-jenkins-b-1  | 2026-10-14 08:39:50.572+0000 [id=59]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
-jenkins-b-1  | 2026-10-14 08:39:50.832+0000 [id=59]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
-jenkins-b-1  | 2026-10-14 08:39:51.568+0000 [id=59]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
-jenkins-b-1  | 2026-10-14 08:39:52.055+0000 [id=49]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
-jenkins-b-1  | 2026-10-14 08:39:52.149+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-b-1  | 2026-10-14 08:39:52.608+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-b-1  | 2026-10-14 08:39:52.628+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-b-1  | 2026-10-14 08:39:52.628+0000 [id=54]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-b-1  | 2026-10-14 08:39:52.638+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-b-1  | 2026-10-14 08:39:52.641+0000 [id=45]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-b-1  | 2026-10-14 08:39:52.646+0000 [id=47]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6a9bb0f6fedfff5c97130b8727bf5a831632df8a058fc485b01744270856d18a duplicates one seen earlier for admin
-jenkins-b-1  | 2026-10-14 08:39:52.786+0000 [id=45]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-b-1  | 2026-10-14 08:39:52.822+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-b-1  | 2026-10-14 08:39:52.830+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-b-1  | 2026-10-14 08:40:28.604+0000 [id=144]	INFO	j.persistence.RunningBuilds#adopt: Adopting ws #1 from jenkins-a (a6607d1b-fddb-4f9a-ac15-a9b278bb5ba5)
-jenkins-b-1  | 2026-10-14 08:40:30.338+0000 [id=144]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming ws#1, which is missing from FlowExecutionList, so registering it now
-jenkins-b-1  | 2026-10-14 08:40:30.340+0000 [id=144]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: ws#1 was already in the list: [ws#1]
-jenkins-b-1  | 2026-10-14 08:40:30.342+0000 [id=144]	INFO	i.j.p.cluster.PipelineAdopter$1#resume: Resumed ws #1 from save point 205.1 as owner with epoch 212
-jenkins-b-1  | 2026-10-14 08:40:30.361+0000 [id=129]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | 2026-10-14 12:01:33.159+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-14 12:01:33.370+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-14 12:01:33.396+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-14 12:01:33.567+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-14 12:01:33.587+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-14 12:01:33.741+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-14 12:01:33.786+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@77eb5790{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@68e7c8c3{STARTED}}
+jenkins-b-1  | 2026-10-14 12:01:33.791+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@396639b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-14 12:01:33.791+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@62573c86{STARTING}[12.1.14,sto=0] @396ms
+jenkins-b-1  | 2026-10-14 12:01:33.791+0000 [id=66]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-14 12:01:33.834+0000 [id=60]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-14 12:01:33.866+0000 [id=72]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-14 12:01:35.295+0000 [id=92]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-14 12:01:36.454+0000 [id=82]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-14 12:01:36.461+0000 [id=108]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-14 12:01:36.462+0000 [id=73]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-14 12:01:36.488+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-b-1  | 2026-10-14 12:01:36.494+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-b-1  | 2026-10-14 12:01:36.495+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-b-1  | 2026-10-14 12:01:36.495+0000 [id=102]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-b-1  | 2026-10-14 12:01:36.626+0000 [id=102]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-14 12:01:36.784+0000 [id=102]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-14 12:01:37.161+0000 [id=102]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.azure.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-14 12:01:37.430+0000 [id=91]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-b-1  | 2026-10-14 12:01:37.486+0000 [id=111]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-14 12:01:37.831+0000 [id=111]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-14 12:01:37.845+0000 [id=111]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-14 12:01:37.845+0000 [id=106]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-14 12:01:37.853+0000 [id=111]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-14 12:01:37.855+0000 [id=111]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-14 12:01:37.856+0000 [id=100]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_196b397b83e3265eefe46ce946e4e8f6342018d5188a99398092ab2ddb835e27 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-14 12:01:37.972+0000 [id=111]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-b-1  | 2026-10-14 12:01:38.005+0000 [id=111]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-14 12:01:38.020+0000 [id=60]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-14 12:02:11.241+0000 [id=230]	INFO	j.persistence.RunningBuilds#adopt: Adopting ws #1 from jenkins-a (654f06eb-77c7-403c-84c9-189f026ff88a)
+jenkins-b-1  | 2026-10-14 12:02:12.222+0000 [id=230]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming ws#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-14 12:02:12.224+0000 [id=230]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: ws#1 was already in the list: [ws#1]
+jenkins-b-1  | 2026-10-14 12:02:12.225+0000 [id=230]	INFO	i.j.p.cluster.PipelineAdopter$1#resume: Resumed ws #1 from save point 202.1 as owner with epoch 208
+jenkins-b-1  | 2026-10-14 12:02:12.236+0000 [id=215]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
 jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=12, exec=CpsFlowExecution[ws#1]] sleep in CpsFlowExecution[ws#1]
 jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
 jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
@@ -126,12 +128,12 @@ jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
 jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-14 08:40:38.206+0000 [id=153]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: ws #1
-jenkins-b-1  | 2026-10-14 08:41:15.048+0000 [id=74]	INFO	i.j.p.c.p.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [4a68e09e-17df-49a6-a509-86cabb3feefe]
-jenkins-b-1  | 2026-10-14 08:41:15.169+0000 [id=79]	INFO	j.persistence.RunningBuilds#adopt: Adopting pt #1 from jenkins-a (4a68e09e-17df-49a6-a509-86cabb3feefe)
-jenkins-b-1  | 2026-10-14 08:41:15.293+0000 [id=79]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming pt#1, which is missing from FlowExecutionList, so registering it now
-jenkins-b-1  | 2026-10-14 08:41:15.296+0000 [id=79]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: pt#1 was already in the list: [pt#1]
-jenkins-b-1  | 2026-10-14 08:41:15.296+0000 [id=128]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
+jenkins-b-1  | 2026-10-14 12:02:20.585+0000 [id=258]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: ws #1
+jenkins-b-1  | 2026-10-14 12:02:52.739+0000 [id=132]	INFO	i.j.p.c.p.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [656ba1f2-e693-43d9-904c-5cab90060a9b]
+jenkins-b-1  | 2026-10-14 12:02:52.785+0000 [id=161]	INFO	j.persistence.RunningBuilds#adopt: Adopting pt #1 from jenkins-a (656ba1f2-e693-43d9-904c-5cab90060a9b)
+jenkins-b-1  | 2026-10-14 12:02:52.816+0000 [id=161]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming pt#1, which is missing from FlowExecutionList, so registering it now
+jenkins-b-1  | 2026-10-14 12:02:52.817+0000 [id=161]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: pt#1 was already in the list: [pt#1]
+jenkins-b-1  | 2026-10-14 12:02:52.817+0000 [id=216]	WARNING	o.j.p.w.s.SleepStep$Execution#setupTimer
 jenkins-b-1  | java.io.IOException: cannot start writing logs to a finished node StepAtomNode[id=13, exec=CpsFlowExecution[pt#1]] sleep in CpsFlowExecution[pt#1]
 jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.getListener(DefaultStepContext.java:138)
 jenkins-b-1  | 	at PluginClassLoader for workflow-support//org.jenkinsci.plugins.workflow.support.DefaultStepContext.get(DefaultStepContext.java:109)
@@ -146,10 +148,10 @@ jenkins-b-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
 jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 jenkins-b-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-14 08:41:15.297+0000 [id=79]	INFO	i.j.p.cluster.PipelineAdopter$1#resume: Resumed pt #1 from save point 236.5 as owner with epoch 245
-jenkins-b-1  | 2026-10-14 08:41:15.299+0000 [id=79]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$11: Took care of 1 build(s) of controllers which left the cluster
-jenkins-b-1  | 2026-10-14 08:42:26.484+0000 [id=147]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: pt #1
-jenkins-b-1  | 2026-10-14 08:43:10.521+0000 [id=74]	INFO	i.j.p.c.p.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [4a68e09e-17df-49a6-a509-86cabb3feefe]
-jenkins-b-1  | 2026-10-14 08:43:10.556+0000 [id=79]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of fast #1 left by jenkins-a (4a68e09e-17df-49a6-a509-86cabb3feefe), which is gone
-jenkins-b-1  | 2026-10-14 08:43:10.644+0000 [id=79]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed fast #1 (ABORTED): This build was running on jenkins-a, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-14 08:43:10.658+0000 [id=79]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$11: Took care of 1 build(s) of controllers which left the cluster
+jenkins-b-1  | 2026-10-14 12:02:52.817+0000 [id=161]	INFO	i.j.p.cluster.PipelineAdopter$1#resume: Resumed pt #1 from save point 232.5 as owner with epoch 241
+jenkins-b-1  | 2026-10-14 12:02:52.818+0000 [id=161]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$11: Took care of 1 build(s) of controllers which left the cluster
+jenkins-b-1  | 2026-10-14 12:04:03.000+0000 [id=252]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: pt #1
+jenkins-b-1  | 2026-10-14 12:04:48.302+0000 [id=132]	INFO	i.j.p.c.p.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [656ba1f2-e693-43d9-904c-5cab90060a9b]
+jenkins-b-1  | 2026-10-14 12:04:48.310+0000 [id=162]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of fast #1 left by jenkins-a (656ba1f2-e693-43d9-904c-5cab90060a9b), which is gone
+jenkins-b-1  | 2026-10-14 12:04:48.337+0000 [id=162]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed fast #1 (ABORTED): This build was running on jenkins-a, which is gone, and could not be resumed elsewhere; it is closed as aborted.
+jenkins-b-1  | 2026-10-14 12:04:48.364+0000 [id=162]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$11: Took care of 1 build(s) of controllers which left the cluster

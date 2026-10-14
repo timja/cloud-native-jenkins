@@ -1,15 +1,15 @@
 HTTP/1.1 200 OK
 Server: Jetty(12.1.14)
-Date: Tue, 13 Oct 2026 18:01:19 GMT
+Date: Wed, 14 Oct 2026 11:45:09 GMT
 Vary: Accept-Encoding
 x-content-type-options: nosniff
-Set-Cookie: remember-me=YWRtaW46MTc5MzEyNDA3OTc3NTpkMmY2YzI2Nzg3YTZhMWFiMDQwYmU4Y2E0ZDVhODM1NDZkNzc3NDNlYzQyMWVlNmVjNzI3MmRlODAwOThkNmRj; Path=/; Expires=Tue, 27 Oct 2026 18:01:19 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
+Set-Cookie: remember-me=YWRtaW46MTc5MzE4NzkwOTk3Mjo3N2JiMmM0YTliZmNiNDk5ZTk3OWE4NDFkYWNjOGFhODQxNjA1MTdmMGM2YzVkNGYyZDJiN2I5YTRhODczZGZk; Path=/; Expires=Wed, 28 Oct 2026 11:45:09 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
 Expires: Thu, 01 Jan 1970 00:00:00 GMT
 content-security-policy-report-only: base-uri 'none'; default-src 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; script-src 'report-sample' 'self' usage.jenkins.io; style-src 'report-sample' 'self' 'unsafe-inline';
-x-cnj-controller: jenkins-a
+x-jenkins-cluster-controller: jenkins-a
 Content-Type: text/plain;charset=utf-8
 x-more-data: true
-x-text-size: 8104
-X-CNJ-Forwarded-From: jenkins-a
+x-text-size: 7478
+X-Jenkins-Cluster-Forwarded-From: jenkins-a
 Transfer-Encoding: chunked
 

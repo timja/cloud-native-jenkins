@@ -1,37 +1,38 @@
 jenkins-b-1  | Running from: /war-override/jenkins.war
 jenkins-b-1  | webroot: /var/jenkins_home/war
-jenkins-b-1  | 2026-10-14 08:45:58.491+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-b-1  | 2026-10-14 08:45:59.209+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-b-1  | 2026-10-14 08:45:59.329+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-b-1  | 2026-10-14 08:45:59.799+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-b-1  | 2026-10-14 08:45:59.827+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-b-1  | 2026-10-14 08:46:00.053+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-b-1  | 2026-10-14 08:46:00.144+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-b-1  | 2026-10-14 08:46:00.154+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-b-1  | 2026-10-14 08:46:00.155+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @837ms
-jenkins-b-1  | 2026-10-14 08:46:00.157+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-b-1  | 2026-10-14 08:46:00.233+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-b-1  | 2026-10-14 08:46:00.290+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-b-1  | 2026-10-14 08:46:03.169+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-b-1  | 2026-10-14 08:46:06.245+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-b-1  | 2026-10-14 08:46:06.263+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-b-1  | 2026-10-14 08:46:06.268+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-b-1  | 2026-10-14 08:46:06.330+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
-jenkins-b-1  | 2026-10-14 08:46:06.345+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
-jenkins-b-1  | 2026-10-14 08:46:06.346+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
-jenkins-b-1  | 2026-10-14 08:46:06.346+0000 [id=49]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
-jenkins-b-1  | 2026-10-14 08:46:06.983+0000 [id=49]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
-jenkins-b-1  | 2026-10-14 08:46:07.593+0000 [id=49]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
-jenkins-b-1  | 2026-10-14 08:46:07.677+0000 [id=51]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
-jenkins-b-1  | 2026-10-14 08:46:08.257+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-b-1  | 2026-10-14 08:46:08.934+0000 [id=47]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_21db4f1d7625b1395c79985ee95befe7634961caaaf24aca4aecf1e1c4168379/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-b-1  | 2026-10-14 08:46:09.007+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-b-1  | 2026-10-14 08:46:09.059+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-b-1  | 2026-10-14 08:46:09.060+0000 [id=45]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-b-1  | 2026-10-14 08:46:09.077+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-b-1  | 2026-10-14 08:46:09.084+0000 [id=47]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_21db4f1d7625b1395c79985ee95befe7634961caaaf24aca4aecf1e1c4168379 duplicates one seen earlier for admin
-jenkins-b-1  | 2026-10-14 08:46:09.085+0000 [id=50]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-b-1  | 2026-10-14 08:46:09.122+0000 [id=101]	INFO	j.persistence.ItemChangeApplier#run: Failed to apply ChangeEvent[kind=WRITTEN, key=users/admin_21db4f1d7625b1395c79985ee95befe7634961caaaf24aca4aecf1e1c4168379/config.xml, oldKey=null, version=9223372036854775807, origin=(merged here)]; retrying (1/8)
+jenkins-b-1  | 2026-10-14 11:52:42.323+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-14 11:52:42.551+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-14 11:52:42.594+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-14 11:52:42.777+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-14 11:52:42.798+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-14 11:52:42.982+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-14 11:52:43.036+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@77eb5790{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@68e7c8c3{STARTED}}
+jenkins-b-1  | 2026-10-14 11:52:43.044+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@396639b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-14 11:52:43.044+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@62573c86{STARTING}[12.1.14,sto=0] @451ms
+jenkins-b-1  | 2026-10-14 11:52:43.045+0000 [id=66]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-14 11:52:43.105+0000 [id=60]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-14 11:52:43.150+0000 [id=72]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-14 11:52:44.876+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-14 11:52:46.570+0000 [id=83]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-14 11:52:46.577+0000 [id=83]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-14 11:52:46.578+0000 [id=74]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-14 11:52:46.624+0000 [id=79]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-b-1  | 2026-10-14 11:52:46.633+0000 [id=79]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-b-1  | 2026-10-14 11:52:46.633+0000 [id=79]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-b-1  | 2026-10-14 11:52:46.633+0000 [id=79]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-b-1  | 2026-10-14 11:52:46.802+0000 [id=79]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-14 11:52:47.039+0000 [id=79]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-14 11:52:47.647+0000 [id=79]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.azure.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-14 11:52:48.007+0000 [id=73]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-b-1  | 2026-10-14 11:52:48.076+0000 [id=105]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-14 11:52:48.535+0000 [id=105]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-14 11:52:48.576+0000 [id=92]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-14 11:52:48.577+0000 [id=89]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-14 11:52:48.597+0000 [id=110]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-14 11:52:48.603+0000 [id=71]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_a2e1346ea58e16ce6979389e1ca03410fbbabf1d9af0beac3ed8b5bded525918 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-14 11:52:48.604+0000 [id=110]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-14 11:52:48.771+0000 [id=110]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-b-1  | 2026-10-14 11:52:48.781+0000 [id=185]	INFO	j.persistence.ItemChangeApplier#run: Failed to apply ChangeEvent[kind=WRITTEN, key=users/admin_a2e1346ea58e16ce6979389e1ca03410fbbabf1d9af0beac3ed8b5bded525918/config.xml, oldKey=null, version=413, origin=3684c212-de83-43be-9fde-5984916d96e7]; retrying (1/8)
 jenkins-b-1  | java.lang.IllegalStateException: User admin has a save pending; applying the change later
 jenkins-b-1  | 	at hudson.model.User.changedElsewhere(User.java:1242)
 jenkins-b-1  | 	at jenkins.persistence.StaticStateApplier.apply(StaticStateApplier.java:75)
@@ -41,20 +42,9 @@ jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.applyingRemoteChange(Pe
 jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.apply(ItemChangeApplier.java:225)
 jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.run(ItemChangeApplier.java:200)
 jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-14 08:46:09.329+0000 [id=50]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-b-1  | 2026-10-14 08:46:09.433+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-b-1  | 2026-10-14 08:46:09.462+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-b-1  | 2026-10-14 08:46:11.131+0000 [id=101]	INFO	j.persistence.ItemChangeApplier#run: Failed to apply ChangeEvent[kind=WRITTEN, key=users/admin_21db4f1d7625b1395c79985ee95befe7634961caaaf24aca4aecf1e1c4168379/config.xml, oldKey=null, version=9223372036854775807, origin=(merged here)]; retrying (1/8)
-jenkins-b-1  | java.lang.IllegalStateException: User admin has a save pending; applying the change later
-jenkins-b-1  | 	at hudson.model.User.changedElsewhere(User.java:1242)
-jenkins-b-1  | 	at jenkins.persistence.StaticStateApplier.apply(StaticStateApplier.java:75)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.written(ItemChangeApplier.java:257)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.lambda$apply$5(ItemChangeApplier.java:227)
-jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.applyingRemoteChange(PersistenceStores.java:183)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.apply(ItemChangeApplier.java:225)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.run(ItemChangeApplier.java:200)
-jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-14 08:46:13.140+0000 [id=101]	INFO	j.persistence.ItemChangeApplier#run: Failed to apply ChangeEvent[kind=WRITTEN, key=users/admin_21db4f1d7625b1395c79985ee95befe7634961caaaf24aca4aecf1e1c4168379/config.xml, oldKey=null, version=9223372036854775807, origin=(merged here)]; retrying (2/8)
+jenkins-b-1  | 2026-10-14 11:52:48.828+0000 [id=110]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-14 11:52:48.850+0000 [id=60]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-14 11:52:50.783+0000 [id=185]	INFO	j.persistence.ItemChangeApplier#run: Failed to apply ChangeEvent[kind=WRITTEN, key=users/admin_a2e1346ea58e16ce6979389e1ca03410fbbabf1d9af0beac3ed8b5bded525918/config.xml, oldKey=null, version=413, origin=3684c212-de83-43be-9fde-5984916d96e7]; retrying (2/8)
 jenkins-b-1  | java.lang.IllegalStateException: User admin has a save pending; applying the change later
 jenkins-b-1  | 	at hudson.model.User.changedElsewhere(User.java:1242)
 jenkins-b-1  | 	at jenkins.persistence.StaticStateApplier.apply(StaticStateApplier.java:75)

@@ -1,12 +1,12 @@
 {
   "config": {
     "argv": [
-      "/Users/timja/.local/share/mise/installs/node/24.21.0/bin/node",
-      "/Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/node_modules/.bin/playwright",
+      "/usr/bin/node",
+      "/home/timja/code/cnj-t16/validation/ui-tests/node_modules/.bin/playwright",
       "test"
     ],
-    "configFile": "/Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/playwright.config.js",
-    "rootDir": "/Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests",
+    "configFile": "/home/timja/code/cnj-t16/validation/ui-tests/playwright.config.js",
+    "rootDir": "/home/timja/code/cnj-t16/validation/ui-tests",
     "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
@@ -22,7 +22,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "/Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests/test-results",
+        "outputDir": "/home/timja/code/cnj-t16/validation/ui-tests/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -30,7 +30,7 @@
         },
         "id": "",
         "name": "",
-        "testDir": "/Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/ui-tests",
+        "testDir": "/home/timja/code/cnj-t16/validation/ui-tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -60,7 +60,7 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.63.0",
-    "workers": 4,
+    "workers": 12,
     "webServer": null
   },
   "suites": [
@@ -86,12 +86,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 38289,
+                  "duration": 38284,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-13T18:46:27.453Z",
+                  "startTime": "2026-10-14T11:43:41.328Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -120,12 +120,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1710,
+                  "duration": 894,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-13T18:47:06.180Z",
+                  "startTime": "2026-10-14T11:44:19.722Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -154,12 +154,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 490,
+                  "duration": 206,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-13T18:47:07.901Z",
+                  "startTime": "2026-10-14T11:44:20.622Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -188,12 +188,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 463,
+                  "duration": 202,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-13T18:47:08.399Z",
+                  "startTime": "2026-10-14T11:44:20.833Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -211,8 +211,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-13T18:46:27.206Z",
-    "duration": 41734.527,
+    "startTime": "2026-10-14T11:43:41.086Z",
+    "duration": 39985.559,
     "expected": 4,
     "skipped": 0,
     "unexpected": 0,

@@ -1,0 +1,41 @@
+jenkins-b-1  | 2026-10-14T11:52:24.223062123Z Running from: /war-override/jenkins.war
+jenkins-b-1  | 2026-10-14T11:52:24.223338338Z webroot: /var/jenkins_home/war
+jenkins-b-1  | 2026-10-14T11:52:24.429677596Z 2026-10-14 11:52:24.418+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-14T11:52:24.626289194Z 2026-10-14 11:52:24.625+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-14T11:52:24.650576276Z 2026-10-14 11:52:24.650+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-14T11:52:24.827164337Z 2026-10-14 11:52:24.826+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-14T11:52:24.847201771Z 2026-10-14 11:52:24.847+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-14T11:52:24.998133619Z 2026-10-14 11:52:24.997+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-14T11:52:25.041448455Z 2026-10-14 11:52:25.041+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@77eb5790{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@68e7c8c3{STARTED}}
+jenkins-b-1  | 2026-10-14T11:52:25.046145192Z 2026-10-14 11:52:25.046+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@396639b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-14T11:52:25.046407781Z 2026-10-14 11:52:25.046+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@62573c86{STARTING}[12.1.14,sto=0] @396ms
+jenkins-b-1  | 2026-10-14T11:52:25.047024483Z 2026-10-14 11:52:25.046+0000 [id=66]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-14T11:52:25.094164009Z 2026-10-14 11:52:25.093+0000 [id=60]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-14T11:52:25.128752249Z 2026-10-14 11:52:25.128+0000 [id=72]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-14T11:52:26.582303613Z 2026-10-14 11:52:26.581+0000 [id=88]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-14T11:52:27.810120440Z 2026-10-14 11:52:27.809+0000 [id=78]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-14T11:52:27.817116327Z 2026-10-14 11:52:27.816+0000 [id=120]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-14T11:52:27.817940764Z 2026-10-14 11:52:27.817+0000 [id=82]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-14T11:52:27.849848750Z 2026-10-14 11:52:27.849+0000 [id=116]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-b-1  | 2026-10-14T11:52:27.855476326Z 2026-10-14 11:52:27.855+0000 [id=116]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-b-1  | 2026-10-14T11:52:27.855891565Z 2026-10-14 11:52:27.855+0000 [id=116]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-b-1  | 2026-10-14T11:52:27.856191626Z 2026-10-14 11:52:27.856+0000 [id=116]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-b-1  | 2026-10-14T11:52:27.980457783Z 2026-10-14 11:52:27.980+0000 [id=116]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-14T11:52:28.168747327Z 2026-10-14 11:52:28.168+0000 [id=116]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-14T11:52:28.653841557Z 2026-10-14 11:52:28.653+0000 [id=116]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.azure.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-14T11:52:29.018008184Z 2026-10-14 11:52:29.017+0000 [id=102]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-b-1  | 2026-10-14T11:52:29.072245301Z 2026-10-14 11:52:29.071+0000 [id=90]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-14T11:52:29.436413884Z 2026-10-14 11:52:29.436+0000 [id=90]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-14T11:52:29.541034893Z 2026-10-14 11:52:29.540+0000 [id=89]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-14T11:52:29.542141767Z 2026-10-14 11:52:29.541+0000 [id=109]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-14T11:52:29.552356361Z 2026-10-14 11:52:29.552+0000 [id=108]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-14T11:52:29.555325134Z 2026-10-14 11:52:29.554+0000 [id=115]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-14T11:52:29.558634474Z 2026-10-14 11:52:29.558+0000 [id=116]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6aeaea3915aaf73b63f088c2aaf1c5e522e00795d3602b5a5f25160e7e147d90 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-14T11:52:29.672280888Z 2026-10-14 11:52:29.672+0000 [id=115]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-b-1  | 2026-10-14T11:52:29.708830687Z 2026-10-14 11:52:29.708+0000 [id=115]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-14T11:52:29.728478070Z 2026-10-14 11:52:29.728+0000 [id=60]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-14T11:53:01.074051515Z 2026-10-14 11:53:01.073+0000 [id=223]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: cron1 #19
+jenkins-b-1  | 2026-10-14T11:54:00.710615419Z 2026-10-14 11:54:00.710+0000 [id=222]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: cron1 #20
+jenkins-b-1  | 2026-10-14T11:55:00.688666573Z 2026-10-14 11:55:00.688+0000 [id=223]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: cron1 #21
+jenkins-b-1  | 2026-10-14T11:55:30.819454913Z 2026-10-14 11:55:30.819+0000 [id=222]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual #41
+jenkins-b-1  | 2026-10-14T11:55:35.891528813Z 2026-10-14 11:55:35.891+0000 [id=223]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: manual2 #42

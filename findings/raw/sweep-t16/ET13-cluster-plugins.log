@@ -1,0 +1,46 @@
+## ET13 results (2026-10-14T11:57Z)
+
+| | Check |
+|---|---|
+| ✅ | neither controller has build-timeout or token-macro to begin with |
+[12:57:22] scenario 1: upload build-timeout 1.40 on plug-0
+| ✅ | 1 build-timeout 1.40 is active on plug-0 |
+| ✅ | 1 ... and on plug-1, live |
+| ✅ | 1 its dependency token-macro is active on both |
+| ✅ | 1 neither controller restarted for it |
+| ✅ | 1 its build wrapper's descriptor is there on plug-1 |
+| ℹ️ | 1 cluster plugin set: generation 2 token-macro installed 477.vd4f0dc3cb_cf1, build-timeout installed 1.40 |
+[12:57:26] scenario 2: upgrade build-timeout from the update center on plug-1, with a Pipeline running on plug-0
+command terminated with exit code 22
+command terminated with exit code 22
+command terminated with exit code 22
+command terminated with exit code 7
+command terminated with exit code 22
+command terminated with exit code 22
+command terminated with exit code 22
+command terminated with exit code 22
+command terminated with exit code 22
+command terminated with exit code 22
+| ✅ | 2 both controllers run the upgraded build-timeout (1.41) |
+| ✅ | 2 both restarted for it |
+| ✅ | 2 one at a time: a controller answered throughout |
+| ✅ | 2 one at a time: the second went down only after the first was back |
+| ✅ | 2 the Pipeline running meanwhile completed, with its whole console |
+| ✅ | 2 it paused for the restart and resumed: every tick once, in order |
+| ✅ | 2 the restart lock was released |
+| ℹ️ | 2 members: plug-0 11:57:52 3;plug-1 11:58:18 3; |
+[13:00:01] scenario 3: replace plug-1 with a fresh pod
+| ✅ | 3 the fresh plug-1 has build-timeout 1.41 |
+| ✅ | 3 and the same plugins as plug-0 |
+[13:00:24] scenario 4: uninstall build-timeout on plug-0
+| ✅ | 4 build-timeout is gone from both controllers |
+| ✅ | 4 one at a time again: a controller answered throughout |
+[13:01:38] scenario 5: guards
+| ✅ | 5 a downgrade is refused |
+| ✅ | 5 changing a cluster plugin is refused |
+| ✅ | 5 a corrupt archive is not installed |
+| ✅ | 5 and causes no restart |
+| ✅ | 5 and is logged |
+
+Failures: 0
+ET13 exit=0

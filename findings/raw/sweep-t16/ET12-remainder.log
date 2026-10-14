@@ -1,0 +1,54 @@
+[12:46:54] Jenkins on 20289 is up (7s)
+[12:47:09] Jenkins on 20281 is up (9s)
+[12:47:09] Jenkins on 20282 is up (0s)
+## ET12 results (2026-10-14T11:47Z)
+
+| | Check |
+|---|---|
+| ✅ | lin is connected to B only |
+[12:47:12] scenario 1: Pipelines started on A needing an agent only B has
+| ✅ | 1 lab1 completes |
+| ✅ | 1 on lin, by B (handed over from A) |
+| ✅ | 1 lab2 (first on A's controller, then on lin) completes with both parts |
+| ℹ️ | 1 A logged: Handing lab1 #1 over;Handing lab2 #1 over; |
+[12:47:35] scenario 1b: parallel branches, one on A's built-in node, one on lin (B only)
+| ✅ | 1b lab3 completes, with both branches |
+| ℹ️ | 1b A handed lab3 over 1 time(s) |
+| ✅ | 1b handed over once, after the branch on A's node finished (not back and forth) |
+[12:48:03] scenario 1c: a Pipeline on A waits for a downstream build that runs on B (lin)
+| ✅ | 1c up1 completes with the downstream result |
+| ✅ | 1c ... the downstream build ran on B, not pinned to A |
+[12:48:38] scenario 1d: ... and A is killed while it waits
+| ✅ | 1d B adopts up2, which completes with the downstream result |
+[12:49:21] Jenkins on 20281 is up (6s)
+[12:49:21] scenario 2: a file added to a completed build on A
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import json,sys; d=json.load(sys.stdin); print(d["result"])
+                       ~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/__init__.py", line 298, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/usr/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+| ✅ | 2 B's copy of the build gets the file |
+[12:49:26] scenario 3: both controllers killed while a Pipeline and a freestyle build run
+[12:50:07] Jenkins on 20281 is up (7s)
+[12:50:07] Jenkins on 20282 is up (0s)
+| ✅ | 4 a request for a build of the old controller is answered (not forwarded to its namesake: 404) |
+| ✅ | 3 the Pipeline is resumed and completes |
+| ✅ | 3 the freestyle build is closed as aborted |
+| ✅ | 3 with a console saying why, on both controllers |
+| ✅ | 4 no routing warnings after the restart |
+
+Failures: 0
+ET12 exit=0

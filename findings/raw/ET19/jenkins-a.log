@@ -1,221 +1,76 @@
 jenkins-a-1  | Running from: /war-override/jenkins.war
 jenkins-a-1  | webroot: /var/jenkins_home/war
-jenkins-a-1  | 2026-10-14 08:55:52.102+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-a-1  | 2026-10-14 08:55:52.486+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-a-1  | 2026-10-14 08:55:52.575+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-a-1  | 2026-10-14 08:55:52.838+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-a-1  | 2026-10-14 08:55:52.870+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-a-1  | 2026-10-14 08:55:53.187+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-a-1  | 2026-10-14 08:55:53.265+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-a-1  | 2026-10-14 08:55:53.271+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-a-1  | 2026-10-14 08:55:53.272+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @698ms
-jenkins-a-1  | 2026-10-14 08:55:53.273+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-a-1  | 2026-10-14 08:55:53.328+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-a-1  | 2026-10-14 08:55:53.372+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-14 08:55:55.731+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-14 08:55:58.116+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-14 08:55:58.160+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-14 08:55:58.166+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-14 08:55:58.227+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
-jenkins-a-1  | 2026-10-14 08:55:58.250+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
-jenkins-a-1  | 2026-10-14 08:55:58.251+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
-jenkins-a-1  | 2026-10-14 08:55:58.251+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
-jenkins-a-1  | 2026-10-14 08:55:59.150+0000 [id=57]	INFO	i.j.plugins.cluster.KeyCheck#verify: Recorded the cluster's key check: controllers started without this controller's keys will refuse to start
-jenkins-a-1  | 2026-10-14 08:55:59.164+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
-jenkins-a-1  | 2026-10-14 08:56:00.862+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
-jenkins-a-1  | 2026-10-14 08:56:01.216+0000 [id=48]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
-jenkins-a-1  | 2026-10-14 08:56:01.731+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-14 08:56:02.593+0000 [id=57]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_01f1a67dae75beee399d08a4d0f7d0f5602b5eae547b3eabb212700f7b6813f0/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-a-1  | 2026-10-14 08:56:02.696+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-14 08:56:02.698+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-14 08:56:02.699+0000 [id=50]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-a-1  | 2026-10-14 08:56:02.707+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-14 08:56:02.714+0000 [id=51]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-a-1  | 2026-10-14 08:56:02.728+0000 [id=53]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_01f1a67dae75beee399d08a4d0f7d0f5602b5eae547b3eabb212700f7b6813f0 duplicates one seen earlier for admin
-jenkins-a-1  | 2026-10-14 08:56:02.955+0000 [id=51]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-a-1  | cnj: added the blob storage credential cnj-blob for account devstoreaccount1
-jenkins-a-1  | 2026-10-14 08:56:03.036+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-a-1  | 2026-10-14 08:56:03.049+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-a-1  | 2026-10-14 08:56:04.070+0000 [id=104]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
-jenkins-a-1  | 2026-10-14 08:56:07.789+0000 [id=44]	INFO	i.j.p.cluster.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster (unchanged, newer check)
-jenkins-a-1  | 2026-10-14 08:56:10.246+0000 [id=71]	INFO	i.j.p.c.p.SchemaMigrations#run: Schema migration store-key-prefix-index done
-jenkins-a-1  | 2026-10-14 08:56:15.220+0000 [id=33]	INFO	hudson.util.Retrier#start: Attempt #1 to do the action check updates server
-jenkins-a-1  | 2026-10-14 08:56:15.990+0000 [id=30]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-14 08:56:17.868+0000 [id=44]	INFO	i.j.p.cluster.ClusterUpdateSites#publish: Shared default.json with the cluster
-jenkins-a-1  | 2026-10-14 08:56:18.642+0000 [id=33]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
-jenkins-a-1  | 2026-10-14 08:56:18.645+0000 [id=33]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
-jenkins-a-1  | 2026-10-14 08:56:18.676+0000 [id=33]	INFO	i.j.p.cluster.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster (unchanged, newer check)
-jenkins-a-1  | 2026-10-14 08:56:24.731+0000 [id=31]	INFO	hudson.PluginManager#install: Starting installation of a batch of 1 plugins plus their dependencies
-jenkins-a-1  | 2026-10-14 08:56:26.071+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-14 08:56:26.298+0000 [id=140]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of next-build-number on behalf of admin
-jenkins-a-1  | 2026-10-14 08:56:26.299+0000 [id=140]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading next-build-number
-jenkins-a-1  | 2026-10-14 08:56:27.739+0000 [id=140]	INFO	i.j.p.cluster.ClusterPlugins#record: Cluster plugin set generation 1: next-build-number installed 66.v4b_4762172d53
-jenkins-a-1  | 2026-10-14 08:56:27.780+0000 [id=140]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: next-build-number
-jenkins-a-1  | 2026-10-14 08:56:27.781+0000 [id=140]	INFO	h.m.UpdateCenter$CompleteBatchJob#run: Completing installing of plugin batch…
-jenkins-a-1  | 2026-10-14 08:56:28.175+0000 [id=147]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-14 08:56:28.179+0000 [id=151]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-14 08:56:28.187+0000 [id=156]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-14 08:56:28.193+0000 [id=161]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-14 08:56:28.193+0000 [id=148]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-14 08:56:28.194+0000 [id=153]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-14 08:56:28.194+0000 [id=153]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-14 08:56:28.194+0000 [id=153]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-14 08:56:28.194+0000 [id=153]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-14 08:56:28.194+0000 [id=153]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-a-1  | 2026-10-14 08:56:28.202+0000 [id=140]	INFO	h.m.UpdateCenter$CompleteBatchJob#run: Completed installation of 1 plugins in 3.4 sec
-jenkins-a-1  | 2026-10-14 08:56:29.729+0000 [id=34]	INFO	i.j.p.cluster.ClusterPluginSet#doFilter: Refused /manage/pluginManager/updates/safeRestart: This Jenkins cluster restarts its controllers for plugin changes by itself, one at a time, once each has the change (see Manage Jenkins > Cluster). Restarting a single controller from here is not needed.
-jenkins-a-1  | 2026-10-14 08:56:32.207+0000 [id=82]	INFO	i.j.p.cluster.ClusterPlugins#apply: Applying the cluster's plugin set: ansicolor LOAD 542.v03d235fee02d
-jenkins-a-1  | 2026-10-14 08:56:32.778+0000 [id=164]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-14 08:56:32.783+0000 [id=169]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-14 08:56:32.789+0000 [id=173]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-14 08:56:32.794+0000 [id=178]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-14 08:56:32.796+0000 [id=178]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-14 08:56:32.796+0000 [id=178]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-14 08:56:32.796+0000 [id=178]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-14 08:56:32.797+0000 [id=178]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-14 08:56:32.797+0000 [id=178]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-14 08:56:32.797+0000 [id=178]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-a-1  | 2026-10-14 08:56:32.808+0000 [id=82]	INFO	i.j.p.cluster.ClusterPlugins#apply: Loaded ansicolor 542.v03d235fee02d live
-jenkins-a-1  | 2026-10-14 08:56:36.951+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-14 08:56:48.513+0000 [id=33]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-14 08:57:07.712+0000 [id=34]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-14 08:58:40.565+0000 [id=29]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-a-1  | 2026-10-14 08:58:52.562+0000 [id=72]	WARNING	i.j.p.c.p.PostgresPersistenceStore#holdLock: Lost the liveness lock; taking it again
-jenkins-a-1  | java.sql.SQLException: liveness lock connection lost
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.holdLock(PostgresPersistenceStore.java:462)
-jenkins-a-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-a-1  | 2026-10-14 08:58:52.582+0000 [id=105]	WARNING	com.zaxxer.hikari.pool.PoolBase#isConnectionDead: cluster-postgres-work - Failed to validate connection org.postgresql.jdbc.PgConnection@7ebcdbae (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-jenkins-a-1  | 2026-10-14 08:58:52.583+0000 [id=202]	WARNING	c.z.hikari.pool.ProxyConnection#checkException: cluster-postgres-work - Connection org.postgresql.jdbc.PgConnection@7b2ca68b marked as broken because of SQLSTATE(08006), ErrorCode(0)
-jenkins-a-1  | java.net.SocketTimeoutException: Read timed out
-jenkins-a-1  | 	at java.base/sun.nio.ch.NioSocketImpl.timedRead(Unknown Source)
-jenkins-a-1  | 	at java.base/sun.nio.ch.NioSocketImpl.implRead(Unknown Source)
-jenkins-a-1  | 	at java.base/sun.nio.ch.NioSocketImpl.read(Unknown Source)
-jenkins-a-1  | 	at java.base/sun.nio.ch.NioSocketImpl$1.read(Unknown Source)
-jenkins-a-1  | 	at java.base/java.net.Socket$SocketInputStream.read(Unknown Source)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:192)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:159)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:144)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:76)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.PGStream.receiveChar(PGStream.java:487)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2343)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:431)
-jenkins-a-1  | Caused: org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:458)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:534)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:437)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:359)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:344)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:320)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:315)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.lambda$reclaimAndPrune$7(PostgresPersistenceStore.java:873)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1770)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1734)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.run(PostgresPersistenceStore.java:832)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.reclaimAndPrune(PostgresPersistenceStore.java:856)
-jenkins-a-1  | 	at PluginClassLoader for cluster//io.jenkins.plugins.cluster.SharedQueueMaintenance$Reclaim.execute(SharedQueueMaintenance.java:43)
-jenkins-a-1  | 	at hudson.model.AsyncPeriodicWork.lambda$doRun$0(AsyncPeriodicWork.java:110)
-jenkins-a-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-a-1  | 2026-10-14 08:58:52.583+0000 [id=74]	WARNING	c.z.hikari.pool.ProxyConnection#checkException: cluster-postgres-control - Connection org.postgresql.jdbc.PgConnection@1202a563 marked as broken because of SQLSTATE(08006), ErrorCode(0)
-jenkins-a-1  | java.net.SocketTimeoutException: Read timed out
-jenkins-a-1  | 	at java.base/sun.nio.ch.NioSocketImpl.timedRead(Unknown Source)
-jenkins-a-1  | 	at java.base/sun.nio.ch.NioSocketImpl.implRead(Unknown Source)
-jenkins-a-1  | 	at java.base/sun.nio.ch.NioSocketImpl.read(Unknown Source)
-jenkins-a-1  | 	at java.base/sun.nio.ch.NioSocketImpl$1.read(Unknown Source)
-jenkins-a-1  | 	at java.base/java.net.Socket$SocketInputStream.read(Unknown Source)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:192)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:159)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:144)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:76)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.PGStream.receiveChar(PGStream.java:487)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2343)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:431)
-jenkins-a-1  | Caused: org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:458)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:534)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:437)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.lambda$heartbeat$15(PostgresPersistenceStore.java:1109)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1770)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.withControl(PostgresPersistenceStore.java:1757)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.heartbeat(PostgresPersistenceStore.java:1088)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.lambda$startHeartbeat$12(PostgresPersistenceStore.java:996)
-jenkins-a-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-a-1  | 2026-10-14 08:58:52.661+0000 [id=66]	WARNING	i.j.p.cluster.ClusterPlugins#reconcile: Could not reconcile the cluster's plugin set
-jenkins-a-1  | java.sql.SQLTransientConnectionException: cluster-postgres-work - Connection is not available, request timed out after 24719ms (total=3, active=2, idle=1, waiting=0)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:709)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:188)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:146)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:99)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1768)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1734)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.read(PostgresPersistenceStore.java:153)
-jenkins-a-1  | Caused: java.io.IOException: Failed to read cluster/plugins.json
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.read(PostgresPersistenceStore.java:163)
-jenkins-a-1  | 	at PluginClassLoader for cluster//io.jenkins.plugins.cluster.ClusterPlugins.read(ClusterPlugins.java:357)
-jenkins-a-1  | 	at PluginClassLoader for cluster//io.jenkins.plugins.cluster.ClusterPlugins.reconcile(ClusterPlugins.java:369)
-jenkins-a-1  | 	at jenkins.security.ImpersonatingScheduledExecutorService.lambda$wrap$0(ImpersonatingScheduledExecutorService.java:65)
-jenkins-a-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-jenkins-a-1  | 	at java.base/java.util.concurrent.FutureTask.runAndReset(Unknown Source)
-jenkins-a-1  | 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
-jenkins-a-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-jenkins-a-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-jenkins-a-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-a-1  | 2026-10-14 08:58:52.711+0000 [id=105]	WARNING	hudson.XmlFile#exists: Failed to check whether users/admin_01f1a67dae75beee399d08a4d0f7d0f5602b5eae547b3eabb212700f7b6813f0/config.xml exists
-jenkins-a-1  | org.postgresql.util.PSQLException: Connection attempt timed out.
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver$ConnectThread.getResult(Driver.java:412)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.Driver.connect(Driver.java:305)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore$DirectDataSource.getConnection(PostgresPersistenceStore.java:1828)
-jenkins-a-1  | 	at PluginClassLoader for postgresql-api//org.postgresql.ds.common.BaseDataSource.getConnection(BaseDataSource.java:88)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:483)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:747)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
-jenkins-a-1  | 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-jenkins-a-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-jenkins-a-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-jenkins-a-1  | Caused: java.sql.SQLTransientConnectionException: cluster-postgres-work - Connection is not available, request timed out after 44033ms (total=1, active=1, idle=0, waiting=1)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:709)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:188)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:146)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:99)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1768)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.withTransaction(PostgresPersistenceStore.java:1734)
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.read(PostgresPersistenceStore.java:153)
-jenkins-a-1  | Caused: java.io.IOException: Failed to read users/admin_01f1a67dae75beee399d08a4d0f7d0f5602b5eae547b3eabb212700f7b6813f0/config.xml
-jenkins-a-1  | 	at PluginClassLoader for cluster-postgresql//io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStore.read(PostgresPersistenceStore.java:163)
-jenkins-a-1  | 	at jenkins.persistence.PersistenceStores$Route.exists(PersistenceStores.java:624)
-jenkins-a-1  | 	at hudson.XmlFile.exists(XmlFile.java:345)
-jenkins-a-1  | 	at hudson.XmlFile$exists.call(Unknown Source)
-jenkins-a-1  | 	at cnj-admin-token$_run_closure1.doCall(cnj-admin-token.groovy:16)
-jenkins-a-1  | 	at cnj-admin-token$_run_closure1.doCall(cnj-admin-token.groovy)
-jenkins-a-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-jenkins-a-1  | 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-jenkins-a-1  | 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:98)
-jenkins-a-1  | 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
-jenkins-a-1  | 	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:264)
-jenkins-a-1  | 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
-jenkins-a-1  | 	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:41)
-jenkins-a-1  | 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
-jenkins-a-1  | 	at cnj-admin-token$_run_closure2.doCall(cnj-admin-token.groovy:33)
-jenkins-a-1  | 	at cnj-admin-token$_run_closure2.doCall(cnj-admin-token.groovy)
-jenkins-a-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-jenkins-a-1  | 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-jenkins-a-1  | 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:98)
-jenkins-a-1  | 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
-jenkins-a-1  | 	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:264)
-jenkins-a-1  | 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)
-jenkins-a-1  | 	at groovy.lang.Closure.call(Closure.java:420)
-jenkins-a-1  | 	at groovy.lang.Closure.call(Closure.java:414)
-jenkins-a-1  | 	at groovy.lang.Closure.run(Closure.java:501)
-jenkins-a-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-a-1  | cnj-admin-token: the harness token was missing (attempt 15); added it again
-jenkins-a-1  | 2026-10-14 08:59:00.113+0000 [id=71]	INFO	i.j.p.c.p.SchemaMigrations#lambda$claim$5: Taking schema migration store-size over from c88591a0-de47-4f80-909b-7acf279cc8dc, which is gone
-jenkins-a-1  | 2026-10-14 08:59:04.020+0000 [id=71]	INFO	i.j.p.c.p.SchemaMigrations#run: Schema migration store-size done
-jenkins-a-1  | 2026-10-14 08:59:04.960+0000 [id=28]	INFO	i.j.p.cluster.ClusterCliPlugins#beforeInstall: Refused install-plugin cluster-postgresql: The cluster plugins (cluster, cluster-azure-blob, cluster-postgresql, cluster-s3) are part of the controller image and cannot be changed at runtime.
-jenkins-a-1  | 2026-10-14 08:59:06.941+0000 [id=206]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-a-1  | 2026-10-14 11:52:14.769+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-14 11:52:14.996+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-14 11:52:15.034+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-14 11:52:15.228+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-14 11:52:15.250+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-14 11:52:15.448+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-14 11:52:15.498+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@77eb5790{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@68e7c8c3{STARTED}}
+jenkins-a-1  | 2026-10-14 11:52:15.503+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@396639b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-14 11:52:15.503+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@62573c86{STARTING}[12.1.14,sto=0] @471ms
+jenkins-a-1  | 2026-10-14 11:52:15.504+0000 [id=66]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-14 11:52:15.557+0000 [id=60]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-14 11:52:15.590+0000 [id=72]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 11:52:17.122+0000 [id=109]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 11:52:18.627+0000 [id=75]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 11:52:18.637+0000 [id=93]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 11:52:18.638+0000 [id=93]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 11:52:18.663+0000 [id=81]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 11:52:18.671+0000 [id=81]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 11:52:18.671+0000 [id=81]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 11:52:18.671+0000 [id=81]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 11:52:18.842+0000 [id=81]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-14 11:52:19.047+0000 [id=81]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-a-1  | 2026-10-14 11:52:19.547+0000 [id=81]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.azure.AzureBlobStoreProvider
+jenkins-a-1  | 2026-10-14 11:52:19.637+0000 [id=80]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-a-1  | 2026-10-14 11:52:19.858+0000 [id=79]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 11:52:20.261+0000 [id=79]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_eda22a99c34efb93b6c2c0e62cbd1e6618b24b3908bb75930a65731069dee53c/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-14 11:52:20.359+0000 [id=79]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 11:52:20.360+0000 [id=97]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 11:52:20.360+0000 [id=79]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-14 11:52:20.366+0000 [id=97]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 11:52:20.369+0000 [id=97]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-14 11:52:20.370+0000 [id=113]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_eda22a99c34efb93b6c2c0e62cbd1e6618b24b3908bb75930a65731069dee53c duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-14 11:52:20.531+0000 [id=97]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-a-1  | 2026-10-14 11:52:20.573+0000 [id=97]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 11:52:20.599+0000 [id=60]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-a-1  | 2026-10-14 11:52:20.607+0000 [id=60]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-14 11:52:21.336+0000 [id=185]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-a-1  | 2026-10-14 11:52:32.594+0000 [id=30]	INFO	hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+jenkins-a-1  | 2026-10-14 11:52:35.056+0000 [id=30]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-a-1  | 2026-10-14 11:52:35.056+0000 [id=30]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+jenkins-a-1  | 2026-10-14 11:52:35.071+0000 [id=30]	INFO	i.j.p.cluster.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster (unchanged, newer check)
+jenkins-a-1  | 2026-10-14 11:52:35.164+0000 [id=30]	INFO	i.j.p.cluster.ClusterUpdateSites#publish: Shared default.json with the cluster
+jenkins-a-1  | 2026-10-14 11:52:37.788+0000 [id=159]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took default.json from the cluster (downloaded by jenkins-b)
+jenkins-a-1  | 2026-10-14 11:52:37.824+0000 [id=32]	INFO	hudson.PluginManager#install: Starting installation of a batch of 1 plugins plus their dependencies
+jenkins-a-1  | 2026-10-14 11:52:38.300+0000 [id=224]	INFO	h.model.UpdateCenter$DownloadJob#run: Starting the installation of next-build-number on behalf of admin
+jenkins-a-1  | 2026-10-14 11:52:38.301+0000 [id=224]	INFO	h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading next-build-number
+jenkins-a-1  | 2026-10-14 11:52:39.087+0000 [id=224]	INFO	i.j.p.cluster.ClusterPlugins#record: Cluster plugin set generation 1: next-build-number installed 66.v4b_4762172d53
+jenkins-a-1  | 2026-10-14 11:52:39.092+0000 [id=224]	INFO	h.model.UpdateCenter$DownloadJob#run: Installation successful: next-build-number
+jenkins-a-1  | 2026-10-14 11:52:39.092+0000 [id=224]	INFO	h.m.UpdateCenter$CompleteBatchJob#run: Completing installing of plugin batch…
+jenkins-a-1  | 2026-10-14 11:52:39.205+0000 [id=232]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 11:52:39.205+0000 [id=237]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 11:52:39.206+0000 [id=241]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 11:52:39.206+0000 [id=247]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 11:52:39.206+0000 [id=251]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 11:52:39.207+0000 [id=256]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 11:52:39.207+0000 [id=261]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 11:52:39.208+0000 [id=267]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 11:52:39.208+0000 [id=271]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 11:52:39.209+0000 [id=276]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 11:52:39.210+0000 [id=224]	INFO	h.m.UpdateCenter$CompleteBatchJob#run: Completed installation of 1 plugins in 1.3 sec
+jenkins-a-1  | 2026-10-14 11:52:40.241+0000 [id=35]	INFO	i.j.p.cluster.ClusterPluginSet#doFilter: Refused /manage/pluginManager/updates/safeRestart: This Jenkins cluster restarts its controllers for plugin changes by itself, one at a time, once each has the change (see Manage Jenkins > Cluster). Restarting a single controller from here is not needed.
+jenkins-a-1  | 2026-10-14 11:52:41.598+0000 [id=70]	INFO	i.j.p.cluster.ClusterPlugins#apply: Applying the cluster's plugin set: ansicolor LOAD 542.v03d235fee02d
+jenkins-a-1  | 2026-10-14 11:52:41.679+0000 [id=280]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 11:52:41.679+0000 [id=285]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 11:52:41.680+0000 [id=289]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 11:52:41.681+0000 [id=294]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 11:52:41.681+0000 [id=299]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 11:52:41.682+0000 [id=304]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 11:52:41.682+0000 [id=310]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 11:52:41.683+0000 [id=314]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 11:52:41.683+0000 [id=319]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 11:52:41.684+0000 [id=324]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 11:52:41.685+0000 [id=70]	INFO	i.j.p.cluster.ClusterPlugins#apply: Loaded ansicolor 542.v03d235fee02d live
+jenkins-a-1  | 2026-10-14 11:52:42.004+0000 [id=62]	INFO	i.j.p.cluster.ClusterCliPlugins#beforeInstall: Refused install-plugin cluster-postgresql: The cluster plugins (cluster, cluster-azure-blob, cluster-postgresql, cluster-s3) are part of the controller image and cannot be changed at runtime.

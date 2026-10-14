@@ -1,15 +1,15 @@
 HTTP/1.1 302 Found
 Server: nginx/1.27.5
-Date: Wed, 14 Oct 2026 08:56:25 GMT
+Date: Wed, 14 Oct 2026 11:52:37 GMT
 Content-Length: 0
 Connection: keep-alive
 Vary: Accept-Encoding
 X-Content-Type-Options: nosniff
-Set-Cookie: remember-me=YWRtaW46MTc5MzE3Nzc4NDcwMzplOTc5NjRhMGE1NzI2NDZmMzQyYzRiMWYwNmNmNmI4MDgwN2Q1NDY4ODQ5NzQzN2MxZDk4YzcxOTE0MWFlNzcy; Path=/; Expires=Wed, 28 Oct 2026 08:56:24 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
+Set-Cookie: remember-me=YWRtaW46MTc5MzE4ODM1NzgxOTpkNTQzNDg0YmNkNWMyOTBhYTU1MThjYzhhMDE0ZGM0NjEyYjZkMWQ5YjhlMTAzYjE1N2VlMWFjNDU1ODkwNjM1; Path=/; Expires=Wed, 28 Oct 2026 11:52:37 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
 Expires: Thu, 01 Jan 1970 00:00:00 GMT
 Content-Security-Policy-Report-Only: base-uri 'none'; default-src 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; script-src 'report-sample' 'self' usage.jenkins.io; style-src 'report-sample' 'self' 'unsafe-inline';
 X-Jenkins-Cluster-Controller: jenkins-a
-Set-Cookie: jenkins-cluster-uc=jenkins-a; Path=/; Expires=Wed, 14 Oct 2026 09:56:24 GMT; Max-Age=3600; HttpOnly; SameSite=Lax
+Set-Cookie: jenkins-cluster-uc=jenkins-a; Path=/; Expires=Wed, 14 Oct 2026 12:52:37 GMT; Max-Age=3600; HttpOnly; SameSite=Lax
 Location: /manage/pluginManager/updates/
-X-Upstream: 192.168.32.5:8080
+X-Upstream: 172.24.0.5:8080
 

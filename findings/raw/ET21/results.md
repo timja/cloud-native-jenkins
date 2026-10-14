@@ -1,4 +1,4 @@
-## ET21 results (2026-10-13T18:46Z)
+## ET21 results (2026-10-14T11:43Z)
 
 | | Check |
 |---|---|
@@ -6,6 +6,6 @@
 | ✅ | a job configured in the browser is saved for every controller |
 | ✅ | the cluster page shows both controllers with their executors |
 | ✅ | the plugin manager says changes apply to every controller, and shows their status |
-| ℹ️ | served by: 6 lines of Playwright output |
+| ℹ️ | served by: 8 lines of Playwright output |
 
 Failures: 0

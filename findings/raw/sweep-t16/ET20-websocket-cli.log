@@ -1,0 +1,25 @@
+[12:51:31] Jenkins on 20289 is up (7s)
+[12:51:49] Jenkins on 20281 is up (8s)
+[12:51:49] Jenkins on 20282 is up (0s)
+## ET20 results (2026-10-14T11:51Z)
+
+| | Check |
+|---|---|
+[12:51:49] scenario 1: WebSocket relay
+| ℹ️ | 1 B answered: hello from jenkins-a |
+| ✅ | 1 a WebSocket opened on B for A's running build is answered by A |
+| ✅ | 1 ... as when opened on A itself |
+[12:51:52] scenario 2: CLI console -f on B
+| ℹ️ | 2 console -f exit 0, 15 tick lines |
+| ✅ | 2 console -f on B follows A's build to the end |
+[12:52:08] scenario 2b: the same over the CLI's WebSocket transport
+| ℹ️ | 2b console -f (-webSocket) exit 0, 15 tick lines |
+| ✅ | 2b console -f -webSocket on B follows A's build to the end |
+[12:52:27] scenario 3: CLI build -s -v on B, the job runs on A (agent ala)
+| ℹ️ | 3 build -s -v exit 0: Started onala #1 (on another controller), Completed onala #1 : SUCCESS |
+| ✅ | 3 build -s -v on B waits for the build A ran, with its log |
+[12:52:49] scenario 4: a controller started against the store without the cluster's seeded keys
+| ✅ | 4 it refuses to start, saying why |
+| ✅ | 4 ... and never became a member |
+
+Failures: 0

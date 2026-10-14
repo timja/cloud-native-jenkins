@@ -1,4 +1,4 @@
-## ET13 results (2026-10-13T19:18Z)
+## ET13 results (2026-10-14T11:57Z)
 
 | | Check |
 |---|---|
@@ -16,13 +16,13 @@
 | ✅ | 2 the Pipeline running meanwhile completed, with its whole console |
 | ✅ | 2 it paused for the restart and resumed: every tick once, in order |
 | ✅ | 2 the restart lock was released |
-| ℹ️ | 2 members: plug-0 19:18:55 3;plug-1 19:19:25 3; |
+| ℹ️ | 2 members: plug-0 11:57:52 3;plug-1 11:58:18 3; |
 | ✅ | 3 the fresh plug-1 has build-timeout 1.41 |
 | ✅ | 3 and the same plugins as plug-0 |
 | ✅ | 4 build-timeout is gone from both controllers |
 | ✅ | 4 one at a time again: a controller answered throughout |
 | ✅ | 5 a downgrade is refused |
-| ✅ | 5 changing the store plugin is refused |
+| ✅ | 5 changing a cluster plugin is refused |
 | ✅ | 5 a corrupt archive is not installed |
 | ✅ | 5 and causes no restart |
 | ✅ | 5 and is logged |

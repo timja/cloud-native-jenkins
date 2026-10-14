@@ -1,10 +1,10 @@
-Oct 13, 2026 7:55:25 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
-INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791917725223
-Oct 13, 2026 7:55:25 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
+Oct 14, 2026 12:35:59 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
+INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791977759156
+Oct 14, 2026 12:35:59 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
 SEVERE: Error during JavaScript execution
 ======= EXCEPTION START ========
-EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/8152fd4d/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)]
-org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/434dd7ec/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)]
+org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:977)
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
@@ -19,8 +19,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
@@ -56,8 +56,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -79,7 +79,7 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.to
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:963)
 	... 51 more
 Enclosed exception: 
-org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -94,12 +94,12 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.corejs.javascript.Interpreter$DoSetProp.execute(Interpreter.java:2207)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2185)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2054)
-	at script.fire(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14781)
-	at script.fireWith(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14911)
-	at script.done(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20538)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20773)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2185)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2054)
+	at script.fire(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14781)
+	at script.fireWith(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14911)
+	at script.done(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20538)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20773)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -118,23 +118,23 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script.send(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20798)
-	at script.ajax(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20432)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1973)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2033)
-	at script.8226(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2184)
-	at script.__webpack_require__(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2686)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2824)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2717)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2825)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1)
+	at script.send(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20798)
+	at script.ajax(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20432)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1973)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2033)
+	at script.8226(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2184)
+	at script.__webpack_require__(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2686)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2824)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2717)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2825)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSScript.exec(JSScript.java:42)
@@ -165,7 +165,7 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
 == CALLING JAVASCRIPT ==
 function() {
 					if ( callback ) {
@@ -198,60 +198,37 @@ function() {
 
 RESULT ok logged in through the load balancer
 RESULT ok signed in on every request (10/10)
-RESULT fail requests reached both controllers [cnj-1]
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+RESULT fail requests reached both controllers [cnj-0]
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-@http://localhost:8095/adjuncts/8152fd4d/lib/credentials/select/select.js:379
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+@http://localhost:8095/adjuncts/434dd7ec/lib/credentials/select/select.js:379
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole error
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole error
 SEVERE: ReferenceError: "fetch" is not defined.
-updateListBox()@http://localhost:8095/adjuncts/8152fd4d/lib/form/select/select.js:100
-@http://localhost:8095/adjuncts/8152fd4d/lib/form/select/select.js:165
-h()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:1981
-refillOnChange()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:1997
-@http://localhost:8095/adjuncts/8152fd4d/lib/form/select/select.js:163
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-@http://localhost:8095/adjuncts/8152fd4d/lib/credentials/select/select.js:379
+updateListBox()@http://localhost:8095/adjuncts/434dd7ec/lib/form/select/select.js:100
+@http://localhost:8095/adjuncts/434dd7ec/lib/form/select/select.js:165
+h()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:1981
+refillOnChange()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:1997
+@http://localhost:8095/adjuncts/434dd7ec/lib/form/select/select.js:163
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+@http://localhost:8095/adjuncts/434dd7ec/lib/credentials/select/select.js:379
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
-WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-@http://localhost:8095/adjuncts/8152fd4d/lib/credentials/select/select.js:379
-
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole error
-SEVERE: ReferenceError: "fetch" is not defined.
-updateListBox()@http://localhost:8095/adjuncts/8152fd4d/lib/form/select/select.js:100
-@http://localhost:8095/adjuncts/8152fd4d/lib/form/select/select.js:165
-h()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:1981
-refillOnChange()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:1997
-@http://localhost:8095/adjuncts/8152fd4d/lib/form/select/select.js:163
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-@http://localhost:8095/adjuncts/8152fd4d/lib/credentials/select/select.js:379
-
-Oct 13, 2026 7:55:26 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
-INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791917726138
-Oct 13, 2026 7:55:26 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
+Oct 14, 2026 12:35:59 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
+INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791977759848
+Oct 14, 2026 12:35:59 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
 SEVERE: Error during JavaScript execution
 ======= EXCEPTION START ========
-EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/8152fd4d/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)]
-org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/434dd7ec/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)]
+org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:977)
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
@@ -266,8 +243,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
@@ -302,8 +279,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -325,7 +302,7 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.to
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:963)
 	... 50 more
 Enclosed exception: 
-org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -340,12 +317,12 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.corejs.javascript.Interpreter$DoSetProp.execute(Interpreter.java:2207)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2185)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2054)
-	at script.fire(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14781)
-	at script.fireWith(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14911)
-	at script.done(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20538)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20773)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2185)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2054)
+	at script.fire(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14781)
+	at script.fireWith(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14911)
+	at script.done(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20538)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20773)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -364,23 +341,23 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script.send(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20798)
-	at script.ajax(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20432)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1973)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2033)
-	at script.8226(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2184)
-	at script.__webpack_require__(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2686)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2824)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2717)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2825)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1)
+	at script.send(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20798)
+	at script.ajax(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20432)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1973)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2033)
+	at script.8226(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2184)
+	at script.__webpack_require__(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2686)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2824)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2717)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2825)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSScript.exec(JSScript.java:42)
@@ -410,7 +387,7 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
 == CALLING JAVASCRIPT ==
 function() {
 					if ( callback ) {
@@ -441,245 +418,245 @@ function() {
 				}
 ======= EXCEPTION END ========
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:35:59 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole error
+Oct 14, 2026 12:36:00 PM org.htmlunit.WebConsole error
 SEVERE: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-checker()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:778
-@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:890
-registerMinMaxValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:964
-@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:1409
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+checker()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:778
+@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:890
+registerMinMaxValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:964
+@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:1409
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole error
+Oct 14, 2026 12:36:00 PM org.htmlunit.WebConsole error
 SEVERE: ReferenceError: "fetch" is not defined.
-@http://localhost:8095/adjuncts/8152fd4d/org/kohsuke/stapler/bind.js:32
-renderOnDemand()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:1090
-updateDropDownList()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:1791
-@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:1826
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+@http://localhost:8095/adjuncts/434dd7ec/org/kohsuke/stapler/bind.js:32
+renderOnDemand()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:1090
+updateDropDownList()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:1791
+@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:1826
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.WebConsole error
+Oct 14, 2026 12:36:00 PM org.htmlunit.WebConsole error
 SEVERE: ReferenceError: "fetch" is not defined.
-updateListBox()@http://localhost:8095/adjuncts/8152fd4d/lib/form/select/select.js:100
-@http://localhost:8095/adjuncts/8152fd4d/lib/form/select/select.js:165
-h()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:1981
-refillOnChange()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:1997
-@http://localhost:8095/adjuncts/8152fd4d/lib/form/select/select.js:163
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+updateListBox()@http://localhost:8095/adjuncts/434dd7ec/lib/form/select/select.js:100
+@http://localhost:8095/adjuncts/434dd7ec/lib/form/select/select.js:165
+h()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:1981
+refillOnChange()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:1997
+@http://localhost:8095/adjuncts/434dd7ec/lib/form/select/select.js:163
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-INFO bound objects on the configure page: 82 e.g. cnj-1-0217d5b2-aa7f-4f82-99d2-aa5f62194fe4
+INFO bound objects on the configure page: 83 e.g. cnj-0-5374b14e-8d41-40df-a898-3992cb473444
 RESULT ok bound objects answer through either controller (12/12 [200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200])
-Oct 13, 2026 7:55:26 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
-INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791917726887
-Oct 13, 2026 7:55:26 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
+Oct 14, 2026 12:36:00 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
+INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791977760341
+Oct 14, 2026 12:36:00 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
 SEVERE: Error during JavaScript execution
 ======= EXCEPTION START ========
-EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/8152fd4d/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)]
-org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/434dd7ec/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)]
+org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:977)
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
@@ -694,8 +671,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
@@ -730,8 +707,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -753,7 +730,7 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.to
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:963)
 	... 50 more
 Enclosed exception: 
-org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -768,12 +745,12 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.corejs.javascript.Interpreter$DoSetProp.execute(Interpreter.java:2207)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2185)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2054)
-	at script.fire(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14781)
-	at script.fireWith(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14911)
-	at script.done(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20538)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20773)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2185)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2054)
+	at script.fire(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14781)
+	at script.fireWith(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14911)
+	at script.done(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20538)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20773)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -792,23 +769,23 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script.send(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20798)
-	at script.ajax(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20432)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1973)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2033)
-	at script.8226(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2184)
-	at script.__webpack_require__(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2686)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2824)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2717)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2825)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1)
+	at script.send(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20798)
+	at script.ajax(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20432)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1973)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2033)
+	at script.8226(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2184)
+	at script.__webpack_require__(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2686)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2824)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2717)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2825)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSScript.exec(JSScript.java:42)
@@ -838,7 +815,7 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
 == CALLING JAVASCRIPT ==
 function() {
 					if ( callback ) {
@@ -869,11 +846,11 @@ function() {
 				}
 ======= EXCEPTION END ========
 
-Oct 13, 2026 7:55:26 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
+Oct 14, 2026 12:36:00 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
 SEVERE: Error during JavaScript execution
 ======= EXCEPTION START ========
-EcmaError: lineNumber=[70] column=[0] lineSource=[null] name=[ReferenceError] sourceName=[http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js] message=[ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)]
-org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)
+EcmaError: lineNumber=[70] column=[0] lineSource=[null] name=[ReferenceError] sourceName=[http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js] message=[ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)]
+org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:977)
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
@@ -902,8 +879,8 @@ org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://lo
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:5887)
@@ -923,7 +900,7 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is 
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:963)
 	... 28 more
 Enclosed exception: 
-org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)
+org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:5887)
@@ -933,8 +910,8 @@ org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined
 	at org.htmlunit.corejs.javascript.Interpreter$DoNameAndThis.execute(Interpreter.java:2456)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script.load(http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js:70)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js:174)
+	at script.load(http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js:70)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js:174)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -970,7 +947,7 @@ org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
 == CALLING JAVASCRIPT ==
 function () {
   pageSearchInput.addEventListener("input", function () {
@@ -1004,14 +981,14 @@ function () {
 ======= EXCEPTION END ========
 
 RESULT ok configure form saved (200)
-RESULT ok the saved description is there (1 read(s), from [cnj-1])
-Oct 13, 2026 7:55:27 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
-INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791917727017
-Oct 13, 2026 7:55:27 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
+RESULT ok the saved description is there (1 read(s), from [cnj-0])
+Oct 14, 2026 12:36:00 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
+INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791977760464
+Oct 14, 2026 12:36:00 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
 SEVERE: Error during JavaScript execution
 ======= EXCEPTION START ========
-EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/8152fd4d/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)]
-org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/434dd7ec/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)]
+org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:977)
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
@@ -1026,8 +1003,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
@@ -1062,8 +1039,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -1085,7 +1062,7 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.to
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:963)
 	... 50 more
 Enclosed exception: 
-org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -1100,12 +1077,12 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.corejs.javascript.Interpreter$DoSetProp.execute(Interpreter.java:2207)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2185)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2054)
-	at script.fire(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14781)
-	at script.fireWith(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14911)
-	at script.done(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20538)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20773)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2185)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2054)
+	at script.fire(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14781)
+	at script.fireWith(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14911)
+	at script.done(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20538)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20773)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -1124,23 +1101,23 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script.send(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20798)
-	at script.ajax(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20432)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1973)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2033)
-	at script.8226(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2184)
-	at script.__webpack_require__(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2686)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2824)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2717)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2825)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1)
+	at script.send(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20798)
+	at script.ajax(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20432)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1973)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2033)
+	at script.8226(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2184)
+	at script.__webpack_require__(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2686)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2824)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2717)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2825)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSScript.exec(JSScript.java:42)
@@ -1170,7 +1147,7 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
 == CALLING JAVASCRIPT ==
 function() {
 					if ( callback ) {
@@ -1201,11 +1178,11 @@ function() {
 				}
 ======= EXCEPTION END ========
 
-Oct 13, 2026 7:55:27 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
+Oct 14, 2026 12:36:00 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
 SEVERE: Error during JavaScript execution
 ======= EXCEPTION START ========
-EcmaError: lineNumber=[32] column=[0] lineSource=[null] name=[ReferenceError] sourceName=[http://localhost:8095/adjuncts/8152fd4d/org/kohsuke/stapler/bind.js] message=[ReferenceError: "fetch" is not defined. (http://localhost:8095/adjuncts/8152fd4d/org/kohsuke/stapler/bind.js#32)]
-org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://localhost:8095/adjuncts/8152fd4d/org/kohsuke/stapler/bind.js#32)
+EcmaError: lineNumber=[32] column=[0] lineSource=[null] name=[ReferenceError] sourceName=[http://localhost:8095/adjuncts/434dd7ec/org/kohsuke/stapler/bind.js] message=[ReferenceError: "fetch" is not defined. (http://localhost:8095/adjuncts/434dd7ec/org/kohsuke/stapler/bind.js#32)]
+org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://localhost:8095/adjuncts/434dd7ec/org/kohsuke/stapler/bind.js#32)
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:977)
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
@@ -1234,8 +1211,8 @@ org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://lo
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/adjuncts/8152fd4d/org/kohsuke/stapler/bind.js#32)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/adjuncts/434dd7ec/org/kohsuke/stapler/bind.js#32)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:5887)
@@ -1252,8 +1229,8 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is 
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
 	at org.htmlunit.javascript.host.dom.NodeList.forEach(NodeList.java:179)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
@@ -1269,7 +1246,7 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is 
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:963)
 	... 28 more
 Enclosed exception: 
-org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/adjuncts/8152fd4d/org/kohsuke/stapler/bind.js#32)
+org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/adjuncts/434dd7ec/org/kohsuke/stapler/bind.js#32)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:5887)
@@ -1279,9 +1256,9 @@ org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined
 	at org.htmlunit.corejs.javascript.Interpreter$DoNameAndThis.execute(Interpreter.java:2456)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script(http://localhost:8095/adjuncts/8152fd4d/org/kohsuke/stapler/bind.js:32)
-	at script.progressivelyRender(http://localhost:8095/adjuncts/8152fd4d/lib/layout/progressiveRendering/progressiveRendering.js:52)
-	at script(http://localhost:8095/adjuncts/8152fd4d/lib/layout/progressiveRendering/progressiveRendering.js:61)
+	at script(http://localhost:8095/adjuncts/434dd7ec/org/kohsuke/stapler/bind.js:32)
+	at script.progressivelyRender(http://localhost:8095/adjuncts/434dd7ec/lib/layout/progressiveRendering/progressiveRendering.js:52)
+	at script(http://localhost:8095/adjuncts/434dd7ec/lib/layout/progressiveRendering/progressiveRendering.js:61)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -1289,14 +1266,14 @@ org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
 	at org.htmlunit.javascript.host.dom.NodeList.forEach(NodeList.java:179)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script(http://localhost:8095/adjuncts/8152fd4d/lib/layout/progressiveRendering/progressiveRendering.js:58)
+	at script(http://localhost:8095/adjuncts/434dd7ec/lib/layout/progressiveRendering/progressiveRendering.js:58)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -1332,7 +1309,7 @@ org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
 == CALLING JAVASCRIPT ==
 function () {
   document
@@ -1347,11 +1324,11 @@ function () {
 }
 ======= EXCEPTION END ========
 
-Oct 13, 2026 7:55:27 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
+Oct 14, 2026 12:36:00 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
 SEVERE: Error during JavaScript execution
 ======= EXCEPTION START ========
-EcmaError: lineNumber=[70] column=[0] lineSource=[null] name=[ReferenceError] sourceName=[http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js] message=[ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)]
-org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)
+EcmaError: lineNumber=[70] column=[0] lineSource=[null] name=[ReferenceError] sourceName=[http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js] message=[ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)]
+org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:977)
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
@@ -1380,8 +1357,8 @@ org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://lo
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:5887)
@@ -1401,7 +1378,7 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is 
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:963)
 	... 28 more
 Enclosed exception: 
-org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)
+org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:5887)
@@ -1411,8 +1388,8 @@ org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined
 	at org.htmlunit.corejs.javascript.Interpreter$DoNameAndThis.execute(Interpreter.java:2456)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script.load(http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js:70)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js:174)
+	at script.load(http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js:70)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js:174)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -1448,7 +1425,7 @@ org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
 == CALLING JAVASCRIPT ==
 function () {
   pageSearchInput.addEventListener("input", function () {
@@ -1481,20 +1458,20 @@ function () {
 }
 ======= EXCEPTION END ========
 
-Oct 13, 2026 7:55:27 PM org.htmlunit.WebConsole error
+Oct 14, 2026 12:36:00 PM org.htmlunit.WebConsole error
 SEVERE: ReferenceError: "fetch" is not defined.
-@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:1487
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:1487
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:32 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
+Oct 14, 2026 12:36:05 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
 SEVERE: Error during JavaScript execution
 ======= EXCEPTION START ========
-EcmaError: lineNumber=[70] column=[0] lineSource=[null] name=[ReferenceError] sourceName=[http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js] message=[ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)]
-org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)
+EcmaError: lineNumber=[70] column=[0] lineSource=[null] name=[ReferenceError] sourceName=[http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js] message=[ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)]
+org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:977)
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
@@ -1506,8 +1483,8 @@ org.htmlunit.ScriptException: ReferenceError: "fetch" is not defined. (http://lo
 	at org.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:95)
 	at org.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:444)
 	at org.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:161)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:5887)
@@ -1527,7 +1504,7 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is 
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:963)
 	... 11 more
 Enclosed exception: 
-org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js#70)
+org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined. (http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js#70)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.notFoundError(ScriptRuntime.java:5887)
@@ -1537,8 +1514,8 @@ org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined
 	at org.htmlunit.corejs.javascript.Interpreter$DoNameAndThis.execute(Interpreter.java:2456)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script.load(http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js:70)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/pages/project/builds-card.js:139)
+	at script.load(http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js:70)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/pages/project/builds-card.js:139)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -1557,20 +1534,20 @@ org.htmlunit.corejs.javascript.EcmaError: ReferenceError: "fetch" is not defined
 	at org.htmlunit.javascript.background.JavaScriptExecutionJob.run(JavaScriptExecutionJob.java:95)
 	at org.htmlunit.javascript.background.JavaScriptJobManagerImpl.runSingleJob(JavaScriptJobManagerImpl.java:444)
 	at org.htmlunit.javascript.background.DefaultJavaScriptExecutor.run(DefaultJavaScriptExecutor.java:161)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
 == CALLING JAVASCRIPT ==
 () => load()
 ======= EXCEPTION END ========
 
 RESULT ok progressive renderer's proxy script served (200)
 RESULT ok build time trend rendered progressively (start 200 , news 200 {"data":[{"iconName":"blue","iconColorOrdinal":4,"iconColorDescription":"Success","number":1,"displayName":"#1","dur)
-Oct 13, 2026 7:55:32 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
-INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791917732730
-Oct 13, 2026 7:55:32 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
+Oct 14, 2026 12:36:06 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
+INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791977766117
+Oct 14, 2026 12:36:06 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
 SEVERE: Error during JavaScript execution
 ======= EXCEPTION START ========
-EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/8152fd4d/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)]
-org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/434dd7ec/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)]
+org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:977)
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
@@ -1585,8 +1562,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
@@ -1621,8 +1598,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -1644,7 +1621,7 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.to
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:963)
 	... 50 more
 Enclosed exception: 
-org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -1659,12 +1636,12 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.corejs.javascript.Interpreter$DoSetProp.execute(Interpreter.java:2207)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2185)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2054)
-	at script.fire(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14781)
-	at script.fireWith(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14911)
-	at script.done(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20538)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20773)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2185)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2054)
+	at script.fire(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14781)
+	at script.fireWith(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14911)
+	at script.done(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20538)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20773)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -1683,23 +1660,23 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script.send(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20798)
-	at script.ajax(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20432)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1973)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2033)
-	at script.8226(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2184)
-	at script.__webpack_require__(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2686)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2824)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2717)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2825)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1)
+	at script.send(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20798)
+	at script.ajax(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20432)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1973)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2033)
+	at script.8226(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2184)
+	at script.__webpack_require__(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2686)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2824)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2717)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2825)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSScript.exec(JSScript.java:42)
@@ -1729,7 +1706,7 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
 == CALLING JAVASCRIPT ==
 function() {
 					if ( callback ) {
@@ -1760,37 +1737,37 @@ function() {
 				}
 ======= EXCEPTION END ========
 
-Oct 13, 2026 7:55:32 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:36:06 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:32 PM org.htmlunit.WebConsole warn
+Oct 14, 2026 12:36:06 PM org.htmlunit.WebConsole warn
 WARNING: ReferenceError: "fetch" is not defined.
-sendRequest()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:273
-schedule()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:314
-delayedCheck()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:247
-registerValidator()@http://localhost:8095/static/8152fd4d/scripts/hudson-behavior.js:758
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:135
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:126
-applySubtree()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:107
-apply()@http://localhost:8095/static/8152fd4d/scripts/behavior.js:90
-@http://localhost:8095/static/8152fd4d/scripts/behavior.js:85
+sendRequest()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:273
+schedule()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:314
+delayedCheck()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:247
+registerValidator()@http://localhost:8095/static/434dd7ec/scripts/hudson-behavior.js:758
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:135
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:126
+applySubtree()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:107
+apply()@http://localhost:8095/static/434dd7ec/scripts/behavior.js:90
+@http://localhost:8095/static/434dd7ec/scripts/behavior.js:85
 
-Oct 13, 2026 7:55:32 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
-INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791917732987
-Oct 13, 2026 7:55:32 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
+Oct 14, 2026 12:36:06 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
+INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791977766319
+Oct 14, 2026 12:36:06 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
 SEVERE: Error during JavaScript execution
 ======= EXCEPTION START ========
-EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/8152fd4d/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)]
-org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/434dd7ec/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)]
+org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:977)
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
@@ -1805,8 +1782,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
@@ -1841,8 +1818,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -1864,7 +1841,7 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.to
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:963)
 	... 50 more
 Enclosed exception: 
-org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/434dd7ec/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -1879,12 +1856,12 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.corejs.javascript.Interpreter$DoSetProp.execute(Interpreter.java:2207)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2185)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2054)
-	at script.fire(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14781)
-	at script.fireWith(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14911)
-	at script.done(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20538)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20773)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2185)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2054)
+	at script.fire(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14781)
+	at script.fireWith(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:14911)
+	at script.done(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20538)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20773)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -1903,23 +1880,23 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script.send(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20798)
-	at script.ajax(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20432)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1973)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2033)
-	at script.8226(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2184)
-	at script.__webpack_require__(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2686)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2824)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2717)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2825)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1)
+	at script.send(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20798)
+	at script.ajax(http://localhost:8095/static/434dd7ec/jsbundles/vendors.js:20432)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1973)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2033)
+	at script.8226(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2184)
+	at script.__webpack_require__(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2686)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2824)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2717)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:2825)
+	at script(http://localhost:8095/static/434dd7ec/jsbundles/app.js:1)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSScript.exec(JSScript.java:42)
@@ -1949,7 +1926,7 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
 == CALLING JAVASCRIPT ==
 function() {
 					if ( callback ) {
@@ -1983,13 +1960,13 @@ function() {
 INFO after changing the password, the browser which changed it is signed in: false
 INFO login answered 401
 RESULT ok the old password no longer works
-Oct 13, 2026 7:55:33 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
-INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791917733374
-Oct 13, 2026 7:55:33 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
+Oct 14, 2026 12:36:06 PM org.htmlunit.NicelyResynchronizingAjaxController processSynchron
+INFO: Re-synchronized call to http://localhost:8095/i18n/resourceBundle?baseName=jenkins.dialogs&_=1791977766787
+Oct 14, 2026 12:36:06 PM org.htmlunit.javascript.DefaultJavaScriptErrorListener scriptException
 SEVERE: Error during JavaScript execution
 ======= EXCEPTION START ========
-EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/8152fd4d/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)]
-org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+EcmaError: lineNumber=[2185] column=[0] lineSource=[null] name=[TypeError] sourceName=[http://localhost:8095/static/bd899c5b/jsbundles/app.js] message=[TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/bd899c5b/jsbundles/app.js#2185)]
+org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/bd899c5b/jsbundles/app.js#2185)
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:977)
 	at org.htmlunit.corejs.javascript.Context.call(Context.java:605)
 	at org.htmlunit.corejs.javascript.ContextFactory.call(ContextFactory.java:438)
@@ -2004,8 +1981,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
@@ -2041,8 +2018,8 @@ org.htmlunit.ScriptException: TypeError: Symbol(Symbol.toPrimitive) is not a fun
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/bd899c5b/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -2064,7 +2041,7 @@ Caused by: org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.to
 	at org.htmlunit.javascript.JavaScriptEngine$HtmlUnitContextAction.run(JavaScriptEngine.java:963)
 	... 51 more
 Enclosed exception: 
-org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/8152fd4d/jsbundles/app.js#2185)
+org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) is not a function, it is symbol. (http://localhost:8095/static/bd899c5b/jsbundles/app.js#2185)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5774)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.constructError(ScriptRuntime.java:5755)
 	at org.htmlunit.corejs.javascript.ScriptRuntime.typeError(ScriptRuntime.java:5787)
@@ -2079,12 +2056,12 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.corejs.javascript.Interpreter$DoSetProp.execute(Interpreter.java:2207)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2185)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2054)
-	at script.fire(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14781)
-	at script.fireWith(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:14911)
-	at script.done(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20538)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20773)
+	at script(http://localhost:8095/static/bd899c5b/jsbundles/app.js:2185)
+	at script(http://localhost:8095/static/bd899c5b/jsbundles/app.js:2054)
+	at script.fire(http://localhost:8095/static/bd899c5b/jsbundles/vendors.js:14781)
+	at script.fireWith(http://localhost:8095/static/bd899c5b/jsbundles/vendors.js:14911)
+	at script.done(http://localhost:8095/static/bd899c5b/jsbundles/vendors.js:20538)
+	at script(http://localhost:8095/static/bd899c5b/jsbundles/vendors.js:20773)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSFunction.call(JSFunction.java:146)
@@ -2103,23 +2080,23 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.fireJavascriptEvent(XMLHttpRequest.java:218)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.doSend(XMLHttpRequest.java:1105)
 	at org.htmlunit.javascript.host.xml.XMLHttpRequest.send(XMLHttpRequest.java:819)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.htmlunit.corejs.javascript.MemberBox.invoke(MemberBox.java:266)
 	at org.htmlunit.corejs.javascript.FunctionObject.call(FunctionObject.java:493)
 	at org.htmlunit.corejs.javascript.Interpreter$DoCallByteCode.execute(Interpreter.java:2853)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretFunction(Interpreter.java:1087)
 	at org.htmlunit.corejs.javascript.Interpreter.interpretLoop(Interpreter.java:863)
-	at script.send(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20798)
-	at script.ajax(http://localhost:8095/static/8152fd4d/jsbundles/vendors.js:20432)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1973)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2033)
-	at script.8226(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2184)
-	at script.__webpack_require__(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2686)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2824)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2717)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:2825)
-	at script(http://localhost:8095/static/8152fd4d/jsbundles/app.js:1)
+	at script.send(http://localhost:8095/static/bd899c5b/jsbundles/vendors.js:20798)
+	at script.ajax(http://localhost:8095/static/bd899c5b/jsbundles/vendors.js:20432)
+	at script(http://localhost:8095/static/bd899c5b/jsbundles/app.js:1973)
+	at script(http://localhost:8095/static/bd899c5b/jsbundles/app.js:2033)
+	at script.8226(http://localhost:8095/static/bd899c5b/jsbundles/app.js:2184)
+	at script.__webpack_require__(http://localhost:8095/static/bd899c5b/jsbundles/app.js:2686)
+	at script(http://localhost:8095/static/bd899c5b/jsbundles/app.js:2824)
+	at script(http://localhost:8095/static/bd899c5b/jsbundles/app.js:2717)
+	at script(http://localhost:8095/static/bd899c5b/jsbundles/app.js:2825)
+	at script(http://localhost:8095/static/bd899c5b/jsbundles/app.js:1)
 	at org.htmlunit.corejs.javascript.Interpreter.interpret(Interpreter.java:448)
 	at org.htmlunit.corejs.javascript.InterpreterData.execute(InterpreterData.java:102)
 	at org.htmlunit.corejs.javascript.JSScript.exec(JSScript.java:42)
@@ -2150,7 +2127,7 @@ org.htmlunit.corejs.javascript.EcmaError: TypeError: Symbol(Symbol.toPrimitive) 
 	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
 	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
 	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
 == CALLING JAVASCRIPT ==
 function() {
 					if ( callback ) {
@@ -2182,4 +2159,4 @@ function() {
 ======= EXCEPTION END ========
 
 RESULT ok logged in with the new password
-INFO upstreams seen: [cnj-1]
+INFO upstreams seen: [cnj-0, cnj-1]

@@ -1,5 +1,5 @@
 | ℹ️ | seeded keys: hudson.model.User.DIRNAMES hudson.util.Secret jenkins.model.Jenkins.crumbSalt master.key org.jenkinsci.main.modules.instance_identity.InstanceIdentity.KEY  |
-## ET6 results (2026-10-13T17:59Z)
+## ET6 results (2026-10-14T11:45Z)
 
 | | Check |
 |---|---|
@@ -22,30 +22,30 @@
 | ✅ | 5 and B dropped its connection |
 | ✅ | 6 the key has the same value on B |
 | ✅ | 6 data encrypted with a runtime key on A decrypts on B |
-| ℹ️ | 9 versions before: config.xml@29 jenkins.model.JenkinsLocationConfiguration.xml@28 nodes/n7/config.xml@60 users/u9_c62a8e33da0f95dcad4383dcaa4cf123e8728bfb47091246f3cb5b061478c653/config.xml@59 ; after: config.xml@29 jenkins.model.JenkinsLocationConfiguration.xml@28 nodes/n7/config.xml@60 users/u9_c62a8e33da0f95dcad4383dcaa4cf123e8728bfb47091246f3cb5b061478c653/config.xml@59  |
+| ℹ️ | 9 versions before: config.xml@32 jenkins.model.JenkinsLocationConfiguration.xml@31 nodes/n7/config.xml@62 users/u9_527ec4087cf8acbc822288f657a187f663072363c2323837b7a9f07e1c914570/config.xml@61 ; after: config.xml@32 jenkins.model.JenkinsLocationConfiguration.xml@31 nodes/n7/config.xml@62 users/u9_527ec4087cf8acbc822288f657a187f663072363c2323837b7a9f07e1c914570/config.xml@61  |
 | ✅ | 9 B's boot (JCasC) bumped no versions of unchanged config |
 | ✅ | 9 a setting JCasC does not declare keeps its runtime value |
 | ✅ | 9 a user created at runtime survives B's boot |
 | ✅ | 9 JCasC's declared setting is still JCasC's |
 | ✅ | 9 the node added in the UI survives B's boot |
-| ℹ️ | 10 result 9/4, conflicting writes detected: 0 |
+| ℹ️ | 10 result 9/4, conflicting writes detected: 4 |
 | ✅ | 10 both changes survive, or the overwrite was detected |
 | ✅ | 10 A and B agree on the result |
 | ✅ | 8 logged in through the load balancer |
 | ✅ | 8 signed in on every request (10/10) |
-| ✅ | 8 requests reached both controllers [jenkins-b, jenkins-a] |
-| ℹ️ | 8 bound objects on the configure page: 82 e.g. jenkins-a-050d5da0-eada-49dc-ad38-070cd849b913 |
+| ✅ | 8 requests reached both controllers [jenkins-a, jenkins-b] |
+| ℹ️ | 8 bound objects on the configure page: 83 e.g. jenkins-a-79bbe80f-f1a1-432f-9065-9579cabcaf3e |
 | ✅ | 8 bound objects answer through either controller (12/12 [200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200]) |
 | ✅ | 8 configure form saved (200) |
-| ✅ | 8 the saved description is there (1 read(s), from [jenkins-b]) |
+| ✅ | 8 the saved description is there (1 read(s), from [jenkins-a]) |
 | ✅ | 8 progressive renderer's proxy script served (200) |
 | ✅ | 8 build time trend rendered progressively (start 200 , news 200 {"data":[{"iconName":"blue","iconColorOrdinal":4,"iconColorDescription":"Success","number":2,"displayName":"#2","dur) |
 | ℹ️ | 8 after changing the password, the browser which changed it is signed in: false |
 | ℹ️ | 8 login answered 401 |
 | ✅ | 8 the old password no longer works |
 | ✅ | 8 logged in with the new password |
-| ℹ️ | 8 upstreams seen: [jenkins-b, jenkins-a] |
-| ℹ️ | 8 bound-object requests forwarded between controllers: 8 |
+| ℹ️ | 8 upstreams seen: [jenkins-a, jenkins-b] |
+| ℹ️ | 8 bound-object requests forwarded between controllers: 9 |
 | ✅ | 8 some bound-object requests were forwarded |
 | ✅ | 8 after losing A the browser is still signed in |
 | ✅ | 7 users and passwords survive (u2 new password on B) |

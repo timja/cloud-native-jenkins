@@ -1,0 +1,33 @@
+[12:43:51] Jenkins on 20689 is up (7s)
+[12:44:15] Jenkins on 20681 is up (8s)
+[12:44:15] Jenkins on 20682 is up (0s)
+## ET18 results (2026-10-14T11:44Z)
+
+| | Check |
+|---|---|
+[12:44:15] scenario 1: base backup, then work
+| ✅ | 1 the WAL is archived |
+[12:44:35] restore point T
+| ℹ️ | 1 at T: 36 keys; blobs 84K |
+[12:44:35] after T: doomed deleted, edited changed, created made
+| ✅ | 1 after T: doomed is gone, created exists |
+[12:44:47] scenario 2: restore Postgres to T into a fresh data directory
+| ✅ | 2 Postgres recovered to T and was promoted |
+[12:45:01] Jenkins on 20681 is up (7s)
+[12:45:01] Jenkins on 20682 is up (0s)
+| ✅ | 2 doomed is back (its configuration and records, as at T) |
+| ✅ | 2 created is not there (made after T) |
+| ✅ | 2 edited has its configuration as at T |
+| ✅ | 2 kept #1 is there, with its console |
+| ℹ️ | 2 without blob versioning: doomed #1's record is back, its console answers 200 (its snapshot was deleted after T) |
+| ✅ | 2 ... which is what blob versioning is needed for: doomed #1's snapshot is missing |
+| ℹ️ | 2 longp #1 (running at T): ? |
+[12:45:01] scenario 3: blob storage restored to T as well
+[12:45:21] Jenkins on 20681 is up (7s)
+[12:45:22] Jenkins on 20682 is up (1s)
+| ✅ | 3 doomed #1's console is back |
+| ✅ | 3 the Pipeline running at T is resumed from its save point (or closed as aborted), not lost |
+| ℹ️ | 3 longp #1: SUCCESS |
+| ✅ | 3 its console has what it printed before T |
+
+Failures: 0

@@ -1,0 +1,62 @@
+## ET9 results (2026-10-14T11:33Z)
+
+| | Check |
+|---|---|
+[12:33:41] scenario 1: install
+| ✅ | 1 both controllers become ready |
+| ✅ | 1 both are live members (cluster view through the Service) |
+[12:34:02] scenario 2: builds and a browser through the Service
+| ℹ️ | 2 10 builds through the Service ran on: cnj-0=6 cnj-1=4  |
+| ✅ | 2 builds through the Service ran on both controllers |
+| ✅ | 2 a freestyle build on a Kubernetes agent completes |
+| ✅ | 2 journey: logged in through the load balancer |
+| ✅ | 2 journey: signed in on every request (10/10) |
+| ℹ️ | 2 journey: fail requests reached both controllers [cnj-0] (kube-proxy balances connections, and HtmlUnit keeps them alive) |
+| ℹ️ | 2 journey: bound objects on the configure page: 83 e.g. cnj-0-5374b14e-8d41-40df-a898-3992cb473444 |
+| ✅ | 2 journey: bound objects answer through either controller (12/12 [200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200]) |
+| ✅ | 2 journey: configure form saved (200) |
+| ✅ | 2 journey: the saved description is there (1 read(s), from [cnj-0]) |
+| ✅ | 2 journey: progressive renderer's proxy script served (200) |
+| ✅ | 2 journey: build time trend rendered progressively (start 200 , news 200 {"data":[{"iconName":"blue","iconColorOrdinal":4,"iconColorDescription":"Success","number":1,"displayName":"#1","dur) |
+| ℹ️ | 2 journey: after changing the password, the browser which changed it is signed in: false |
+| ℹ️ | 2 journey: login answered 401 |
+| ✅ | 2 journey: the old password no longer works |
+| ✅ | 2 journey: logged in with the new password |
+| ℹ️ | 2 journey: upstreams seen: [cnj-0, cnj-1] |
+[12:36:06] scenario 3: 6 Pipelines on Kubernetes agents at once, container cap 4
+| ✅ | 3 all 6 builds complete |
+| ℹ️ | 3 agent pods seen: 6, at most 4 at once |
+| ✅ | 3 at most 4 agent pods at any time (the cap holds for the cluster) |
+| ✅ | 3 each build ran on its own pod |
+| ✅ | 3 each pod belonged to the controller that ran its build |
+| ✅ | 3 no pod was created for an item another controller ran (6 builds, 6 pods) |
+[12:37:19] scenario 4: delete a controller pod while it runs a Pipeline on a Kubernetes agent
+| ℹ️ | 4 survive #1 running on cnj-0, agent pod default-pvmvx |
+| ✅ | 4 the build completes after its controller's pod was deleted |
+| ✅ | 4 it was retried on a new agent pod |
+| ✅ | 4 the old agent pod is garbage collected |
+[12:43:22] scenario 4b: inline podTemplate; a stage stashes, the next is interrupted by losing its controller and resumes on a new pod
+| ℹ️ | 4b carry #1 running on cnj-0 |
+| ✅ | 4b the build completes after its controller's pod was deleted |
+| ✅ | 4b the retried stage ran on a new pod, with a new workspace |
+| ✅ | 4b ... and got the earlier stage's file from its stash |
+| ℹ️ | 4b the stash in blob storage while the build ran: artifacts/carry/1/stashes/out.tgz |
+| ✅ | 4b ... which the artifact manager had put in blob storage |
+| ✅ | 4b the cluster's agent counters are back to 0 once the pods are gone |
+| ℹ️ | 4b counter rows left: 0 |
+| ✅ | 4b the inline templates' counters do not accumulate (rows at 0 are pruned) |
+[12:49:56] scenario 5: no controller deletes another's pods
+| ✅ | 5 no controller garbage collected another's pod |
+[12:49:57] scenario 6: helm upgrade to 3 controllers
+| ✅ | 6 three controllers ready |
+| ✅ | 6 the third is a live member |
+| ✅ | 6 it sees every job (carry,flyweight,fs9,kagent,survive) |
+| ✅ | 6 and the history (kagent: 6 builds) |
+| ✅ | 6 and runs builds |
+[12:50:16] scenario 7: delete every controller pod at once
+| ✅ | 7 they come back |
+| ✅ | 7 with every job and build (flyweight: 11) |
+| ✅ | 7 the user created at runtime still signs in |
+
+Failures: 0
+ET9 exit=0

@@ -1,0 +1,26 @@
+2 Start of Pipeline
+3 stage
+  log: 
+4 { (one)
+5 echo
+  log: first stage says hi
+6 }
+7 // stage
+8 stage
+  log: 
+9 { (two)
+10 echo
+  log: second stage line 1
+11 echo
+  log: second stage line 2
+12 }
+13 // stage
+14 stage
+  log: 
+15 { (three)
+16 echo
+  log: done pl1
+17 }
+18 // stage
+19 End of Pipeline
+

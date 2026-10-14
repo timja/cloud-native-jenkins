@@ -5,29 +5,29 @@ Started by user admin
 [Pipeline] podTemplate
 [Pipeline] {
 [Pipeline] node
-Created Pod: kubernetes cnj/carry-1-7wckb-r62rz-dmlm5
-[PodInfo] cnj/carry-1-7wckb-r62rz-dmlm5
+Created Pod: kubernetes cnj/carry-1-vnmh4-lkw51-x3tf5
+[PodInfo] cnj/carry-1-vnmh4-lkw51-x3tf5
 	Container [jnlp] waiting [ContainerCreating] No message
 	Pod [Pending][PodSandboxNotReady] no pod sandbox exists
 	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-[PodInfo] cnj/carry-1-7wckb-r62rz-dmlm5
+[PodInfo] cnj/carry-1-vnmh4-lkw51-x3tf5
 	Container [jnlp] waiting [ContainerCreating] No message
 	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-Agent carry-1-7wckb-r62rz-dmlm5 is provisioned from template carry_1-7wckb-r62rz
+Agent carry-1-vnmh4-lkw51-x3tf5 is provisioned from template carry_1-vnmh4-lkw51
 ---
 apiVersion: "v1"
 kind: "Pod"
 metadata:
   annotations:
-    kubernetes.jenkins.io/last-refresh: "1791918181575"
+    kubernetes.jenkins.io/last-refresh: "1791978208778"
     buildUrl: "http://cnj-0.cnj-headless.cnj.svc.cluster.local:8080/job/carry/1/"
     runUrl: "job/carry/1/"
   labels:
     jenkins: "slave"
-    jenkins/label-digest: "2cf268d1f10bc75df564490ae872ce23297b4742"
-    jenkins/label: "carry_1-7wckb"
+    jenkins/label-digest: "315b73029e38db6ca977d5390d50ec624f231ca4"
+    jenkins/label: "carry_1-vnmh4"
     kubernetes.jenkins.io/controller: "http___cnj-0_cnj-headless_cnj_svc_cluster_local_8080x"
-  name: "carry-1-7wckb-r62rz-dmlm5"
+  name: "carry-1-vnmh4-lkw51-x3tf5"
   namespace: "cnj"
 spec:
   containers:
@@ -35,13 +35,13 @@ spec:
     - name: "JENKINS_SECRET"
       value: "********"
     - name: "JENKINS_AGENT_NAME"
-      value: "carry-1-7wckb-r62rz-dmlm5"
+      value: "carry-1-vnmh4-lkw51-x3tf5"
     - name: "JENKINS_WEB_SOCKET"
       value: "true"
     - name: "REMOTING_OPTS"
       value: "-noReconnectAfter 1d"
     - name: "JENKINS_NAME"
-      value: "carry-1-7wckb-r62rz-dmlm5"
+      value: "carry-1-vnmh4-lkw51-x3tf5"
     - name: "JENKINS_AGENT_WORKDIR"
       value: "/home/jenkins/agent"
     - name: "JENKINS_URL"
@@ -64,7 +64,7 @@ spec:
       medium: ""
     name: "workspace-volume"
 
-Running on carry-1-7wckb-r62rz-dmlm5 in /home/jenkins/agent/workspace/carry
+Running on carry-1-vnmh4-lkw51-x3tf5 in /home/jenkins/agent/workspace/carry
 [Pipeline] {
 [Pipeline] sh
 + echo carried-by-stash
@@ -85,29 +85,29 @@ Deleting stash file out.tgz
 [Pipeline] retry
 [Pipeline] {
 [Pipeline] node
-Created Pod: kubernetes cnj/carry-1-3w9n3-qvk81-3wc91
-[PodInfo] cnj/carry-1-3w9n3-qvk81-3wc91
+Created Pod: kubernetes cnj/carry-1-xgh06-mdnwk-grsv4
+[PodInfo] cnj/carry-1-xgh06-mdnwk-grsv4
 	Container [jnlp] waiting [ContainerCreating] No message
 	Pod [Pending][PodSandboxNotReady] no pod sandbox exists
 	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-[PodInfo] cnj/carry-1-3w9n3-qvk81-3wc91
+[PodInfo] cnj/carry-1-xgh06-mdnwk-grsv4
 	Container [jnlp] waiting [ContainerCreating] No message
 	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-Agent carry-1-3w9n3-qvk81-3wc91 is provisioned from template carry_1-3w9n3-qvk81
+Agent carry-1-xgh06-mdnwk-grsv4 is provisioned from template carry_1-xgh06-mdnwk
 ---
 apiVersion: "v1"
 kind: "Pod"
 metadata:
   annotations:
-    kubernetes.jenkins.io/last-refresh: "1791918191715"
+    kubernetes.jenkins.io/last-refresh: "1791978227738"
     buildUrl: "http://cnj-0.cnj-headless.cnj.svc.cluster.local:8080/job/carry/1/"
     runUrl: "job/carry/1/"
   labels:
     jenkins: "slave"
-    jenkins/label-digest: "411aa1a472afbef6d84ec1c85c8e848c037e4bec"
-    jenkins/label: "carry_1-3w9n3"
+    jenkins/label-digest: "8c04a59905c65b58460e96cd6e4513c861e1fa96"
+    jenkins/label: "carry_1-xgh06"
     kubernetes.jenkins.io/controller: "http___cnj-0_cnj-headless_cnj_svc_cluster_local_8080x"
-  name: "carry-1-3w9n3-qvk81-3wc91"
+  name: "carry-1-xgh06-mdnwk-grsv4"
   namespace: "cnj"
 spec:
   containers:
@@ -115,13 +115,13 @@ spec:
     - name: "JENKINS_SECRET"
       value: "********"
     - name: "JENKINS_AGENT_NAME"
-      value: "carry-1-3w9n3-qvk81-3wc91"
+      value: "carry-1-xgh06-mdnwk-grsv4"
     - name: "JENKINS_WEB_SOCKET"
       value: "true"
     - name: "REMOTING_OPTS"
       value: "-noReconnectAfter 1d"
     - name: "JENKINS_NAME"
-      value: "carry-1-3w9n3-qvk81-3wc91"
+      value: "carry-1-xgh06-mdnwk-grsv4"
     - name: "JENKINS_AGENT_WORKDIR"
       value: "/home/jenkins/agent"
     - name: "JENKINS_URL"
@@ -144,75 +144,66 @@ spec:
       medium: ""
     name: "workspace-volume"
 
-Running on carry-1-3w9n3-qvk81-3wc91 in /home/jenkins/agent/workspace/carry
+Running on carry-1-xgh06-mdnwk-grsv4 in /home/jenkins/agent/workspace/carry
 [Pipeline] {
 [Pipeline] sh
 + hostname
-+ echo attempt-on-carry-1-3w9n3-qvk81-3wc91
-attempt-on-carry-1-3w9n3-qvk81-3wc91
++ echo attempt-on-carry-1-xgh06-mdnwk-grsv4
+attempt-on-carry-1-xgh06-mdnwk-grsv4
 + test -f out.txt
 + echo workspace-new
 workspace-new
 [Pipeline] sleep
 Sleeping for 45 sec
-Resuming build at Tue Oct 13 19:03:20 UTC 2026 after Jenkins restart
-Waiting for reconnection of carry-1-3w9n3-qvk81-3wc91 before proceeding with build
-carry-1-3w9n3-qvk81-3wc91 has been removed for 5 min 0 sec; assuming it is not coming back, and terminating node step
-Ready to run at Tue Oct 13 19:08:20 UTC 2026
+Resuming build at Wed Oct 14 11:43:58 UTC 2026 after Jenkins restart
+Waiting for reconnection of carry-1-xgh06-mdnwk-grsv4 before proceeding with build
+carry-1-xgh06-mdnwk-grsv4 has been removed for 5 min 0 sec; assuming it is not coming back, and terminating node step
+Ready to run at Wed Oct 14 11:48:58 UTC 2026
 [Pipeline] }
 [Pipeline] // node
 [Pipeline] }
 Timeout waiting for agent to come back
-org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: 099a9712-fe18-4aaf-922e-c51c440723b1
+org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: 9fc74f56-fe6e-4bd2-b963-35f503daa7e6
 Retrying
 [Pipeline] {
 [Pipeline] node
-Created Pod: kubernetes cnj/carry-1-3w9n3-qvk81-9h962
-[PodInfo] cnj/carry-1-3w9n3-qvk81-9h962
+Created Pod: kubernetes cnj/carry-1-xgh06-mdnwk-vkdnd
+[PodInfo] cnj/carry-1-xgh06-mdnwk-vkdnd
 	Container [jnlp] waiting [ContainerCreating] No message
 	Pod [Pending][PodSandboxNotReady] no pod sandbox exists
 	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-[PodInfo] cnj/carry-1-3w9n3-qvk81-9h962
+[PodInfo] cnj/carry-1-xgh06-mdnwk-vkdnd
 	Container [jnlp] waiting [ContainerCreating] No message
 	Pod [Pending][PodSandboxNotReady] no pod sandbox exists
 	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-[PodInfo] cnj/carry-1-3w9n3-qvk81-9h962
+[PodInfo] cnj/carry-1-xgh06-mdnwk-vkdnd
 	Container [jnlp] waiting [ContainerCreating] No message
 	Pod [Pending][PodSandboxNotReady] no pod sandbox exists
 	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-[PodInfo] cnj/carry-1-3w9n3-qvk81-9h962
+[PodInfo] cnj/carry-1-xgh06-mdnwk-vkdnd
 	Container [jnlp] waiting [ContainerCreating] No message
 	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-[PodInfo] cnj/carry-1-3w9n3-qvk81-9h962
+[PodInfo] cnj/carry-1-xgh06-mdnwk-vkdnd
 	Container [jnlp] waiting [ContainerCreating] No message
 	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-[PodInfo] cnj/carry-1-3w9n3-qvk81-9h962
+[PodInfo] cnj/carry-1-xgh06-mdnwk-vkdnd
 	Container [jnlp] waiting [ContainerCreating] No message
 	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-[PodInfo] cnj/carry-1-3w9n3-qvk81-9h962
-	Container [jnlp] waiting [ContainerCreating] No message
-	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-[PodInfo] cnj/carry-1-3w9n3-qvk81-9h962
-	Container [jnlp] waiting [ContainerCreating] No message
-	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-[PodInfo] cnj/carry-1-3w9n3-qvk81-9h962
-	Container [jnlp] waiting [ContainerCreating] No message
-	Pod [Pending][ContainersNotReady] containers with unready status: [jnlp]
-Agent carry-1-3w9n3-qvk81-9h962 is provisioned from template carry_1-3w9n3-qvk81
+Agent carry-1-xgh06-mdnwk-vkdnd is provisioned from template carry_1-xgh06-mdnwk
 ---
 apiVersion: "v1"
 kind: "Pod"
 metadata:
   annotations:
-    kubernetes.jenkins.io/last-refresh: "1791918501859"
+    kubernetes.jenkins.io/last-refresh: "1791978547242"
     buildUrl: "http://cnj-0.cnj-headless.cnj.svc.cluster.local:8080/job/carry/1/"
     runUrl: "job/carry/1/"
   labels:
     jenkins: "slave"
-    jenkins/label-digest: "411aa1a472afbef6d84ec1c85c8e848c037e4bec"
-    jenkins/label: "carry_1-3w9n3"
+    jenkins/label-digest: "8c04a59905c65b58460e96cd6e4513c861e1fa96"
+    jenkins/label: "carry_1-xgh06"
     kubernetes.jenkins.io/controller: "http___cnj-1_cnj-headless_cnj_svc_cluster_local_8080x"
-  name: "carry-1-3w9n3-qvk81-9h962"
+  name: "carry-1-xgh06-mdnwk-vkdnd"
   namespace: "cnj"
 spec:
   containers:
@@ -220,13 +211,13 @@ spec:
     - name: "JENKINS_SECRET"
       value: "********"
     - name: "JENKINS_AGENT_NAME"
-      value: "carry-1-3w9n3-qvk81-9h962"
+      value: "carry-1-xgh06-mdnwk-vkdnd"
     - name: "JENKINS_WEB_SOCKET"
       value: "true"
     - name: "REMOTING_OPTS"
       value: "-noReconnectAfter 1d"
     - name: "JENKINS_NAME"
-      value: "carry-1-3w9n3-qvk81-9h962"
+      value: "carry-1-xgh06-mdnwk-vkdnd"
     - name: "JENKINS_AGENT_WORKDIR"
       value: "/home/jenkins/agent"
     - name: "JENKINS_URL"
@@ -249,12 +240,12 @@ spec:
       medium: ""
     name: "workspace-volume"
 
-Running on carry-1-3w9n3-qvk81-9h962 in /home/jenkins/agent/workspace/carry
+Running on carry-1-xgh06-mdnwk-vkdnd in /home/jenkins/agent/workspace/carry
 [Pipeline] {
 [Pipeline] sh
 + hostname
-+ echo attempt-on-carry-1-3w9n3-qvk81-9h962
-attempt-on-carry-1-3w9n3-qvk81-9h962
++ echo attempt-on-carry-1-xgh06-mdnwk-vkdnd
+attempt-on-carry-1-xgh06-mdnwk-vkdnd
 + test -f out.txt
 + echo workspace-new
 workspace-new
@@ -262,7 +253,7 @@ workspace-new
 Sleeping for 45 sec
 [Pipeline] unstash
 AzureStorage - Need to be downloaded file count =  1
-blob artifacts/carry/1/stashes/out.tgz is downloaded to /home/jenkins/agent/workspace/carry in 00:00:00.022 (HH:mm:ss.S)
+blob artifacts/carry/1/stashes/out.tgz is downloaded to /home/jenkins/agent/workspace/carry in 00:00:00.005 (HH:mm:ss.S)
 Unstash file(s) from out.tgz
 [Pipeline] sh
 + cat out.txt

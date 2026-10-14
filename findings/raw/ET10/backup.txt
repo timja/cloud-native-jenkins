@@ -1,1 +1,1 @@
-backed up cnj-ops/ops to /Users/timja/code/jenkins/cloud-native-jenkins-t15/validation/out/backup:  28K database, 3.1M blobs
+backed up cnj-ops/ops to /home/timja/code/cnj-t16/validation/out/kind/backup: 28K database, 2.2M blobs

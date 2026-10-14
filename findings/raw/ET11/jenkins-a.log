@@ -1,0 +1,53 @@
+jenkins-a-1  | Running from: /war-override/jenkins.war
+jenkins-a-1  | webroot: /var/jenkins_home/war
+jenkins-a-1  | 2026-10-14 11:52:44.352+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-14 11:52:44.588+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-14 11:52:44.622+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-14 11:52:44.873+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-14 11:52:44.903+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-14 11:52:45.143+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-14 11:52:45.209+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@77eb5790{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@68e7c8c3{STARTED}}
+jenkins-a-1  | 2026-10-14 11:52:45.223+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@7c62ad14{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-14 11:52:45.224+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@2b22a1cc{STARTING}[12.1.14,sto=0] @603ms
+jenkins-a-1  | 2026-10-14 11:52:45.228+0000 [id=67]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-14 11:52:45.300+0000 [id=60]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-14 11:52:45.355+0000 [id=74]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 11:52:47.254+0000 [id=106]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 11:52:48.789+0000 [id=117]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 11:52:48.799+0000 [id=117]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 11:52:48.801+0000 [id=85]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 11:52:48.839+0000 [id=117]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 11:52:48.846+0000 [id=117]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 11:52:48.846+0000 [id=117]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 11:52:48.846+0000 [id=117]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 11:52:49.016+0000 [id=117]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-14 11:52:49.219+0000 [id=117]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-a-1  | 2026-10-14 11:52:49.678+0000 [id=117]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.azure.AzureBlobStoreProvider
+jenkins-a-1  | 2026-10-14 11:52:49.776+0000 [id=117]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-a-1  | 2026-10-14 11:52:50.025+0000 [id=90]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 11:52:50.420+0000 [id=90]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_b6e0369cf1121aa015df5dfc54e7df120f37b461a8fd493ed6a3000ef29f7ce7/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-14 11:52:50.532+0000 [id=90]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 11:52:50.533+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 11:52:50.534+0000 [id=108]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-14 11:52:50.535+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 11:52:50.538+0000 [id=100]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-14 11:52:50.542+0000 [id=116]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_b6e0369cf1121aa015df5dfc54e7df120f37b461a8fd493ed6a3000ef29f7ce7 duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-14 11:52:50.682+0000 [id=100]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-a-1  | cnj: added the blob storage credential cnj-blob for account devstoreaccount1
+jenkins-a-1  | 2026-10-14 11:52:50.757+0000 [id=100]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 11:52:50.779+0000 [id=60]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-14 11:52:51.513+0000 [id=184]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-a-1  | 2026-10-14 11:52:51.527+0000 [id=36]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-a-1  | 2026-10-14 11:52:51.593+0000 [id=61]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-a-1  | 2026-10-14 11:52:51.656+0000 [id=63]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-a-1  | 2026-10-14 11:52:51.726+0000 [id=29]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-a-1  | 2026-10-14 11:52:51.790+0000 [id=31]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-a-1  | 2026-10-14 11:52:52.889+0000 [id=34]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-a-1  | 2026-10-14 11:52:52.954+0000 [id=35]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-a-1  | 2026-10-14 11:52:54.031+0000 [id=61]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-a-1  | 2026-10-14 11:52:54.069+0000 [id=66]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
+jenkins-a-1  | 2026-10-14 11:52:55.354+0000 [id=64]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
+jenkins-a-1  | 2026-10-14 11:52:55.593+0000 [id=181]	INFO	i.j.p.cluster.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster (unchanged, newer check)
+jenkins-a-1  | 2026-10-14 11:52:59.157+0000 [id=128]	INFO	i.j.p.c.p.SchemaMigrations#run: Schema migration store-size done
+jenkins-a-1  | 2026-10-14 11:53:01.682+0000 [id=173]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: fs11 #1
+jenkins-a-1  | 2026-10-14 11:53:01.858+0000 [id=262]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: p11 #1

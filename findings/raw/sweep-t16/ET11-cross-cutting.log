@@ -1,0 +1,28 @@
+[12:52:38] Jenkins on 20589 is up (7s)
+[12:52:50] Jenkins on 20581 is up (7s)
+[12:52:51] Jenkins on 20582 is up (1s)
+## ET11 results (2026-10-14T11:52Z)
+
+| | Check |
+|---|---|
+[12:52:51] scenario 1: A and B save different global settings at the same moment, 10 times
+| ℹ️ | 1 rounds where both changes survived on both controllers: 10/10; writes merged: 10 |
+| ✅ | 1 both changes survive every round, on both controllers (10/10) |
+| ✅ | 1 stored config.xml has both (round 10) |
+[12:52:55] scenario 2: A and B set the system message at the same moment
+| ℹ️ | 2 A says 'from A', B says 'from A'; conflicting writes: 1 |
+| ✅ | 2 A and B agree on one of the two values |
+[12:52:58] scenario 3: A changes a job's description while B adds a trigger
+| ✅ | 3 description (A) and trigger (B) both survive, on both controllers (3/3) |
+[12:53:01] scenario 4: a standard scenario, then what each home holds that the cluster does not share
+| ℹ️ | 4 A writes, unshared: nothing |
+| ℹ️ | 4 B writes, unshared: nothing |
+| ✅ | 4 A's home holds nothing the cluster does not share |
+| ✅ | 4 B's home holds nothing the cluster does not share |
+[12:54:06] scenario 5: something writes unshared state under A's home
+| ℹ️ | 5 A writes, unshared: foo-bad/state.xml (1, e.g. foo-bad/state.xml) |
+| ✅ | 5 the report names it (foo-bad/state.xml) |
+| ✅ | 5 and it is the only finding |
+
+Failures: 0
+ET11 exit=0

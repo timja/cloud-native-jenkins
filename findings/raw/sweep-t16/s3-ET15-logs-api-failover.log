@@ -1,0 +1,52 @@
+[12:34:15] Jenkins on 20589 is up (7s)
+[12:34:47] Jenkins on 20581 is up (18s)
+[12:34:47] Jenkins on 20582 is up (0s)
+## ET15 results (2026-10-14T11:34Z)
+
+| | Check |
+|---|---|
+[12:34:47] scenario 1: a chatty Pipeline (300 lines, ~1 minute)
+| ✅ | 1 while it runs, B's API shows it as the last build, building |
+| ✅ | 1 ... and first in builds[] |
+| ✅ | 1 ... and B's /lastBuild/api/json is the running build (redirected and forwarded to A) |
+| ✅ | 1 completes |
+| ✅ | 1 the log was compacted into one object once complete |
+| ℹ️ | 1 log chunks left after completion: 0 |
+| ✅ | 1 B shows the whole log, in order |
+| ✅ | 1 after completion, B's API shows the completed build |
+[12:35:52] scenario 2: A killed after its build's log rolled over; B adopts and continues
+| ✅ | 2 B adopts within 30 s |
+| ℹ️ | 2 adopted 6 s after the kill |
+| ✅ | 2 completes on B |
+| ✅ | 2 the whole log, in order, across the segments of both owners |
+| ℹ️ | 2 log segments: 0 |
+[12:37:29] Jenkins on 20581 is up (7s)
+[12:37:29] scenario 3: renaming a job and its folder from B while the job builds on A
+| ✅ | 3 renaming the job from B is refused (400) |
+| ✅ | 3 renaming its folder from B is refused (400) |
+| ✅ | 3 the build completes, with its whole log on B |
+| ✅ | 3 ... in order |
+[12:38:11] scenario 4: failover time (SIGKILL three times, a clean stop, and a pause shorter than the timeout)
+| ℹ️ | 4 SIGKILL run 1: adopted 5.2 s after the kill |
+[12:39:05] Jenkins on 20581 is up (6s)
+| ℹ️ | 4 SIGKILL run 2: adopted 5.4 s after the kill |
+[12:39:59] Jenkins on 20581 is up (7s)
+| ℹ️ | 4 SIGKILL run 3: adopted 5.6 s after the kill |
+[12:40:53] Jenkins on 20581 is up (7s)
+| ✅ | 4 every adoption after a SIGKILL within 12 s (the session lock is freed with the process) |
+| ✅ | 4 every adopted build completed |
+| ℹ️ | 4 clean stop: adopted 5.5 s after docker stop began |
+| ✅ | 4 after a clean stop, adopted within 30 s of the stop beginning (shutdown included) |
+| ✅ | 4 ... and completed |
+[12:41:48] Jenkins on 20581 is up (7s)
+| ✅ | 4 a 12 s pause is not taken for a death (no adoption) |
+| ✅ | 4 ... and the build completes on A |
+[12:42:41] scenario 5: a freestyle build on A printing a line a second; A killed
+| ✅ | 5 the build is closed as aborted on B |
+| ℹ️ | 5 B's console of the closed build ends at tick 14 |
+| ✅ | 5 ... and keeps what it printed (ticks 1 to at least 12, in order) |
+| ✅ | 5 ... then why it ended |
+[12:43:09] Jenkins on 20581 is up (7s)
+
+Failures: 0
+ET15 exit=0

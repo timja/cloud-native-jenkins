@@ -1,355 +1,197 @@
 jenkins-b-1  | Running from: /war-override/jenkins.war
 jenkins-b-1  | webroot: /var/jenkins_home/war
-jenkins-b-1  | 2026-10-13 18:48:17.309+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-b-1  | 2026-10-13 18:48:17.799+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-b-1  | 2026-10-13 18:48:17.847+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-b-1  | 2026-10-13 18:48:18.110+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-b-1  | 2026-10-13 18:48:18.220+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-b-1  | 2026-10-13 18:48:18.537+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-b-1  | 2026-10-13 18:48:18.621+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-b-1  | 2026-10-13 18:48:18.636+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1160998f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-b-1  | 2026-10-13 18:48:18.636+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @790ms
-jenkins-b-1  | 2026-10-13 18:48:18.637+0000 [id=41]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-b-1  | 2026-10-13 18:48:18.698+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-b-1  | 2026-10-13 18:48:18.747+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-b-1  | 2026-10-13 18:48:21.350+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-b-1  | 2026-10-13 18:48:27.938+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-b-1  | 2026-10-13 18:48:28.225+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-b-1  | 2026-10-13 18:48:28.254+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-b-1  | 2026-10-13 18:48:28.815+0000 [id=60]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-b-1  | 2026-10-13 18:48:28.849+0000 [id=60]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-b-1  | 2026-10-13 18:48:28.851+0000 [id=60]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-b-1  | 2026-10-13 18:48:28.852+0000 [id=60]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-b-1  | 2026-10-13 18:48:29.497+0000 [id=60]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-b-1  | 2026-10-13 18:48:30.029+0000 [id=60]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-b-1  | 2026-10-13 18:48:33.260+0000 [id=60]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-b-1  | 2026-10-13 18:48:35.366+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-b-1  | 2026-10-13 18:48:37.538+0000 [id=50]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_6ea74f4e2942667697a1f6d013921f1648bf98921ec0f13ec838261fb9fd0dcd/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-b-1  | 2026-10-13 18:48:38.082+0000 [id=50]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_6ea74f4e2942667697a1f6d013921f1648bf98921ec0f13ec838261fb9fd0dcd/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-b-1  | 2026-10-13 18:48:38.510+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-b-1  | 2026-10-13 18:48:38.513+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-b-1  | 2026-10-13 18:48:38.515+0000 [id=59]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-b-1  | 2026-10-13 18:48:38.568+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-b-1  | 2026-10-13 18:48:38.597+0000 [id=48]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6ea74f4e2942667697a1f6d013921f1648bf98921ec0f13ec838261fb9fd0dcd duplicates one seen earlier for admin
-jenkins-b-1  | 2026-10-13 18:48:38.601+0000 [id=55]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-b-1  | 2026-10-13 18:48:38.687+0000 [id=107]	INFO	j.persistence.ItemChangeApplier#run: Failed to apply ChangeEvent[kind=WRITTEN, key=users/admin_6ea74f4e2942667697a1f6d013921f1648bf98921ec0f13ec838261fb9fd0dcd/config.xml, oldKey=null, version=9223372036854775807, origin=(merged here)]; retrying (1/8)
-jenkins-b-1  | java.lang.IllegalStateException: User admin has a save pending; applying the change later
-jenkins-b-1  | 	at hudson.model.User.changedElsewhere(User.java:1242)
-jenkins-b-1  | 	at jenkins.persistence.StaticStateApplier.apply(StaticStateApplier.java:75)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.written(ItemChangeApplier.java:257)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.lambda$apply$5(ItemChangeApplier.java:227)
-jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.applyingRemoteChange(PersistenceStores.java:183)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.apply(ItemChangeApplier.java:225)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.run(ItemChangeApplier.java:200)
-jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-13 18:48:38.708+0000 [id=107]	INFO	j.persistence.ItemChangeApplier#run: Failed to apply ChangeEvent[kind=WRITTEN, key=users/admin_6ea74f4e2942667697a1f6d013921f1648bf98921ec0f13ec838261fb9fd0dcd/config.xml, oldKey=null, version=9223372036854775807, origin=(merged here)]; retrying (1/8)
-jenkins-b-1  | java.lang.IllegalStateException: User admin has a save pending; applying the change later
-jenkins-b-1  | 	at hudson.model.User.changedElsewhere(User.java:1242)
-jenkins-b-1  | 	at jenkins.persistence.StaticStateApplier.apply(StaticStateApplier.java:75)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.written(ItemChangeApplier.java:257)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.lambda$apply$5(ItemChangeApplier.java:227)
-jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.applyingRemoteChange(PersistenceStores.java:183)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.apply(ItemChangeApplier.java:225)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.run(ItemChangeApplier.java:200)
-jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-13 18:48:39.700+0000 [id=55]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-b-1  | 2026-10-13 18:48:39.978+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-b-1  | 2026-10-13 18:48:40.005+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-b-1  | 2026-10-13 18:48:40.698+0000 [id=107]	INFO	j.persistence.ItemChangeApplier#run: Failed to apply ChangeEvent[kind=WRITTEN, key=users/admin_6ea74f4e2942667697a1f6d013921f1648bf98921ec0f13ec838261fb9fd0dcd/config.xml, oldKey=null, version=9223372036854775807, origin=(merged here)]; retrying (1/8)
-jenkins-b-1  | java.lang.IllegalStateException: User admin has a save pending; applying the change later
-jenkins-b-1  | 	at hudson.model.User.changedElsewhere(User.java:1242)
-jenkins-b-1  | 	at jenkins.persistence.StaticStateApplier.apply(StaticStateApplier.java:75)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.written(ItemChangeApplier.java:257)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.lambda$apply$5(ItemChangeApplier.java:227)
-jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.applyingRemoteChange(PersistenceStores.java:183)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.apply(ItemChangeApplier.java:225)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.run(ItemChangeApplier.java:200)
-jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-13 18:48:41.342+0000 [id=109]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
-jenkins-b-1  | 2026-10-13 18:48:43.539+0000 [id=86]	INFO	i.j.p.c.store.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster (unchanged, newer check)
-jenkins-b-1  | 2026-10-13 18:48:47.628+0000 [id=35]	WARNING	jenkins.agents.WebSocketAgents#doIndex: incorrect secret for agent1
-jenkins-b-1  | 2026-10-13 18:48:49.662+0000 [id=42]	INFO	winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty
-jenkins-b-1  | 2026-10-13 18:48:49.672+0000 [id=42]	INFO	org.eclipse.jetty.server.Server#doStop: Stopped oejs.Server@702b06fb{STOPPING}[12.1.14,sto=0]
-jenkins-b-1  | 2026-10-13 18:48:49.689+0000 [id=42]	INFO	o.e.j.server.AbstractConnector#doStop: Stopped oejs.ServerConnector@1160998f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-b-1  | 2026-10-13 18:48:49.711+0000 [id=42]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Stopping Jenkins
-jenkins-b-1  | 2026-10-13 18:48:49.808+0000 [id=42]	INFO	jenkins.model.Jenkins$13#onAttained: Started termination
-jenkins-b-1  | 2026-10-13 18:48:49.839+0000 [id=42]	INFO	jenkins.model.Jenkins$13#onAttained: Completed termination
-jenkins-b-1  | 2026-10-13 18:48:49.840+0000 [id=42]	INFO	jenkins.model.Jenkins#_cleanUpDisconnectComputers: Starting node disconnection
-jenkins-b-1  | 2026-10-13 18:48:49.870+0000 [id=42]	INFO	jenkins.model.Jenkins#_cleanUpShutdownPluginManager: Stopping plugin manager
-jenkins-b-1  | 2026-10-13 18:48:49.893+0000 [id=42]	INFO	jenkins.model.Jenkins#_cleanUpPersistQueue: Persisting build queue
-jenkins-b-1  | 2026-10-13 18:48:49.899+0000 [id=42]	INFO	jenkins.model.Jenkins#_cleanUpAwaitDisconnects: Waiting for node disconnection completion
-jenkins-b-1  | 2026-10-13 18:48:49.900+0000 [id=42]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Jenkins stopped
-jenkins-b-1  | 2026-10-13 18:48:49.918+0000 [id=42]	INFO	winstone.Logger#logInternal: Jetty shutdown successfully
-jenkins-b-1  | 2026-10-13 18:48:49.919+0000 [id=41]	INFO	winstone.Logger#logInternal: Control thread shutdown successfully
+jenkins-b-1  | 2026-10-14 11:33:04.746+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-14 11:33:04.998+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-14 11:33:05.028+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-14 11:33:05.237+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-14 11:33:05.265+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-14 11:33:05.459+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-14 11:33:05.512+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@77eb5790{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@68e7c8c3{STARTED}}
+jenkins-b-1  | 2026-10-14 11:33:05.517+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@396639b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-14 11:33:05.517+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@62573c86{STARTING}[12.1.14,sto=0] @490ms
+jenkins-b-1  | 2026-10-14 11:33:05.517+0000 [id=66]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-14 11:33:05.575+0000 [id=60]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-14 11:33:05.615+0000 [id=72]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-14 11:33:07.212+0000 [id=82]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-14 11:33:08.747+0000 [id=102]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-14 11:33:08.755+0000 [id=117]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-14 11:33:08.756+0000 [id=73]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-14 11:33:08.788+0000 [id=100]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-b-1  | 2026-10-14 11:33:08.795+0000 [id=100]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-b-1  | 2026-10-14 11:33:08.795+0000 [id=100]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-b-1  | 2026-10-14 11:33:08.796+0000 [id=100]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-b-1  | 2026-10-14 11:33:08.945+0000 [id=100]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-14 11:33:09.147+0000 [id=100]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-14 11:33:09.692+0000 [id=100]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.azure.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-14 11:33:10.134+0000 [id=111]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-14 11:33:10.607+0000 [id=111]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: config.xml was changed meanwhile; merged both changes
+jenkins-b-1  | 2026-10-14 11:33:10.664+0000 [id=111]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-14 11:33:10.665+0000 [id=96]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-14 11:33:10.666+0000 [id=107]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-14 11:33:10.675+0000 [id=101]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-14 11:33:10.678+0000 [id=110]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-14 11:33:10.680+0000 [id=102]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_5fe328def022ab1f58ccf7c4fabde65ff7bdf4dd56d6c18eabe9f9958097b855 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-14 11:33:10.795+0000 [id=110]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-b-1  | 2026-10-14 11:33:10.831+0000 [id=110]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-14 11:33:10.852+0000 [id=60]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-14 11:33:11.709+0000 [id=182]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-b-1  | 2026-10-14 11:33:15.676+0000 [id=177]	INFO	i.j.p.cluster.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster (unchanged, newer check)
+jenkins-b-1  | 2026-10-14 11:33:20.999+0000 [id=67]	INFO	winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty
+jenkins-b-1  | 2026-10-14 11:33:21.000+0000 [id=67]	INFO	org.eclipse.jetty.server.Server#doStop: Stopped oejs.Server@62573c86{STOPPING}[12.1.14,sto=0]
+jenkins-b-1  | 2026-10-14 11:33:21.001+0000 [id=67]	INFO	o.e.j.server.AbstractConnector#doStop: Stopped oejs.ServerConnector@396639b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-14 11:33:21.003+0000 [id=67]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Stopping Jenkins
+jenkins-b-1  | 2026-10-14 11:33:21.008+0000 [id=67]	INFO	jenkins.model.Jenkins$13#onAttained: Started termination
+jenkins-b-1  | 2026-10-14 11:33:21.013+0000 [id=67]	INFO	jenkins.model.Jenkins$13#onAttained: Completed termination
+jenkins-b-1  | 2026-10-14 11:33:21.013+0000 [id=67]	INFO	jenkins.model.Jenkins#_cleanUpDisconnectComputers: Starting node disconnection
+jenkins-b-1  | 2026-10-14 11:33:21.019+0000 [id=67]	INFO	jenkins.model.Jenkins#_cleanUpShutdownPluginManager: Stopping plugin manager
+jenkins-b-1  | 2026-10-14 11:33:21.020+0000 [id=67]	INFO	jenkins.model.Jenkins#_cleanUpPersistQueue: Persisting build queue
+jenkins-b-1  | 2026-10-14 11:33:21.021+0000 [id=67]	INFO	jenkins.model.Jenkins#_cleanUpAwaitDisconnects: Waiting for node disconnection completion
+jenkins-b-1  | 2026-10-14 11:33:21.021+0000 [id=67]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Jenkins stopped
+jenkins-b-1  | 2026-10-14 11:33:21.023+0000 [id=67]	INFO	winstone.Logger#logInternal: Jetty shutdown successfully
 jenkins-b-1  | Running from: /war-override/jenkins.war
 jenkins-b-1  | webroot: /var/jenkins_home/war
-jenkins-b-1  | 2026-10-13 18:49:27.740+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-b-1  | 2026-10-13 18:49:28.882+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-b-1  | 2026-10-13 18:49:29.004+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-b-1  | 2026-10-13 18:49:29.700+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-b-1  | 2026-10-13 18:49:29.802+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-b-1  | 2026-10-13 18:49:30.271+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-b-1  | 2026-10-13 18:49:30.375+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-b-1  | 2026-10-13 18:49:30.385+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-b-1  | 2026-10-13 18:49:30.385+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @1382ms
-jenkins-b-1  | 2026-10-13 18:49:30.387+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-b-1  | 2026-10-13 18:49:30.499+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-b-1  | 2026-10-13 18:49:30.632+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-b-1  | 2026-10-13 18:49:33.347+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-b-1  | 2026-10-13 18:49:39.399+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-b-1  | 2026-10-13 18:49:39.474+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-b-1  | 2026-10-13 18:49:39.477+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-b-1  | 2026-10-13 18:49:39.544+0000 [id=51]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-b-1  | 2026-10-13 18:49:39.564+0000 [id=51]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-b-1  | 2026-10-13 18:49:39.565+0000 [id=51]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-b-1  | 2026-10-13 18:49:39.566+0000 [id=51]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-b-1  | 2026-10-13 18:49:40.196+0000 [id=51]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-b-1  | 2026-10-13 18:49:40.642+0000 [id=51]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-b-1  | 2026-10-13 18:49:41.598+0000 [id=51]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-b-1  | 2026-10-13 18:49:41.767+0000 [id=51]	INFO	i.j.p.c.store.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
-jenkins-b-1  | 2026-10-13 18:49:42.544+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-b-1  | 2026-10-13 18:49:43.236+0000 [id=49]	WARNING	j.p.PersistenceStores$Route#mergeAndWrite: users/admin_6ea74f4e2942667697a1f6d013921f1648bf98921ec0f13ec838261fb9fd0dcd/config.xml was changed meanwhile; merged, but 1 part(s) changed on both sides keep this controller's version
-jenkins-b-1  | 2026-10-13 18:49:43.338+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-b-1  | 2026-10-13 18:49:47.777+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-b-1  | 2026-10-13 18:49:47.779+0000 [id=57]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-b-1  | 2026-10-13 18:49:47.789+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-b-1  | 2026-10-13 18:49:47.833+0000 [id=46]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-b-1  | 2026-10-13 18:49:47.835+0000 [id=45]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6ea74f4e2942667697a1f6d013921f1648bf98921ec0f13ec838261fb9fd0dcd duplicates one seen earlier for admin
-jenkins-b-1  | 2026-10-13 18:49:47.901+0000 [id=109]	INFO	j.persistence.ItemChangeApplier#run: Failed to apply ChangeEvent[kind=WRITTEN, key=users/admin_6ea74f4e2942667697a1f6d013921f1648bf98921ec0f13ec838261fb9fd0dcd/config.xml, oldKey=null, version=9223372036854775807, origin=(merged here)]; retrying (1/8)
-jenkins-b-1  | java.lang.IllegalStateException: User admin has a save pending; applying the change later
-jenkins-b-1  | 	at hudson.model.User.changedElsewhere(User.java:1242)
-jenkins-b-1  | 	at jenkins.persistence.StaticStateApplier.apply(StaticStateApplier.java:75)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.written(ItemChangeApplier.java:257)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.lambda$apply$5(ItemChangeApplier.java:227)
-jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.applyingRemoteChange(PersistenceStores.java:183)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.apply(ItemChangeApplier.java:225)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.run(ItemChangeApplier.java:200)
-jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-13 18:49:48.131+0000 [id=46]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-b-1  | 2026-10-13 18:49:48.200+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-b-1  | 2026-10-13 18:49:48.274+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-b-1  | 2026-10-13 18:49:49.908+0000 [id=109]	INFO	j.persistence.ItemChangeApplier#run: Failed to apply ChangeEvent[kind=WRITTEN, key=users/admin_6ea74f4e2942667697a1f6d013921f1648bf98921ec0f13ec838261fb9fd0dcd/config.xml, oldKey=null, version=9223372036854775807, origin=(merged here)]; retrying (1/8)
-jenkins-b-1  | java.lang.IllegalStateException: User admin has a save pending; applying the change later
-jenkins-b-1  | 	at hudson.model.User.changedElsewhere(User.java:1242)
-jenkins-b-1  | 	at jenkins.persistence.StaticStateApplier.apply(StaticStateApplier.java:75)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.written(ItemChangeApplier.java:257)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.lambda$apply$5(ItemChangeApplier.java:227)
-jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.applyingRemoteChange(PersistenceStores.java:183)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.apply(ItemChangeApplier.java:225)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.run(ItemChangeApplier.java:200)
-jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-13 18:49:51.931+0000 [id=109]	INFO	j.persistence.ItemChangeApplier#run: Failed to apply ChangeEvent[kind=WRITTEN, key=users/admin_6ea74f4e2942667697a1f6d013921f1648bf98921ec0f13ec838261fb9fd0dcd/config.xml, oldKey=null, version=9223372036854775807, origin=(merged here)]; retrying (2/8)
-jenkins-b-1  | java.lang.IllegalStateException: User admin has a save pending; applying the change later
-jenkins-b-1  | 	at hudson.model.User.changedElsewhere(User.java:1242)
-jenkins-b-1  | 	at jenkins.persistence.StaticStateApplier.apply(StaticStateApplier.java:75)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.written(ItemChangeApplier.java:257)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.lambda$apply$5(ItemChangeApplier.java:227)
-jenkins-b-1  | 	at jenkins.persistence.PersistenceStores.applyingRemoteChange(PersistenceStores.java:183)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.apply(ItemChangeApplier.java:225)
-jenkins-b-1  | 	at jenkins.persistence.ItemChangeApplier.run(ItemChangeApplier.java:200)
-jenkins-b-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
-jenkins-b-1  | 2026-10-13 18:50:42.281+0000 [id=1780]	INFO	j.p.PersistenceStores$Route#mergeAndWrite: jobs/mb2/branches/b10/config.xml was changed meanwhile; merged both changes
-jenkins-b-1  | 2026-10-13 18:50:52.639+0000 [id=1992]	INFO	o.j.p.s.s.g.SandboxResolvingClassLoader#lambda$load$2: took 1,096ms to load/not load java.io.HashMap from classLoader hudson.PluginManager$UberClassLoader
-jenkins-b-1  | 2026-10-13 18:51:01.239+0000 [id=73]	INFO	i.j.p.c.s.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [275d6416-d66a-49ac-b192-dbda827eaf70]
-jenkins-b-1  | 2026-10-13 18:51:01.312+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb8/b2 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:02.825+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb8/b2 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:03.038+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb8/b5 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:03.620+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb8/b5 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:03.758+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb8/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:03.815+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb8/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:03.919+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb8/b7 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:03.958+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb8/main #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:04.008+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb8/main #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:04.053+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb8/main #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:04.087+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb6/b5 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:04.122+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb6/b5 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:04.201+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb6/b5 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:04.306+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb6/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:04.327+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb6/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:04.455+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb6/b7 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:04.741+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb6/b9 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:04.763+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb6/b9 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:04.885+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb6/b9 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:05.055+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb2/b3 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:05.119+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb2/b3 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:05.772+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb2/b3 #1 (SUCCESS): This build completed on jenkins-c, which was gone before publishing its record; it is closed with its result.
-jenkins-b-1  | 2026-10-13 18:51:05.815+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb2/b6 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:05.816+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb2/b6 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:05.903+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb2/b6 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:05.971+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb2/b8 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:06.017+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb2/b8 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:06.177+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb2/b8 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:06.366+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb2/main #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:06.376+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb2/main #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:06.459+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb2/main #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:06.529+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb19/b2 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:06.586+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb19/b2 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:06.975+0000 [id=1994]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb17 » b10 #1
-jenkins-b-1  | 2026-10-13 18:51:06.975+0000 [id=2731]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b3 #1
-jenkins-b-1  | 2026-10-13 18:51:06.976+0000 [id=1951]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb4 » b7 #1
-jenkins-b-1  | 2026-10-13 18:51:06.976+0000 [id=2312]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb26 » b6 #1
-jenkins-b-1  | 2026-10-13 18:51:06.976+0000 [id=1990]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b9 #1
-jenkins-b-1  | 2026-10-13 18:51:06.985+0000 [id=1940]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b2 #1
-jenkins-b-1  | 2026-10-13 18:51:06.990+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb19/b2 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:07.062+0000 [id=3242]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b3 #1
-jenkins-b-1  | 2026-10-13 18:51:07.075+0000 [id=3222]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b9 #1
-jenkins-b-1  | 2026-10-13 18:51:07.079+0000 [id=2781]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b4 #1
-jenkins-b-1  | 2026-10-13 18:51:07.082+0000 [id=3532]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb17 » b7 #1
-jenkins-b-1  | 2026-10-13 18:51:07.096+0000 [id=1952]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b7 #1
-jenkins-b-1  | 2026-10-13 18:51:07.101+0000 [id=3530]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b5 #1
-jenkins-b-1  | 2026-10-13 18:51:07.102+0000 [id=3528]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb15 » b2 #1
-jenkins-b-1  | 2026-10-13 18:51:07.103+0000 [id=3239]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb4 » b4 #1
-jenkins-b-1  | 2026-10-13 18:51:07.106+0000 [id=2730]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb15 » main #1
-jenkins-b-1  | 2026-10-13 18:51:07.106+0000 [id=2567]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b5 #1
-jenkins-b-1  | 2026-10-13 18:51:07.118+0000 [id=1959]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb4 » b6 #1
-jenkins-b-1  | 2026-10-13 18:51:07.128+0000 [id=3526]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb4 » b10 #1
-jenkins-b-1  | 2026-10-13 18:51:07.131+0000 [id=1948]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b10 #1
-jenkins-b-1  | 2026-10-13 18:51:07.134+0000 [id=1989]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b4 #1
-jenkins-b-1  | 2026-10-13 18:51:07.138+0000 [id=1993]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b4 #1
-jenkins-b-1  | 2026-10-13 18:51:07.140+0000 [id=3537]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb22 » b5 #1
-jenkins-b-1  | 2026-10-13 18:51:07.144+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb19/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:07.146+0000 [id=1949]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b6 #1
-jenkins-b-1  | 2026-10-13 18:51:07.148+0000 [id=3252]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b8 #1
-jenkins-b-1  | 2026-10-13 18:51:07.150+0000 [id=1991]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb27 » main #1
-jenkins-b-1  | 2026-10-13 18:51:07.150+0000 [id=2596]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b8 #1
-jenkins-b-1  | 2026-10-13 18:51:07.155+0000 [id=3247]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb22 » b6 #1
-jenkins-b-1  | 2026-10-13 18:51:07.164+0000 [id=3536]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » main #1
-jenkins-b-1  | 2026-10-13 18:51:07.166+0000 [id=3251]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb4 » b5 #1
-jenkins-b-1  | 2026-10-13 18:51:07.216+0000 [id=1984]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb22 » b7 #1
-jenkins-b-1  | 2026-10-13 18:51:07.250+0000 [id=3250]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb27 » b4 #1
-jenkins-b-1  | 2026-10-13 18:51:07.261+0000 [id=3531]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb4 » b9 #1
-jenkins-b-1  | 2026-10-13 18:51:07.314+0000 [id=3206]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb26 » b2 #1
-jenkins-b-1  | 2026-10-13 18:51:07.317+0000 [id=2758]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b6 #1
-jenkins-b-1  | 2026-10-13 18:51:07.331+0000 [id=1950]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b3 #1
-jenkins-b-1  | 2026-10-13 18:51:07.331+0000 [id=2777]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » main #1
-jenkins-b-1  | 2026-10-13 18:51:07.332+0000 [id=2736]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b4 #1
-jenkins-b-1  | 2026-10-13 18:51:07.332+0000 [id=3527]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb15 » b3 #1
-jenkins-b-1  | 2026-10-13 18:51:07.332+0000 [id=2754]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb15 » b5 #1
-jenkins-b-1  | 2026-10-13 18:51:07.333+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb19/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:07.341+0000 [id=3245]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b6 #1
-jenkins-b-1  | 2026-10-13 18:51:07.362+0000 [id=1943]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb15 » b7 #1
-jenkins-b-1  | 2026-10-13 18:51:07.364+0000 [id=3175]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b3 #1
-jenkins-b-1  | 2026-10-13 18:51:07.364+0000 [id=1983]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb26 » b3 #1
-jenkins-b-1  | 2026-10-13 18:51:07.396+0000 [id=1986]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb15 » b6 #1
-jenkins-b-1  | 2026-10-13 18:51:07.397+0000 [id=1985]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b8 #1
-jenkins-b-1  | 2026-10-13 18:51:07.413+0000 [id=3529]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b3 #1
-jenkins-b-1  | 2026-10-13 18:51:07.460+0000 [id=1992]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb4 » b8 #1
-jenkins-b-1  | 2026-10-13 18:51:07.498+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb19/b7 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:07.692+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb19/b9 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:07.724+0000 [id=3255]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b9 #1
-jenkins-b-1  | 2026-10-13 18:51:07.726+0000 [id=3533]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb15 » b10 #1
-jenkins-b-1  | 2026-10-13 18:51:07.768+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb19/b9 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:07.983+0000 [id=3253]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb27 » b6 #1
-jenkins-b-1  | 2026-10-13 18:51:08.379+0000 [id=2732]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b5 #1
-jenkins-b-1  | 2026-10-13 18:51:08.409+0000 [id=1941]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb22 » b10 #1
-jenkins-b-1  | 2026-10-13 18:51:08.412+0000 [id=2441]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb4 » main #1
-jenkins-b-1  | 2026-10-13 18:51:08.446+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb19/b9 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:08.561+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb18/b6 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:08.790+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb18/b6 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:09.026+0000 [id=3526]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb17 » b3 #1
-jenkins-b-1  | 2026-10-13 18:51:09.350+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb18/b6 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:09.696+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb18/b9 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:09.704+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb18/b9 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:09.890+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb18/b9 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:09.943+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b10 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:09.945+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b10 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:10.059+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb14/b10 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:10.107+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b3 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:10.123+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b3 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:10.198+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb14/b3 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:10.217+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b4 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:10.276+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b4 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:10.313+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb14/b4 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:10.379+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b5 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:10.394+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b5 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:10.554+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb14/b5 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:10.707+0000 [id=3527]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b4 #1
-jenkins-b-1  | 2026-10-13 18:51:10.738+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b6 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:10.757+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b6 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:10.812+0000 [id=1941]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » main #1
-jenkins-b-1  | 2026-10-13 18:51:10.939+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb14/b6 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:10.958+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:11.064+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:11.188+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb14/b7 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:11.259+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b8 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:11.298+0000 [id=1940]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb26 » main #1
-jenkins-b-1  | 2026-10-13 18:51:11.606+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/b8 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:11.740+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb14/b8 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:11.757+0000 [id=3527]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb4 » b3 #1
-jenkins-b-1  | 2026-10-13 18:51:11.878+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/main #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:12.010+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb14/main #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:12.031+0000 [id=1941]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b10 #1
-jenkins-b-1  | 2026-10-13 18:51:12.108+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb14/main #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:12.205+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb11/b3 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:12.211+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb11/b3 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:12.565+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb11/b3 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:12.631+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb11/b5 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:12.725+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb11/b5 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:12.886+0000 [id=3522]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb11/b5 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:12.908+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb11/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:12.957+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb11/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:13.236+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb11/b7 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:13.878+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb11/b8 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:14.055+0000 [id=1991]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb4 » b2 #1
-jenkins-b-1  | 2026-10-13 18:51:14.097+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb11/b8 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:14.355+0000 [id=3175]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb15 » b8 #1
-jenkins-b-1  | 2026-10-13 18:51:14.398+0000 [id=3533]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b7 #1
-jenkins-b-1  | 2026-10-13 18:51:14.727+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb11/b8 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:15.030+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb11/main #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:15.069+0000 [id=1943]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b7 #1
-jenkins-b-1  | 2026-10-13 18:51:15.199+0000 [id=77]	WARNING	reactor.util.Loggers$Slf4JLogger#warn: [1bed7a59-4, L:/172.31.0.8:54490 - R:azurite/172.31.0.2:10000] The connection observed an error, the request cannot be retried as the headers/body were sent
-jenkins-b-1  | io.netty.channel.unix.Errors$NativeIoException: recvAddress(..) failed with error(-104): Connection reset by peer
-jenkins-b-1  | 2026-10-13 18:51:15.343+0000 [id=1943]	SEVERE	c.a.c.util.logging.ClientLogger#performLogging: io.netty.channel.unix.Errors$NativeIoException: recvAddress(..) failed with error(-104): Connection reset by peer
-jenkins-b-1  | 2026-10-13 18:51:15.445+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb11/main #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:15.501+0000 [id=2596]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb15 » b9 #1
-jenkins-b-1  | 2026-10-13 18:51:15.642+0000 [id=3242]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb17 » b5 #1
-jenkins-b-1  | 2026-10-13 18:51:15.731+0000 [id=1940]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb17 » b2 #1
-jenkins-b-1  | 2026-10-13 18:51:15.742+0000 [id=2730]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb15 » b4 #1
-jenkins-b-1  | 2026-10-13 18:51:16.041+0000 [id=1951]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b2 #1
-jenkins-b-1  | 2026-10-13 18:51:16.172+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb11/main #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:16.181+0000 [id=1989]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b9 #1
-jenkins-b-1  | 2026-10-13 18:51:16.197+0000 [id=3531]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb27 » b3 #1
-jenkins-b-1  | 2026-10-13 18:51:16.414+0000 [id=89]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb10/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:16.477+0000 [id=3522]	INFO	j.persistence.RunningBuilds#removeStale: Removing placeholder of mb10/b7 #1 left by jenkins-c (275d6416-d66a-49ac-b192-dbda827eaf70), which is gone
-jenkins-b-1  | 2026-10-13 18:51:16.635+0000 [id=89]	INFO	jenkins.persistence.BuildRecords#publishLost: Closed mb10/b7 #1 (ABORTED): This build was running on jenkins-c, which is gone, and could not be resumed elsewhere; it is closed as aborted.
-jenkins-b-1  | 2026-10-13 18:51:16.659+0000 [id=3222]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb22 » b8 #1
-jenkins-b-1  | 2026-10-13 18:51:16.691+0000 [id=3529]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b7 #1
-jenkins-b-1  | 2026-10-13 18:51:16.710+0000 [id=1941]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » main #1
-jenkins-b-1  | 2026-10-13 18:51:16.793+0000 [id=89]	INFO	j.persistence.RunningBuilds#lambda$sweepSoon$11: Took care of 34 build(s) of controllers which left the cluster
-jenkins-b-1  | 2026-10-13 18:51:16.808+0000 [id=1992]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b10 #1
-jenkins-b-1  | 2026-10-13 18:51:16.848+0000 [id=3250]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb7 » b2 #1
-jenkins-b-1  | 2026-10-13 18:51:16.923+0000 [id=3253]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b2 #1
-jenkins-b-1  | 2026-10-13 18:51:17.090+0000 [id=3533]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb27 » b10 #1
-jenkins-b-1  | 2026-10-13 18:51:17.092+0000 [id=2312]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » main #1
-jenkins-b-1  | 2026-10-13 18:51:17.099+0000 [id=3526]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb22 » b3 #1
-jenkins-b-1  | 2026-10-13 18:51:17.287+0000 [id=3530]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb27 » b2 #1
-jenkins-b-1  | 2026-10-13 18:51:17.532+0000 [id=3222]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b5 #1
-jenkins-b-1  | 2026-10-13 18:51:17.872+0000 [id=1989]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb27 » b8 #1
-jenkins-b-1  | 2026-10-13 18:51:18.138+0000 [id=3533]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb17 » b4 #1
-jenkins-b-1  | 2026-10-13 18:51:18.188+0000 [id=2312]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb22 » b4 #1
-jenkins-b-1  | 2026-10-13 18:51:18.195+0000 [id=3250]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b7 #1
-jenkins-b-1  | 2026-10-13 18:51:18.349+0000 [id=1985]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b8 #1
-jenkins-b-1  | 2026-10-13 18:51:18.532+0000 [id=3531]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb17 » b6 #1
-jenkins-b-1  | 2026-10-13 18:51:18.828+0000 [id=3526]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb22 » main #1
-jenkins-b-1  | 2026-10-13 18:51:18.894+0000 [id=2441]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb17 » b8 #1
-jenkins-b-1  | 2026-10-13 18:51:19.323+0000 [id=3250]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b6 #1
-jenkins-b-1  | 2026-10-13 18:51:19.499+0000 [id=3526]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb27 » b5 #1
-jenkins-b-1  | 2026-10-13 18:51:19.499+0000 [id=3533]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b10 #1
-jenkins-b-1  | 2026-10-13 18:51:19.542+0000 [id=3531]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb26 » b10 #1
-jenkins-b-1  | 2026-10-13 18:51:19.545+0000 [id=2730]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb22 » b9 #1
-jenkins-b-1  | 2026-10-13 18:51:19.609+0000 [id=3527]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b8 #1
-jenkins-b-1  | 2026-10-13 18:51:19.610+0000 [id=2312]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb17 » b9 #1
-jenkins-b-1  | 2026-10-13 18:51:19.649+0000 [id=3530]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb27 » b9 #1
-jenkins-b-1  | 2026-10-13 18:51:19.716+0000 [id=1943]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b10 #1
-jenkins-b-1  | 2026-10-13 18:51:19.764+0000 [id=2736]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb26 » b4 #1
-jenkins-b-1  | 2026-10-13 18:51:19.788+0000 [id=1994]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb27 » b7 #1
-jenkins-b-1  | 2026-10-13 18:51:19.890+0000 [id=1943]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb22 » b2 #1
-jenkins-b-1  | 2026-10-13 18:51:20.108+0000 [id=3222]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b5 #1
-jenkins-b-1  | 2026-10-13 18:51:20.223+0000 [id=1989]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b2 #1
-jenkins-b-1  | 2026-10-13 18:51:20.230+0000 [id=3531]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b6 #1
-jenkins-b-1  | 2026-10-13 18:51:20.241+0000 [id=3253]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b9 #1
-jenkins-b-1  | 2026-10-13 18:51:20.501+0000 [id=2730]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb17 » main #1
-jenkins-b-1  | 2026-10-13 18:51:20.524+0000 [id=2312]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb26 » b5 #1
-jenkins-b-1  | 2026-10-13 18:51:20.783+0000 [id=1994]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb26 » b8 #1
-jenkins-b-1  | 2026-10-13 18:51:20.837+0000 [id=1989]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb26 » b9 #1
-jenkins-b-1  | 2026-10-13 18:51:20.895+0000 [id=2441]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb26 » b7 #1
+jenkins-b-1  | 2026-10-14 11:33:55.503+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-b-1  | 2026-10-14 11:33:55.760+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-b-1  | 2026-10-14 11:33:55.789+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-b-1  | 2026-10-14 11:33:56.107+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-b-1  | 2026-10-14 11:33:56.152+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-b-1  | 2026-10-14 11:33:56.414+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-b-1  | 2026-10-14 11:33:56.517+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@77eb5790{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@68e7c8c3{STARTED}}
+jenkins-b-1  | 2026-10-14 11:33:56.530+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@396639b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-b-1  | 2026-10-14 11:33:56.531+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@62573c86{STARTING}[12.1.14,sto=0] @743ms
+jenkins-b-1  | 2026-10-14 11:33:56.533+0000 [id=66]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-b-1  | 2026-10-14 11:33:56.615+0000 [id=60]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-b-1  | 2026-10-14 11:33:56.675+0000 [id=72]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-b-1  | 2026-10-14 11:33:59.217+0000 [id=106]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-b-1  | 2026-10-14 11:34:01.270+0000 [id=77]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-b-1  | 2026-10-14 11:34:01.284+0000 [id=88]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-b-1  | 2026-10-14 11:34:01.286+0000 [id=80]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-b-1  | 2026-10-14 11:34:01.332+0000 [id=88]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-b-1  | 2026-10-14 11:34:01.340+0000 [id=88]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-b-1  | 2026-10-14 11:34:01.340+0000 [id=88]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-b-1  | 2026-10-14 11:34:01.340+0000 [id=88]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-b-1  | 2026-10-14 11:34:01.545+0000 [id=88]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-b-1  | 2026-10-14 11:34:01.924+0000 [id=88]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
+jenkins-b-1  | 2026-10-14 11:34:02.518+0000 [id=88]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.azure.AzureBlobStoreProvider
+jenkins-b-1  | 2026-10-14 11:34:02.904+0000 [id=76]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-b-1  | 2026-10-14 11:34:02.976+0000 [id=114]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-b-1  | 2026-10-14 11:34:03.442+0000 [id=94]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-b-1  | 2026-10-14 11:34:05.018+0000 [id=94]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-b-1  | 2026-10-14 11:34:05.018+0000 [id=108]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-b-1  | 2026-10-14 11:34:05.030+0000 [id=83]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-b-1  | 2026-10-14 11:34:05.033+0000 [id=101]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-b-1  | 2026-10-14 11:34:05.036+0000 [id=76]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_5fe328def022ab1f58ccf7c4fabde65ff7bdf4dd56d6c18eabe9f9958097b855 duplicates one seen earlier for admin
+jenkins-b-1  | 2026-10-14 11:34:05.152+0000 [id=101]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-b-1  | 2026-10-14 11:34:05.203+0000 [id=101]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-b-1  | 2026-10-14 11:34:05.228+0000 [id=60]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-b-1  | 2026-10-14 11:34:29.089+0000 [id=899]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b7 #1
+jenkins-b-1  | 2026-10-14 11:34:29.131+0000 [id=2525]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » b8 #1
+jenkins-b-1  | 2026-10-14 11:34:29.149+0000 [id=2134]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b6 #1
+jenkins-b-1  | 2026-10-14 11:34:29.150+0000 [id=1778]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b7 #1
+jenkins-b-1  | 2026-10-14 11:34:29.178+0000 [id=1800]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b6 #1
+jenkins-b-1  | 2026-10-14 11:34:29.205+0000 [id=2302]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b8 #1
+jenkins-b-1  | 2026-10-14 11:34:29.255+0000 [id=903]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b10 #1
+jenkins-b-1  | 2026-10-14 11:34:29.271+0000 [id=1646]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » b9 #1
+jenkins-b-1  | 2026-10-14 11:34:29.272+0000 [id=2526]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b6 #1
+jenkins-b-1  | 2026-10-14 11:34:29.285+0000 [id=2289]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b9 #1
+jenkins-b-1  | 2026-10-14 11:34:29.286+0000 [id=2245]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b8 #1
+jenkins-b-1  | 2026-10-14 11:34:29.297+0000 [id=1780]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b2 #1
+jenkins-b-1  | 2026-10-14 11:34:29.314+0000 [id=2531]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b4 #1
+jenkins-b-1  | 2026-10-14 11:34:29.325+0000 [id=2301]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b10 #1
+jenkins-b-1  | 2026-10-14 11:34:29.346+0000 [id=1427]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » main #1
+jenkins-b-1  | 2026-10-14 11:34:29.347+0000 [id=2226]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » b4 #1
+jenkins-b-1  | 2026-10-14 11:34:29.347+0000 [id=956]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b5 #1
+jenkins-b-1  | 2026-10-14 11:34:29.357+0000 [id=901]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b9 #1
+jenkins-b-1  | 2026-10-14 11:34:29.372+0000 [id=2528]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » b10 #1
+jenkins-b-1  | 2026-10-14 11:34:29.372+0000 [id=958]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b4 #1
+jenkins-b-1  | 2026-10-14 11:34:29.387+0000 [id=957]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » main #1
+jenkins-b-1  | 2026-10-14 11:34:29.405+0000 [id=2515]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b4 #1
+jenkins-b-1  | 2026-10-14 11:34:29.449+0000 [id=954]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » main #1
+jenkins-b-1  | 2026-10-14 11:34:29.464+0000 [id=1441]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » b6 #1
+jenkins-b-1  | 2026-10-14 11:34:29.464+0000 [id=2238]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b3 #1
+jenkins-b-1  | 2026-10-14 11:34:29.478+0000 [id=2244]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b6 #1
+jenkins-b-1  | 2026-10-14 11:34:29.488+0000 [id=902]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b5 #1
+jenkins-b-1  | 2026-10-14 11:34:29.548+0000 [id=1440]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » main #1
+jenkins-b-1  | 2026-10-14 11:34:29.565+0000 [id=1625]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b10 #1
+jenkins-b-1  | 2026-10-14 11:34:29.567+0000 [id=900]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b8 #1
+jenkins-b-1  | 2026-10-14 11:34:29.591+0000 [id=1939]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b3 #1
+jenkins-b-1  | 2026-10-14 11:34:29.594+0000 [id=1637]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » main #1
+jenkins-b-1  | 2026-10-14 11:34:29.595+0000 [id=959]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b4 #1
+jenkins-b-1  | 2026-10-14 11:34:29.610+0000 [id=2228]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b8 #1
+jenkins-b-1  | 2026-10-14 11:34:29.611+0000 [id=2203]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b3 #1
+jenkins-b-1  | 2026-10-14 11:34:29.626+0000 [id=2297]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » b2 #1
+jenkins-b-1  | 2026-10-14 11:34:29.633+0000 [id=2529]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b3 #1
+jenkins-b-1  | 2026-10-14 11:34:29.634+0000 [id=1626]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b2 #1
+jenkins-b-1  | 2026-10-14 11:34:29.646+0000 [id=2116]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b5 #1
+jenkins-b-1  | 2026-10-14 11:34:29.647+0000 [id=960]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » b7 #1
+jenkins-b-1  | 2026-10-14 11:34:29.648+0000 [id=2184]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » b5 #1
+jenkins-b-1  | 2026-10-14 11:34:29.654+0000 [id=1439]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb24 » b3 #1
+jenkins-b-1  | 2026-10-14 11:34:29.655+0000 [id=2317]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b2 #1
+jenkins-b-1  | 2026-10-14 11:34:29.656+0000 [id=2532]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b7 #1
+jenkins-b-1  | 2026-10-14 11:34:29.673+0000 [id=2416]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b7 #1
+jenkins-b-1  | 2026-10-14 11:34:29.685+0000 [id=895]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b9 #1
+jenkins-b-1  | 2026-10-14 11:34:29.705+0000 [id=1882]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb21 » b2 #1
+jenkins-b-1  | 2026-10-14 11:34:29.745+0000 [id=1428]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb25 » b5 #1
+jenkins-b-1  | 2026-10-14 11:34:29.748+0000 [id=1642]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb1 » b10 #1
+jenkins-b-1  | 2026-10-14 11:34:29.787+0000 [id=1641]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb29 » b9 #1
+jenkins-b-1  | 2026-10-14 11:34:31.407+0000 [id=2418]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b10 #1
+jenkins-b-1  | 2026-10-14 11:34:31.499+0000 [id=1625]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b2 #1
+jenkins-b-1  | 2026-10-14 11:34:31.679+0000 [id=901]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb10 » b2 #1
+jenkins-b-1  | 2026-10-14 11:34:32.999+0000 [id=900]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b10 #1
+jenkins-b-1  | 2026-10-14 11:34:33.036+0000 [id=2134]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb10 » b10 #1
+jenkins-b-1  | 2026-10-14 11:34:33.105+0000 [id=2526]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb18 » b3 #1
+jenkins-b-1  | 2026-10-14 11:34:33.130+0000 [id=2228]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb18 » b10 #1
+jenkins-b-1  | 2026-10-14 11:34:33.137+0000 [id=2297]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b3 #1
+jenkins-b-1  | 2026-10-14 11:34:33.164+0000 [id=899]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb10 » b3 #1
+jenkins-b-1  | 2026-10-14 11:34:33.182+0000 [id=2203]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb18 » b5 #1
+jenkins-b-1  | 2026-10-14 11:34:33.184+0000 [id=2531]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b3 #1
+jenkins-b-1  | 2026-10-14 11:34:33.282+0000 [id=895]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b2 #1
+jenkins-b-1  | 2026-10-14 11:34:33.453+0000 [id=2515]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb10 » b6 #1
+jenkins-b-1  | 2026-10-14 11:34:33.516+0000 [id=1939]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb10 » main #1
+jenkins-b-1  | 2026-10-14 11:34:33.568+0000 [id=959]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b8 #1
+jenkins-b-1  | 2026-10-14 11:34:33.643+0000 [id=2529]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb18 » b8 #1
+jenkins-b-1  | 2026-10-14 11:34:33.694+0000 [id=957]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b6 #1
+jenkins-b-1  | 2026-10-14 11:34:33.695+0000 [id=2289]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b9 #1
+jenkins-b-1  | 2026-10-14 11:34:33.710+0000 [id=1780]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b4 #1
+jenkins-b-1  | 2026-10-14 11:34:33.752+0000 [id=2226]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb18 » b6 #1
+jenkins-b-1  | 2026-10-14 11:34:33.766+0000 [id=2302]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb18 » b9 #1
+jenkins-b-1  | 2026-10-14 11:34:33.912+0000 [id=2245]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b7 #1
+jenkins-b-1  | 2026-10-14 11:34:34.051+0000 [id=2317]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b8 #1
+jenkins-b-1  | 2026-10-14 11:34:34.250+0000 [id=1625]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb18 » b4 #1
+jenkins-b-1  | 2026-10-14 11:34:34.319+0000 [id=1800]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » main #1
+jenkins-b-1  | 2026-10-14 11:34:34.565+0000 [id=1778]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb10 » b7 #1
+jenkins-b-1  | 2026-10-14 11:34:34.638+0000 [id=2294]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b6 #1
+jenkins-b-1  | 2026-10-14 11:34:34.640+0000 [id=2416]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb18 » b7 #1
+jenkins-b-1  | 2026-10-14 11:34:34.702+0000 [id=2527]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » b5 #1
+jenkins-b-1  | 2026-10-14 11:34:34.780+0000 [id=2227]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb18 » main #1
+jenkins-b-1  | 2026-10-14 11:34:34.796+0000 [id=902]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b5 #1
+jenkins-b-1  | 2026-10-14 11:34:34.812+0000 [id=2418]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b9 #1
+jenkins-b-1  | 2026-10-14 11:34:34.812+0000 [id=958]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb10 » b5 #1
+jenkins-b-1  | 2026-10-14 11:34:34.889+0000 [id=1624]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb10 » b9 #1
+jenkins-b-1  | 2026-10-14 11:34:34.948+0000 [id=1440]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb11 » b2 #1
+jenkins-b-1  | 2026-10-14 11:34:35.038+0000 [id=903]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb10 » b8 #1
+jenkins-b-1  | 2026-10-14 11:34:35.038+0000 [id=2299]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b7 #1
+jenkins-b-1  | 2026-10-14 11:34:35.407+0000 [id=2525]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb11 » b10 #1
+jenkins-b-1  | 2026-10-14 11:34:35.880+0000 [id=1641]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb18 » b2 #1
+jenkins-b-1  | 2026-10-14 11:34:35.907+0000 [id=2244]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb11 » b4 #1
+jenkins-b-1  | 2026-10-14 11:34:36.201+0000 [id=2532]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb11 » main #1
+jenkins-b-1  | 2026-10-14 11:34:36.228+0000 [id=954]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb11 » b3 #1
+jenkins-b-1  | 2026-10-14 11:34:36.317+0000 [id=960]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb11 » b5 #1
+jenkins-b-1  | 2026-10-14 11:34:36.332+0000 [id=2228]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb16 » b10 #1
+jenkins-b-1  | 2026-10-14 11:34:36.361+0000 [id=2515]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb11 » b6 #1
+jenkins-b-1  | 2026-10-14 11:34:36.662+0000 [id=1939]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb11 » b7 #1
+jenkins-b-1  | 2026-10-14 11:34:36.791+0000 [id=2526]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb16 » b3 #1
+jenkins-b-1  | 2026-10-14 11:34:36.850+0000 [id=2116]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb11 » b8 #1
+jenkins-b-1  | 2026-10-14 11:34:36.933+0000 [id=2297]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb16 » b2 #1
+jenkins-b-1  | 2026-10-14 11:34:36.963+0000 [id=895]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb16 » b4 #1
+jenkins-b-1  | 2026-10-14 11:34:38.038+0000 [id=903]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb16 » b5 #1
+jenkins-b-1  | 2026-10-14 11:34:38.173+0000 [id=902]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb11 » b9 #1
+jenkins-b-1  | 2026-10-14 11:34:38.953+0000 [id=1641]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb5 » b4 #1
+jenkins-b-1  | 2026-10-14 11:34:39.156+0000 [id=1624]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb10 » b4 #1
+jenkins-b-1  | 2026-10-14 11:34:39.188+0000 [id=895]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb6 » main #1
+jenkins-b-1  | 2026-10-14 11:34:39.409+0000 [id=2526]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb16 » main #1
+jenkins-b-1  | 2026-10-14 11:34:39.911+0000 [id=2301]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb16 » b6 #1
+jenkins-b-1  | 2026-10-14 11:34:40.491+0000 [id=902]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb16 » b7 #1
+jenkins-b-1  | 2026-10-14 11:34:40.899+0000 [id=2245]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb16 » b8 #1
+jenkins-b-1  | 2026-10-14 11:34:41.138+0000 [id=2301]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: mb16 » b9 #1
+jenkins-b-1  | 2026-10-14 11:35:04.195+0000 [id=129]	INFO	i.j.p.c.p.PostgresPersistenceStore#watchMembers: 1 controller(s) left the cluster: [b8efef1f-ff6f-4de3-b9e3-cdeb2a27d111]

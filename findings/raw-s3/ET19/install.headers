@@ -1,0 +1,15 @@
+HTTP/1.1 302 Found
+Server: nginx/1.27.5
+Date: Wed, 14 Oct 2026 11:51:14 GMT
+Content-Length: 0
+Connection: keep-alive
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+Set-Cookie: remember-me=YWRtaW46MTc5MzE4ODI3NDA4NTozNTIyMmIyZWU1OTZhOTljODQ3YzIzZGFjM2Y5ZmFiNDliYjc0N2FhNWEzMjdiZDZmOGFiY2MwYzkyM2U4ODFm; Path=/; Expires=Wed, 28 Oct 2026 11:51:14 GMT; Max-Age=1209600; HttpOnly; SameSite=Lax
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Security-Policy-Report-Only: base-uri 'none'; default-src 'self'; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; script-src 'report-sample' 'self' usage.jenkins.io; style-src 'report-sample' 'self' 'unsafe-inline';
+X-Jenkins-Cluster-Controller: jenkins-a
+Set-Cookie: jenkins-cluster-uc=jenkins-a; Path=/; Expires=Wed, 14 Oct 2026 12:51:14 GMT; Max-Age=3600; HttpOnly; SameSite=Lax
+Location: /manage/pluginManager/updates/
+X-Upstream: 172.20.0.6:8080
+

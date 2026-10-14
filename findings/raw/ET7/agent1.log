@@ -1,28 +1,28 @@
-agent1-1  | Oct 13, 2026 6:01:06 PM hudson.remoting.Launcher createEngine
+agent1-1  | Oct 14, 2026 11:44:57 AM hudson.remoting.Launcher createEngine
 agent1-1  | INFO: Setting up agent: agent1
-agent1-1  | Oct 13, 2026 6:01:06 PM hudson.remoting.Engine startEngine
+agent1-1  | Oct 14, 2026 11:44:58 AM hudson.remoting.Engine startEngine
 agent1-1  | INFO: Using Remoting version: 3391.va_37fa_a_305d6d
-agent1-1  | Oct 13, 2026 6:01:06 PM hudson.remoting.Engine startEngine
+agent1-1  | Oct 14, 2026 11:44:58 AM hudson.remoting.Engine startEngine
 agent1-1  | WARNING: No Working Directory. Using the legacy JAR Cache location: /home/jenkins/.jenkins/cache/jars
-agent1-1  | Oct 13, 2026 6:01:07 PM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 14, 2026 11:44:58 AM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: WebSocket connection open
-agent1-1  | Oct 13, 2026 6:01:07 PM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 14, 2026 11:44:58 AM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Connected
-agent1-1  | Oct 13, 2026 6:01:44 PM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 14, 2026 11:45:31 AM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Read side closed
-agent1-1  | Oct 13, 2026 6:01:44 PM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 14, 2026 11:45:31 AM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Terminated
-agent1-1  | Oct 13, 2026 6:01:44 PM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 14, 2026 11:45:31 AM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Performing onReconnect operation.
-agent1-1  | Oct 13, 2026 6:01:44 PM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
-agent1-1  | INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@6f3e8ab7
-agent1-1  | Oct 13, 2026 6:01:45 PM hudson.remoting.Launcher createEngine
+agent1-1  | Oct 14, 2026 11:45:31 AM jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$EngineListenerAdapterImpl onReconnect
+agent1-1  | INFO: Restarting agent via jenkins.slaves.restarter.UnixSlaveRestarter@478f8a61
+agent1-1  | Oct 14, 2026 11:45:32 AM hudson.remoting.Launcher createEngine
 agent1-1  | INFO: Setting up agent: agent1
-agent1-1  | Oct 13, 2026 6:01:45 PM hudson.remoting.Engine startEngine
+agent1-1  | Oct 14, 2026 11:45:32 AM hudson.remoting.Engine startEngine
 agent1-1  | INFO: Using Remoting version: 3391.va_37fa_a_305d6d
-agent1-1  | Oct 13, 2026 6:01:45 PM hudson.remoting.Engine startEngine
+agent1-1  | Oct 14, 2026 11:45:32 AM hudson.remoting.Engine startEngine
 agent1-1  | WARNING: No Working Directory. Using the legacy JAR Cache location: /home/jenkins/.jenkins/cache/jars
-agent1-1  | Oct 13, 2026 6:01:49 PM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 14, 2026 11:45:37 AM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: WebSocket connection open
-agent1-1  | Oct 13, 2026 6:01:49 PM hudson.remoting.Launcher$CuiListener status
+agent1-1  | Oct 14, 2026 11:45:37 AM hudson.remoting.Launcher$CuiListener status
 agent1-1  | INFO: Connected

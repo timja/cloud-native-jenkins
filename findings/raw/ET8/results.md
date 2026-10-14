@@ -1,4 +1,4 @@
-## ET8 results (2026-10-14T08:44Z)
+## ET8 results (2026-10-14T11:51Z)
 
 | | Check |
 |---|---|
@@ -13,7 +13,7 @@
 | ✅ | 2 every round's builds ran (6 each) |
 | ✅ | 2 B agrees |
 | ✅ | 3 B shows the report within 2 s of completion (3 tests, 1 failed) |
-| ℹ️ | 3 report on B after 0.2 s |
+| ℹ️ | 3 report on B after 0.1 s |
 | ✅ | 3 deleted on B, its results are gone on A |
 | ✅ | 3 and on B |
 | ✅ | 3b the coverage build completes on A |
