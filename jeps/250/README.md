@@ -73,6 +73,7 @@ Workspaces, caches, `plugins/`, `war/`, logs of Jenkins itself, per-controller f
 - **Routing at `XmlFile`** gives the widest coverage for the least change. A bytecode scan of every plugin in the update center found 42 that call `XmlFile#getFile`; they get read-only snapshots, and their direct writes are reported by the compatibility page.
 - **A plugin, not a jar on the Winstone class path.** This was the original plan. An experiment found that such a jar has to go into the war's `WEB-INF/lib`, because Winstone's common library folder cannot see core's classes. The plan was dropped because nothing needs the store before plugins load except the pre-plugin keys and the plugin set, and those are seeded or baked into the image.
 - **Versions plus merge, not locks.** Writers on different controllers rarely touch the same part of the same file. Merging keeps both changes in the common case. In an acceptance test, two controllers saved different global settings at the same moment, 30 times, and no change was lost.
+- **Backends are separate plugins.** The store and the blob store are found through independent providers, so they come from different plugins: `cluster-postgresql` for the store; `cluster-azure-blob` or `cluster-s3` for blobs. The backend-neutral `cluster` plugin reaches what it needs beyond this SPI through interfaces of its own (`ClusterStore`, `ClusterBlobStore`), which the backends implement. The SDKs (Azure, AWS) are large and installations rarely need both, so each comes only with its plugin.
 - **The reference backend is Postgres**: a single table with CAS through `UPDATE … WHERE version = ?`, and an event log table plus `LISTEN/NOTIFY`. Its operational behaviour is covered in JEP-255.
 
 ## Backwards compatibility
@@ -90,7 +91,7 @@ Workspaces, caches, `plugins/`, `war/`, logs of Jenkins itself, per-controller f
 ## Testing
 - **Core:** `XmlFileTest`, `XmlMergeTest`, `ItemChangeApplierTest`, `StaticStateApplierTest`, `PersistenceStoreItem*Test`, `StaticStateRoutingTest`, `ItemReloadTest` (two saves here while a change made elsewhere is not applied yet, deterministic), `LocalStateTest`, `ItemUuidTest`, `StrictConflictsTest` and `ItemFilesTest`, using the in-memory store.
 - **cloudbees-folder:** `RemoteChildTest`.
-- **Store plugin:** `PostgresPersistenceStoreTest` runs against Postgres in Testcontainers.
+- **Cluster plugins:** `PostgresPersistenceStoreTest` runs against Postgres in Testcontainers.
 - **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers with empty homes against one store):
   - `ET1-shared-items.sh`: jobs and folders created, edited, renamed and deleted on either controller, including multibranch jobs and `properties()`, are the same on both, and a fresh controller loads them all
   - `ET6-static-state.sh`: global configuration, credentials, users, nodes and keys changed on one controller apply on the other without a restart
@@ -100,7 +101,7 @@ Workspaces, caches, `plugins/`, `war/`, logs of Jenkins itself, per-controller f
 ## Prototype implementation
 - **Core:** prototype branches of Jenkins core, `cnj/t1-*`, `cnj/t6-*`, `cnj/t11-m1-xml-merge` and `cnj/t15-remaining`.
 - **cloudbees-folder:** prototype branches `cnj/t1-m2-folder-children`, `cnj/t15-remote-child`.
-- **Store plugin:** `impl/persistence-store-postgresql` in the cloud-native-jenkins repository, on its branches `cnj/t1-*` to `cnj/t11-m2-cross-cutting`.
+- **Cluster plugins:** `plugins/` in the cloud-native-jenkins repository (until Target 15 one plugin, `impl/persistence-store-postgresql`, on branches `cnj/t1-*` to `cnj/t15-remaining`; split in Target 16).
 - **Findings:** documents in the cloud-native-jenkins repository, on those branches: `findings/ET1-shared-items.md`, `ET6-static-state.md` and `ET11-cross-cutting.md`.
 
 ## References

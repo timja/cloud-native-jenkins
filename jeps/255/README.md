@@ -18,9 +18,9 @@ How controllers know about each other, and how the cluster behaves when its shar
 
 ### Joining and leaving
 There is no join step: no token, UI, CLI or API to add a controller. A controller is a member because it is configured for the cluster's stores, and it stops being one when it stops heartbeating. Adding a controller means starting another one with the same configuration (in Kubernetes, raising the StatefulSet's replicas). What a controller needs:
-- **The stores:** the database's JDBC URL and credentials (`CNJ_STORE_URL`, `CNJ_STORE_USER`, `CNJ_STORE_PASSWORD`) and the blob store's connection string and container (`CNJ_BLOB_CONNECTION_STRING`, `CNJ_BLOB_CONTAINER`). Access to these is what makes a controller part of the cluster.
+- **The stores:** the database's JDBC URL and credentials (`CLUSTER_POSTGRES_URL`, `CLUSTER_POSTGRES_USER`, `CLUSTER_POSTGRES_PASSWORD`) and the blob store's (Azure: `CLUSTER_AZURE_BLOB_CONNECTION_STRING`, `CLUSTER_AZURE_BLOB_CONTAINER`; S3: `CLUSTER_S3_BUCKET`, `CLUSTER_S3_PREFIX`, `CLUSTER_S3_REGION`, `CLUSTER_S3_ENDPOINT`, `CLUSTER_S3_PATH_STYLE`, with credentials from the AWS default chain). Access to these is what makes a controller part of the cluster.
 - **The cluster's key material:** `secret.key`, `secrets/` and the instance identity, generated once for the cluster and given to every controller (the chart's `make-seed-secret.sh` creates it as a Kubernetes Secret; the entrypoint copies it into an empty home). Keys created later at runtime are in the store (JEP-250). A controller started without this seed would create keys of its own and could not read the cluster's secrets, so it refuses to start: the first controller stores a check value encrypted with the cluster's key, and a controller that cannot decrypt it stops, saying why (`KeyCheck.skip=true` turns the check off).
-- **An identity:** a name unique among the live controllers (`CNJ_NAME`, by default the host name, such as the pod name) and an internal URL other controllers can reach it at (`CNJ_INTERNAL_URL`, JEP-254).
+- **An identity:** a name unique among the live controllers (`JENKINS_CLUSTER_NAME`, by default the host name, such as the pod name) and an internal URL other controllers can reach it at (`JENKINS_CLUSTER_INTERNAL_URL`, JEP-254).
 - **A compatible version:** the controller image, of the same or an adjacent version (rolling upgrades are supported, see below). Plugins added at runtime are applied from the cluster's plugin set (JEP-256).
 
 On start, a controller:
@@ -83,7 +83,7 @@ Schema changes must not stop a running cluster, and old and new controllers run 
   - for managed services: the store settings from an existing Secret (`store.existingSecret`), TLS options for the JDBC URL (`postgres.urlParameters`, for example `sslmode=verify-full`), the connection pool's size (`store.poolSize`) and the session-lock switch (`store.sessionLocks`)
   - JCasC that keeps nodes it does not declare (`keepUndeclaredNodes`), so that one controller applying the YAML does not delete the cluster's other nodes
   - the artifact manager every cluster needs (azure-artifact-manager, `artifactManager.*`), in the blob container. Its storage credential is made at startup if absent, not declared in JCasC: JCasC replaces the system credentials it declares, and every controller that starts applies it, through the shared store
-- **StatefulSet or Deployment.** Either works: nothing depends on a controller keeping its name. Membership, leases and adoption go by origin, a new one per start (JEP-252). The internal URL can be a pod IP (`CNJ_INTERNAL_URL=http://$(POD_IP):8080/`). The acceptance tests exercise only the chart's StatefulSet; a Deployment has not been run. The chart uses a StatefulSet, for what it adds:
+- **StatefulSet or Deployment.** Either works: nothing depends on a controller keeping its name. Membership, leases and adoption go by origin, a new one per start (JEP-252). The internal URL can be a pod IP (`JENKINS_CLUSTER_INTERNAL_URL=http://$(POD_IP):8080/`). The acceptance tests exercise only the chart's StatefulSet; a Deployment has not been run. The chart uses a StatefulSet, for what it adds:
   - stable, readable names (`cnj-0`, `cnj-1`) in the cluster view, the `X-CNJ-Controller` header and logs, and per-pod DNS through a headless Service for the internal URL
   - one-at-a-time rolling updates, which keep the number of controllers adopting builds predictable (a Deployment's surge works too)
   - pod management `Parallel`, so a scale-up or a restart of all pods does not wait for each pod to be ready in turn
@@ -118,7 +118,7 @@ Schema changes must not stop a running cluster, and old and new controllers run 
 - The internal URLs used between controllers must stay inside the cluster network (JEP-254).
 
 ## Testing
-- **Store plugin:** `PostgresPersistenceStoreTest`: reconnects; no takeovers before the controller is steady; late-committed events; prefix listings with wildcards; a dead process is gone soon but a paused one only after the timeout; a controller whose lock is gone stops acting for its leases first. `SchemaMigrationsTest`: a backfill done while writes go on, resumed by another controller.
+- **Cluster plugins:** `PostgresPersistenceStoreTest`: reconnects; no takeovers before the controller is steady; late-committed events; prefix listings with wildcards; a dead process is gone soon but a paused one only after the timeout; a controller whose lock is gone stops acting for its leases first. `SchemaMigrationsTest`: a backfill done while writes go on, resumed by another controller.
 - **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers against one store):
   - `ET9-kubernetes.sh`: the chart on a local kind cluster (scaling, agents, losing a controller)
   - `ET10-operations.sh`: rolling upgrade, refused older peer, import, backup and restore
@@ -129,7 +129,7 @@ Schema changes must not stop a running cluster, and old and new controllers run 
   - `ET16-scale.sh`: 2,000 jobs and 2,000 builds on two controllers. The second controller lists the jobs 10 s after the first starts creating them, warm pages load in under 1 s, a restart takes 14 s, and 50 running Pipelines are adopted within 24 s. Prefix listings use an index (`text_pattern_ops`)
 
 ## Prototype implementation
-- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `PostgresPersistenceStore`, `PostgresPersistenceStoreProvider`, `AzureBlobStore(Provider)`, `PeerVersionCheck`, `KeyCheck`, `SchemaMigrations`, `MemberStatus`, `HomeImporter`, `ClusterView`.
+- **Cluster plugins** (`plugins/` in the cloud-native-jenkins repository): `PostgresPersistenceStore`, `PostgresPersistenceStoreProvider`, `AzureBlobStore(Provider)`, `PeerVersionCheck`, `KeyCheck`, `SchemaMigrations`, `MemberStatus`, `HomeImporter`, `ClusterView`.
 - **Core:** prototype branches of Jenkins core `cnj/t14-m1-resilience` (retries, temporary keys, `sweepSoon`) and `cnj/t15-remaining`.
 - **Chart:** `charts/cloud-native-jenkins` in the cloud-native-jenkins repository.
 - **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET9-kubernetes.md`, `ET10-operations.md`, `ET14-store-outage.md` and `ET16-scale.md`.

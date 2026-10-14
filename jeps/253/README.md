@@ -73,7 +73,7 @@ Queue items keep their authentication (`QueueItemAuthenticator`), which is seria
 
 ## Testing
 - **Core:** `StoredBuildNumberAssignerTest`, `ClusterCoordinationTest`, `SharedQueueTest`.
-- **Store plugin:** `PostgresPersistenceStoreTest` (claims, queue, counters).
+- **Cluster plugins:** `PostgresPersistenceStoreTest` (claims, queue, counters).
 - **lockable-resources:** `ClusterLocksTest` (reservations and their holders across two controllers).
 - **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers against one store):
   - `ET2-scheduling.sh`: unique numbers for 40 concurrent builds; cron, polling and indexing fire exactly once, also across failover and rejoin
@@ -86,7 +86,7 @@ Queue items keep their authentication (`QueueItemAuthenticator`), which is seria
 - **Core:** prototype branches of Jenkins core, `cnj/t2-*`, `cnj/t5-*`, `cnj/t15-remaining` (deliveries).
 - **lockable-resources:** prototype branches `cnj/t5-m4-cluster-locks`, `cnj/t15-cluster-ui`.
 - **pipeline-build-step:** prototype branch `cnj/t15-remote-completion`.
-- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `PostgresTriggerCoordinator`, `SharedQueueMaintenance`, `ClusterMilestoneStorage`, `ClusterComputations`.
+- **Cluster plugins** (`plugins/` in the cloud-native-jenkins repository): `ClusterTriggerCoordinator`, `SharedQueueMaintenance`, `ClusterMilestoneStorage`, `ClusterComputations`.
 - **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET2-scheduling.md`, `ET5-shared-queue.md`.
 
 ## References

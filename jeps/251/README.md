@@ -38,16 +38,18 @@ Builds are materialised locally only when something reads them. Builds still run
 - **Failed publication.** A build whose publication fails (the store was unreachable) stays "running" for the cluster, and publication is retried until it succeeds.
 
 ### Logs
-Pipeline logs use the existing external log storage API (JEP-210, `LogStorageFactory`), so any implementation can serve a cluster, for example append blobs (the reference implementation below) or CloudWatch Logs (pipeline-cloudwatch-logs). This JEP adds no log API. It states what an implementation must do for a cluster:
+Pipeline logs use the existing external log storage API (JEP-210, `LogStorageFactory`), so any implementation can serve a cluster, for example blobs (the reference implementation below) or CloudWatch Logs (pipeline-cloudwatch-logs). This JEP adds no log API. It states what an implementation must do for a cluster:
 - **Readable from every controller**, while the build runs and after, through `LogStorageFactory.forBuild` on any controller. The console of a running build is also forwarded to its owner (JEP-254).
 - **Keyed by the build, not by the controller** (for example job full name and build number), so a controller adopting a build continues the same log.
 - **Durable at save points.** Everything written before a Pipeline save point is stored before the save point is (JEP-252). A controller resuming from it then continues the log where the save point left off, with no lines missing or repeated. The prototype makes the save point wait through workflow-cps' `ProgramSavedListener`. An implementation that buffers asynchronously (CloudWatch batches) must flush there. That hook is the one API addition logs need, and it belongs to JEP-252.
 - **Fenced.** A controller that may have lost the build's lease stops writing (JEP-252). A store accepting writes from two controllers (CloudWatch does) relies on this.
 - **Moved with the job** on a rename, or keyed so it need not move (as on a single controller).
 
-**Reference implementation** (store plugin, `BlobLogStorage`, Azure Blob Storage):
-- The build writes its local `log` and `log-index`. A shipper appends what is new to append blobs: when 32 KiB is pending, 3 s after the last shipment, before each save point and at the end of the build.
-- **Segments:** an append blob takes at most 50,000 blocks, so a log is stored as `log`, `log.1`, …. A new segment starts before the limit, and readers concatenate them. This is specific to Azure append blobs; another backend has its own limits.
+**Reference implementation** (`cluster` plugin, `BlobLogStorage`, over the blob store plugin's `LogBlobs`):
+- The build writes its local `log` and `log-index`. A shipper appends what is new to the stored log: when 32 KiB is pending, 3 s after the last shipment, before each save point and at the end of the build.
+- **How a log is stored is up to the blob store plugin.** An append states the length its writer knows the log to be, and is refused if the log is longer.
+  - **Azure Blob Storage** (`cluster-azure-blob`): append blobs. An append blob takes at most 50,000 blocks, so a log is stored as `log`, `log.1`, …. A new segment starts before the limit, and readers concatenate them.
+  - **S3** (`cluster-s3`), and any blob store without appendable blobs (`ChunkedLogBlobs`): each append is an object of its own, `log.d/<offset>.<length>`, and when the build completes they are put together into `log`. A reader takes `log` if it is there, then the chunks beyond its end, so it reads the whole log whatever an interrupted compaction left.
 - The shipper checks ownership and pauses while this controller's membership may have lapsed. A new owner continues where the blobs end.
 
 **Freestyle and other build logs** are written to the build's `log` file, as on one controller; core has no log SPI for them (`Run.getLogFile`). The reference implementation ships them to the same append-blob segments while the build runs, so that a build whose controller dies keeps what it printed (closed as aborted, above), and the CLI can follow it from another controller (JEP-254). Once the build is published, its log travels in the snapshot and the shipped copy is deleted. While such a build runs, its console page is served by the controller running it (JEP-254).
@@ -88,7 +90,7 @@ Pipeline logs use the existing external log storage API (JEP-210, `LogStorageFac
 
 ## Testing
 - **Core:** `BuildRecordsTest` (late files, a closed build keeping what it printed), `RunningBuildsTest`, `RemoteBuildEventsTest`, `DeletedJobNumberingTest`.
-- **Store plugin:** `AzureBlobStoreTest` (against Azurite, the Azure Storage emulator: segments, moves keep append blobs appendable), `StoreFingerprintStorageTest`.
+- **Cluster plugins:** `ClusterBlobStoreContract`, what every blob store plugin must do (blobs and logs), run against an in-memory store (`ChunkedLogBlobsTest`, also interrupted compactions), Azurite (`AzureClusterBlobStoreTest`) and Garage, an S3-compatible store (`S3BlobStoreTest`, also listings past one page and multipart uploads); `AzureBlobStoreTest` (segments, moves keep append blobs appendable); `ClusterFingerprintStorageTest`.
 - **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers against one store):
   - `ET3-build-records.sh`: builds that ran on either controller are listed on both, with the same records, consoles, permalinks and placeholders for running builds; deletion and renames carry over, a fresh controller sees the whole history, and a recreated job never reuses a number
   - `ET8-history.sh`: fingerprints, test results, coverage reports and build discarders work across controllers, and the cluster view lists both
@@ -98,7 +100,7 @@ Pipeline logs use the existing external log storage API (JEP-210, `LogStorageFac
 ## Prototype implementation
 - **Core:** prototype branches of Jenkins core, `cnj/t3-*`, `cnj/t8-*`, `cnj/t12-m1-remainder`, `cnj/t14-m1-resilience` and `cnj/t15-remaining`.
 - **junit-sql-storage:** prototype branches `cnj/t3-m5-remote-delete`, `cnj/t15-follow-renames`.
-- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `BuildRecords` publication hooks, `BlobLogStorage`, `StoreFingerprintStorage`, `ClusterView`.
+- **Cluster plugins** (`plugins/` in the cloud-native-jenkins repository): `BuildRecords` publication hooks, `BlobLogStorage`, `ClusterFingerprintStorage`, `ClusterView`.
 - **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET3-build-records.md`, `ET8-history.md`, `ET12-remainder.md` and `ET15-logs-api-failover.md`.
 
 ## References

@@ -30,7 +30,7 @@ Every running build has exactly one owner: the controller holding its lease. A P
 
 ### Save points (Pipelines)
 - workflow-cps calls a `ProgramSavedListener` whenever it saves `program.dat` (a durability-hint hook).
-- The store plugin then copies `program.dat`, `build.xml`, and the flow nodes changed since the previous save point, to blob storage under `…/builds/<N>/running/`: the nodes under a directory of that save point's own. An adopter applies the nodes of every save point up to the committed one, in order, and none of a later one, so an owner dying between uploading a save point and committing it never leaves nodes newer than the program that is resumed.
+- The `cluster` plugin then copies `program.dat`, `build.xml`, and the flow nodes changed since the previous save point, to blob storage under `…/builds/<N>/running/`: the nodes under a directory of that save point's own. An adopter applies the nodes of every save point up to the committed one, in order, and none of a later one, so an owner dying between uploading a save point and committing it never leaves nodes newer than the program that is resumed.
 - **An artifact manager is required** (JEP-202), keeping artifacts and stashes in shared storage as they are made: save points carry only what CPS needs to resume, so what `stash` or `archiveArtifacts` leave in a build directory would otherwise be lost with its controller. The reference setup uses azure-artifact-manager in the store's blob container. A controller shows an administrative monitor, and logs an error at startup, while none is configured.
 - It makes the log durable up to that point, then commits the save point by recording its id in the placeholder. The reference log storage (JEP-251) ships its pending output. Another log storage needs to be told too: **proposed**, an optional flush on JEP-210's `LogStorage` (workflow-api), called before a save point commits. A synchronous implementation does nothing; a buffering one (CloudWatch batches its events) sends its buffer. Without it, an adopted build's log can miss the lines written just before the save point.
 - Commits are coalesced: about two placeholder writes per build for a 200-step test Pipeline.
@@ -82,7 +82,7 @@ Every running build has exactly one owner: the controller holding its lease. A P
 
 ## Testing
 - **Core:** `RunningBuildsTest`, `BuildLeasesTest`.
-- **Store plugin:** `PostgresPersistenceStoreTest` (leases, no takeover before the controller has been steady).
+- **Cluster plugins:** `PostgresPersistenceStoreTest` (leases, no takeover before the controller has been steady).
 - **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers against one store):
   - `ET4-pipeline-failover.sh`: a Pipeline survives its controller being killed during an agent `sh` step and at `input`; a later stage reads what an earlier stage left in the workspace, with the controller killed between them; a paused controller is fenced; a healthy controller's build is never adopted; a `PERFORMANCE_OPTIMIZED` build is closed; the cost of save points
   - `ET12-remainder.sh`: a Pipeline waiting for a label only another controller has is handed over, once, with parallel `node` blocks on different controllers; after every controller is killed, fresh controllers adopt or close the builds that were running
@@ -94,7 +94,7 @@ Every running build has exactly one owner: the controller holding its lease. A P
 ## Prototype implementation
 - **Core:** prototype branches of Jenkins core, `cnj/t4-*`, `cnj/t12-m1-remainder`, `cnj/t14-m1-resilience`, `cnj/t15-remaining`.
 - **workflow-cps:** prototype branch `cnj/t4-m1-program-saved-listener`.
-- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `SavePoints`, `PipelineAdopter`, `Handover`.
+- **Cluster plugins** (`plugins/` in the cloud-native-jenkins repository): `SavePoints`, `PipelineAdopter`, `Handover`.
 - **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET4-pipeline-failover.md`, `ET12-remainder.md`, `ET13-cluster-plugins.md`, `ET14-store-outage.md` and `ET15-logs-api-failover.md`.
 
 ## References

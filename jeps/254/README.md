@@ -66,7 +66,7 @@ See JEP-251: the job page, the Builds card, the job's icon, and REST `builds`, `
 
 ## Testing
 - **Core:** `StatelessSessionsTest`, `RunningBuildsTest` (UI and REST).
-- **Store plugin:** `OwnerRoutingTest`, `ForwardingTest`, `ClusterViewTest`.
+- **Cluster plugins:** `OwnerRoutingTest`, `ForwardingTest`, `ClusterViewTest`.
 - **Acceptance** (scripts in `validation/experiments/` of the cloud-native-jenkins repository; each runs two controllers against one store):
   - `ET6-static-state.sh`: a scripted browser signs in and works through a round-robin load balancer, including when a controller is lost
   - `ET7-owner-routing.sh`: from the controller that does not run a build, its console can be followed, and `input`, stop and replay work; agent pages answer; an agent reconnects after its controller dies; webhooks; `input` after a failover
@@ -78,7 +78,7 @@ See JEP-251: the job page, the Builds card, the job's icon, and REST `builds`, `
 ## Prototype implementation
 - **Core:** prototype branches of Jenkins core, `cnj/t6-m6-stateless-sessions`, `cnj/t14-m1-resilience` (REST stand-in), `cnj/t15-remaining` (CLI).
 - **Stapler:** prototype branch `cnj/t6-m5-bound-id-prefix`.
-- **Store plugin** (`impl/persistence-store-postgresql` in the cloud-native-jenkins repository): `OwnerRoutingFilter`, `Forwarding`, `WebSocketProxy`, `BoundRequestForwarder`, `ClusterCrumbIssuer`, `ChannelPublisher`.
+- **Cluster plugins** (`plugins/` in the cloud-native-jenkins repository): `OwnerRoutingFilter`, `Forwarding`, `WebSocketProxy`, `BoundRequestForwarder`, `ClusterCrumbIssuer`, `ChannelPublisher`.
 - **Findings:** documents in the cloud-native-jenkins repository, on its prototype branches: `findings/ET6-static-state.md`, `ET7-owner-routing.md`, `ET20-websocket-cli.md`, `ET21-browser.md`.
 
 ## References

@@ -75,12 +75,17 @@ All prototype work is pushed as stacked pull requests to **forks** (`timja/*`) f
 | 3.7 | junit-sql-storage | `cnj/t15-follow-renames` | 🟡 [jenkins-junit-postgresql-plugin#53](https://github.com/timja/jenkins-junit-postgresql-plugin/pull/53) | 2.24 (`getItemUuid`) | P2 | Stacked on 3.6 |
 | 3.8 | pipeline-build-step | `cnj/t15-remote-completion` | 🟡 [pipeline-build-step-plugin#1](https://github.com/timja/pipeline-build-step-plugin/pull/1) | 2.24 (deliveries, `SharedQueue.takenElsewhere`) | P2 | Fork `timja/pipeline-build-step-plugin` created. Its `pom.xml` points at a local core snapshot. No unit tests yet (covered by ET12 1c/1d): add some before upstreaming |
 
-### Wave 4: the store plugin, chart and validation
+### Wave 4: the Cluster plugins, chart and validation (Target 16 split the store plugin)
+One hosting request per plugin. The names `cluster`, `cluster-postgresql`, `cluster-azure-blob` and `cluster-s3` were free on the update site on 2026-10-14; `jenkins-cluster` is the fallback for `cluster`. They are released after the core stack is in a weekly.
+
 | # | What | Where | Priority | Notes |
 |---|---|---|---|---|
-| 4.1 | `persistence-store-postgresql` plugin | new repository (hosting request) | P1 | Reference implementation of every SPI; release after 2.x is in a weekly |
-| 4.2 | Helm chart | `jenkinsci/helm-charts`, or with the plugin | P2 | |
-| 4.3 | Acceptance experiments (`validation/`) | with the plugin | P3 | Docker Compose and kind |
+| 4.1 | `cluster` plugin | new repository (hosting request) | P1 | Everything backend-neutral, and the cluster SPI (`io.jenkins.plugins.cluster.spi`) the backends implement |
+| 4.2 | `cluster-postgresql` plugin | new repository (hosting request) | P1 | The reference store; uses `postgresql-api` for its driver |
+| 4.3 | `cluster-azure-blob` plugin | new repository (hosting request) | P1 | Blobs in Azure Blob Storage (append blobs for logs); uses `azure-sdk` |
+| 4.4 | `cluster-s3` plugin | new repository (hosting request) | P1 | Blobs in S3 or an S3-compatible store; uses `aws-java-sdk2-s3` |
+| 4.5 | Helm chart | `jenkinsci/helm-charts`, or with the plugins | P2 | `blob.type: azure\|s3` |
+| 4.6 | Acceptance experiments (`validation/`) | with the plugins | P3 | Docker Compose and kind; an S3 variant on Garage (`experiments/with-s3.sh`) |
 
 ## Pull requests
 All on forks, as drafts, each stack based on a `cnj/base` branch (the upstream commit the work started from). Bodies list the commits and the plan row.
@@ -88,7 +93,7 @@ All on forks, as drafts, each stack based on a `cnj/base` branch (the upstream c
 | Repo | Stack | PRs |
 |---|---|---|
 | [timja/jenkins](https://github.com/timja/jenkins) | core, 24 branches (rows 2.1–2.24), base `cd2a077` | [#139](https://github.com/timja/jenkins/pull/139) … [#162](https://github.com/timja/jenkins/pull/162) |
-| [timja/cloud-native-jenkins](https://github.com/timja/cloud-native-jenkins) (private) | store plugin, chart, validation, 15 branches (rows 4.1–4.3), base `15e471e`; `main` holds the JEPs, targets and findings | [#1](https://github.com/timja/cloud-native-jenkins/pull/1) … [#15](https://github.com/timja/cloud-native-jenkins/pull/15) |
+| [timja/cloud-native-jenkins](https://github.com/timja/cloud-native-jenkins) (private) | store plugin, chart, validation, 15 branches (rows 4.1–4.6; split into the Cluster plugins on `cnj/t16-plugin-split`), base `15e471e`; `main` holds the JEPs, targets and findings | [#1](https://github.com/timja/cloud-native-jenkins/pull/1) … [#15](https://github.com/timja/cloud-native-jenkins/pull/15) |
 | [timja/stapler](https://github.com/timja/stapler) | 1.2 | [#1](https://github.com/timja/stapler/pull/1) |
 | [timja/workflow-cps-plugin](https://github.com/timja/workflow-cps-plugin) | 1.1 | [#1](https://github.com/timja/workflow-cps-plugin/pull/1) |
 | [timja/configuration-as-code-plugin](https://github.com/timja/configuration-as-code-plugin) | 1.3 | [#116](https://github.com/timja/configuration-as-code-plugin/pull/116) |
