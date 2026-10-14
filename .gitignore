@@ -4,3 +4,4 @@ validation/out/
 target/
 validation/out-*.log
 plugins/*/target/
+.et1-slots/
