@@ -94,6 +94,8 @@ All on forks, as drafts, each stack based on a `cnj/base` branch (the upstream c
 |---|---|---|
 | [timja/jenkins](https://github.com/timja/jenkins) | core, 24 branches (rows 2.1–2.24), base `cd2a077` | [#139](https://github.com/timja/jenkins/pull/139) … [#162](https://github.com/timja/jenkins/pull/162) |
 | [timja/cluster-plugin](https://github.com/timja/cluster-plugin) | the Cluster plugins, chart and experiments (rows 4.1–4.6), on `main` | none (moved there from the closed #1–#15 and #17 of timja/cloud-native-jenkins, whose branches are kept) |
+
+**Reviews:** Copilot reviewed #139–#162 on 2026-10-14. Its 101 comments, what came of each (73 fixed on their own branch, 11 already fixed later in the stack, the rest documented or open) and six design questions are in [reviews/copilot-2026-10-14.md](reviews/copilot-2026-10-14.md). Nothing was replied to on GitHub. Each branch passes the stack's tests on its own.
 | [timja/jep](https://github.com/timja/jep) | JEPs 250–257 (rows 0.1, 0.2) | [#4](https://github.com/timja/jep/pull/4) |
 | [timja/stapler](https://github.com/timja/stapler) | 1.2 | [#1](https://github.com/timja/stapler/pull/1) |
 | [timja/workflow-cps-plugin](https://github.com/timja/workflow-cps-plugin) | 1.1 | [#1](https://github.com/timja/workflow-cps-plugin/pull/1) |
