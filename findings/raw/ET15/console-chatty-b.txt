@@ -1204,4 +1204,3 @@ Sleeping for 0.2 sec
 done
 [Pipeline] End of Pipeline
 Finished: SUCCESS
-Delete 0 stashes from jenkins

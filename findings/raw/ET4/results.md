@@ -1,4 +1,4 @@
-## ET4 results (2026-10-13T17:45Z)
+## ET4 results (2026-10-14T08:34Z)
 
 | | Check |
 |---|---|
@@ -29,7 +29,7 @@
 | ✅ | 1 fresh A lists it with the same number and result |
 | ✅ | 1 fresh A shows the same console |
 | ✅ | 2 A adopts the build waiting at input |
-| ℹ️ | 2 adopted 22 s after the kill |
+| ℹ️ | 2 adopted 12 s after the kill |
 | ✅ | 2 A has the pending input |
 | ✅ | 2 approved on A: the build completes with SUCCESS |
 | ✅ | 2 the agent step after input ran |
@@ -50,9 +50,9 @@
 | ✅ | 6 B removes its placeholder |
 | ✅ | 6 B does not run it: it is closed as aborted (Target 12) |
 | ✅ | 6 ... keeping what it printed on A (Target 15) |
-| ℹ️ | 7 200 echo steps: 715 ms; placeholder writes (save point commits + start/end): 3 |
-| ℹ️ | 7 the same with PERFORMANCE_OPTIMIZED (no save points): 198 ms |
-| ℹ️ | 7 builds with save points left in blob storage: none |
-| ✅ | 7 no save points left in blob storage after completion |
+| ℹ️ | 7 200 echo steps: 938 ms; placeholder writes (save point commits + start/end): 3 |
+| ℹ️ | 7 the same with PERFORMANCE_OPTIMIZED (no save points): 329 ms |
+| ℹ️ | 7 builds with save points left in blob storage: jobs/long/builds/2 |
+| ❌ | 7 no save points left in blob storage after completion |
 
-Failures: 0
+Failures: 1

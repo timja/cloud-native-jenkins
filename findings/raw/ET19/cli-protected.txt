@@ -1,4 +1,4 @@
 Installing a plugin from standard input
 
-ERROR: The store plugin (persistence-store-postgresql) is part of the controller image and cannot be changed at runtime.
+ERROR: The cluster plugins (cluster, cluster-azure-blob, cluster-postgresql, cluster-s3) are part of the controller image and cannot be changed at runtime.
 exit 5

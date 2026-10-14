@@ -1,73 +1,72 @@
 jenkins-a-1  | Running from: /war-override/jenkins.war
 jenkins-a-1  | webroot: /var/jenkins_home/war
-jenkins-a-1  | 2026-10-14 08:28:13.789+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-a-1  | 2026-10-14 08:28:14.366+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-a-1  | 2026-10-14 08:28:14.408+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-a-1  | 2026-10-14 08:28:14.627+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-a-1  | 2026-10-14 08:28:14.651+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-a-1  | 2026-10-14 08:28:14.904+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-a-1  | 2026-10-14 08:28:15.057+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-a-1  | 2026-10-14 08:28:15.062+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-a-1  | 2026-10-14 08:28:15.063+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @656ms
-jenkins-a-1  | 2026-10-14 08:28:15.065+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-a-1  | 2026-10-14 08:28:15.190+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-a-1  | 2026-10-14 08:28:15.292+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-14 08:28:17.624+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-14 08:28:19.599+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-14 08:28:19.632+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-14 08:28:19.637+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-14 08:28:19.699+0000 [id=58]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
-jenkins-a-1  | 2026-10-14 08:28:19.707+0000 [id=58]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
-jenkins-a-1  | 2026-10-14 08:28:19.708+0000 [id=58]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
-jenkins-a-1  | 2026-10-14 08:28:19.708+0000 [id=58]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
-jenkins-a-1  | 2026-10-14 08:28:20.013+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
-jenkins-a-1  | 2026-10-14 08:28:20.770+0000 [id=58]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
-jenkins-a-1  | 2026-10-14 08:28:21.379+0000 [id=54]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
-jenkins-a-1  | 2026-10-14 08:28:21.540+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-14 08:28:22.049+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-14 08:28:22.077+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-14 08:28:22.078+0000 [id=54]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-a-1  | 2026-10-14 08:28:22.086+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-14 08:28:22.090+0000 [id=46]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-a-1  | 2026-10-14 08:28:22.094+0000 [id=60]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_9a3f0b8ebbf0a5502c4926b33dd086adc73caff166c9bca9891c95c7da17b5df duplicates one seen earlier for admin
-jenkins-a-1  | 2026-10-14 08:28:22.236+0000 [id=46]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-a-1  | 2026-10-14 08:28:22.272+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-a-1  | 2026-10-14 08:28:22.280+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-a-1  | 2026-10-14 08:28:26.556+0000 [id=122]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: ed #3
-jenkins-a-1  | 2026-10-14 08:29:27.114+0000 [id=120]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long #1
+jenkins-a-1  | 2026-10-14 08:32:19.713+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-14 08:32:20.184+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-14 08:32:20.220+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-14 08:32:20.483+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-14 08:32:20.501+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-14 08:32:20.690+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-14 08:32:20.751+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-14 08:32:20.755+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1160998f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-14 08:32:20.755+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @536ms
+jenkins-a-1  | 2026-10-14 08:32:20.756+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-14 08:32:20.824+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-14 08:32:20.879+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 08:32:22.827+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 08:32:24.385+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 08:32:24.406+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 08:32:24.411+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 08:32:24.550+0000 [id=54]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 08:32:24.561+0000 [id=54]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 08:32:24.562+0000 [id=54]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 08:32:24.562+0000 [id=54]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 08:32:24.738+0000 [id=54]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-14 08:32:25.219+0000 [id=54]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
+jenkins-a-1  | 2026-10-14 08:32:25.848+0000 [id=55]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-a-1  | 2026-10-14 08:32:25.919+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 08:32:26.403+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 08:32:26.430+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 08:32:26.430+0000 [id=49]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-14 08:32:26.439+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 08:32:26.443+0000 [id=54]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-14 08:32:26.444+0000 [id=49]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_695423d24d68e1e67a1515eabc9a4f2013a26dd514207f2b04045426c9db96b2 duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-14 08:32:26.673+0000 [id=54]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-a-1  | 2026-10-14 08:32:26.714+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 08:32:26.723+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-14 08:33:30.945+0000 [id=112]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: long #1
 jenkins-a-1  | Running from: /war-override/jenkins.war
 jenkins-a-1  | webroot: /var/jenkins_home/war
-jenkins-a-1  | 2026-10-14 08:29:40.170+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-a-1  | 2026-10-14 08:29:40.557+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-a-1  | 2026-10-14 08:29:40.593+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-a-1  | 2026-10-14 08:29:40.857+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-a-1  | 2026-10-14 08:29:40.880+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-a-1  | 2026-10-14 08:29:41.059+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-a-1  | 2026-10-14 08:29:41.118+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-a-1  | 2026-10-14 08:29:41.121+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-a-1  | 2026-10-14 08:29:41.122+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @530ms
-jenkins-a-1  | 2026-10-14 08:29:41.123+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-a-1  | 2026-10-14 08:29:41.174+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-a-1  | 2026-10-14 08:29:41.214+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-14 08:29:43.271+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-14 08:29:44.885+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-14 08:29:44.897+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-14 08:29:44.898+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-14 08:29:44.930+0000 [id=45]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
-jenkins-a-1  | 2026-10-14 08:29:44.943+0000 [id=45]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
-jenkins-a-1  | 2026-10-14 08:29:44.944+0000 [id=45]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
-jenkins-a-1  | 2026-10-14 08:29:44.944+0000 [id=45]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
-jenkins-a-1  | 2026-10-14 08:29:45.100+0000 [id=45]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
-jenkins-a-1  | 2026-10-14 08:29:45.576+0000 [id=45]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
-jenkins-a-1  | 2026-10-14 08:29:45.967+0000 [id=57]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
-jenkins-a-1  | 2026-10-14 08:29:46.089+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-14 08:29:46.534+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-14 08:29:46.565+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-14 08:29:46.566+0000 [id=45]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-a-1  | 2026-10-14 08:29:46.567+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-14 08:29:46.570+0000 [id=58]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-a-1  | 2026-10-14 08:29:46.572+0000 [id=45]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_9a3f0b8ebbf0a5502c4926b33dd086adc73caff166c9bca9891c95c7da17b5df duplicates one seen earlier for admin
-jenkins-a-1  | 2026-10-14 08:29:46.706+0000 [id=58]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-a-1  | 2026-10-14 08:29:46.748+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-a-1  | 2026-10-14 08:29:46.756+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-a-1  | 2026-10-14 08:29:51.422+0000 [id=117]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il2 #21
+jenkins-a-1  | 2026-10-14 08:33:43.188+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-14 08:33:43.573+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-14 08:33:43.601+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-14 08:33:43.844+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-14 08:33:43.865+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-14 08:33:44.163+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-14 08:33:44.223+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-14 08:33:44.228+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1160998f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-14 08:33:44.228+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @628ms
+jenkins-a-1  | 2026-10-14 08:33:44.229+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-14 08:33:44.295+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-14 08:33:44.348+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 08:33:46.327+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 08:33:47.831+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 08:33:47.838+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 08:33:47.840+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 08:33:47.874+0000 [id=46]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 08:33:47.880+0000 [id=46]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 08:33:47.881+0000 [id=46]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 08:33:47.882+0000 [id=46]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 08:33:48.044+0000 [id=46]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-14 08:33:48.593+0000 [id=46]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
+jenkins-a-1  | 2026-10-14 08:33:48.655+0000 [id=53]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-a-1  | 2026-10-14 08:33:49.064+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 08:33:49.556+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 08:33:49.641+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 08:33:49.642+0000 [id=46]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-14 08:33:49.658+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 08:33:49.694+0000 [id=54]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-14 08:33:49.700+0000 [id=52]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_695423d24d68e1e67a1515eabc9a4f2013a26dd514207f2b04045426c9db96b2 duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-14 08:33:49.909+0000 [id=54]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-a-1  | 2026-10-14 08:33:49.956+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 08:33:50.004+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-14 08:33:53.032+0000 [id=114]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: il2 #21

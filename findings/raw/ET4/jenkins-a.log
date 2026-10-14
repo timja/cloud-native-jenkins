@@ -1,194 +1,192 @@
 jenkins-a-1  | Running from: /war-override/jenkins.war
 jenkins-a-1  | webroot: /var/jenkins_home/war
-jenkins-a-1  | 2026-10-13 17:45:35.171+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-a-1  | 2026-10-13 17:45:35.503+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-a-1  | 2026-10-13 17:45:35.534+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-a-1  | 2026-10-13 17:45:35.759+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-a-1  | 2026-10-13 17:45:35.781+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-a-1  | 2026-10-13 17:45:36.001+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-a-1  | 2026-10-13 17:45:36.055+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-a-1  | 2026-10-13 17:45:36.061+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@1160998f{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-a-1  | 2026-10-13 17:45:36.061+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @528ms
-jenkins-a-1  | 2026-10-13 17:45:36.062+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-a-1  | 2026-10-13 17:45:36.109+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-a-1  | 2026-10-13 17:45:36.151+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-13 17:45:37.943+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-13 17:45:39.833+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-13 17:45:39.858+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-13 17:45:39.860+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-13 17:45:39.935+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 17:45:39.992+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 17:45:39.997+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 17:45:40.001+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 17:45:40.386+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-a-1  | 2026-10-13 17:45:40.601+0000 [id=52]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-a-1  | 2026-10-13 17:45:41.202+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-a-1  | 2026-10-13 17:45:41.281+0000 [id=53]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
-jenkins-a-1  | 2026-10-13 17:45:41.576+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-13 17:45:42.303+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-13 17:45:42.308+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-13 17:45:42.313+0000 [id=56]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-a-1  | 2026-10-13 17:45:42.336+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-13 17:45:42.352+0000 [id=60]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_0c29352651b86597837336bc02d43226fd80c68efe31de4be48fd465440e60a2 duplicates one seen earlier for admin
-jenkins-a-1  | 2026-10-13 17:45:42.358+0000 [id=49]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-a-1  | 2026-10-13 17:45:42.546+0000 [id=49]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-a-1  | 2026-10-13 17:45:42.646+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 08:34:21.533+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-14 08:34:22.100+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-14 08:34:22.136+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-14 08:34:22.402+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-14 08:34:22.428+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-14 08:34:22.702+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-14 08:34:22.766+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-14 08:34:22.773+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-14 08:34:22.773+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @639ms
+jenkins-a-1  | 2026-10-14 08:34:22.774+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-14 08:34:22.842+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-14 08:34:22.887+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 08:34:25.552+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 08:34:28.351+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 08:34:28.379+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 08:34:28.381+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 08:34:28.440+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 08:34:28.450+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 08:34:28.451+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 08:34:28.452+0000 [id=55]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 08:34:29.125+0000 [id=55]	INFO	i.j.plugins.cluster.KeyCheck#verify: Recorded the cluster's key check: controllers started without this controller's keys will refuse to start
+jenkins-a-1  | 2026-10-14 08:34:29.143+0000 [id=55]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-14 08:34:29.951+0000 [id=55]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
+jenkins-a-1  | 2026-10-14 08:34:30.095+0000 [id=55]	INFO	h.p.c.CopyArtifactConfiguration#load: CopyArtifact is set to Production mode.
+jenkins-a-1  | 2026-10-14 08:34:30.619+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 08:34:31.321+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 08:34:31.323+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 08:34:31.326+0000 [id=59]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-14 08:34:31.332+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 08:34:31.345+0000 [id=55]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-14 08:34:31.363+0000 [id=54]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6a9bb0f6fedfff5c97130b8727bf5a831632df8a058fc485b01744270856d18a duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-14 08:34:31.562+0000 [id=55]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
 jenkins-a-1  | cnj: added the blob storage credential cnj-blob for account devstoreaccount1
-jenkins-a-1  | 2026-10-13 17:45:42.661+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-a-1  | 2026-10-13 17:45:43.616+0000 [id=110]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
-jenkins-a-1  | 2026-10-13 17:45:47.423+0000 [id=88]	INFO	i.j.p.c.store.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster
+jenkins-a-1  | 2026-10-14 08:34:31.670+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 08:34:31.686+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-14 08:34:32.548+0000 [id=102]	INFO	h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+jenkins-a-1  | 2026-10-14 08:34:36.548+0000 [id=76]	INFO	i.j.p.cluster.ClusterUpdateSites#publish: Shared hudson.tasks.Maven.MavenInstaller with the cluster
+jenkins-a-1  | 2026-10-14 08:34:39.217+0000 [id=71]	INFO	i.j.p.c.p.SchemaMigrations#run: Schema migration store-key-prefix-index done
+jenkins-a-1  | 2026-10-14 08:34:39.255+0000 [id=71]	INFO	i.j.p.c.p.SchemaMigrations#run: Schema migration store-size done
 jenkins-a-1  | Running from: /war-override/jenkins.war
 jenkins-a-1  | webroot: /var/jenkins_home/war
-jenkins-a-1  | 2026-10-13 17:46:59.136+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-a-1  | 2026-10-13 17:46:59.494+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-a-1  | 2026-10-13 17:46:59.520+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-a-1  | 2026-10-13 17:46:59.695+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-a-1  | 2026-10-13 17:46:59.717+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-a-1  | 2026-10-13 17:46:59.883+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-a-1  | 2026-10-13 17:46:59.936+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-a-1  | 2026-10-13 17:46:59.940+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@2a095f33{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-a-1  | 2026-10-13 17:46:59.940+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@702b06fb{STARTING}[12.1.14,sto=0] @420ms
-jenkins-a-1  | 2026-10-13 17:46:59.941+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-a-1  | 2026-10-13 17:46:59.990+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-a-1  | 2026-10-13 17:47:00.030+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-13 17:47:01.318+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-13 17:47:02.726+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-13 17:47:02.740+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-13 17:47:02.742+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-13 17:47:02.772+0000 [id=53]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 17:47:02.779+0000 [id=53]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 17:47:02.779+0000 [id=53]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 17:47:02.779+0000 [id=53]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 17:47:02.934+0000 [id=53]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-a-1  | 2026-10-13 17:47:03.120+0000 [id=53]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-a-1  | 2026-10-13 17:47:03.549+0000 [id=53]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-a-1  | 2026-10-13 17:47:03.866+0000 [id=54]	INFO	i.j.p.c.store.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
-jenkins-a-1  | 2026-10-13 17:47:03.951+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-13 17:47:04.363+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-13 17:47:04.380+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-13 17:47:04.382+0000 [id=46]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-a-1  | 2026-10-13 17:47:04.402+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-13 17:47:04.410+0000 [id=59]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-a-1  | 2026-10-13 17:47:04.419+0000 [id=55]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_0c29352651b86597837336bc02d43226fd80c68efe31de4be48fd465440e60a2 duplicates one seen earlier for admin
-jenkins-a-1  | 2026-10-13 17:47:04.531+0000 [id=59]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-a-1  | 2026-10-13 17:47:04.649+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-a-1  | 2026-10-13 17:47:04.660+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-14 08:35:50.608+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-14 08:35:51.079+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-14 08:35:51.104+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-14 08:35:51.340+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-14 08:35:51.381+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-14 08:35:51.569+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-14 08:35:51.653+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-14 08:35:51.657+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-14 08:35:51.657+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @554ms
+jenkins-a-1  | 2026-10-14 08:35:51.658+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-14 08:35:51.705+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-14 08:35:51.742+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 08:35:53.741+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 08:35:55.525+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 08:35:55.538+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 08:35:55.539+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 08:35:55.561+0000 [id=56]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 08:35:55.568+0000 [id=56]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 08:35:55.569+0000 [id=56]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 08:35:55.569+0000 [id=56]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 08:35:55.739+0000 [id=56]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-14 08:35:56.294+0000 [id=56]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
+jenkins-a-1  | 2026-10-14 08:35:56.505+0000 [id=54]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-a-1  | 2026-10-14 08:35:56.991+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 08:35:57.648+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 08:35:57.668+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 08:35:57.670+0000 [id=52]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-14 08:35:57.681+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 08:35:57.685+0000 [id=55]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-14 08:35:57.690+0000 [id=56]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6a9bb0f6fedfff5c97130b8727bf5a831632df8a058fc485b01744270856d18a duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-14 08:35:57.880+0000 [id=55]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-a-1  | 2026-10-14 08:35:57.919+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 08:35:57.927+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
 jenkins-a-1  | Running from: /war-override/jenkins.war
 jenkins-a-1  | webroot: /var/jenkins_home/war
-jenkins-a-1  | 2026-10-13 17:50:17.640+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-a-1  | 2026-10-13 17:50:17.982+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-a-1  | 2026-10-13 17:50:18.007+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-a-1  | 2026-10-13 17:50:18.200+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-a-1  | 2026-10-13 17:50:18.222+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-a-1  | 2026-10-13 17:50:18.390+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-a-1  | 2026-10-13 17:50:18.440+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-a-1  | 2026-10-13 17:50:18.445+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-a-1  | 2026-10-13 17:50:18.445+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @439ms
-jenkins-a-1  | 2026-10-13 17:50:18.445+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-a-1  | 2026-10-13 17:50:18.492+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-a-1  | 2026-10-13 17:50:18.524+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-13 17:50:19.879+0000 [id=56]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-13 17:50:21.132+0000 [id=49]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-13 17:50:21.150+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-13 17:50:21.151+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-13 17:50:21.177+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 17:50:21.183+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 17:50:21.184+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 17:50:21.184+0000 [id=52]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 17:50:21.472+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-a-1  | 2026-10-13 17:50:21.652+0000 [id=52]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-a-1  | 2026-10-13 17:50:22.069+0000 [id=52]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-a-1  | 2026-10-13 17:50:22.124+0000 [id=50]	INFO	i.j.p.c.store.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
-jenkins-a-1  | 2026-10-13 17:50:22.418+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-13 17:50:22.863+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-13 17:50:22.881+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-13 17:50:22.882+0000 [id=50]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-a-1  | 2026-10-13 17:50:22.891+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-13 17:50:22.894+0000 [id=54]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-a-1  | 2026-10-13 17:50:22.896+0000 [id=55]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_0c29352651b86597837336bc02d43226fd80c68efe31de4be48fd465440e60a2 duplicates one seen earlier for admin
-jenkins-a-1  | 2026-10-13 17:50:23.035+0000 [id=54]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-a-1  | 2026-10-13 17:50:23.073+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-a-1  | 2026-10-13 17:50:23.082+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-a-1  | 2026-10-13 17:50:49.037+0000 [id=158]	INFO	j.persistence.RunningBuilds#adopt: Adopting inp #1 from jenkins-b (4e4961ed-ffb4-44f9-b9a6-69a33fff9dbe)
-jenkins-a-1  | 2026-10-13 17:50:49.403+0000 [id=158]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming inp#1, which is missing from FlowExecutionList, so registering it now
-jenkins-a-1  | 2026-10-13 17:50:49.406+0000 [id=158]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: inp#1 was already in the list: [inp#1]
-jenkins-a-1  | 2026-10-13 17:50:49.408+0000 [id=158]	INFO	i.j.p.c.store.PipelineAdopter$1#resume: Resumed inp #1 from save point 172.1 as owner with epoch 178
-jenkins-a-1  | 2026-10-13 17:50:51.899+0000 [id=161]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: inp #1
+jenkins-a-1  | 2026-10-14 08:39:12.559+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-14 08:39:12.980+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-14 08:39:13.010+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-14 08:39:13.197+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-14 08:39:13.224+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-14 08:39:13.491+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-14 08:39:13.573+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-14 08:39:13.577+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-14 08:39:13.577+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @568ms
+jenkins-a-1  | 2026-10-14 08:39:13.578+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-14 08:39:13.628+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-14 08:39:13.658+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 08:39:15.638+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 08:39:17.161+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 08:39:17.169+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 08:39:17.170+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 08:39:17.205+0000 [id=60]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 08:39:17.211+0000 [id=60]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 08:39:17.212+0000 [id=60]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 08:39:17.212+0000 [id=60]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 08:39:17.561+0000 [id=60]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-14 08:39:18.012+0000 [id=60]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
+jenkins-a-1  | 2026-10-14 08:39:18.654+0000 [id=57]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-a-1  | 2026-10-14 08:39:18.730+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 08:39:19.241+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 08:39:19.257+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 08:39:19.257+0000 [id=54]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-14 08:39:19.268+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 08:39:19.273+0000 [id=54]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-14 08:39:19.274+0000 [id=49]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6a9bb0f6fedfff5c97130b8727bf5a831632df8a058fc485b01744270856d18a duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-14 08:39:19.453+0000 [id=54]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-a-1  | 2026-10-14 08:39:19.532+0000 [id=54]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 08:39:19.630+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-14 08:39:38.398+0000 [id=139]	INFO	j.persistence.RunningBuilds#adopt: Adopting inp #1 from jenkins-b (3f3669de-6d02-405a-a5c8-0a1ddbd3773e)
+jenkins-a-1  | 2026-10-14 08:39:39.034+0000 [id=139]	WARNING	o.j.p.w.f.FlowExecutionList$ResumeStepExecutionListener$1#onSuccess: Resuming inp#1, which is missing from FlowExecutionList, so registering it now
+jenkins-a-1  | 2026-10-14 08:39:39.036+0000 [id=139]	WARNING	o.j.p.w.f.FlowExecutionList$DefaultStorage#register: inp#1 was already in the list: [inp#1]
+jenkins-a-1  | 2026-10-14 08:39:39.039+0000 [id=139]	INFO	i.j.p.cluster.PipelineAdopter$1#resume: Resumed inp #1 from save point 177.1 as owner with epoch 182
+jenkins-a-1  | 2026-10-14 08:39:40.162+0000 [id=142]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: inp #1
 jenkins-a-1  | Running from: /war-override/jenkins.war
 jenkins-a-1  | webroot: /var/jenkins_home/war
-jenkins-a-1  | 2026-10-13 17:51:49.195+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-a-1  | 2026-10-13 17:51:49.548+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-a-1  | 2026-10-13 17:51:49.665+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-a-1  | 2026-10-13 17:51:49.844+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-a-1  | 2026-10-13 17:51:49.864+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-a-1  | 2026-10-13 17:51:50.021+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-a-1  | 2026-10-13 17:51:50.080+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-a-1  | 2026-10-13 17:51:50.086+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-a-1  | 2026-10-13 17:51:50.087+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @423ms
-jenkins-a-1  | 2026-10-13 17:51:50.089+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-a-1  | 2026-10-13 17:51:50.152+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-a-1  | 2026-10-13 17:51:50.195+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-13 17:51:51.428+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-13 17:51:52.709+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-13 17:51:52.718+0000 [id=51]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-13 17:51:52.720+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-13 17:51:52.755+0000 [id=48]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 17:51:52.761+0000 [id=48]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 17:51:52.762+0000 [id=48]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 17:51:52.762+0000 [id=48]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 17:51:52.972+0000 [id=48]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-a-1  | 2026-10-13 17:51:53.159+0000 [id=48]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-a-1  | 2026-10-13 17:51:53.602+0000 [id=48]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-a-1  | 2026-10-13 17:51:54.171+0000 [id=54]	INFO	i.j.p.c.store.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
-jenkins-a-1  | 2026-10-13 17:51:54.322+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-13 17:51:54.760+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-13 17:51:54.795+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-13 17:51:54.796+0000 [id=45]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-a-1  | 2026-10-13 17:51:54.807+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-13 17:51:54.827+0000 [id=46]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-a-1  | 2026-10-13 17:51:54.831+0000 [id=60]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_0c29352651b86597837336bc02d43226fd80c68efe31de4be48fd465440e60a2 duplicates one seen earlier for admin
-jenkins-a-1  | 2026-10-13 17:51:54.956+0000 [id=46]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-a-1  | 2026-10-13 17:51:54.996+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-a-1  | 2026-10-13 17:51:55.008+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-a-1  | 2026-10-13 17:52:28.075+0000 [id=149]	WARNING	j.persistence.RunningBuilds#lost: Ownership of pt #1 was lost to another controller; stopping it here
-jenkins-a-1  | 2026-10-13 17:52:28.143+0000 [id=127]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: pt #1
-jenkins-a-1  | 2026-10-13 17:52:28.192+0000 [id=127]	WARNING	j.p.BuildRecords$Publisher#onFinalized: Not publishing pt #1: it is owned by another controller
-jenkins-a-1  | 2026-10-13 17:54:05.629+0000 [id=174]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: calm #1
+jenkins-a-1  | 2026-10-14 08:40:40.755+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-14 08:40:41.143+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-14 08:40:41.170+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-14 08:40:41.421+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-14 08:40:41.442+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-14 08:40:41.605+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-14 08:40:41.684+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-14 08:40:41.688+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-14 08:40:41.689+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @519ms
+jenkins-a-1  | 2026-10-14 08:40:41.689+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-14 08:40:41.737+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-14 08:40:41.778+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 08:40:43.949+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 08:40:45.672+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 08:40:45.698+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 08:40:45.699+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 08:40:45.732+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 08:40:45.740+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 08:40:45.740+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 08:40:45.741+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 08:40:45.982+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-14 08:40:46.499+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
+jenkins-a-1  | 2026-10-14 08:40:46.544+0000 [id=46]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-a-1  | 2026-10-14 08:40:46.899+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 08:40:47.317+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 08:40:47.338+0000 [id=58]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 08:40:47.338+0000 [id=58]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-14 08:40:47.347+0000 [id=57]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 08:40:47.350+0000 [id=57]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6a9bb0f6fedfff5c97130b8727bf5a831632df8a058fc485b01744270856d18a duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-14 08:40:47.351+0000 [id=47]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-14 08:40:47.491+0000 [id=47]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-a-1  | 2026-10-14 08:40:47.585+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 08:40:47.618+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-14 08:41:20.379+0000 [id=134]	WARNING	j.persistence.RunningBuilds#lost: Ownership of pt #1 was lost to another controller; stopping it here
+jenkins-a-1  | 2026-10-14 08:41:20.492+0000 [id=113]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: pt #1
+jenkins-a-1  | 2026-10-14 08:41:20.508+0000 [id=113]	WARNING	j.p.BuildRecords$Publisher#onFinalized: Not publishing pt #1: it is owned by another controller
+jenkins-a-1  | 2026-10-14 08:42:58.680+0000 [id=156]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: calm #1
 jenkins-a-1  | Running from: /war-override/jenkins.war
 jenkins-a-1  | webroot: /var/jenkins_home/war
-jenkins-a-1  | 2026-10-13 17:54:21.049+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
-jenkins-a-1  | 2026-10-13 17:54:21.395+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
-jenkins-a-1  | 2026-10-13 17:54:21.422+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
-jenkins-a-1  | 2026-10-13 17:54:21.596+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
-jenkins-a-1  | 2026-10-13 17:54:21.618+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
-jenkins-a-1  | 2026-10-13 17:54:21.783+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
-jenkins-a-1  | 2026-10-13 17:54:21.841+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
-jenkins-a-1  | 2026-10-13 17:54:21.846+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-jenkins-a-1  | 2026-10-13 17:54:21.847+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @425ms
-jenkins-a-1  | 2026-10-13 17:54:21.847+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
-jenkins-a-1  | 2026-10-13 17:54:21.896+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
-jenkins-a-1  | 2026-10-13 17:54:21.930+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
-jenkins-a-1  | 2026-10-13 17:54:23.237+0000 [id=52]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
-jenkins-a-1  | 2026-10-13 17:54:24.570+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
-jenkins-a-1  | 2026-10-13 17:54:24.581+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
-jenkins-a-1  | 2026-10-13 17:54:24.583+0000 [id=60]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
-jenkins-a-1  | 2026-10-13 17:54:24.613+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Starting...
-jenkins-a-1  | 2026-10-13 17:54:24.620+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-work - Start completed.
-jenkins-a-1  | 2026-10-13 17:54:24.620+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Starting...
-jenkins-a-1  | 2026-10-13 17:54:24.620+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cnj-store-control - Start completed.
-jenkins-a-1  | 2026-10-13 17:54:24.815+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cnj.store.PostgresPersistenceStoreProvider
-jenkins-a-1  | 2026-10-13 17:54:25.006+0000 [id=57]	INFO	c.a.c.u.l.LoggingEventBuilder#performLogging: {"az.sdk.message":"The following Netty versions were found on the classpath and have a mismatch with the versions used by azure-core-http-netty. If your application runs without issue this message can be ignored, otherwise please align the Netty versions used in your application. For more information, see https://aka.ms/azsdk/java/dependency/troubleshoot.","azure-netty-version":"4.1.138.Final","azure-netty-native-version":"2.0.84.Final","classpath-netty-version-io.netty:netty-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler":"4.2.18.Final","classpath-netty-version-io.netty:netty-handler-proxy":"4.2.18.Final","classpath-netty-version-io.netty:netty-buffer":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http":"4.2.18.Final","classpath-netty-version-io.netty:netty-codec-http2":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-unix-common":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-epoll":"4.2.18.Final","classpath-netty-version-io.netty:netty-transport-native-kqueue":"4.2.18.Final"}
-jenkins-a-1  | 2026-10-13 17:54:25.449+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cnj.store.AzureBlobStoreProvider
-jenkins-a-1  | 2026-10-13 17:54:25.740+0000 [id=59]	INFO	i.j.p.c.store.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
-jenkins-a-1  | 2026-10-13 17:54:25.815+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
-jenkins-a-1  | 2026-10-13 17:54:26.189+0000 [id=48]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
-jenkins-a-1  | 2026-10-13 17:54:26.227+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
-jenkins-a-1  | 2026-10-13 17:54:26.227+0000 [id=54]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
-jenkins-a-1  | 2026-10-13 17:54:26.235+0000 [id=55]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
-jenkins-a-1  | 2026-10-13 17:54:26.238+0000 [id=59]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
-jenkins-a-1  | 2026-10-13 17:54:26.241+0000 [id=48]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_0c29352651b86597837336bc02d43226fd80c68efe31de4be48fd465440e60a2 duplicates one seen earlier for admin
-jenkins-a-1  | 2026-10-13 17:54:26.345+0000 [id=59]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
-jenkins-a-1  | 2026-10-13 17:54:26.376+0000 [id=59]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
-jenkins-a-1  | 2026-10-13 17:54:26.384+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
-jenkins-a-1  | 2026-10-13 17:54:27.836+0000 [id=128]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: steps #1
-jenkins-a-1  | 2026-10-13 17:54:29.727+0000 [id=128]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: steps0 #1
+jenkins-a-1  | 2026-10-14 08:43:14.869+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file
+jenkins-a-1  | 2026-10-14 08:43:15.266+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+jenkins-a-1  | 2026-10-14 08:43:15.296+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.1.14; built: 2026-10-02T05:48:05.032Z; git: 15cecbd757a2f6b0fdc6a8944f4c6d0020b17da0; jvm 21.0.12.1+1-LTS
+jenkins-a-1  | 2026-10-14 08:43:15.547+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet
+jenkins-a-1  | 2026-10-14 08:43:15.572+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0
+jenkins-a-1  | 2026-10-14 08:43:15.772+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /var/jenkins_home found at: EnvVars.masterEnvVars.get("JENKINS_HOME")
+jenkins-a-1  | 2026-10-14 08:43:15.861+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@68e7c8c3{Jenkins v2.586-SNAPSHOT,/,b=file:///var/jenkins_home/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@319c3a25{STARTED}}
+jenkins-a-1  | 2026-10-14 08:43:15.865+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started oejs.ServerConnector@56913163{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+jenkins-a-1  | 2026-10-14 08:43:15.865+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@a18649a{STARTING}[12.1.14,sto=0] @570ms
+jenkins-a-1  | 2026-10-14 08:43:15.866+0000 [id=40]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+jenkins-a-1  | 2026-10-14 08:43:15.910+0000 [id=39]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.586-SNAPSHOT
+jenkins-a-1  | 2026-10-14 08:43:15.956+0000 [id=46]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization
+jenkins-a-1  | 2026-10-14 08:43:18.433+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+jenkins-a-1  | 2026-10-14 08:43:19.931+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+jenkins-a-1  | 2026-10-14 08:43:19.956+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins
+jenkins-a-1  | 2026-10-14 08:43:19.960+0000 [id=53]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+jenkins-a-1  | 2026-10-14 08:43:20.023+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Starting...
+jenkins-a-1  | 2026-10-14 08:43:20.035+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-work - Start completed.
+jenkins-a-1  | 2026-10-14 08:43:20.036+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Starting...
+jenkins-a-1  | 2026-10-14 08:43:20.037+0000 [id=57]	INFO	c.zaxxer.hikari.HikariDataSource#<init>: cluster-postgres-control - Start completed.
+jenkins-a-1  | 2026-10-14 08:43:20.262+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using persistence store io.jenkins.plugins.cluster.postgresql.PostgresPersistenceStoreProvider
+jenkins-a-1  | 2026-10-14 08:43:20.814+0000 [id=57]	INFO	j.persistence.PersistenceStores#get: Using blob store io.jenkins.plugins.cluster.s3.S3BlobStoreProvider
+jenkins-a-1  | 2026-10-14 08:43:21.322+0000 [id=60]	INFO	i.j.p.cluster.ClusterUpdateSites#take: Took hudson.tasks.Maven.MavenInstaller from the cluster (downloaded by jenkins-b)
+jenkins-a-1  | 2026-10-14 08:43:21.508+0000 [id=47]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded
+jenkins-a-1  | 2026-10-14 08:43:22.060+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted
+jenkins-a-1  | 2026-10-14 08:43:22.090+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+jenkins-a-1  | 2026-10-14 08:43:22.090+0000 [id=49]	INFO	o.j.p.l.nodes.NodesMirror#createNodeResources: lockable-resources-plugin: configure node resources
+jenkins-a-1  | 2026-10-14 08:43:22.099+0000 [id=45]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+jenkins-a-1  | 2026-10-14 08:43:22.104+0000 [id=50]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-admin-token.groovy
+jenkins-a-1  | 2026-10-14 08:43:22.109+0000 [id=56]	WARNING	hudson.model.User$AllUsers#scanAll: entry for admin in /var/jenkins_home/users/admin_6a9bb0f6fedfff5c97130b8727bf5a831632df8a058fc485b01744270856d18a duplicates one seen earlier for admin
+jenkins-a-1  | 2026-10-14 08:43:22.231+0000 [id=50]	INFO	j.util.groovy.GroovyHookScript#execute: Executing /var/jenkins_home/init.groovy.d/cnj-blob-credential.groovy
+jenkins-a-1  | 2026-10-14 08:43:22.280+0000 [id=50]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization
+jenkins-a-1  | 2026-10-14 08:43:22.291+0000 [id=39]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+jenkins-a-1  | 2026-10-14 08:43:25.853+0000 [id=115]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: steps #1
+jenkins-a-1  | 2026-10-14 08:43:28.314+0000 [id=115]	INFO	o.j.p.l.queue.LockRunListener#onCompleted: steps0 #1
