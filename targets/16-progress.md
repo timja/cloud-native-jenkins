@@ -13,7 +13,7 @@
 | 5 | Docs: JEPs, this target, ROADMAP, the upstreaming plan | ✅ | |
 | 6 | Default stack: full sweep | ✅ | ET1–ET22, ET17 with C killed at 36 s, ET9/ET10/ET13 on kind; 6 lanes on native Docker (ET4 in a rerun after a check fix) |
 | 7 | S3 variant: ET3, ET4, ET8, ET15, ET19 | ✅ | Garage; `findings/raw-s3/`, `findings/T16-plugin-split.md` |
-| 8 | Reseed the kind release; push the branch to the private repository | ⬜ | |
+| 8 | Reseed the kind release; push the branch to the private repository | ✅ | the kind release on the new image (4 cluster plugins, pipeline-graph-view, Configure System saves cleanly); timja/cloud-native-jenkins#17; the core fix on timja/jenkins#162 |
 
 ## Found on the way
 - `InjectedTest` of the old plugin failed: its test classpath mixed incompatible versions of credentials, commons-lang3 and jackson2. The sweep builds skip tests, so it went unnoticed. The plugin BOM in each module's pom fixes it.
@@ -24,4 +24,4 @@
 
 ## Log
 - 2026-10-14: planned with the user (naming, depth of the split, S3 now, Garage, one repository, configuration renamed without aliases). Steps 1–5 done.
-- 2026-10-14 (afternoon): the full sweep passes on the Cluster plugins, on a 24-CPU Linux machine with 6 lanes (about 55 minutes for the Compose experiments). Target 16 done but for reseeding the kind release and pushing.
+- 2026-10-14 (afternoon): the full sweep passes on the Cluster plugins, on a 24-CPU Linux machine with 6 lanes (about 55 minutes for the Compose experiments). **Target 16 done.**

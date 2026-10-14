@@ -94,6 +94,7 @@ All on forks, as drafts, each stack based on a `cnj/base` branch (the upstream c
 |---|---|---|
 | [timja/jenkins](https://github.com/timja/jenkins) | core, 24 branches (rows 2.1–2.24), base `cd2a077` | [#139](https://github.com/timja/jenkins/pull/139) … [#162](https://github.com/timja/jenkins/pull/162) |
 | [timja/cloud-native-jenkins](https://github.com/timja/cloud-native-jenkins) (private) | store plugin, chart, validation, 15 branches (rows 4.1–4.6; split into the Cluster plugins on `cnj/t16-plugin-split`), base `15e471e`; `main` holds the JEPs, targets and findings | [#1](https://github.com/timja/cloud-native-jenkins/pull/1) … [#15](https://github.com/timja/cloud-native-jenkins/pull/15) |
+| [timja/cloud-native-jenkins](https://github.com/timja/cloud-native-jenkins) (private) | Target 16: the Cluster plugins (`cnj/t16-plugin-split`, on #15), rows 4.1–4.6 | [#17](https://github.com/timja/cloud-native-jenkins/pull/17) |
 | [timja/stapler](https://github.com/timja/stapler) | 1.2 | [#1](https://github.com/timja/stapler/pull/1) |
 | [timja/workflow-cps-plugin](https://github.com/timja/workflow-cps-plugin) | 1.1 | [#1](https://github.com/timja/workflow-cps-plugin/pull/1) |
 | [timja/configuration-as-code-plugin](https://github.com/timja/configuration-as-code-plugin) | 1.3 | [#116](https://github.com/timja/configuration-as-code-plugin/pull/116) |

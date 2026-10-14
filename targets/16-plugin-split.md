@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Roadmap tier** | Packaging (before hosting requests) |
-| **Status** | In progress (planned 2026-10-14), see [16-progress](16-progress.md) |
+| **Status** | Done 2026-10-14 (planned the same day): every experiment passed in one sweep, see [16-progress](16-progress.md) |
 | **Depends on** | Target 15 |
 | **Out of scope** | Hosting requests and upstreaming. Point-in-time recovery on S3 (needs bucket versioning; ET18 stays on Azure) |
 
