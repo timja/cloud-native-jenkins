@@ -1,8 +1,8 @@
-## ET3 results (2026-10-13T17:43Z)
+## ET3 results (2026-10-14T08:27Z)
 
 | | Check |
 |---|---|
-| ✅ | both controllers use the blob store |
+| ❌ | both controllers use the blob store |
 | ✅ | 1 B lists the freestyle build made on A |
 | ✅ | 1 same result on both (UNSTABLE) |
 | ✅ | 1 same duration on both |
@@ -18,7 +18,7 @@
 | ✅ | 3 A lists builds 1..20 |
 | ✅ | 3 B lists builds 1..20 |
 | ✅ | 3 permalinks agree |
-| ℹ️ | 3 permalinks on A: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=7; on B: lastBuild=20 lastSuccessfulBuild=20 lastFailedBuild=7 |
+| ℹ️ | 3 permalinks on A: lastBuild=20 lastSuccessfulBuild=19 lastFailedBuild=13; on B: lastBuild=20 lastSuccessfulBuild=19 lastFailedBuild=13 |
 | ✅ | 3 lastFailedBuild is the failed build, on A |
 | ✅ | 3 lastFailedBuild is the failed build, on B |
 | ✅ | 4 a description set on B for a build that ran on A is visible on A |
@@ -35,7 +35,7 @@
 | ✅ | 5 fresh A shows the test results |
 | ✅ | 5 fresh A shows the flow graph and step logs |
 | ✅ | 6 B shows a placeholder for #1 running on jenkins-a |
-| ℹ️ | 6 placeholder visible on B after 2 s |
+| ℹ️ | 6 placeholder visible on B after 3 s |
 | ✅ | 6 A shows no placeholder for its own build |
 | ✅ | 6 B's read-only console shows the output so far |
 | ✅ | 6 placeholder replaced by the full build on B when it completes |
@@ -54,7 +54,7 @@
 | ✅ | 8 first build of the recreated job is numbered after the old ones (#2) |
 | ✅ | 8 no old build in its history on A |
 | ✅ | 9 no snapshots or logs in jenkins_store |
-| ✅ | 9 largest jenkins_store value is under 1 MB (3503 bytes) |
-| ✅ | 9 snapshots and logs are in the blob container (96 blobs) |
+| ✅ | 9 largest jenkins_store value is under 1 MB (3329 bytes) |
+| ✅ | 9 snapshots and logs are in the blob container (111 blobs) |
 
-Failures: 0
+Failures: 1
