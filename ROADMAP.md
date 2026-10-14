@@ -118,7 +118,7 @@ Replaces S0, except the seeded pre-plugin keys: global config, descriptors, key 
 | 16 | Packaging: the store plugin split into the Cluster plugin family (`cluster`, `cluster-postgresql`, `cluster-azure-blob`, new `cluster-s3`), a cluster SPI, an S3 variant of the stack (Garage) | [targets/16](targets/16-plugin-split.md), done 2026-10-14 ([progress](targets/16-progress.md)) |
 
 ## Where this leaves the roadmap (2026-10-11)
-Every planned target (1-14) is done, each with its acceptance experiment passing. On the Target 14 build (core `cnj/t14-m1-resilience` 82d1bbce2b, plugin `cnj/t14-m1-resilience`) the whole suite, ET1-ET16, passes in one sweep (ET9, ET10 and ET13 on kind). Nothing is pushed; the branches are local stacks. Draft JEPs for each part are in [jeps/](jeps/README.md).
+Every planned target (1-14) is done, each with its acceptance experiment passing. On the Target 14 build (core `cnj/t14-m1-resilience` 82d1bbce2b, plugin `cnj/t14-m1-resilience`) the whole suite, ET1-ET16, passes in one sweep (ET9, ET10 and ET13 on kind). Nothing is pushed; the branches are local stacks. Draft JEPs for each part are in [timja/jep#4](https://github.com/timja/jep/pull/4).
 
 What remains is outside the cluster's own code:
 - **Ecosystem** (R1 plugin file access, X ecosystem migration): plugins that write state with `File` APIs instead of `XmlFile`/the store. The T11 compatibility report lists them per controller; migrating them is work in each plugin.

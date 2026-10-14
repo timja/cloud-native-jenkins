@@ -17,8 +17,8 @@ All prototype work is pushed as stacked pull requests to **forks** (`timja/*`) f
 ### Wave 0: proposals
 | # | What | Where | Priority | Notes |
 |---|---|---|---|---|
-| 0.1 | JEP-250 Persistence SPI | `jenkinsci/jep` | P0 | Draft; everything depends on it |
-| 0.2 | JEPs 251–257 | `jenkinsci/jep` | P1 | One at a time, after 250 has had a first round |
+| 0.1 | JEP-250 Persistence SPI | `jenkinsci/jep` | P0 | Draft; everything depends on it. With 251–257 as AsciiDoc in 🟡 [timja/jep#4](https://github.com/timja/jep/pull/4) |
+| 0.2 | JEPs 251–257 | `jenkinsci/jep` | P1 | In the same fork PR as 250; to jenkinsci one at a time, after 250 has had a first round |
 
 ### Wave 1: changes that stand alone (no new core SPI)
 | # | Repo | Branch | Fork PR | Priority | Notes |
@@ -76,7 +76,7 @@ All prototype work is pushed as stacked pull requests to **forks** (`timja/*`) f
 | 3.8 | pipeline-build-step | `cnj/t15-remote-completion` | 🟡 [pipeline-build-step-plugin#1](https://github.com/timja/pipeline-build-step-plugin/pull/1) | 2.24 (deliveries, `SharedQueue.takenElsewhere`) | P2 | Fork `timja/pipeline-build-step-plugin` created. Its `pom.xml` points at a local core snapshot. No unit tests yet (covered by ET12 1c/1d): add some before upstreaming |
 
 ### Wave 4: the Cluster plugins, chart and validation (Target 16 split the store plugin)
-One hosting request per plugin. The names `cluster`, `cluster-postgresql`, `cluster-azure-blob` and `cluster-s3` were free on the update site on 2026-10-14; `jenkins-cluster` is the fallback for `cluster`. They are released after the core stack is in a weekly.
+The code is in [timja/cluster-plugin](https://github.com/timja/cluster-plugin) (public; moved from this repository on 2026-10-14, with its history): the four plugins at its root, the chart in `charts/`, the experiments in `validation/`. One hosting request per plugin, splitting that repository then. The names `cluster`, `cluster-postgresql`, `cluster-azure-blob` and `cluster-s3` were free on the update site on 2026-10-14; `jenkins-cluster` is the fallback for `cluster`. They are released after the core stack is in a weekly.
 
 | # | What | Where | Priority | Notes |
 |---|---|---|---|---|
@@ -93,8 +93,8 @@ All on forks, as drafts, each stack based on a `cnj/base` branch (the upstream c
 | Repo | Stack | PRs |
 |---|---|---|
 | [timja/jenkins](https://github.com/timja/jenkins) | core, 24 branches (rows 2.1–2.24), base `cd2a077` | [#139](https://github.com/timja/jenkins/pull/139) … [#162](https://github.com/timja/jenkins/pull/162) |
-| [timja/cloud-native-jenkins](https://github.com/timja/cloud-native-jenkins) (private) | store plugin, chart, validation, 15 branches (rows 4.1–4.6; split into the Cluster plugins on `cnj/t16-plugin-split`), base `15e471e`; `main` holds the JEPs, targets and findings | [#1](https://github.com/timja/cloud-native-jenkins/pull/1) … [#15](https://github.com/timja/cloud-native-jenkins/pull/15) |
-| [timja/cloud-native-jenkins](https://github.com/timja/cloud-native-jenkins) (private) | Target 16: the Cluster plugins (`cnj/t16-plugin-split`, on #15), rows 4.1–4.6 | [#17](https://github.com/timja/cloud-native-jenkins/pull/17) |
+| [timja/cluster-plugin](https://github.com/timja/cluster-plugin) | the Cluster plugins, chart and experiments (rows 4.1–4.6), on `main` | none (moved there from the closed #1–#15 and #17 of timja/cloud-native-jenkins, whose branches are kept) |
+| [timja/jep](https://github.com/timja/jep) | JEPs 250–257 (rows 0.1, 0.2) | [#4](https://github.com/timja/jep/pull/4) |
 | [timja/stapler](https://github.com/timja/stapler) | 1.2 | [#1](https://github.com/timja/stapler/pull/1) |
 | [timja/workflow-cps-plugin](https://github.com/timja/workflow-cps-plugin) | 1.1 | [#1](https://github.com/timja/workflow-cps-plugin/pull/1) |
 | [timja/configuration-as-code-plugin](https://github.com/timja/configuration-as-code-plugin) | 1.3 | [#116](https://github.com/timja/configuration-as-code-plugin/pull/116) |

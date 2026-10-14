@@ -6,7 +6,13 @@ This repo revives the [pluggable storage](https://www.jenkins.io/doc/book/using/
 - [targets/01-shared-item-config.md](targets/01-shared-item-config.md): the first target (item config created and changed at runtime), planned in detail
 - [targets/90-static-state-store.md](targets/90-static-state-store.md): deferred, static state in the store; the S0 workaround covers it for now
 - [findings/](findings/): what running real Jenkins instances showed (E1–E9); raw evidence in `findings/raw/`
-- [validation/](validation/): the harness and experiment scripts that produce the findings
+- [UPSTREAMING.md](UPSTREAMING.md): every pull request, and the order for taking them upstream
+
+**Moved out (2026-10-14):**
+- **The code:** the Cluster plugins, the Helm chart and the harness (`validation/`, the experiment scripts that produce the findings) are in [timja/cluster-plugin](https://github.com/timja/cluster-plugin), with their history.
+- **The JEPs** (JEP-250 to JEP-257) are AsciiDoc drafts in [timja/jep#4](https://github.com/timja/jep/pull/4), for jenkinsci/jep.
+- **What stays here:** the roadmap, the targets and the findings.
+- **Record evidence here:** run the experiments in cluster-plugin with `FINDINGS_DIR` pointing at this repository's `findings/`.
 
 ## Decision record
 **Fully externalised storage, no shared filesystem.** Decided 2026-10-10. Alternatives considered:
@@ -31,32 +37,9 @@ Lessons from the first attempt (Cloud Native SIG, 2018–2020; JEP-202/207/210/2
 This plan therefore lands in small, upstreamable Beta PRs, and widens one seam (the persistence SPI) step by step rather than all at once.
 
 ## Running the harness
-Requirements: Docker with about 6 GB free for images; bash; python3.
+The harness is in [timja/cluster-plugin](https://github.com/timja/cluster-plugin) (`validation/`); see its README. The early experiments E1–E9 (stock Jenkins, `validation/compose.yaml`) are there too. To record their evidence in this repository:
 
 ```sh
-cd validation
-docker compose build jenkins-a
-bash experiments/E1-home-inventory.sh          # ~2 min; writes findings/raw/E1
-python3 -I experiments/analyze_inventory.py ../findings/raw/E1
-bash experiments/E2-disposable-controller.sh   # run right after E1
-bash experiments/E3-shared-home.sh             # ~5 min
-bash experiments/E4-pipeline-failover.sh       # ~4 min
-bash experiments/E5-stateless-http.sh
-bash experiments/E6-bootstrap-seam.sh
-bash experiments/E8-casc-secret-sync.sh        # S0 workaround: master.key-only vs full key seed
-bash experiments/E9-runtime-job-state.sh       # job state written by indexing and properties()
+cd ../cluster-plugin/validation
+FINDINGS_DIR=../../cloud-native-jenkins/findings bash experiments/E1-home-inventory.sh
 ```
-
-E7 (ecosystem scan) runs the [usage-in-plugins](https://github.com/jenkins-infra/usage-in-plugins) jar with `findings/raw/E7/{classes,methods}.txt` and `-i`.
-
-Endpoints:
-- `http://localhost:8081` (jenkins-a), `:8082` (jenkins-b), `:8080` (non-sticky LB)
-- login `admin` / `admin`
-
-Knobs (see `compose.yaml`):
-- `HOME_A` / `HOME_B`: which volume is `JENKINS_HOME`; set both to `home-shared` for shared-home experiments
-- `JENKINS_WAR_DIR`: run a locally built `jenkins.war`
-- `CNJ_INOTIFY=1`: record filesystem events
-- `CNJ_JAVA_OPTS`: extra JVM options; `validation/out/sync` is mounted at `/sync`
-
-The Azure artifact manager runs against Azurite, using the well-known development key; JUnit results go to Postgres via junit-sql-storage. MinIO was the original plan but its images are no longer pullable.
