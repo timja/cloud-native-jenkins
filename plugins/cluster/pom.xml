@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>6.2236.v12dd4c483242</version>
+    <relativePath />
+  </parent>
+  <groupId>io.jenkins.plugins</groupId>
+  <artifactId>cluster</artifactId>
+  <version>${changelist}</version>
+  <packaging>hpi</packaging>
+  <name>Cluster</name>
+  <description>Runs several Jenkins controllers as one cluster: shared items, builds, queue and plugins, and adoption of running builds. Backends come from store and blob store plugins.</description>
+  <properties>
+    <changelist>999999-SNAPSHOT</changelist>
+    <!-- Needs the jenkins.persistence SPI from the cnj/t* core branches, installed locally. -->
+    <jenkins.version>2.586-SNAPSHOT</jenkins.version>
+    <useBeta>true</useBeta>
+    <ban-junit4-imports.skip>false</ban-junit4-imports.skip>
+    <spotbugs.failOnError>false</spotbugs.failOnError>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.jenkins.tools.bom</groupId>
+        <artifactId>bom-weekly</artifactId>
+        <version>7169.vb_32a_cfd93fa_6</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <!-- MilestoneStorage, for milestone across controllers -->
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>pipeline-milestone-step</artifactId>
+    </dependency>
+    <dependency>
+      <!-- LogStorageFactory, for Pipeline logs in blob storage -->
+      <groupId>org.jenkins-ci.plugins.workflow</groupId>
+      <artifactId>workflow-api</artifactId>
+    </dependency>
+    <dependency>
+      <!-- ProgramSavedListener, from the cnj/t4-m1-program-saved-listener branch, installed locally -->
+      <groupId>org.jenkins-ci.plugins.workflow</groupId>
+      <artifactId>workflow-cps</artifactId>
+      <version>999999-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <!-- Target 9: cluster-wide cloud agent caps (kubernetes-plugin cnj/t9-m2-cluster-cap, installed locally) -->
+      <groupId>org.csanchez.jenkins.plugins</groupId>
+      <artifactId>kubernetes</artifactId>
+      <version>999999-SNAPSHOT</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <environmentVariables>
+            <!-- Testcontainers' ryuk reaper is not an approved image: containers are stopped by the tests themselves -->
+            <TESTCONTAINERS_RYUK_DISABLED>true</TESTCONTAINERS_RYUK_DISABLED>
+          </environmentVariables>
+        </configuration>
+      </plugin>
+      <plugin>
+        <!-- the contract tests every backend runs (ClusterBlobStoreContract), and the in-memory blob store -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

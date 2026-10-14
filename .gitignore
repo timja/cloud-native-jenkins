@@ -3,3 +3,4 @@ validation/out/
 .et1/
 target/
 validation/out-*.log
+plugins/*/target/

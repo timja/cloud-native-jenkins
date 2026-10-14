@@ -1,0 +1,1 @@
+<?jelly escape-by-default=true?><div>Runs several Jenkins controllers as one cluster: they share items, builds, the queue and plugins, and adopt each other's running builds. Needs a store plugin (such as Cluster: PostgreSQL) and a blob store plugin (such as Cluster: Azure Blob Storage or Cluster: S3).</div>

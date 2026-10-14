@@ -1,1 +1,0 @@
-<?jelly escape-by-default=true?><div>Stores item configuration in PostgreSQL so several Jenkins controllers can share it.</div>
