@@ -6,12 +6,12 @@ All prototype work is pushed as stacked pull requests to **forks** (`timja/*`) f
 
 **Status key:** 🟡 review PR open on the fork · 🔵 branch ready, PR not opened yet · ⬜ not pushed · ✅ upstreamed · ⛔ superseded (to be closed)
 
-**Stacks.** The fork PRs are real GitHub stacks now: cluster-plugin stack #8 (cluster-plugin#1–#7), jenkins stack #178 (#171–#174) and jenkins stack #179 (#176–#177). Groups A and C1 stay single PRs on `fork/cnj/base` and B1.
+**Stacks.** The fork PRs are real GitHub stacks now: cluster-plugin stack #8 (cluster-plugin#1–#7), jenkins stack #182 (#171, #180, #181, #172–#174) and jenkins stack #183 (#176–#177). Groups A and C1 stay single PRs, on `fork/cnj/base` and B1c.
 
 ## Getting started (minimum first step)
 Open these together, at once:
 1. **The JEPs**: one PR to `jenkinsci/jep` with all of them (the content of [timja/jep#4](https://github.com/timja/jep/pull/4)), JEP-250 marked as the one to review first, since everything depends on it. With it, a post to the developer list / Discourse giving the big picture: why several controllers on one shared store, what goes in core (mechanisms) and what in the `cluster` plugins (policy), and the order of what follows.
-2. **B1a (the store SPI)** as the first core PR, since it is what JEP-250 describes. (B1 #171 is being split into B1a–B1c.)
+2. **B1a (the store SPI, [#171](https://github.com/timja/jenkins/pull/171))** as the first core PR, since it is what JEP-250 describes: about 420 main and 550 test lines, with no behaviour change.
 3. **Small genuine fixes that need no cluster context**: branch-api 1.5 (interrupted indexing no longer builds a branch twice), core A7 [#170](https://github.com/timja/jenkins/pull/170), and the lockable-resources lock-step fix (the step returns false after queueing) if it is split out of L1.
 
 Then, after a first round of reviews: A1 [#164](https://github.com/timja/jenkins/pull/164) and the Stapler prefix 1.2 (needed before B4), then B1b, B1c, B2 onwards, **one core PR open at a time**.
@@ -78,17 +78,19 @@ Submission order: one PR to `jenkinsci/jep` with all of them (the content of tim
 | A7 | `cnj2/a7-small-fixes` | 🟡 [#170](https://github.com/timja/jenkins/pull/170) | P2 | ~50 / 60 | `Items.move` into itself as `IOException`, `User.delete` fires `SaveableListener.onDeleted`, `Nodes` name validation (not done: it is B3's code, and B3 keeps the guard) | #162, #153 |
 
 ### Wave 2: core, JEP-250 (group B, strictly ordered: B1 → B2 → B3 → B4)
-B1 no longer waits for JEP-250 feedback: B1a (the store SPI) is opened with the JEP PR (see Getting started). B1b, B1c and B2–B4 follow after a first round, one at a time. Stacked on GitHub as jenkins stack #178 (#171–#174).
+B1 no longer waits for JEP-250 feedback: B1a (the store SPI) is opened with the JEP PR (see Getting started). B1b, B1c and B2–B4 follow after a first round, one at a time. Stacked on GitHub as jenkins stack #182 (#171, #180, #181, #172–#174).
 
 | # | Branch | Fork PR | Priority | Size (main/test) | What | From (rev3) |
 |---|---|---|---|---|---|---|
-| B1 | `cnj2/b1-store-spi-routing` | 🔵 [#171](https://github.com/timja/jenkins/pull/171) | P0 | ~1,500 / 900 | Key-value `PersistenceStore` (+ provider, `move` with preconditions), `StoreRouting` + `LocalFiles`/`SharedFiles`, `XmlFile`/`TextFile` routing with the version table, `exists()` errors, create-only unread writes, refuse-and-reload with `StoredConfigReconciler`, `materializedCopies`; `InMemoryPersistenceStore` in test sources. Being split into B1a–B1c | #139, #153 (routing), #158 (hook only), #161, #162 (`getFile`) |
+| B1a | `cnj2/b1-store-spi-routing` | 🟡 [#171](https://github.com/timja/jenkins/pull/171) | P0 | ~420 / 550 | The store SPI only: key-value `PersistenceStore`, its provider, `ConflictException`, `PersistenceStores.get()`; `InMemoryPersistenceStore` and its contract test in test sources. Nothing routes to it yet: no behaviour change | #139 |
+| B1b | `cnj2/b1b-config-routing` | 🟡 [#180](https://github.com/timja/jenkins/pull/180) | P0 | ~930 / 500 | `StoreRouting` + `LocalFiles`/`SharedFiles`, `XmlFile`/`TextFile` routing with the version table, `exists()` errors, create-only unread writes; materialized copies for code reading a routed file directly. A conflicting save throws | #153 (routing), #161, #162 (`getFile`) |
+| B1c | `cnj2/b1c-conflicts` | 🟡 [#181](https://github.com/timja/jenkins/pull/181) | P1 | ~300 / 240 | Conflict policy: merge through a `StoredConfigReconciler`, else refuse and reload the stored version | #158 (hook only) |
 | B2 | `cnj2/b2-items` | 🟡 [#172](https://github.com/timja/jenkins/pull/172) | P0 | ~1,200 / 1,300 | Store-only enumeration, lifecycle with `move`+preconditions (no move claims), `ItemChangeApplier` for items, `RemoteItemGroup`, `RemoteChangeHandler` dispatch, the generic sub-item rule | #140–#142, #148 (item parts), #162 |
 | B3 | `cnj2/b3-static-state` | 🟡 [#173](https://github.com/timja/jenkins/pull/173) | P1 | ~600 / 900 | Users, nodes (cloud agents local), global configuration and descriptors, `EarlyDescriptors`, setters under the lock, `unmarshalNullingOut` reload. Round 5 (head `bcd2d80012`): early descriptors read from the store at startup again (`StaticStateApplier` was not accessible to its initializer); a refused save while starting logs instead of failing the boot (controllers started together with JCasC); `User.loadStored` keeps API tokens working after a reload; descriptors reload through their own `load()`; a node reloaded after a refused save rebinds its computer | #153, #154, #162 |
 | B4 | `cnj2/b4-keys-sessions` | 🟡 [#174](https://github.com/timja/jenkins/pull/174) | P1 | ~450 / 500 | Shared confidential keys, stateless sessions, `LoginRevocation` (sign-out everywhere). Round 5 (head `43da520da7`): a sign-in clears the login id the session carried (`forgetLogin` in `AuthenticationProcessingFilter2`), tested in `StatelessSessionsTest`; implemented by P5's `ClusterLoginRevocation` | #155, #156, new |
 
-### Wave 2b: core, build and queue extension points (group C, each on B1, mutually independent)
-C2 and C3 are stacked on GitHub as jenkins stack #179 (#176–#177). Held until JEP-250 is accepted or close.
+### Wave 2b: core, build and queue extension points (group C, each on B1c, mutually independent)
+C2 and C3 are stacked on GitHub as jenkins stack #183 (#176–#177). Held until JEP-250 is accepted or close.
 
 | # | Branch | Fork PR | Priority | Size (main/test) | What | From (rev3) |
 |---|---|---|---|---|---|---|
@@ -96,7 +98,7 @@ C2 and C3 are stacked on GitHub as jenkins stack #179 (#176–#177). Held until 
 | C2 | `cnj2/c2-external-builds` | 🟡 [#176](https://github.com/timja/jenkins/pull/176) | P1 | ~280 / 300 | `ExternalBuilds`/`ExternalBuild`: `Job`, `HistoryPageFilter` + jelly include, `getDynamic`, `ConsoleCommand`, `BuildCommand`. Round 5 (head `55654ef059`): javadoc allows one store read on the caller's thread when nothing is cached, for answers that decide (rename, lookup by number) | #160, #162 CLI hunks, reworked |
 | C3 | `cnj2/c3-queue-handoff` | 🟡 [#177](https://github.com/timja/jenkins/pull/177) | P1 | ~250 / 350 | `scheduleShared`/`updateShared`/`handOff`/`LeftItem.isTakenElsewhere`, futures completed by the remote build; `RemoteItem` removed | #150 `Queue` hunks, new |
 
-Core total: about 5.3k main and 6.0k test lines in 14 PRs (largest B1 at ~1.5k, against #162's 3.5k). **`cnj2/all`** merges A* + B* + C* for the plugins to build against as an incremental; it is a test branch, not a PR. Full core suite on `cnj2/all` (`577a5e37e9`) on the build machine: core module 23,177 tests, test module 2,669 tests across all 503 classes, 0 failures.
+Core total: about 5.3k main and 6.0k test lines in 14 PRs (largest B2 at ~1.2k; B1 was split into three, the largest B1b at ~930). **`cnj2/all`** merges A* + B* + C* for the plugins to build against as an incremental; it is a test branch, not a PR. Full core suite on `cnj2/all` (`577a5e37e9`) on the build machine: core module 23,177 tests, test module 2,669 tests across all 503 classes, 0 failures.
 
 ### Wave 3: plugins using the new core APIs (after a core release containing them)
 | # | Repo | Branch | Fork PR | Needs | Priority | Notes |
@@ -171,7 +173,7 @@ All on forks, as drafts. Bodies follow each repository's PR template (what, how,
 
 | Repo | Stack | PRs |
 |---|---|---|
-| [timja/jenkins](https://github.com/timja/jenkins) | core cnj2: A1–A7 off `fork/cnj/base`; B1 → B2 → B3 → B4; C1–C3 on B1 | [#164](https://github.com/timja/jenkins/pull/164) … [#177](https://github.com/timja/jenkins/pull/177) (14 PRs); GitHub stacks #178 (#171–#174) and #179 (#176–#177); old [#139](https://github.com/timja/jenkins/pull/139) … [#162](https://github.com/timja/jenkins/pull/162) closed |
+| [timja/jenkins](https://github.com/timja/jenkins) | core cnj2: A1–A7 off `fork/cnj/base`; B1a → B1b → B1c → B2 → B3 → B4; C1–C3 on B1c | [#164](https://github.com/timja/jenkins/pull/164) … [#177](https://github.com/timja/jenkins/pull/177), [#180](https://github.com/timja/jenkins/pull/180), [#181](https://github.com/timja/jenkins/pull/181) (16 PRs); GitHub stacks #182 (#171, #180, #181, #172–#174) and #183 (#176–#177); old [#139](https://github.com/timja/jenkins/pull/139) … [#162](https://github.com/timja/jenkins/pull/162) closed |
 | [timja/cluster-plugin](https://github.com/timja/cluster-plugin) | P0–P6, P8 on `main` (P0 and P1 inside P2, which is where they first compile); harness and kind seeding on top | [cluster-plugin#1](https://github.com/timja/cluster-plugin/pull/1) … [cluster-plugin#6](https://github.com/timja/cluster-plugin/pull/6); harness [cluster-plugin#7](https://github.com/timja/cluster-plugin/pull/7); GitHub stack #8 (#1–#7) |
 | [timja/jep](https://github.com/timja/jep) | JEPs 250–257 with 255a/255b (Wave 0) | [#4](https://github.com/timja/jep/pull/4) |
 | [timja/lockable-resources-plugin](https://github.com/timja/lockable-resources-plugin) | L1 (1.6) | [#4](https://github.com/timja/lockable-resources-plugin/pull/4); old [#1](https://github.com/timja/lockable-resources-plugin/pull/1), [#2](https://github.com/timja/lockable-resources-plugin/pull/2) closed |
