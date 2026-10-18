@@ -6,7 +6,6 @@ All prototype work is pushed as stacked pull requests to **forks** (`timja/*`) f
 
 **Status key:** 🟡 review PR open on the fork · 🔵 branch ready, PR not opened yet · ⬜ not pushed · ✅ upstreamed · ⛔ superseded (to be closed)
 
-PR numbers marked **#TBD** are filled in when the lead opens the PRs.
 
 ## Principles
 1. **The JEPs come first.** JEP-250 (the persistence SPI) is the foundation, and every core PR in groups B and C refers to it. Submit JEP-250 to `jenkinsci/jep` as a draft and get feedback before any group B PR is opened. The others follow in the submission order below.
@@ -49,35 +48,35 @@ Submission order: 250 → 255a → 251 → 252 → 253 → 254 → 256 → 257 �
 | 1.3 | configuration-as-code | `cnj/t15-keep-undeclared-nodes` | 🟡 [configuration-as-code-plugin#116](https://github.com/timja/configuration-as-code-plugin/pull/116) | P2 | `keepUndeclaredNodes`. Round 4 (`d282fe8c`): README and javadoc, test on JUnit 5 |
 | 1.4 | kubernetes | `cnj/t9-m2-cluster-cap` | 🟡 [kubernetes-plugin#1](https://github.com/timja/kubernetes-plugin/pull/1) | P2 | `ClusterProvisioningLimits` (Beta). Round 4 (`55fd97ec`): template cap keyed by template name, remote call out of the lock, local release never skipped. JEP-257 |
 | 1.5 | branch-api | `cnj/t15-first-build-revision` | 🟡 [branch-api-plugin#1](https://github.com/timja/branch-api-plugin/pull/1) | P1 | Interrupted indexing no longer builds a branch twice. Round 4 (`4495c92`): a cheap existence check before any read on every save, tighter tests. JEP-253 |
-| 1.6 | lockable-resources | `cnj2/lock-coordinator` (L1) | 🔵 #TBD | P1 | `LockCoordinator` extension point at today's 13 cluster call sites, plus the genuine fixes (`LockStepExecution` returns false after queueing; the "internal error" WARNING becomes FINE). No core dependency; baseline unchanged. Supersedes lockable-resources#1 and #2. JEP-253 |
-| 1.7 | pipeline-build-step | `cnj2/build-trigger-relay` (S1) | 🔵 #TBD | P1 | `BuildTriggerRelay` extension point, `waitForStart` carried in the trigger, inbound `deliver`, result from the message as fallback, unit tests with a fake relay. No core dependency; baseline stays 2.479. Supersedes pipeline-build-step#1. JEP-252 |
+| 1.6 | lockable-resources | `cnj2/lock-coordinator` (L1) | 🔵 [lockable-resources#4](https://github.com/timja/lockable-resources-plugin/pull/4) | P1 | `LockCoordinator` extension point at today's 13 cluster call sites, plus the genuine fixes (`LockStepExecution` returns false after queueing; the "internal error" WARNING becomes FINE). No core dependency; baseline unchanged. Supersedes lockable-resources#1 and #2. JEP-253 |
+| 1.7 | pipeline-build-step | `cnj2/build-trigger-relay` (S1) | 🔵 [pipeline-build-step#2](https://github.com/timja/pipeline-build-step-plugin/pull/2) | P1 | `BuildTriggerRelay` extension point, `waitForStart` carried in the trigger, inbound `deliver`, result from the message as fallback, unit tests with a fake relay. No core dependency; baseline stays 2.479. Supersedes pipeline-build-step#1. JEP-252 |
 
 **Core group A: standalone hooks** (`timja/jenkins`, each off `fork/cnj/base`, independent, can go to jenkinsci early). A1 lands before B2, which rebases on it.
 
 | # | Branch | Fork PR | Priority | Size (main/test) | What | From (rev3) |
 |---|---|---|---|---|---|---|
-| A1 | `cnj2/a1-item-uuid` | 🔵 #TBD | P1 | ~300 / 250 | `Item.getItemUuid`, `ItemUuids` (+`pin`), identity persisted only when pinned, injected into the bytes on create/copy (no second save; `ItemGroupMixInTest` assertion restored) | #162 (t15) hunks, reworked |
-| A2 | `cnj2/a2-trigger-coordinator` | 🔵 #TBD | P1 | ~90 / 180 | `TriggerCoordinator` and the `Trigger`/`SafeTimerTask` calls | #144 |
-| A3 | `cnj2/a3-periodic-coordinator` | 🔵 #TBD | P2 | ~140 / 170 | `PeriodicWorkCoordinator`, `@ClusterSingleton` on three works | #152 minus `FingerprintCleanupThread.Shared` |
-| A4 | `cnj2/a4-queue-hooks` | 🔵 #TBD | P1 | ~200 / 200 | `QueueStartGate` (+`countsForProvisioning`), `QueueListener.onFolded`, `Queue.LOADED` | #150, #157 hunks |
-| A5 | `cnj2/a5-runmap-hooks` | 🔵 #TBD | P1 | ~100 / 80 | `knows`/`unload`/`forget`/`proposeSharedNumber`, `storedNumbers` hook, `Run.isPendingDelete`; the `ItemListener` ordinal fix as its own commit | #145–#147, #162 |
-| A6 | `cnj2/a6-plugin-archive-listener` | 🔵 #TBD | P2 | ~110 / 100 | `PluginArchiveListener` (CLI and `doUploadPlugin`), `PluginManagerNotice` | #162 |
-| A7 | `cnj2/a7-small-fixes` | 🔵 #TBD | P2 | ~50 / 60 | `Items.move` into itself as `IOException`, `User.delete` fires `SaveableListener.onDeleted`, `Nodes` name validation | #162, #153 |
+| A1 | `cnj2/a1-item-uuid` | 🔵 [#164](https://github.com/timja/jenkins/pull/164) | P1 | ~300 / 250 | `Item.getItemUuid`, `ItemUuids` (+`pin`), identity persisted only when pinned, injected into the bytes on create/copy (no second save; `ItemGroupMixInTest` assertion restored) | #162 (t15) hunks, reworked |
+| A2 | `cnj2/a2-trigger-coordinator` | 🔵 [#165](https://github.com/timja/jenkins/pull/165) | P1 | ~90 / 180 | `TriggerCoordinator` and the `Trigger`/`SafeTimerTask` calls | #144 |
+| A3 | `cnj2/a3-periodic-coordinator` | 🔵 [#166](https://github.com/timja/jenkins/pull/166) | P2 | ~140 / 170 | `PeriodicWorkCoordinator`, `@ClusterSingleton` on three works | #152 minus `FingerprintCleanupThread.Shared` |
+| A4 | `cnj2/a4-queue-hooks` | 🔵 [#167](https://github.com/timja/jenkins/pull/167) | P1 | ~200 / 200 | `QueueStartGate` (+`countsForProvisioning`), `QueueListener.onFolded`, `Queue.LOADED` | #150, #157 hunks |
+| A5 | `cnj2/a5-runmap-hooks` | 🔵 [#168](https://github.com/timja/jenkins/pull/168) | P1 | ~100 / 80 | `knows`/`unload`/`forget`/`proposeSharedNumber`, `storedNumbers` hook, `Run.isPendingDelete`; the `ItemListener` ordinal fix as its own commit | #145–#147, #162 |
+| A6 | `cnj2/a6-plugin-archive-listener` | 🔵 [#169](https://github.com/timja/jenkins/pull/169) | P2 | ~110 / 100 | `PluginArchiveListener` (CLI and `doUploadPlugin`), `PluginManagerNotice` | #162 |
+| A7 | `cnj2/a7-small-fixes` | 🔵 [#170](https://github.com/timja/jenkins/pull/170) | P2 | ~50 / 60 | `Items.move` into itself as `IOException`, `User.delete` fires `SaveableListener.onDeleted`, `Nodes` name validation (not done: it is B3's code, and B3 keeps the guard) | #162, #153 |
 
 ### Wave 2: core, JEP-250 (group B, strictly ordered: B1 → B2 → B3 → B4)
 | # | Branch | Fork PR | Priority | Size (main/test) | What | From (rev3) |
 |---|---|---|---|---|---|---|
-| B1 | `cnj2/b1-store-spi-routing` | 🔵 #TBD | P0 | ~1,500 / 900 | Key-value `PersistenceStore` (+ provider, `move` with preconditions), `StoreRouting` + `LocalFiles`/`SharedFiles`, `XmlFile`/`TextFile` routing with the version table, `exists()` errors, create-only unread writes, refuse-and-reload with `StoredConfigReconciler`, `materializedCopies`; `InMemoryPersistenceStore` in test sources | #139, #153 (routing), #158 (hook only), #161, #162 (`getFile`) |
-| B2 | `cnj2/b2-items` | 🔵 #TBD | P0 | ~1,200 / 1,300 | Store-only enumeration, lifecycle with `move`+preconditions (no move claims), `ItemChangeApplier` for items, `RemoteItemGroup`, `RemoteChangeHandler` dispatch, the generic sub-item rule | #140–#142, #148 (item parts), #162 |
-| B3 | `cnj2/b3-static-state` | 🔵 #TBD | P1 | ~600 / 900 | Users, nodes (cloud agents local), global configuration and descriptors, `EarlyDescriptors`, setters under the lock, `unmarshalNullingOut` reload | #153, #154, #162 |
-| B4 | `cnj2/b4-keys-sessions` | 🔵 #TBD | P1 | ~450 / 500 | Shared confidential keys, stateless sessions, `LoginRevocation` (sign-out everywhere) | #155, #156, new |
+| B1 | `cnj2/b1-store-spi-routing` | 🔵 [#171](https://github.com/timja/jenkins/pull/171) | P0 | ~1,500 / 900 | Key-value `PersistenceStore` (+ provider, `move` with preconditions), `StoreRouting` + `LocalFiles`/`SharedFiles`, `XmlFile`/`TextFile` routing with the version table, `exists()` errors, create-only unread writes, refuse-and-reload with `StoredConfigReconciler`, `materializedCopies`; `InMemoryPersistenceStore` in test sources | #139, #153 (routing), #158 (hook only), #161, #162 (`getFile`) |
+| B2 | `cnj2/b2-items` | 🔵 [#172](https://github.com/timja/jenkins/pull/172) | P0 | ~1,200 / 1,300 | Store-only enumeration, lifecycle with `move`+preconditions (no move claims), `ItemChangeApplier` for items, `RemoteItemGroup`, `RemoteChangeHandler` dispatch, the generic sub-item rule | #140–#142, #148 (item parts), #162 |
+| B3 | `cnj2/b3-static-state` | 🔵 [#173](https://github.com/timja/jenkins/pull/173) | P1 | ~600 / 900 | Users, nodes (cloud agents local), global configuration and descriptors, `EarlyDescriptors`, setters under the lock, `unmarshalNullingOut` reload | #153, #154, #162 |
+| B4 | `cnj2/b4-keys-sessions` | 🔵 [#174](https://github.com/timja/jenkins/pull/174) | P1 | ~450 / 500 | Shared confidential keys, stateless sessions, `LoginRevocation` (sign-out everywhere) | #155, #156, new |
 
 ### Wave 2b: core, build and queue extension points (group C, each on B1, mutually independent)
 | # | Branch | Fork PR | Priority | Size (main/test) | What | From (rev3) |
 |---|---|---|---|---|---|---|
-| C1 | `cnj2/c1-build-record-source` | 🔵 #TBD | P1 | ~130 / 200 | `BuildRecordSource` + `RunMap`/`AbstractLazyLoadRunMap` wiring + fake-source test | #145 `RunMap` hunks |
-| C2 | `cnj2/c2-external-builds` | 🔵 #TBD | P1 | ~280 / 300 | `ExternalBuilds`/`ExternalBuild`: `Job`, `HistoryPageFilter` + jelly include, `getDynamic`, `ConsoleCommand`, `BuildCommand` | #160, #162 CLI hunks, reworked |
-| C3 | `cnj2/c3-queue-handoff` | 🔵 #TBD | P1 | ~250 / 350 | `scheduleShared`/`updateShared`/`handOff`/`LeftItem.isTakenElsewhere`, futures completed by the remote build; `RemoteItem` removed | #150 `Queue` hunks, new |
+| C1 | `cnj2/c1-build-record-source` | 🔵 [#175](https://github.com/timja/jenkins/pull/175) | P1 | ~130 / 200 | `BuildRecordSource` + `RunMap`/`AbstractLazyLoadRunMap` wiring + fake-source test | #145 `RunMap` hunks |
+| C2 | `cnj2/c2-external-builds` | 🔵 [#176](https://github.com/timja/jenkins/pull/176) | P1 | ~280 / 300 | `ExternalBuilds`/`ExternalBuild`: `Job`, `HistoryPageFilter` + jelly include, `getDynamic`, `ConsoleCommand`, `BuildCommand` | #160, #162 CLI hunks, reworked |
+| C3 | `cnj2/c3-queue-handoff` | 🔵 [#177](https://github.com/timja/jenkins/pull/177) | P1 | ~250 / 350 | `scheduleShared`/`updateShared`/`handOff`/`LeftItem.isTakenElsewhere`, futures completed by the remote build; `RemoteItem` removed | #150 `Queue` hunks, new |
 
 Core total: about 5.3k main and 6.0k test lines in 14 PRs (largest B1 at ~1.5k, against #162's 3.5k). **`cnj2/all`** merges A* + B* + C* for the plugins to build against as an incremental; it is a test branch, not a PR.
 
@@ -99,14 +98,14 @@ The code is in [timja/cluster-plugin](https://github.com/timja/cluster-plugin) (
 
 | # | Branch | Fork PR | Needs | What |
 |---|---|---|---|---|
-| P0 | `cnj2/p0-spi` | 🔵 #TBD | B1 | SPI: `BuildLeases` (abstract atomic `writeIfHeld`), `ClusterQueue`, `LaunchLeases`, `ClusterBlobStore` (no `move`) and `Keys` in `spi`; `owns`/`storesBuildRecords` dropped; Postgres `move` with preconditions; routing patterns become `SharedFiles`/`LocalFiles` contributions; protocol and layout bump (an old-layout store is refused) |
-| P1 | #TBD | 🔵 #TBD | P0, C1 | Builds: `BuildRecords`, `StoredPermalinks`, `StoredBuildNumberAssigner` on `_items/<uuid>`; `BuildRecordSource`; `RemoteChangeHandler` |
-| P2 | #TBD | 🔵 #TBD | P1, C2 | Running: `RunningBuilds`, adoption (`PipelineAdopter`, `SavePoints`), `ExternalBuilds` and its views, `RunningElsewhereAction` |
-| P3 | #TBD | 🔵 #TBD | P2, C3, A4 | Queue: `SharedQueue` (gate, ids, reservations, publisher on `handOff`), `SharedBlocking`, `SharedQueueMaintenance` |
-| P4 | #TBD | 🔵 #TBD | P0 | Files: `ItemFiles`, write-back of materialised copies |
-| P5 | #TBD | 🔵 #TBD | P0 | Config: `XmlMerge` + `ItemReload` as a `StoredConfigReconciler`; `ConflictMonitor` counts refusals |
-| P6 | `cnj2/integrations` | 🔵 #TBD | P3, L1, S1 | Integrations: locks (`LockCoordinator` for lockable-resources), the pipeline-build-step relay |
-| P8 | #TBD | 🔵 #TBD | P0 | Launch leases for outbound static agents (JEP-254) |
+| P0 | `cnj2/p2-running` (with P1, P2) | 🔵 [cluster-plugin#1](https://github.com/timja/cluster-plugin/pull/1) | B1 | SPI: `BuildLeases` (abstract atomic `writeIfHeld`), `ClusterQueue`, `LaunchLeases`, `ClusterBlobStore` (no `move`) and `Keys` in `spi`; `owns`/`storesBuildRecords` dropped; Postgres `move` with preconditions; routing patterns become `SharedFiles`/`LocalFiles` contributions; protocol and layout bump (an old-layout store is refused) |
+| P1 | `cnj2/p2-running` | 🔵 [cluster-plugin#1](https://github.com/timja/cluster-plugin/pull/1) | P0, C1 | Builds: `BuildRecords`, `StoredPermalinks`, `StoredBuildNumberAssigner` on `_items/<uuid>`; `BuildRecordSource`; `RemoteChangeHandler` |
+| P2 | `cnj2/p2-running` | 🔵 [cluster-plugin#1](https://github.com/timja/cluster-plugin/pull/1) | P1, C2 | Running: `RunningBuilds`, adoption (`PipelineAdopter`, `SavePoints`), `ExternalBuilds` and its views, `RunningElsewhereAction` |
+| P3 | `cnj2/p3-queue` | 🔵 [cluster-plugin#2](https://github.com/timja/cluster-plugin/pull/2) | P2, C3, A4 | Queue: `SharedQueue` (gate, ids, reservations, publisher on `handOff`), `SharedBlocking`, `SharedQueueMaintenance` |
+| P4 | `cnj2/p4-files` | 🔵 [cluster-plugin#3](https://github.com/timja/cluster-plugin/pull/3) | P0 | Files: `ItemFiles`, write-back of materialised copies |
+| P5 | `cnj2/p5-config` | 🔵 [cluster-plugin#4](https://github.com/timja/cluster-plugin/pull/4) | P0 | Config: `XmlMerge` + `ItemReload` as a `StoredConfigReconciler`; `ConflictMonitor` counts refusals |
+| P6 | `cnj2/p6-integrations` | 🔵 [cluster-plugin#5](https://github.com/timja/cluster-plugin/pull/5) | P3, L1, S1 | Integrations: locks (`LockCoordinator` for lockable-resources), the pipeline-build-step relay |
+| P8 | `cnj2/p8-launch-lease` | 🔵 [cluster-plugin#6](https://github.com/timja/cluster-plugin/pull/6) | P0 | Launch leases for outbound static agents (JEP-254) |
 
 P7 (a layout migration tool) was dropped: there is no data to migrate.
 
@@ -154,11 +153,11 @@ All on forks, as drafts. Bodies follow each repository's PR template (what, how,
 
 | Repo | Stack | PRs |
 |---|---|---|
-| [timja/jenkins](https://github.com/timja/jenkins) | core cnj2: A1–A7 off `fork/cnj/base`; B1 → B2 → B3 → B4; C1–C3 on B1 | #TBD (14 PRs); old [#139](https://github.com/timja/jenkins/pull/139) … [#162](https://github.com/timja/jenkins/pull/162) to be closed |
-| [timja/cluster-plugin](https://github.com/timja/cluster-plugin) | P0–P6, P8 on `main` | #TBD |
+| [timja/jenkins](https://github.com/timja/jenkins) | core cnj2: A1–A7 off `fork/cnj/base`; B1 → B2 → B3 → B4; C1–C3 on B1 | [#164](https://github.com/timja/jenkins/pull/164) … [#177](https://github.com/timja/jenkins/pull/177) (14 PRs); old [#139](https://github.com/timja/jenkins/pull/139) … [#162](https://github.com/timja/jenkins/pull/162) closed |
+| [timja/cluster-plugin](https://github.com/timja/cluster-plugin) | P0–P6, P8 on `main` (P0 and P1 inside P2, which is where they first compile) | [cluster-plugin#1](https://github.com/timja/cluster-plugin/pull/1) … [cluster-plugin#6](https://github.com/timja/cluster-plugin/pull/6) |
 | [timja/jep](https://github.com/timja/jep) | JEPs 250–257 with 255a/255b (Wave 0) | [#4](https://github.com/timja/jep/pull/4) |
-| [timja/lockable-resources-plugin](https://github.com/timja/lockable-resources-plugin) | L1 (1.6) | #TBD; old [#1](https://github.com/timja/lockable-resources-plugin/pull/1), [#2](https://github.com/timja/lockable-resources-plugin/pull/2) to be closed |
-| [timja/pipeline-build-step-plugin](https://github.com/timja/pipeline-build-step-plugin) | S1 (1.7) | #TBD; old [#1](https://github.com/timja/pipeline-build-step-plugin/pull/1) to be closed |
+| [timja/lockable-resources-plugin](https://github.com/timja/lockable-resources-plugin) | L1 (1.6) | [#4](https://github.com/timja/lockable-resources-plugin/pull/4); old [#1](https://github.com/timja/lockable-resources-plugin/pull/1), [#2](https://github.com/timja/lockable-resources-plugin/pull/2) closed |
+| [timja/pipeline-build-step-plugin](https://github.com/timja/pipeline-build-step-plugin) | S1 (1.7) | [#2](https://github.com/timja/pipeline-build-step-plugin/pull/2); old [#1](https://github.com/timja/pipeline-build-step-plugin/pull/1) closed |
 | [timja/stapler](https://github.com/timja/stapler) | 1.2 | [#1](https://github.com/timja/stapler/pull/1) |
 | [timja/workflow-cps-plugin](https://github.com/timja/workflow-cps-plugin) | 1.1 | [#1](https://github.com/timja/workflow-cps-plugin/pull/1) |
 | [timja/configuration-as-code-plugin](https://github.com/timja/configuration-as-code-plugin) | 1.3 | [#116](https://github.com/timja/configuration-as-code-plugin/pull/116) |
