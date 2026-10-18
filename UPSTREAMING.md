@@ -12,9 +12,10 @@ All prototype work is pushed as stacked pull requests to **forks** (`timja/*`) f
 Open these together, at once:
 1. **The JEPs**: one PR to `jenkinsci/jep` with all of them (the content of [timja/jep#4](https://github.com/timja/jep/pull/4)), JEP-250 marked as the one to review first, since everything depends on it. With it, a post to the developer list / Discourse giving the big picture: why several controllers on one shared store, what goes in core (mechanisms) and what in the `cluster` plugins (policy), and the order of what follows.
 2. **B1a (the store SPI, [#171](https://github.com/timja/jenkins/pull/171))** as the first core PR, since it is what JEP-250 describes: about 420 main and 550 test lines, with no behaviour change.
-3. **Small genuine fixes that need no cluster context**: branch-api 1.5 (interrupted indexing no longer builds a branch twice), core A7 [#170](https://github.com/timja/jenkins/pull/170), and the lockable-resources lock-step fix (the step returns false after queueing) if it is split out of L1.
+3. **The Stapler bound-id prefix 1.2** ([stapler#1](https://github.com/timja/stapler/pull/1)): small, optional (default empty, unchanged behaviour) and in another repo, so it can go now and be released before anything needs it.
+4. **Small genuine fixes that need no cluster context**: branch-api 1.5 (interrupted indexing no longer builds a branch twice), core A7 [#170](https://github.com/timja/jenkins/pull/170), and the lockable-resources lock-step fix (the step returns false after queueing) if it is split out of L1.
 
-Then, after a first round of reviews: A1 [#164](https://github.com/timja/jenkins/pull/164) and the Stapler prefix 1.2 (needed before B4), then B1b, B1c, B2 onwards, **one core PR open at a time**.
+Then, after a first round of reviews: A1 [#164](https://github.com/timja/jenkins/pull/164), then B1b, B1c, B2 onwards, **one core PR open at a time**.
 
 Hold the other extension points (group C, L1/S1, workflow-cps 1.1) and the cluster plugins until JEP-250 is accepted or close to it.
 
