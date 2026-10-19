@@ -213,7 +213,7 @@ Reasons:
 - Only plugin code uses the facets once the engines move.
 - Core reviewers then review a key-value contract, not a coordination service.
 - The Beta key-value API can settle while the facets keep changing.
-- Other backends (S3 for blobs, a future etcd) implement the plugin SPI, which is versioned by the cluster plugin's own protocol (JEP-255a).
+- Other backends (S3 for blobs, a future etcd) implement the plugin SPI, which is versioned by the cluster plugin's own protocol (JEP-255).
 - This also answers the jep-fable question ("one interface or a key-value store plus a coordination interface"): the second option, with the coordination interface in the plugin.
 
 ---
@@ -289,7 +289,7 @@ Afterwards:
   - The `ItemGroupMixInTest` assertion is restored.
   - `ItemUuids.Listener.claim` (a clash after posted XML) still re-saves, but only in the clash case, which is rare and intended.
 - **`keepDerivedUuids` is deleted.** When a store is active, every stored item has a UUID, either from creation or from the import or migration tool. Without a store nothing depends on stability unless something pinned it.
-- **Downgrade:** a plain install's disk is unchanged. A cluster or pinned install shows OldDataMonitor "unknown field" until each item is re-saved, which is documented. Downgrading a cluster is not supported anyway (JEP-255b rollback section).
+- **Downgrade:** a plain install's disk is unchanged. A cluster or pinned install shows OldDataMonitor "unknown field" until each item is re-saved, which is documented. Downgrading a cluster is not supported anyway (the cluster plugin's operations guide, Rolling back).
 
 ### 3.6 Migration of existing stored data
 
@@ -488,16 +488,16 @@ Merged-together test branch `cnj2/all` = A* + B* + C*, for the plugin to build a
   - applying remote changes for items, static state, users and nodes, plus `RemoteChangeHandler`/`RemoteItemGroup`;
   - confidential key sharing; and item identity (`getItemUuid`, pinning) as a prerequisite section. A1 needs no JEP of its own.
   - Removed from 250: `ItemFiles`, write-back, merge algorithm, `@PerController`, `storesBuildRecords`, leases, queue, `DoubleLaunchChecker` sentence (jep-fable m1).
-- **JEP-255a "Cluster coordination" (Standards, cluster plugin)** specifies:
+- **JEP-255 "Cluster coordination" (Standards, cluster plugin; was 255a)** specifies:
   - the plugin coordination SPI: membership and liveness (database clock), leases with fenced writes, claims, counters, shared-queue record contract, channels, launch leases;
   - the UUID-keyed build-data layout (§3.1);
   - protocol and schema versions with the migration rule; outage behaviour.
-- **JEP-255b "Operating a cluster" (Informational, or docs in the chart repo):** chart, import, backup/PITR, rollback window, sizing (laptop measurements as a table).
+- **Operating a cluster** (was JEP-255b, Informational; now documentation in the plugin repository, `docs/operating-a-cluster.md`, cluster-plugin#7): chart, import, backup/PITR, rollback window, sizing (laptop measurements as a table).
 - **251, 252, 253** each specify the core extension points they rely on (251: `BuildRecordSource` and permalinks/number assigner use; 252: `ExternalBuilds`, adoption is plugin-side; 253: queue hand-off and decision 3 future semantics, plus `QueueStartGate`) and the plugin behaviour.
-  - Requires: 251 → 250, 255a; 252 → 251, 255a (deliveries move into 252); 253 → 250, 255a, 252.
-  - This removes the circular 252↔255 dependency (jep-fable M5): liveness is defined in 255a, which needs only 250.
+  - Requires: 251 → 250, 255; 252 → 251, 255 (deliveries move into 252); 253 → 250, 255, 252.
+  - This removes the circular 252↔255 dependency (jep-fable M5): liveness is defined in 255, which needs only 250.
 - **254/257** gain the outbound-agent launch lease, or the "unsupported in v1" statement.
-- **Submission order:** 250 → 255a → 251 → 252 → 253 → 254 → 256 → 257 → 255b.
+- **Submission order:** 250 → 255 → 251 → 252 → 253 → 254 → 256 → 257 (the operations guide is plugin documentation, not a JEP).
 
 ---
 

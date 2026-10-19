@@ -36,21 +36,21 @@ Consider splitting two pieces into PRs of their own: workflow-cps `CpsFlowExecut
 ## Order and priority
 
 ### Wave 0: proposals
-All in 🟡 [timja/jep#4](https://github.com/timja/jep/pull/4) (branch `cluster-jeps`), rewritten for cnj2: 250 shrunk to the key-value SPI, 255 split into 255a and 255b, engines described as implemented by the cluster plugin.
+All in 🟡 [timja/jep#4](https://github.com/timja/jep/pull/4) (branch `cluster-jeps`), rewritten for cnj2: 250 shrunk to the key-value SPI, 255 split into the coordination JEP (now plain JEP-255; it was 255a while a second part existed) and an operations guide (was 255b), which is now plugin documentation, engines described as implemented by the cluster plugin.
 
 | # | JEP | Type | Requires | Priority | Notes |
 |---|---|---|---|---|---|
 | 0.1 | JEP-250 Pluggable persistence store for `JENKINS_HOME` configuration | Standards (core) | none | P0 | Draft first; everything depends on it |
-| 0.2 | JEP-255a Cluster coordination: membership, leases and the cluster store | Standards (cluster plugin) | 250 | P1 | The plugin SPI its backends implement; the identity-keyed layout |
-| 0.3 | JEP-251 Shared build records, logs and history | Standards | 250, 255a | P1 | `BuildRecordSource` |
-| 0.4 | JEP-252 Ownership of running builds | Standards | 251, 255a | P1 | `ExternalBuilds`; deliveries; `BuildTriggerRelay` |
-| 0.5 | JEP-253 Cluster scheduling | Standards | 250, 252, 255a | P1 | Coordinators, `QueueStartGate`, queue hand-off; `LockCoordinator` |
-| 0.6 | JEP-254 Request routing and stateless sessions | Standards | 250, 252, 255a | P1 | `LoginRevocation`; launch lease for outbound agents |
-| 0.7 | JEP-256 Cluster-wide plugin management | Standards | 250, 255a | P2 | `PluginArchiveListener`, `PluginManagerNotice` |
-| 0.8 | JEP-257 Cloud provisioning across controllers | Standards | 253, 255a | P2 | |
-| 0.9 | JEP-255b Operating a cluster | Informational | all | P3 | May become chart documentation instead |
+| 0.2 | JEP-255 Cluster coordination: membership, leases and the cluster store | Standards (cluster plugin) | 250 | P1 | The plugin SPI its backends implement; the identity-keyed layout |
+| 0.3 | JEP-251 Shared build records, logs and history | Standards | 250, 255 | P1 | `BuildRecordSource` |
+| 0.4 | JEP-252 Ownership of running builds | Standards | 251, 255 | P1 | `ExternalBuilds`; deliveries; `BuildTriggerRelay` |
+| 0.5 | JEP-253 Cluster scheduling | Standards | 250, 252, 255 | P1 | Coordinators, `QueueStartGate`, queue hand-off; `LockCoordinator` |
+| 0.6 | JEP-254 Request routing and stateless sessions | Standards | 250, 252, 255 | P1 | `LoginRevocation`; launch lease for outbound agents |
+| 0.7 | JEP-256 Cluster-wide plugin management | Standards | 250, 255 | P2 | `PluginArchiveListener`, `PluginManagerNotice` |
+| 0.8 | JEP-257 Cloud provisioning across controllers | Standards | 253, 255 | P2 | |
+| 0.9 | ~~JEP-255b Operating a cluster~~ | | | | No longer a JEP: the operations guide is plugin documentation, [`docs/operating-a-cluster.md`](https://github.com/timja/cluster-plugin/blob/main/docs/operating-a-cluster.md) in 🟡 [timja/cluster-plugin#7](https://github.com/timja/cluster-plugin/pull/7), upstreamed with the plugin (4.1) and the chart (4.5) |
 
-Submission order: one PR to `jenkinsci/jep` with all of them (the content of timja/jep#4). 250 is the one to review first, since everything depends on it; then 255a → 251 → 252 → 253 → 254 → 256 → 257 → 255b.
+Submission order: one PR to `jenkinsci/jep` with all of them (the content of timja/jep#4). 250 is the one to review first, since everything depends on it; then 255 → 251 → 252 → 253 → 254 → 256 → 257. The operations guide goes with the cluster plugin, not to `jenkinsci/jep`.
 
 ### Wave 1: changes that stand alone (no new core SPI)
 
@@ -134,11 +134,11 @@ P7 (a layout migration tool) was dropped: there is no data to migrate.
 
 | # | What | Where | Priority | Notes |
 |---|---|---|---|---|
-| 4.1 | `cluster` plugin | new repository (hosting request) | P1 | Everything backend-neutral, the engines moved out of core, and the cluster SPI (`io.jenkins.plugins.cluster.spi`) the backends implement (JEP-255a) |
+| 4.1 | `cluster` plugin | new repository (hosting request) | P1 | Everything backend-neutral, the engines moved out of core, and the cluster SPI (`io.jenkins.plugins.cluster.spi`) the backends implement (JEP-255) |
 | 4.2 | `cluster-postgresql` plugin | new repository (hosting request) | P1 | The reference store; uses `postgresql-api` for its driver |
 | 4.3 | `cluster-azure-blob` plugin | new repository (hosting request) | P1 | Blobs in Azure Blob Storage (append blobs for logs); uses `azure-sdk` |
 | 4.4 | `cluster-s3` plugin | new repository (hosting request) | P1 | Blobs in S3 or an S3-compatible store; uses `aws-java-sdk2-s3` |
-| 4.5 | Helm chart | `jenkinsci/helm-charts`, or with the plugins | P2 | `blob.type: azure\|s3` (JEP-255b) |
+| 4.5 | Helm chart | `jenkinsci/helm-charts`, or with the plugins | P2 | `blob.type: azure\|s3`; operated as in the plugin's operations guide (`docs/operating-a-cluster.md`, cluster-plugin#7) |
 | 4.6 | Acceptance experiments (`validation/`) | with the plugins | P3 | Docker Compose and kind; an S3 variant on Garage. Harness [cluster-plugin#7](https://github.com/timja/cluster-plugin/pull/7) (head `a959632`) ported to the identity layout. Review 5 run on the build machine (core `cnj2/all` `a6ae66a9b7`): ET1, ET4, ET15, ET16, ET18, ET19, ET20 and S3 ET3 0 failures; ET3, ET5 and S3 ET15 0 on the rerun (ET3 after a harness fix: it now follows the build to whichever controller the queue gave it; ET5 and S3 ET15 single-shot checks flaked once); ET11 0 failures in 3 runs after the reload fix. Harness changes: ET20 registers its echo through the script console, ET1/ET6/ET11/ET17 count conflicts with the plugin's `ConflictCounts` and core's refused count. Round 5 on the build machine: ET1–ET8, ET11, ET12, ET14–ET22 and S3 ET3/ET4/ET8/ET15/ET19 all 0 failures; kind pod-delete failover and cross-controller pod agents pass. Seven product bugs found and fixed in B3, P2, P5. Round 6 (harness head `a64844c`, with the kind patches: image, service port and seed maker as parameters, ET9 reads under `_items/<uuid>`, ET9 counts attempts by output lines rather than the doubled `sh -x` trace): on core `a70a848cc8` ET1, ET4, ET6, ET7, ET11, ET15, ET20 0 failures; on the final build (core `12bf604ca8`, cluster hpis from `a64844c`) ET1, ET4, ET11, ET15, ET18 0 failures (an intermediate ET1 found P5's cache materialising local `config.xml`, fixed). Kind (own cluster, core `a70a848cc8`): ET9 run 1 lost 2 checks to the build machine suspending mid-run, run 2 0 failures; ET13 0; ET10 0 (a build running at backup time is absent after restore, as `backup.sh` documents). ET9 found items stored under a name-derived identity (fixed in B2a and P3). ET9 rerun on the final build (core `12bf604ca8`, harness `a64844c`): scenarios 1–7 0 failures, no queue row or `_items/` prefix under a name-derived identity |
 
 ### Old stack (to be closed)
@@ -178,7 +178,7 @@ All on forks, as drafts. Bodies follow each repository's PR template (what, how,
 |---|---|---|
 | [timja/jenkins](https://github.com/timja/jenkins) | core cnj2: A1–A7 off `fork/cnj/base`; B1a → B1b → B1c → B2a → B2b → B3 → B4a → B4b on A1; C1 and C2 on B1c, C3 on C2 | [#164](https://github.com/timja/jenkins/pull/164) … [#177](https://github.com/timja/jenkins/pull/177), [#180](https://github.com/timja/jenkins/pull/180), [#181](https://github.com/timja/jenkins/pull/181), [#184](https://github.com/timja/jenkins/pull/184), [#185](https://github.com/timja/jenkins/pull/185) (18 PRs); GitHub stacks #186 (#164, #171, #180, #181, #172, #184, #173, #174, #185) and #187 (#176, #177); old [#139](https://github.com/timja/jenkins/pull/139) … [#162](https://github.com/timja/jenkins/pull/162) closed |
 | [timja/cluster-plugin](https://github.com/timja/cluster-plugin) | P0–P6, P8 on `main` (P0 and P1 inside P2, which is where they first compile); harness and kind seeding on top | [cluster-plugin#1](https://github.com/timja/cluster-plugin/pull/1) … [cluster-plugin#6](https://github.com/timja/cluster-plugin/pull/6); harness [cluster-plugin#7](https://github.com/timja/cluster-plugin/pull/7); GitHub stack #8 (#1–#7) |
-| [timja/jep](https://github.com/timja/jep) | JEPs 250–257 with 255a/255b (Wave 0) | [#4](https://github.com/timja/jep/pull/4) |
+| [timja/jep](https://github.com/timja/jep) | JEPs 250–257 (Wave 0) | [#4](https://github.com/timja/jep/pull/4) |
 | [timja/lockable-resources-plugin](https://github.com/timja/lockable-resources-plugin) | L1 (1.6) | [#4](https://github.com/timja/lockable-resources-plugin/pull/4); old [#1](https://github.com/timja/lockable-resources-plugin/pull/1), [#2](https://github.com/timja/lockable-resources-plugin/pull/2) closed |
 | [timja/pipeline-build-step-plugin](https://github.com/timja/pipeline-build-step-plugin) | S1 (1.7) | [#2](https://github.com/timja/pipeline-build-step-plugin/pull/2); old [#1](https://github.com/timja/pipeline-build-step-plugin/pull/1) closed |
 | [timja/stapler](https://github.com/timja/stapler) | 1.2 | [#1](https://github.com/timja/stapler/pull/1) |
