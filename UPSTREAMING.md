@@ -4,9 +4,18 @@ All prototype work is pushed as stacked pull requests to **forks** (`timja/*`) f
 
 **Layout: cnj2.** After the round-4 review ([reviews/agents-2026-10-17.md](reviews/agents-2026-10-17.md)) the core stack was re-cut from `fork/cnj/base` (`cd2a077`) as new `cnj2/*` branches, following [targets/17-architecture.md](targets/17-architecture.md) (DESIGN-17): cluster engines out of core into the `cluster` plugin behind a few core extension points, build data keyed by item identity instead of by path, and no migration of stored data. The frozen API is in [targets/17-api.md](targets/17-api.md). The old stack (tag `cnj-rev3-final` = `0a47f66bc6`, PRs timja/jenkins #139–#162) is kept as an archive; **#139–#162 will be closed, each with a link to its cnj2 successor, once the cnj2 PRs are up.**
 
-**Status key:** 🟡 review PR open on the fork · 🔵 branch ready, PR not opened yet · ⬜ not pushed · ✅ upstreamed · ⛔ superseded (to be closed)
+**Status key:** 🚀 open upstream (jenkinsci) · 🟡 review PR open on the fork · 🔵 branch ready, PR not opened yet · ⬜ not pushed · ✅ upstreamed · ⛔ superseded (to be closed)
 
 **Stacks.** The fork PRs are real GitHub stacks: cluster-plugin stack #8 (cluster-plugin#1–#7, unchanged), jenkins stack #186 (#164, #171, #180, #181, #172, #184, #173, #174, #185) and jenkins stack #187 (#176, #177). After review round 5 the B stack sits on A1 (#164), B2 is split into #172 and #184, and B4 into #174 and #185. A2–A7 stay single PRs on `fork/cnj/base`, and C1 a single PR on B1c.
+
+## Upstream now (opened 2026-10-19)
+| What | Upstream PR | From branch | Fork PR |
+|---|---|---|---|
+| The JEPs (250–257, one PR) | 🚀 [jenkinsci/jep#426](https://github.com/jenkinsci/jep/pull/426) | `timja:cluster-jeps` | [timja/jep#4](https://github.com/timja/jep/pull/4) |
+| Stapler bound-id prefix (1.2) | 🚀 [jenkinsci/stapler#806](https://github.com/jenkinsci/stapler/pull/806) | `timja:cnj/t6-m5-bound-id-prefix` | [timja/stapler#1](https://github.com/timja/stapler/pull/1) |
+| Core A1, item identity | 🚀 [jenkinsci/jenkins#27578](https://github.com/jenkinsci/jenkins/pull/27578) | `timja:cnj2/a1-item-uuid` | [#164](https://github.com/timja/jenkins/pull/164) |
+
+These upstream PRs are opened from the fork branches themselves: those branches are **frozen** (no force-push, rebase or amend); review changes go on as new commits. The B stack builds on A1 as it is.
 
 ## Getting started (minimum first step)
 Open these together, at once:
@@ -36,7 +45,7 @@ Consider splitting two pieces into PRs of their own: workflow-cps `CpsFlowExecut
 ## Order and priority
 
 ### Wave 0: proposals
-All in 🟡 [timja/jep#4](https://github.com/timja/jep/pull/4) (branch `cluster-jeps`), rewritten for cnj2: 250 shrunk to the key-value SPI, 255 split into the coordination JEP (now plain JEP-255; it was 255a while a second part existed) and an operations guide (was 255b), which is now plugin documentation, engines described as implemented by the cluster plugin.
+All in 🚀 [jenkinsci/jep#426](https://github.com/jenkinsci/jep/pull/426) (fork [timja/jep#4](https://github.com/timja/jep/pull/4), branch `cluster-jeps`), rewritten for cnj2: 250 shrunk to the key-value SPI, 255 split into the coordination JEP (now plain JEP-255; it was 255a while a second part existed) and an operations guide (was 255b), which is now plugin documentation, engines described as implemented by the cluster plugin.
 
 | # | JEP | Type | Requires | Priority | Notes |
 |---|---|---|---|---|---|
@@ -59,7 +68,7 @@ Submission order: one PR to `jenkinsci/jep` with all of them (the content of tim
 | # | Repo | Branch | Fork PR | Priority | Notes |
 |---|---|---|---|---|---|
 | 1.1 | workflow-cps | `cnj/t4-m1-program-saved-listener` | 🟡 [workflow-cps-plugin#1](https://github.com/timja/workflow-cps-plugin/pull/1) | P1 | `ProgramSavedListener`. Round 4 (`53e6d332`): saves `build.xml` before notifying, a throwing listener is contained, the temp-file leak on the skipped save is fixed. Round 5 (`0097d29e`): `CpsFlowExecution.halt` (Beta) stops an execution without running more of its program (no `catch`/`finally`/`post`, flow graph not ended); used by P2 to stop the copy of a Pipeline taken over elsewhere; `CpsFlowExecutionHaltTest`. Candidate for a PR of its own. JEP-252 |
-| 1.2 | stapler | `cnj/t6-m5-bound-id-prefix` | 🟡 [stapler#1](https://github.com/timja/stapler/pull/1) | P1 | Optional bound-id prefix. Round 4 (`b03add716`): prefix validated (`[A-Za-z0-9_.-]{1,64}`), `getIdPrefix()`/`serverIdOf(id)` instead of a public mutable field. Already on current `master`. Commit titles reworded without target numbers. JEP-254 |
+| 1.2 | stapler | `cnj/t6-m5-bound-id-prefix` | 🚀 [jenkinsci/stapler#806](https://github.com/jenkinsci/stapler/pull/806) (fork [stapler#1](https://github.com/timja/stapler/pull/1)) | P1 | Optional bound-id prefix. Round 4 (`b03add716`): prefix validated (`[A-Za-z0-9_.-]{1,64}`), `getIdPrefix()`/`serverIdOf(id)` instead of a public mutable field. Already on current `master`. Commit titles reworded without target numbers. JEP-254 |
 | 1.3 | configuration-as-code | `cnj/t15-keep-undeclared-nodes` | 🟡 [configuration-as-code-plugin#116](https://github.com/timja/configuration-as-code-plugin/pull/116) | P2 | `keepUndeclaredNodes`. Round 4 (`d282fe8c`): README and javadoc, test on JUnit 5 |
 | 1.4 | kubernetes | `cnj/t9-m2-cluster-cap` | 🟡 [kubernetes-plugin#1](https://github.com/timja/kubernetes-plugin/pull/1) | P2 | `ClusterProvisioningLimits` (Beta). Round 4 (`55fd97ec`): template cap keyed by template name, remote call out of the lock, local release never skipped. JEP-257 |
 | 1.5 | branch-api | `cnj/t15-first-build-revision` | 🟡 [branch-api-plugin#1](https://github.com/timja/branch-api-plugin/pull/1) | P1 | Interrupted indexing no longer builds a branch twice. Round 4 (`4495c92`): a cheap existence check before any read on every save, tighter tests. JEP-253 |
@@ -70,7 +79,7 @@ Submission order: one PR to `jenkinsci/jep` with all of them (the content of tim
 
 | # | Branch | Fork PR | Priority | Size (main/test) | What | From (rev3) |
 |---|---|---|---|---|---|---|
-| A1 | `cnj2/a1-item-uuid` | 🟡 [#164](https://github.com/timja/jenkins/pull/164) | P1 | 313 / 292 | `Item.getItemUuid`, `ItemUuids` (+`pin`), identity persisted only when pinned. Review 5: the XML tokenizer that injected the identity into the bytes on create/copy is gone (it saved one save, measured at ~0.05 ms per create): the plain upstream write, then one more save when new items are pinned | #162 (t15) hunks, reworked |
+| A1 | `cnj2/a1-item-uuid` | 🚀 [jenkinsci/jenkins#27578](https://github.com/jenkinsci/jenkins/pull/27578) (fork [#164](https://github.com/timja/jenkins/pull/164)) | P1 | 313 / 292 | `Item.getItemUuid`, `ItemUuids` (+`pin`), identity persisted only when pinned. Review 5: the XML tokenizer that injected the identity into the bytes on create/copy is gone (it saved one save, measured at ~0.05 ms per create): the plain upstream write, then one more save when new items are pinned | #162 (t15) hunks, reworked |
 | A2 | `cnj2/a2-trigger-coordinator` | 🟡 [#165](https://github.com/timja/jenkins/pull/165) | P1 | 86 / 194 | `TriggerCoordinator` and the `Trigger`/`SafeTimerTask` calls | #144 |
 | A3 | `cnj2/a3-periodic-coordinator` | 🟡 [#166](https://github.com/timja/jenkins/pull/166) | P2 | 147 / 150 | `PeriodicWorkCoordinator`, `@ClusterSingleton` on three works | #152 minus `FingerprintCleanupThread.Shared` |
 | A4 | `cnj2/a4-queue-hooks` | 🟡 [#167](https://github.com/timja/jenkins/pull/167) | P1 | 157 / 193 | `QueueStartGate` (+`countsForProvisioning`), `QueueListener.onFolded`, `Queue.LOADED`, `Queue.isLockHeldByCurrentThread()`. Review 5: `isLockHeldByCurrentThread` removed. Round 6 (head `e148b6a945`): `isLockHeldByCurrentThread` back (Beta), so the plugin never fetches a build under the queue lock (replaces reflection on `Queue.lock`); `QueueHooksTest` 6 | #150, #157 hunks |
